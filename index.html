@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galac6 — Assistant IA pour collégiens et lycéens</title>
-  <link rel="icon" type="image/png" href="/icons/32x32.png">
+  <link rel="icon" type="image/png" href="icons/32x32.png">
   <style>
     :root {
       --primary: #6366f1;
@@ -65,6 +65,8 @@
       width: 96px;
       height: 96px;
       border-radius: 24px;
+      background: rgba(15, 15, 26, 0.6);
+      padding: 12px;
       box-shadow: 0 8px 32px rgba(99,102,241,0.25);
       margin-bottom: 2rem;
     }
@@ -475,12 +477,12 @@
   <!-- ═══ BETA BANNER ═══ -->
   <div style="background: linear-gradient(90deg, var(--primary), var(--accent)); color: #fff; text-align: center; padding: 0.9rem 1rem; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.03em;">
     🚀 VERSION BETA — Nous recherchons des familles pour tester Galac6.
-    <a href="mailto:hello@galac6.io" style="color: #fff; text-decoration: underline; margin-left: 0.5rem;">Contactez-nous !</a>
+    <a href="#contact" style="color: #fff; text-decoration: underline; margin-left: 0.5rem;">Tenez moi informé !</a>
   </div>
 
   <!-- ═══ HERO ═══ -->
   <div class="hero" id="top">
-    <img src="/icons/128x128.png" alt="Galac6" class="hero-icon">
+    <img src="icons/128x128.png" alt="Galac6" class="hero-icon">
     <h1>
       <span>Galac6</span>
     </h1>
@@ -496,16 +498,7 @@
       <li>Mode parent pour piloter</li>
     </ul>
     <div class="hero-buttons">
-      <a href="/downloads/Galac6_0.2.0_aarch64.dmg" class="btn btn-primary" download>
-        ⬇ Télécharger Galac6
-      </a>
-      <a href="guide.html" class="btn btn-secondary">
-        📖 Guide d'installation
-      </a>
-      <a href="guide-eleve.html" class="btn btn-secondary">
-        🎓 Guide de l'élève
-      </a>
-      <a href="#features" class="btn btn-secondary">
+      <a href="#features" class="btn btn-primary">
         Découvrir les fonctionnalités
       </a>
     </div>
@@ -641,19 +634,10 @@
     </div>
   </section>
 
-  <!-- ═══ CTA ═══ -->
-  <div class="cta">
-    <h2>Prêt à installer Galac6 ?</h2>
-    <p>Consultez le guide complet d'installation et d'utilisation.</p>
-    <a href="guide.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">
-      📖 Lire le guide
-    </a>
-  </div>
-
   <!-- ═══ NEWSLETTER / CONTACT ═══ -->
   <section id="contact" style="max-width: 600px; margin: 0 auto; padding: 4rem 1.5rem 2rem;">
-    <h2 style="text-align: center; font-size: 1.6rem; margin-bottom: 0.5rem;">Me tenir informé du projet</h2>
-    <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Laissez votre email pour recevoir les nouveautés de Galac6.</p>
+    <h2 style="text-align: center; font-size: 1.6rem; margin-bottom: 0.5rem;">Tenez moi informé</h2>
+    <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Laissez votre email et dites-nous pourquoi Galac6 vous intéresse.</p>
 
     <form id="contactForm" style="display: flex; flex-direction: column; gap: 1rem;">
       <input
@@ -668,7 +652,7 @@
       <textarea
         id="contactComment"
         rows="3"
-        placeholder="Un commentaire ? (optionnel)"
+        placeholder="Pourquoi je suis intéressé / 1 mot pour la team"
         style="padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.06); color: var(--text); font-size: 1rem; outline: none; resize: vertical; font-family: inherit; transition: border-color 0.2s;"
         onfocus="this.style.borderColor='var(--primary)'"
         onblur="this.style.borderColor='rgba(255,255,255,0.15)'"
@@ -724,7 +708,7 @@
 
   <!-- ═══ FOOTER ═══ -->
   <footer>
-    <p>Galac6 — Assistant IA pour collégiens et lycéens &middot; <a href="guide.html">Guide d'installation</a> &middot; <a href="guide-eleve.html">Guide de l'élève</a> &middot; <a href="mailto:hello@galac6.io">hello@galac6.io</a></p>
+    <p>Galac6 — Assistant IA pour collégiens et lycéens &middot; <a href="mailto:hello@galac6.io">hello@galac6.io</a></p>
     <p style="margin-top: 0.5rem;">macOS uniquement &middot; Clé API requise &middot; Données stockées localement</p>
   </footer>
 
