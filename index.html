@@ -643,6 +643,7 @@
       <input
         type="email"
         id="contactEmail"
+        name="email"
         required
         placeholder="Votre adresse email"
         style="padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.06); color: var(--text); font-size: 1rem; outline: none; transition: border-color 0.2s;"
@@ -651,6 +652,7 @@
       >
       <textarea
         id="contactComment"
+        name="comment"
         rows="3"
         placeholder="Pourquoi je suis intéressé / 1 mot pour la team"
         style="padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.06); color: var(--text); font-size: 1rem; outline: none; resize: vertical; font-family: inherit; transition: border-color 0.2s;"
@@ -673,35 +675,23 @@
     </p>
   </section>
 
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
   <script>
     (function() {
-      var GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxgv5oj6fgV5xsVtA-H9AweQMRe0Xw78QNTD8HpjHhlHY3dCaoCKFbid7qG0tcOCHm6/exec";
+      var form = document.getElementById("contactForm");
+      form.action = "https://script.google.com/macros/s/AKfycbzBYz3uizEylqKOn-bR0E6VAvMZ3WKhYjyqse5uhPWYMh9e-LOA6GId_Lo8au2AbAPh/exec";
+      form.method = "POST";
+      form.target = "hidden_iframe";
 
-      document.getElementById("contactForm").addEventListener("submit", function(e) {
-        e.preventDefault();
-        var email = document.getElementById("contactEmail").value.trim();
-        var comment = document.getElementById("contactComment").value.trim();
-        var btn = this.querySelector("button[type=submit]");
+      form.addEventListener("submit", function() {
+        var btn = form.querySelector("button[type=submit]");
         btn.disabled = true;
         btn.textContent = "Envoi…";
-        document.getElementById("contactSuccess").style.display = "none";
-        document.getElementById("contactError").style.display = "none";
-
-        fetch(GOOGLE_SCRIPT_URL, {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: "email=" + encodeURIComponent(email) + "&comment=" + encodeURIComponent(comment)
-        })
-        .then(function() {
+        setTimeout(function() {
           document.getElementById("contactForm").style.display = "none";
           document.getElementById("contactSuccess").style.display = "block";
-        })
-        .catch(function() {
-          document.getElementById("contactError").style.display = "block";
-          btn.disabled = false;
-          btn.textContent = "Envoyer";
-        });
+        }, 1500);
       });
     })();
   </script>
