@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galac6 — Assistant IA pour collégiens et lycéens</title>
+  <link rel="icon" type="image/png" href="/icons/32x32.png">
+  <style>
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --bg: #fafafa;
+      --bg-card: #ffffff;
+      --text: #1a1a2e;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --gradient-start: #6366f1;
+      --gradient-end: #a855f7;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f0f1a;
+        --bg-card: #1a1a2e;
+        --text: #f1f5f9;
+        --text-muted: #94a3b8;
+        --border: #2d2d44;
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Hero ─── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 0%, rgba(99,102,241,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 80% 20%, rgba(168,85,247,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(99,102,241,0.25);
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero .subtitle {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      color: var(--text-muted);
+      max-width: 600px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto 2.5rem;
+      max-width: 580px;
+      text-align: left;
+    }
+
+    .hero-bullets li {
+      position: relative;
+      padding: 0.4rem 0 0.4rem 1.6rem;
+      color: var(--text-muted);
+      font-size: clamp(0.95rem, 2vw, 1.05rem);
+      line-height: 1.5;
+    }
+
+    .hero-bullets li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.8rem;
+      border-radius: 14px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(99,102,241,0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(99,102,241,0.4);
+    }
+
+    .btn-secondary {
+      background: var(--bg-card);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      animation: bounce 2s infinite;
+      color: var(--text-muted);
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    /* ─── Sections ─── */
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+      font-size: 1.1rem;
+    }
+
+    /* ─── Features Grid ─── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: all 0.25s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+      border-color: var(--primary);
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .fi-purple { background: rgba(99,102,241,0.1); }
+    .fi-pink   { background: rgba(236,72,153,0.1); }
+    .fi-amber  { background: rgba(245,158,11,0.1); }
+    .fi-green  { background: rgba(34,197,94,0.1); }
+    .fi-blue   { background: rgba(59,130,246,0.1); }
+    .fi-red    { background: rgba(239,68,68,0.1); }
+
+    /* ─── How It Works ─── */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      counter-reset: step;
+    }
+
+    .step {
+      text-align: center;
+      position: relative;
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.2rem;
+      margin: 0 auto 1rem;
+    }
+
+    .step h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .step p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* ─── Audience ─── */
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .audience-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem;
+    }
+
+    .audience-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .audience-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .audience-card li {
+      padding: 0.4rem 0;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .audience-card li::before {
+      content: "✓ ";
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* ─── CTA ─── */
+    .cta {
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    /* ─── Guide Page ─── */
+    .guide-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .guide-container h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .guide-container h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .guide-container h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .guide-container p,
+    .guide-container li {
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    .guide-container ul, .guide-container ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .guide-container li { margin-bottom: 0.3rem; }
+
+    .guide-container table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+
+    .guide-container th,
+    .guide-container td {
+      text-align: left;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    .guide-container th {
+      background: var(--bg-card);
+      font-weight: 600;
+    }
+
+    .guide-container code {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 0.15rem 0.4rem;
+      border-radius: 6px;
+      font-size: 0.9em;
+    }
+
+    .guide-container pre {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+
+    .guide-container pre code {
+      border: none;
+      padding: 0;
+      background: none;
+    }
+
+    .guide-container blockquote {
+      border-left: 3px solid var(--primary);
+      padding: 0.75rem 1.25rem;
+      margin: 1rem 0;
+      background: rgba(99,102,241,0.05);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .guide-container blockquote p {
+      color: var(--text);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 640px) {
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .btn { width: 100%; max-width: 300px; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ BETA BANNER ═══ -->
+  <div style="background: linear-gradient(90deg, var(--primary), var(--accent)); color: #fff; text-align: center; padding: 0.9rem 1rem; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.03em;">
+    🚀 VERSION BETA — Nous recherchons des familles pour tester Galac6.
+    <a href="mailto:hello@galac6.io" style="color: #fff; text-decoration: underline; margin-left: 0.5rem;">Contactez-nous !</a>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <div class="hero" id="top">
+    <img src="/icons/128x128.png" alt="Galac6" class="hero-icon">
+    <h1>
+      <span>Galac6</span>
+    </h1>
+    <p class="subtitle">
+      L'assistant IA conçu pour les collégiens et lycéens.<br>
+      Guidé, sécurisé et adapté à chaque niveau, de la 6ème à la Terminale.
+    </p>
+    <ul class="hero-bullets">
+      <li>Assistant IA pour les collégiens et lycéens, avec ChatGPT, Claude ou Gemini</li>
+      <li>Empêche la triche, ne donne pas les réponses, bloque les autres IA</li>
+      <li>Analyse des forces et faiblesses de l'élève</li>
+      <li>Mode dictée</li>
+      <li>Mode parent pour piloter</li>
+    </ul>
+    <div class="hero-buttons">
+      <a href="/downloads/Galac6_0.2.0_aarch64.dmg" class="btn btn-primary" download>
+        ⬇ Télécharger Galac6
+      </a>
+      <a href="guide.html" class="btn btn-secondary">
+        📖 Guide d'installation
+      </a>
+      <a href="guide-eleve.html" class="btn btn-secondary">
+        🎓 Guide de l'élève
+      </a>
+      <a href="#features" class="btn btn-secondary">
+        Découvrir les fonctionnalités
+      </a>
+    </div>
+    <div class="scroll-hint">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </div>
+
+  <!-- ═══ FEATURES ═══ -->
+  <section id="features">
+    <h2 class="section-title">Tout ce dont un élève a besoin</h2>
+    <p class="section-subtitle">Un assistant intelligent qui s'adapte au niveau, à la matière et à la langue.</p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon fi-purple">💬</div>
+        <h3>Chat intelligent</h3>
+        <p>L'élève pose ses questions et obtient des explications claires, adaptées à son niveau scolaire (de la 6ème à la Terminale).</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon fi-pink">📝</div>
+        <h3>Mode Quiz</h3>
+        <p>Quiz auto-générés par l'IA avec QCM et questions ouvertes. Corrections détaillées et XP gagnés à chaque bonne réponse.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon fi-amber">∑</div>
+        <h3>Éditeur de formules</h3>
+        <p>Un éditeur WYSIWYG pour saisir des formules mathématiques naturellement, avec clavier virtuel intégré.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon fi-green">🏆</div>
+        <h3>XP et gamification</h3>
+        <p>Système de niveaux, points d'expérience et séries quotidiennes pour motiver l'élève à réviser régulièrement.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon fi-blue">🛡️</div>
+        <h3>Contrôle parental</h3>
+        <p>Filtrage des sites IA concurrents, blocage d'applications, historique consultable et prompt personnalisable par le parent.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon fi-red">📊</div>
+        <h3>Tableau de bord</h3>
+        <p>Statistiques détaillées : matières travaillées, quiz complétés, meilleur score, série de jours consécutifs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HOW IT WORKS ═══ -->
+  <section>
+    <h2 class="section-title">Simple à mettre en place</h2>
+    <p class="section-subtitle">En 4 étapes, l'élève est prêt à travailler.</p>
+
+    <div class="steps">
+      <div class="step">
+        <h3>Installer</h3>
+        <p>Installer le .dmg sur le Mac de l'élève</p>
+      </div>
+      <div class="step">
+        <h3>Configurer</h3>
+        <p>Mot de passe admin + clé API (OpenAI, Anthropic ou Gemini)</p>
+      </div>
+      <div class="step">
+        <h3>Créer le profil</h3>
+        <p>Nom, âge, niveau scolaire et langue de l'élève</p>
+      </div>
+      <div class="step">
+        <h3>C'est parti !</h3>
+        <p>L'élève accède à son assistant IA personnalisé</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AUDIENCE ═══ -->
+  <section>
+    <h2 class="section-title">Pour les élèves et les parents</h2>
+    <p class="section-subtitle">Chacun a son espace et ses outils.</p>
+
+    <div class="audience-grid">
+      <div class="audience-card">
+        <h3>👨‍🎓 Pour l'élève</h3>
+        <ul>
+          <li>Chat IA adapté à son niveau (6ème → Terminale)</li>
+          <li>12 matières scolaires disponibles</li>
+          <li>Quiz interactifs avec corrections</li>
+          <li>Dictées avec correction et suivi</li>
+          <li>Fiches de révision générées</li>
+          <li>Formules mathématiques en WYSIWYG</li>
+          <li>Coller des photos d'exercices</li>
+          <li>Système de niveaux et XP motivant</li>
+        </ul>
+      </div>
+      <div class="audience-card">
+        <h3>👨‍👩‍👧 Pour le parent</h3>
+        <ul>
+          <li>Panneau admin protégé par mot de passe</li>
+          <li>Choix du fournisseur IA et du modèle</li>
+          <li>Suivi de consommation et budget mensuel</li>
+          <li>Blocage des sites et apps IA concurrents</li>
+          <li>Historique complet des conversations</li>
+          <li>Personnalisation du comportement de l'IA</li>
+          <li>Support multi-élèves</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROVIDERS ═══ -->
+  <section>
+    <h2 class="section-title">Compatible avec les meilleurs modèles</h2>
+    <p class="section-subtitle">Utilisez votre propre clé API. Basculement automatique entre fournisseurs.</p>
+
+    <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="feature-card" style="text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🟢</div>
+        <h3>OpenAI</h3>
+        <p>GPT-5, GPT-5-mini ★, GPT-4o, o1, o3, o4…</p>
+      </div>
+      <div class="feature-card" style="text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🟠</div>
+        <h3>Anthropic</h3>
+        <p>Claude Sonnet 4, Opus, Haiku 4.5 ★…</p>
+      </div>
+      <div class="feature-card" style="text-align: center;">
+        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🔵</div>
+        <h3>Google Gemini</h3>
+        <p>Gemini 3, 2.5 Pro, 2.5 Flash ★…</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <div class="cta">
+    <h2>Prêt à installer Galac6 ?</h2>
+    <p>Consultez le guide complet d'installation et d'utilisation.</p>
+    <a href="guide.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">
+      📖 Lire le guide
+    </a>
+  </div>
+
+  <!-- ═══ NEWSLETTER / CONTACT ═══ -->
+  <section id="contact" style="max-width: 600px; margin: 0 auto; padding: 4rem 1.5rem 2rem;">
+    <h2 style="text-align: center; font-size: 1.6rem; margin-bottom: 0.5rem;">Me tenir informé du projet</h2>
+    <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Laissez votre email pour recevoir les nouveautés de Galac6.</p>
+
+    <form id="contactForm" style="display: flex; flex-direction: column; gap: 1rem;">
+      <input
+        type="email"
+        id="contactEmail"
+        required
+        placeholder="Votre adresse email"
+        style="padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.06); color: var(--text); font-size: 1rem; outline: none; transition: border-color 0.2s;"
+        onfocus="this.style.borderColor='var(--primary)'"
+        onblur="this.style.borderColor='rgba(255,255,255,0.15)'"
+      >
+      <textarea
+        id="contactComment"
+        rows="3"
+        placeholder="Un commentaire ? (optionnel)"
+        style="padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.06); color: var(--text); font-size: 1rem; outline: none; resize: vertical; font-family: inherit; transition: border-color 0.2s;"
+        onfocus="this.style.borderColor='var(--primary)'"
+        onblur="this.style.borderColor='rgba(255,255,255,0.15)'"
+      ></textarea>
+      <button
+        type="submit"
+        style="padding: 0.85rem 2rem; border-radius: 10px; border: none; background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; font-size: 1rem; font-weight: 600; cursor: pointer; transition: opacity 0.2s;"
+        onmouseover="this.style.opacity='0.9'"
+        onmouseout="this.style.opacity='1'"
+      >Envoyer</button>
+    </form>
+
+    <p id="contactSuccess" style="display: none; text-align: center; color: #4ade80; margin-top: 1rem; font-weight: 600;">
+      ✓ Merci, nous vous tiendrons informé !
+    </p>
+    <p id="contactError" style="display: none; text-align: center; color: #f87171; margin-top: 1rem;">
+      Une erreur est survenue. Réessayez ou écrivez à hello@galac6.io.
+    </p>
+  </section>
+
+  <script>
+    (function() {
+      var GOOGLE_SCRIPT_URL = "GOOGLE_SCRIPT_URL";
+
+      document.getElementById("contactForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        var email = document.getElementById("contactEmail").value.trim();
+        var comment = document.getElementById("contactComment").value.trim();
+        var btn = this.querySelector("button[type=submit]");
+        btn.disabled = true;
+        btn.textContent = "Envoi…";
+        document.getElementById("contactSuccess").style.display = "none";
+        document.getElementById("contactError").style.display = "none";
+
+        fetch(GOOGLE_SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: email, comment: comment })
+        })
+        .then(function() {
+          document.getElementById("contactForm").style.display = "none";
+          document.getElementById("contactSuccess").style.display = "block";
+        })
+        .catch(function() {
+          document.getElementById("contactError").style.display = "block";
+          btn.disabled = false;
+          btn.textContent = "Envoyer";
+        });
+      });
+    })();
+  </script>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <p>Galac6 — Assistant IA pour collégiens et lycéens &middot; <a href="guide.html">Guide d'installation</a> &middot; <a href="guide-eleve.html">Guide de l'élève</a> &middot; <a href="mailto:hello@galac6.io">hello@galac6.io</a></p>
+    <p style="margin-top: 0.5rem;">macOS uniquement &middot; Clé API requise &middot; Données stockées localement</p>
+  </footer>
+
+</body>
+</html>

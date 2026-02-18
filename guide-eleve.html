@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galac6 — Guide de l'élève</title>
+  <link rel="icon" type="image/png" href="/icons/32x32.png">
+  <style>
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --bg: #fafafa;
+      --bg-card: #ffffff;
+      --text: #1a1a2e;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --gradient-start: #6366f1;
+      --gradient-end: #a855f7;
+      --green: #10b981;
+      --red: #ef4444;
+      --amber: #f59e0b;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f0f1a;
+        --bg-card: #1a1a2e;
+        --text: #f1f5f9;
+        --text-muted: #94a3b8;
+        --border: #2d2d44;
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(250,250,250,0.8);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      nav { background: rgba(15,15,26,0.85); }
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+    }
+
+    nav img { width: 28px; height: 28px; border-radius: 7px; }
+    nav .back { margin-left: auto; color: var(--primary); font-size: 0.9rem; }
+
+    .wrapper {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 3rem;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 4rem;
+      width: 240px;
+      flex-shrink: 0;
+      height: calc(100vh - 4rem);
+      overflow-y: auto;
+      padding: 2rem 0 2rem 2rem;
+    }
+
+    .sidebar h4 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .sidebar ul { list-style: none; padding: 0; }
+    .sidebar li { margin-bottom: 0.25rem; }
+
+    .sidebar a {
+      display: block;
+      padding: 0.35rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+
+    .sidebar a:hover, .sidebar a.active {
+      color: var(--primary);
+      background: rgba(99,102,241,0.08);
+    }
+
+    .content {
+      flex: 1;
+      min-width: 0;
+      padding: 2rem 2rem 4rem 0;
+    }
+
+    .content h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    .content h1 span {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .content > .intro {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .content h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-top: 3.5rem;
+      margin-bottom: 1rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      scroll-margin-top: 5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .content h2:first-of-type { margin-top: 0; border-top: none; padding-top: 0; }
+
+    .content h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      scroll-margin-top: 5rem;
+    }
+
+    .content h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .content p { margin-bottom: 1rem; }
+    .content ul, .content ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    .content li { margin-bottom: 0.35rem; }
+    .content li ul, .content li ol { margin-top: 0.35rem; margin-bottom: 0.35rem; }
+    .content strong { font-weight: 600; }
+    .content a { color: var(--primary); text-decoration: none; }
+    .content a:hover { text-decoration: underline; }
+
+    .callout {
+      border-left: 3px solid var(--primary);
+      padding: 0.9rem 1.25rem;
+      margin: 1.25rem 0;
+      background: rgba(99,102,241,0.05);
+      border-radius: 0 14px 14px 0;
+      font-size: 0.95rem;
+    }
+    .callout p { margin-bottom: 0; }
+    .callout strong { color: var(--primary); }
+
+    .callout-green {
+      border-left-color: var(--green);
+      background: rgba(16,185,129,0.06);
+    }
+    .callout-green strong { color: var(--green); }
+
+    .callout-red {
+      border-left-color: var(--red);
+      background: rgba(239,68,68,0.06);
+    }
+    .callout-red strong { color: var(--red); }
+
+    .callout-amber {
+      border-left-color: var(--amber);
+      background: rgba(245,158,11,0.06);
+    }
+    .callout-amber strong { color: var(--amber); }
+
+    .prompt-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem 1.25rem;
+      margin: 0.75rem 0;
+      font-size: 0.95rem;
+      position: relative;
+    }
+
+    .prompt-box::before {
+      content: "Prompt";
+      position: absolute;
+      top: -0.6rem;
+      left: 1rem;
+      background: var(--bg);
+      padding: 0 0.5rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+    }
+
+    .prompt-box.good { border-color: var(--green); }
+    .prompt-box.good::before { color: var(--green); content: "Bon prompt"; }
+    .prompt-box.bad { border-color: var(--red); }
+    .prompt-box.bad::before { color: var(--red); content: "Mauvais prompt"; }
+
+    .formula-box {
+      background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(168,85,247,0.08));
+      border: 2px dashed var(--primary);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    code {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 0.15rem 0.4rem;
+      border-radius: 6px;
+      font-size: 0.88em;
+      font-family: "SF Mono", "Fira Code", monospace;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--primary); text-decoration: none; }
+
+    @media (max-width: 860px) {
+      .sidebar { display: none; }
+      .content { padding: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">
+      <img src="/icons/128x128.png" alt="Galac6">
+      Galac6
+    </a>
+    <a class="back" href="index.html">&larr; Retour</a>
+  </nav>
+
+  <div class="wrapper">
+
+    <aside class="sidebar">
+      <h4>Sommaire</h4>
+      <ul>
+        <li><a href="#premiers-pas">Premiers pas</a></li>
+        <li><a href="#art-du-prompt">L'art du prompt</a></li>
+        <li><a href="#regles-or">Les 5 r&egrave;gles d'or</a></li>
+        <li><a href="#a-faire">A faire / A ne pas faire</a></li>
+        <li><a href="#par-matiere">Prompts par mati&egrave;re</a></li>
+        <li><a href="#par-niveau">Prompts par niveau</a></li>
+        <li><a href="#techniques">Techniques avanc&eacute;es</a></li>
+        <li><a href="#quiz">Mode Quiz</a></li>
+        <li><a href="#dictee">Mode Dict&eacute;e</a></li>
+        <li><a href="#fiches">Fiches de r&eacute;vision</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+
+      <h1>Guide de <span>l'&eacute;l&egrave;ve</span></h1>
+      <p class="intro">Galac6 est ton assistant IA, con&ccedil;u sp&eacute;cialement pour les coll&eacute;giens et lyc&eacute;ens (de la 6&egrave;me &agrave; la Terminale). Ce guide va t'aider &agrave; poser les bonnes questions pour obtenir les meilleures r&eacute;ponses.</p>
+
+      <!-- ── Premiers pas ── -->
+      <h2 id="premiers-pas">Premiers pas</h2>
+
+      <h3>Lancer l'app</h3>
+      <p>Ouvre <strong>Galac6</strong> depuis le dossier Applications, puis clique sur ton pr&eacute;nom pour acc&eacute;der &agrave; ton espace.</p>
+
+      <h3>Ton tableau de bord</h3>
+      <p>Tu arrives sur ton tableau de bord avec :</p>
+      <ul>
+        <li>Ton <strong>niveau</strong> et tes <strong>XP</strong> (tu gagnes des points &agrave; chaque activit&eacute;)</li>
+        <li>Tes <strong>statistiques</strong> : messages envoy&eacute;s, quiz faits, s&eacute;rie de jours</li>
+        <li>Tes <strong>conversations r&eacute;centes</strong></li>
+      </ul>
+      <p>Clique sur <strong>Discuter</strong> pour ouvrir le chat.</p>
+
+      <h3>Les actions rapides</h3>
+      <p>En haut du chat, tu trouves des boutons pour d&eacute;marrer rapidement :</p>
+      <ul>
+        <li><strong>Teste-moi</strong> &mdash; lance un quiz</li>
+        <li><strong>Fiche de r&eacute;vision</strong> &mdash; g&eacute;n&egrave;re une fiche imprimable</li>
+        <li><strong>Explique-moi</strong> &mdash; pose une question</li>
+        <li><strong>Aide exercice</strong> &mdash; aide-toi sur un exercice pr&eacute;cis</li>
+        <li><strong>Corrige mon texte</strong> &mdash; fais corriger ta r&eacute;daction</li>
+        <li><strong>Entra&icirc;ne-moi</strong> &mdash; entra&icirc;nement cibl&eacute;</li>
+      </ul>
+
+      <h3>Coller une capture d'&eacute;cran</h3>
+      <p>Tu peux <strong>coller une image</strong> directement dans le chat avec <code>Cmd + V</code> (ou clic droit &rarr; Coller). Prends en photo un exercice, une page de cours ou un &eacute;nonc&eacute; et colle-le : l'IA analysera l'image et t'aidera.</p>
+
+      <div class="callout">
+        <p><strong>Cette astuce fonctionne partout :</strong> dans le chat libre, pour demander un quiz, une fiche de r&eacute;vision, une correction de texte, de l'aide sur un exercice&hellip; Colle ta capture et pr&eacute;cise ce que tu veux !</p>
+      </div>
+
+      <h3>Choisir une mati&egrave;re</h3>
+      <p>En bas &agrave; gauche du chat, un menu d&eacute;roulant te permet de choisir la mati&egrave;re. Cela aide l'IA &agrave; adapter ses r&eacute;ponses &agrave; ton niveau dans cette mati&egrave;re.</p>
+
+      <!-- ── L'art du prompt ── -->
+      <h2 id="art-du-prompt">L'art du prompt</h2>
+
+      <h3>Pourquoi c'est important</h3>
+      <p>L'IA r&eacute;pond exactement &agrave; ce que tu demandes. Si ta question est vague, la r&eacute;ponse sera vague. Si ta question est pr&eacute;cise, la r&eacute;ponse sera claire et utile.</p>
+
+      <div class="callout">
+        <p><strong>Un prompt</strong>, c'est simplement la question ou l'instruction que tu &eacute;cris dans le chat. Mieux tu formules ton prompt, meilleure sera la r&eacute;ponse !</p>
+      </div>
+
+      <!-- ── Les 5 règles d'or ── -->
+      <h2 id="regles-or">Les 5 r&egrave;gles d'or</h2>
+
+      <h3>1. Sois pr&eacute;cis</h3>
+      <p>Dis exactement ce que tu veux. Plus tu es pr&eacute;cis, plus la r&eacute;ponse sera utile.</p>
+      <div class="prompt-box bad">Aide-moi en maths</div>
+      <div class="prompt-box good">Explique-moi comment r&eacute;soudre une &eacute;quation du premier degr&eacute; comme 3x + 5 = 20</div>
+
+      <h3>2. Donne du contexte</h3>
+      <p>Pr&eacute;cise ta mati&egrave;re, ton chapitre, ou ce que tu as d&eacute;j&agrave; compris. Tu peux aussi <strong>coller une capture d'&eacute;cran</strong> de ton cours ou de l'exercice pour donner un maximum de contexte &agrave; l'IA.</p>
+      <div class="prompt-box bad">C'est quoi la photosynth&egrave;se ?</div>
+      <div class="prompt-box good">On &eacute;tudie la photosynth&egrave;se en SVT. Peux-tu m'expliquer le r&ocirc;le de la chlorophylle et pourquoi les plantes ont besoin de lumi&egrave;re ?</div>
+      <div class="prompt-box good">[Coller la capture de ton cours] Explique-moi cette page de mon cours, je ne comprends pas le passage sur la chlorophylle</div>
+
+      <h3>3. Dis ce que tu ne comprends pas</h3>
+      <p>L'IA peut t'expliquer diff&eacute;remment si tu pr&eacute;cises ce qui te bloque.</p>
+      <div class="prompt-box good">Je comprends que l'eau bout &agrave; 100&deg;C, mais je ne comprends pas pourquoi &ccedil;a change en altitude. Peux-tu m'expliquer ?</div>
+
+      <h3>4. Demande le format que tu veux</h3>
+      <p>Tu peux demander des exemples, un tableau, des &eacute;tapes num&eacute;rot&eacute;es, un r&eacute;sum&eacute;...</p>
+      <div class="prompt-box good">Fais-moi un tableau comparatif entre la mitose et la m&eacute;iose avec les diff&eacute;rences principales</div>
+      <div class="prompt-box good">Explique-moi les temps du pass&eacute; en fran&ccedil;ais avec un exemple pour chaque temps</div>
+
+      <h3>5. Rebondis !</h3>
+      <p>Si la r&eacute;ponse ne te convient pas, n'h&eacute;site pas &agrave; pr&eacute;ciser :</p>
+      <ul>
+        <li>&laquo; C'est trop compliqu&eacute;, explique plus simplement &raquo;</li>
+        <li>&laquo; Donne-moi un autre exemple &raquo;</li>
+        <li>&laquo; Peux-tu me faire un sch&eacute;ma ? &raquo;</li>
+        <li>&laquo; R&eacute;sume en 3 points &raquo;</li>
+      </ul>
+
+      <div class="formula-box">
+        La formule magique : <strong>[Ce que je veux]</strong> + <strong>[Le sujet pr&eacute;cis]</strong> + <strong>[Comment je le veux]</strong>
+      </div>
+
+      <p>Exemples :</p>
+      <div class="prompt-box good">Explique-moi les fractions avec un exemple concret de la vie quotidienne</div>
+      <div class="prompt-box good">Fais-moi un r&eacute;sum&eacute; des causes de la R&eacute;volution fran&ccedil;aise en 10 points</div>
+      <div class="prompt-box good">Aide-moi &agrave; corriger ce texte et explique chaque erreur</div>
+
+      <!-- ── À faire / À ne pas faire ── -->
+      <h2 id="a-faire">&Agrave; faire / &Agrave; ne pas faire</h2>
+
+      <div class="callout callout-green">
+        <p><strong>&Agrave; faire :</strong></p>
+      </div>
+      <ul>
+        <li>&laquo; Explique-moi le th&eacute;or&egrave;me de Pythagore avec un exemple et un sch&eacute;ma &raquo;</li>
+        <li>&laquo; Je ne comprends pas la diff&eacute;rence entre &ldquo;a&rdquo; et &ldquo;&agrave;&rdquo;, donne-moi 5 phrases d'exemple &raquo;</li>
+        <li>&laquo; R&eacute;sume le chapitre sur la photosynth&egrave;se en bullet points &raquo;</li>
+        <li>&laquo; J'ai trouv&eacute; 42, est-ce correct ? Si non, o&ugrave; est mon erreur ? &raquo;</li>
+        <li>&laquo; Guide-moi &eacute;tape par &eacute;tape pour r&eacute;soudre cet exercice &raquo;</li>
+        <li>Coller une capture d'&eacute;cran de l'exercice ou du cours + poser sa question</li>
+      </ul>
+
+      <div class="callout callout-red">
+        <p><strong>&Agrave; ne pas faire :</strong></p>
+      </div>
+      <ul>
+        <li>&laquo; Fais mon devoir &raquo; &mdash; l'IA est l&agrave; pour t'aider &agrave; <em>comprendre</em>, pas pour tricher</li>
+        <li>&laquo; Aide-moi &raquo; &mdash; trop vague, aide pour quoi ?</li>
+        <li>&laquo; Donne la r&eacute;ponse &raquo; &mdash; demande plut&ocirc;t qu'on t'explique la m&eacute;thode</li>
+        <li>Copier-coller un &eacute;nonc&eacute; sans rien demander de pr&eacute;cis</li>
+      </ul>
+
+      <div class="callout callout-amber">
+        <p><strong>Astuce :</strong> Galac6 est ton assistant, pas ta calculatrice. Plus tu r&eacute;fl&eacute;chis avec lui, plus tu progresseras !</p>
+      </div>
+
+      <!-- ── Prompts par matière ── -->
+      <h2 id="par-matiere">Exemples de prompts par mati&egrave;re</h2>
+
+      <h3>Math&eacute;matiques</h3>
+      <div class="prompt-box good">Explique-moi comment factoriser l'expression 3x&sup2; + 6x &eacute;tape par &eacute;tape</div>
+      <div class="prompt-box good">Quelle est la diff&eacute;rence entre une fonction lin&eacute;aire et une fonction affine ? Donne-moi un graphique pour chaque.</div>
+      <div class="prompt-box good">J'ai un triangle rectangle avec les c&ocirc;t&eacute;s 3 cm et 4 cm. Guide-moi pour trouver l'hypot&eacute;nuse sans me donner la r&eacute;ponse directement.</div>
+      <div class="prompt-box good">Donne-moi 5 exercices sur les fractions, du plus facile au plus difficile</div>
+      <div class="prompt-box good">[Coller la photo de l'exercice] Aide-moi &agrave; r&eacute;soudre cet exercice de g&eacute;om&eacute;trie. Explique-moi la m&eacute;thode &eacute;tape par &eacute;tape.</div>
+
+      <h3>Fran&ccedil;ais</h3>
+      <div class="prompt-box good">Explique-moi la diff&eacute;rence entre le pass&eacute; simple et l'imparfait avec 3 exemples pour chaque</div>
+      <div class="prompt-box good">Corrige ce texte et explique chaque erreur : &laquo; il a manger des pomme et il et parti &raquo;</div>
+      <div class="prompt-box good">Comment faire une introduction de commentaire de texte ? Donne-moi la m&eacute;thode et un exemple</div>
+      <div class="prompt-box good">Donne-moi 10 mots de liaison pour structurer une dissertation</div>
+      <div class="prompt-box good">[Coller la photo de ma r&eacute;daction] Corrige ce texte et explique mes fautes de grammaire et d'orthographe</div>
+
+      <h3>Histoire-G&eacute;ographie</h3>
+      <div class="prompt-box good">Quelles sont les 5 causes principales de la Premi&egrave;re Guerre mondiale ? Classe-les par ordre d'importance.</div>
+      <div class="prompt-box good">Fais-moi une frise chronologique de la R&eacute;volution fran&ccedil;aise avec les dates cl&eacute;s de 1789 &agrave; 1799</div>
+      <div class="prompt-box good">Compare la d&eacute;mocratie ath&eacute;nienne et la d&eacute;mocratie fran&ccedil;aise actuelle dans un tableau</div>
+
+      <h3>Physique-Chimie</h3>
+      <div class="prompt-box good">Explique-moi la diff&eacute;rence entre masse et poids avec une situation concr&egrave;te (sur Terre vs sur la Lune)</div>
+      <div class="prompt-box good">Comment &eacute;quilibrer l'&eacute;quation chimique Fe + O&sub2; &rarr; Fe&sub2;O&sub3; ? Montre-moi la m&eacute;thode &eacute;tape par &eacute;tape.</div>
+      <div class="prompt-box good">Fais-moi un sch&eacute;ma du circuit &eacute;lectrique en s&eacute;rie vs en parall&egrave;le</div>
+      <div class="prompt-box good">[Coller la photo de l'exercice] R&eacute;sous cet exercice de chimie avec moi, &eacute;tape par &eacute;tape</div>
+
+      <h3>SVT</h3>
+      <div class="prompt-box good">Explique-moi le cycle de l'eau avec un sch&eacute;ma et les termes scientifiques</div>
+      <div class="prompt-box good">Quelle est la diff&eacute;rence entre une cellule animale et une cellule v&eacute;g&eacute;tale ? Fais un tableau comparatif.</div>
+      <div class="prompt-box good">Comment fonctionne la s&eacute;lection naturelle ? Explique avec l'exemple des pinsons de Darwin.</div>
+
+      <h3>Anglais</h3>
+      <div class="prompt-box good">Explique-moi quand utiliser "present perfect" vs "simple past" avec 5 exemples pour chaque</div>
+      <div class="prompt-box good">Corrige mon texte en anglais et explique mes erreurs en fran&ccedil;ais : "Yesterday I go to school and I eat a apple"</div>
+      <div class="prompt-box good">Donne-moi 15 mots de vocabulaire sur le th&egrave;me de l'environnement avec leur traduction et une phrase d'exemple</div>
+
+      <h3>Philosophie</h3>
+      <div class="prompt-box good">Explique-moi la notion de libert&eacute; chez Sartre en termes simples</div>
+      <div class="prompt-box good">Aide-moi &agrave; faire un plan de dissertation sur : &laquo; La libert&eacute; est-elle une illusion ? &raquo;</div>
+      <div class="prompt-box good">Compare les visions du bonheur chez &Eacute;picure et chez les sto&iuml;ciens dans un tableau</div>
+
+      <h3>Informatique</h3>
+      <div class="prompt-box good">Explique-moi ce qu'est une boucle &laquo; for &raquo; en Python avec 3 exemples du plus simple au plus complexe</div>
+      <div class="prompt-box good">Mon code Python donne une erreur "IndexError". Voici mon code : [...]. Aide-moi &agrave; trouver le bug.</div>
+      <div class="prompt-box good">Quelle est la diff&eacute;rence entre une liste et un dictionnaire en Python ? Quand utiliser l'un ou l'autre ?</div>
+
+      <!-- ── Prompts par niveau ── -->
+      <h2 id="par-niveau">Exemples par niveau</h2>
+
+      <h3>Primaire (CP &mdash; CM2)</h3>
+      <p>Des prompts simples et amusants :</p>
+      <div class="prompt-box good">Explique-moi les multiplications comme si c'&eacute;tait un jeu</div>
+      <div class="prompt-box good">C'est quoi un adjectif ? Donne-moi des exemples rigolos</div>
+      <div class="prompt-box good">Raconte-moi l'histoire de la Terre en 5 phrases simples</div>
+      <div class="prompt-box good">Je n'arrive pas &agrave; faire 7 &times; 8, peux-tu m'aider avec un truc pour m'en souvenir ?</div>
+
+      <h3>Coll&egrave;ge (6&egrave;me &mdash; 3&egrave;me)</h3>
+      <p>Des prompts structur&eacute;s pour bien pr&eacute;parer le brevet :</p>
+      <div class="prompt-box good">Aide-moi &agrave; faire un plan pour ma r&eacute;daction sur le th&egrave;me &laquo; Un voyage inoubliable &raquo;</div>
+      <div class="prompt-box good">Quelles sont les &eacute;tapes pour r&eacute;soudre un probl&egrave;me de proportionnalit&eacute; ? Donne-moi un exemple type brevet.</div>
+      <div class="prompt-box good">Fais-moi une fiche de r&eacute;vision sur les rep&egrave;res chronologiques du brevet d'histoire</div>
+      <div class="prompt-box good">Entra&icirc;ne-moi sur les verbes irr&eacute;guliers anglais : pose-moi 10 questions et corrige mes r&eacute;ponses</div>
+
+      <h3>Lyc&eacute;e (Seconde &mdash; Terminale)</h3>
+      <p>Des prompts approfondis pour le bac :</p>
+      <div class="prompt-box good">Compare le romantisme et le r&eacute;alisme en litt&eacute;rature fran&ccedil;aise : auteurs, th&egrave;mes, style. Fais un tableau.</div>
+      <div class="prompt-box good">Aide-moi &agrave; construire un plan de dissertation en philo sur &laquo; Peut-on &ecirc;tre libre sans &ecirc;tre heureux ? &raquo; avec th&egrave;se, antith&egrave;se et synth&egrave;se.</div>
+      <div class="prompt-box good">Explique-moi les d&eacute;riv&eacute;es de fonctions compos&eacute;es avec la r&egrave;gle de la cha&icirc;ne, puis donne-moi 3 exercices &agrave; faire.</div>
+      <div class="prompt-box good">Fais-moi une synth&egrave;se de la mondialisation en g&eacute;o : acteurs, flux, in&eacute;galit&eacute;s. Format fiche bac.</div>
+
+      <!-- ── Techniques avancées ── -->
+      <h2 id="techniques">Techniques avanc&eacute;es</h2>
+
+      <h3>&Eacute;tape par &eacute;tape</h3>
+      <p>Demande &agrave; l'IA de te guider sans donner la r&eacute;ponse :</p>
+      <div class="prompt-box good">Ne me donne pas la r&eacute;ponse directement. Guide-moi &eacute;tape par &eacute;tape pour r&eacute;soudre cette &eacute;quation : 2x + 7 = 15</div>
+
+      <h3>V&eacute;rifier son travail</h3>
+      <p>Utilise l'IA comme correcteur :</p>
+      <div class="prompt-box good">J'ai trouv&eacute; que x = 5 pour l'&eacute;quation 3x - 2 = 13. Est-ce correct ? Si non, montre-moi o&ugrave; je me suis tromp&eacute;.</div>
+
+      <h3>Changer de format</h3>
+      <p>Si une explication ne te parle pas, demande un autre format :</p>
+      <div class="prompt-box good">Transforme cette explication en tableau r&eacute;capitulatif</div>
+      <div class="prompt-box good">Peux-tu me faire un sch&eacute;ma &agrave; la place ?</div>
+      <div class="prompt-box good">R&eacute;sume tout &ccedil;a en 5 bullet points</div>
+
+      <h3>Approfondir</h3>
+      <p>Pour aller plus loin :</p>
+      <div class="prompt-box good">Pourquoi ? Peux-tu aller plus en d&eacute;tail ?</div>
+      <div class="prompt-box good">Donne-moi un cas plus difficile pour m'entra&icirc;ner</div>
+      <div class="prompt-box good">Quelles sont les erreurs les plus fr&eacute;quentes sur ce sujet ?</div>
+
+      <h3>Coller une image ou une capture d'&eacute;cran</h3>
+      <p>Tu peux coller une photo ou une capture d'&eacute;cran (<code>Cmd + V</code>) directement dans le chat. Cela fonctionne avec :</p>
+      <ul>
+        <li>Une <strong>photo d'exercice</strong> prise avec ton t&eacute;l&eacute;phone</li>
+        <li>Une <strong>capture d'&eacute;cran</strong> de ton cours en ligne ou d'un PDF (<code>Cmd + Shift + 4</code> sur Mac)</li>
+        <li>Une <strong>photo de ta copie</strong> pour te faire corriger</li>
+        <li>Une <strong>page de manuel</strong> pour en faire une fiche de r&eacute;vision</li>
+      </ul>
+      <div class="prompt-box good">[Coller la capture] Aide-moi &agrave; r&eacute;soudre cet exercice. Explique-moi la m&eacute;thode.</div>
+      <div class="prompt-box good">[Coller la capture de mon cours] Fais-moi une fiche de r&eacute;vision &agrave; partir de cette page</div>
+      <div class="prompt-box good">[Coller la photo de ma copie] Corrige mes erreurs et explique comment m'am&eacute;liorer</div>
+
+      <h3>&Eacute;diteur de formules</h3>
+      <p>Pour les maths et la physique, clique sur le bouton <strong>fx</strong> &agrave; gauche du chat pour &eacute;crire des formules proprement (fractions, racines, exposants...).</p>
+
+      <!-- ── Mode Quiz ── -->
+      <h2 id="quiz">Mode Quiz &mdash; devenir un champion</h2>
+
+      <h3>Lancer un quiz</h3>
+      <p>Clique sur <strong>Teste-moi</strong> en haut du chat, puis choisis :</p>
+      <ol>
+        <li>La <strong>mati&egrave;re</strong></li>
+        <li>Le <strong>sujet</strong> pr&eacute;cis</li>
+        <li>Le nombre de questions : <strong>3</strong>, <strong>5</strong> ou <strong>10</strong></li>
+      </ol>
+
+      <h3>Astuces quiz</h3>
+      <ul>
+        <li>Commence par <strong>3 questions</strong> pour d&eacute;couvrir un sujet, puis passe &agrave; 10 pour t'entra&icirc;ner</li>
+        <li>Pour les <strong>QCM</strong> : lis toutes les r&eacute;ponses avant de choisir, &eacute;limine les r&eacute;ponses impossibles</li>
+        <li>Pour les <strong>questions ouvertes</strong> : &eacute;cris des phrases compl&egrave;tes, l'IA &eacute;value ta compr&eacute;hension</li>
+        <li>Apr&egrave;s le quiz, <strong>lis bien les corrections</strong> &mdash; c'est l&agrave; qu'on apprend le plus</li>
+      </ul>
+
+      <h3>Bons sujets de quiz</h3>
+      <div class="prompt-box good">Quiz sur les identit&eacute;s remarquables (maths 3&egrave;me)</div>
+      <div class="prompt-box good">Quiz sur les figures de style en fran&ccedil;ais</div>
+      <div class="prompt-box good">Quiz sur la Seconde Guerre mondiale : dates et &eacute;v&eacute;nements cl&eacute;s</div>
+      <div class="prompt-box good">Quiz sur les verbes irr&eacute;guliers anglais</div>
+      <div class="prompt-box good">[Coller la capture de ton cours] Fais-moi un quiz de 5 questions sur cette page de cours</div>
+
+      <div class="callout">
+        <p><strong>Astuce :</strong> Colle une capture d'&eacute;cran de ton cours et demande un quiz dessus &mdash; c'est le meilleur moyen de v&eacute;rifier que tu as bien compris !</p>
+      </div>
+
+      <h3>XP gagn&eacute;s</h3>
+      <ul>
+        <li>20 XP par bonne r&eacute;ponse QCM</li>
+        <li>30 XP par bonne r&eacute;ponse ouverte</li>
+        <li>+50 XP bonus si tu d&eacute;passes 80%</li>
+      </ul>
+
+      <!-- ── Mode Dictée ── -->
+      <h2 id="dictee">Mode Dict&eacute;e &mdash; progresser en orthographe</h2>
+
+      <h3>Lancer une dict&eacute;e</h3>
+      <p>Clique sur l'onglet <strong>Dict&eacute;e</strong> puis choisis un th&egrave;me et un sujet. L'IA g&eacute;n&egrave;re un texte adapt&eacute; &agrave; ton niveau.</p>
+
+      <h3>Pendant la dict&eacute;e</h3>
+      <ul>
+        <li>Chaque phrase est lue <strong>deux fois</strong> (normale puis lente)</li>
+        <li>La ponctuation est dict&eacute;e &agrave; voix haute</li>
+        <li>Tu peux appuyer sur <strong>Pause</strong> si tu as besoin de plus de temps</li>
+      </ul>
+
+      <h3>Apr&egrave;s la dict&eacute;e</h3>
+      <ul>
+        <li><strong>Relis</strong> attentivement ton texte sur l'&eacute;cran de relecture</li>
+        <li>Tu peux <strong>r&eacute;&eacute;couter</strong> la dict&eacute;e en entier</li>
+        <li>Quand tu es pr&ecirc;t, clique sur <strong>Soumettre</strong></li>
+      </ul>
+
+      <h3>La correction</h3>
+      <p>L'IA te donne :</p>
+      <ul>
+        <li>Une <strong>note sur 10</strong></li>
+        <li>Ton texte avec les <strong>erreurs en rouge</strong> et les <strong>corrections en vert</strong></li>
+        <li>Une <strong>explication</strong> pour chaque faute (r&egrave;gle de grammaire ou d'orthographe)</li>
+      </ul>
+
+      <div class="callout callout-green">
+        <p><strong>Astuce :</strong> Refais une dict&eacute;e sur le m&ecirc;me th&egrave;me une semaine plus tard pour v&eacute;rifier que tu as progress&eacute; !</p>
+      </div>
+
+      <div class="callout">
+        <p><strong>Astuce :</strong> Tu peux aussi coller une capture d'&eacute;cran d'un texte que tu aimes (extrait de livre, article...) et demander &agrave; l'IA de s'en inspirer pour g&eacute;n&eacute;rer une dict&eacute;e sur le m&ecirc;me th&egrave;me ou le m&ecirc;me style !</p>
+      </div>
+
+      <!-- ── Fiches de révision ── -->
+      <h2 id="fiches">Fiches de r&eacute;vision &mdash; r&eacute;viser efficacement</h2>
+
+      <h3>G&eacute;n&eacute;rer une fiche</h3>
+      <p>Deux options :</p>
+      <ul>
+        <li>Clique sur <strong>Fiche de r&eacute;vision</strong> en haut du chat (formulaire guid&eacute;)</li>
+        <li>Ou demande directement dans le chat :</li>
+      </ul>
+
+      <div class="prompt-box good">Fais-moi une fiche de r&eacute;vision sur les identit&eacute;s remarquables en maths</div>
+      <div class="prompt-box good">G&eacute;n&egrave;re une fiche compl&egrave;te sur la R&eacute;volution fran&ccedil;aise avec les dates, les acteurs et les cons&eacute;quences</div>
+      <div class="prompt-box good">Fiche de r&eacute;vision sur le present perfect en anglais avec des exemples et un tableau r&eacute;capitulatif</div>
+      <div class="prompt-box good">[Coller la capture de ton cours] Fais-moi une fiche de r&eacute;vision compl&egrave;te &agrave; partir de cette page</div>
+
+      <div class="callout">
+        <p><strong>Astuce :</strong> Colle une ou plusieurs captures d'&eacute;cran de ton cours et demande une fiche de r&eacute;vision &mdash; l'IA r&eacute;sumera tout pour toi avec les points essentiels !</p>
+      </div>
+
+      <h3>Demander des sch&eacute;mas</h3>
+      <p>Tu peux demander des diagrammes dans tes fiches :</p>
+      <div class="prompt-box good">Fais-moi une fiche sur le cycle de l'eau avec un sch&eacute;ma</div>
+      <div class="prompt-box good">Fiche sur la cha&icirc;ne alimentaire avec un diagramme</div>
+
+      <h3>Exporter en PDF</h3>
+      <p>Chaque fiche a un bouton <strong>T&eacute;l&eacute;charger</strong> qui enregistre un PDF dans ton dossier T&eacute;l&eacute;chargements. Tu peux ensuite l'imprimer pour r&eacute;viser sur papier.</p>
+
+      <div class="callout callout-amber">
+        <p><strong>Conseil :</strong> G&eacute;n&egrave;re une fiche <em>avant</em> un contr&ocirc;le, relis-la, puis fais un quiz sur le m&ecirc;me sujet pour v&eacute;rifier que tu as retenu l'essentiel !</p>
+      </div>
+
+    </main>
+  </div>
+
+  <footer>
+    <p>Galac6 &mdash; Assistant IA pour coll&eacute;giens et lyc&eacute;ens &middot; <a href="guide.html">Guide d'installation (parents)</a> &middot; <a href="mailto:hello@galac6.io">hello@galac6.io</a></p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.content h2[id]');
+    const links = document.querySelectorAll('.sidebar a');
+
+    function updateActive() {
+      let current = '';
+      sections.forEach(section => {
+        if (window.scrollY >= section.offsetTop - 120) {
+          current = section.getAttribute('id');
+        }
+      });
+      links.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+      });
+    }
+
+    window.addEventListener('scroll', updateActive, { passive: true });
+    updateActive();
+  </script>
+
+</body>
+</html>
