@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galac6 — Installation</title>
+  <link rel="icon" type="image/png" href="icons/32x32.png">
+  <style>
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --bg: #fafafa;
+      --bg-card: #ffffff;
+      --text: #1a1a2e;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --gradient-start: #6366f1;
+      --gradient-end: #a855f7;
+      --green: #10b981;
+      --red: #ef4444;
+      --amber: #f59e0b;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f0f1a;
+        --bg-card: #1a1a2e;
+        --text: #f1f5f9;
+        --text-muted: #94a3b8;
+        --border: #2d2d44;
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Chapter Nav ─── */
+    .chapter-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(250,250,250,0.8);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .chapter-nav { background: rgba(15,15,26,0.85); }
+    }
+
+    .chapter-nav a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.85rem 1.25rem;
+      border-bottom: 2px solid transparent;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .chapter-nav a:hover {
+      color: var(--text);
+      background: rgba(99,102,241,0.04);
+    }
+
+    .chapter-nav a.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* ─── Layout ─── */
+    .wrapper {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 3rem;
+    }
+
+    /* ─── Sidebar TOC ─── */
+    .sidebar {
+      position: sticky;
+      top: 1rem;
+      width: 220px;
+      flex-shrink: 0;
+      height: calc(100vh - 1rem);
+      overflow-y: auto;
+      padding: 2rem 0 2rem 2rem;
+    }
+
+    .sidebar h4 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .sidebar ul { list-style: none; padding: 0; }
+    .sidebar li { margin-bottom: 0.25rem; }
+
+    .sidebar a {
+      display: block;
+      padding: 0.35rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+
+    .sidebar a:hover, .sidebar a.active {
+      color: var(--primary);
+      background: rgba(99,102,241,0.08);
+    }
+
+    /* ─── Content ─── */
+    .content {
+      flex: 1;
+      min-width: 0;
+      padding: 2rem 2rem 4rem 0;
+    }
+
+    .content h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    .content h1 span {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .content > .intro {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .content h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-top: 3.5rem;
+      margin-bottom: 1rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      scroll-margin-top: 5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .content h2:first-of-type { margin-top: 0; border-top: none; padding-top: 0; }
+
+    .content h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      scroll-margin-top: 5rem;
+    }
+
+    .content h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .content p { margin-bottom: 1rem; }
+    .content ul, .content ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    .content li { margin-bottom: 0.35rem; }
+    .content li ul, .content li ol { margin-top: 0.35rem; margin-bottom: 0.35rem; }
+    .content strong { font-weight: 600; }
+    .content a { color: var(--primary); text-decoration: none; }
+    .content a:hover { text-decoration: underline; }
+
+    .callout {
+      border-left: 3px solid var(--primary);
+      padding: 0.9rem 1.25rem;
+      margin: 1.25rem 0;
+      background: rgba(99,102,241,0.05);
+      border-radius: 0 14px 14px 0;
+      font-size: 0.95rem;
+    }
+    .callout p { margin-bottom: 0; }
+    .callout strong { color: var(--primary); }
+
+    .callout-green { border-left-color: var(--green); background: rgba(16,185,129,0.06); }
+    .callout-green strong { color: var(--green); }
+    .callout-red { border-left-color: var(--red); background: rgba(239,68,68,0.06); }
+    .callout-red strong { color: var(--red); }
+    .callout-amber { border-left-color: var(--amber); background: rgba(245,158,11,0.06); }
+    .callout-amber strong { color: var(--amber); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+    th, td { text-align: left; padding: 0.7rem 1rem; border: 1px solid var(--border); }
+    th { background: var(--bg-card); font-weight: 600; font-size: 0.85rem; }
+
+    code {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 0.15rem 0.4rem;
+      border-radius: 6px;
+      font-size: 0.88em;
+      font-family: "SF Mono", "Fira Code", monospace;
+    }
+
+    pre {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      overflow-x: auto;
+      margin: 1rem 0 1.5rem;
+      line-height: 1.5;
+    }
+
+    pre code { border: none; padding: 0; background: none; font-size: 0.85rem; }
+
+    /* ─── Prev/Next ─── */
+    .page-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      gap: 1rem;
+    }
+
+    .page-nav a {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.15s ease;
+      min-width: 0;
+    }
+
+    .page-nav a:hover {
+      border-color: var(--primary);
+      background: rgba(99,102,241,0.04);
+    }
+
+    .page-nav a small {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .page-nav a span {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--primary);
+    }
+
+    .page-nav .next { margin-left: auto; text-align: right; }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--primary); text-decoration: none; }
+
+    @media (max-width: 860px) {
+      .sidebar { display: none; }
+      .content { padding: 2rem; }
+      .chapter-nav { overflow-x: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper" style="padding-top: 1rem;">
+
+    <aside class="sidebar">
+      <h4>Sommaire</h4>
+      <ul>
+        <li><a href="#prerequis">Pr&eacute;requis</a></li>
+        <li><a href="#installer">Installer Galac6</a></li>
+        <li><a href="#gatekeeper">Correction Gatekeeper</a></li>
+        <li><a href="#premier-lancement">Premier lancement</a></li>
+        <li><a href="#mise-a-jour">Mise &agrave; jour</a></li>
+        <li><a href="#desinstallation">D&eacute;sinstallation</a></li>
+        <li><a href="#support">Support</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+
+      <h1><span>Installation</span></h1>
+      <p class="intro">Tout ce qu'il faut pour installer Galac6 sur le Mac de votre enfant. L'installation prend moins de 5 minutes.</p>
+
+      <div class="callout">
+        <p><strong>Prototype :</strong> Galac6 est actuellement disponible uniquement sur <strong>macOS</strong> (Apple Silicon et Intel). Une version Windows/Linux pourra suivre selon les retours.</p>
+      </div>
+
+      <!-- ── Prérequis ── -->
+      <h2 id="prerequis">Pr&eacute;requis</h2>
+      <ul>
+        <li><strong>macOS 10.15</strong> (Catalina) ou sup&eacute;rieur</li>
+        <li>Un <strong>compte administrateur</strong> sur le Mac</li>
+        <li>Environ <strong>50 Mo</strong> d'espace disque</li>
+      </ul>
+
+      <!-- ── Installer ── -->
+      <h2 id="installer">Installer Galac6</h2>
+      <ol>
+        <li>Double-cliquer sur le fichier <strong>.dmg</strong> t&eacute;l&eacute;charg&eacute;</li>
+        <li>Une fen&ecirc;tre s'ouvre montrant l'application <strong>Galac6</strong></li>
+        <li>Glisser <strong>Galac6</strong> dans le dossier <strong>Applications</strong></li>
+        <li>Fermer la fen&ecirc;tre du DMG</li>
+      </ol>
+
+      <div class="callout callout-green">
+        <p><strong>C'est tout !</strong> L'installation est termin&eacute;e. L'application est dans le dossier Applications.</p>
+      </div>
+
+      <!-- ── Gatekeeper ── -->
+      <h2 id="gatekeeper">Correction Gatekeeper</h2>
+      <p>Si macOS affiche le message <strong>&laquo; Galac6 est endommag&eacute; et ne peut pas &ecirc;tre ouvert &raquo;</strong>, c'est parce que l'application n'est pas sign&eacute;e avec un certificat Apple (version b&ecirc;ta).</p>
+      <p>Pour corriger cela, ouvrir <strong>Terminal</strong> (Applications &rarr; Utilitaires &rarr; Terminal) et ex&eacute;cuter :</p>
+      <pre><code>xattr -cr /Applications/Galac6.app</code></pre>
+      <p>Puis relancer Galac6 normalement. Cette commande n'a besoin d'&ecirc;tre ex&eacute;cut&eacute;e <strong>qu'une seule fois</strong>.</p>
+
+      <div class="callout callout-amber">
+        <p><strong>Explication :</strong> <code>xattr -cr</code> supprime l'attribut de &laquo; quarantaine &raquo; que macOS ajoute aux fichiers t&eacute;l&eacute;charg&eacute;s. C'est une proc&eacute;dure standard pour les applications en d&eacute;veloppement non distribu&eacute;es via l'App Store.</p>
+      </div>
+
+      <!-- ── Premier lancement ── -->
+      <h2 id="premier-lancement">Premier lancement</h2>
+      <p>Au premier lancement, macOS affiche une fen&ecirc;tre du <strong>Trousseau d'acc&egrave;s</strong> :</p>
+      <p><em>&laquo; galac6 veut utiliser vos informations confidentielles gard&eacute;es dans "galac6" de votre trousseau &raquo;</em></p>
+      <ol>
+        <li>Saisir le <strong>mot de passe de session macOS</strong> (celui utilis&eacute; pour d&eacute;verrouiller le Mac)</li>
+        <li>Cliquer sur <strong>&laquo; Toujours autoriser &raquo;</strong></li>
+      </ol>
+
+      <div class="callout">
+        <p><strong>Trousseau d'acc&egrave;s :</strong> Galac6 utilise le trousseau macOS (Keychain) pour stocker les cl&eacute;s API de mani&egrave;re s&eacute;curis&eacute;e. En cliquant sur &laquo; Toujours autoriser &raquo;, vous &eacute;vitez que cette demande se r&eacute;p&egrave;te &agrave; chaque lancement.</p>
+      </div>
+
+      <p>L'application s'ouvre ensuite sur l'assistant de configuration int&eacute;gr&eacute; dans Galac6.</p>
+
+      <!-- ── Mise à jour ── -->
+      <h2 id="mise-a-jour">Mise &agrave; jour</h2>
+      <p>Pour mettre &agrave; jour Galac6 :</p>
+      <ol>
+        <li>T&eacute;l&eacute;charger le nouveau fichier <code>.dmg</code></li>
+        <li>Ouvrir le DMG et glisser <strong>Galac6</strong> dans <strong>Applications</strong> (remplacer l'ancienne version)</li>
+      </ol>
+
+      <div class="callout callout-green">
+        <p><strong>Donn&eacute;es conserv&eacute;es :</strong> toutes vos donn&eacute;es sont conserv&eacute;es lors d'une mise &agrave; jour (profils &eacute;l&egrave;ves, conversations, configuration, cl&eacute;s API).</p>
+      </div>
+
+      <!-- ── Désinstallation ── -->
+      <h2 id="desinstallation">D&eacute;sinstallation</h2>
+      <p>Pour supprimer Galac6 :</p>
+      <ol>
+        <li>Quitter l'application (<code>Cmd+Q</code>)</li>
+        <li>Glisser <strong>Galac6.app</strong> depuis <code>/Applications</code> vers la Corbeille</li>
+      </ol>
+
+      <h3>Nettoyage complet (optionnel)</h3>
+      <p>Pour supprimer aussi les donn&eacute;es utilisateur :</p>
+
+<pre><code><span style="color:var(--text-muted)"># Donn&eacute;es de l'application</span>
+rm -rf ~/Library/Application\ Support/com.galac6.app
+
+<span style="color:var(--text-muted)"># Caches</span>
+rm -rf ~/Library/Caches/com.galac6.app
+rm -rf ~/Library/WebKit/com.galac6.app
+
+<span style="color:var(--text-muted)"># LaunchAgent</span>
+rm -f ~/Library/LaunchAgents/com.galac6.app.keepalive.plist
+
+<span style="color:var(--text-muted)"># Fichiers syst&egrave;me (n&eacute;cessite sudo)</span>
+sudo rm -rf /Library/Application\ Support/Galac6
+sudo rm -f /Library/LaunchDaemons/com.galac6.appmonitor.plist
+sudo rm -f /Library/PrivilegedHelperTools/Galac6AppMonitor</code></pre>
+
+      <p>Si le filtre IA &eacute;tait actif, nettoyer le fichier <code>/etc/hosts</code> :</p>
+<pre><code>sudo nano /etc/hosts
+<span style="color:var(--text-muted)"># Supprimer le bloc entre "# >>> Galac6 AI Blocker" et "# <<< Galac6 AI Blocker"</span></code></pre>
+
+      <!-- ── Support ── -->
+      <h2 id="support">Support</h2>
+      <p>Pour toute question : <a href="mailto:hello@galac6.io"><strong>hello@galac6.io</strong></a></p>
+
+    </main>
+  </div>
+
+  <footer>
+    <p>Galac6 &mdash; Assistant IA pour coll&eacute;giens et lyc&eacute;ens &middot; <a href="mailto:hello@galac6.io">hello@galac6.io</a></p>
+  </footer>
+
+  <script>
+    var sections = document.querySelectorAll('.content h2[id]');
+    var links = document.querySelectorAll('.sidebar a');
+    function updateActive() {
+      var current = '';
+      sections.forEach(function(s) { if (window.scrollY >= s.offsetTop - 120) current = s.getAttribute('id'); });
+      links.forEach(function(l) { l.classList.toggle('active', l.getAttribute('href') === '#' + current); });
+    }
+    window.addEventListener('scroll', updateActive, { passive: true });
+    updateActive();
+  </script>
+
+
+</body>
+</html>
