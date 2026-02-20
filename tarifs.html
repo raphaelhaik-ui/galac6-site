@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galac6 — Tarifs</title>
+  <link rel="icon" type="image/png" href="icons/32x32.png">
+  <style>
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --bg: #fafafa;
+      --bg-card: #ffffff;
+      --text: #1a1a2e;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --gradient-start: #6366f1;
+      --gradient-end: #a855f7;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f0f1a;
+        --bg-card: #1a1a2e;
+        --text: #f1f5f9;
+        --text-muted: #94a3b8;
+        --border: #2d2d44;
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem 4rem;
+    }
+
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    h1 span {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .lead {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Pricing card */
+    .pricing-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 3rem 2.5rem;
+      max-width: 480px;
+      margin: 0 auto 3rem;
+      text-align: center;
+      transition: all 0.25s ease;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+      border-color: var(--primary);
+    }
+
+    .pricing-amount {
+      font-size: clamp(2.5rem, 5vw, 3.2rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.25rem;
+    }
+
+    .pricing-period {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-details {
+      display: inline-block;
+      background: rgba(99,102,241,0.08);
+      color: var(--text);
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 0.6rem 1.2rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .pricing-perks {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+
+    .pricing-perks li {
+      padding: 0.45rem 0;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .pricing-perks li::before {
+      content: "\2713  ";
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* Table section */
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .table-lead {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .cost-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    .cost-table th,
+    .cost-table td {
+      padding: 0.85rem 1.1rem;
+      font-size: 0.95rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cost-table thead th {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.88rem;
+      letter-spacing: 0.01em;
+    }
+
+    .cost-table tbody tr {
+      background: var(--bg-card);
+      transition: background 0.15s ease;
+    }
+
+    .cost-table tbody tr:hover {
+      background: rgba(99,102,241,0.04);
+    }
+
+    .cost-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .cost-table .profile {
+      font-weight: 600;
+    }
+
+    .cost-table .profile small {
+      display: block;
+      font-weight: 400;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    .cost-table .saving {
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .table-note {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+      line-height: 1.5;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(99,102,241,0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(99,102,241,0.4);
+      text-decoration: none;
+    }
+
+    .btn-secondary {
+      background: var(--bg-card);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 640px) {
+      .pricing-card { padding: 2rem 1.5rem; }
+      .cost-table th,
+      .cost-table td { padding: 0.65rem 0.7rem; font-size: 0.85rem; }
+      .cta-row { flex-direction: column; }
+      .btn { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <a href="/" class="back-link">&larr; Retour &agrave; l'accueil</a>
+
+  <h1>Tarifs <span>Galac6</span></h1>
+  <p class="lead">Un prix simple et transparent, sans engagement. Vous ne payez que l'abonnement et la consommation r&eacute;elle de l'IA.</p>
+
+  <!-- Pricing card -->
+  <div class="pricing-card">
+    <div class="pricing-amount">10 &euro; / mois</div>
+    <p class="pricing-period">par &eacute;l&egrave;ve</p>
+    <div class="pricing-details">+ consommation LLM : entre 0,50 &euro; et 5 &euro; environ</div>
+    <ul class="pricing-perks">
+      <li>Toutes les fonctionnalit&eacute;s incluses</li>
+      <li>Compatible OpenAI, Anthropic et Google Gemini</li>
+      <li>Contr&ocirc;le parental complet</li>
+      <li>Mises &agrave; jour et nouveaut&eacute;s incluses</li>
+      <li>Support multi-&eacute;l&egrave;ves</li>
+    </ul>
+    <a href="#" class="btn btn-primary" style="width: 100%; justify-content: center;">S'abonner</a>
+  </div>
+
+  <!-- Cost estimation table -->
+  <h2>Impact estim&eacute; sur les co&ucirc;ts mensuels</h2>
+  <p class="table-lead">Estimation de la consommation LLM selon le profil d'utilisation, avant et apr&egrave;s les optimisations int&eacute;gr&eacute;es dans Galac6 (cache, routage de mod&egrave;le, prompts optimis&eacute;s).</p>
+
+  <table class="cost-table">
+    <thead>
+      <tr>
+        <th>Profil</th>
+        <th>Avant</th>
+        <th>Apr&egrave;s optimisations</th>
+        <th>&Eacute;conomie</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="profile">L&eacute;ger<small>~30 min / jour</small></td>
+        <td>~15 &euro;/mois</td>
+        <td>~9&ndash;10 &euro;/mois</td>
+        <td class="saving">~35 %</td>
+      </tr>
+      <tr>
+        <td class="profile">Intensif<small>~1 h / jour</small></td>
+        <td>~34 &euro;/mois</td>
+        <td>~19&ndash;22 &euro;/mois</td>
+        <td class="saving">~38 %</td>
+      </tr>
+      <tr>
+        <td class="profile">Tr&egrave;s intensif<small>~2 h / jour</small></td>
+        <td>~75 &euro;/mois</td>
+        <td>~42&ndash;48 &euro;/mois</td>
+        <td class="saving">~40 %</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="table-note">Les montants sont indicatifs et d&eacute;pendent du fournisseur IA choisi (OpenAI, Anthropic ou Google Gemini) et du mod&egrave;le utilis&eacute;. L'abonnement Galac6 de 10 &euro;/mois s'ajoute &agrave; ces co&ucirc;ts.</p>
+
+  <div class="cta-row">
+    <a href="/" class="btn btn-secondary">&larr; Retour &agrave; l'accueil</a>
+    <a href="#" class="btn btn-primary">S'abonner</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>Galac6 &mdash; Assistant IA pour coll&eacute;giens et lyc&eacute;ens &middot; <a href="mailto:hello@galac6.io">hello@galac6.io</a></p>
+</footer>
+
+</body>
+</html>
