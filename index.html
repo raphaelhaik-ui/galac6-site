@@ -3,29 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galac6 — Assistant IA pour collégiens et lycéens</title>
+  <title>Galac6 — Assistant IA du CP à la Terminale</title>
   <link rel="icon" type="image/png" href="icons/32x32.png">
   <style>
     :root {
-      --primary: #6366f1;
-      --primary-dark: #4f46e5;
-      --bg: #fafafa;
-      --bg-card: #ffffff;
-      --text: #1a1a2e;
-      --text-muted: #64748b;
-      --border: #e2e8f0;
+      --primary: #7c5cfc;
+      --primary-light: #a78bfa;
+      --bg: #0b0b14;
+      --bg-card: #13131f;
+      --bg-card-hover: #1a1a2e;
+      --text: #f0f0f5;
+      --text-muted: #8a8aa3;
+      --border: #1e1e32;
       --gradient-start: #6366f1;
       --gradient-end: #a855f7;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0f0f1a;
-        --bg-card: #1a1a2e;
-        --text: #f1f5f9;
-        --text-muted: #94a3b8;
-        --border: #2d2d44;
-      }
+      --glow: rgba(99,102,241,0.15);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -38,101 +30,246 @@
       -webkit-font-smoothing: antialiased;
     }
 
+    a { color: var(--primary-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ─── Navbar ─── */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+
+    .navbar-brand img {
+      height: 44px;
+      width: auto;
+    }
+
+    .navbar-brand span {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .navbar-links a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .navbar-links a:hover { color: var(--text); text-decoration: none; }
+
     /* ─── Hero ─── */
     .hero {
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       text-align: center;
-      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 2.5rem 5rem;
       position: relative;
-      overflow: hidden;
     }
 
     .hero::before {
       content: "";
       position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 60% 50% at 50% 0%, rgba(99,102,241,0.12) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 40% at 80% 20%, rgba(168,85,247,0.08) 0%, transparent 60%);
+      width: 600px;
+      height: 600px;
+      top: -100px;
+      left: -150px;
+      background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%);
       pointer-events: none;
     }
 
-    .hero-icon {
-      width: 96px;
-      height: 96px;
-      border-radius: 24px;
-      background: rgba(15, 15, 26, 0.6);
-      padding: 12px;
-      box-shadow: 0 8px 32px rgba(99,102,241,0.25);
-      margin-bottom: 2rem;
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      bottom: -100px;
+      right: -100px;
+      background: radial-gradient(circle, rgba(168,85,247,0.08) 0%, transparent 70%);
+      pointer-events: none;
     }
 
-    .hero h1 {
-      font-size: clamp(2.5rem, 6vw, 4rem);
+    .hero-text {
+      position: relative;
+      z-index: 1;
+      max-width: 640px;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(2.4rem, 5vw, 3.5rem);
       font-weight: 800;
       letter-spacing: -0.03em;
-      margin-bottom: 0.5rem;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
     }
 
-    .hero h1 span {
+    .hero-text h1 .gradient {
       background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
-    .hero .subtitle {
-      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    .hero-text .subtitle {
+      font-size: 1.1rem;
       color: var(--text-muted);
-      max-width: 600px;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-bullets {
-      list-style: none;
-      padding: 0;
+      max-width: 520px;
       margin: 0 auto 2.5rem;
-      max-width: 580px;
-      text-align: left;
+      line-height: 1.7;
     }
 
-    .hero-bullets li {
-      position: relative;
-      padding: 0.4rem 0 0.4rem 1.6rem;
-      color: var(--text-muted);
-      font-size: clamp(0.95rem, 2vw, 1.05rem);
-      line-height: 1.5;
-    }
-
-    .hero-bullets li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0.75rem;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-    }
-
-    .hero-buttons {
+    .hero-features {
+      list-style: none;
       display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-direction: column;
+      gap: 0.9rem;
+      text-align: left;
+      margin: 0 auto;
+      max-width: 480px;
     }
 
+    .hero-features li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .hero-features li .icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: rgba(99,102,241,0.1);
+      border: 1px solid rgba(99,102,241,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    /* ─── Hero Form ─── */
+    .hero-form-wrapper {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-form {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem;
+    }
+
+    .form-tabs {
+      display: flex;
+      margin-bottom: 1.5rem;
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--bg);
+      border: 1px solid var(--border);
+    }
+
+    .form-tab {
+      flex: 1;
+      padding: 0.65rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+      background: transparent;
+    }
+
+    .form-tab.active {
+      background: var(--bg-card-hover);
+      color: var(--text);
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+      font-weight: 500;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+      font-family: inherit;
+    }
+
+    .form-input:focus { border-color: var(--primary); }
+    .form-input::placeholder { color: #4a4a64; }
+
+    textarea.form-input { resize: vertical; }
+
+    .form-submit {
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 12px;
+      border: none;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+      margin-top: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .form-submit:hover { opacity: 0.9; transform: translateY(-1px); }
+
+    /* ─── Buttons ─── */
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.85rem 1.8rem;
-      border-radius: 14px;
-      font-size: 1rem;
+      padding: 0.8rem 1.6rem;
+      border-radius: 12px;
+      font-size: 0.95rem;
       font-weight: 600;
       text-decoration: none;
       transition: all 0.2s ease;
@@ -143,12 +280,13 @@
     .btn-primary {
       background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
       color: #fff;
-      box-shadow: 0 4px 16px rgba(99,102,241,0.3);
+      box-shadow: 0 4px 20px rgba(99,102,241,0.25);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(99,102,241,0.4);
+      box-shadow: 0 6px 28px rgba(99,102,241,0.35);
+      text-decoration: none;
     }
 
     .btn-secondary {
@@ -159,20 +297,9 @@
 
     .btn-secondary:hover {
       border-color: var(--primary);
-      color: var(--primary);
+      color: var(--primary-light);
       transform: translateY(-2px);
-    }
-
-    .scroll-hint {
-      position: absolute;
-      bottom: 2rem;
-      animation: bounce 2s infinite;
-      color: var(--text-muted);
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(8px); }
+      text-decoration: none;
     }
 
     /* ─── Sections ─── */
@@ -194,61 +321,68 @@
       text-align: center;
       color: var(--text-muted);
       margin-bottom: 3rem;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
     /* ─── Features Grid ─── */
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
+      gap: 1.25rem;
     }
 
     .feature-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 2rem;
+      border-radius: 16px;
+      padding: 1.75rem;
       transition: all 0.25s ease;
     }
 
     .feature-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
-      border-color: var(--primary);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      border-color: rgba(99,102,241,0.3);
     }
 
     .feature-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 14px;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      margin-bottom: 0.9rem;
     }
 
     .feature-card h3 {
-      font-size: 1.15rem;
+      font-size: 1.05rem;
       font-weight: 700;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
     }
 
     .feature-card p {
       color: var(--text-muted);
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       line-height: 1.6;
     }
 
-    .fi-purple { background: rgba(99,102,241,0.1); }
-    .fi-pink   { background: rgba(236,72,153,0.1); }
-    .fi-amber  { background: rgba(245,158,11,0.1); }
-    .fi-green  { background: rgba(34,197,94,0.1); }
-    .fi-blue   { background: rgba(59,130,246,0.1); }
-    .fi-red    { background: rgba(239,68,68,0.1); }
+    .fi-purple { background: rgba(99,102,241,0.12); }
+    .fi-pink   { background: rgba(236,72,153,0.12); }
+    .fi-amber  { background: rgba(245,158,11,0.12); }
+    .fi-green  { background: rgba(34,197,94,0.12); }
+    .fi-blue   { background: rgba(59,130,246,0.12); }
+    .fi-red    { background: rgba(239,68,68,0.12); }
 
-    /* ─── How It Works ─── */
+    /* ─── Steps ─── */
     .steps {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -267,61 +401,58 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
       color: #fff;
       font-weight: 800;
-      font-size: 1.2rem;
-      margin: 0 auto 1rem;
+      font-size: 1.1rem;
+      margin: 0 auto 0.9rem;
     }
 
     .step h3 {
-      font-size: 1.05rem;
+      font-size: 1rem;
       font-weight: 700;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.3rem;
     }
 
     .step p {
       color: var(--text-muted);
-      font-size: 0.9rem;
+      font-size: 0.88rem;
     }
 
     /* ─── Audience ─── */
     .audience-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
+      gap: 1.25rem;
     }
 
     .audience-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 2rem;
+      border-radius: 16px;
+      padding: 1.75rem;
     }
 
     .audience-card h3 {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 700;
       margin-bottom: 0.75rem;
     }
 
-    .audience-card ul {
-      list-style: none;
-      padding: 0;
-    }
+    .audience-card ul { list-style: none; }
 
     .audience-card li {
-      padding: 0.4rem 0;
+      padding: 0.35rem 0;
       color: var(--text-muted);
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
 
     .audience-card li::before {
       content: "✓ ";
-      color: var(--primary);
+      color: var(--primary-light);
       font-weight: 700;
     }
 
@@ -329,8 +460,8 @@
     .pricing-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 3rem 2.5rem;
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
       max-width: 480px;
       margin: 0 auto;
       text-align: center;
@@ -338,9 +469,9 @@
     }
 
     .pricing-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
-      border-color: var(--primary);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      border-color: rgba(99,102,241,0.3);
     }
 
     .pricing-dual {
@@ -357,7 +488,7 @@
     }
 
     .pricing-dual-label {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 600;
       color: var(--text-muted);
       text-transform: uppercase;
@@ -366,7 +497,7 @@
     }
 
     .pricing-dual-amount {
-      font-size: clamp(1.6rem, 3.5vw, 2rem);
+      font-size: clamp(1.5rem, 3.5vw, 1.9rem);
       font-weight: 900;
       letter-spacing: -0.02em;
       background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
@@ -382,12 +513,12 @@
     }
 
     .pricing-dual-detail {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--text-muted);
     }
 
     .pricing-dual-plus {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 800;
       background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
       -webkit-background-clip: text;
@@ -398,53 +529,20 @@
 
     .pricing-perks {
       list-style: none;
-      padding: 0;
       text-align: left;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
 
     .pricing-perks li {
-      padding: 0.45rem 0;
+      padding: 0.4rem 0;
       color: var(--text-muted);
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
 
     .pricing-perks li::before {
       content: "✓ ";
-      color: var(--primary);
+      color: var(--primary-light);
       font-weight: 700;
-    }
-
-    /* ─── CTA ─── */
-    .cta {
-      text-align: center;
-      padding: 5rem 2rem;
-    }
-
-    .cta h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .cta p {
-      color: var(--text-muted);
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
-    }
-
-    /* ─── Footer ─── */
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      border-top: 1px solid var(--border);
-    }
-
-    footer a {
-      color: var(--primary);
-      text-decoration: none;
     }
 
     /* ─── Guide Page ─── */
@@ -454,157 +552,120 @@
       padding: 3rem 2rem;
     }
 
-    .guide-container h1 {
-      font-size: 2rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-    }
-
-    .guide-container h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--border);
-    }
-
-    .guide-container h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-top: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .guide-container p,
-    .guide-container li {
-      color: var(--text-muted);
-      line-height: 1.8;
-    }
-
-    .guide-container ul, .guide-container ol {
-      padding-left: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
+    .guide-container h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .guide-container h2 { font-size: 1.5rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+    .guide-container h3 { font-size: 1.15rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.5rem; }
+    .guide-container p, .guide-container li { color: var(--text-muted); line-height: 1.8; }
+    .guide-container ul, .guide-container ol { padding-left: 1.5rem; margin-bottom: 1rem; }
     .guide-container li { margin-bottom: 0.3rem; }
-
-    .guide-container table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0;
-    }
-
-    .guide-container th,
-    .guide-container td {
-      text-align: left;
-      padding: 0.75rem 1rem;
-      border: 1px solid var(--border);
-      font-size: 0.95rem;
-    }
-
-    .guide-container th {
-      background: var(--bg-card);
-      font-weight: 600;
-    }
-
-    .guide-container code {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      padding: 0.15rem 0.4rem;
-      border-radius: 6px;
-      font-size: 0.9em;
-    }
-
-    .guide-container pre {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.25rem;
-      overflow-x: auto;
-      margin: 1rem 0;
-    }
-
-    .guide-container pre code {
-      border: none;
-      padding: 0;
-      background: none;
-    }
-
-    .guide-container blockquote {
-      border-left: 3px solid var(--primary);
-      padding: 0.75rem 1.25rem;
-      margin: 1rem 0;
-      background: rgba(99,102,241,0.05);
-      border-radius: 0 12px 12px 0;
-    }
-
-    .guide-container blockquote p {
-      color: var(--text);
-    }
+    .guide-container table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    .guide-container th, .guide-container td { text-align: left; padding: 0.75rem 1rem; border: 1px solid var(--border); font-size: 0.95rem; }
+    .guide-container th { background: var(--bg-card); font-weight: 600; }
+    .guide-container code { background: var(--bg-card); border: 1px solid var(--border); padding: 0.15rem 0.4rem; border-radius: 6px; font-size: 0.9em; }
+    .guide-container pre { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; overflow-x: auto; margin: 1rem 0; }
+    .guide-container pre code { border: none; padding: 0; background: none; }
+    .guide-container blockquote { border-left: 3px solid var(--primary); padding: 0.75rem 1.25rem; margin: 1rem 0; background: rgba(99,102,241,0.06); border-radius: 0 12px 12px 0; }
+    .guide-container blockquote p { color: var(--text); }
 
     .back-link {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      color: var(--primary);
+      color: var(--primary-light);
       text-decoration: none;
       font-weight: 600;
       margin-bottom: 2rem;
     }
-
     .back-link:hover { text-decoration: underline; }
 
+    /* ─── Footer ─── */
+    footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--primary-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    .footer-badges {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
     /* ─── Responsive ─── */
+    @media (max-width: 900px) {
+      .hero { padding: 3rem 1.5rem 3rem; }
+      .navbar { padding: 1rem 1.5rem; }
+      .navbar-links { display: none; }
+    }
+
     @media (max-width: 640px) {
-      .hero-buttons { flex-direction: column; align-items: center; }
-      .btn { width: 100%; max-width: 300px; justify-content: center; }
+      .btn { width: 100%; max-width: 340px; justify-content: center; }
       .pricing-card { padding: 2rem 1.5rem; }
       .pricing-dual { flex-direction: column; gap: 0.75rem; }
       .pricing-dual-plus { margin: -0.25rem 0; }
+      .features-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ═══ BETA BANNER ═══ -->
-  <div style="background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); color: #fff; text-align: center; padding: 0.75rem 1rem; font-size: clamp(0.85rem, 2.5vw, 1.15rem); font-weight: 700; letter-spacing: 0.02em; line-height: 1.4;">
-    🚀 VERSION BETA — Nous recherchons des familles pour tester Galac6.
-    <a href="#contact" style="color: #fff; text-decoration: underline; margin-left: 0.3rem;">Tenez moi informé !</a>
-  </div>
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar">
+    <a href="/" class="navbar-brand">
+      <img src="icons/icon.png" alt="Galac6">
+      <span>Galac6</span>
+    </a>
+    <div class="navbar-links">
+      <a href="#features">Fonctionnalités</a>
+      <a href="#pricing">Tarifs</a>
+      <a href="guide-installation.html">Installation</a>
+      <a href="mailto:hello@galac6.io">Contact</a>
+      <a href="mailto:hello@galac6.io" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600;">Inscrivez-vous</a>
+    </div>
+  </nav>
 
   <!-- ═══ HERO ═══ -->
   <div class="hero" id="top">
-    <img src="icons/128x128.png" alt="Galac6" class="hero-icon">
-    <h1>
-      <span>Galac6</span>
-    </h1>
-    <p class="subtitle">
-      <span style="font-size: clamp(1.3rem, 3vw, 1.7rem); font-weight: 700; color: var(--text); display: block; margin-bottom: 0.4rem;">L'assistant IA conçu pour les collégiens et lycéens.</span>
-      Guidé, sécurisé et adapté à chaque niveau, de la 6ème à la Terminale.
-    </p>
-    <ul class="hero-bullets">
-      <li>Assistant IA pour les collégiens et lycéens, avec ChatGPT, Claude ou Gemini</li>
-      <li>Empêche la triche, ne donne pas les réponses, bloque les autres IA</li>
-      <li>Analyse des forces et faiblesses de l'élève</li>
-      <li>Mode dictée et parcours Scratch / Python de débutant à confirmé</li>
-      <li>Mode parent pour piloter</li>
-    </ul>
-    <div class="hero-buttons">
-      <a href="#" class="btn btn-primary">
-        S'abonner
-      </a>
-      <a href="#features" class="btn btn-secondary">
-        Découvrir les fonctionnalités
-      </a>
-      <a href="guide-installation.html" class="btn btn-secondary">
-        📖 Guide d'installation
-      </a>
+    <div class="hero-text">
+      <h1>L'IA qui apprend<br><span class="gradient">aux élèves.</span></h1>
+      <p class="subtitle">Un assistant éducatif qui guide votre enfant par la méthode socratique — pour apprendre vraiment.</p>
+
+      <ul class="hero-features">
+        <li>
+          <span class="icon">🎓</span>
+          Méthode socratique : guide la réflexion, pas le copier-coller
+        </li>
+        <li>
+          <span class="icon">📝</span>
+          Dictées, quiz, fiches de révision et cours de programmation
+        </li>
+        <li>
+          <span class="icon">✨</span>
+          Du CP à la Terminale, adapté au niveau de chaque élève
+        </li>
+      </ul>
     </div>
-    <div class="scroll-hint">
-      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-    </div>
+
   </div>
+
+  <hr class="divider">
 
   <!-- ═══ FEATURES ═══ -->
   <section id="features">
@@ -615,42 +676,29 @@
       <div class="feature-card">
         <div class="feature-icon fi-purple">💬</div>
         <h3>Chat intelligent</h3>
-        <p>L'élève pose ses questions et obtient des explications claires, adaptées à son niveau scolaire (de la 6ème à la Terminale).</p>
+        <p>L'élève pose ses questions et obtient des explications claires, adaptées à son niveau scolaire (du CP à la Terminale).</p>
       </div>
-
       <div class="feature-card">
         <div class="feature-icon fi-pink">📝</div>
         <h3>Mode Quiz</h3>
         <p>Quiz auto-générés par l'IA avec QCM et questions ouvertes. Corrections détaillées et XP gagnés à chaque bonne réponse.</p>
       </div>
-
       <div class="feature-card">
         <div class="feature-icon fi-amber">∑</div>
         <h3>Éditeur de formules</h3>
         <p>Un éditeur WYSIWYG pour saisir des formules mathématiques naturellement, avec clavier virtuel intégré.</p>
       </div>
-
       <div class="feature-card">
         <div class="feature-icon fi-green">🏆</div>
         <h3>XP et gamification</h3>
         <p>Système de niveaux, points d'expérience et séries quotidiennes pour motiver l'élève à réviser régulièrement.</p>
       </div>
-
       <div class="feature-card">
         <div class="feature-icon fi-green">💻</div>
         <h3>Apprends le dev</h3>
-        <p>Parcours pédagogique Scratch et Python guidé par l'IA, de débutant à confirmé. Théorie, exemples commentés et exercices pratiques pour tous les niveaux.</p>
+        <p>Parcours pédagogique Scratch et Python guidé par l'IA, de débutant à confirmé. Théorie, exemples commentés et exercices pratiques.</p>
       </div>
-
       <div class="feature-card">
-        <div class="feature-icon fi-blue">🛡️</div>
-        <h3>Contrôle parental</h3>
-        <p>Filtrage des sites IA concurrents, blocage d'applications, historique consultable et prompt personnalisable par le parent.</p>
-      </div>
-
-    </div>
-    <div style="display: flex; justify-content: center; margin-top: 1.5rem;">
-      <div class="feature-card" style="max-width: 380px; width: 100%;">
         <div class="feature-icon fi-red">📊</div>
         <h3>Tableau de bord</h3>
         <p>Statistiques détaillées : matières travaillées, quiz complétés, meilleur score, série de jours consécutifs.</p>
@@ -658,30 +706,8 @@
     </div>
   </section>
 
-  <!-- ═══ HOW IT WORKS ═══ -->
-  <section>
-    <h2 class="section-title">Simple à mettre en place</h2>
-    <p class="section-subtitle">En 4 étapes, l'élève est prêt à travailler.</p>
 
-    <div class="steps">
-      <div class="step">
-        <h3>Installer</h3>
-        <p>Installer le .dmg sur le Mac de l'élève</p>
-      </div>
-      <div class="step">
-        <h3>Configurer</h3>
-        <p>Mot de passe admin + clé API (OpenAI, Anthropic ou Gemini)</p>
-      </div>
-      <div class="step">
-        <h3>Créer le profil</h3>
-        <p>Nom, âge, niveau scolaire et langue de l'élève</p>
-      </div>
-      <div class="step">
-        <h3>C'est parti !</h3>
-        <p>L'élève accède à son assistant IA personnalisé</p>
-      </div>
-    </div>
-  </section>
+  <hr class="divider">
 
   <!-- ═══ AUDIENCE ═══ -->
   <section>
@@ -692,7 +718,7 @@
       <div class="audience-card">
         <h3>👨‍🎓 Pour l'élève</h3>
         <ul>
-          <li>Chat IA adapté à son niveau (6ème → Terminale)</li>
+          <li>Chat IA adapté à son niveau (CP → Terminale)</li>
           <li>12 matières scolaires disponibles</li>
           <li>Quiz interactifs avec corrections</li>
           <li>Dictées avec correction et suivi</li>
@@ -718,6 +744,7 @@
     </div>
   </section>
 
+  <hr class="divider">
 
   <!-- ═══ PRICING ═══ -->
   <section id="pricing">
@@ -740,18 +767,13 @@
       </div>
       <ul class="pricing-perks">
         <li>Toutes les fonctionnalités incluses</li>
-
-        <li>Contrôle parental complet</li>
         <li>Mises à jour et nouveautés incluses</li>
         <li>Support multi-élèves</li>
       </ul>
-      <a href="#" class="btn btn-primary" style="width: 100%; justify-content: center;">S'abonner</a>
-    </div>
-
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="/tarifs" class="btn btn-secondary">Voir le détail des coûts</a>
     </div>
   </section>
+
+  <hr class="divider">
 
   <!-- ═══ RESEARCH ═══ -->
   <section>
@@ -760,117 +782,66 @@
 
     <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
       <div class="feature-card" style="text-align: center;">
-        <div style="font-size: 2rem; font-weight: 900; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.5rem;">IA + humain</div>
+        <div style="font-size: 1.8rem; font-weight: 900; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.5rem;">IA + humain</div>
         <h3>Le duo gagnant</h3>
-        <p>Ni l'IA seule ni l'humain seul : c'est leur combinaison qui multiplie les résultats par 18.<br><span style="font-size: 0.8rem;">Gu &amp; Yan (2025), méta-analyse · 19 études</span></p>
+        <p>Ni l'IA seule ni l'humain seul : c'est leur combinaison qui multiplie les résultats par 18.<br><span style="font-size: 0.78rem;">Gu &amp; Yan (2025), méta-analyse · 19 études</span></p>
       </div>
       <div class="feature-card" style="text-align: center;">
-        <div style="font-size: 2.5rem; font-weight: 900; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.5rem;">+15</div>
+        <div style="font-size: 2.2rem; font-weight: 900; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.5rem;">+15</div>
         <h3>Percentiles aux examens</h3>
-        <p>Les élèves actifs sur un tuteur IA à quiz adaptatifs gagnent 15 percentiles aux examens.<br><span style="font-size: 0.8rem;">Baillifard et al. (2024), UniDistance Suisse</span></p>
+        <p>Les élèves actifs sur un tuteur IA à quiz adaptatifs gagnent 15 percentiles aux examens.<br><span style="font-size: 0.78rem;">Baillifard et al. (2024), UniDistance Suisse</span></p>
       </div>
       <div class="feature-card" style="text-align: center;">
-        <div style="font-size: 2.5rem; font-weight: 900; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.5rem;">28</div>
+        <div style="font-size: 2.2rem; font-weight: 900; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.5rem;">28</div>
         <h3>Études K-12 convergent</h3>
-        <p>Feedback immédiat, pratique guidée et adaptivité : les 3 piliers des résultats.<br><span style="font-size: 0.8rem;">Zaretsky et al. (2025), npj Science of Learning</span></p>
+        <p>Feedback immédiat, pratique guidée et adaptivité : les 3 piliers des résultats.<br><span style="font-size: 0.78rem;">Zaretsky et al. (2025), npj Science of Learning</span></p>
       </div>
     </div>
 
     <div style="text-align: center; margin-top: 2rem;">
-      <a href="/recherche" class="btn btn-secondary">📄 Voir les 6 études et leurs conclusions</a>
+      <a href="recherche.html" class="btn btn-secondary">Voir les 6 études et leurs conclusions</a>
     </div>
   </section>
 
-  <!-- ═══ PROVIDERS ═══ -->
+  <hr class="divider">
+
+  <!-- ═══ HOW IT WORKS ═══ -->
   <section>
-    <h2 class="section-title">Compatible avec les meilleurs modèles</h2>
-    <p class="section-subtitle">Utilisez votre propre clé API. Basculement automatique entre fournisseurs.</p>
+    <h2 class="section-title">Comment fonctionne Galac6 ?</h2>
+    <p class="section-subtitle">Galac6 s'appuie sur les meilleurs modèles d'IA du marché, optimisés pour l'apprentissage scolaire.</p>
 
-    <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
-      <div class="feature-card" style="text-align: center;">
-        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🟢</div>
-        <h3>OpenAI</h3>
-        <p>GPT-5, GPT-5-mini ★, GPT-4o, o1, o3, o4…</p>
+    <div style="max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.25rem;">
+      <div class="feature-card" style="display: flex; align-items: flex-start; gap: 1rem;">
+        <div class="feature-icon fi-purple" style="flex-shrink: 0;">🧠</div>
+        <div>
+          <h3>Une surcouche aux meilleurs modèles</h3>
+          <p>Galac6 utilise Claude Haiku (Anthropic) et GPT-5 mini (OpenAI) comme moteurs. Nous ajoutons par-dessus une couche pédagogique qui transforme ces modèles en vrais tuteurs scolaires.</p>
+        </div>
       </div>
-      <div class="feature-card" style="text-align: center;">
-        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🟠</div>
-        <h3>Anthropic</h3>
-        <p>Claude Sonnet 4, Opus, Haiku 4.5 ★…</p>
+      <div class="feature-card" style="display: flex; align-items: flex-start; gap: 1rem;">
+        <div class="feature-icon fi-amber" style="flex-shrink: 0;">🎯</div>
+        <div>
+          <h3>Des modèles adaptés aux élèves</h3>
+          <p>Nous avons affiné le comportement de l'IA : méthode socratique, adaptation au niveau scolaire, refus de donner les réponses directement. L'élève apprend vraiment, au lieu de copier-coller.</p>
+        </div>
       </div>
-      <div class="feature-card" style="text-align: center;">
-        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🔵</div>
-        <h3>Google Gemini</h3>
-        <p>Gemini 3, 2.5 Pro, 2.5 Flash ★…</p>
+      <div class="feature-card" style="display: flex; align-items: flex-start; gap: 1rem;">
+        <div class="feature-icon fi-green" style="flex-shrink: 0;">🚀</div>
+        <div>
+          <h3>Des fonctionnalités pensées pour l'école</h3>
+          <p>Au-delà du chat, Galac6 propose des outils dédiés : dictées avec correction, parcours Scratch et Python, quiz adaptatifs, fiches de révision générées et tableau de bord des progrès.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══ NEWSLETTER / CONTACT ═══ -->
-  <section id="contact" style="max-width: 600px; margin: 0 auto; padding: 4rem 1.5rem 2rem;">
-    <h2 style="text-align: center; font-size: 1.6rem; margin-bottom: 0.5rem;">Tenez moi informé</h2>
-    <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Laissez votre email et dites-nous pourquoi Galac6 vous intéresse.</p>
-
-    <form id="contactForm" style="display: flex; flex-direction: column; gap: 1rem;">
-      <input
-        type="email"
-        id="contactEmail"
-        name="email"
-        required
-        placeholder="Votre adresse email"
-        style="padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text); font-size: 1rem; outline: none; transition: border-color 0.2s;"
-        onfocus="this.style.borderColor='var(--primary)'"
-        onblur="this.style.borderColor='var(--border)'"
-      >
-      <textarea
-        id="contactComment"
-        name="comment"
-        rows="3"
-        placeholder="Pourquoi je suis intéressé / 1 mot pour la team"
-        style="padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text); font-size: 1rem; outline: none; resize: vertical; font-family: inherit; transition: border-color 0.2s;"
-        onfocus="this.style.borderColor='var(--primary)'"
-        onblur="this.style.borderColor='var(--border)'"
-      ></textarea>
-      <button
-        type="submit"
-        style="padding: 0.85rem 2rem; border-radius: 10px; border: none; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-size: 1rem; font-weight: 600; cursor: pointer; transition: opacity 0.2s;"
-        onmouseover="this.style.opacity='0.9'"
-        onmouseout="this.style.opacity='1'"
-      >Envoyer</button>
-    </form>
-
-    <p id="contactSuccess" style="display: none; text-align: center; color: #4ade80; margin-top: 1rem; font-weight: 600;">
-      ✓ Merci, nous vous tiendrons informé !
-    </p>
-    <p id="contactError" style="display: none; text-align: center; color: #f87171; margin-top: 1rem;">
-      Une erreur est survenue. Réessayez ou écrivez à hello@galac6.io.
-    </p>
-  </section>
-
-  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-
-  <script>
-    (function() {
-      var form = document.getElementById("contactForm");
-      form.action = "https://script.google.com/macros/s/AKfycbzBYz3uizEylqKOn-bR0E6VAvMZ3WKhYjyqse5uhPWYMh9e-LOA6GId_Lo8au2AbAPh/exec";
-      form.method = "POST";
-      form.target = "hidden_iframe";
-
-      form.addEventListener("submit", function() {
-        var btn = form.querySelector("button[type=submit]");
-        btn.disabled = true;
-        btn.textContent = "Envoi…";
-        setTimeout(function() {
-          document.getElementById("contactForm").style.display = "none";
-          document.getElementById("contactSuccess").style.display = "block";
-        }, 1500);
-      });
-    })();
-  </script>
 
   <!-- ═══ FOOTER ═══ -->
   <footer>
-    <p>Galac6 — Assistant IA pour collégiens et lycéens &middot; <a href="mailto:hello@galac6.io">hello@galac6.io</a></p>
-    <p style="margin-top: 0.5rem;">macOS uniquement &middot; Clé API requise &middot; Données stockées localement</p>
+    <div>Galac6 — Assistant IA du CP à la Terminale · <a href="mailto:hello@galac6.io">hello@galac6.io</a></div>
+    <div class="footer-badges">
+      <span class="footer-badge">🇫🇷 Made in France</span>
+    </div>
   </footer>
 
 </body>

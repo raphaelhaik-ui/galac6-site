@@ -7,25 +7,15 @@
   <link rel="icon" type="image/png" href="icons/32x32.png">
   <style>
     :root {
-      --primary: #6366f1;
-      --primary-dark: #4f46e5;
-      --bg: #fafafa;
-      --bg-card: #ffffff;
-      --text: #1a1a2e;
-      --text-muted: #64748b;
-      --border: #e2e8f0;
+      --primary: #7c5cfc;
+      --primary-light: #a78bfa;
+      --bg: #0b0b14;
+      --bg-card: #13131f;
+      --text: #f0f0f5;
+      --text-muted: #8a8aa3;
+      --border: #1e1e32;
       --gradient-start: #6366f1;
       --gradient-end: #a855f7;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0f0f1a;
-        --bg-card: #1a1a2e;
-        --text: #f1f5f9;
-        --text-muted: #94a3b8;
-        --border: #2d2d44;
-      }
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -38,14 +28,14 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a { color: var(--primary); text-decoration: none; }
+    a { color: var(--primary-light); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
     .back-link {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      color: var(--primary);
+      color: var(--primary-light);
       text-decoration: none;
       font-weight: 600;
       margin-bottom: 2rem;
@@ -169,7 +159,7 @@
     }
 
     .study-result strong {
-      color: var(--primary);
+      color: var(--primary-light);
     }
 
     .study-doi {
@@ -178,7 +168,7 @@
     }
 
     .study-doi a {
-      color: var(--primary);
+      color: var(--primary-light);
     }
 
     /* Synthesis */
@@ -216,7 +206,7 @@
 
     .synthesis li::before {
       content: "→ ";
-      color: var(--primary);
+      color: var(--primary-light);
       font-weight: 700;
     }
 
@@ -261,7 +251,7 @@
 
     .btn-secondary:hover {
       border-color: var(--primary);
-      color: var(--primary);
+      color: var(--primary-light);
       transform: translateY(-2px);
       text-decoration: none;
     }
@@ -286,7 +276,7 @@
 
 <div class="container">
 
-  <a href="/" class="back-link">← Retour à l'accueil</a>
+  <a href="index.html" class="back-link">← Retour à l'accueil</a>
 
   <h1>État de la recherche sur <span>l'IA dans l'apprentissage</span></h1>
   <p class="lead">Ce que disent les études scientifiques récentes (2023–2025) sur le tutorat par IA — et pourquoi l'encadrement fait toute la différence.</p>
@@ -421,19 +411,17 @@
       <li><strong>Tutorat guidé</strong> : l'IA ne donne jamais la réponse, elle guide par le questionnement (études 2, 4)</li>
       <li><strong>Quiz adaptatifs et XP</strong> : pratique régulière récompensée, répétition espacée (étude 3)</li>
       <li><strong>Feedback immédiat</strong> : corrections détaillées pour chaque quiz et dictée (étude 5)</li>
-      <li><strong>Blocage des IA libres</strong> : protection contre l'atrophie cognitive (études 1, 4)</li>
     </ul>
   </div>
 
   <div class="cta-row">
-    <a href="/" class="btn btn-secondary">← Retour à l'accueil</a>
-    <a href="/#contact" class="btn btn-primary">Demander l'accès à la Bêta</a>
+    <a href="index.html" class="btn btn-secondary">← Retour à l'accueil</a>
   </div>
 
 </div>
 
 <footer>
-  <p>Galac6 — Assistant IA pour collégiens et lycéens · <a href="mailto:hello@galac6.io">hello@galac6.io</a></p>
+  <p>Galac6 — Assistant IA du CP à la Terminale · <a href="mailto:hello@galac6.io">hello@galac6.io</a></p>
   <p style="margin-top: 0.4rem;">Toutes les études citées sont accessibles via leurs DOI respectifs.</p>
 </footer>
 
