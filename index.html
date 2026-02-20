@@ -325,6 +325,71 @@
       font-weight: 700;
     }
 
+    /* ─── Pricing ─── */
+    .pricing-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 3rem 2.5rem;
+      max-width: 480px;
+      margin: 0 auto;
+      text-align: center;
+      transition: all 0.25s ease;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+      border-color: var(--primary);
+    }
+
+    .pricing-amount {
+      font-size: clamp(2.5rem, 5vw, 3.2rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.25rem;
+    }
+
+    .pricing-period {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-details {
+      display: inline-block;
+      background: rgba(99,102,241,0.08);
+      color: var(--text);
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 0.6rem 1.2rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .pricing-perks {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+
+    .pricing-perks li {
+      padding: 0.45rem 0;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .pricing-perks li::before {
+      content: "✓ ";
+      color: var(--primary);
+      font-weight: 700;
+    }
+
     /* ─── CTA ─── */
     .cta {
       text-align: center;
@@ -469,6 +534,7 @@
     @media (max-width: 640px) {
       .hero-buttons { flex-direction: column; align-items: center; }
       .btn { width: 100%; max-width: 300px; justify-content: center; }
+      .pricing-card { padding: 2rem 1.5rem; }
     }
   </style>
 </head>
@@ -498,11 +564,11 @@
       <li>Mode parent pour piloter</li>
     </ul>
     <div class="hero-buttons">
-      <a href="#features" class="btn btn-primary">
-        Découvrir les fonctionnalités
+      <a href="#" class="btn btn-primary">
+        S'abonner
       </a>
-      <a href="#contact" class="btn btn-primary">
-        🚀 Demander l'accès à la Bêta
+      <a href="#features" class="btn btn-secondary">
+        Découvrir les fonctionnalités
       </a>
       <a href="guide-installation.html" class="btn btn-secondary">
         📖 Guide d'installation
@@ -622,6 +688,26 @@
           <li>Support multi-élèves</li>
         </ul>
       </div>
+    </div>
+  </section>
+
+  <!-- ═══ PRICING ═══ -->
+  <section id="pricing">
+    <h2 class="section-title">Tarifs</h2>
+    <p class="section-subtitle">Un prix simple et transparent, sans engagement.</p>
+
+    <div class="pricing-card">
+      <div class="pricing-amount">10 € / mois</div>
+      <p class="pricing-period">par élève</p>
+      <div class="pricing-details">+ consommation LLM : entre 0,50 € et 5 € environ</div>
+      <ul class="pricing-perks">
+        <li>Toutes les fonctionnalités incluses</li>
+        <li>Compatible OpenAI, Anthropic et Google Gemini</li>
+        <li>Contrôle parental complet</li>
+        <li>Mises à jour et nouveautés incluses</li>
+        <li>Support multi-élèves</li>
+      </ul>
+      <a href="#" class="btn btn-primary" style="width: 100%; justify-content: center;">S'abonner</a>
     </div>
   </section>
 
