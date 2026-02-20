@@ -343,32 +343,57 @@
       border-color: var(--primary);
     }
 
-    .pricing-amount {
-      font-size: clamp(2.5rem, 5vw, 3.2rem);
+    .pricing-dual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .pricing-dual-block {
+      flex: 1;
+      text-align: center;
+    }
+
+    .pricing-dual-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.4rem;
+    }
+
+    .pricing-dual-amount {
+      font-size: clamp(1.6rem, 3.5vw, 2rem);
       font-weight: 900;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.02em;
       background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.3rem;
     }
 
-    .pricing-period {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .pricing-details {
-      display: inline-block;
-      background: rgba(99,102,241,0.08);
-      color: var(--text);
-      font-size: 0.95rem;
+    .pricing-dual-amount span {
+      font-size: 0.6em;
       font-weight: 600;
-      padding: 0.6rem 1.2rem;
-      border-radius: 10px;
-      margin-bottom: 2rem;
+    }
+
+    .pricing-dual-detail {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .pricing-dual-plus {
+      font-size: 1.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      flex-shrink: 0;
     }
 
     .pricing-perks {
@@ -535,6 +560,8 @@
       .hero-buttons { flex-direction: column; align-items: center; }
       .btn { width: 100%; max-width: 300px; justify-content: center; }
       .pricing-card { padding: 2rem 1.5rem; }
+      .pricing-dual { flex-direction: column; gap: 0.75rem; }
+      .pricing-dual-plus { margin: -0.25rem 0; }
     }
   </style>
 </head>
@@ -691,18 +718,29 @@
     </div>
   </section>
 
+
   <!-- ═══ PRICING ═══ -->
   <section id="pricing">
     <h2 class="section-title">Tarifs</h2>
     <p class="section-subtitle">Un prix simple et transparent, sans engagement.</p>
 
     <div class="pricing-card">
-      <div class="pricing-amount">10 € / mois</div>
-      <p class="pricing-period">par élève</p>
-      <div class="pricing-details">+ consommation LLM : entre 0,50 € et 5 € environ</div>
+      <div class="pricing-dual">
+        <div class="pricing-dual-block">
+          <p class="pricing-dual-label">Abonnement Galac6</p>
+          <div class="pricing-dual-amount">10 €<span>/mois</span></div>
+          <p class="pricing-dual-detail">par élève, sans engagement</p>
+        </div>
+        <div class="pricing-dual-plus">+</div>
+        <div class="pricing-dual-block">
+          <p class="pricing-dual-label">Consommation IA</p>
+          <div class="pricing-dual-amount" style="white-space: nowrap;">~0,60&nbsp;€/heure</div>
+          <p class="pricing-dual-detail">facturée au réel</p>
+        </div>
+      </div>
       <ul class="pricing-perks">
         <li>Toutes les fonctionnalités incluses</li>
-        <li>Compatible OpenAI, Anthropic et Google Gemini</li>
+
         <li>Contrôle parental complet</li>
         <li>Mises à jour et nouveautés incluses</li>
         <li>Support multi-élèves</li>

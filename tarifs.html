@@ -96,32 +96,57 @@
       border-color: var(--primary);
     }
 
-    .pricing-amount {
-      font-size: clamp(2.5rem, 5vw, 3.2rem);
+    .pricing-dual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .pricing-dual-block {
+      flex: 1;
+      text-align: center;
+    }
+
+    .pricing-dual-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.4rem;
+    }
+
+    .pricing-dual-amount {
+      font-size: clamp(1.6rem, 3.5vw, 2rem);
       font-weight: 900;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.02em;
       background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.3rem;
     }
 
-    .pricing-period {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .pricing-details {
-      display: inline-block;
-      background: rgba(99,102,241,0.08);
-      color: var(--text);
-      font-size: 0.95rem;
+    .pricing-dual-amount span {
+      font-size: 0.6em;
       font-weight: 600;
-      padding: 0.6rem 1.2rem;
-      border-radius: 10px;
-      margin-bottom: 2rem;
+    }
+
+    .pricing-dual-detail {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .pricing-dual-plus {
+      font-size: 1.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      flex-shrink: 0;
     }
 
     .pricing-perks {
@@ -208,14 +233,6 @@
       font-size: 0.82rem;
     }
 
-    .cost-table .saving {
-      font-weight: 700;
-      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
     .table-note {
       font-size: 0.82rem;
       color: var(--text-muted);
@@ -282,6 +299,8 @@
 
     @media (max-width: 640px) {
       .pricing-card { padding: 2rem 1.5rem; }
+      .pricing-dual { flex-direction: column; gap: 0.75rem; }
+      .pricing-dual-plus { margin: -0.25rem 0; }
       .cost-table th,
       .cost-table td { padding: 0.65rem 0.7rem; font-size: 0.85rem; }
       .cta-row { flex-direction: column; }
@@ -300,55 +319,28 @@
 
   <!-- Pricing card -->
   <div class="pricing-card">
-    <div class="pricing-amount">10 &euro; / mois</div>
-    <p class="pricing-period">par &eacute;l&egrave;ve</p>
-    <div class="pricing-details">+ consommation LLM : entre 0,50 &euro; et 5 &euro; environ</div>
+    <div class="pricing-dual">
+      <div class="pricing-dual-block">
+        <p class="pricing-dual-label">Abonnement Galac6</p>
+        <div class="pricing-dual-amount">10 &euro;<span>/mois</span></div>
+        <p class="pricing-dual-detail">par &eacute;l&egrave;ve, sans engagement</p>
+      </div>
+      <div class="pricing-dual-plus">+</div>
+      <div class="pricing-dual-block">
+        <p class="pricing-dual-label">Consommation IA</p>
+        <div class="pricing-dual-amount" style="white-space: nowrap;">~0,60&nbsp;&euro;/heure</div>
+        <p class="pricing-dual-detail">factur&eacute;e au r&eacute;el</p>
+      </div>
+    </div>
     <ul class="pricing-perks">
       <li>Toutes les fonctionnalit&eacute;s incluses</li>
-      <li>Compatible OpenAI, Anthropic et Google Gemini</li>
+
       <li>Contr&ocirc;le parental complet</li>
       <li>Mises &agrave; jour et nouveaut&eacute;s incluses</li>
       <li>Support multi-&eacute;l&egrave;ves</li>
     </ul>
     <a href="#" class="btn btn-primary" style="width: 100%; justify-content: center;">S'abonner</a>
   </div>
-
-  <!-- Cost estimation table -->
-  <h2>Impact estim&eacute; sur les co&ucirc;ts mensuels</h2>
-  <p class="table-lead">Estimation de la consommation LLM selon le profil d'utilisation, avant et apr&egrave;s les optimisations int&eacute;gr&eacute;es dans Galac6 (cache, routage de mod&egrave;le, prompts optimis&eacute;s).</p>
-
-  <table class="cost-table">
-    <thead>
-      <tr>
-        <th>Profil</th>
-        <th>Avant</th>
-        <th>Apr&egrave;s optimisations</th>
-        <th>&Eacute;conomie</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="profile">L&eacute;ger<small>~30 min / jour</small></td>
-        <td>~15 &euro;/mois</td>
-        <td>~9&ndash;10 &euro;/mois</td>
-        <td class="saving">~35 %</td>
-      </tr>
-      <tr>
-        <td class="profile">Intensif<small>~1 h / jour</small></td>
-        <td>~34 &euro;/mois</td>
-        <td>~19&ndash;22 &euro;/mois</td>
-        <td class="saving">~38 %</td>
-      </tr>
-      <tr>
-        <td class="profile">Tr&egrave;s intensif<small>~2 h / jour</small></td>
-        <td>~75 &euro;/mois</td>
-        <td>~42&ndash;48 &euro;/mois</td>
-        <td class="saving">~40 %</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <p class="table-note">Les montants sont indicatifs et d&eacute;pendent du fournisseur IA choisi (OpenAI, Anthropic ou Google Gemini) et du mod&egrave;le utilis&eacute;. L'abonnement Galac6 de 10 &euro;/mois s'ajoute &agrave; ces co&ucirc;ts.</p>
 
   <div class="cta-row">
     <a href="/" class="btn btn-secondary">&larr; Retour &agrave; l'accueil</a>
