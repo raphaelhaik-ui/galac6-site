@@ -563,6 +563,26 @@
     .pricing-perks li::before {
       content: "✓ ";
       color: var(--primary-light);
+    }
+
+    .pricing-free-banner {
+      background: linear-gradient(135deg, #10b981, #34d399);
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .pricing-free-banner span.free-icon {
+      font-size: 1.3em;
       font-weight: 700;
     }
 
@@ -787,7 +807,10 @@
     <p class="section-subtitle">Un prix simple et transparent, sans engagement.</p>
 
     <div class="pricing-card">
-      <div class="pricing-dual">
+      <div class="pricing-free-banner">
+        <span class="free-icon">🎉</span> Gratuit pour le moment — aucune CB requise
+      </div>
+      <div class="pricing-dual" style="opacity: 0.45; text-decoration: line-through; text-decoration-color: var(--text-muted);">
         <div class="pricing-dual-block">
           <p class="pricing-dual-label">Abonnement Galac6</p>
           <div class="pricing-dual-amount">10 €<span>/mois</span></div>
@@ -804,6 +827,7 @@
         <li>Toutes les fonctionnalités incluses</li>
         <li>Mises à jour et nouveautés incluses</li>
         <li>Support multi-élèves</li>
+        <li><strong style="color: var(--text);">Aucun paiement requis pendant la phase de lancement</strong></li>
       </ul>
     </div>
   </section>
