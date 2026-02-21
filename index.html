@@ -78,6 +78,27 @@
 
     .navbar-links a:hover { color: var(--text); text-decoration: none; }
 
+    .navbar-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .navbar-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .navbar-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .navbar-hamburger.open span:nth-child(2) { opacity: 0; }
+    .navbar-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
     /* ─── Hero ─── */
     .hero {
       display: flex;
@@ -610,8 +631,20 @@
     /* ─── Responsive ─── */
     @media (max-width: 900px) {
       .hero { padding: 3rem 1.5rem 3rem; }
-      .navbar { padding: 1rem 1.5rem; }
-      .navbar-links { display: none; }
+      .navbar { padding: 1rem 1.5rem; flex-wrap: wrap; }
+      .navbar-hamburger { display: flex; }
+      .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        padding: 1rem 0 0.5rem;
+      }
+      .navbar-links.open { display: flex; }
+      .navbar-links a {
+        padding: 0.6rem 0;
+        font-size: 1rem;
+      }
     }
 
     @media (max-width: 640px) {
@@ -632,11 +665,14 @@
       <img src="icons/icon.png" alt="Galac6">
       <span>Galac6</span>
     </a>
+    <button class="navbar-hamburger" aria-label="Menu" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
     <div class="navbar-links">
       <a href="#features">Fonctionnalités</a>
       <a href="#pricing">Tarifs</a>
       <a href="mailto:hello@galac6.io">Contact</a>
-      <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600;">Inscription ou connexion</a>
+      <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
     </div>
   </nav>
 
