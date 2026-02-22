@@ -34,6 +34,16 @@
     a:hover { text-decoration: underline; }
 
     /* ─── Navbar ─── */
+    .navbar-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,11,20,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
     .navbar {
       display: flex;
       align-items: center;
@@ -564,22 +574,24 @@
 <body>
 
   <!-- ═══ NAVBAR ═══ -->
-  <nav class="navbar">
-    <a href="/" class="navbar-brand">
-      <img src="icons/icon.png" alt="Galac6">
-      <span>Galac6</span>
-    </a>
-    <button class="navbar-hamburger" aria-label="Menu" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="navbar-links">
-      <a href="/#features">Fonctionnalités</a>
-      <a href="/ecole" class="active">École</a>
-      <a href="/#pricing">Tarif</a>
-      <a href="mailto:hello@galac6.io">Contact</a>
-      <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
-    </div>
-  </nav>
+  <div class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="/" class="navbar-brand">
+        <img src="icons/icon.png" alt="Galac6">
+        <span>Galac6</span>
+      </a>
+      <button class="navbar-hamburger" aria-label="Menu" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="navbar-links">
+        <a href="/#features">Fonctionnalités</a>
+        <a href="/ecole" class="active">École</a>
+        <a href="/#pricing">Tarif</a>
+        <a href="mailto:hello@galac6.io">Contact</a>
+        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
+      </div>
+    </nav>
+  </div>
 
   <!-- ═══ HERO ═══ -->
   <div class="hero">
@@ -634,7 +646,7 @@
           <li>Fiches de révision auto-générées</li>
           <li>Saisie vocale des questions et formules</li>
           <li>OCR — photographier un exercice</li>
-          <li>Éditeur de formules WYSIWYG</li>
+          <li>Éditeur de formules mathématiques</li>
           <li>Parcours Scratch et Python guidés</li>
           <li>12 matières scolaires (Éduscol)</li>
           <li>Du CP à la Terminale</li>

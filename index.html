@@ -34,6 +34,16 @@
     a:hover { text-decoration: underline; }
 
     /* ─── Navbar ─── */
+    .navbar-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,11,20,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
     .navbar {
       display: flex;
       align-items: center;
@@ -723,22 +733,24 @@
 <body>
 
   <!-- ═══ NAVBAR ═══ -->
-  <nav class="navbar">
-    <a href="/" class="navbar-brand">
-      <img src="icons/icon.png" alt="Galac6">
-      <span>Galac6</span>
-    </a>
-    <button class="navbar-hamburger" aria-label="Menu" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="navbar-links">
-      <a href="#features">Fonctionnalités</a>
-      <a href="/ecole">École</a>
-      <a href="#pricing">Tarif</a>
-      <a href="mailto:hello@galac6.io">Contact</a>
-      <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
-    </div>
-  </nav>
+  <div class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="/" class="navbar-brand">
+        <img src="icons/icon.png" alt="Galac6">
+        <span>Galac6</span>
+      </a>
+      <button class="navbar-hamburger" aria-label="Menu" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="navbar-links">
+        <a href="#features">Fonctionnalités</a>
+        <a href="/ecole">École</a>
+        <a href="#pricing">Tarif</a>
+        <a href="mailto:hello@galac6.io">Contact</a>
+        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
+      </div>
+    </nav>
+  </div>
 
   <!-- ═══ HERO ═══ -->
   <div class="hero" id="top">
@@ -800,7 +812,7 @@
       <div class="feature-card">
         <div class="feature-icon fi-amber">∑</div>
         <h3>Éditeur de formules</h3>
-        <p>Un éditeur WYSIWYG pour saisir des formules mathématiques naturellement, avec clavier virtuel intégré.</p>
+        <p>Un éditeur visuel pour saisir des formules mathématiques naturellement, avec clavier virtuel intégré.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon fi-green">🏆</div>
@@ -809,7 +821,7 @@
       </div>
       <div class="feature-card">
         <div class="feature-icon fi-green">💻</div>
-        <h3>Apprends le dev</h3>
+        <h3>Apprends à coder</h3>
         <p>Parcours pédagogique Scratch et Python guidé par l'IA, de débutant à confirmé. Théorie, exemples commentés et exercices pratiques.</p>
       </div>
       <div class="feature-card">
@@ -858,7 +870,7 @@
           <li>Dictées avec correction et suivi</li>
           <li>Fiches de révision générées</li>
           <li>Parcours Scratch et Python guidé par l'IA</li>
-          <li>Formules mathématiques en WYSIWYG</li>
+          <li>Éditeur de formules mathématiques</li>
           <li>Coller des photos d'exercices</li>
           <li>Système de niveaux et XP motivant</li>
           <li>Saisie vocale au micro (questions + formules math)</li>
