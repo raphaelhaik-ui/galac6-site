@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galac6 — Offre Établissements Scolaires</title>
+  <link rel="icon" type="image/png" href="icons/32x32.png">
+  <style>
+    :root {
+      --primary: #7c5cfc;
+      --primary-light: #a78bfa;
+      --bg: #0b0b14;
+      --bg-card: #13131f;
+      --bg-card-hover: #1a1a2e;
+      --text: #f0f0f5;
+      --text-muted: #8a8aa3;
+      --border: #1e1e32;
+      --gradient-start: #6366f1;
+      --gradient-end: #a855f7;
+      --glow: rgba(99,102,241,0.15);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--primary-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ─── Navbar ─── */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+
+    .navbar-brand img { height: 44px; width: auto; }
+
+    .navbar-brand span {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .navbar-links a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .navbar-links a:hover { color: var(--text); text-decoration: none; }
+    .navbar-links a.active { color: var(--text); }
+
+    .navbar-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .navbar-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .navbar-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .navbar-hamburger.open span:nth-child(2) { opacity: 0; }
+    .navbar-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ─── Back Link ─── */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--primary-light);
+      text-decoration: none;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    /* ─── Buttons ─── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.6rem;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(99,102,241,0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(99,102,241,0.35);
+      text-decoration: none;
+    }
+
+    .btn-secondary {
+      background: var(--bg-card);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--primary);
+      color: var(--primary-light);
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    /* ─── Sections ─── */
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+      font-size: 1.05rem;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ─── Hero ─── */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2.5rem 5rem;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      top: -100px;
+      left: -150px;
+      background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      bottom: -100px;
+      right: -100px;
+      background: radial-gradient(circle, rgba(168,85,247,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(99,102,241,0.1);
+      border: 1px solid rgba(99,102,241,0.2);
+      border-radius: 100px;
+      padding: 0.5rem 1.25rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--primary-light);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-content h1 .gradient {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-content .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ─── Features Grid ─── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem;
+      transition: all 0.25s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      border-color: rgba(99,102,241,0.3);
+    }
+
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .fi-purple { background: rgba(99,102,241,0.12); }
+    .fi-pink   { background: rgba(236,72,153,0.12); }
+    .fi-amber  { background: rgba(245,158,11,0.12); }
+    .fi-green  { background: rgba(34,197,94,0.12); }
+    .fi-blue   { background: rgba(59,130,246,0.12); }
+
+    /* ─── Audience Cards ─── */
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .audience-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem;
+    }
+
+    .audience-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .audience-card ul { list-style: none; }
+
+    .audience-card li {
+      padding: 0.35rem 0;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .audience-card li::before {
+      content: "✓ ";
+      color: var(--primary-light);
+      font-weight: 700;
+    }
+
+    /* ─── Trust Grid ─── */
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .trust-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem;
+      text-align: center;
+      transition: all 0.25s ease;
+    }
+
+    .trust-item:hover {
+      transform: translateY(-2px);
+      border-color: rgba(99,102,241,0.3);
+    }
+
+    .trust-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .trust-item h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .trust-item p {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+
+    /* ─── Testimonial ─── */
+    .testimonial {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .testimonial blockquote {
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.8;
+      border-left: 3px solid var(--primary);
+      padding: 1.25rem 1.5rem;
+      background: rgba(99,102,241,0.06);
+      border-radius: 0 14px 14px 0;
+      text-align: left;
+      margin-bottom: 0.75rem;
+    }
+
+    .testimonial cite {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-style: normal;
+    }
+
+    .testimonial .placeholder-note {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      margin-top: 0.75rem;
+      font-style: italic;
+    }
+
+    /* ─── CTA Section ─── */
+    .cta-section {
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .cta-section p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* ─── FAQ Accordion ─── */
+    .faq-list {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .faq-item:hover {
+      border-color: rgba(99,102,241,0.3);
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.1rem 1.25rem;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      font-family: inherit;
+      gap: 1rem;
+    }
+
+    .faq-chevron {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      transition: transform 0.25s ease;
+      color: var(--text-muted);
+    }
+
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 500px;
+    }
+
+    .faq-answer-inner {
+      padding: 0 1.25rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .faq-answer-inner ol {
+      padding-left: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    .faq-answer-inner li {
+      margin-bottom: 0.25rem;
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--primary-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    .footer-badges { display: flex; gap: 1.5rem; }
+
+    .footer-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 900px) {
+      .hero { padding: 2rem 1.5rem 3rem; }
+      .navbar { padding: 1rem 1.5rem; flex-wrap: wrap; }
+      .navbar-hamburger { display: flex; }
+      .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        padding: 1rem 0 0.5rem;
+      }
+      .navbar-links.open { display: flex; }
+      .navbar-links a { padding: 0.6rem 0; font-size: 1rem; }
+    }
+
+    @media (max-width: 640px) {
+      .btn { width: 100%; max-width: 340px; justify-content: center; }
+      .features-grid { grid-template-columns: 1fr; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar">
+    <a href="/" class="navbar-brand">
+      <img src="icons/icon.png" alt="Galac6">
+      <span>Galac6</span>
+    </a>
+    <button class="navbar-hamburger" aria-label="Menu" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="navbar-links">
+      <a href="/#features">Fonctionnalités</a>
+      <a href="/ecole" class="active">École</a>
+      <a href="/#pricing">Tarif</a>
+      <a href="mailto:hello@galac6.io">Contact</a>
+      <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <div class="hero">
+    <div class="hero-content">
+      <a href="/" class="back-link">&larr; Retour &agrave; l'accueil</a>
+      <div class="hero-badge">🏫 Offre Établissements Scolaires</div>
+      <h1>Galac6 pour <span class="gradient">votre établissement</span></h1>
+      <p class="subtitle">Un assistant IA pédagogique déployé pour toute l'école — méthode socratique, suivi par classe, et pilotage centralisé pour la direction et les enseignants.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══ 3 PILIERS ═══ -->
+  <section>
+    <h2 class="section-title">Un outil pour chaque acteur</h2>
+    <p class="section-subtitle">Élèves, enseignants et direction bénéficient chacun de fonctionnalités dédiées.</p>
+
+    <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="feature-card">
+        <div class="feature-icon fi-purple">🎓</div>
+        <h3>Pour l'élève</h3>
+        <p>L'IA ne donne jamais la réponse : elle pose des questions, encourage la réflexion et s'adapte au niveau de chaque élève.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-amber">👩‍🏫</div>
+        <h3>Pour l'enseignant</h3>
+        <p>Tableaux de bord par classe, identification des élèves en difficulté, plans de remédiation automatiques.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-green">🏛️</div>
+        <h3>Pour la direction</h3>
+        <p>Déploiement centralisé, facturation transparente, respect du RGPD, données hébergées en France.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ FONCTIONNALITÉS ÉCOLE ═══ -->
+  <section>
+    <h2 class="section-title">Fonctionnalités détaillées</h2>
+    <p class="section-subtitle">Tout ce qu'il faut pour accompagner élèves, enseignants et administration.</p>
+
+    <div class="audience-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="audience-card">
+        <h3>🎓 Élèves</h3>
+        <ul>
+          <li>Chat IA socratique — guide par étapes</li>
+          <li>Quiz interactifs avec corrections et XP</li>
+          <li>Dictées vocales avec débit adapté</li>
+          <li>Fiches de révision auto-générées</li>
+          <li>Saisie vocale des questions et formules</li>
+          <li>OCR — photographier un exercice</li>
+          <li>Éditeur de formules WYSIWYG</li>
+          <li>Parcours Scratch et Python guidés</li>
+          <li>12 matières scolaires (Éduscol)</li>
+          <li>Du CP à la Terminale</li>
+        </ul>
+      </div>
+      <div class="audience-card">
+        <h3>👩‍🏫 Enseignants</h3>
+        <ul>
+          <li>Tableau de bord par classe</li>
+          <li>Rapports de progression par matière</li>
+          <li>Remédiation personnalisée par l'IA</li>
+          <li>Alertes sur les élèves en difficulté</li>
+          <li>Export PDF pour les conseils de classe</li>
+          <li>Historique des conversations élèves</li>
+        </ul>
+      </div>
+      <div class="audience-card">
+        <h3>🏛️ Établissement</h3>
+        <ul>
+          <li>Déploiement centralisé (import CSV)</li>
+          <li>Console d'administration unique</li>
+          <li>Facturation établissement unifiée</li>
+          <li>Suivi de consommation IA par classe</li>
+          <li>Conformité RGPD — données en France</li>
+          <li>Filtrage IA intégré (blocage ChatGPT…)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ CONFIANCE / SÉCURITÉ ═══ -->
+  <section>
+    <h2 class="section-title">Confiance et sécurité</h2>
+    <p class="section-subtitle">Un cadre rigoureux pour protéger les données de vos élèves.</p>
+
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-icon">🇪🇺</div>
+        <h4>Hébergement Europe</h4>
+        <p>Infrastructure Supabase, données hébergées en Europe.</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🔒</div>
+        <h4>Conforme RGPD</h4>
+        <p>Pas de revente de données, suppression sur demande.</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🛡️</div>
+        <h4>IA responsable</h4>
+        <p>Modération automatique, filtrage de contenu inapproprié.</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">📊</div>
+        <h4>Transparence</h4>
+        <p>Coût IA facturé au réel, sans marge cachée.</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🇫🇷</div>
+        <h4>Made in France</h4>
+        <p>Conçu et développé en France.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ TÉMOIGNAGE ═══ -->
+  <section>
+    <div class="testimonial">
+      <blockquote>
+        « Galac6 a transformé l'aide aux devoirs dans notre collège. Les élèves progressent en autonomie et les enseignants gagnent un temps précieux sur le suivi individualisé. »
+      </blockquote>
+      <cite>— Nom, Fonction, Établissement</cite>
+      <p class="placeholder-note">À remplacer par des témoignages réels une fois les pilotes école lancés.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ CTA ═══ -->
+  <section class="cta-section">
+    <h2>Déployez Galac6 dans votre établissement</h2>
+    <p>Demandez une démonstration gratuite et un devis personnalisé.</p>
+    <div class="cta-row">
+      <a href="mailto:hello@galac6.io?subject=Demande%20de%20d%C3%A9mo%20%E2%80%93%20Offre%20%C3%89cole" class="btn btn-primary">Demander une démo</a>
+      <a href="#" class="btn btn-secondary">Télécharger la plaquette PDF</a>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ FAQ ═══ -->
+  <section>
+    <h2 class="section-title">Questions fréquentes</h2>
+    <p class="section-subtitle">Tout ce que vous devez savoir avant de déployer Galac6.</p>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Galac6 fonctionne-t-il sur les tablettes et Chromebooks de l'école ?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Oui. Galac6 est une application web qui fonctionne sur tout navigateur moderne (Chrome, Firefox, Safari, Edge) — tablettes, Chromebooks, PC et Mac.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          L'IA donne-t-elle les réponses aux élèves ?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Non. Galac6 utilise la méthode socratique : l'IA pose des questions, donne des indices et guide la réflexion étape par étape. L'élève construit sa compréhension.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Comment sont gérées les données des élèves ?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Les données sont hébergées en Europe, conformes au RGPD. Aucune donnée n'est revendue. L'établissement peut demander la suppression complète des données à tout moment.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Peut-on bloquer l'accès aux autres IA (ChatGPT, etc.) ?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Cette fonctionnalité est dans notre roadmap et pourra être activée sur demande. L'objectif : bloquer l'accès aux IA concurrentes sur les appareils de l'école, pour éviter que les élèves n'obtiennent des réponses toutes faites.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Comment se passe le déploiement ?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <ol>
+              <li>Création de la console établissement</li>
+              <li>Import des élèves et classes (CSV ou saisie manuelle)</li>
+              <li>Attribution des accès enseignants</li>
+              <li>Formation à distance (1h)</li>
+              <li>L'établissement est opérationnel en moins d'une journée</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Y a-t-il un essai gratuit ?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Oui. Nous proposons un pilote gratuit de 1 mois pour une classe, afin de tester Galac6 en conditions réelles avant de s'engager.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div>Galac6 — Assistant IA du CP à la Terminale · <a href="mailto:hello@galac6.io">hello@galac6.io</a></div>
+    <div class="footer-badges">
+      <span class="footer-badge">🇫🇷 Made in France</span>
+    </div>
+  </footer>
+
+</body>
+</html>
