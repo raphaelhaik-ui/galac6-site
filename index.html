@@ -99,6 +99,49 @@
     .navbar-hamburger.open span:nth-child(2) { opacity: 0; }
     .navbar-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+    /* ─── Eduscol Banner ─── */
+    .eduscol-banner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1.5rem 2rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .eduscol-logos {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-shrink: 0;
+    }
+    .eduscol-logos img {
+      height: 52px;
+      width: auto;
+      border-radius: 6px;
+      background: #fff;
+      padding: 4px 6px;
+    }
+    .eduscol-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+    .eduscol-text strong {
+      color: var(--text);
+    }
+
+    @media (max-width: 640px) {
+      .eduscol-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1.25rem 1.5rem;
+      }
+    }
+
     /* ─── Hero ─── */
     .hero {
       display: flex;
@@ -690,7 +733,7 @@
     </button>
     <div class="navbar-links">
       <a href="#features">Fonctionnalités</a>
-      <a href="#pricing">Tarifs</a>
+      <a href="#pricing">Tarif</a>
       <a href="mailto:hello@galac6.io">Contact</a>
       <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
     </div>
@@ -719,6 +762,17 @@
     </div>
 
   </div>
+
+  <!-- ═══ EDUSCOL ═══ -->
+  <section>
+    <div class="eduscol-banner">
+      <div class="eduscol-logos">
+        <img src="icons/min-education-nationale.jpg" alt="Ministère de l'Éducation nationale">
+        <img src="icons/eduscol.jpg" alt="Éduscol">
+      </div>
+      <p class="eduscol-text"><strong>Basé sur les programmes officiels Éduscol</strong> de l'Éducation nationale, du CP à la Terminale — et adapté par l'IA au niveau de chaque élève.</p>
+    </div>
+  </section>
 
   <hr class="divider">
 
@@ -758,6 +812,26 @@
         <h3>Tableau de bord</h3>
         <p>Statistiques détaillées : matières travaillées, quiz complétés, meilleur score, série de jours consécutifs.</p>
       </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-blue">🎙️</div>
+        <h3>Saisie vocale</h3>
+        <p>Dictez vos questions et formules math à l'oral. L'IA transcrit et convertit automatiquement en notation mathématique.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-amber">📷</div>
+        <h3>OCR sur photos</h3>
+        <p>Collez ou photographiez un exercice, l'IA extrait le texte et vous aide à le résoudre.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-pink">📄</div>
+        <h3>Export PDF</h3>
+        <p>Téléchargez vos fiches de révision en PDF pour réviser hors-ligne, en classe ou en déplacement.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-green">📈</div>
+        <h3>Rapport de progression</h3>
+        <p>Visualisez les forces et faiblesses par matière avec des graphiques détaillés. Export PDF pour les réunions parents-profs.</p>
+      </div>
     </div>
   </section>
 
@@ -774,7 +848,7 @@
         <h3>👨‍🎓 Pour l'élève</h3>
         <ul>
           <li>Chat IA adapté à son niveau (CP → Terminale)</li>
-          <li>12 matières scolaires disponibles</li>
+          <li>Toutes les matières officielles couvertes</li>
           <li>Quiz interactifs avec corrections</li>
           <li>Dictées avec correction et suivi</li>
           <li>Fiches de révision générées</li>
@@ -782,18 +856,25 @@
           <li>Formules mathématiques en WYSIWYG</li>
           <li>Coller des photos d'exercices</li>
           <li>Système de niveaux et XP motivant</li>
+          <li>Saisie vocale au micro (questions + formules math)</li>
+          <li>OCR : coller une photo d'exercice</li>
+          <li>Export PDF des fiches de révision</li>
+          <li>Mode sombre et taille de police ajustable</li>
+          <li>Jusqu'à 8 conversations en parallèle</li>
         </ul>
       </div>
       <div class="audience-card">
         <h3>👨‍👩‍👧 Pour le parent</h3>
         <ul>
           <li>Panneau admin protégé par mot de passe</li>
-          <li>Choix du fournisseur IA et du modèle</li>
           <li>Suivi de consommation et budget mensuel</li>
-          <li>Blocage des sites et apps IA concurrents</li>
           <li>Historique complet des conversations</li>
           <li>Personnalisation du comportement de l'IA</li>
           <li>Support multi-élèves</li>
+          <li>Rapport de progression avec graphiques radar</li>
+          <li>Plans de remédiation personnalisés</li>
+          <li>Export PDF du rapport de progression</li>
+          <li>Alertes sur les faiblesses persistantes</li>
         </ul>
       </div>
     </div>
@@ -803,32 +884,19 @@
 
   <!-- ═══ PRICING ═══ -->
   <section id="pricing">
-    <h2 class="section-title">Tarifs</h2>
-    <p class="section-subtitle">Un prix simple et transparent, sans engagement.</p>
+    <h2 class="section-title">Tarif</h2>
+    <p class="section-subtitle">Pendant la période de test (depuis février 2026), l'utilisation est entièrement offerte.</p>
 
-    <div class="pricing-card">
-      <div class="pricing-free-banner">
-        <span class="free-icon">🎉</span> Gratuit pour le moment — aucune CB requise
+    <div class="pricing-card" style="max-width: 560px;">
+      <div class="pricing-free-banner" style="font-size: 1.2rem; padding: 1rem 1.5rem;">
+        <span class="free-icon">🎉</span> 100 % gratuit — aucune CB requise
       </div>
-      <div class="pricing-dual" style="opacity: 0.45; text-decoration: line-through; text-decoration-color: var(--text-muted);">
-        <div class="pricing-dual-block">
-          <p class="pricing-dual-label">Abonnement Galac6</p>
-          <div class="pricing-dual-amount">10 €<span>/mois</span></div>
-          <p class="pricing-dual-detail">par élève, sans engagement</p>
-        </div>
-        <div class="pricing-dual-plus">+</div>
-        <div class="pricing-dual-block">
-          <p class="pricing-dual-label">Consommation IA</p>
-          <div class="pricing-dual-amount" style="white-space: nowrap;">~0,60&nbsp;€/heure</div>
-          <p class="pricing-dual-detail">facturée au réel</p>
-        </div>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-top: 1rem;">Toutes les fonctionnalités sont accessibles sans limite pendant la phase de test.</p>
+
+      <div style="margin-top: 1.5rem; padding: 1.25rem; background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.25); border-radius: 12px; text-align: left;">
+        <p style="color: #f87171; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.5rem;">🐛 Contrat moral</p>
+        <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.7;">Si vous utilisez Galac6, reportez chaque bug avec une copie d'écran dans la section rouge <strong style="color: var(--text);">"Bug report"</strong>. Enrichissez la plateforme avec vos commentaires et demandes d'amélioration.</p>
       </div>
-      <ul class="pricing-perks">
-        <li>Toutes les fonctionnalités incluses</li>
-        <li>Mises à jour et nouveautés incluses</li>
-        <li>Support multi-élèves</li>
-        <li><strong style="color: var(--text);">Aucun paiement requis pendant la phase de lancement</strong></li>
-      </ul>
     </div>
   </section>
 
@@ -874,7 +942,7 @@
         <div class="feature-icon fi-purple" style="flex-shrink: 0;">🧠</div>
         <div>
           <h3>Une surcouche aux meilleurs modèles</h3>
-          <p>Galac6 utilise Claude Haiku (Anthropic) et GPT-5 mini (OpenAI) comme moteurs. Nous ajoutons par-dessus une couche pédagogique qui transforme ces modèles en vrais tuteurs scolaires.</p>
+          <p>Galac6 utilise les modèles d'Anthropic et d'OpenAI comme moteurs. Nous ajoutons par-dessus une couche pédagogique qui transforme ces modèles en vrais tuteurs scolaires.</p>
         </div>
       </div>
       <div class="feature-card" style="display: flex; align-items: flex-start; gap: 1rem;">
