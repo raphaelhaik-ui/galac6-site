@@ -376,6 +376,59 @@
       text-decoration: none;
     }
 
+    .btn-school {
+      background: linear-gradient(135deg, #7c3aed, #6366f1);
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 1rem 2.5rem;
+      box-shadow: 0 4px 24px rgba(124,58,237,0.3);
+    }
+    .btn-school:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(124,58,237,0.45);
+      text-decoration: none;
+    }
+
+    /* ─── School CTA ─── */
+    .school-cta-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 2rem 1rem;
+    }
+    .school-cta-card {
+      text-align: center;
+      background: linear-gradient(135deg, rgba(124,58,237,0.12), rgba(99,102,241,0.08));
+      border: 1px solid rgba(124,58,237,0.3);
+      border-radius: 1.2rem;
+      padding: 3rem 2rem;
+    }
+    .school-cta-badge {
+      display: inline-block;
+      background: rgba(124,58,237,0.2);
+      border: 1px solid rgba(124,58,237,0.4);
+      color: #c4b5fd;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.4rem 1rem;
+      border-radius: 2rem;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.02em;
+    }
+    .school-cta-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 0 0 0.8rem;
+      color: var(--text);
+    }
+    .school-cta-desc {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 1.8rem;
+      line-height: 1.6;
+    }
+
     /* ─── Sections ─── */
     section {
       max-width: 1100px;
@@ -756,7 +809,7 @@
   <div class="hero" id="top">
     <div class="hero-text">
       <h1>L'IA qui apprend<br><span class="gradient">aux élèves.</span></h1>
-      <p class="subtitle">Un assistant éducatif qui guide votre enfant par la méthode socratique — pour apprendre vraiment.</p>
+      <p class="subtitle">Un assistant éducatif de soutien scolaire qui guide et apprend à votre enfant.</p>
 
       <ul class="hero-features">
         <li>
@@ -773,12 +826,19 @@
         </li>
       </ul>
 
-      <div style="margin-top: 2rem;">
-        <a href="/ecole" class="btn btn-secondary">🏫 Galac6 pour une école</a>
-      </div>
     </div>
 
   </div>
+
+  <!-- ═══ ÉCOLE CTA ═══ -->
+  <section class="school-cta-section">
+    <div class="school-cta-card">
+      <div class="school-cta-badge">🏫 Établissements scolaires</div>
+      <h2 class="school-cta-title">Vous êtes une école ?</h2>
+      <p class="school-cta-desc">Déployez Galac6 pour tous vos élèves — tableau de bord enseignant, suivi de progression et conformité RGPD inclus.</p>
+      <a href="/ecole" class="btn btn-school">Découvrir l'offre école →</a>
+    </div>
+  </section>
 
   <!-- ═══ EDUSCOL ═══ -->
   <section>
