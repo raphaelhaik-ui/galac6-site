@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galac6 — Politique de confidentialité</title>
+  <link rel="icon" type="image/png" href="icons/32x32.png">
+  <style>
+    :root {
+      --primary: #7c5cfc;
+      --primary-light: #a78bfa;
+      --bg: #0b0b14;
+      --bg-card: #13131f;
+      --bg-card-hover: #1a1a2e;
+      --text: #f0f0f5;
+      --text-muted: #8a8aa3;
+      --border: #1e1e32;
+      --gradient-start: #6366f1;
+      --gradient-end: #a855f7;
+      --glow: rgba(99,102,241,0.15);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--primary-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .navbar-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,11,20,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+
+    .navbar-brand img { height: 44px; width: auto; }
+
+    .navbar-brand span {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .navbar-france { font-size: 1.1rem; margin-left: 0.1rem; }
+
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .navbar-links a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .navbar-links a:hover { color: var(--text); text-decoration: none; }
+
+    .navbar-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .navbar-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .navbar-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .navbar-hamburger.open span:nth-child(2) { opacity: 0; }
+    .navbar-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2.5rem 4rem;
+    }
+
+    .content h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .content .subtitle {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .content h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .content p, .content li {
+      margin-bottom: 0.6rem;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .content ul {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    .content strong { color: var(--text); }
+
+    footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--primary-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    .footer-badges {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .footer-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 900px) {
+      .navbar { padding: 1rem 1.5rem; flex-wrap: wrap; }
+      .navbar-hamburger { display: flex; }
+      .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        padding: 1rem 0 0.5rem;
+      }
+      .navbar-links.open { display: flex; }
+      .navbar-links a { padding: 0.6rem 0; font-size: 1rem; }
+      .content { padding: 2rem 1.5rem 3rem; }
+    }
+
+    @media (max-width: 640px) {
+      .content h1 { font-size: 1.5rem; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <div class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="/" class="navbar-brand">
+        <img src="icons/icon.png" alt="Galac6">
+        <span>Galac6</span>
+        <span class="navbar-france">🇫🇷</span>
+      </a>
+      <button class="navbar-hamburger" aria-label="Menu" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="navbar-links">
+        <a href="/">Accueil</a>
+        <a href="/ecole">École</a>
+        <a href="/tarifs">Tarifs</a>
+        <a href="mailto:hello@galac6.io">Contact</a>
+        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ═══ CONTENT ═══ -->
+  <div class="content">
+    <h1>Politique de confidentialité</h1>
+    <p class="subtitle">Dernière mise à jour : 25 février 2026</p>
+
+    <p>La présente politique de confidentialité décrit la manière dont Galac6 (ci-après « nous ») collecte, utilise et protège les données personnelles des utilisateurs de la plateforme Galac6, conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés.</p>
+
+    <h2>1. Responsable du traitement</h2>
+    <p>Le responsable du traitement des données est la société éditrice de Galac6. Pour toute question relative à vos données personnelles, vous pouvez nous contacter à l'adresse : <a href="mailto:hello@galac6.io">hello@galac6.io</a>.</p>
+
+    <h2>2. Données collectées</h2>
+    <p>Nous collectons les catégories de données suivantes :</p>
+    <ul>
+      <li><strong>Données d'identité</strong> : adresse email, nom de l'élève, année de naissance, niveau scolaire, langue</li>
+      <li><strong>Données d'activité éducative</strong> : messages de chat, résultats de quiz, dictées, plans de remédiation, statistiques d'apprentissage</li>
+      <li><strong>Données techniques</strong> : préférences d'affichage (thème, taille de police), état de la barre latérale</li>
+      <li><strong>Données de facturation</strong> : email et identifiant Stripe</li>
+      <li><strong>Données sensibles</strong> : aménagements scolaires (le cas échéant), collectées uniquement avec votre consentement explicite (Art. 9 RGPD)</li>
+    </ul>
+
+    <h2>3. Finalités et bases légales</h2>
+    <p>Vos données sont traitées pour les finalités suivantes :</p>
+    <ul>
+      <li>Fourniture du service éducatif (exécution du contrat)</li>
+      <li>Personnalisation de l'apprentissage via l'IA (intérêt légitime)</li>
+      <li>Suivi de la progression scolaire (exécution du contrat)</li>
+      <li>Facturation et gestion des abonnements (exécution du contrat)</li>
+      <li>Amélioration du service (intérêt légitime)</li>
+      <li>Respect des obligations légales (obligation légale)</li>
+    </ul>
+
+    <h2>4. Protection des mineurs</h2>
+    <p>Galac6 est destiné aux élèves du CP à la Terminale. Conformément à l'article 8 du RGPD et à l'article 45 de la loi Informatique et Libertés, le consentement du parent ou représentant légal est requis pour les utilisateurs de moins de 15 ans. Ce consentement est recueilli lors de la création du compte.</p>
+
+    <h2>5. Sous-traitants et transferts de données</h2>
+    <p>Nous faisons appel aux sous-traitants suivants :</p>
+    <ul>
+      <li><strong>Supabase</strong> (hébergement, base de données) — France, Union Européenne</li>
+      <li><strong>Netlify</strong> (hébergement web) — Irlande, Union Européenne</li>
+      <li><strong>Anthropic / Claude</strong> (assistance IA par chat) — États-Unis, avec clauses contractuelles types</li>
+      <li><strong>Mistral</strong> (assistance IA par chat) — France, Union Européenne</li>
+      <li><strong>OpenAI / Whisper</strong> (transcription vocale) — États-Unis, avec clauses contractuelles types</li>
+      <li><strong>Google</strong> (synthèse vocale) — États-Unis, avec clauses contractuelles types</li>
+      <li><strong>Stripe</strong> (paiement) — États-Unis, certifié et conforme</li>
+      <li><strong>Resend</strong> (emails transactionnels) — États-Unis, avec clauses contractuelles types</li>
+    </ul>
+    <p>Les transferts hors Union Européenne sont encadrés par des clauses contractuelles types (CCT) conformément à l'article 46 du RGPD. Aucune donnée n'est utilisée pour l'entraînement des modèles d'IA.</p>
+
+    <h2>6. Durées de conservation</h2>
+    <ul>
+      <li><strong>Données de compte</strong> : durée de vie du compte + 1 an après suppression</li>
+      <li><strong>Données d'activité éducative</strong> : 2 ans ou fin de scolarité + 1 an</li>
+      <li><strong>Données de facturation</strong> : durée légale de conservation (10 ans)</li>
+      <li><strong>Comptes inactifs</strong> : suppression après 2 ans d'inactivité</li>
+    </ul>
+
+    <h2>7. Vos droits</h2>
+    <p>Conformément au RGPD, vous disposez des droits suivants :</p>
+    <ul>
+      <li><strong>Droit d'accès</strong> (Art. 15) : obtenir une copie de vos données</li>
+      <li><strong>Droit de rectification</strong> (Art. 16) : corriger vos données</li>
+      <li><strong>Droit à l'effacement</strong> (Art. 17) : demander la suppression de vos données</li>
+      <li><strong>Droit à la portabilité</strong> (Art. 20) : recevoir vos données dans un format structuré</li>
+      <li><strong>Droit d'opposition</strong> (Art. 21) : vous opposer au traitement de vos données</li>
+      <li><strong>Droit de retirer votre consentement</strong> à tout moment</li>
+    </ul>
+    <p>Pour exercer ces droits, contactez-nous à : <strong><a href="mailto:hello@galac6.io">hello@galac6.io</a></strong>.</p>
+    <p>Vous pouvez également introduire une réclamation auprès de la <strong>CNIL</strong> (<a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>).</p>
+
+    <h2>8. Cookies et stockage local</h2>
+    <p>Galac6 utilise un cookie fonctionnel (état de la barre latérale) et le stockage local du navigateur pour vos préférences d'affichage (thème, taille de police). Aucun cookie de tracking ou publicitaire n'est utilisé. Le consentement pour le cookie fonctionnel est recueilli via notre bannière de cookies.</p>
+
+    <p style="color: var(--text-muted); font-size: 0.82rem; font-style: italic; margin-top: 2rem;">Dernière mise à jour : 25 février 2026</p>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div>Galac6 — L'IA de soutien scolaire et de révisions. · <a href="mailto:hello@galac6.io">hello@galac6.io</a></div>
+    <div class="footer-badges">
+      <a href="/mentions-legales" style="color: var(--text-muted);">Mentions légales</a>
+      <span class="footer-badge">🇫🇷 Made in France</span>
+    </div>
+  </footer>
+
+</body>
+</html>

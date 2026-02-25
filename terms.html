@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galac6 — Conditions Générales d'Utilisation</title>
+  <link rel="icon" type="image/png" href="icons/32x32.png">
+  <style>
+    :root {
+      --primary: #7c5cfc;
+      --primary-light: #a78bfa;
+      --bg: #0b0b14;
+      --bg-card: #13131f;
+      --bg-card-hover: #1a1a2e;
+      --text: #f0f0f5;
+      --text-muted: #8a8aa3;
+      --border: #1e1e32;
+      --gradient-start: #6366f1;
+      --gradient-end: #a855f7;
+      --glow: rgba(99,102,241,0.15);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--primary-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .navbar-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,11,20,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+
+    .navbar-brand img { height: 44px; width: auto; }
+
+    .navbar-brand span {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .navbar-france { font-size: 1.1rem; margin-left: 0.1rem; }
+
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .navbar-links a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .navbar-links a:hover { color: var(--text); text-decoration: none; }
+
+    .navbar-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .navbar-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .navbar-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .navbar-hamburger.open span:nth-child(2) { opacity: 0; }
+    .navbar-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2.5rem 4rem;
+    }
+
+    .content h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .content .subtitle {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .content h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .content p, .content li {
+      margin-bottom: 0.6rem;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .content ul {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    .content strong { color: var(--text); }
+
+    footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--primary-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    .footer-badges {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .footer-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 900px) {
+      .navbar { padding: 1rem 1.5rem; flex-wrap: wrap; }
+      .navbar-hamburger { display: flex; }
+      .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        padding: 1rem 0 0.5rem;
+      }
+      .navbar-links.open { display: flex; }
+      .navbar-links a { padding: 0.6rem 0; font-size: 1rem; }
+      .content { padding: 2rem 1.5rem 3rem; }
+    }
+
+    @media (max-width: 640px) {
+      .content h1 { font-size: 1.5rem; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <div class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="/" class="navbar-brand">
+        <img src="icons/icon.png" alt="Galac6">
+        <span>Galac6</span>
+        <span class="navbar-france">🇫🇷</span>
+      </a>
+      <button class="navbar-hamburger" aria-label="Menu" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="navbar-links">
+        <a href="/">Accueil</a>
+        <a href="/ecole">École</a>
+        <a href="/tarifs">Tarifs</a>
+        <a href="mailto:hello@galac6.io">Contact</a>
+        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ═══ CONTENT ═══ -->
+  <div class="content">
+    <h1>Conditions Générales d'Utilisation</h1>
+    <p class="subtitle">Dernière mise à jour : 25 février 2026</p>
+
+    <p>Les présentes Conditions Générales d'Utilisation (ci-après « CGU ») régissent l'accès et l'utilisation de la plateforme Galac6.</p>
+
+    <h2>1. Objet</h2>
+    <p>Galac6 est une plateforme éducative utilisant l'intelligence artificielle pour accompagner les élèves du CP à la Terminale dans leur apprentissage, selon les programmes officiels de l'Éducation Nationale.</p>
+
+    <h2>2. Accès au service</h2>
+    <p>L'accès à Galac6 nécessite la création d'un compte par un parent ou représentant légal. L'utilisateur s'engage à fournir des informations exactes et à maintenir la confidentialité de ses identifiants.</p>
+
+    <h2>3. Obligations de l'utilisateur</h2>
+    <p>L'utilisateur s'engage à :</p>
+    <ul>
+      <li>Utiliser le service conformément à sa finalité éducative</li>
+      <li>Ne pas tenter de contourner les dispositifs de sécurité</li>
+      <li>Ne pas partager de contenus illicites ou inappropriés via le chat</li>
+      <li>Superviser l'utilisation du service par les mineurs dont il est responsable</li>
+    </ul>
+
+    <h2>4. Intelligence artificielle</h2>
+    <p>Galac6 utilise des modèles d'IA pour guider l'apprentissage. L'IA ne remplace pas l'enseignement humain. Les réponses générées peuvent contenir des erreurs. Galac6 ne garantit pas l'exactitude absolue des contenus produits par l'IA.</p>
+
+    <h2>5. Propriété intellectuelle</h2>
+    <p>La plateforme Galac6, son design, son code source et ses contenus sont protégés par le droit de la propriété intellectuelle. Les contenus générés par l'IA dans le cadre de l'utilisation du service restent la propriété de l'utilisateur.</p>
+
+    <h2>6. Tarification et paiement</h2>
+    <p>L'utilisation de Galac6 est soumise à un abonnement. Les tarifs en vigueur sont disponibles sur la page de <a href="/tarifs">tarification</a>. La consommation d'IA est facturée à l'usage. Le paiement est géré par Stripe, prestataire de paiement sécurisé.</p>
+
+    <h2>7. Limitation de responsabilité</h2>
+    <p>Galac6 ne saurait être tenu responsable :</p>
+    <ul>
+      <li>Des interruptions temporaires du service</li>
+      <li>Des erreurs dans les contenus générés par l'IA</li>
+      <li>De l'utilisation non conforme du service par l'utilisateur</li>
+      <li>Des résultats scolaires obtenus par l'élève</li>
+    </ul>
+
+    <h2>8. Résiliation</h2>
+    <p>L'utilisateur peut résilier son compte à tout moment. Galac6 se réserve le droit de suspendre ou supprimer un compte en cas de violation des présentes CGU.</p>
+
+    <h2>9. Droit applicable</h2>
+    <p>Les présentes CGU sont soumises au droit français. Tout litige sera soumis aux tribunaux compétents de Paris.</p>
+
+    <p style="color: var(--text-muted); font-size: 0.82rem; font-style: italic; margin-top: 2rem;">Dernière mise à jour : 25 février 2026</p>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div>Galac6 — L'IA de soutien scolaire et de révisions. · <a href="mailto:hello@galac6.io">hello@galac6.io</a></div>
+    <div class="footer-badges">
+      <a href="/mentions-legales" style="color: var(--text-muted);">Mentions légales</a>
+      <span class="footer-badge">🇫🇷 Made in France</span>
+    </div>
+  </footer>
+
+</body>
+</html>

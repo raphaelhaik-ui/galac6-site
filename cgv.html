@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galac6 — Conditions Générales de Vente</title>
+  <link rel="icon" type="image/png" href="icons/32x32.png">
+  <style>
+    :root {
+      --primary: #7c5cfc;
+      --primary-light: #a78bfa;
+      --bg: #0b0b14;
+      --bg-card: #13131f;
+      --bg-card-hover: #1a1a2e;
+      --text: #f0f0f5;
+      --text-muted: #8a8aa3;
+      --border: #1e1e32;
+      --gradient-start: #6366f1;
+      --gradient-end: #a855f7;
+      --glow: rgba(99,102,241,0.15);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--primary-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .navbar-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,11,20,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+
+    .navbar-brand img { height: 44px; width: auto; }
+
+    .navbar-brand span {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .navbar-france { font-size: 1.1rem; margin-left: 0.1rem; }
+
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .navbar-links a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .navbar-links a:hover { color: var(--text); text-decoration: none; }
+
+    .navbar-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .navbar-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .navbar-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .navbar-hamburger.open span:nth-child(2) { opacity: 0; }
+    .navbar-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2.5rem 4rem;
+    }
+
+    .content h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .content .subtitle {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .content h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .content p, .content li {
+      margin-bottom: 0.6rem;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .content ul, .content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    .content strong { color: var(--text); }
+
+    footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--primary-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    .footer-badges {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .footer-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 900px) {
+      .navbar { padding: 1rem 1.5rem; flex-wrap: wrap; }
+      .navbar-hamburger { display: flex; }
+      .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        padding: 1rem 0 0.5rem;
+      }
+      .navbar-links.open { display: flex; }
+      .navbar-links a { padding: 0.6rem 0; font-size: 1rem; }
+      .content { padding: 2rem 1.5rem 3rem; }
+    }
+
+    @media (max-width: 640px) {
+      .content h1 { font-size: 1.5rem; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <div class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="/" class="navbar-brand">
+        <img src="icons/icon.png" alt="Galac6">
+        <span>Galac6</span>
+        <span class="navbar-france">🇫🇷</span>
+      </a>
+      <button class="navbar-hamburger" aria-label="Menu" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="navbar-links">
+        <a href="/">Accueil</a>
+        <a href="/ecole">École</a>
+        <a href="/tarifs">Tarifs</a>
+        <a href="mailto:hello@galac6.io">Contact</a>
+        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ═══ CONTENT ═══ -->
+  <div class="content">
+    <h1>Conditions Générales de Vente</h1>
+    <p class="subtitle">Dernière mise à jour : 25 février 2026</p>
+
+    <p>Les présentes Conditions Générales de Vente (CGV) régissent l'ensemble des ventes d'abonnements au service Galac6, édité par RHK Conseil. Toute souscription implique l'acceptation sans réserve des présentes CGV.</p>
+
+    <h2>1. Objet</h2>
+    <p>Les présentes CGV ont pour objet de définir les conditions dans lesquelles RHK Conseil (ci-après « l'Éditeur ») propose à l'Utilisateur (ci-après « le Client ») l'accès au service Galac6, une application éducative utilisant l'intelligence artificielle pour accompagner les élèves dans leurs apprentissages.</p>
+
+    <h2>2. Offres et tarifs</h2>
+    <p>Galac6 propose trois formules :</p>
+    <ul>
+      <li><strong>Plan Gratuit — 0 €</strong> : accès limité comprenant 5 messages par jour, 1 quiz par jour et 1 dictée par jour. Les fonctionnalités suivantes ne sont pas incluses : synthèse vocale, upload d'images, saisie vocale et remédiation avancée.</li>
+      <li><strong>Plan Mensuel — 13,99 € / mois</strong> : sans engagement, résiliable à tout moment. Accès illimité à toutes les fonctionnalités : messages, quiz et dictées illimités, synthèse vocale, upload d'images, saisie vocale et remédiation avancée.</li>
+      <li><strong>Plan Annuel — 9,99 € / mois</strong> (facturé 119,88 € par an, soit une économie de 29 %) : accès illimité à toutes les fonctionnalités, identique au plan mensuel.</li>
+    </ul>
+    <p>Les tarifs sont indiqués en euros TTC. L'Éditeur se réserve le droit de modifier les tarifs à tout moment. Toute modification tarifaire sera notifiée aux Clients avant la prochaine échéance de facturation.</p>
+
+    <h2>3. Souscription et paiement</h2>
+    <p>La souscription à un abonnement payant s'effectue en ligne via la page de tarification de Galac6. Le paiement est géré de manière sécurisée par Stripe (Stripe Inc.). Les moyens de paiement acceptés sont : carte bancaire (Visa, Mastercard, American Express). Le paiement est prélevé automatiquement à la date de souscription, puis à chaque échéance (mensuelle ou annuelle selon la formule choisie).</p>
+
+    <h2>4. Droit de rétractation</h2>
+    <p>Conformément aux articles L.221-18 et suivants du Code de la consommation, le Client dispose d'un délai de <strong>14 jours</strong> à compter de la date de souscription pour exercer son droit de rétractation, sans avoir à justifier de motifs ni à payer de pénalités.</p>
+    <p>Pour exercer ce droit, le Client peut contacter l'Éditeur par email à <a href="mailto:hello@galac6.io">hello@galac6.io</a> en indiquant clairement sa volonté de se rétracter. Le remboursement sera effectué dans un délai de 14 jours suivant la réception de la demande, via le même moyen de paiement que celui utilisé pour la transaction initiale.</p>
+    <p>Si le Client a expressément demandé l'exécution du service avant l'expiration du délai de rétractation et a utilisé le service, le montant dû au titre du service consommé lui sera facturé au prorata.</p>
+
+    <h2>5. Durée et renouvellement</h2>
+    <p>L'abonnement mensuel est conclu pour une durée d'un mois et se renouvelle automatiquement à chaque échéance. L'abonnement annuel est conclu pour une durée de douze mois et se renouvelle automatiquement à chaque anniversaire de souscription.</p>
+    <p>Le Client peut à tout moment consulter la date de son prochain renouvellement et gérer son abonnement depuis le portail de gestion Stripe, accessible depuis la section « Mon abonnement » de l'application.</p>
+
+    <h2>6. Résiliation</h2>
+    <p>Le Client peut résilier son abonnement à tout moment depuis le portail de gestion Stripe. La résiliation prend effet à la fin de la période déjà payée : le Client conserve l'accès aux fonctionnalités payantes jusqu'à la date d'expiration de sa période en cours.</p>
+    <p>Aucun remboursement au prorata ne sera effectué pour la période restante, sauf dans le cadre du droit de rétractation (article 4).</p>
+    <p>L'Éditeur se réserve le droit de suspendre ou résilier l'accès d'un Client en cas de violation des <a href="/terms">Conditions Générales d'Utilisation</a>.</p>
+
+    <h2>7. Responsabilité</h2>
+    <p>Galac6 est un outil d'accompagnement éducatif utilisant l'intelligence artificielle. Il ne se substitue en aucun cas à un enseignant, un tuteur ou un professionnel de l'éducation. Les contenus générés par l'IA sont fournis à titre indicatif et peuvent contenir des inexactitudes.</p>
+    <p>L'Éditeur ne saurait être tenu responsable :</p>
+    <ul>
+      <li>des résultats scolaires obtenus par l'élève ;</li>
+      <li>des interruptions temporaires du service liées à la maintenance ou à des dysfonctionnements techniques ;</li>
+      <li>de l'utilisation faite du service par le Client ou l'élève.</li>
+    </ul>
+
+    <h2>8. Protection des données personnelles</h2>
+    <p>Le traitement des données personnelles dans le cadre de l'utilisation de Galac6 est décrit dans notre <a href="/privacy">Politique de confidentialité</a>. Le Client est invité à en prendre connaissance avant toute souscription.</p>
+
+    <h2>9. Droit applicable et litiges</h2>
+    <p>Les présentes CGV sont soumises au droit français.</p>
+    <p>En cas de litige, le Client peut recourir gratuitement à un médiateur de la consommation dans les conditions prévues aux articles L.611-1 et suivants du Code de la consommation. Le médiateur compétent sera communiqué sur simple demande à <a href="mailto:hello@galac6.io">hello@galac6.io</a>.</p>
+    <p>À défaut de résolution amiable, le litige sera porté devant les tribunaux compétents conformément aux règles de droit commun.</p>
+
+    <h2>10. Contact</h2>
+    <p>Pour toute question relative aux présentes Conditions Générales de Vente, vous pouvez contacter l'Éditeur :</p>
+    <ul>
+      <li><strong>Email</strong> : <a href="mailto:hello@galac6.io">hello@galac6.io</a></li>
+      <li><strong>Éditeur</strong> : RHK Conseil</li>
+    </ul>
+
+    <p style="color: var(--text-muted); font-size: 0.82rem; font-style: italic; margin-top: 2rem;">Dernière mise à jour : 25 février 2026</p>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div>Galac6 — L'IA de soutien scolaire et de révisions. · <a href="mailto:hello@galac6.io">hello@galac6.io</a></div>
+    <div class="footer-badges">
+      <a href="/mentions-legales" style="color: var(--text-muted);">Mentions légales</a>
+      <span class="footer-badge">🇫🇷 Made in France</span>
+    </div>
+  </footer>
+
+</body>
+</html>
