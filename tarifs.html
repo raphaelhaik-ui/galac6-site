@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galac6 — Tarifs</title>
+  <title>Galac6 — L'IA qui apprend aux élèves | Tarifs</title>
+  <meta name="description" content="Assistant éducatif IA basé sur les programmes de l'Éducation Nationale. Gratuit pour commencer, à partir de 9,99€/mois. Du primaire au lycée.">
+  <meta property="og:title" content="Galac6 — Tarifs">
+  <meta property="og:description" content="L'IA éducative pour vos enfants. Essayez gratuitement.">
   <link rel="icon" type="image/png" href="icons/32x32.png">
   <style>
     :root {
@@ -31,6 +34,89 @@
     a { color: var(--primary-light); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
+    /* ─── Navbar ─── */
+    .navbar-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,11,20,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+
+    .navbar-brand img { height: 44px; width: auto; }
+
+    .navbar-brand span {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .navbar-france { font-size: 1.1rem; margin-left: 0.1rem; }
+
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .navbar-links a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .navbar-links a:hover { color: var(--text); text-decoration: none; }
+    .navbar-links a.active { color: var(--text); }
+
+    .navbar-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .navbar-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .navbar-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .navbar-hamburger.open span:nth-child(2) { opacity: 0; }
+    .navbar-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ─── Page ─── */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 2rem 4rem;
+    }
+
     .back-link {
       display: inline-flex;
       align-items: center;
@@ -42,20 +128,15 @@
     }
     .back-link:hover { text-decoration: underline; }
 
-    .container {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 3rem 2rem 4rem;
-    }
-
     h1 {
-      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
       font-weight: 800;
       margin-bottom: 0.5rem;
       letter-spacing: -0.02em;
+      text-align: center;
     }
 
-    h1 span {
+    h1 .gradient {
       background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -65,94 +146,138 @@
     .lead {
       color: var(--text-muted);
       font-size: 1.05rem;
-      margin-bottom: 2.5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ─── Pricing Grid ─── */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      align-items: start;
+      margin-bottom: 4rem;
     }
 
     .pricing-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 20px;
-      padding: 2.5rem 2rem;
-      max-width: 480px;
-      margin: 0 auto 3rem;
+      padding: 2rem 1.75rem;
       text-align: center;
       transition: all 0.25s ease;
+      position: relative;
     }
 
     .pricing-card:hover {
       transform: translateY(-3px);
       box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-      border-color: rgba(99,102,241,0.3);
     }
 
-    .pricing-dual {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
+    .pricing-card.highlighted {
+      border-color: rgba(99,102,241,0.4);
+      background: linear-gradient(180deg, rgba(99,102,241,0.06) 0%, var(--bg-card) 100%);
     }
 
-    .pricing-dual-block { flex: 1; text-align: center; }
+    .pricing-card.highlighted:hover {
+      border-color: rgba(99,102,241,0.6);
+    }
 
-    .pricing-dual-label {
+    .pricing-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.3rem 1rem;
+      border-radius: 100px;
+      white-space: nowrap;
+      letter-spacing: 0.02em;
+    }
+
+    .pricing-plan-name {
       font-size: 0.8rem;
       font-weight: 600;
       color: var(--text-muted);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.4rem;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.75rem;
     }
 
-    .pricing-dual-amount {
-      font-size: clamp(1.5rem, 3.5vw, 1.9rem);
+    .pricing-amount {
+      font-size: 2.5rem;
       font-weight: 900;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.2rem;
+    }
+
+    .pricing-amount .currency {
+      font-size: 0.45em;
+      font-weight: 600;
+      vertical-align: super;
+    }
+
+    .pricing-amount .period {
+      font-size: 0.35em;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .pricing-amount.gradient-text {
       background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 0.3rem;
     }
 
-    .pricing-dual-amount span { font-size: 0.6em; font-weight: 600; }
-
-    .pricing-dual-detail { font-size: 0.82rem; color: var(--text-muted); }
-
-    .pricing-dual-plus {
-      font-size: 1.4rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      flex-shrink: 0;
+    .pricing-detail {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
     }
 
-    .pricing-perks {
+    .pricing-features {
       list-style: none;
-      padding: 0;
       text-align: left;
       margin-bottom: 1.5rem;
     }
 
-    .pricing-perks li {
+    .pricing-features li {
       padding: 0.4rem 0;
-      color: var(--text-muted);
       font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
     }
 
-    .pricing-perks li::before {
-      content: "\2713  ";
-      color: var(--primary-light);
+    .pricing-features li .icon-check {
+      color: #34d399;
       font-weight: 700;
+      flex-shrink: 0;
     }
 
+    .pricing-features li .icon-lock {
+      color: #64748b;
+      flex-shrink: 0;
+    }
+
+    .pricing-features li.locked {
+      color: #4a4a64;
+    }
+
+    /* ─── Buttons ─── */
     .btn {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 0.5rem;
-      padding: 0.8rem 1.6rem;
+      padding: 0.85rem 1.6rem;
       border-radius: 12px;
       font-size: 0.95rem;
       font-weight: 600;
@@ -160,6 +285,7 @@
       transition: all 0.2s ease;
       cursor: pointer;
       border: none;
+      width: 100%;
     }
 
     .btn-primary {
@@ -174,89 +300,345 @@
       text-decoration: none;
     }
 
-    .btn-secondary {
-      background: var(--bg-card);
+    .btn-outline {
+      background: transparent;
       color: var(--text);
       border: 1px solid var(--border);
     }
 
-    .btn-secondary:hover {
+    .btn-outline:hover {
       border-color: var(--primary);
       color: var(--primary-light);
       transform: translateY(-2px);
       text-decoration: none;
     }
 
-    .cta-row {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 2rem;
+    .pricing-cancel-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
     }
 
-    footer {
+    /* ─── Trust ─── */
+    .trust-strip {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 4rem;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .trust-item .trust-icon {
+      font-size: 1.2rem;
+    }
+
+    /* ─── FAQ ─── */
+    .faq-section {
+      max-width: 720px;
+      margin: 0 auto 3rem;
+    }
+
+    .faq-title {
+      font-size: 1.6rem;
+      font-weight: 700;
       text-align: center;
-      padding: 2rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .faq-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .faq-item:hover { border-color: rgba(99,102,241,0.3); }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.1rem 1.25rem;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      font-family: inherit;
+      gap: 1rem;
+    }
+
+    .faq-chevron {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      transition: transform 0.25s ease;
+      color: var(--text-muted);
+    }
+
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-item.open .faq-answer { max-height: 500px; }
+
+    .faq-answer-inner {
+      padding: 0 1.25rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       color: var(--text-muted);
       font-size: 0.82rem;
       border-top: 1px solid var(--border);
-      max-width: 860px;
-      margin: 0 auto;
     }
 
-    footer a { color: var(--primary-light); }
+    footer a { color: var(--primary-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
 
-    @media (max-width: 640px) {
-      .pricing-card { padding: 2rem 1.5rem; }
-      .pricing-dual { flex-direction: column; gap: 0.75rem; }
-      .pricing-dual-plus { margin: -0.25rem 0; }
-      .cta-row { flex-direction: column; }
-      .btn { width: 100%; justify-content: center; }
+    .footer-badges { display: flex; gap: 1.5rem; }
+
+    .footer-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 900px) {
+      .navbar { padding: 1rem 1.5rem; flex-wrap: wrap; }
+      .navbar-hamburger { display: flex; }
+      .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        padding: 1rem 0 0.5rem;
+      }
+      .navbar-links.open { display: flex; }
+      .navbar-links a { padding: 0.6rem 0; font-size: 1rem; }
+    }
+
+    @media (max-width: 768px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .pricing-card.highlighted { order: -1; }
+      .trust-strip { gap: 1.5rem; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
     }
   </style>
 </head>
 <body>
 
-<div class="container">
-
-  <a href="index.html" class="back-link">&larr; Retour &agrave; l'accueil</a>
-
-  <h1>Tarifs <span>Galac6</span></h1>
-  <p class="lead">Un prix simple et transparent, sans engagement. Vous ne payez que l'abonnement et la consommation r&eacute;elle de l'IA.</p>
-
-  <div class="pricing-card">
-    <div class="pricing-dual">
-      <div class="pricing-dual-block">
-        <p class="pricing-dual-label">Abonnement Galac6</p>
-        <div class="pricing-dual-amount">10 &euro;<span>/mois</span></div>
-        <p class="pricing-dual-detail">par &eacute;l&egrave;ve, sans engagement</p>
+  <!-- ═══ NAVBAR ═══ -->
+  <div class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="/" class="navbar-brand">
+        <img src="icons/icon.png" alt="Galac6">
+        <span>Galac6</span>
+        <span class="navbar-france">🇫🇷</span>
+      </a>
+      <button class="navbar-hamburger" aria-label="Menu" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="navbar-links">
+        <a href="/#features">Fonctionnalités</a>
+        <a href="/ecole">École</a>
+        <a href="/tarifs" class="active">Tarif</a>
+        <a href="mailto:hello@galac6.io">Contact</a>
+        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
       </div>
-      <div class="pricing-dual-plus">+</div>
-      <div class="pricing-dual-block">
-        <p class="pricing-dual-label">Consommation IA</p>
-        <div class="pricing-dual-amount" style="white-space: nowrap;">~0,60&nbsp;&euro;/heure</div>
-        <p class="pricing-dual-detail">factur&eacute;e au r&eacute;el</p>
+    </nav>
+  </div>
+
+  <div class="container">
+
+    <a href="/" class="back-link">&larr; Retour &agrave; l'accueil</a>
+
+    <h1>Tarifs <span class="gradient">Galac6</span></h1>
+    <p class="lead">Commencez gratuitement, sans carte bancaire. Passez au plan complet quand vous êtes prêt.</p>
+
+    <!-- ═══ PRICING GRID ═══ -->
+    <div class="pricing-grid">
+
+      <!-- Gratuit -->
+      <div class="pricing-card">
+        <div class="pricing-plan-name">Gratuit</div>
+        <div class="pricing-amount">0 <span class="currency">€</span></div>
+        <p class="pricing-detail">Pour découvrir</p>
+        <ul class="pricing-features">
+          <li><span class="icon-check">✓</span> 5 messages / jour</li>
+          <li><span class="icon-check">✓</span> 1 quiz / jour</li>
+          <li><span class="icon-check">✓</span> 1 dictée / jour</li>
+          <li class="locked"><span class="icon-lock">🔒</span> Synthèse vocale</li>
+          <li class="locked"><span class="icon-lock">🔒</span> Upload d'images</li>
+          <li class="locked"><span class="icon-lock">🔒</span> Saisie vocale</li>
+          <li class="locked"><span class="icon-lock">🔒</span> Remédiation</li>
+        </ul>
+        <a href="https://galac6web.netlify.app/" class="btn btn-outline">Commencer gratuitement →</a>
+      </div>
+
+      <!-- Mensuel -->
+      <div class="pricing-card">
+        <div class="pricing-plan-name">Mensuel</div>
+        <div class="pricing-amount gradient-text">13,99 <span class="currency">€</span><span class="period">/mois</span></div>
+        <p class="pricing-detail">Sans engagement</p>
+        <ul class="pricing-features">
+          <li><span class="icon-check">✓</span> Messages illimités</li>
+          <li><span class="icon-check">✓</span> Quiz illimités</li>
+          <li><span class="icon-check">✓</span> Dictées illimitées</li>
+          <li><span class="icon-check">✓</span> Synthèse vocale</li>
+          <li><span class="icon-check">✓</span> Upload d'images</li>
+          <li><span class="icon-check">✓</span> Saisie vocale</li>
+          <li><span class="icon-check">✓</span> Remédiation</li>
+        </ul>
+        <a href="https://galac6web.netlify.app/" class="btn btn-primary">S'abonner →</a>
+      </div>
+
+      <!-- Annuel -->
+      <div class="pricing-card highlighted">
+        <div class="pricing-badge">✨ -29 % — Meilleur rapport qualité/prix</div>
+        <div class="pricing-plan-name">Annuel</div>
+        <div class="pricing-amount gradient-text">9,99 <span class="currency">€</span><span class="period">/mois</span></div>
+        <p class="pricing-detail">Facturé 119,88 €/an</p>
+        <ul class="pricing-features">
+          <li><span class="icon-check">✓</span> Messages illimités</li>
+          <li><span class="icon-check">✓</span> Quiz illimités</li>
+          <li><span class="icon-check">✓</span> Dictées illimitées</li>
+          <li><span class="icon-check">✓</span> Synthèse vocale</li>
+          <li><span class="icon-check">✓</span> Upload d'images</li>
+          <li><span class="icon-check">✓</span> Saisie vocale</li>
+          <li><span class="icon-check">✓</span> Remédiation</li>
+        </ul>
+        <a href="https://galac6web.netlify.app/" class="btn btn-primary">S'abonner →</a>
+        <p class="pricing-cancel-note">Annulez à tout moment</p>
+      </div>
+
+    </div>
+
+    <!-- ═══ TRUST ═══ -->
+    <div class="trust-strip">
+      <div class="trust-item">
+        <span class="trust-icon">🛡️</span> Données hébergées en Europe
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">📊</span> Suivi parental en temps réel
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🎧</span> Support réactif
       </div>
     </div>
-    <ul class="pricing-perks">
-      <li>Toutes les fonctionnalit&eacute;s incluses</li>
-      <li>Contr&ocirc;le parental complet</li>
-      <li>Mises &agrave; jour et nouveaut&eacute;s incluses</li>
-      <li>Support multi-&eacute;l&egrave;ves</li>
-    </ul>
-    <a href="#" class="btn btn-primary" style="width: 100%; justify-content: center;">S'abonner</a>
+
+    <!-- ═══ FAQ ═══ -->
+    <div class="faq-section">
+      <h2 class="faq-title">Questions fréquentes</h2>
+      <p class="faq-subtitle">Tout ce que vous devez savoir sur nos tarifs.</p>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            Puis-je essayer gratuitement ?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Oui. Le plan gratuit est disponible sans carte bancaire. Vous pouvez envoyer jusqu'à 5 messages, 1 quiz et 1 dictée par jour.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            Puis-je changer de plan ?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Oui, à tout moment depuis l'espace parent. Vous pouvez passer du mensuel à l'annuel ou inversement.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            Combien d'enfants sont couverts ?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              L'abonnement couvre 1 licence élève. Vous pouvez ajouter d'autres enfants depuis le portail parent.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            Puis-je annuler à tout moment ?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Oui. Aucun engagement sur le plan mensuel. Pour le plan annuel, vous pouvez annuler à tout moment et votre accès reste actif jusqu'à la fin de la période facturée.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <div class="cta-row">
-    <a href="index.html" class="btn btn-secondary">&larr; Retour &agrave; l'accueil</a>
-    <a href="#" class="btn btn-primary">S'abonner</a>
-  </div>
-
-</div>
-
-<footer>
-  <p>Galac6 &mdash; Assistant IA du CP &agrave; la Terminale &middot; <a href="mailto:hello@galac6.io">hello@galac6.io</a></p>
-</footer>
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div>Galac6 — Assistant IA du CP à la Terminale · <a href="mailto:hello@galac6.io">hello@galac6.io</a></div>
+    <div class="footer-badges">
+      <span class="footer-badge">🇫🇷 Made in France</span>
+    </div>
+  </footer>
 
 </body>
 </html>

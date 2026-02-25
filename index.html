@@ -514,6 +514,144 @@
     .fi-blue   { background: rgba(59,130,246,0.12); }
     .fi-red    { background: rgba(239,68,68,0.12); }
 
+    /* ─── Gamification List ─── */
+    .gamification-list {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      counter-reset: gamif;
+    }
+
+    .gamification-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem 1.75rem;
+      transition: all 0.25s ease;
+    }
+
+    .gamification-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      border-color: rgba(99,102,241,0.3);
+    }
+
+    .gamification-number {
+      counter-increment: gamif;
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      font-weight: 800;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gamification-item h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .gamification-item p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .gamification-hero-copy {
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      text-align: center;
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      font-style: italic;
+      padding: 1.25rem 2rem;
+      background: linear-gradient(135deg, rgba(99,102,241,0.06), rgba(168,85,247,0.06));
+      border: 1px solid rgba(99,102,241,0.15);
+      border-radius: 16px;
+    }
+
+    /* ─── Stats Strip ─── */
+    .stats-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .stat-item {
+      text-align: center;
+      min-width: 120px;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.25rem;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* ─── Accessibility Grid ─── */
+    .accessibility-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .accessibility-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      transition: all 0.25s ease;
+    }
+
+    .accessibility-item:hover {
+      transform: translateY(-2px);
+      border-color: rgba(99,102,241,0.3);
+    }
+
+    .accessibility-item .a11y-icon {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .accessibility-item h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .accessibility-item p {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
     /* ─── Steps ─── */
     .steps {
       display: grid;
@@ -557,7 +695,7 @@
     /* ─── Audience ─── */
     .audience-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.25rem;
     }
 
@@ -588,113 +726,93 @@
       font-weight: 700;
     }
 
-    /* ─── Pricing ─── */
-    .pricing-card {
+    /* ─── Pricing Summary ─── */
+    .pricing-summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .pricing-summary-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 2.5rem 2rem;
-      max-width: 480px;
-      margin: 0 auto;
+      border-radius: 18px;
+      padding: 2rem 1.5rem;
       text-align: center;
       transition: all 0.25s ease;
+      position: relative;
     }
 
-    .pricing-card:hover {
+    .pricing-summary-card:hover {
       transform: translateY(-3px);
       box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-      border-color: rgba(99,102,241,0.3);
     }
 
-    .pricing-dual {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
+    .pricing-summary-card.highlighted {
+      border-color: rgba(99,102,241,0.4);
+      background: linear-gradient(180deg, rgba(99,102,241,0.06) 0%, var(--bg-card) 100%);
     }
 
-    .pricing-dual-block {
-      flex: 1;
-      text-align: center;
+    .pricing-summary-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.25rem 0.85rem;
+      border-radius: 100px;
+      white-space: nowrap;
     }
 
-    .pricing-dual-label {
-      font-size: 0.8rem;
+    .pricing-summary-name {
+      font-size: 0.78rem;
       font-weight: 600;
       color: var(--text-muted);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.4rem;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.6rem;
     }
 
-    .pricing-dual-amount {
-      font-size: clamp(1.5rem, 3.5vw, 1.9rem);
+    .pricing-summary-amount {
+      font-size: 2rem;
       font-weight: 900;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.15rem;
+    }
+
+    .pricing-summary-amount.gradient-text {
       background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 0.3rem;
     }
 
-    .pricing-dual-amount span {
-      font-size: 0.6em;
+    .pricing-summary-amount .currency {
+      font-size: 0.45em;
       font-weight: 600;
+      vertical-align: super;
     }
 
-    .pricing-dual-detail {
+    .pricing-summary-amount .period {
+      font-size: 0.35em;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .pricing-summary-detail {
       font-size: 0.82rem;
       color: var(--text-muted);
+      margin-bottom: 1.25rem;
     }
 
-    .pricing-dual-plus {
-      font-size: 1.4rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      flex-shrink: 0;
-    }
-
-    .pricing-perks {
-      list-style: none;
-      text-align: left;
-      margin-bottom: 1.5rem;
-    }
-
-    .pricing-perks li {
-      padding: 0.4rem 0;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    .pricing-perks li::before {
-      content: "✓ ";
-      color: var(--primary-light);
-    }
-
-    .pricing-free-banner {
-      background: linear-gradient(135deg, #10b981, #34d399);
-      color: #fff;
-      font-weight: 800;
-      font-size: 1.05rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      text-align: center;
-      padding: 0.75rem 1.5rem;
-      border-radius: 12px;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-    }
-    .pricing-free-banner span.free-icon {
-      font-size: 1.3em;
-      font-weight: 700;
+    @media (max-width: 768px) {
+      .pricing-summary { grid-template-columns: 1fr; max-width: 340px; }
+      .pricing-summary-card.highlighted { order: -1; }
     }
 
     /* ─── Guide Page ─── */
@@ -776,6 +894,7 @@
         padding: 0.6rem 0;
         font-size: 1rem;
       }
+      .audience-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 640px) {
@@ -784,6 +903,8 @@
       .pricing-dual { flex-direction: column; gap: 0.75rem; }
       .pricing-dual-plus { margin: -0.25rem 0; }
       .features-grid { grid-template-columns: 1fr; }
+      .accessibility-grid { grid-template-columns: 1fr 1fr; }
+      .stats-strip { gap: 1.25rem; }
       footer { flex-direction: column; gap: 1rem; text-align: center; }
     }
   </style>
@@ -841,7 +962,7 @@
     <div class="school-cta-card">
       <div class="school-cta-badge">🏫 Établissements scolaires</div>
       <h2 class="school-cta-title">Vous êtes une école ?</h2>
-      <p class="school-cta-desc">Déployez Galac6 pour tous vos élèves — tableau de bord enseignant, suivi de progression inclus.</p>
+      <p class="school-cta-desc">Déployez Galac6 pour tous vos élèves — console centralisée, codes d'invitation, suivi par classe et temps d'écran maîtrisé.</p>
       <a href="/ecole" class="btn btn-school">Découvrir l'offre école →</a>
     </div>
   </section>
@@ -856,6 +977,30 @@
       <p class="eduscol-text"><strong>Basé sur les programmes officiels Éduscol</strong> de l'Éducation nationale, du CP à la Terminale — et adapté par l'IA au niveau de chaque élève.</p>
     </div>
   </section>
+
+  <!-- ═══ CHIFFRES CLÉS ═══ -->
+  <div class="stats-strip">
+    <div class="stat-item">
+      <div class="stat-number">17</div>
+      <div class="stat-label">Niveaux scolaires</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">11</div>
+      <div class="stat-label">Matières</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">5</div>
+      <div class="stat-label">Modes d'apprentissage</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">23</div>
+      <div class="stat-label">Badges</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">4</div>
+      <div class="stat-label">Aménagements</div>
+    </div>
+  </div>
 
   <hr class="divider">
 
@@ -883,7 +1028,7 @@
       <div class="feature-card">
         <div class="feature-icon fi-green">🏆</div>
         <h3>XP et gamification</h3>
-        <p>Système de niveaux, points d'expérience et séries quotidiennes pour motiver l'élève à réviser régulièrement.</p>
+        <p>23 badges à collectionner, défis quotidiens, boutique cosmétique et séries de jours consécutifs. Apprendre n'a jamais été aussi motivant.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon fi-green">💻</div>
@@ -915,15 +1060,130 @@
         <h3>Rapport de progression</h3>
         <p>Visualisez les forces et faiblesses par matière avec des graphiques détaillés. Export PDF pour les réunions parents-profs.</p>
       </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-blue">🗣️</div>
+        <h3>Dictée vocale avancée</h3>
+        <p>Voix IA naturelle (Gemini TTS), 3 vitesses, mode papier et compte à rebours. Des textes toujours variés grâce à l'IA.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-purple">♿</div>
+        <h3>Accessibilité</h3>
+        <p>Modes dyslexie, dyspraxie, malvoyant et malentendant. L'inclusion fait partie de l'ADN de Galac6.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-pink">📋</div>
+        <h3>Fiches pense-bête</h3>
+        <p>Fiches ultra-compactes pour la révision de dernière minute : définitions clés, formules essentielles, points critiques.</p>
+      </div>
     </div>
   </section>
 
+  <hr class="divider">
+
+  <!-- ═══ GAMIFICATION ═══ -->
+  <section>
+    <h2 class="section-title">Gamification</h2>
+    <p class="section-subtitle">Un vrai système de jeu au service de l'apprentissage.</p>
+
+    <div class="gamification-hero-copy">
+      XP, badges, défis quotidiens, boutique cosmétique — votre enfant ne voudra plus s'arrêter de réviser.
+    </div>
+
+    <div class="gamification-list">
+      <div class="gamification-item">
+        <div class="gamification-number">1</div>
+        <div>
+          <h3>XP et niveaux</h3>
+          <p>Chaque activité rapporte de l'XP. 100 XP = 1 niveau. Barre de progression visuelle pour suivre sa montée.</p>
+        </div>
+      </div>
+      <div class="gamification-item">
+        <div class="gamification-number">2</div>
+        <div>
+          <h3>23 badges à collectionner</h3>
+          <p>6 catégories (conversations, quiz, dictées, séries, exploration, XP) et 4 niveaux de rareté : Commun, Rare, Épique, Légendaire.</p>
+        </div>
+      </div>
+      <div class="gamification-item">
+        <div class="gamification-number">3</div>
+        <div>
+          <h3>3 défis quotidiens</h3>
+          <p>Missions renouvelées chaque jour pour gagner de l'XP bonus : envoyer des messages, compléter un quiz, atteindre un objectif.</p>
+        </div>
+      </div>
+      <div class="gamification-item">
+        <div class="gamification-number">4</div>
+        <div>
+          <h3>Coins et boutique cosmétique</h3>
+          <p>Monnaie virtuelle gagnée avec l'XP. 16 fonds d'écran thématiques à débloquer : nature, espace, gaming, Japon, art…</p>
+        </div>
+      </div>
+      <div class="gamification-item">
+        <div class="gamification-number">5</div>
+        <div>
+          <h3>Séries (streaks)</h3>
+          <p>Compteur de jours consécutifs d'utilisation. Badges dédiés à 3, 7, 14 et 30 jours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ ACCESSIBILITÉ ═══ -->
+  <section>
+    <h2 class="section-title">Accessibilité</h2>
+    <p class="section-subtitle">Adapté à chaque élève, quels que soient ses besoins.</p>
+
+    <div class="accessibility-grid">
+      <div class="accessibility-item">
+        <div class="a11y-icon">🔤</div>
+        <h4>Dyslexie</h4>
+        <p>Police OpenDyslexic, espacement augmenté, interligne plus grand.</p>
+      </div>
+      <div class="accessibility-item">
+        <div class="a11y-icon">🖱️</div>
+        <h4>Dyspraxie</h4>
+        <p>Zones cliquables élargies (min. 44×44px), espacement doublé, focus épais.</p>
+      </div>
+      <div class="accessibility-item">
+        <div class="a11y-icon">👁️</div>
+        <h4>Mal voyant</h4>
+        <p>Texte agrandi, graisse renforcée, icônes plus grandes.</p>
+      </div>
+      <div class="accessibility-item">
+        <div class="a11y-icon">👂</div>
+        <h4>Mal entendant</h4>
+        <p>Lecture vocale de tout contenu via synthèse vocale.</p>
+      </div>
+      <div class="accessibility-item">
+        <div class="a11y-icon">🌙</div>
+        <h4>Mode sombre / clair / auto</h4>
+        <p>Thème adapté à l'environnement de l'élève.</p>
+      </div>
+      <div class="accessibility-item">
+        <div class="a11y-icon">🔠</div>
+        <h4>Taille de police ajustable</h4>
+        <p>Contrôle direct dans l'en-tête de l'application.</p>
+      </div>
+      <div class="accessibility-item">
+        <div class="a11y-icon">🎙️</div>
+        <h4>Saisie vocale</h4>
+        <p>Alternative au clavier pour dicter questions et formules.</p>
+      </div>
+      <div class="accessibility-item">
+        <div class="a11y-icon">🌐</div>
+        <h4>Interface FR / EN</h4>
+        <p>Application bilingue français-anglais.</p>
+      </div>
+    </div>
+  </section>
 
   <hr class="divider">
 
   <!-- ═══ AUDIENCE ═══ -->
   <section>
-    <h2 class="section-title">Pour les élèves et les parents</h2>
+    <h2 class="section-title">Pour les élèves, les parents et les écoles</h2>
     <p class="section-subtitle">Chacun a son espace et ses outils.</p>
 
     <div class="audience-grid">
@@ -931,18 +1191,18 @@
         <h3>👨‍🎓 Pour l'élève</h3>
         <ul>
           <li>Chat IA adapté à son niveau (CP → Terminale)</li>
-          <li>Toutes les matières officielles couvertes</li>
+          <li>11 matières officielles couvertes</li>
           <li>Quiz interactifs avec corrections</li>
-          <li>Dictées avec correction et suivi</li>
-          <li>Fiches de révision générées</li>
+          <li>Dictées vocales (voix IA, 3 vitesses, mode papier)</li>
+          <li>Fiches de révision complètes ou pense-bête express</li>
           <li>Parcours Scratch et Python guidé par l'IA</li>
           <li>Éditeur de formules mathématiques</li>
-          <li>Coller des photos d'exercices</li>
-          <li>Système de niveaux et XP motivant</li>
-          <li>Saisie vocale au micro (questions + formules math)</li>
-          <li>OCR : coller une photo d'exercice</li>
+          <li>Saisie vocale des formules math en quiz</li>
+          <li>XP, 23 badges, défis quotidiens et boutique cosmétique</li>
+          <li>OCR : photographier un exercice</li>
           <li>Export PDF des fiches de révision</li>
-          <li>Mode sombre et taille de police ajustable</li>
+          <li>Modes accessibilité (dyslexie, dyspraxie, malvoyant, malentendant)</li>
+          <li>Écrans d'accueil thématiques par âge</li>
           <li>Jusqu'à 8 conversations en parallèle</li>
         </ul>
       </div>
@@ -950,14 +1210,26 @@
         <h3>👨‍👩‍👧 Pour le parent</h3>
         <ul>
           <li>Panneau admin protégé par mot de passe</li>
-          <li>Suivi de consommation et budget mensuel</li>
+          <li>Contrôle du temps d'écran par enfant</li>
+          <li>Aménagements d'accessibilité activables</li>
           <li>Historique complet des conversations</li>
+          <li>Rapport de progression radar + courbes (export PDF)</li>
+          <li>Plans de remédiation IA personnalisés</li>
           <li>Personnalisation du comportement de l'IA</li>
           <li>Support multi-élèves</li>
-          <li>Rapport de progression avec graphiques radar</li>
-          <li>Plans de remédiation personnalisés</li>
-          <li>Export PDF du rapport de progression</li>
-          <li>Alertes sur les faiblesses persistantes</li>
+          <li>Suivi de consommation et budget mensuel</li>
+        </ul>
+      </div>
+      <div class="audience-card">
+        <h3>🏫 Pour l'école</h3>
+        <ul>
+          <li>Console d'administration centralisée</li>
+          <li>Codes d'invitation par établissement</li>
+          <li>Contrôle du temps d'écran par élève</li>
+          <li>Aménagements d'accessibilité par classe</li>
+          <li>Statistiques d'utilisation agrégées par classe</li>
+          <li>Rôles administrateur et enseignant</li>
+          <li>Données hébergées en Europe (RGPD)</li>
         </ul>
       </div>
     </div>
@@ -967,18 +1239,28 @@
 
   <!-- ═══ PRICING ═══ -->
   <section id="pricing">
-    <h2 class="section-title">Tarif</h2>
-    <p class="section-subtitle">Pendant la période de test (depuis février 2026), l'utilisation est entièrement offerte.</p>
+    <h2 class="section-title">Tarifs</h2>
+    <p class="section-subtitle">Commencez gratuitement, sans carte bancaire. Passez au plan complet quand vous êtes prêt.</p>
 
-    <div class="pricing-card" style="max-width: 560px;">
-      <div class="pricing-free-banner" style="font-size: 1.2rem; padding: 1rem 1.5rem;">
-        <span class="free-icon">🎉</span> 100 % gratuit — aucune CB requise
+    <div class="pricing-summary">
+      <div class="pricing-summary-card">
+        <div class="pricing-summary-name">Gratuit</div>
+        <div class="pricing-summary-amount">0 <span class="currency">€</span></div>
+        <p class="pricing-summary-detail">5 messages, 1 quiz, 1 dictée / jour</p>
+        <a href="https://galac6web.netlify.app/" class="btn btn-secondary" style="width: 100%; justify-content: center;">Commencer →</a>
       </div>
-      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-top: 1rem;">Toutes les fonctionnalités sont accessibles sans limite pendant la phase de test.</p>
-
-      <div style="margin-top: 1.5rem; padding: 1.25rem; background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.25); border-radius: 12px; text-align: left;">
-        <p style="color: #f87171; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.5rem;">🐛 Contrat moral</p>
-        <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.7;">Si vous utilisez Galac6, reportez chaque bug avec une copie d'écran dans la section rouge <strong style="color: var(--text);">"Bug report"</strong>. Enrichissez la plateforme avec vos commentaires et demandes d'amélioration.</p>
+      <div class="pricing-summary-card">
+        <div class="pricing-summary-name">Mensuel</div>
+        <div class="pricing-summary-amount gradient-text">13,99 <span class="currency">€</span><span class="period">/mois</span></div>
+        <p class="pricing-summary-detail">Tout illimité, sans engagement</p>
+        <a href="/tarifs" class="btn btn-primary" style="width: 100%; justify-content: center;">Voir les détails →</a>
+      </div>
+      <div class="pricing-summary-card highlighted">
+        <div class="pricing-summary-badge">✨ -29 %</div>
+        <div class="pricing-summary-name">Annuel</div>
+        <div class="pricing-summary-amount gradient-text">9,99 <span class="currency">€</span><span class="period">/mois</span></div>
+        <p class="pricing-summary-detail">119,88 €/an — tout illimité</p>
+        <a href="/tarifs" class="btn btn-primary" style="width: 100%; justify-content: center;">Voir les détails →</a>
       </div>
     </div>
   </section>
@@ -1025,7 +1307,7 @@
         <div class="feature-icon fi-purple" style="flex-shrink: 0;">🧠</div>
         <div>
           <h3>Une surcouche aux meilleurs modèles</h3>
-          <p>Galac6 utilise les modèles d'Anthropic, d'OpenAI et de Mistral comme moteurs. Nous ajoutons par-dessus une couche pédagogique qui transforme ces modèles en vrais tuteurs scolaires.</p>
+          <p>Galac6 s'appuie en priorité sur les modèles de Mistral, complétés par Anthropic et OpenAI. Nous ajoutons par-dessus une couche pédagogique qui transforme ces modèles en vrais tuteurs scolaires.</p>
         </div>
       </div>
       <div class="feature-card" style="display: flex; align-items: flex-start; gap: 1rem;">
