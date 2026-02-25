@@ -815,6 +815,71 @@
       .pricing-summary-card.highlighted { order: -1; }
     }
 
+    /* ─── Promo Banner ─── */
+    .promo-banner {
+      position: relative;
+      padding: 2px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #f59e0b, #ef4444);
+      margin-bottom: 2.5rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 30px rgba(245,158,11,0.20), 0 0 60px rgba(239,68,68,0.10);
+    }
+
+    .promo-banner-inner {
+      background: linear-gradient(135deg, rgba(245,158,11,0.08) 0%, rgba(239,68,68,0.08) 100%), var(--bg);
+      border-radius: 18px;
+      padding: 2.25rem 2.5rem 2rem;
+      text-align: center;
+    }
+
+    .promo-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #f59e0b, #ef4444);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.3rem 1rem;
+      border-radius: 100px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+
+    .promo-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #fbbf24, #f59e0b, #ef4444);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .promo-text {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 0.25rem;
+    }
+
+    .promo-banner .btn-primary {
+      background: linear-gradient(135deg, #f59e0b, #ef4444);
+      box-shadow: 0 4px 20px rgba(245,158,11,0.25);
+    }
+
+    .promo-banner .btn-primary:hover {
+      box-shadow: 0 6px 28px rgba(245,158,11,0.40);
+    }
+
+    @media (max-width: 768px) {
+      .promo-banner-inner { padding: 1.75rem 1.25rem 1.5rem; }
+      .promo-title { font-size: 1.2rem; }
+      .promo-text { font-size: 0.9rem; }
+    }
+
     /* ─── Guide Page ─── */
     .guide-container {
       max-width: 800px;
@@ -1241,6 +1306,18 @@
   <section id="pricing">
     <h2 class="section-title">Tarifs</h2>
     <p class="section-subtitle">Commencez gratuitement, sans carte bancaire. Passez au plan complet quand vous êtes prêt.</p>
+
+    <div class="promo-banner">
+      <div class="promo-banner-inner">
+        <div class="promo-badge">Offre de lancement</div>
+        <p class="promo-title">Jusqu'au 31 mars 2026, tout est gratuit !</p>
+        <p class="promo-text">
+          Crée-toi un compte gratuit et bénéficie d'un accès complet et illimité.<br>
+          Si tu vois des bugs, dis-le nous !
+        </p>
+        <a href="https://galac6web.netlify.app/" class="btn btn-primary" style="width: auto; margin-top: 1rem;">Créer mon compte gratuit →</a>
+      </div>
+    </div>
 
     <div class="pricing-summary">
       <div class="pricing-summary-card">
