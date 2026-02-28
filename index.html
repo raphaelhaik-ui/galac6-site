@@ -913,6 +913,73 @@
     }
     .back-link:hover { text-decoration: underline; }
 
+    /* ─── FAQ ─── */
+    .faq-list {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .faq-item:hover {
+      border-color: rgba(99,102,241,0.3);
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.1rem 1.25rem;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      font-family: inherit;
+      gap: 1rem;
+    }
+
+    .faq-chevron {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      transition: transform 0.25s ease;
+      color: var(--text-muted);
+    }
+
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 500px;
+    }
+
+    .faq-answer-inner {
+      padding: 0 1.25rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
     /* ─── Footer ─── */
     footer {
       max-width: 1200px;
@@ -1054,7 +1121,7 @@
       <div class="stat-label">Matières</div>
     </div>
     <div class="stat-item">
-      <div class="stat-number">5</div>
+      <div class="stat-number">7</div>
       <div class="stat-label">Modes d'apprentissage</div>
     </div>
     <div class="stat-item">
@@ -1139,6 +1206,11 @@
         <div class="feature-icon fi-pink">📋</div>
         <h3>Fiches pense-bête</h3>
         <p>Fiches ultra-compactes pour la révision de dernière minute : définitions clés, formules essentielles, points critiques.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-red">📝</div>
+        <h3>Brevet blanc DNB</h3>
+        <p>Passe des épreuves complètes du Brevet dans 4 matières. Sujets IA ou annales officielles, chronomètre, correction détaillée et mention.</p>
       </div>
     </div>
   </section>
@@ -1269,6 +1341,7 @@
           <li>Modes accessibilité (dyslexie, dyspraxie, malvoyant, malentendant)</li>
           <li>Écrans d'accueil thématiques par âge</li>
           <li>Jusqu'à 8 conversations en parallèle</li>
+          <li>Brevet blanc — Entraîne-toi au DNB avec des épreuves complètes en Maths, Français, Sciences et Histoire-Géo. Sujets IA ou annales officielles, chrono et correction détaillée avec mention.</li>
         </ul>
       </div>
       <div class="audience-card">
@@ -1283,6 +1356,7 @@
           <li>Personnalisation du comportement de l'IA</li>
           <li>Support multi-élèves</li>
           <li>Suivi de consommation et budget mensuel</li>
+          <li>Préparation au Brevet — Votre enfant s'entraîne au DNB dans les conditions réelles. Correction détaillée par l'IA, note et mention pour chaque épreuve.</li>
         </ul>
       </div>
       <div class="audience-card">
@@ -1295,6 +1369,7 @@
           <li>Statistiques d'utilisation agrégées par classe</li>
           <li>Rôles administrateur et enseignant</li>
           <li>Données hébergées en Europe (RGPD)</li>
+          <li>Brevets blancs IA — Organisez des brevets blancs sans mobiliser de salles ni de correcteurs. L'IA génère les sujets et corrige les copies automatiquement.</li>
         </ul>
       </div>
     </div>
@@ -1401,6 +1476,65 @@
           <p>Au-delà du chat, Galac6 propose des outils dédiés : dictées avec correction, parcours Scratch et Python, quiz adaptatifs, fiches de révision générées et tableau de bord des progrès.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ FAQ ═══ -->
+  <section>
+    <h2 class="section-title">Questions fréquentes</h2>
+    <p class="section-subtitle">Tout ce que vous devez savoir sur le Brevet blanc.</p>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Le brevet blanc est-il au format officiel du DNB ?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Oui. Chaque matière respecte le format officiel : durées, barèmes, structure en parties. Les annales sont de vrais sujets tombés au DNB.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          L'IA corrige-t-elle aussi bien qu'un professeur ?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            L'IA corrige exercice par exercice avec des points partiels, des commentaires personnalisés et des conseils. Elle est calibrée par matière (un "professeur de maths" pour les maths, un "professeur de français" pour le français, etc.).
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Peut-on ne faire qu'une partie de l'épreuve ?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Oui. L'élève peut choisir l'épreuve complète, la Partie 1 seule ou la Partie 2 seule. Utile pour s'entraîner sur un point précis.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          Les annales sont-elles de vrais sujets ?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Oui. Ce sont de vrais sujets tombés au Brevet des collèges entre 2019 et 2024, avec les questions et barèmes originaux.
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
