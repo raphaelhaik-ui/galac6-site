@@ -514,74 +514,6 @@
     .fi-blue   { background: rgba(59,130,246,0.12); }
     .fi-red    { background: rgba(239,68,68,0.12); }
 
-    /* ─── Gamification List ─── */
-    .gamification-list {
-      max-width: 700px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      counter-reset: gamif;
-    }
-
-    .gamification-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1.25rem;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.5rem 1.75rem;
-      transition: all 0.25s ease;
-    }
-
-    .gamification-item:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-      border-color: rgba(99,102,241,0.3);
-    }
-
-    .gamification-number {
-      counter-increment: gamif;
-      flex-shrink: 0;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-      color: #fff;
-      font-weight: 800;
-      font-size: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .gamification-item h3 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      margin-bottom: 0.25rem;
-    }
-
-    .gamification-item p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      line-height: 1.6;
-    }
-
-    .gamification-hero-copy {
-      max-width: 700px;
-      margin: 0 auto 2.5rem;
-      text-align: center;
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-      font-style: italic;
-      padding: 1.25rem 2rem;
-      background: linear-gradient(135deg, rgba(99,102,241,0.06), rgba(168,85,247,0.06));
-      border: 1px solid rgba(99,102,241,0.15);
-      border-radius: 16px;
-    }
-
     /* ─── Stats Strip ─── */
     .stats-strip {
       display: flex;
@@ -1211,56 +1143,6 @@
         <div class="feature-icon fi-red">📝</div>
         <h3>Brevet blanc DNB</h3>
         <p>Passe des épreuves complètes du Brevet dans 4 matières. Sujets IA ou annales officielles, chronomètre, correction détaillée et mention.</p>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider">
-
-  <!-- ═══ GAMIFICATION ═══ -->
-  <section>
-    <h2 class="section-title">Gamification</h2>
-    <p class="section-subtitle">Un vrai système de jeu au service de l'apprentissage.</p>
-
-    <div class="gamification-hero-copy">
-      XP, badges, défis quotidiens, boutique cosmétique — votre enfant ne voudra plus s'arrêter de réviser.
-    </div>
-
-    <div class="gamification-list">
-      <div class="gamification-item">
-        <div class="gamification-number">1</div>
-        <div>
-          <h3>XP et niveaux</h3>
-          <p>Chaque activité rapporte de l'XP. 100 XP = 1 niveau. Barre de progression visuelle pour suivre sa montée.</p>
-        </div>
-      </div>
-      <div class="gamification-item">
-        <div class="gamification-number">2</div>
-        <div>
-          <h3>23 badges à collectionner</h3>
-          <p>6 catégories (conversations, quiz, dictées, séries, exploration, XP) et 4 niveaux de rareté : Commun, Rare, Épique, Légendaire.</p>
-        </div>
-      </div>
-      <div class="gamification-item">
-        <div class="gamification-number">3</div>
-        <div>
-          <h3>3 défis quotidiens</h3>
-          <p>Missions renouvelées chaque jour pour gagner de l'XP bonus : envoyer des messages, compléter un quiz, atteindre un objectif.</p>
-        </div>
-      </div>
-      <div class="gamification-item">
-        <div class="gamification-number">4</div>
-        <div>
-          <h3>Coins et boutique cosmétique</h3>
-          <p>Monnaie virtuelle gagnée avec l'XP. 16 fonds d'écran thématiques à débloquer : nature, espace, gaming, Japon, art…</p>
-        </div>
-      </div>
-      <div class="gamification-item">
-        <div class="gamification-number">5</div>
-        <div>
-          <h3>Séries (streaks)</h3>
-          <p>Compteur de jours consécutifs d'utilisation. Badges dédiés à 3, 7, 14 et 30 jours.</p>
-        </div>
       </div>
     </div>
   </section>
