@@ -550,6 +550,105 @@
       margin-top: 0.5rem;
     }
 
+    /* ─── FAQ ─── */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .faq-item:hover {
+      border-color: rgba(124,92,252,0.35);
+    }
+
+    .faq-item.open {
+      border-color: rgba(124,92,252,0.5);
+      box-shadow: 0 0 0 1px rgba(124,92,252,0.12), 0 8px 32px rgba(124,92,252,0.1);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 24px;
+      text-align: left;
+      color: var(--text);
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: inherit;
+      line-height: 1.4;
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: rgba(124,92,252,0.1);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      transition: background 0.25s ease, transform 0.3s ease, border-color 0.25s ease;
+    }
+
+    .faq-item.open .faq-icon {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 400px;
+    }
+
+    .faq-answer-inner {
+      padding: 16px 24px 24px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.75;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-answer-inner strong {
+      color: var(--text);
+    }
+
+    .faq-cta {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .faq-cta p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
     /* ─── Responsive ─── */
     @media (max-width: 900px) {
       .hero { padding: 4rem 1.5rem 3rem; }
@@ -603,6 +702,7 @@
       <div class="navbar-links">
         <a href="#features">Fonctionnalités</a>
         <a href="/ecole">École</a>
+        <a href="#faq">FAQ</a>
         <a href="#pricing">Tarif</a>
         <a href="mailto:hello@galac6.io">Contact</a>
         <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
@@ -693,6 +793,145 @@
     </div>
   </div>
 
+  <hr class="divider">
+
+  <!-- ═══ FAQ ═══ -->
+  <section id="faq">
+    <h2 class="section-title">Questions <span style="background:linear-gradient(135deg,var(--gradient-start),var(--gradient-end));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">fréquentes</span></h2>
+    <p class="section-subtitle">Tout ce que les parents et les élèves nous demandent, en toute transparence.</p>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          À qui s'adresse Galac6 ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Galac6 s'adresse aux <strong>élèves du CP à la Terminale</strong> et à leurs parents. Que votre enfant ait besoin d'un coup de pouce sur ses devoirs du soir, ou qu'il prépare un contrôle important, Galac6 est là pour l'accompagner — à son rythme, dans sa matière, à son niveau.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Galac6 donne-t-il les réponses aux élèves ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <strong>Non — et c'est toute la différence.</strong> Galac6 ne fait pas les devoirs à la place de votre enfant. Il l'aide à <strong>se poser les bonnes questions</strong>, à identifier ce qu'il ne sait pas encore, pour qu'il trouve lui-même les réponses. L'objectif : construire de la vraie confiance, pas de fausses notes.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Galac6 remplace-t-il le prof ou les parents ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Jamais. Galac6 intervient là où ni le prof ni les parents ne peuvent toujours être : <strong>le soir à 21h, seul devant ses devoirs</strong>. Il est le compagnon bienveillant qui prend le relais quand personne n'est disponible. En primaire et au collège, il peut même devenir un formidable outil d'interaction entre parents et enfants.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Comment Galac6 utilise-t-il l'IA ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Galac6 utilise l'IA pour <strong>guider l'élève, pas pour penser à sa place</strong>. L'IA analyse le niveau, les lacunes et le rythme d'apprentissage de l'élève, puis propose des explications adaptées, des questions de révision ciblées et des encouragements personnalisés — en français, dans le respect du programme de l'Éducation Nationale.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          En quoi Galac6 est-il différent de ChatGPT ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <strong>ChatGPT donne des réponses. Galac6 donne des compétences.</strong> ChatGPT n'est pas conçu pour les enfants, ne connaît pas le programme français et n'a aucune logique pédagogique. Galac6 est spécialement pensé pour l'école française 🇫🇷, avec une approche qui pousse l'élève à apprendre vraiment — pas à copier-coller.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Combien de temps par jour faut-il utiliser Galac6 ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <strong>15 à 30 minutes suffisent</strong> pour des révisions efficaces. Galac6 n'est pas conçu pour remplacer les loisirs — il est conçu pour optimiser les moments de travail. Quelques sessions ciblées par semaine font déjà une vraie différence sur les résultats.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Les données de mon enfant sont-elles protégées ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Oui, et c'est non-négociable. Galac6 est <strong>conçu et hébergé en France et en Europe</strong>, dans le plein respect du RGPD. Nous ne revendons jamais les données de vos enfants à des tiers. La confidentialité et la sécurité des données des mineurs sont au cœur de notre conception.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Quelles matières et quels niveaux sont couverts ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Galac6 couvre les principales matières du programme français : <strong>Français, Mathématiques, Histoire-Géographie, Sciences, Anglais</strong> et d'autres encore — <strong>du CP à la Terminale</strong>. Le contenu s'adapte automatiquement au niveau et à la classe de l'élève.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Les parents peuvent-ils suivre les progrès de leur enfant ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Oui. Les parents ont accès à un espace de suivi pour voir les matières travaillées, les progrès réalisés et les points à renforcer. Chez Galac6, nous croyons au <strong>rôle actif des parents</strong> dans la scolarité — l'outil est conçu pour renforcer ce lien, pas pour le remplacer.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Y a-t-il un essai gratuit ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Oui ! <strong>Galac6 est gratuit pour commencer</strong>, sans carte bancaire. Vous pouvez découvrir par vous-même comment ça fonctionne avant de vous engager. Aucune surprise, aucun engagement.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="faq-cta">
+      <p>Une question que vous ne trouvez pas ici ?</p>
+      <a href="mailto:hello@galac6.io" class="btn btn-primary">Contactez-nous →</a>
+    </div>
+  </section>
+
+  <hr class="divider">
+
   <!-- ═══ PRICING ═══ -->
   <section id="pricing">
     <h2 class="section-title">Commencer, c'est gratuit.</h2>
@@ -756,5 +995,21 @@
   </div>
 
 <script src="cookie-consent.js"></script>
+<script>
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i) {
+        i.classList.remove('open');
+        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
 </body>
 </html>
