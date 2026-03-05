@@ -327,22 +327,20 @@
     <div class="contact-section">
       <h2>Me contacter</h2>
       <p class="contact-subtitle">Une question, une suggestion, un partenariat ? Écrivez-moi directement.</p>
-      <form class="contact-form" name="contact" netlify netlify-honeypot="bot-field" action="/about?success">
-        <input type="hidden" name="form-name" value="contact">
-        <label style="display:none"><input name="bot-field"></label>
+      <form class="contact-form" id="contact-form">
         <label>
           Votre nom
-          <input type="text" name="name" placeholder="Prénom Nom" required>
+          <input type="text" id="contact-name" placeholder="Prénom Nom" required>
         </label>
         <label>
           Votre email
-          <input type="email" name="email" placeholder="vous@exemple.fr" required>
+          <input type="email" id="contact-email" placeholder="vous@exemple.fr" required>
         </label>
         <label>
           Message
-          <textarea name="message" placeholder="Votre message..." required></textarea>
+          <textarea id="contact-message" placeholder="Votre message..." required></textarea>
         </label>
-        <button type="submit">Envoyer →</button>
+        <button type="submit" id="contact-btn">Envoyer →</button>
       </form>
       <div class="contact-success" id="contact-success">
         Message envoyé, merci ! Je vous réponds dans les plus brefs délais.
@@ -362,11 +360,34 @@
 
 <script src="cookie-consent.js"></script>
 <script>
-  // Show success message if Netlify redirects back with ?success
-  if (window.location.search.includes('success')) {
-    document.querySelector('.contact-form').style.display = 'none';
-    document.getElementById('contact-success').style.display = 'block';
-  }
+  document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('contact-btn');
+    btn.disabled = true;
+    btn.textContent = 'Envoi en cours...';
+    var name = document.getElementById('contact-name').value;
+    var email = document.getElementById('contact-email').value;
+    var message = document.getElementById('contact-message').value;
+    try {
+      var res = await fetch('https://yopykvfbjxrkxyparopk.supabase.co/functions/v1/notify-contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: name, email: email, message: message })
+      });
+      if (res.ok) {
+        document.getElementById('contact-form').style.display = 'none';
+        document.getElementById('contact-success').style.display = 'block';
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Envoyer →';
+        alert('Une erreur est survenue, veuillez réessayer.');
+      }
+    } catch(err) {
+      btn.disabled = false;
+      btn.textContent = 'Envoyer →';
+      alert('Une erreur est survenue, veuillez réessayer.');
+    }
+  });
 </script>
 </body>
 </html>
