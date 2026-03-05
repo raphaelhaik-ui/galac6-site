@@ -86,6 +86,7 @@
     }
 
     .navbar-links a:hover { color: var(--text); text-decoration: none; }
+    .navbar-links a.active { color: var(--text); }
 
     .navbar-hamburger {
       display: none;
@@ -144,6 +145,89 @@
       line-height: 1.8;
       margin-bottom: 1.2rem;
       font-size: 1.05rem;
+    }
+
+    /* ─── Contact form ─── */
+    .contact-section {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-section p.contact-subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      max-width: 560px;
+    }
+
+    .contact-form label {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      color: var(--text);
+      font-size: 0.95rem;
+      font-family: inherit;
+      transition: border-color 0.2s;
+      outline: none;
+      resize: vertical;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--primary);
+    }
+
+    .contact-form textarea {
+      min-height: 130px;
+    }
+
+    .contact-form button {
+      align-self: flex-start;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 0.75rem 2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .contact-form button:hover { opacity: 0.85; }
+
+    .contact-success {
+      display: none;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
     }
 
     /* ─── Footer ─── */
@@ -220,7 +304,7 @@
         <a href="/">Accueil</a>
         <a href="/ecole">École</a>
         <a href="/tarifs">Tarifs</a>
-        <a href="mailto:hello@galac6.io">Contact</a>
+        <a href="/about" class="active">À propos</a>
         <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
       </div>
     </nav>
@@ -239,6 +323,31 @@
         <p style="margin-top: 2rem; font-style: italic; color: var(--text);">Raphael Haik, Paris, France</p>
       </div>
     </div>
+    <!-- ─── Contact ─── -->
+    <div class="contact-section">
+      <h2>Me contacter</h2>
+      <p class="contact-subtitle">Une question, une suggestion, un partenariat ? Écrivez-moi directement.</p>
+      <form class="contact-form" name="contact" netlify netlify-honeypot="bot-field" action="/about?success">
+        <input type="hidden" name="form-name" value="contact">
+        <label style="display:none"><input name="bot-field"></label>
+        <label>
+          Votre nom
+          <input type="text" name="name" placeholder="Prénom Nom" required>
+        </label>
+        <label>
+          Votre email
+          <input type="email" name="email" placeholder="vous@exemple.fr" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" placeholder="Votre message..." required></textarea>
+        </label>
+        <button type="submit">Envoyer →</button>
+      </form>
+      <div class="contact-success" id="contact-success">
+        Message envoyé, merci ! Je vous réponds dans les plus brefs délais.
+      </div>
+    </div>
   </div>
 
   <!-- ═══ FOOTER ═══ -->
@@ -252,5 +361,12 @@
   </footer>
 
 <script src="cookie-consent.js"></script>
+<script>
+  // Show success message if Netlify redirects back with ?success
+  if (window.location.search.includes('success')) {
+    document.querySelector('.contact-form').style.display = 'none';
+    document.getElementById('contact-success').style.display = 'block';
+  }
+</script>
 </body>
 </html>
