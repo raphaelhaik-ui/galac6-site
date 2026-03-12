@@ -369,7 +369,7 @@
     var email = document.getElementById('contact-email').value;
     var message = document.getElementById('contact-message').value;
     try {
-      var res = await fetch('https://yopykvfbjxrkxyparopk.supabase.co/functions/v1/notify-contact', {
+      var res = await fetch('https://obhzumzqullnsnnfjlbt.supabase.co/functions/v1/notify-contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: name, email: email, message: message })
