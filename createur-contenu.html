@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galac6 — Créateur(rice) de contenu vidéo / UGC</title>
+  <meta name="description" content="Galac6 recrute un(e) créateur(rice) de contenu vidéo pour YouTube, TikTok et Instagram. Freelance ou alternance, remote France.">
+  <link rel="icon" type="image/png" href="icons/32x32.png">
+  <style>
+    :root {
+      --primary: #7c5cfc;
+      --primary-light: #a78bfa;
+      --bg: #0b0b14;
+      --bg-card: #13131f;
+      --bg-card-hover: #1a1a2e;
+      --text: #f0f0f5;
+      --text-muted: #8a8aa3;
+      --border: #1e1e32;
+      --gradient-start: #6366f1;
+      --gradient-end: #a855f7;
+      --glow: rgba(99,102,241,0.15);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--primary-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ─── Navbar ─── */
+    .navbar-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,11,20,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+
+    .navbar-brand img { height: 44px; width: auto; }
+
+    .navbar-brand span {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .navbar-france { font-size: 1.1rem; margin-left: 0.1rem; }
+
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .navbar-links a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .navbar-links a:hover { color: var(--text); text-decoration: none; }
+
+    .navbar-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .navbar-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .navbar-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .navbar-hamburger.open span:nth-child(2) { opacity: 0; }
+    .navbar-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ─── Page content ─── */
+    .job-page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .job-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.35rem 1rem;
+      border-radius: 50px;
+      margin-bottom: 1.2rem;
+    }
+
+    .job-page h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .job-subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      font-style: italic;
+      margin-bottom: 2.5rem;
+    }
+
+    .job-page h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 2.5rem 0 1rem;
+      color: var(--text);
+    }
+
+    .job-page p {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .job-page ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem 0;
+    }
+
+    .job-page ul li {
+      position: relative;
+      padding-left: 1.6rem;
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      line-height: 1.8;
+      margin-bottom: 0.5rem;
+    }
+
+    .job-page ul li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--primary-light);
+      font-weight: 600;
+    }
+
+    /* ─── Table ─── */
+    .job-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0 2rem;
+      font-size: 0.95rem;
+    }
+
+    .job-table td {
+      padding: 0.85rem 1.2rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+
+    .job-table td:first-child {
+      font-weight: 700;
+      color: var(--text);
+      width: 200px;
+      white-space: nowrap;
+    }
+
+    /* ─── CTA box ─── */
+    .job-cta {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 2.5rem 0;
+    }
+
+    .job-cta h2 {
+      margin-top: 0;
+    }
+
+    .job-cta ol {
+      padding-left: 1.5rem;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .job-cta ol li {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      line-height: 1.8;
+      margin-bottom: 0.5rem;
+    }
+
+    .job-cta-highlight {
+      background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(168,85,247,0.1));
+      border: 1px solid rgba(99,102,241,0.25);
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      text-align: center;
+    }
+
+    .job-cta-highlight p {
+      color: var(--text);
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .job-cta-highlight a {
+      font-weight: 600;
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--primary-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    .footer-badges {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .footer-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 900px) {
+      .navbar { padding: 1rem 1.5rem; flex-wrap: wrap; }
+      .navbar-hamburger { display: flex; }
+      .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        padding: 1rem 0 0.5rem;
+      }
+      .navbar-links.open { display: flex; }
+      .navbar-links a { padding: 0.6rem 0; font-size: 1rem; }
+    }
+
+    @media (max-width: 640px) {
+      .job-page { padding: 2rem 1.2rem 4rem; }
+      .job-page h1 { font-size: 1.5rem; }
+      .job-table td:first-child { width: auto; white-space: normal; }
+      .job-table td { display: block; padding: 0.5rem 0; }
+      .job-table td:first-child { border-bottom: none; padding-bottom: 0; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+  </style>
+  <!-- Facebook Pixel Code -->
+  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1365191655374063');fbq('track','PageView');</script>
+  <noscript><img height="1" width="1" src="https://www.facebook.com/tr?id=1365191655374063&ev=PageView&noscript=1"/></noscript>
+  <!-- End Facebook Pixel Code -->
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <div class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="/" class="navbar-brand">
+        <img src="icons/icon.png" alt="Galac6">
+        <span>Galac6</span>
+        <span class="navbar-france">🇫🇷</span>
+      </a>
+      <button class="navbar-hamburger" aria-label="Menu" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="navbar-links">
+        <a href="/">Accueil</a>
+        <a href="/ecole">École</a>
+        <a href="/tarifs">Tarifs</a>
+        <a href="/about">À propos</a>
+        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ═══ CONTENT ═══ -->
+  <div class="job-page">
+    <span class="job-badge">Mission freelance</span>
+    <h1>Créateur(rice) de contenu vidéo / UGC</h1>
+    <p class="job-subtitle">Mission freelance — YouTube, TikTok, Instagram — Galac6 | EdTech | IA éducative | galac6.io</p>
+
+    <h2>Le projet</h2>
+    <p>Galac6 est une application française d'IA éducative pour les élèves du CP à la Terminale. Notre approche : l'IA ne donne jamais la réponse, elle apprend à l'élève à réfléchir (méthode socratique). L'appli propose des quiz, dictées vocales, fiches de révision, corrections de contrôles, brevets blancs complets, calcul mental — le tout avec un système de gamification (XP, badges, défis).</p>
+    <p>Nous lançons notre présence vidéo et cherchons un(e) créateur(rice) de contenu pour concevoir, produire et diffuser l'ensemble de nos contenus sur YouTube, TikTok et Instagram.</p>
+
+    <h2>La mission</h2>
+    <ul>
+      <li>Écrire les scripts des tutoriels YouTube (10 vidéos de 3 à 7 min) et des Reels/TikTok, en utilisant l'IA (Claude, ChatGPT) pour accélérer l'écriture</li>
+      <li>Filmer les tutos (screencast) et les monter (CapCut, Premiere, DaVinci ou équivalent)</li>
+      <li>Créer les thumbnails, titres et descriptions optimisés pour le SEO YouTube</li>
+      <li>Décliner les tutos en Shorts YouTube, Reels Instagram et TikTok</li>
+      <li>Animer les comptes sociaux Galac6 : publications régulières, réponses aux commentaires, engagement communautaire</li>
+      <li>Cibler deux audiences : les collégiens/lycéens (contenu fun, hooks percutants) et leurs parents (réassurance, démo du suivi parental)</li>
+      <li>Créer du contenu UGC (User Generated Content) : témoignages d'élèves, réactions authentiques, formats "POV" et "storytime" pour TikTok et Reels</li>
+      <li>Proposer des idées de contenus viraux et suivre les performances (analytics YouTube, Instagram, TikTok)</li>
+    </ul>
+
+    <h2>Compétences recherchées</h2>
+    <ul>
+      <li>Expérience démontrable en création de contenu vidéo (YouTube, TikTok ou Instagram)</li>
+      <li>Maîtrise du montage vidéo : CapCut, Premiere Pro ou DaVinci Resolve</li>
+      <li>Connaissance du SEO YouTube : titres, tags, thumbnails, stratégie de rétention</li>
+      <li>Compréhension des algorithmes des plateformes sociales</li>
+      <li>Utilisation de l'IA générative dans le workflow créatif (scripts, idéation, visuels)</li>
+      <li>Capacité à parler aux ados (14-18 ans) avec le bon ton, sans être cringe</li>
+      <li>Expérience en création UGC : formats authentiques, témoignages, storytelling natif pour les réseaux</li>
+      <li>Bonus : sensibilité pour l'éducation, l'EdTech ou le soutien scolaire</li>
+    </ul>
+
+    <h2>Modalités</h2>
+    <table class="job-table">
+      <tr><td>Format</td><td>Freelance (forfait mensuel) ou alternance</td></tr>
+      <tr><td>Localisation</td><td>Remote (France) — rencontres ponctuelles en région parisienne</td></tr>
+      <tr><td>Démarrage</td><td>Dès que possible</td></tr>
+      <tr><td>Durée</td><td>Mission récurrente — minimum 3 mois</td></tr>
+      <tr><td>Volume</td><td>~10 tutos YouTube + déclinaison Reels/TikTok + animation quotidienne</td></tr>
+      <tr><td>Budget indicatif</td><td>À définir</td></tr>
+    </table>
+
+    <div class="job-cta">
+      <h2>Pour postuler</h2>
+      <p>Envoie-nous à l'adresse <a href="mailto:raphael@galac6.io">raphael@galac6.io</a> :</p>
+      <ol>
+        <li>Un lien vers un contenu vidéo que tu as créé (même personnel, même avec peu de vues — on veut voir ton style)</li>
+        <li>Un message court expliquant comment tu lancerais la chaîne YouTube Galac6</li>
+        <li>Ton TJM ou forfait mensuel souhaité</li>
+      </ol>
+      <div class="job-cta-highlight">
+        <p>Pas de CV corporate. On veut voir ce que tu sais FAIRE.</p>
+        <p style="margin-bottom: 0;"><a href="https://galac6web.netlify.app/">Découvre le produit sur galac6.io</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div>Galac6 — L'IA de soutien scolaire et de révisions.</div>
+    <div class="footer-badges">
+      <a href="/about" style="color: var(--text-muted);">À propos</a>
+      <a href="/mentions-legales" style="color: var(--text-muted);">Mentions légales</a>
+      <span class="footer-badge">🇫🇷 Made in France</span>
+    </div>
+  </footer>
+
+<script src="cookie-consent.js"></script>
+</body>
+</html>
