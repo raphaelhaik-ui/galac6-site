@@ -31,6 +31,44 @@
       -webkit-font-smoothing: antialiased;
     }
 
+    /* ─── EN Banner ─── */
+    .en-banner {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      text-align: center;
+      padding: 0.6rem 2.5rem;
+      font-size: 0.85rem;
+      position: relative;
+    }
+    .en-banner a { color: #fff; text-decoration: underline; }
+    .en-banner-close {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      opacity: 0.8;
+      padding: 0.25rem;
+    }
+    .en-banner-close:hover { opacity: 1; }
+
+    /* ─── Lang toggle ─── */
+    .lang-toggle {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 0.25rem;
+      line-height: 1;
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+    .lang-toggle:hover { transform: scale(1.15); }
+
     /* ─── Chapter Nav ─── */
     .chapter-nav {
       position: sticky;
@@ -288,115 +326,122 @@
 </head>
 <body>
 
-  <nav style="background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 0.6rem 1.5rem; display: flex; align-items: center;">
-    <a href="index.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--primary-light); text-decoration: none; font-weight: 600; font-size: 0.9rem;">
+  <!-- ═══ EN BANNER (hidden by default) ═══ -->
+  <div id="en-banner" class="en-banner en-only" style="display:none;" data-i18n-html="banner.text">
+    🌍 Currently available in France only (French school system). Want Galac6 in your country? <a href="mailto:hello@galac6.io" style="color:#fff;text-decoration:underline;">Send a request →</a>
+    <button class="en-banner-close" onclick="closeBanner()" aria-label="Close">&times;</button>
+  </div>
+
+  <nav style="background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 0.6rem 1.5rem; display: flex; align-items: center; justify-content: space-between;">
+    <a href="index.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--primary-light); text-decoration: none; font-weight: 600; font-size: 0.9rem;" data-i18n="guide.back">
       &larr; Accueil Galac6
     </a>
+    <button id="lang-toggle" class="lang-toggle" onclick="toggleLanguage()" aria-label="Switch to English">🇬🇧</button>
   </nav>
 
   <div class="wrapper">
 
     <aside class="sidebar">
-      <h4>Sommaire</h4>
+      <h4 data-i18n="guide.toc">Sommaire</h4>
       <ul>
-        <li><a href="#telechargement">T&eacute;l&eacute;chargement</a></li>
-        <li><a href="#prerequis">Pr&eacute;requis</a></li>
-        <li><a href="#installer">Installer Galac6</a></li>
-        <li><a href="#gatekeeper">Correction Gatekeeper</a></li>
-        <li><a href="#premier-lancement">Premier lancement</a></li>
-        <li><a href="#mise-a-jour">Mise &agrave; jour</a></li>
-        <li><a href="#desinstallation">D&eacute;sinstallation</a></li>
-        <li><a href="#support">Support</a></li>
+        <li><a href="#telechargement" data-i18n="guide.toc.download">T&eacute;l&eacute;chargement</a></li>
+        <li><a href="#prerequis" data-i18n="guide.toc.prereq">Pr&eacute;requis</a></li>
+        <li><a href="#installer" data-i18n="guide.toc.install">Installer Galac6</a></li>
+        <li><a href="#gatekeeper" data-i18n="guide.toc.gatekeeper">Correction Gatekeeper</a></li>
+        <li><a href="#premier-lancement" data-i18n="guide.toc.firstlaunch">Premier lancement</a></li>
+        <li><a href="#mise-a-jour" data-i18n="guide.toc.update">Mise &agrave; jour</a></li>
+        <li><a href="#desinstallation" data-i18n="guide.toc.uninstall">D&eacute;sinstallation</a></li>
+        <li><a href="#support" data-i18n="guide.toc.support">Support</a></li>
       </ul>
     </aside>
 
     <main class="content">
 
-      <h1><span>Installation</span></h1>
-      <p class="intro">Tout ce qu'il faut pour installer Galac6 sur le Mac de votre enfant. L'installation prend moins de 5 minutes.</p>
+      <h1><span data-i18n="guide.title">Installation</span></h1>
+      <p class="intro" data-i18n="guide.intro">Tout ce qu'il faut pour installer Galac6 sur le Mac de votre enfant. L'installation prend moins de 5 minutes.</p>
 
       <div class="callout">
-        <p><strong>Prototype :</strong> Galac6 est actuellement disponible uniquement sur <strong>macOS</strong> (Apple Silicon et Intel). Une version Windows/Linux pourra suivre selon les retours.</p>
+        <p data-i18n-html="guide.prototype"><strong>Prototype :</strong> Galac6 est actuellement disponible uniquement sur <strong>macOS</strong> (Apple Silicon et Intel). Une version Windows/Linux pourra suivre selon les retours.</p>
       </div>
 
       <!-- ── Téléchargement ── -->
-      <h2 id="telechargement">T&eacute;l&eacute;chargement</h2>
-      <p>Galac6 est actuellement en <strong>b&ecirc;ta priv&eacute;e</strong>. Pour recevoir le lien de t&eacute;l&eacute;chargement, inscrivez-vous avec votre email :</p>
+      <h2 id="telechargement" data-i18n="guide.download.title">T&eacute;l&eacute;chargement</h2>
+      <p data-i18n-html="guide.download.text">Galac6 est actuellement en <strong>b&ecirc;ta priv&eacute;e</strong>. Pour recevoir le lien de t&eacute;l&eacute;chargement, inscrivez-vous avec votre email :</p>
       <div style="text-align: center; margin: 1.5rem 0;">
-        <a href="index.html#contact" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; border-radius: 14px; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-size: 1rem; font-weight: 600; text-decoration: none; box-shadow: 0 4px 16px rgba(99,102,241,0.3); transition: all 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(99,102,241,0.4)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 16px rgba(99,102,241,0.3)'">
+        <a href="index.html#contact" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; border-radius: 14px; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-size: 1rem; font-weight: 600; text-decoration: none; box-shadow: 0 4px 16px rgba(99,102,241,0.3); transition: all 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(99,102,241,0.4)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 16px rgba(99,102,241,0.3)'" data-i18n="guide.download.cta">
           &#x1F4E9; Demander l'acc&egrave;s &agrave; la b&ecirc;ta
         </a>
       </div>
 
       <!-- ── Prérequis ── -->
-      <h2 id="prerequis">Pr&eacute;requis</h2>
+      <h2 id="prerequis" data-i18n="guide.prereq.title">Pr&eacute;requis</h2>
       <ul>
-        <li><strong>macOS 10.15</strong> (Catalina) ou sup&eacute;rieur</li>
-        <li>Un <strong>compte administrateur</strong> sur le Mac</li>
-        <li>Environ <strong>50 Mo</strong> d'espace disque</li>
+        <li data-i18n-html="guide.prereq.macos"><strong>macOS 10.15</strong> (Catalina) ou sup&eacute;rieur</li>
+        <li data-i18n-html="guide.prereq.admin">Un <strong>compte administrateur</strong> sur le Mac</li>
+        <li data-i18n-html="guide.prereq.disk">Environ <strong>50 Mo</strong> d'espace disque</li>
       </ul>
 
       <!-- ── Installer ── -->
-      <h2 id="installer">Installer Galac6</h2>
+      <h2 id="installer" data-i18n="guide.install.title">Installer Galac6</h2>
       <ol>
-        <li>Double-cliquer sur le fichier <strong>.dmg</strong> t&eacute;l&eacute;charg&eacute;</li>
-        <li>Une fen&ecirc;tre s'ouvre montrant l'application <strong>Galac6</strong></li>
-        <li>Glisser <strong>Galac6</strong> dans le dossier <strong>Applications</strong></li>
-        <li>Fermer la fen&ecirc;tre du DMG</li>
+        <li data-i18n-html="guide.install.step1">Double-cliquer sur le fichier <strong>.dmg</strong> t&eacute;l&eacute;charg&eacute;</li>
+        <li data-i18n-html="guide.install.step2">Une fen&ecirc;tre s'ouvre montrant l'application <strong>Galac6</strong></li>
+        <li data-i18n-html="guide.install.step3">Glisser <strong>Galac6</strong> dans le dossier <strong>Applications</strong></li>
+        <li data-i18n="guide.install.step4">Fermer la fen&ecirc;tre du DMG</li>
       </ol>
 
       <div class="callout callout-green">
-        <p><strong>C'est tout !</strong> L'installation est termin&eacute;e. L'application est dans le dossier Applications.</p>
+        <p data-i18n-html="guide.install.done"><strong>C'est tout !</strong> L'installation est termin&eacute;e. L'application est dans le dossier Applications.</p>
       </div>
 
       <!-- ── Gatekeeper ── -->
-      <h2 id="gatekeeper">Correction Gatekeeper</h2>
-      <p>Si macOS affiche le message <strong>&laquo; Galac6 est endommag&eacute; et ne peut pas &ecirc;tre ouvert &raquo;</strong>, c'est parce que l'application n'est pas sign&eacute;e avec un certificat Apple (version b&ecirc;ta).</p>
-      <p>Pour corriger cela, ouvrir <strong>Terminal</strong> (Applications &rarr; Utilitaires &rarr; Terminal) et ex&eacute;cuter :</p>
+      <h2 id="gatekeeper" data-i18n="guide.gatekeeper.title">Correction Gatekeeper</h2>
+      <p data-i18n-html="guide.gatekeeper.p1">Si macOS affiche le message <strong>&laquo; Galac6 est endommag&eacute; et ne peut pas &ecirc;tre ouvert &raquo;</strong>, c'est parce que l'application n'est pas sign&eacute;e avec un certificat Apple (version b&ecirc;ta).</p>
+      <p data-i18n-html="guide.gatekeeper.p2">Pour corriger cela, ouvrir <strong>Terminal</strong> (Applications &rarr; Utilitaires &rarr; Terminal) et ex&eacute;cuter :</p>
       <pre><code>xattr -cr /Applications/Galac6.app</code></pre>
-      <p>Puis relancer Galac6 normalement. Cette commande n'a besoin d'&ecirc;tre ex&eacute;cut&eacute;e <strong>qu'une seule fois</strong>.</p>
+      <p data-i18n-html="guide.gatekeeper.p3">Puis relancer Galac6 normalement. Cette commande n'a besoin d'&ecirc;tre ex&eacute;cut&eacute;e <strong>qu'une seule fois</strong>.</p>
 
       <div class="callout callout-amber">
-        <p><strong>Explication :</strong> <code>xattr -cr</code> supprime l'attribut de &laquo; quarantaine &raquo; que macOS ajoute aux fichiers t&eacute;l&eacute;charg&eacute;s. C'est une proc&eacute;dure standard pour les applications en d&eacute;veloppement non distribu&eacute;es via l'App Store.</p>
+        <p data-i18n-html="guide.gatekeeper.explain"><strong>Explication :</strong> <code>xattr -cr</code> supprime l'attribut de &laquo; quarantaine &raquo; que macOS ajoute aux fichiers t&eacute;l&eacute;charg&eacute;s. C'est une proc&eacute;dure standard pour les applications en d&eacute;veloppement non distribu&eacute;es via l'App Store.</p>
       </div>
 
       <!-- ── Premier lancement ── -->
-      <h2 id="premier-lancement">Premier lancement</h2>
-      <p>Au premier lancement, macOS affiche une fen&ecirc;tre du <strong>Trousseau d'acc&egrave;s</strong> :</p>
-      <p><em>&laquo; galac6 veut utiliser vos informations confidentielles gard&eacute;es dans "galac6" de votre trousseau &raquo;</em></p>
+      <h2 id="premier-lancement" data-i18n="guide.firstlaunch.title">Premier lancement</h2>
+      <p data-i18n-html="guide.firstlaunch.p1">Au premier lancement, macOS affiche une fen&ecirc;tre du <strong>Trousseau d'acc&egrave;s</strong> :</p>
+      <p><em data-i18n="guide.firstlaunch.prompt">&laquo; galac6 veut utiliser vos informations confidentielles gard&eacute;es dans "galac6" de votre trousseau &raquo;</em></p>
       <ol>
-        <li>Saisir le <strong>mot de passe de session macOS</strong> (celui utilis&eacute; pour d&eacute;verrouiller le Mac)</li>
-        <li>Cliquer sur <strong>&laquo; Toujours autoriser &raquo;</strong></li>
+        <li data-i18n-html="guide.firstlaunch.step1">Saisir le <strong>mot de passe de session macOS</strong> (celui utilis&eacute; pour d&eacute;verrouiller le Mac)</li>
+        <li data-i18n-html="guide.firstlaunch.step2">Cliquer sur <strong>&laquo; Toujours autoriser &raquo;</strong></li>
       </ol>
 
       <div class="callout">
-        <p><strong>Trousseau d'acc&egrave;s :</strong> Galac6 utilise le trousseau macOS (Keychain) pour stocker les cl&eacute;s API de mani&egrave;re s&eacute;curis&eacute;e. En cliquant sur &laquo; Toujours autoriser &raquo;, vous &eacute;vitez que cette demande se r&eacute;p&egrave;te &agrave; chaque lancement.</p>
+        <p data-i18n-html="guide.firstlaunch.explain"><strong>Trousseau d'acc&egrave;s :</strong> Galac6 utilise le trousseau macOS (Keychain) pour stocker les cl&eacute;s API de mani&egrave;re s&eacute;curis&eacute;e. En cliquant sur &laquo; Toujours autoriser &raquo;, vous &eacute;vitez que cette demande se r&eacute;p&egrave;te &agrave; chaque lancement.</p>
       </div>
 
-      <p>L'application s'ouvre ensuite sur l'assistant de configuration int&eacute;gr&eacute; dans Galac6.</p>
+      <p data-i18n="guide.firstlaunch.opens">L'application s'ouvre ensuite sur l'assistant de configuration int&eacute;gr&eacute; dans Galac6.</p>
 
       <!-- ── Mise à jour ── -->
-      <h2 id="mise-a-jour">Mise &agrave; jour</h2>
-      <p>Pour mettre &agrave; jour Galac6 :</p>
+      <h2 id="mise-a-jour" data-i18n="guide.update.title">Mise &agrave; jour</h2>
+      <p data-i18n="guide.update.intro">Pour mettre &agrave; jour Galac6 :</p>
       <ol>
-        <li>T&eacute;l&eacute;charger le nouveau fichier <code>.dmg</code></li>
-        <li>Ouvrir le DMG et glisser <strong>Galac6</strong> dans <strong>Applications</strong> (remplacer l'ancienne version)</li>
+        <li data-i18n="guide.update.step1">T&eacute;l&eacute;charger le nouveau fichier <code>.dmg</code></li>
+        <li data-i18n-html="guide.update.step2">Ouvrir le DMG et glisser <strong>Galac6</strong> dans <strong>Applications</strong> (remplacer l'ancienne version)</li>
       </ol>
 
       <div class="callout callout-green">
-        <p><strong>Donn&eacute;es conserv&eacute;es :</strong> toutes vos donn&eacute;es sont conserv&eacute;es lors d'une mise &agrave; jour (profils &eacute;l&egrave;ves, conversations, configuration, cl&eacute;s API).</p>
+        <p data-i18n-html="guide.update.preserved"><strong>Donn&eacute;es conserv&eacute;es :</strong> toutes vos donn&eacute;es sont conserv&eacute;es lors d'une mise &agrave; jour (profils &eacute;l&egrave;ves, conversations, configuration, cl&eacute;s API).</p>
       </div>
 
       <!-- ── Désinstallation ── -->
-      <h2 id="desinstallation">D&eacute;sinstallation</h2>
-      <p>Pour supprimer Galac6 :</p>
+      <h2 id="desinstallation" data-i18n="guide.uninstall.title">D&eacute;sinstallation</h2>
+      <p data-i18n="guide.uninstall.intro">Pour supprimer Galac6 :</p>
       <ol>
-        <li>Quitter l'application (<code>Cmd+Q</code>)</li>
-        <li>Glisser <strong>Galac6.app</strong> depuis <code>/Applications</code> vers la Corbeille</li>
+        <li data-i18n="guide.uninstall.step1">Quitter l'application (<code>Cmd+Q</code>)</li>
+        <li data-i18n-html="guide.uninstall.step2">Glisser <strong>Galac6.app</strong> depuis <code>/Applications</code> vers la Corbeille</li>
       </ol>
 
-      <h3>Nettoyage complet (optionnel)</h3>
-      <p>Pour supprimer aussi les donn&eacute;es utilisateur :</p>
+      <h3 data-i18n="guide.uninstall.cleanup_title">Nettoyage complet (optionnel)</h3>
+      <p data-i18n="guide.uninstall.cleanup_intro">Pour supprimer aussi les donn&eacute;es utilisateur :</p>
 
 <pre><code><span style="color:var(--text-muted)"># Donn&eacute;es de l'application</span>
 rm -rf ~/Library/Application\ Support/com.galac6.app
@@ -413,22 +458,23 @@ sudo rm -rf /Library/Application\ Support/Galac6
 sudo rm -f /Library/LaunchDaemons/com.galac6.appmonitor.plist
 sudo rm -f /Library/PrivilegedHelperTools/Galac6AppMonitor</code></pre>
 
-      <p>Si le filtre IA &eacute;tait actif, nettoyer le fichier <code>/etc/hosts</code> :</p>
+      <p data-i18n="guide.uninstall.hosts_intro">Si le filtre IA &eacute;tait actif, nettoyer le fichier <code>/etc/hosts</code> :</p>
 <pre><code>sudo nano /etc/hosts
 <span style="color:var(--text-muted)"># Supprimer le bloc entre "# >>> Galac6 AI Blocker" et "# <<< Galac6 AI Blocker"</span></code></pre>
 
       <!-- ── Support ── -->
-      <h2 id="support">Support</h2>
-      <p>Pour toute question : <a href="mailto:hello@galac6.io"><strong>hello@galac6.io</strong></a></p>
+      <h2 id="support" data-i18n="guide.support.title">Support</h2>
+      <p data-i18n-html="guide.support.text">Pour toute question : <a href="mailto:hello@galac6.io"><strong>hello@galac6.io</strong></a></p>
 
     </main>
   </div>
 
   <footer>
-    <p>Galac6 &mdash; L&rsquo;IA de soutien scolaire et de r&eacute;visions.</p>
-    <p style="margin-top: 0.4rem;"><a href="/about" style="color: var(--text-muted);">À propos</a> · <a href="/mentions-legales" style="color: var(--text-muted);">Mentions l&eacute;gales</a></p>
+    <p data-i18n="cgv.footer.tagline">Galac6 &mdash; L&rsquo;IA de soutien scolaire et de r&eacute;visions.</p>
+    <p style="margin-top: 0.4rem;"><a href="/about" style="color: var(--text-muted);" data-i18n="nav.about">À propos</a> · <a href="/mentions-legales" style="color: var(--text-muted);" data-i18n="footer.legal.mentions">Mentions l&eacute;gales</a></p>
   </footer>
 
+  <script src="i18n.js"></script>
   <script>
     var sections = document.querySelectorAll('.content h2[id]');
     var links = document.querySelectorAll('.sidebar a');

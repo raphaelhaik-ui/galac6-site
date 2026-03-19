@@ -525,6 +525,44 @@
       .navbar-links a { padding: 0.6rem 0; font-size: 1rem; }
     }
 
+    /* ─── EN Banner ─── */
+    .en-banner {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      text-align: center;
+      padding: 0.6rem 2.5rem;
+      font-size: 0.85rem;
+      position: relative;
+    }
+    .en-banner a { color: #fff; text-decoration: underline; }
+    .en-banner-close {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      opacity: 0.8;
+      padding: 0.25rem;
+    }
+    .en-banner-close:hover { opacity: 1; }
+
+    /* ─── Lang toggle ─── */
+    .lang-toggle {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 0.25rem;
+      line-height: 1;
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+    .lang-toggle:hover { transform: scale(1.15); }
+
     @media (max-width: 768px) {
       .pricing-grid {
         grid-template-columns: 1fr;
@@ -544,6 +582,12 @@
 </head>
 <body>
 
+  <!-- ═══ EN BANNER (hidden by default) ═══ -->
+  <div id="en-banner" class="en-banner en-only" style="display:none;" data-i18n-html="banner.text">
+    🌍 Currently available in France only (French school system). Want Galac6 in your country? <a href="mailto:hello@galac6.io" style="color:#fff;text-decoration:underline;">Send a request →</a>
+    <button class="en-banner-close" onclick="closeBanner()" aria-label="Close">&times;</button>
+  </div>
+
   <!-- ═══ NAVBAR ═══ -->
   <div class="navbar-wrapper">
     <nav class="navbar">
@@ -556,31 +600,32 @@
         <span></span><span></span><span></span>
       </button>
       <div class="navbar-links">
-        <a href="/#features">Fonctionnalités</a>
-        <a href="/ecole">École</a>
-        <a href="/tarifs" class="active">Tarif</a>
-        <a href="/about">À propos</a>
-        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
+        <a href="/#features" data-i18n="nav.features">Fonctionnalités</a>
+        <a href="/ecole" data-i18n="nav.school">École</a>
+        <a href="/tarifs" class="active" data-i18n="nav.pricing">Tarif</a>
+        <a href="/about" data-i18n="nav.about">À propos</a>
+        <button id="lang-toggle" class="lang-toggle" onclick="toggleLanguage()" aria-label="Switch to English">🇬🇧</button>
+        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;" data-i18n="nav.signup">Inscription ou connexion</a>
       </div>
     </nav>
   </div>
 
   <div class="container">
 
-    <a href="/" class="back-link">&larr; Retour &agrave; l'accueil</a>
+    <a href="/" class="back-link" data-i18n="tarifs.back">&larr; Retour &agrave; l'accueil</a>
 
-    <h1>Tarifs <span class="gradient">Galac6</span></h1>
-    <p class="lead">7 jours d'accès illimité, sans carte bancaire. Ensuite, continuez gratuitement ou passez au plan complet.</p>
+    <h1 data-i18n-html="tarifs.title">Tarifs <span class="gradient">Galac6</span></h1>
+    <p class="lead" data-i18n="tarifs.lead">7 jours d'accès illimité, sans carte bancaire. Ensuite, continuez gratuitement ou passez au plan complet.</p>
 
     <div class="promo-banner">
       <div class="promo-banner-inner">
-        <div class="promo-badge">Essai gratuit</div>
-        <p class="promo-title">7 jours gratuits pour tout tester !</p>
-        <p class="promo-text">
+        <div class="promo-badge" data-i18n="tarifs.promo.badge">Essai gratuit</div>
+        <p class="promo-title" data-i18n="tarifs.promo.title">7 jours gratuits pour tout tester !</p>
+        <p class="promo-text" data-i18n-html="tarifs.promo.text">
           Inscris-toi et profite d'un accès complet et illimité pendant 7 jours.<br>
           Aucune carte bancaire requise — aucun engagement.
         </p>
-        <a href="https://galac6web.netlify.app/" class="btn btn-primary" style="width: auto; margin-top: 1rem;">Commencer mon essai gratuit →</a>
+        <a href="https://galac6web.netlify.app/" class="btn btn-primary" style="width: auto; margin-top: 1rem;" data-i18n="tarifs.promo.cta">Commencer mon essai gratuit →</a>
       </div>
     </div>
 
@@ -589,38 +634,38 @@
 
       <!-- Basic gratuit -->
       <div class="pricing-card">
-        <div class="pricing-plan-name">Basic</div>
-        <div class="pricing-amount">0 <span class="currency">€</span></div>
-        <p class="pricing-detail">Après l'essai gratuit</p>
+        <div class="pricing-plan-name" data-i18n="tarifs.basic.name">Basic</div>
+        <div class="pricing-amount" data-i18n-html="tarifs.basic.amount">0 <span class="currency">€</span></div>
+        <p class="pricing-detail" data-i18n="tarifs.basic.detail">Après l'essai gratuit</p>
         <ul class="pricing-features">
-          <li><span class="icon-check">✓</span> 5 messages / jour</li>
-          <li><span class="icon-check">✓</span> 1 quiz / jour</li>
-          <li><span class="icon-check">✓</span> 1 dictée / jour</li>
-          <li class="locked"><span class="icon-lock">🔒</span> Synthèse vocale</li>
-          <li class="locked"><span class="icon-lock">🔒</span> Upload d'images</li>
-          <li class="locked"><span class="icon-lock">🔒</span> Saisie vocale</li>
-          <li class="locked"><span class="icon-lock">🔒</span> Remédiation</li>
+          <li><span class="icon-check">✓</span> <span data-i18n="tarifs.basic.f1">5 messages / jour</span></li>
+          <li><span class="icon-check">✓</span> <span data-i18n="tarifs.basic.f2">1 quiz / jour</span></li>
+          <li><span class="icon-check">✓</span> <span data-i18n="tarifs.basic.f3">1 dictée / jour</span></li>
+          <li class="locked"><span class="icon-lock">🔒</span> <span data-i18n="tarifs.basic.f4">Synthèse vocale</span></li>
+          <li class="locked"><span class="icon-lock">🔒</span> <span data-i18n="tarifs.basic.f5">Upload d'images</span></li>
+          <li class="locked"><span class="icon-lock">🔒</span> <span data-i18n="tarifs.basic.f6">Saisie vocale</span></li>
+          <li class="locked"><span class="icon-lock">🔒</span> <span data-i18n="tarifs.basic.f7">Remédiation</span></li>
         </ul>
-        <a href="https://galac6web.netlify.app/" class="btn btn-outline">Commencer →</a>
+        <a href="https://galac6web.netlify.app/" class="btn btn-outline" data-i18n="tarifs.basic.cta">Commencer →</a>
       </div>
 
       <!-- Illimité -->
       <div class="pricing-card highlighted">
-        <div class="pricing-badge">✨ -29 %</div>
-        <div class="pricing-plan-name">Illimité</div>
+        <div class="pricing-badge" data-i18n="tarifs.unlimited.badge">✨ -29 %</div>
+        <div class="pricing-plan-name" data-i18n="tarifs.unlimited.name">Illimité</div>
         <div class="pricing-amount gradient-text">9,99 <span class="currency">€</span><span class="period">/mois</span></div>
-        <p class="pricing-detail">Facturé 119,88 €/an</p>
+        <p class="pricing-detail" data-i18n="tarifs.unlimited.detail">Facturé 119,88 €/an</p>
         <ul class="pricing-features">
-          <li><span class="icon-check">✓</span> Messages illimités</li>
-          <li><span class="icon-check">✓</span> Quiz illimités</li>
-          <li><span class="icon-check">✓</span> Dictées illimitées</li>
-          <li><span class="icon-check">✓</span> Synthèse vocale</li>
-          <li><span class="icon-check">✓</span> Upload d'images</li>
-          <li><span class="icon-check">✓</span> Saisie vocale</li>
-          <li><span class="icon-check">✓</span> Remédiation</li>
+          <li><span class="icon-check">✓</span> <span data-i18n="tarifs.unlimited.f1">Messages illimités</span></li>
+          <li><span class="icon-check">✓</span> <span data-i18n="tarifs.unlimited.f2">Quiz illimités</span></li>
+          <li><span class="icon-check">✓</span> <span data-i18n="tarifs.unlimited.f3">Dictées illimitées</span></li>
+          <li><span class="icon-check">✓</span> <span data-i18n="tarifs.unlimited.f4">Synthèse vocale</span></li>
+          <li><span class="icon-check">✓</span> <span data-i18n="tarifs.unlimited.f5">Upload d'images</span></li>
+          <li><span class="icon-check">✓</span> <span data-i18n="tarifs.unlimited.f6">Saisie vocale</span></li>
+          <li><span class="icon-check">✓</span> <span data-i18n="tarifs.unlimited.f7">Remédiation</span></li>
         </ul>
-        <a href="https://galac6web.netlify.app/" class="btn btn-primary">S'abonner →</a>
-        <p class="pricing-cancel-note">Ou 13,99 €/mois sans engagement</p>
+        <a href="https://galac6web.netlify.app/" class="btn btn-primary" data-i18n="tarifs.unlimited.cta">S'abonner →</a>
+        <p class="pricing-cancel-note" data-i18n="tarifs.unlimited.note">Ou 13,99 €/mois sans engagement</p>
       </div>
 
     </div>
@@ -628,29 +673,29 @@
     <!-- ═══ TRUST ═══ -->
     <div class="trust-strip">
       <div class="trust-item">
-        <span class="trust-icon">🛡️</span> Données hébergées en Europe
+        <span class="trust-icon">🛡️</span> <span data-i18n="tarifs.trust.hosting">Données hébergées en Europe</span>
       </div>
       <div class="trust-item">
-        <span class="trust-icon">📊</span> Suivi parental en temps réel
+        <span class="trust-icon">📊</span> <span data-i18n="tarifs.trust.parental">Suivi parental en temps réel</span>
       </div>
       <div class="trust-item">
-        <span class="trust-icon">🎧</span> Support réactif
+        <span class="trust-icon">🎧</span> <span data-i18n="tarifs.trust.support">Support réactif</span>
       </div>
     </div>
 
     <!-- ═══ FAQ ═══ -->
     <div class="faq-section">
-      <h2 class="faq-title">Questions fréquentes</h2>
-      <p class="faq-subtitle">Tout ce que vous devez savoir sur nos tarifs.</p>
+      <h2 class="faq-title" data-i18n="tarifs.faq.title">Questions fréquentes</h2>
+      <p class="faq-subtitle" data-i18n="tarifs.faq.subtitle">Tout ce que vous devez savoir sur nos tarifs.</p>
 
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-            Puis-je essayer gratuitement ?
+            <span data-i18n="tarifs.faq.q1">Puis-je essayer gratuitement ?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">
+            <div class="faq-answer-inner" data-i18n-html="tarifs.faq.a1">
               Oui ! Chaque nouvel inscrit bénéficie de <strong>7 jours d'accès illimité</strong>, sans carte bancaire. Après l'essai, vous gardez un accès gratuit limité (5 messages, 1 quiz, 1 dictée par jour) ou vous passez à un plan illimité.
             </div>
           </div>
@@ -658,11 +703,11 @@
 
         <div class="faq-item">
           <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-            Puis-je changer de plan ?
+            <span data-i18n="tarifs.faq.q2">Puis-je changer de plan ?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">
+            <div class="faq-answer-inner" data-i18n="tarifs.faq.a2">
               Oui, à tout moment depuis l'espace parent. Vous pouvez passer du mensuel à l'annuel ou inversement.
             </div>
           </div>
@@ -670,11 +715,11 @@
 
         <div class="faq-item">
           <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-            Combien d'enfants sont couverts ?
+            <span data-i18n="tarifs.faq.q3">Combien d'enfants sont couverts ?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">
+            <div class="faq-answer-inner" data-i18n="tarifs.faq.a3">
               L'abonnement couvre 1 licence élève. Vous pouvez ajouter d'autres enfants depuis le portail parent.
             </div>
           </div>
@@ -682,11 +727,11 @@
 
         <div class="faq-item">
           <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-            Puis-je annuler à tout moment ?
+            <span data-i18n="tarifs.faq.q4">Puis-je annuler à tout moment ?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">
+            <div class="faq-answer-inner" data-i18n="tarifs.faq.a4">
               Oui. Aucun engagement sur le plan mensuel. Pour le plan annuel, vous pouvez annuler à tout moment et votre accès reste actif jusqu'à la fin de la période facturée.
             </div>
           </div>
@@ -698,14 +743,15 @@
 
   <!-- ═══ FOOTER ═══ -->
   <footer>
-    <div>Galac6 — L'IA de soutien scolaire et de révisions.</div>
+    <div data-i18n="tarifs.footer.desc">Galac6 — L'IA de soutien scolaire et de révisions.</div>
     <div class="footer-badges">
-      <a href="/about" style="color: var(--text-muted);">À propos</a>
-      <a href="/mentions-legales" style="color: var(--text-muted);">Mentions légales</a>
-      <span class="footer-badge">🇫🇷 Made in France</span>
+      <a href="/about" style="color: var(--text-muted);" data-i18n="footer.contact.about">À propos</a>
+      <a href="/mentions-legales" style="color: var(--text-muted);" data-i18n="footer.legal.mentions">Mentions légales</a>
+      <span class="footer-badge" data-i18n="tarifs.footer.france">🇫🇷 Made in France</span>
     </div>
   </footer>
 
+<script src="i18n.js"></script>
 <script src="cookie-consent.js"></script>
 </body>
 </html>

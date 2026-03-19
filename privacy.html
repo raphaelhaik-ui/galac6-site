@@ -33,6 +33,44 @@
     a { color: var(--primary-light); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
+    /* ─── EN Banner ─── */
+    .en-banner {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      text-align: center;
+      padding: 0.6rem 2.5rem;
+      font-size: 0.85rem;
+      position: relative;
+    }
+    .en-banner a { color: #fff; text-decoration: underline; }
+    .en-banner-close {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      opacity: 0.8;
+      padding: 0.25rem;
+    }
+    .en-banner-close:hover { opacity: 1; }
+
+    /* ─── Lang toggle ─── */
+    .lang-toggle {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 0.25rem;
+      line-height: 1;
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+    .lang-toggle:hover { transform: scale(1.15); }
+
     .navbar-wrapper {
       position: sticky;
       top: 0;
@@ -207,6 +245,12 @@
 </head>
 <body>
 
+  <!-- ═══ EN BANNER (hidden by default) ═══ -->
+  <div id="en-banner" class="en-banner en-only" style="display:none;" data-i18n-html="banner.text">
+    🌍 Currently available in France only (French school system). Want Galac6 in your country? <a href="mailto:hello@galac6.io" style="color:#fff;text-decoration:underline;">Send a request →</a>
+    <button class="en-banner-close" onclick="closeBanner()" aria-label="Close">&times;</button>
+  </div>
+
   <!-- ═══ NAVBAR ═══ -->
   <div class="navbar-wrapper">
     <nav class="navbar">
@@ -219,100 +263,102 @@
         <span></span><span></span><span></span>
       </button>
       <div class="navbar-links">
-        <a href="/">Accueil</a>
-        <a href="/ecole">École</a>
-        <a href="/tarifs">Tarifs</a>
-        <a href="/about">À propos</a>
-        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
+        <a href="/" data-i18n="nav.home">Accueil</a>
+        <a href="/ecole" data-i18n="nav.school">École</a>
+        <a href="/tarifs" data-i18n="nav.pricing">Tarifs</a>
+        <a href="/about" data-i18n="nav.about">À propos</a>
+        <button id="lang-toggle" class="lang-toggle" onclick="toggleLanguage()" aria-label="Switch to English">🇬🇧</button>
+        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;" data-i18n="nav.signup">Inscription ou connexion</a>
       </div>
     </nav>
   </div>
 
   <!-- ═══ CONTENT ═══ -->
   <div class="content">
-    <h1>Politique de confidentialité</h1>
-    <p class="subtitle">Dernière mise à jour : 25 février 2026</p>
+    <h1 data-i18n="privacy.title">Politique de confidentialité</h1>
+    <p class="subtitle" data-i18n="privacy.subtitle">Dernière mise à jour : 25 février 2026</p>
 
-    <p>La présente politique de confidentialité décrit la manière dont Galac6 (ci-après « nous ») collecte, utilise et protège les données personnelles des utilisateurs de la plateforme Galac6, conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés.</p>
+    <p data-i18n="privacy.intro">La présente politique de confidentialité décrit la manière dont Galac6 (ci-après « nous ») collecte, utilise et protège les données personnelles des utilisateurs de la plateforme Galac6, conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés.</p>
 
-    <h2>1. Responsable du traitement</h2>
-    <p>Le responsable du traitement des données est la société éditrice de Galac6. Pour toute question relative à vos données personnelles, vous pouvez nous contacter à l'adresse : <a href="mailto:hello@galac6.io">hello@galac6.io</a>.</p>
+    <h2 data-i18n="privacy.art1.title">1. Responsable du traitement</h2>
+    <p data-i18n-html="privacy.art1.text">Le responsable du traitement des données est la société éditrice de Galac6. Pour toute question relative à vos données personnelles, vous pouvez nous contacter à l'adresse : <a href="mailto:hello@galac6.io">hello@galac6.io</a>.</p>
 
-    <h2>2. Données collectées</h2>
-    <p>Nous collectons les catégories de données suivantes :</p>
+    <h2 data-i18n="privacy.art2.title">2. Données collectées</h2>
+    <p data-i18n="privacy.art2.intro">Nous collectons les catégories de données suivantes :</p>
     <ul>
-      <li><strong>Données d'identité</strong> : adresse email, nom de l'élève, année de naissance, niveau scolaire, langue</li>
-      <li><strong>Données d'activité éducative</strong> : messages de chat, résultats de quiz, dictées, plans de remédiation, statistiques d'apprentissage</li>
-      <li><strong>Données techniques</strong> : préférences d'affichage (thème, taille de police), état de la barre latérale</li>
-      <li><strong>Données de facturation</strong> : email et identifiant Stripe</li>
-      <li><strong>Données sensibles</strong> : aménagements scolaires (le cas échéant), collectées uniquement avec votre consentement explicite (Art. 9 RGPD)</li>
+      <li data-i18n-html="privacy.art2.identity"><strong>Données d'identité</strong> : adresse email, nom de l'élève, année de naissance, niveau scolaire, langue</li>
+      <li data-i18n-html="privacy.art2.activity"><strong>Données d'activité éducative</strong> : messages de chat, résultats de quiz, dictées, plans de remédiation, statistiques d'apprentissage</li>
+      <li data-i18n-html="privacy.art2.technical"><strong>Données techniques</strong> : préférences d'affichage (thème, taille de police), état de la barre latérale</li>
+      <li data-i18n-html="privacy.art2.billing"><strong>Données de facturation</strong> : email et identifiant Stripe</li>
+      <li data-i18n-html="privacy.art2.sensitive"><strong>Données sensibles</strong> : aménagements scolaires (le cas échéant), collectées uniquement avec votre consentement explicite (Art. 9 RGPD)</li>
     </ul>
 
-    <h2>3. Finalités et bases légales</h2>
-    <p>Vos données sont traitées pour les finalités suivantes :</p>
+    <h2 data-i18n="privacy.art3.title">3. Finalités et bases légales</h2>
+    <p data-i18n="privacy.art3.intro">Vos données sont traitées pour les finalités suivantes :</p>
     <ul>
-      <li>Fourniture du service éducatif (exécution du contrat)</li>
-      <li>Personnalisation de l'apprentissage via l'IA (intérêt légitime)</li>
-      <li>Suivi de la progression scolaire (exécution du contrat)</li>
-      <li>Facturation et gestion des abonnements (exécution du contrat)</li>
-      <li>Amélioration du service (intérêt légitime)</li>
-      <li>Respect des obligations légales (obligation légale)</li>
+      <li data-i18n="privacy.art3.li1">Fourniture du service éducatif (exécution du contrat)</li>
+      <li data-i18n="privacy.art3.li2">Personnalisation de l'apprentissage via l'IA (intérêt légitime)</li>
+      <li data-i18n="privacy.art3.li3">Suivi de la progression scolaire (exécution du contrat)</li>
+      <li data-i18n="privacy.art3.li4">Facturation et gestion des abonnements (exécution du contrat)</li>
+      <li data-i18n="privacy.art3.li5">Amélioration du service (intérêt légitime)</li>
+      <li data-i18n="privacy.art3.li6">Respect des obligations légales (obligation légale)</li>
     </ul>
 
-    <h2>4. Protection des mineurs</h2>
-    <p>Galac6 est destiné aux élèves du CP à la Terminale. Conformément à l'article 8 du RGPD et à l'article 45 de la loi Informatique et Libertés, le consentement du parent ou représentant légal est requis pour les utilisateurs de moins de 15 ans. Ce consentement est recueilli lors de la création du compte.</p>
+    <h2 data-i18n="privacy.art4.title">4. Protection des mineurs</h2>
+    <p data-i18n="privacy.art4.text">Galac6 est destiné aux élèves du CP à la Terminale. Conformément à l'article 8 du RGPD et à l'article 45 de la loi Informatique et Libertés, le consentement du parent ou représentant légal est requis pour les utilisateurs de moins de 15 ans. Ce consentement est recueilli lors de la création du compte.</p>
 
-    <h2>5. Sous-traitants et transferts de données</h2>
-    <p>Nous faisons appel aux sous-traitants suivants :</p>
+    <h2 data-i18n="privacy.art5.title">5. Sous-traitants et transferts de données</h2>
+    <p data-i18n="privacy.art5.intro">Nous faisons appel aux sous-traitants suivants :</p>
     <ul>
-      <li><strong>Supabase</strong> (hébergement, base de données) — France, Union Européenne</li>
-      <li><strong>Netlify</strong> (hébergement web) — Irlande, Union Européenne</li>
-      <li><strong>Anthropic / Claude</strong> (assistance IA par chat) — États-Unis, avec clauses contractuelles types</li>
-      <li><strong>Mistral</strong> (assistance IA par chat) — France, Union Européenne</li>
-      <li><strong>OpenAI / Whisper</strong> (transcription vocale) — États-Unis, avec clauses contractuelles types</li>
-      <li><strong>Google</strong> (synthèse vocale) — États-Unis, avec clauses contractuelles types</li>
-      <li><strong>Stripe</strong> (paiement) — États-Unis, certifié et conforme</li>
-      <li><strong>Resend</strong> (emails transactionnels) — États-Unis, avec clauses contractuelles types</li>
+      <li data-i18n-html="privacy.art5.supabase"><strong>Supabase</strong> (hébergement, base de données) — France, Union Européenne</li>
+      <li data-i18n-html="privacy.art5.netlify"><strong>Netlify</strong> (hébergement web) — Irlande, Union Européenne</li>
+      <li data-i18n-html="privacy.art5.anthropic"><strong>Anthropic / Claude</strong> (assistance IA par chat) — États-Unis, avec clauses contractuelles types</li>
+      <li data-i18n-html="privacy.art5.mistral"><strong>Mistral</strong> (assistance IA par chat) — France, Union Européenne</li>
+      <li data-i18n-html="privacy.art5.openai"><strong>OpenAI / Whisper</strong> (transcription vocale) — États-Unis, avec clauses contractuelles types</li>
+      <li data-i18n-html="privacy.art5.google"><strong>Google</strong> (synthèse vocale) — États-Unis, avec clauses contractuelles types</li>
+      <li data-i18n-html="privacy.art5.stripe"><strong>Stripe</strong> (paiement) — États-Unis, certifié et conforme</li>
+      <li data-i18n-html="privacy.art5.resend"><strong>Resend</strong> (emails transactionnels) — États-Unis, avec clauses contractuelles types</li>
     </ul>
-    <p>Les transferts hors Union Européenne sont encadrés par des clauses contractuelles types (CCT) conformément à l'article 46 du RGPD. Aucune donnée n'est utilisée pour l'entraînement des modèles d'IA.</p>
+    <p data-i18n="privacy.art5.note">Les transferts hors Union Européenne sont encadrés par des clauses contractuelles types (CCT) conformément à l'article 46 du RGPD. Aucune donnée n'est utilisée pour l'entraînement des modèles d'IA.</p>
 
-    <h2>6. Durées de conservation</h2>
+    <h2 data-i18n="privacy.art6.title">6. Durées de conservation</h2>
     <ul>
-      <li><strong>Données de compte</strong> : durée de vie du compte + 1 an après suppression</li>
-      <li><strong>Données d'activité éducative</strong> : 2 ans ou fin de scolarité + 1 an</li>
-      <li><strong>Données de facturation</strong> : durée légale de conservation (10 ans)</li>
-      <li><strong>Comptes inactifs</strong> : suppression après 2 ans d'inactivité</li>
+      <li data-i18n-html="privacy.art6.account"><strong>Données de compte</strong> : durée de vie du compte + 1 an après suppression</li>
+      <li data-i18n-html="privacy.art6.activity"><strong>Données d'activité éducative</strong> : 2 ans ou fin de scolarité + 1 an</li>
+      <li data-i18n-html="privacy.art6.billing"><strong>Données de facturation</strong> : durée légale de conservation (10 ans)</li>
+      <li data-i18n-html="privacy.art6.inactive"><strong>Comptes inactifs</strong> : suppression après 2 ans d'inactivité</li>
     </ul>
 
-    <h2>7. Vos droits</h2>
-    <p>Conformément au RGPD, vous disposez des droits suivants :</p>
+    <h2 data-i18n="privacy.art7.title">7. Vos droits</h2>
+    <p data-i18n="privacy.art7.intro">Conformément au RGPD, vous disposez des droits suivants :</p>
     <ul>
-      <li><strong>Droit d'accès</strong> (Art. 15) : obtenir une copie de vos données</li>
-      <li><strong>Droit de rectification</strong> (Art. 16) : corriger vos données</li>
-      <li><strong>Droit à l'effacement</strong> (Art. 17) : demander la suppression de vos données</li>
-      <li><strong>Droit à la portabilité</strong> (Art. 20) : recevoir vos données dans un format structuré</li>
-      <li><strong>Droit d'opposition</strong> (Art. 21) : vous opposer au traitement de vos données</li>
-      <li><strong>Droit de retirer votre consentement</strong> à tout moment</li>
+      <li data-i18n-html="privacy.art7.access"><strong>Droit d'accès</strong> (Art. 15) : obtenir une copie de vos données</li>
+      <li data-i18n-html="privacy.art7.rectification"><strong>Droit de rectification</strong> (Art. 16) : corriger vos données</li>
+      <li data-i18n-html="privacy.art7.erasure"><strong>Droit à l'effacement</strong> (Art. 17) : demander la suppression de vos données</li>
+      <li data-i18n-html="privacy.art7.portability"><strong>Droit à la portabilité</strong> (Art. 20) : recevoir vos données dans un format structuré</li>
+      <li data-i18n-html="privacy.art7.objection"><strong>Droit d'opposition</strong> (Art. 21) : vous opposer au traitement de vos données</li>
+      <li data-i18n-html="privacy.art7.withdraw"><strong>Droit de retirer votre consentement</strong> à tout moment</li>
     </ul>
-    <p>Pour exercer ces droits, contactez-nous à : <strong><a href="mailto:hello@galac6.io">hello@galac6.io</a></strong>.</p>
-    <p>Vous pouvez également introduire une réclamation auprès de la <strong>CNIL</strong> (<a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>).</p>
+    <p data-i18n-html="privacy.art7.contact">Pour exercer ces droits, contactez-nous à : <strong><a href="mailto:hello@galac6.io">hello@galac6.io</a></strong>.</p>
+    <p data-i18n-html="privacy.art7.cnil">Vous pouvez également introduire une réclamation auprès de la <strong>CNIL</strong> (<a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>).</p>
 
-    <h2>8. Cookies et stockage local</h2>
-    <p>Galac6 utilise un cookie fonctionnel (état de la barre latérale) et le stockage local du navigateur pour vos préférences d'affichage (thème, taille de police). Aucun cookie de tracking ou publicitaire n'est utilisé. Le consentement pour le cookie fonctionnel est recueilli via notre bannière de cookies.</p>
+    <h2 data-i18n="privacy.art8.title">8. Cookies et stockage local</h2>
+    <p data-i18n="privacy.art8.text">Galac6 utilise un cookie fonctionnel (état de la barre latérale) et le stockage local du navigateur pour vos préférences d'affichage (thème, taille de police). Aucun cookie de tracking ou publicitaire n'est utilisé. Le consentement pour le cookie fonctionnel est recueilli via notre bannière de cookies.</p>
 
-    <p style="color: var(--text-muted); font-size: 0.82rem; font-style: italic; margin-top: 2rem;">Dernière mise à jour : 25 février 2026</p>
+    <p style="color: var(--text-muted); font-size: 0.82rem; font-style: italic; margin-top: 2rem;" data-i18n="privacy.lastupdate">Dernière mise à jour : 25 février 2026</p>
   </div>
 
   <!-- ═══ FOOTER ═══ -->
   <footer>
-    <div>Galac6 — L'IA de soutien scolaire et de révisions.</div>
+    <div data-i18n="cgv.footer.tagline">Galac6 — L'IA de soutien scolaire et de révisions.</div>
     <div class="footer-badges">
-      <a href="/about" style="color: var(--text-muted);">À propos</a>
-      <a href="/mentions-legales" style="color: var(--text-muted);">Mentions légales</a>
-      <span class="footer-badge">🇫🇷 Made in France</span>
+      <a href="/about" style="color: var(--text-muted);" data-i18n="nav.about">À propos</a>
+      <a href="/mentions-legales" style="color: var(--text-muted);" data-i18n="footer.legal.mentions">Mentions légales</a>
+      <span class="footer-badge" data-i18n="cgv.footer.france">🇫🇷 Made in France</span>
     </div>
   </footer>
 
+<script src="i18n.js"></script>
 <script src="cookie-consent.js"></script>
 </body>
 </html>

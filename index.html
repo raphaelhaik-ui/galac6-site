@@ -41,6 +41,44 @@
     a { color: var(--primary-light); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
+    /* ─── EN Banner ─── */
+    .en-banner {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      text-align: center;
+      padding: 0.6rem 2.5rem;
+      font-size: 0.85rem;
+      position: relative;
+    }
+    .en-banner a { color: #fff; text-decoration: underline; }
+    .en-banner-close {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      opacity: 0.8;
+      padding: 0.25rem;
+    }
+    .en-banner-close:hover { opacity: 1; }
+
+    /* ─── Lang toggle ─── */
+    .lang-toggle {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 0.25rem;
+      line-height: 1;
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+    .lang-toggle:hover { transform: scale(1.15); }
+
     /* ─── Navbar ─── */
     .navbar-wrapper {
       position: sticky;
@@ -696,6 +734,12 @@
 </head>
 <body>
 
+  <!-- ═══ EN BANNER (hidden by default) ═══ -->
+  <div id="en-banner" class="en-banner en-only" style="display:none;" data-i18n-html="banner.text">
+    🌍 Currently available in France only (French school system). Want Galac6 in your country? <a href="mailto:hello@galac6.io" style="color:#fff;text-decoration:underline;">Send a request →</a>
+    <button class="en-banner-close" onclick="closeBanner()" aria-label="Close">&times;</button>
+  </div>
+
   <!-- ═══ NAVBAR ═══ -->
   <div class="navbar-wrapper">
     <nav class="navbar">
@@ -708,12 +752,13 @@
         <span></span><span></span><span></span>
       </button>
       <div class="navbar-links">
-        <a href="#features">Fonctionnalités</a>
-        <a href="/ecole">École</a>
-        <a href="#faq">FAQ</a>
-        <a href="#pricing">Tarif</a>
-        <a href="/about">À propos</a>
-        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
+        <a href="#features" data-i18n="nav.features">Fonctionnalités</a>
+        <a href="/ecole" data-i18n="nav.school">École</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#pricing" data-i18n="nav.pricing">Tarif</a>
+        <a href="/about" data-i18n="nav.about">À propos</a>
+        <button id="lang-toggle" class="lang-toggle" onclick="toggleLanguage()" aria-label="Switch to English">🇬🇧</button>
+        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;" data-i18n="nav.signup">Inscription ou connexion</a>
       </div>
     </nav>
   </div>
@@ -721,11 +766,11 @@
   <!-- ═══ HERO ═══ -->
   <div class="hero">
     <div class="hero-inner">
-      <h1>Un contrôle à préparer ?<br>Une leçon à comprendre ?<br><span class="gradient">Galac6 est là.</span></h1>
-      <p class="subtitle">Galac6, l'IA qui t'apprend à apprendre — quiz, dictées, fiches et corrections, faits pour les programmes scolaires français, du CP à la Terminale.</p>
+      <h1 data-i18n-html="hero.title">Un contrôle à préparer ?<br>Une leçon à comprendre ?<br><span class="gradient">Galac6 est là.</span></h1>
+      <p class="subtitle" data-i18n="hero.subtitle">Galac6, l'IA qui t'apprend à apprendre — quiz, dictées, fiches et corrections, faits pour les programmes scolaires français, du CP à la Terminale.</p>
       <div class="hero-cta-group">
-        <a href="https://galac6web.netlify.app/" class="btn btn-primary" style="font-size: 1.05rem; padding: 1rem 2rem;">Essayer 7 jours gratuits →</a>
-        <p class="hero-reassurance">7 jours d'accès illimité. Sans carte bancaire. 🇫🇷 Conçu et hébergé en France.</p>
+        <a href="https://galac6web.netlify.app/" class="btn btn-primary" style="font-size: 1.05rem; padding: 1rem 2rem;" data-i18n="hero.cta">Essayer 7 jours gratuits →</a>
+        <p class="hero-reassurance" data-i18n="hero.reassurance">7 jours d'accès illimité. Sans carte bancaire. 🇫🇷 Conçu et hébergé en France.</p>
       </div>
     </div>
   </div>
@@ -733,8 +778,8 @@
   <!-- ═══ POSITIONNEMENT ═══ -->
   <div class="positioning-section">
     <div class="positioning-block">
-      <h2>L'IA qui préfère t'apprendre que faire à ta place.</h2>
-      <p>Tu peux demander à <strong>toutes les IA</strong> de faire tes devoirs. Ou tu peux demander à <strong>Galac6</strong> de t'apprendre à les faire toi-même.<br>Ton choix.</p>
+      <h2 data-i18n="positioning.title">L'IA qui préfère t'apprendre que faire à ta place.</h2>
+      <p data-i18n-html="positioning.text">Tu peux demander à <strong>toutes les IA</strong> de faire tes devoirs. Ou tu peux demander à <strong>Galac6</strong> de t'apprendre à les faire toi-même.<br>Ton choix.</p>
     </div>
   </div>
 
@@ -742,33 +787,33 @@
 
   <!-- ═══ FEATURES ═══ -->
   <section id="features">
-    <h2 class="section-title">Tout ce dont tu as besoin pour progresser.</h2>
+    <h2 class="section-title" data-i18n="features.title">Tout ce dont tu as besoin pour progresser.</h2>
 
     <div class="features-grid-5">
       <div class="feature-card">
         <div class="feature-icon">🧠</div>
-        <h3>Chat socratique</h3>
-        <p>"Explique-moi, mais ne fais pas à ma place"</p>
+        <h3 data-i18n="features.chat.title">Chat socratique</h3>
+        <p data-i18n="features.chat.desc">"Explique-moi, mais ne fais pas à ma place"</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">📸</div>
-        <h3>Quiz avec photo</h3>
-        <p>"Prends une photo de ta leçon. Reçois un quiz."</p>
+        <h3 data-i18n="features.quiz.title">Quiz avec photo</h3>
+        <p data-i18n="features.quiz.desc">"Prends une photo de ta leçon. Reçois un quiz."</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🎧</div>
-        <h3>Dictées</h3>
-        <p>"Des dictées qui s'adaptent à ton niveau"</p>
+        <h3 data-i18n="features.dictation.title">Dictées</h3>
+        <p data-i18n="features.dictation.desc">"Des dictées qui s'adaptent à ton niveau"</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">📝</div>
-        <h3>Correction de contrôle</h3>
-        <p>"Tu as eu une mauvaise note. Comprends pourquoi."</p>
+        <h3 data-i18n="features.correction.title">Correction de contrôle</h3>
+        <p data-i18n="features.correction.desc">"Tu as eu une mauvaise note. Comprends pourquoi."</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">⚡</div>
-        <h3>Fiches de révision</h3>
-        <p>"Une fiche de révision en 30 secondes"</p>
+        <h3 data-i18n="features.revision.title">Fiches de révision</h3>
+        <p data-i18n="features.revision.desc">"Une fiche de révision en 30 secondes"</p>
       </div>
     </div>
   </section>
@@ -778,24 +823,24 @@
   <!-- ═══ PARENTS ═══ -->
   <div class="parents-section">
     <div class="parents-inner">
-      <h2 class="section-title">Conçu pour apprendre. Pas pour tricher.</h2>
-      <p class="section-subtitle">Ce que les parents apprécient.</p>
+      <h2 class="section-title" data-i18n="parents.title">Conçu pour apprendre. Pas pour tricher.</h2>
+      <p class="section-subtitle" data-i18n="parents.subtitle">Ce que les parents apprécient.</p>
 
       <div class="parents-grid">
         <div class="parents-card">
           <div class="parents-card-icon">🎓</div>
-          <h3>Pédagogie d'abord</h3>
-          <p>L'IA guide et questionne. Elle ne donne jamais la réponse directement. L'élève doit réfléchir.</p>
+          <h3 data-i18n="parents.pedagogy.title">Pédagogie d'abord</h3>
+          <p data-i18n="parents.pedagogy.desc">L'IA guide et questionne. Elle ne donne jamais la réponse directement. L'élève doit réfléchir.</p>
         </div>
         <div class="parents-card">
           <div class="parents-card-icon">📚</div>
-          <h3>Programmes officiels</h3>
-          <p>Calé sur les référentiels Éduscol de l'Éducation nationale, du CP à la Terminale.</p>
+          <h3 data-i18n="parents.curriculum.title">Programmes officiels</h3>
+          <p data-i18n="parents.curriculum.desc">Calé sur les référentiels Éduscol de l'Éducation nationale, du CP à la Terminale.</p>
         </div>
         <div class="parents-card">
           <div class="parents-card-icon">📊</div>
-          <h3>Suivi parent</h3>
-          <p>Tableau de bord dédié : matières travaillées, temps d'écran, progression par semaine.</p>
+          <h3 data-i18n="parents.dashboard.title">Suivi parent</h3>
+          <p data-i18n="parents.dashboard.desc">Tableau de bord dédié : matières travaillées, temps d'écran, progression par semaine.</p>
         </div>
       </div>
     </div>
@@ -806,24 +851,24 @@
   <!-- ═══ CONFIANCE ═══ -->
   <div class="parents-section">
     <div class="parents-inner">
-      <h2 class="section-title">Vos données restent <span style="background:linear-gradient(135deg,var(--gradient-start),var(--gradient-end));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">en France.</span></h2>
-      <p class="section-subtitle">La confiance des parents, c'est notre priorité.</p>
+      <h2 class="section-title" data-i18n-html="trust.title">Vos données restent <span style="background:linear-gradient(135deg,var(--gradient-start),var(--gradient-end));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">en France.</span></h2>
+      <p class="section-subtitle" data-i18n="trust.subtitle">La confiance des parents, c'est notre priorité.</p>
 
       <div class="parents-grid">
         <div class="parents-card">
           <div class="parents-card-icon">🇫🇷</div>
-          <h3>Hébergé en France</h3>
-          <p>Les données de votre enfant sont stockées en France, sur des serveurs européens conformes au RGPD.</p>
+          <h3 data-i18n="trust.hosting.title">Hébergé en France</h3>
+          <p data-i18n="trust.hosting.desc">Les données de votre enfant sont stockées en France, sur des serveurs européens conformes au RGPD.</p>
         </div>
         <div class="parents-card">
           <div class="parents-card-icon">🔒</div>
-          <h3>RGPD natif</h3>
-          <p>Galac6 est conçu dès l'origine pour respecter la réglementation européenne sur les données personnelles.</p>
+          <h3 data-i18n="trust.gdpr.title">RGPD natif</h3>
+          <p data-i18n="trust.gdpr.desc">Galac6 est conçu dès l'origine pour respecter la réglementation européenne sur les données personnelles.</p>
         </div>
         <div class="parents-card">
           <div class="parents-card-icon">🚫</div>
-          <h3>Aucune revente de données</h3>
-          <p>Les données scolaires ne sont jamais partagées avec des tiers ni utilisées pour entraîner des modèles d'IA.</p>
+          <h3 data-i18n="trust.nodata.title">Aucune revente de données</h3>
+          <p data-i18n="trust.nodata.desc">Les données scolaires ne sont jamais partagées avec des tiers ni utilisées pour entraîner des modèles d'IA.</p>
         </div>
       </div>
     </div>
@@ -833,18 +878,18 @@
 
   <!-- ═══ FAQ ═══ -->
   <section id="faq">
-    <h2 class="section-title">Questions <span style="background:linear-gradient(135deg,var(--gradient-start),var(--gradient-end));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">fréquentes</span></h2>
-    <p class="section-subtitle">Tout ce que les parents et les élèves nous demandent, en toute transparence.</p>
+    <h2 class="section-title" data-i18n-html="faq.title">Questions <span style="background:linear-gradient(135deg,var(--gradient-start),var(--gradient-end));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">fréquentes</span></h2>
+    <p class="section-subtitle" data-i18n="faq.subtitle">Tout ce que les parents et les élèves nous demandent, en toute transparence.</p>
 
     <div class="faq-list">
 
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
-          À qui s'adresse Galac6 ?
+          <span data-i18n="faq.q1">À qui s'adresse Galac6 ?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">
+          <div class="faq-answer-inner" data-i18n-html="faq.a1">
             Galac6 s'adresse aux <strong>élèves du CP à la Terminale</strong> et à leurs parents. Que votre enfant ait besoin d'un coup de pouce sur ses devoirs du soir, ou qu'il prépare un contrôle important, Galac6 est là pour l'accompagner — à son rythme, dans sa matière, à son niveau.
           </div>
         </div>
@@ -852,11 +897,11 @@
 
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
-          Galac6 donne-t-il les réponses aux élèves ?
+          <span data-i18n="faq.q2">Galac6 donne-t-il les réponses aux élèves ?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">
+          <div class="faq-answer-inner" data-i18n-html="faq.a2">
             <strong>Non — et c'est toute la différence.</strong> Galac6 ne fait pas les devoirs à la place de votre enfant. Il l'aide à <strong>se poser les bonnes questions</strong>, à identifier ce qu'il ne sait pas encore, pour qu'il trouve lui-même les réponses. L'objectif : construire de la vraie confiance, pas de fausses notes.
           </div>
         </div>
@@ -864,11 +909,11 @@
 
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
-          Galac6 remplace-t-il le prof ou les parents ?
+          <span data-i18n="faq.q3">Galac6 remplace-t-il le prof ou les parents ?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">
+          <div class="faq-answer-inner" data-i18n-html="faq.a3">
             Jamais. Galac6 intervient là où ni le prof ni les parents ne peuvent toujours être : <strong>le soir à 21h, seul devant ses devoirs</strong>. Il est le compagnon bienveillant qui prend le relais quand personne n'est disponible. En primaire et au collège, il peut même devenir un formidable outil d'interaction entre parents et enfants.
           </div>
         </div>
@@ -876,11 +921,11 @@
 
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
-          Comment Galac6 utilise-t-il l'IA ?
+          <span data-i18n="faq.q4">Comment Galac6 utilise-t-il l'IA ?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">
+          <div class="faq-answer-inner" data-i18n-html="faq.a4">
             Galac6 utilise l'IA pour <strong>guider l'élève, pas pour penser à sa place</strong>. L'IA analyse le niveau, les lacunes et le rythme d'apprentissage de l'élève, puis propose des explications adaptées, des questions de révision ciblées et des encouragements personnalisés — en français, dans le respect du programme de l'Éducation Nationale.
           </div>
         </div>
@@ -888,11 +933,11 @@
 
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
-          En quoi Galac6 est-il différent de ChatGPT ?
+          <span data-i18n="faq.q5">En quoi Galac6 est-il différent de ChatGPT ?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">
+          <div class="faq-answer-inner" data-i18n-html="faq.a5">
             <strong>ChatGPT donne des réponses. Galac6 donne des compétences.</strong> ChatGPT n'est pas conçu pour les enfants, ne connaît pas le programme français et n'a aucune logique pédagogique. Galac6 est spécialement pensé pour l'école française 🇫🇷, avec une approche qui pousse l'élève à apprendre vraiment — pas à copier-coller.
           </div>
         </div>
@@ -900,11 +945,11 @@
 
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
-          Combien de temps par jour faut-il utiliser Galac6 ?
+          <span data-i18n="faq.q6">Combien de temps par jour faut-il utiliser Galac6 ?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">
+          <div class="faq-answer-inner" data-i18n-html="faq.a6">
             <strong>15 à 30 minutes suffisent</strong> pour des révisions efficaces. Galac6 n'est pas conçu pour remplacer les loisirs — il est conçu pour optimiser les moments de travail. Quelques sessions ciblées par semaine font déjà une vraie différence sur les résultats.
           </div>
         </div>
@@ -912,11 +957,11 @@
 
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
-          Les données de mon enfant sont-elles protégées ?
+          <span data-i18n="faq.q7">Les données de mon enfant sont-elles protégées ?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">
+          <div class="faq-answer-inner" data-i18n-html="faq.a7">
             Oui, et c'est non-négociable. Galac6 est <strong>conçu et hébergé en France</strong>, dans le plein respect du RGPD. Nous ne revendons jamais les données de vos enfants à des tiers. La confidentialité et la sécurité des données des mineurs sont au cœur de notre conception.
           </div>
         </div>
@@ -924,11 +969,11 @@
 
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
-          Quelles matières et quels niveaux sont couverts ?
+          <span data-i18n="faq.q8">Quelles matières et quels niveaux sont couverts ?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">
+          <div class="faq-answer-inner" data-i18n-html="faq.a8">
             Galac6 couvre les principales matières du programme français : <strong>Français, Mathématiques, Histoire-Géographie, Sciences, Anglais</strong> et d'autres encore — <strong>du CP à la Terminale</strong>. Le contenu s'adapte automatiquement au niveau et à la classe de l'élève.
           </div>
         </div>
@@ -936,11 +981,11 @@
 
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
-          Les parents peuvent-ils suivre les progrès de leur enfant ?
+          <span data-i18n="faq.q9">Les parents peuvent-ils suivre les progrès de leur enfant ?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">
+          <div class="faq-answer-inner" data-i18n-html="faq.a9">
             Oui. Les parents ont accès à un espace de suivi pour voir les matières travaillées, les progrès réalisés et les points à renforcer. Chez Galac6, nous croyons au <strong>rôle actif des parents</strong> dans la scolarité — l'outil est conçu pour renforcer ce lien, pas pour le remplacer.
           </div>
         </div>
@@ -948,12 +993,25 @@
 
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
-          Y a-t-il un essai gratuit ?
+          <span data-i18n="faq.q10">Y a-t-il un essai gratuit ?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">
+          <div class="faq-answer-inner" data-i18n-html="faq.a10">
             Oui ! <strong>Chaque nouvel inscrit bénéficie de 7 jours d'accès illimité</strong>, sans carte bancaire. Quiz, dictées, fiches, corrections — tout est débloqué pendant une semaine. Ensuite, vous pouvez continuer gratuitement avec un accès limité, ou passer à un plan illimité.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 11 — EN only -->
+      <div class="faq-item en-only" style="display:none;">
+        <button class="faq-question" aria-expanded="false">
+          <span data-i18n="faq.q11">Is Galac6 available in my country?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner" data-i18n-html="faq.a11">
+            Galac6 is currently available in <strong>France only</strong>, as it is designed around the French school curriculum (Éducation Nationale). If you'd like Galac6 in your country, <a href="mailto:hello@galac6.io">contact us</a> — we're exploring international expansion and would love to hear from you!
           </div>
         </div>
       </div>
@@ -961,8 +1019,8 @@
     </div>
 
     <div class="faq-cta">
-      <p>Une question que vous ne trouvez pas ici ?</p>
-      <a href="mailto:hello@galac6.io" class="btn btn-primary">Contactez-nous →</a>
+      <p data-i18n="faq.cta.text">Une question que vous ne trouvez pas ici ?</p>
+      <a href="mailto:hello@galac6.io" class="btn btn-primary" data-i18n="faq.cta.button">Contactez-nous →</a>
     </div>
   </section>
 
@@ -970,25 +1028,25 @@
 
   <!-- ═══ PRICING ═══ -->
   <section id="pricing">
-    <h2 class="section-title">7 jours gratuits pour tester.</h2>
+    <h2 class="section-title" data-i18n="pricing.title">7 jours gratuits pour tester.</h2>
 
     <div class="pricing-simple">
       <div class="pricing-card">
-        <div class="pricing-name">Essai gratuit</div>
-        <div class="pricing-amount">7 <span class="currency">jours</span></div>
-        <p class="pricing-detail">Accès illimité, sans carte bancaire</p>
-        <a href="https://galac6web.netlify.app/" class="btn btn-secondary" style="width: 100%; justify-content: center;">Essayer →</a>
+        <div class="pricing-name" data-i18n="pricing.free.name">Essai gratuit</div>
+        <div class="pricing-amount" data-i18n-html="pricing.free.amount">7 <span class="currency">jours</span></div>
+        <p class="pricing-detail" data-i18n="pricing.free.detail">Accès illimité, sans carte bancaire</p>
+        <a href="https://galac6web.netlify.app/" class="btn btn-secondary" style="width: 100%; justify-content: center;" data-i18n="pricing.free.cta">Essayer →</a>
       </div>
       <div class="pricing-card highlighted">
-        <div class="pricing-badge">⭐ Meilleure offre</div>
-        <div class="pricing-name">Annuel</div>
+        <div class="pricing-badge" data-i18n="pricing.badge">⭐ Meilleure offre</div>
+        <div class="pricing-name" data-i18n="pricing.annual.name">Annuel</div>
         <div class="pricing-amount gradient-text">9,99 <span class="currency">€</span><span class="period">/mois</span></div>
-        <p class="pricing-detail">119,88 €/an — tout illimité</p>
-        <a href="/tarifs" class="btn btn-primary" style="width: 100%; justify-content: center;">Voir les détails →</a>
+        <p class="pricing-detail" data-i18n="pricing.annual.detail">119,88 €/an — tout illimité</p>
+        <a href="/tarifs" class="btn btn-primary" style="width: 100%; justify-content: center;" data-i18n="pricing.annual.cta">Voir les détails →</a>
       </div>
     </div>
 
-    <p class="pricing-note">
+    <p class="pricing-note" data-i18n-html="pricing.note">
       Offre mensuelle disponible à 13,99 €/mois. Pour les établissements : <a href="/ecole">nous contacter →</a>
     </p>
   </section>
@@ -997,9 +1055,9 @@
 
   <!-- ═══ CTA FINAL ═══ -->
   <div class="final-cta">
-    <h2>Prêt à progresser ?</h2>
-    <a href="https://galac6web.netlify.app/" class="btn btn-primary" style="font-size: 1.05rem; padding: 1rem 2rem;">Essayer 7 jours gratuits →</a>
-    <p class="final-cta-note">Accès illimité pendant 7 jours. Sans carte bancaire.</p>
+    <h2 data-i18n="cta.title">Prêt à progresser ?</h2>
+    <a href="https://galac6web.netlify.app/" class="btn btn-primary" style="font-size: 1.05rem; padding: 1rem 2rem;" data-i18n="cta.button">Essayer 7 jours gratuits →</a>
+    <p class="final-cta-note" data-i18n="cta.note">Accès illimité pendant 7 jours. Sans carte bancaire.</p>
   </div>
 
   <!-- ═══ FOOTER ═══ -->
@@ -1011,26 +1069,27 @@
             <img src="icons/icon.png" alt="Galac6">
             Galac6
           </div>
-          <span style="font-size: 0.88rem; color: var(--text-muted);">🇫🇷 Conçu et hébergé en France</span>
-          <span class="footer-copy">© 2026 Galac6. Tous droits réservés.</span>
+          <span style="font-size: 0.88rem; color: var(--text-muted);" data-i18n="footer.hosted">🇫🇷 Conçu et hébergé en France</span>
+          <span class="footer-copy" data-i18n="footer.copy">© 2026 Galac6. Tous droits réservés.</span>
         </div>
         <div class="footer-col">
-          <span class="footer-col-title">Légal</span>
-          <a href="/mentions-legales">Mentions légales</a>
-          <a href="/terms">CGU</a>
-          <a href="/privacy">Politique de confidentialité</a>
-          <a href="/cgv">CGV</a>
+          <span class="footer-col-title" data-i18n="footer.legal.title">Légal</span>
+          <a href="/mentions-legales" data-i18n="footer.legal.mentions">Mentions légales</a>
+          <a href="/terms" data-i18n="footer.legal.cgu">CGU</a>
+          <a href="/privacy" data-i18n="footer.legal.privacy">Politique de confidentialité</a>
+          <a href="/cgv" data-i18n="footer.legal.cgv">CGV</a>
         </div>
         <div class="footer-col">
-          <span class="footer-col-title">Contact</span>
-          <a href="/about">À propos</a>
-          <a href="/ecole">Établissements scolaires →</a>
+          <span class="footer-col-title" data-i18n="footer.contact.title">Contact</span>
+          <a href="/about" data-i18n="footer.contact.about">À propos</a>
+          <a href="/ecole" data-i18n="footer.contact.school">Établissements scolaires →</a>
         </div>
       </div>
     </footer>
   </div>
 
 <script src="cookie-consent.js"></script>
+<script src="i18n.js"></script>
 <script>
   document.querySelectorAll('.faq-question').forEach(function(btn) {
     btn.addEventListener('click', function() {

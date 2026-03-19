@@ -266,6 +266,51 @@
       margin: 0 auto;
     }
 
+    /* ─── EN Banner ─── */
+    .en-banner {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      text-align: center;
+      padding: 0.6rem 2.5rem;
+      font-size: 0.85rem;
+      position: relative;
+    }
+    .en-banner a { color: #fff; text-decoration: underline; }
+    .en-banner-close {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      opacity: 0.8;
+      padding: 0.25rem;
+    }
+    .en-banner-close:hover { opacity: 1; }
+
+    /* ─── Lang toggle ─── */
+    .lang-toggle {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 0.25rem;
+      line-height: 1;
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+    .lang-toggle:hover { transform: scale(1.15); }
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+    }
+
     @media (max-width: 640px) {
       .cta-row { flex-direction: column; }
       .btn { width: 100%; justify-content: center; }
@@ -278,41 +323,50 @@
 </head>
 <body>
 
+  <!-- ═══ EN BANNER (hidden by default) ═══ -->
+  <div id="en-banner" class="en-banner en-only" style="display:none;" data-i18n-html="banner.text">
+    🌍 Currently available in France only (French school system). Want Galac6 in your country? <a href="mailto:hello@galac6.io" style="color:#fff;text-decoration:underline;">Send a request →</a>
+    <button class="en-banner-close" onclick="closeBanner()" aria-label="Close">&times;</button>
+  </div>
+
 <div class="container">
 
-  <a href="index.html" class="back-link">← Retour à l'accueil</a>
+  <div class="top-bar">
+    <a href="index.html" class="back-link" data-i18n="recherche.back" style="margin-bottom:0;">← Retour à l'accueil</a>
+    <button id="lang-toggle" class="lang-toggle" onclick="toggleLanguage()" aria-label="Switch to English">🇬🇧</button>
+  </div>
 
-  <h1>État de la recherche sur <span>l'IA dans l'apprentissage</span></h1>
-  <p class="lead">Ce que disent les études scientifiques récentes (2023–2025) sur le tutorat par IA — et pourquoi l'encadrement fait toute la différence.</p>
+  <h1 data-i18n-html="recherche.title">État de la recherche sur <span>l'IA dans l'apprentissage</span></h1>
+  <p class="lead" data-i18n="recherche.lead">Ce que disent les études scientifiques récentes (2023–2025) sur le tutorat par IA — et pourquoi l'encadrement fait toute la différence.</p>
 
   <!-- Takeaways -->
   <div class="takeaways">
     <div class="takeaway">
       <div class="number">×2</div>
-      <div class="label">gains d'apprentissage<br>avec un tuteur IA encadré</div>
+      <div class="label" data-i18n-html="recherche.takeaway1">gains d'apprentissage<br>avec un tuteur IA encadré</div>
     </div>
     <div class="takeaway">
       <div class="number">g=1,4</div>
-      <div class="label">taille d'effet avec soutien<br>enseignant (vs 0,08 sans)</div>
+      <div class="label" data-i18n-html="recherche.takeaway2">taille d'effet avec soutien<br>enseignant (vs 0,08 sans)</div>
     </div>
     <div class="takeaway">
       <div class="number">28</div>
-      <div class="label">études K-12 convergent :<br>feedback + adaptivité = résultats</div>
+      <div class="label" data-i18n-html="recherche.takeaway3">études K-12 convergent :<br>feedback + adaptivité = résultats</div>
     </div>
   </div>
 
   <!-- Studies -->
-  <h2>6 études clés</h2>
+  <h2 data-i18n="recherche.studies.title">6 études clés</h2>
 
   <div class="study">
     <div class="study-header">
       <div class="study-num">1</div>
       <div>
-        <div class="study-title">L'accompagnement multiplie l'effet par 18</div>
+        <div class="study-title" data-i18n="recherche.study1.title">L'accompagnement multiplie l'effet par 18</div>
         <div class="study-meta">Gu &amp; Yan · Meta-analyse 19 études · J. Educational Computing Research · 2025</div>
       </div>
     </div>
-    <div class="study-result">
+    <div class="study-result" data-i18n-html="recherche.study1.result">
       Avec un accompagnement enseignant ou parental, l'effet de l'IA sur les résultats scolaires est de <strong>g = 1,43</strong>. Sans accompagnement : <strong>g = 0,08</strong> (quasi nul). Le facteur humain dans la boucle est la condition déterminante du succès.
     </div>
     <div class="study-doi">
@@ -325,11 +379,11 @@
     <div class="study-header">
       <div class="study-num">2</div>
       <div>
-        <div class="study-title">Un tuteur IA surpasse le cours en présentiel actif</div>
+        <div class="study-title" data-i18n="recherche.study2.title">Un tuteur IA surpasse le cours en présentiel actif</div>
         <div class="study-meta">Kestin et al. · Harvard · 194 étudiants · RCT · 2025</div>
       </div>
     </div>
-    <div class="study-result">
+    <div class="study-result" data-i18n-html="recherche.study2.result">
       <strong>×2 gains d'apprentissage</strong> et 27 % de temps en moins par rapport au cours actif avec peer instruction. Taille d'effet : 0,73 à 1,3 sigma. Condition : le tuteur IA était conçu selon des principes pédagogiques stricts (questionnement socratique, jamais de réponse directe).
     </div>
     <div class="study-doi">
@@ -342,11 +396,11 @@
     <div class="study-header">
       <div class="study-num">3</div>
       <div>
-        <div class="study-title">Quiz adaptatifs et répétition espacée : +15 percentiles</div>
+        <div class="study-title" data-i18n="recherche.study3.title">Quiz adaptatifs et répétition espacée : +15 percentiles</div>
         <div class="study-meta">Baillifard et al. · UniDistance Suisse · 51 étudiants · 2024</div>
       </div>
     </div>
-    <div class="study-result">
+    <div class="study-result" data-i18n-html="recherche.study3.result">
       Les élèves actifs sur un tuteur IA à quiz adaptatifs ont gagné <strong>+10 à +15 percentiles</strong> aux examens finaux. L'accès seul ne suffit pas : les inactifs ont perdu 5 percentiles. L'effet augmente avec l'engagement régulier.
     </div>
     <div class="study-doi">
@@ -359,11 +413,11 @@
     <div class="study-header">
       <div class="study-num">4</div>
       <div>
-        <div class="study-title">L'IA libre réduit la pensée critique</div>
+        <div class="study-title" data-i18n="recherche.study4.title">L'IA libre réduit la pensée critique</div>
         <div class="study-meta">Lee et al. · Microsoft Research + CMU · 319 participants · 2025</div>
       </div>
     </div>
-    <div class="study-result">
+    <div class="study-result" data-i18n-html="recherche.study4.result">
       Sans cadre, l'accès libre à l'IA générative <strong>réduit l'engagement cognitif</strong> et la pensée critique. Plus la confiance en l'IA est élevée, moins l'utilisateur réfléchit par lui-même. L'IA « mécanise les tâches et atrophie le jugement ».
     </div>
     <div class="study-doi">
@@ -376,11 +430,11 @@
     <div class="study-header">
       <div class="study-num">5</div>
       <div>
-        <div class="study-title">28 études K-12 : les 3 piliers qui fonctionnent</div>
+        <div class="study-title" data-i18n="recherche.study5.title">28 études K-12 : les 3 piliers qui fonctionnent</div>
         <div class="study-meta">Zaretsky et al. · npj Science of Learning · 4 597 élèves · 2025</div>
       </div>
     </div>
-    <div class="study-result">
+    <div class="study-result" data-i18n-html="recherche.study5.result">
       Revue systématique de <strong>28 études du primaire au lycée</strong>. Les bénéfices sont maximisés quand le système combine : feedback immédiat, pratique guidée et adaptivité au niveau de l'élève.
     </div>
     <div class="study-doi">
@@ -393,11 +447,11 @@
     <div class="study-header">
       <div class="study-num">6</div>
       <div>
-        <div class="study-title">IA pédagogue : +5,5 pp sur le transfert de connaissances</div>
+        <div class="study-title" data-i18n="recherche.study6.title">IA pédagogue : +5,5 pp sur le transfert de connaissances</div>
         <div class="study-meta">Google DeepMind + Eedi · UK · 165 élèves · RCT · 2025</div>
       </div>
     </div>
-    <div class="study-result">
+    <div class="study-result" data-i18n-html="recherche.study6.result">
       Un tuteur IA affiné pour la pédagogie (LearnLM) a <strong>surpassé le tutorat humain seul</strong> sur le transfert de connaissances (+5,5 points de pourcentage). Zéro contenu nocif détecté. Les tuteurs humains ont rapporté apprendre de nouvelles techniques pédagogiques grâce à l'IA.
     </div>
     <div class="study-doi">
@@ -408,28 +462,29 @@
 
   <!-- Synthesis -->
   <div class="synthesis">
-    <h3>Ce que Galac6 applique</h3>
-    <p>Chaque fonctionnalité de Galac6 est alignée avec ces conclusions :</p>
+    <h3 data-i18n="recherche.synthesis.title">Ce que Galac6 applique</h3>
+    <p data-i18n="recherche.synthesis.intro">Chaque fonctionnalité de Galac6 est alignée avec ces conclusions :</p>
     <ul>
-      <li><strong>Engagement parental</strong> : l'humain dans la boucle multiplie les résultats (étude 1)</li>
-      <li><strong>Tutorat guidé</strong> : l'IA ne donne jamais la réponse, elle guide par le questionnement (études 2, 4)</li>
-      <li><strong>Quiz adaptatifs et XP</strong> : pratique régulière récompensée, répétition espacée (étude 3)</li>
-      <li><strong>Feedback immédiat</strong> : corrections détaillées pour chaque quiz et dictée (étude 5)</li>
+      <li data-i18n-html="recherche.synthesis.s1"><strong>Engagement parental</strong> : l'humain dans la boucle multiplie les résultats (étude 1)</li>
+      <li data-i18n-html="recherche.synthesis.s2"><strong>Tutorat guidé</strong> : l'IA ne donne jamais la réponse, elle guide par le questionnement (études 2, 4)</li>
+      <li data-i18n-html="recherche.synthesis.s3"><strong>Quiz adaptatifs et XP</strong> : pratique régulière récompensée, répétition espacée (étude 3)</li>
+      <li data-i18n-html="recherche.synthesis.s4"><strong>Feedback immédiat</strong> : corrections détaillées pour chaque quiz et dictée (étude 5)</li>
     </ul>
   </div>
 
   <div class="cta-row">
-    <a href="index.html" class="btn btn-secondary">← Retour à l'accueil</a>
+    <a href="index.html" class="btn btn-secondary" data-i18n="recherche.cta.back">← Retour à l'accueil</a>
   </div>
 
 </div>
 
 <footer>
-  <p>Galac6 — L'IA de soutien scolaire et de révisions.</p>
-  <p style="margin-top: 0.4rem;">Toutes les études citées sont accessibles via leurs DOI respectifs.</p>
-  <p style="margin-top: 0.4rem;"><a href="/mentions-legales" style="color: var(--text-muted);">Mentions légales</a></p>
+  <p data-i18n="recherche.footer.desc">Galac6 — L'IA de soutien scolaire et de révisions.</p>
+  <p style="margin-top: 0.4rem;" data-i18n="recherche.footer.doi">Toutes les études citées sont accessibles via leurs DOI respectifs.</p>
+  <p style="margin-top: 0.4rem;"><a href="/mentions-legales" style="color: var(--text-muted);" data-i18n="footer.legal.mentions">Mentions légales</a></p>
 </footer>
 
+<script src="i18n.js"></script>
 <script src="cookie-consent.js"></script>
 </body>
 </html>

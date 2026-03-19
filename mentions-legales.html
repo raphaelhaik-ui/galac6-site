@@ -33,6 +33,44 @@
     a { color: var(--primary-light); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
+    /* ─── EN Banner ─── */
+    .en-banner {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      text-align: center;
+      padding: 0.6rem 2.5rem;
+      font-size: 0.85rem;
+      position: relative;
+    }
+    .en-banner a { color: #fff; text-decoration: underline; }
+    .en-banner-close {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      opacity: 0.8;
+      padding: 0.25rem;
+    }
+    .en-banner-close:hover { opacity: 1; }
+
+    /* ─── Lang toggle ─── */
+    .lang-toggle {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 0.25rem;
+      line-height: 1;
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+    .lang-toggle:hover { transform: scale(1.15); }
+
     /* ─── Navbar ─── */
     .navbar-wrapper {
       position: sticky;
@@ -296,6 +334,12 @@
 </head>
 <body>
 
+  <!-- ═══ EN BANNER (hidden by default) ═══ -->
+  <div id="en-banner" class="en-banner en-only" style="display:none;" data-i18n-html="banner.text">
+    🌍 Currently available in France only (French school system). Want Galac6 in your country? <a href="mailto:hello@galac6.io" style="color:#fff;text-decoration:underline;">Send a request →</a>
+    <button class="en-banner-close" onclick="closeBanner()" aria-label="Close">&times;</button>
+  </div>
+
   <!-- ═══ NAVBAR ═══ -->
   <div class="navbar-wrapper">
     <nav class="navbar">
@@ -308,232 +352,234 @@
         <span></span><span></span><span></span>
       </button>
       <div class="navbar-links">
-        <a href="/">Accueil</a>
-        <a href="/ecole">École</a>
-        <a href="/tarifs">Tarifs</a>
-        <a href="/about">À propos</a>
-        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
+        <a href="/" data-i18n="nav.home">Accueil</a>
+        <a href="/ecole" data-i18n="nav.school">École</a>
+        <a href="/tarifs" data-i18n="nav.pricing">Tarifs</a>
+        <a href="/about" data-i18n="nav.about">À propos</a>
+        <button id="lang-toggle" class="lang-toggle" onclick="toggleLanguage()" aria-label="Switch to English">🇬🇧</button>
+        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;" data-i18n="nav.signup">Inscription ou connexion</a>
       </div>
     </nav>
   </div>
 
   <!-- ═══ CONTENT ═══ -->
   <div class="content">
-    <h1>Mentions légales</h1>
-    <p class="subtitle">Conformément à la Loi n° 2004-575 du 21 juin 2004 (LCEN) et au RGPD — Dernière mise à jour : 25 février 2026</p>
+    <h1 data-i18n="mentions.title">Mentions légales</h1>
+    <p class="subtitle" data-i18n="mentions.subtitle">Conformément à la Loi n° 2004-575 du 21 juin 2004 (LCEN) et au RGPD — Dernière mise à jour : 25 février 2026</p>
 
     <!-- 1. Éditeur -->
-    <h2>1. Éditeur du site</h2>
+    <h2 data-i18n="mentions.art1.title">1. Éditeur du site</h2>
     <table class="legal-table">
       <tbody>
-        <tr><td><strong>Raison sociale</strong></td><td>RHK Conseil</td></tr>
-        <tr><td><strong>Forme juridique</strong></td><td>Entreprise individuelle</td></tr>
+        <tr><td><strong data-i18n="mentions.art1.company_name">Raison sociale</strong></td><td>RHK Conseil</td></tr>
+        <tr><td><strong data-i18n="mentions.art1.legal_form">Forme juridique</strong></td><td data-i18n="mentions.art1.legal_form_val">Entreprise individuelle</td></tr>
         <tr><td><strong>SIRET</strong></td><td>944 058 866 00012</td></tr>
-        <tr><td><strong>Adresse du siège</strong></td><td>19 rue de Croulebarbe, 75013 Paris, France</td></tr>
-        <tr><td><strong>Email de contact</strong></td><td><a href="mailto:hello@galac6.io">hello@galac6.io</a></td></tr>
-        <tr><td><strong>Directeur de la publication</strong></td><td>Raphael Haik</td></tr>
-        <tr><td><strong>Nom commercial du service</strong></td><td>Galac6</td></tr>
+        <tr><td><strong data-i18n="mentions.art1.address">Adresse du siège</strong></td><td>19 rue de Croulebarbe, 75013 Paris, France</td></tr>
+        <tr><td><strong data-i18n="mentions.art1.email">Email de contact</strong></td><td><a href="mailto:hello@galac6.io">hello@galac6.io</a></td></tr>
+        <tr><td><strong data-i18n="mentions.art1.director">Directeur de la publication</strong></td><td>Raphael Haik</td></tr>
+        <tr><td><strong data-i18n="mentions.art1.trade_name">Nom commercial du service</strong></td><td>Galac6</td></tr>
       </tbody>
     </table>
 
     <!-- 2. Hébergement -->
-    <h2>2. Hébergement</h2>
+    <h2 data-i18n="mentions.art2.title">2. Hébergement</h2>
 
-    <h3>Site vitrine (statique)</h3>
+    <h3 data-i18n="mentions.art2.static_title">Site vitrine (statique)</h3>
     <table class="legal-table">
       <tbody>
-        <tr><td><strong>Hébergeur</strong></td><td>Netlify Inc.</td></tr>
-        <tr><td><strong>Adresse</strong></td><td>44 Montgomery Street, Suite 300, San Francisco, CA 94104, USA</td></tr>
-        <tr><td><strong>Localisation des données</strong></td><td>Union Européenne (Irlande)</td></tr>
-        <tr><td><strong>Site web</strong></td><td><a href="https://www.netlify.com" target="_blank" rel="noopener">netlify.com</a></td></tr>
+        <tr><td><strong data-i18n="mentions.art2.host">Hébergeur</strong></td><td>Netlify Inc.</td></tr>
+        <tr><td><strong data-i18n="mentions.art2.address_label">Adresse</strong></td><td>44 Montgomery Street, Suite 300, San Francisco, CA 94104, USA</td></tr>
+        <tr><td><strong data-i18n="mentions.art2.data_location">Localisation des données</strong></td><td data-i18n="mentions.art2.netlify_location">Union Européenne (Irlande)</td></tr>
+        <tr><td><strong data-i18n="mentions.art2.website">Site web</strong></td><td><a href="https://www.netlify.com" target="_blank" rel="noopener">netlify.com</a></td></tr>
       </tbody>
     </table>
 
-    <h3>Application et base de données</h3>
+    <h3 data-i18n="mentions.art2.app_title">Application et base de données</h3>
     <table class="legal-table">
       <tbody>
-        <tr><td><strong>Hébergeur</strong></td><td>Supabase Inc.</td></tr>
-        <tr><td><strong>Adresse</strong></td><td>970 Toa Payoh North #07-04, Singapore 318992</td></tr>
-        <tr><td><strong>Localisation des données</strong></td><td>France (Union Européenne)</td></tr>
-        <tr><td><strong>Site web</strong></td><td><a href="https://supabase.com" target="_blank" rel="noopener">supabase.com</a></td></tr>
+        <tr><td><strong data-i18n="mentions.art2.host">Hébergeur</strong></td><td>Supabase Inc.</td></tr>
+        <tr><td><strong data-i18n="mentions.art2.address_label">Adresse</strong></td><td>970 Toa Payoh North #07-04, Singapore 318992</td></tr>
+        <tr><td><strong data-i18n="mentions.art2.data_location">Localisation des données</strong></td><td data-i18n="mentions.art2.supabase_location">France (Union Européenne)</td></tr>
+        <tr><td><strong data-i18n="mentions.art2.website">Site web</strong></td><td><a href="https://supabase.com" target="_blank" rel="noopener">supabase.com</a></td></tr>
       </tbody>
     </table>
 
     <!-- 3. Propriété intellectuelle -->
-    <h2>3. Propriété intellectuelle</h2>
-    <p>L'ensemble du contenu du site galac6.io (textes, images, graphismes, logo, icônes, logiciels, structure générale) est la propriété exclusive de RHK Conseil ou fait l'objet d'une autorisation d'utilisation.</p>
-    <p>Toute reproduction, représentation, modification, publication, adaptation, totale ou partielle, des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sauf autorisation écrite préalable de RHK Conseil.</p>
-    <p>Le nom « Galac6 », le logo et les éléments graphiques associés sont des marques de RHK Conseil. Toute utilisation non autorisée constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.</p>
+    <h2 data-i18n="mentions.art3.title">3. Propriété intellectuelle</h2>
+    <p data-i18n="mentions.art3.p1">L'ensemble du contenu du site galac6.io (textes, images, graphismes, logo, icônes, logiciels, structure générale) est la propriété exclusive de RHK Conseil ou fait l'objet d'une autorisation d'utilisation.</p>
+    <p data-i18n="mentions.art3.p2">Toute reproduction, représentation, modification, publication, adaptation, totale ou partielle, des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sauf autorisation écrite préalable de RHK Conseil.</p>
+    <p data-i18n="mentions.art3.p3">Le nom « Galac6 », le logo et les éléments graphiques associés sont des marques de RHK Conseil. Toute utilisation non autorisée constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.</p>
 
     <!-- 4. RGPD -->
-    <h2>4. Protection des données personnelles (RGPD)</h2>
+    <h2 data-i18n="mentions.art4.title">4. Protection des données personnelles (RGPD)</h2>
 
-    <h3>4.1 Responsable du traitement</h3>
-    <p>RHK Conseil, représenté par Raphael Haik.<br>Contact : <a href="mailto:hello@galac6.io">hello@galac6.io</a></p>
+    <h3 data-i18n="mentions.art4.s1.title">4.1 Responsable du traitement</h3>
+    <p data-i18n-html="mentions.art4.s1.text">RHK Conseil, représenté par Raphael Haik.<br>Contact : <a href="mailto:hello@galac6.io">hello@galac6.io</a></p>
 
-    <h3>4.2 Données collectées sur le site vitrine</h3>
-    <p>Le site vitrine public peut collecter les données suivantes :</p>
+    <h3 data-i18n="mentions.art4.s2.title">4.2 Données collectées sur le site vitrine</h3>
+    <p data-i18n="mentions.art4.s2.intro">Le site vitrine public peut collecter les données suivantes :</p>
     <table class="legal-table">
       <thead>
-        <tr><th>Donnée</th><th>Finalité</th><th>Base légale</th></tr>
+        <tr><th data-i18n="mentions.art4.s2.th1">Donnée</th><th data-i18n="mentions.art4.s2.th2">Finalité</th><th data-i18n="mentions.art4.s2.th3">Base légale</th></tr>
       </thead>
       <tbody>
-        <tr><td>Adresse email (formulaire de contact / newsletter)</td><td>Répondre aux demandes, envoi d'informations commerciales</td><td>Consentement (Art. 6.1.a RGPD)</td></tr>
-        <tr><td>Données de navigation (cookies techniques)</td><td>Fonctionnement du site</td><td>Intérêt légitime (Art. 6.1.f RGPD)</td></tr>
+        <tr><td data-i18n="mentions.art4.s2.email_data">Adresse email (formulaire de contact / newsletter)</td><td data-i18n="mentions.art4.s2.email_purpose">Répondre aux demandes, envoi d'informations commerciales</td><td data-i18n="mentions.art4.s2.email_basis">Consentement (Art. 6.1.a RGPD)</td></tr>
+        <tr><td data-i18n="mentions.art4.s2.nav_data">Données de navigation (cookies techniques)</td><td data-i18n="mentions.art4.s2.nav_purpose">Fonctionnement du site</td><td data-i18n="mentions.art4.s2.nav_basis">Intérêt légitime (Art. 6.1.f RGPD)</td></tr>
       </tbody>
     </table>
 
-    <h3>4.3 Données collectées sur l'application Galac6</h3>
-    <p>Lors de la création d'un compte sur l'application, les données suivantes sont collectées :</p>
+    <h3 data-i18n="mentions.art4.s3.title">4.3 Données collectées sur l'application Galac6</h3>
+    <p data-i18n="mentions.art4.s3.intro">Lors de la création d'un compte sur l'application, les données suivantes sont collectées :</p>
     <ul>
-      <li><strong>Données d'identité</strong> : email, nom de l'élève, année de naissance, niveau scolaire, langue</li>
-      <li><strong>Données d'activité éducative</strong> : conversations, résultats de quiz, dictées, fiches, statistiques</li>
-      <li><strong>Données de facturation</strong> : email, identifiant client Stripe, identifiant abonnement</li>
-      <li><strong>Données sensibles</strong> (avec consentement explicite, Art. 9 RGPD) : aménagements scolaires (dyslexie, dyspraxie, etc.)</li>
+      <li data-i18n-html="mentions.art4.s3.identity"><strong>Données d'identité</strong> : email, nom de l'élève, année de naissance, niveau scolaire, langue</li>
+      <li data-i18n-html="mentions.art4.s3.activity"><strong>Données d'activité éducative</strong> : conversations, résultats de quiz, dictées, fiches, statistiques</li>
+      <li data-i18n-html="mentions.art4.s3.billing"><strong>Données de facturation</strong> : email, identifiant client Stripe, identifiant abonnement</li>
+      <li data-i18n-html="mentions.art4.s3.sensitive"><strong>Données sensibles</strong> (avec consentement explicite, Art. 9 RGPD) : aménagements scolaires (dyslexie, dyspraxie, etc.)</li>
     </ul>
 
-    <h3>4.4 Destinataires et sous-traitants</h3>
+    <h3 data-i18n="mentions.art4.s4.title">4.4 Destinataires et sous-traitants</h3>
     <table class="legal-table">
       <thead>
-        <tr><th>Sous-traitant</th><th>Rôle</th><th>Localisation</th><th>Garanties</th></tr>
+        <tr><th data-i18n="mentions.art4.s4.th1">Sous-traitant</th><th data-i18n="mentions.art4.s4.th2">Rôle</th><th data-i18n="mentions.art4.s4.th3">Localisation</th><th data-i18n="mentions.art4.s4.th4">Garanties</th></tr>
       </thead>
       <tbody>
-        <tr><td><strong>Supabase Inc.</strong></td><td>Base de données, fonctions serveur</td><td>France (UE)</td><td>Données hébergées en France</td></tr>
-        <tr><td><strong>Netlify Inc.</strong></td><td>Hébergement site statique</td><td>Irlande (UE)</td><td>Données hébergées dans l'UE</td></tr>
-        <tr><td><strong>Anthropic (Claude)</strong></td><td>IA conversationnelle</td><td>USA</td><td>Clauses Contractuelles Types (Art. 46 RGPD)</td></tr>
-        <tr><td><strong>Mistral</strong></td><td>IA conversationnelle</td><td>France (UE)</td><td>Données dans l'UE</td></tr>
-        <tr><td><strong>OpenAI (Whisper)</strong></td><td>Transcription vocale</td><td>USA</td><td>Clauses Contractuelles Types (Art. 46 RGPD)</td></tr>
-        <tr><td><strong>Google (Gemini TTS)</strong></td><td>Synthèse vocale</td><td>USA</td><td>Clauses Contractuelles Types (Art. 46 RGPD)</td></tr>
-        <tr><td><strong>Stripe Inc.</strong></td><td>Paiement en ligne</td><td>USA</td><td>Certifié PCI-DSS, conforme RGPD</td></tr>
-        <tr><td><strong>Resend</strong></td><td>Emails transactionnels</td><td>USA</td><td>Clauses Contractuelles Types (Art. 46 RGPD)</td></tr>
+        <tr><td><strong>Supabase Inc.</strong></td><td data-i18n="mentions.art4.s4.supabase_role">Base de données, fonctions serveur</td><td data-i18n="mentions.art4.s4.supabase_loc">France (UE)</td><td data-i18n="mentions.art4.s4.supabase_guar">Données hébergées en France</td></tr>
+        <tr><td><strong>Netlify Inc.</strong></td><td data-i18n="mentions.art4.s4.netlify_role">Hébergement site statique</td><td data-i18n="mentions.art4.s4.netlify_loc">Irlande (UE)</td><td data-i18n="mentions.art4.s4.netlify_guar">Données hébergées dans l'UE</td></tr>
+        <tr><td><strong>Anthropic (Claude)</strong></td><td data-i18n="mentions.art4.s4.anthropic_role">IA conversationnelle</td><td data-i18n="mentions.art4.s4.anthropic_loc">USA</td><td data-i18n="mentions.art4.s4.anthropic_guar">Clauses Contractuelles Types (Art. 46 RGPD)</td></tr>
+        <tr><td><strong>Mistral</strong></td><td data-i18n="mentions.art4.s4.mistral_role">IA conversationnelle</td><td data-i18n="mentions.art4.s4.mistral_loc">France (UE)</td><td data-i18n="mentions.art4.s4.mistral_guar">Données dans l'UE</td></tr>
+        <tr><td><strong>OpenAI (Whisper)</strong></td><td data-i18n="mentions.art4.s4.openai_role">Transcription vocale</td><td data-i18n="mentions.art4.s4.openai_loc">USA</td><td data-i18n="mentions.art4.s4.openai_guar">Clauses Contractuelles Types (Art. 46 RGPD)</td></tr>
+        <tr><td><strong>Google (Gemini TTS)</strong></td><td data-i18n="mentions.art4.s4.google_role">Synthèse vocale</td><td data-i18n="mentions.art4.s4.google_loc">USA</td><td data-i18n="mentions.art4.s4.google_guar">Clauses Contractuelles Types (Art. 46 RGPD)</td></tr>
+        <tr><td><strong>Stripe Inc.</strong></td><td data-i18n="mentions.art4.s4.stripe_role">Paiement en ligne</td><td data-i18n="mentions.art4.s4.stripe_loc">USA</td><td data-i18n="mentions.art4.s4.stripe_guar">Certifié PCI-DSS, conforme RGPD</td></tr>
+        <tr><td><strong>Resend</strong></td><td data-i18n="mentions.art4.s4.resend_role">Emails transactionnels</td><td data-i18n="mentions.art4.s4.resend_loc">USA</td><td data-i18n="mentions.art4.s4.resend_guar">Clauses Contractuelles Types (Art. 46 RGPD)</td></tr>
       </tbody>
     </table>
-    <div class="notice">Aucune donnée n'est utilisée pour entraîner des modèles d'IA.</div>
+    <div class="notice" data-i18n="mentions.art4.s4.notice">Aucune donnée n'est utilisée pour entraîner des modèles d'IA.</div>
 
-    <h3>4.5 Durées de conservation</h3>
+    <h3 data-i18n="mentions.art4.s5.title">4.5 Durées de conservation</h3>
     <table class="legal-table">
       <thead>
-        <tr><th>Catégorie</th><th>Durée</th></tr>
+        <tr><th data-i18n="mentions.art4.s5.th1">Catégorie</th><th data-i18n="mentions.art4.s5.th2">Durée</th></tr>
       </thead>
       <tbody>
-        <tr><td>Données de compte</td><td>Durée du compte + 1 an après suppression</td></tr>
-        <tr><td>Données d'activité éducative</td><td>2 ans ou fin de la scolarité + 1 an</td></tr>
-        <tr><td>Données de facturation</td><td>Durée légale (10 ans, Art. L.123-22 C. com.)</td></tr>
-        <tr><td>Comptes inactifs</td><td>Suppression après 2 ans d'inactivité</td></tr>
+        <tr><td data-i18n="mentions.art4.s5.account">Données de compte</td><td data-i18n="mentions.art4.s5.account_dur">Durée du compte + 1 an après suppression</td></tr>
+        <tr><td data-i18n="mentions.art4.s5.activity">Données d'activité éducative</td><td data-i18n="mentions.art4.s5.activity_dur">2 ans ou fin de la scolarité + 1 an</td></tr>
+        <tr><td data-i18n="mentions.art4.s5.billing">Données de facturation</td><td data-i18n="mentions.art4.s5.billing_dur">Durée légale (10 ans, Art. L.123-22 C. com.)</td></tr>
+        <tr><td data-i18n="mentions.art4.s5.inactive">Comptes inactifs</td><td data-i18n="mentions.art4.s5.inactive_dur">Suppression après 2 ans d'inactivité</td></tr>
       </tbody>
     </table>
 
-    <h3>4.6 Protection des mineurs</h3>
-    <p>Galac6 est destiné aux élèves du CP à la Terminale. Conformément à l'article 8 du RGPD et à l'article 45 de la loi Informatique et Libertés :</p>
+    <h3 data-i18n="mentions.art4.s6.title">4.6 Protection des mineurs</h3>
+    <p data-i18n="mentions.art4.s6.intro">Galac6 est destiné aux élèves du CP à la Terminale. Conformément à l'article 8 du RGPD et à l'article 45 de la loi Informatique et Libertés :</p>
     <ul>
-      <li>Le consentement parental est requis pour les enfants de moins de 15 ans.</li>
-      <li>Ce consentement est recueilli lors de la création du compte.</li>
-      <li>Les parents disposent d'un tableau de bord complet pour superviser l'activité de leurs enfants.</li>
+      <li data-i18n="mentions.art4.s6.li1">Le consentement parental est requis pour les enfants de moins de 15 ans.</li>
+      <li data-i18n="mentions.art4.s6.li2">Ce consentement est recueilli lors de la création du compte.</li>
+      <li data-i18n="mentions.art4.s6.li3">Les parents disposent d'un tableau de bord complet pour superviser l'activité de leurs enfants.</li>
     </ul>
 
-    <h3>4.7 Droits des utilisateurs</h3>
-    <p>Conformément au RGPD, vous disposez des droits suivants :</p>
+    <h3 data-i18n="mentions.art4.s7.title">4.7 Droits des utilisateurs</h3>
+    <p data-i18n="mentions.art4.s7.intro">Conformément au RGPD, vous disposez des droits suivants :</p>
     <table class="legal-table">
       <thead>
-        <tr><th>Droit</th><th>Article RGPD</th></tr>
+        <tr><th data-i18n="mentions.art4.s7.th1">Droit</th><th data-i18n="mentions.art4.s7.th2">Article RGPD</th></tr>
       </thead>
       <tbody>
-        <tr><td>Droit d'accès</td><td>Art. 15</td></tr>
-        <tr><td>Droit de rectification</td><td>Art. 16</td></tr>
-        <tr><td>Droit à l'effacement (« droit à l'oubli »)</td><td>Art. 17</td></tr>
-        <tr><td>Droit à la limitation du traitement</td><td>Art. 18</td></tr>
-        <tr><td>Droit à la portabilité des données</td><td>Art. 20</td></tr>
-        <tr><td>Droit d'opposition</td><td>Art. 21</td></tr>
-        <tr><td>Droit de retirer le consentement</td><td>Art. 7</td></tr>
+        <tr><td data-i18n="mentions.art4.s7.access">Droit d'accès</td><td>Art. 15</td></tr>
+        <tr><td data-i18n="mentions.art4.s7.rectification">Droit de rectification</td><td>Art. 16</td></tr>
+        <tr><td data-i18n="mentions.art4.s7.erasure">Droit à l'effacement (« droit à l'oubli »)</td><td>Art. 17</td></tr>
+        <tr><td data-i18n="mentions.art4.s7.restriction">Droit à la limitation du traitement</td><td>Art. 18</td></tr>
+        <tr><td data-i18n="mentions.art4.s7.portability">Droit à la portabilité des données</td><td>Art. 20</td></tr>
+        <tr><td data-i18n="mentions.art4.s7.objection">Droit d'opposition</td><td>Art. 21</td></tr>
+        <tr><td data-i18n="mentions.art4.s7.withdraw">Droit de retirer le consentement</td><td>Art. 7</td></tr>
       </tbody>
     </table>
-    <p>Pour exercer vos droits, contactez-nous à : <strong><a href="mailto:hello@galac6.io">hello@galac6.io</a></strong></p>
-    <p>En cas de différend, vous pouvez introduire une réclamation auprès de la <strong>CNIL</strong> (Commission Nationale de l'Informatique et des Libertés) :</p>
+    <p data-i18n-html="mentions.art4.s7.contact">Pour exercer vos droits, contactez-nous à : <strong><a href="mailto:hello@galac6.io">hello@galac6.io</a></strong></p>
+    <p data-i18n-html="mentions.art4.s7.cnil">En cas de différend, vous pouvez introduire une réclamation auprès de la <strong>CNIL</strong> (Commission Nationale de l'Informatique et des Libertés) :</p>
     <ul>
-      <li>Site : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a></li>
-      <li>Adresse : 3 Place de Fontenoy, TSA 80715, 75334 Paris Cedex 07</li>
+      <li data-i18n-html="mentions.art4.s7.cnil_site">Site : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a></li>
+      <li data-i18n="mentions.art4.s7.cnil_address">Adresse : 3 Place de Fontenoy, TSA 80715, 75334 Paris Cedex 07</li>
     </ul>
 
     <!-- 5. Cookies -->
-    <h2>5. Cookies</h2>
+    <h2 data-i18n="mentions.art5.title">5. Cookies</h2>
 
-    <h3>5.1 Cookies utilisés</h3>
+    <h3 data-i18n="mentions.art5.s1.title">5.1 Cookies utilisés</h3>
     <table class="legal-table">
       <thead>
-        <tr><th>Cookie / Stockage</th><th>Type</th><th>Finalité</th><th>Durée</th><th>Consentement</th></tr>
+        <tr><th data-i18n="mentions.art5.s1.th1">Cookie / Stockage</th><th data-i18n="mentions.art5.s1.th2">Type</th><th data-i18n="mentions.art5.s1.th3">Finalité</th><th data-i18n="mentions.art5.s1.th4">Durée</th><th data-i18n="mentions.art5.s1.th5">Consentement</th></tr>
       </thead>
       <tbody>
-        <tr><td><code>galac6-cookie-consent</code></td><td>localStorage</td><td>Mémoriser le choix de l'utilisateur sur les cookies</td><td>Permanent</td><td>Exempt (cookie de consentement)</td></tr>
-        <tr><td><code>sidebar_state</code></td><td>Cookie HTTP</td><td>Mémoriser l'état du panneau latéral</td><td>7 jours</td><td>Requis (uniquement si accepté)</td></tr>
-        <tr><td><code>galac6-theme</code></td><td>localStorage</td><td>Préférence thème clair/sombre</td><td>Permanent</td><td>Exempt (fonctionnel strict)</td></tr>
-        <tr><td>Préférence taille de police</td><td>localStorage</td><td>Accessibilité</td><td>Permanent</td><td>Exempt (fonctionnel strict)</td></tr>
+        <tr><td><code>galac6-cookie-consent</code></td><td>localStorage</td><td data-i18n="mentions.art5.s1.consent_purpose">Mémoriser le choix de l'utilisateur sur les cookies</td><td data-i18n="mentions.art5.s1.consent_duration">Permanent</td><td data-i18n="mentions.art5.s1.consent_consent">Exempt (cookie de consentement)</td></tr>
+        <tr><td><code>sidebar_state</code></td><td>Cookie HTTP</td><td data-i18n="mentions.art5.s1.sidebar_purpose">Mémoriser l'état du panneau latéral</td><td data-i18n="mentions.art5.s1.sidebar_duration">7 jours</td><td data-i18n="mentions.art5.s1.sidebar_consent">Requis (uniquement si accepté)</td></tr>
+        <tr><td><code>galac6-theme</code></td><td>localStorage</td><td data-i18n="mentions.art5.s1.theme_purpose">Préférence thème clair/sombre</td><td data-i18n="mentions.art5.s1.theme_duration">Permanent</td><td data-i18n="mentions.art5.s1.theme_consent">Exempt (fonctionnel strict)</td></tr>
+        <tr><td data-i18n="mentions.art5.s1.font_data">Préférence taille de police</td><td>localStorage</td><td data-i18n="mentions.art5.s1.font_purpose">Accessibilité</td><td data-i18n="mentions.art5.s1.font_duration">Permanent</td><td data-i18n="mentions.art5.s1.font_consent">Exempt (fonctionnel strict)</td></tr>
       </tbody>
     </table>
 
-    <h3>5.2 Absence de cookies publicitaires et de traçage</h3>
-    <p>Galac6 n'utilise <strong>aucun cookie publicitaire, aucun cookie de traçage et aucun outil d'analyse tiers</strong> (pas de Google Analytics, Facebook Pixel, etc.).</p>
+    <h3 data-i18n="mentions.art5.s2.title">5.2 Absence de cookies publicitaires et de traçage</h3>
+    <p data-i18n-html="mentions.art5.s2.text">Galac6 n'utilise <strong>aucun cookie publicitaire, aucun cookie de traçage et aucun outil d'analyse tiers</strong> (pas de Google Analytics, Facebook Pixel, etc.).</p>
 
-    <h3>5.3 Gestion des cookies</h3>
-    <p>Un bandeau de consentement est affiché lors de la première visite. L'utilisateur peut accepter ou refuser les cookies non essentiels. Les cookies fonctionnels stricts (thème, accessibilité) sont exemptés de consentement conformément à la directive ePrivacy.</p>
+    <h3 data-i18n="mentions.art5.s3.title">5.3 Gestion des cookies</h3>
+    <p data-i18n="mentions.art5.s3.text">Un bandeau de consentement est affiché lors de la première visite. L'utilisateur peut accepter ou refuser les cookies non essentiels. Les cookies fonctionnels stricts (thème, accessibilité) sont exemptés de consentement conformément à la directive ePrivacy.</p>
 
     <!-- 6. Liens hypertextes -->
-    <h2>6. Liens hypertextes</h2>
-    <p>Le site galac6.io peut contenir des liens vers des sites tiers. RHK Conseil n'exerce aucun contrôle sur le contenu de ces sites et décline toute responsabilité quant à leur contenu ou à leurs pratiques en matière de protection des données.</p>
+    <h2 data-i18n="mentions.art6.title">6. Liens hypertextes</h2>
+    <p data-i18n="mentions.art6.text">Le site galac6.io peut contenir des liens vers des sites tiers. RHK Conseil n'exerce aucun contrôle sur le contenu de ces sites et décline toute responsabilité quant à leur contenu ou à leurs pratiques en matière de protection des données.</p>
 
     <!-- 7. Limitation de responsabilité -->
-    <h2>7. Limitation de responsabilité</h2>
-    <p>RHK Conseil s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur le site. Toutefois, RHK Conseil ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations disponibles.</p>
-    <p>Galac6 est un outil d'aide à l'apprentissage et ne se substitue pas à l'enseignement dispensé par les professeurs et l'Éducation Nationale. Les contenus générés par l'intelligence artificielle sont fournis à titre indicatif et pédagogique.</p>
-    <p>RHK Conseil ne saurait être tenu responsable :</p>
+    <h2 data-i18n="mentions.art7.title">7. Limitation de responsabilité</h2>
+    <p data-i18n="mentions.art7.p1">RHK Conseil s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur le site. Toutefois, RHK Conseil ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations disponibles.</p>
+    <p data-i18n="mentions.art7.p2">Galac6 est un outil d'aide à l'apprentissage et ne se substitue pas à l'enseignement dispensé par les professeurs et l'Éducation Nationale. Les contenus générés par l'intelligence artificielle sont fournis à titre indicatif et pédagogique.</p>
+    <p data-i18n="mentions.art7.p3">RHK Conseil ne saurait être tenu responsable :</p>
     <ul>
-      <li>Des interruptions temporaires du service pour maintenance ou mise à jour.</li>
-      <li>De l'impossibilité temporaire d'accéder au site pour des raisons techniques indépendantes de sa volonté.</li>
-      <li>Des dommages directs ou indirects résultant de l'utilisation du site ou de l'application.</li>
+      <li data-i18n="mentions.art7.li1">Des interruptions temporaires du service pour maintenance ou mise à jour.</li>
+      <li data-i18n="mentions.art7.li2">De l'impossibilité temporaire d'accéder au site pour des raisons techniques indépendantes de sa volonté.</li>
+      <li data-i18n="mentions.art7.li3">Des dommages directs ou indirects résultant de l'utilisation du site ou de l'application.</li>
     </ul>
 
     <!-- 8. Droit applicable -->
-    <h2>8. Droit applicable et juridiction compétente</h2>
-    <p>Les présentes mentions légales sont régies par le droit français.</p>
-    <p>En cas de litige, et après tentative de résolution amiable, compétence est attribuée aux tribunaux compétents de Paris.</p>
+    <h2 data-i18n="mentions.art8.title">8. Droit applicable et juridiction compétente</h2>
+    <p data-i18n="mentions.art8.p1">Les présentes mentions légales sont régies par le droit français.</p>
+    <p data-i18n="mentions.art8.p2">En cas de litige, et après tentative de résolution amiable, compétence est attribuée aux tribunaux compétents de Paris.</p>
 
-    <h3>Médiation de la consommation</h3>
-    <p>Conformément aux articles L.611-1 et suivants du Code de la consommation, le consommateur peut recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable du litige. Le médiateur compétent sera communiqué sur demande à <a href="mailto:hello@galac6.io">hello@galac6.io</a>.</p>
+    <h3 data-i18n="mentions.art8.mediation_title">Médiation de la consommation</h3>
+    <p data-i18n-html="mentions.art8.mediation_text">Conformément aux articles L.611-1 et suivants du Code de la consommation, le consommateur peut recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable du litige. Le médiateur compétent sera communiqué sur demande à <a href="mailto:hello@galac6.io">hello@galac6.io</a>.</p>
 
     <!-- 9. Crédits -->
-    <h2>9. Crédits</h2>
+    <h2 data-i18n="mentions.art9.title">9. Crédits</h2>
     <table class="legal-table">
       <thead>
-        <tr><th>Élément</th><th>Source</th></tr>
+        <tr><th data-i18n="mentions.art9.th1">Élément</th><th data-i18n="mentions.art9.th2">Source</th></tr>
       </thead>
       <tbody>
-        <tr><td>Développement</td><td>RHK Conseil</td></tr>
-        <tr><td>Icônes</td><td>Lucide Icons (licence MIT)</td></tr>
-        <tr><td>Polices</td><td>Inter, OpenDyslexic (licences libres)</td></tr>
-        <tr><td>Images d'illustration</td><td>Images générées par IA ou sous licence libre</td></tr>
+        <tr><td data-i18n="mentions.art9.dev">Développement</td><td>RHK Conseil</td></tr>
+        <tr><td data-i18n="mentions.art9.icons">Icônes</td><td data-i18n="mentions.art9.icons_val">Lucide Icons (licence MIT)</td></tr>
+        <tr><td data-i18n="mentions.art9.fonts">Polices</td><td data-i18n="mentions.art9.fonts_val">Inter, OpenDyslexic (licences libres)</td></tr>
+        <tr><td data-i18n="mentions.art9.images">Images d'illustration</td><td data-i18n="mentions.art9.images_val">Images générées par IA ou sous licence libre</td></tr>
       </tbody>
     </table>
 
     <!-- Documents complémentaires -->
-    <h2>Documents juridiques complémentaires</h2>
+    <h2 data-i18n="mentions.docs.title">Documents juridiques complémentaires</h2>
     <div class="doc-links">
-      <a href="/privacy">Politique de confidentialité</a>
-      <a href="/terms">Conditions Générales d'Utilisation</a>
-      <a href="/cgv">Conditions Générales de Vente</a>
+      <a href="/privacy" data-i18n="footer.legal.privacy">Politique de confidentialité</a>
+      <a href="/terms" data-i18n="footer.legal.cgu">Conditions Générales d'Utilisation</a>
+      <a href="/cgv" data-i18n="footer.legal.cgv">Conditions Générales de Vente</a>
     </div>
 
-    <p style="color: var(--text-muted); font-size: 0.82rem; font-style: italic; margin-top: 2rem;">Dernière mise à jour : 25 février 2026</p>
+    <p style="color: var(--text-muted); font-size: 0.82rem; font-style: italic; margin-top: 2rem;" data-i18n="mentions.lastupdate">Dernière mise à jour : 25 février 2026</p>
   </div>
 
   <!-- ═══ FOOTER ═══ -->
   <footer>
-    <div>Galac6 — L'IA de soutien scolaire et de révisions.</div>
+    <div data-i18n="cgv.footer.tagline">Galac6 — L'IA de soutien scolaire et de révisions.</div>
     <div class="footer-badges">
-      <a href="/about" style="color: var(--text-muted);">À propos</a>
-      <a href="/mentions-legales" style="color: var(--text-muted);">Mentions légales</a>
-      <span class="footer-badge">🇫🇷 Made in France</span>
+      <a href="/about" style="color: var(--text-muted);" data-i18n="nav.about">À propos</a>
+      <a href="/mentions-legales" style="color: var(--text-muted);" data-i18n="footer.legal.mentions">Mentions légales</a>
+      <span class="footer-badge" data-i18n="cgv.footer.france">🇫🇷 Made in France</span>
     </div>
   </footer>
 
+<script src="i18n.js"></script>
 <script src="cookie-consent.js"></script>
 </body>
 </html>

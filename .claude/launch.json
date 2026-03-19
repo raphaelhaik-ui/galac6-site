@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "site",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "/Users/raf/Dev/Galac6/galac6-site", "-l", "3001"],
+      "port": 3001
+    }
+  ]
+}

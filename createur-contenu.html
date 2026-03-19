@@ -301,6 +301,44 @@
       .navbar-links a { padding: 0.6rem 0; font-size: 1rem; }
     }
 
+    /* ─── EN Banner ─── */
+    .en-banner {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      text-align: center;
+      padding: 0.6rem 2.5rem;
+      font-size: 0.85rem;
+      position: relative;
+    }
+    .en-banner a { color: #fff; text-decoration: underline; }
+    .en-banner-close {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      opacity: 0.8;
+      padding: 0.25rem;
+    }
+    .en-banner-close:hover { opacity: 1; }
+
+    /* ─── Lang toggle ─── */
+    .lang-toggle {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 0.25rem;
+      line-height: 1;
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+    .lang-toggle:hover { transform: scale(1.15); }
+
     @media (max-width: 640px) {
       .job-page { padding: 2rem 1.2rem 4rem; }
       .job-page h1 { font-size: 1.5rem; }
@@ -317,6 +355,12 @@
 </head>
 <body>
 
+  <!-- ═══ EN BANNER (hidden by default) ═══ -->
+  <div id="en-banner" class="en-banner en-only" style="display:none;" data-i18n-html="banner.text">
+    🌍 Currently available in France only (French school system). Want Galac6 in your country? <a href="mailto:hello@galac6.io" style="color:#fff;text-decoration:underline;">Send a request →</a>
+    <button class="en-banner-close" onclick="closeBanner()" aria-label="Close">&times;</button>
+  </div>
+
   <!-- ═══ NAVBAR ═══ -->
   <div class="navbar-wrapper">
     <nav class="navbar">
@@ -329,84 +373,86 @@
         <span></span><span></span><span></span>
       </button>
       <div class="navbar-links">
-        <a href="/">Accueil</a>
-        <a href="/ecole">École</a>
-        <a href="/tarifs">Tarifs</a>
-        <a href="/about">À propos</a>
-        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
+        <a href="/" data-i18n="about.nav.home">Accueil</a>
+        <a href="/ecole" data-i18n="nav.school">École</a>
+        <a href="/tarifs" data-i18n="nav.pricing">Tarifs</a>
+        <a href="/about" data-i18n="nav.about">À propos</a>
+        <button id="lang-toggle" class="lang-toggle" onclick="toggleLanguage()" aria-label="Switch to English">🇬🇧</button>
+        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;" data-i18n="nav.signup">Inscription ou connexion</a>
       </div>
     </nav>
   </div>
 
   <!-- ═══ CONTENT ═══ -->
   <div class="job-page">
-    <span class="job-badge">Mission freelance</span>
-    <h1>Créateur(rice) de contenu vidéo / UGC</h1>
-    <p class="job-subtitle">Mission freelance — YouTube, TikTok, Instagram — Galac6 | EdTech | IA éducative | galac6.io</p>
+    <span class="job-badge" data-i18n="createur.badge">Mission freelance</span>
+    <h1 data-i18n="createur.title">Créateur(rice) de contenu vidéo / UGC</h1>
+    <p class="job-subtitle" data-i18n="createur.subtitle">Mission freelance — YouTube, TikTok, Instagram — Galac6 | EdTech | IA éducative | galac6.io</p>
 
-    <h2>Le projet</h2>
-    <p>Galac6 est une application française d'IA éducative pour les élèves du CP à la Terminale. Notre approche : l'IA ne donne jamais la réponse, elle apprend à l'élève à réfléchir (méthode socratique). L'appli propose des quiz, dictées vocales, fiches de révision, corrections de contrôles, brevets blancs complets, calcul mental — le tout avec un système de gamification (XP, badges, défis).</p>
-    <p>Nous lançons notre présence vidéo et cherchons un(e) créateur(rice) de contenu pour concevoir, produire et diffuser l'ensemble de nos contenus sur YouTube, TikTok et Instagram.</p>
+    <h2 data-i18n="createur.project.title">Le projet</h2>
+    <p data-i18n="createur.project.p1">Galac6 est une application française d'IA éducative pour les élèves du CP à la Terminale. Notre approche : l'IA ne donne jamais la réponse, elle apprend à l'élève à réfléchir (méthode socratique). L'appli propose des quiz, dictées vocales, fiches de révision, corrections de contrôles, brevets blancs complets, calcul mental — le tout avec un système de gamification (XP, badges, défis).</p>
+    <p data-i18n="createur.project.p2">Nous lançons notre présence vidéo et cherchons un(e) créateur(rice) de contenu pour concevoir, produire et diffuser l'ensemble de nos contenus sur YouTube, TikTok et Instagram.</p>
 
-    <h2>La mission</h2>
+    <h2 data-i18n="createur.mission.title">La mission</h2>
     <ul>
-      <li>Écrire les scripts des tutoriels YouTube (10 vidéos de 3 à 7 min) et des Reels/TikTok, en utilisant l'IA (Claude, ChatGPT) pour accélérer l'écriture</li>
-      <li>Filmer les tutos (screencast) et les monter (CapCut, Premiere, DaVinci ou équivalent)</li>
-      <li>Créer les thumbnails, titres et descriptions optimisés pour le SEO YouTube</li>
-      <li>Décliner les tutos en Shorts YouTube, Reels Instagram et TikTok</li>
-      <li>Animer les comptes sociaux Galac6 : publications régulières, réponses aux commentaires, engagement communautaire</li>
-      <li>Cibler deux audiences : les collégiens/lycéens (contenu fun, hooks percutants) et leurs parents (réassurance, démo du suivi parental)</li>
-      <li>Créer du contenu UGC (User Generated Content) : témoignages d'élèves, réactions authentiques, formats "POV" et "storytime" pour TikTok et Reels</li>
-      <li>Proposer des idées de contenus viraux et suivre les performances (analytics YouTube, Instagram, TikTok)</li>
+      <li data-i18n="createur.mission.m1">Écrire les scripts des tutoriels YouTube (10 vidéos de 3 à 7 min) et des Reels/TikTok, en utilisant l'IA (Claude, ChatGPT) pour accélérer l'écriture</li>
+      <li data-i18n="createur.mission.m2">Filmer les tutos (screencast) et les monter (CapCut, Premiere, DaVinci ou équivalent)</li>
+      <li data-i18n="createur.mission.m3">Créer les thumbnails, titres et descriptions optimisés pour le SEO YouTube</li>
+      <li data-i18n="createur.mission.m4">Décliner les tutos en Shorts YouTube, Reels Instagram et TikTok</li>
+      <li data-i18n="createur.mission.m5">Animer les comptes sociaux Galac6 : publications régulières, réponses aux commentaires, engagement communautaire</li>
+      <li data-i18n="createur.mission.m6">Cibler deux audiences : les collégiens/lycéens (contenu fun, hooks percutants) et leurs parents (réassurance, démo du suivi parental)</li>
+      <li data-i18n="createur.mission.m7">Créer du contenu UGC (User Generated Content) : témoignages d'élèves, réactions authentiques, formats "POV" et "storytime" pour TikTok et Reels</li>
+      <li data-i18n="createur.mission.m8">Proposer des idées de contenus viraux et suivre les performances (analytics YouTube, Instagram, TikTok)</li>
     </ul>
 
-    <h2>Compétences recherchées</h2>
+    <h2 data-i18n="createur.skills.title">Compétences recherchées</h2>
     <ul>
-      <li>Expérience démontrable en création de contenu vidéo (YouTube, TikTok ou Instagram)</li>
-      <li>Maîtrise du montage vidéo : CapCut, Premiere Pro ou DaVinci Resolve</li>
-      <li>Connaissance du SEO YouTube : titres, tags, thumbnails, stratégie de rétention</li>
-      <li>Compréhension des algorithmes des plateformes sociales</li>
-      <li>Utilisation de l'IA générative dans le workflow créatif (scripts, idéation, visuels)</li>
-      <li>Capacité à parler aux ados (14-18 ans) avec le bon ton, sans être cringe</li>
-      <li>Expérience en création UGC : formats authentiques, témoignages, storytelling natif pour les réseaux</li>
-      <li>Bonus : sensibilité pour l'éducation, l'EdTech ou le soutien scolaire</li>
+      <li data-i18n="createur.skills.s1">Expérience démontrable en création de contenu vidéo (YouTube, TikTok ou Instagram)</li>
+      <li data-i18n="createur.skills.s2">Maîtrise du montage vidéo : CapCut, Premiere Pro ou DaVinci Resolve</li>
+      <li data-i18n="createur.skills.s3">Connaissance du SEO YouTube : titres, tags, thumbnails, stratégie de rétention</li>
+      <li data-i18n="createur.skills.s4">Compréhension des algorithmes des plateformes sociales</li>
+      <li data-i18n="createur.skills.s5">Utilisation de l'IA générative dans le workflow créatif (scripts, idéation, visuels)</li>
+      <li data-i18n="createur.skills.s6">Capacité à parler aux ados (14-18 ans) avec le bon ton, sans être cringe</li>
+      <li data-i18n="createur.skills.s7">Expérience en création UGC : formats authentiques, témoignages, storytelling natif pour les réseaux</li>
+      <li data-i18n="createur.skills.s8">Bonus : sensibilité pour l'éducation, l'EdTech ou le soutien scolaire</li>
     </ul>
 
-    <h2>Modalités</h2>
+    <h2 data-i18n="createur.details.title">Modalités</h2>
     <table class="job-table">
-      <tr><td>Format</td><td>Freelance (forfait mensuel) ou alternance</td></tr>
-      <tr><td>Localisation</td><td>Remote (France) — rencontres ponctuelles en région parisienne</td></tr>
-      <tr><td>Démarrage</td><td>Dès que possible</td></tr>
-      <tr><td>Durée</td><td>Mission récurrente — minimum 3 mois</td></tr>
-      <tr><td>Volume</td><td>~10 tutos YouTube + déclinaison Reels/TikTok + animation quotidienne</td></tr>
-      <tr><td>Budget indicatif</td><td>À définir</td></tr>
+      <tr><td data-i18n="createur.details.format.label">Format</td><td data-i18n="createur.details.format.value">Freelance (forfait mensuel) ou alternance</td></tr>
+      <tr><td data-i18n="createur.details.location.label">Localisation</td><td data-i18n="createur.details.location.value">Remote (France) — rencontres ponctuelles en région parisienne</td></tr>
+      <tr><td data-i18n="createur.details.start.label">Démarrage</td><td data-i18n="createur.details.start.value">Dès que possible</td></tr>
+      <tr><td data-i18n="createur.details.duration.label">Durée</td><td data-i18n="createur.details.duration.value">Mission récurrente — minimum 3 mois</td></tr>
+      <tr><td data-i18n="createur.details.volume.label">Volume</td><td data-i18n="createur.details.volume.value">~10 tutos YouTube + déclinaison Reels/TikTok + animation quotidienne</td></tr>
+      <tr><td data-i18n="createur.details.budget.label">Budget indicatif</td><td data-i18n="createur.details.budget.value">À définir</td></tr>
     </table>
 
     <div class="job-cta">
-      <h2>Pour postuler</h2>
-      <p>Envoie-nous à l'adresse <a href="mailto:raphael@galac6.io">raphael@galac6.io</a> :</p>
+      <h2 data-i18n="createur.apply.title">Pour postuler</h2>
+      <p data-i18n-html="createur.apply.intro">Envoie-nous à l'adresse <a href="mailto:raphael@galac6.io">raphael@galac6.io</a> :</p>
       <ol>
-        <li>Un lien vers un contenu vidéo que tu as créé (même personnel, même avec peu de vues — on veut voir ton style)</li>
-        <li>Un message court expliquant comment tu lancerais la chaîne YouTube Galac6</li>
-        <li>Ton TJM ou forfait mensuel souhaité</li>
+        <li data-i18n="createur.apply.step1">Un lien vers un contenu vidéo que tu as créé (même personnel, même avec peu de vues — on veut voir ton style)</li>
+        <li data-i18n="createur.apply.step2">Un message court expliquant comment tu lancerais la chaîne YouTube Galac6</li>
+        <li data-i18n="createur.apply.step3">Ton TJM ou forfait mensuel souhaité</li>
       </ol>
       <div class="job-cta-highlight">
-        <p>Pas de CV corporate. On veut voir ce que tu sais FAIRE.</p>
-        <p style="margin-bottom: 0;"><a href="https://galac6web.netlify.app/">Découvre le produit sur galac6.io</a></p>
+        <p data-i18n="createur.apply.highlight">Pas de CV corporate. On veut voir ce que tu sais FAIRE.</p>
+        <p style="margin-bottom: 0;" data-i18n-html="createur.apply.discover"><a href="https://galac6web.netlify.app/">Découvre le produit sur galac6.io</a></p>
       </div>
     </div>
   </div>
 
   <!-- ═══ FOOTER ═══ -->
   <footer>
-    <div>Galac6 — L'IA de soutien scolaire et de révisions.</div>
+    <div data-i18n="createur.footer.desc">Galac6 — L'IA de soutien scolaire et de révisions.</div>
     <div class="footer-badges">
-      <a href="/about" style="color: var(--text-muted);">À propos</a>
-      <a href="/mentions-legales" style="color: var(--text-muted);">Mentions légales</a>
-      <span class="footer-badge">🇫🇷 Made in France</span>
+      <a href="/about" style="color: var(--text-muted);" data-i18n="footer.contact.about">À propos</a>
+      <a href="/mentions-legales" style="color: var(--text-muted);" data-i18n="footer.legal.mentions">Mentions légales</a>
+      <span class="footer-badge" data-i18n="createur.footer.france">🇫🇷 Made in France</span>
     </div>
   </footer>
 
+<script src="i18n.js"></script>
 <script src="cookie-consent.js"></script>
 </body>
 </html>

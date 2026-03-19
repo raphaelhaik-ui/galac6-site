@@ -33,6 +33,44 @@
     a { color: var(--primary-light); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
+    /* ─── EN Banner ─── */
+    .en-banner {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      text-align: center;
+      padding: 0.6rem 2.5rem;
+      font-size: 0.85rem;
+      position: relative;
+    }
+    .en-banner a { color: #fff; text-decoration: underline; }
+    .en-banner-close {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      opacity: 0.8;
+      padding: 0.25rem;
+    }
+    .en-banner-close:hover { opacity: 1; }
+
+    /* ─── Lang toggle ─── */
+    .lang-toggle {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 0.25rem;
+      line-height: 1;
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+    .lang-toggle:hover { transform: scale(1.15); }
+
     .navbar-wrapper {
       position: sticky;
       top: 0;
@@ -207,6 +245,12 @@
 </head>
 <body>
 
+  <!-- ═══ EN BANNER (hidden by default) ═══ -->
+  <div id="en-banner" class="en-banner en-only" style="display:none;" data-i18n-html="banner.text">
+    🌍 Currently available in France only (French school system). Want Galac6 in your country? <a href="mailto:hello@galac6.io" style="color:#fff;text-decoration:underline;">Send a request →</a>
+    <button class="en-banner-close" onclick="closeBanner()" aria-label="Close">&times;</button>
+  </div>
+
   <!-- ═══ NAVBAR ═══ -->
   <div class="navbar-wrapper">
     <nav class="navbar">
@@ -219,88 +263,90 @@
         <span></span><span></span><span></span>
       </button>
       <div class="navbar-links">
-        <a href="/">Accueil</a>
-        <a href="/ecole">École</a>
-        <a href="/tarifs">Tarifs</a>
-        <a href="/about">À propos</a>
-        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
+        <a href="/" data-i18n="nav.home">Accueil</a>
+        <a href="/ecole" data-i18n="nav.school">École</a>
+        <a href="/tarifs" data-i18n="nav.pricing">Tarifs</a>
+        <a href="/about" data-i18n="nav.about">À propos</a>
+        <button id="lang-toggle" class="lang-toggle" onclick="toggleLanguage()" aria-label="Switch to English">🇬🇧</button>
+        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;" data-i18n="nav.signup">Inscription ou connexion</a>
       </div>
     </nav>
   </div>
 
   <!-- ═══ CONTENT ═══ -->
   <div class="content">
-    <h1>Conditions Générales de Vente</h1>
-    <p class="subtitle">Dernière mise à jour : 25 février 2026</p>
+    <h1 data-i18n="cgv.title">Conditions Générales de Vente</h1>
+    <p class="subtitle" data-i18n="cgv.subtitle">Dernière mise à jour : 25 février 2026</p>
 
-    <p>Les présentes Conditions Générales de Vente (CGV) régissent l'ensemble des ventes d'abonnements au service Galac6, édité par RHK Conseil. Toute souscription implique l'acceptation sans réserve des présentes CGV.</p>
+    <p data-i18n="cgv.intro">Les présentes Conditions Générales de Vente (CGV) régissent l'ensemble des ventes d'abonnements au service Galac6, édité par RHK Conseil. Toute souscription implique l'acceptation sans réserve des présentes CGV.</p>
 
-    <h2>1. Objet</h2>
-    <p>Les présentes CGV ont pour objet de définir les conditions dans lesquelles RHK Conseil (ci-après « l'Éditeur ») propose à l'Utilisateur (ci-après « le Client ») l'accès au service Galac6, une application éducative utilisant l'intelligence artificielle pour accompagner les élèves dans leurs apprentissages.</p>
+    <h2 data-i18n="cgv.art1.title">1. Objet</h2>
+    <p data-i18n="cgv.art1.text">Les présentes CGV ont pour objet de définir les conditions dans lesquelles RHK Conseil (ci-après « l'Éditeur ») propose à l'Utilisateur (ci-après « le Client ») l'accès au service Galac6, une application éducative utilisant l'intelligence artificielle pour accompagner les élèves dans leurs apprentissages.</p>
 
-    <h2>2. Offres et tarifs</h2>
-    <p>Galac6 propose trois formules :</p>
+    <h2 data-i18n="cgv.art2.title">2. Offres et tarifs</h2>
+    <p data-i18n="cgv.art2.intro">Galac6 propose trois formules :</p>
     <ul>
-      <li><strong>Plan Gratuit — 0 €</strong> : accès limité comprenant 5 messages par jour, 1 quiz par jour et 1 dictée par jour. Les fonctionnalités suivantes ne sont pas incluses : synthèse vocale, upload d'images, saisie vocale et remédiation avancée.</li>
-      <li><strong>Plan Mensuel — 13,99 € / mois</strong> : sans engagement, résiliable à tout moment. Accès illimité à toutes les fonctionnalités : messages, quiz et dictées illimités, synthèse vocale, upload d'images, saisie vocale et remédiation avancée.</li>
-      <li><strong>Plan Annuel — 9,99 € / mois</strong> (facturé 119,88 € par an, soit une économie de 29 %) : accès illimité à toutes les fonctionnalités, identique au plan mensuel.</li>
+      <li data-i18n-html="cgv.art2.free"><strong>Plan Gratuit — 0 €</strong> : accès limité comprenant 5 messages par jour, 1 quiz par jour et 1 dictée par jour. Les fonctionnalités suivantes ne sont pas incluses : synthèse vocale, upload d'images, saisie vocale et remédiation avancée.</li>
+      <li data-i18n-html="cgv.art2.monthly"><strong>Plan Mensuel — 13,99 € / mois</strong> : sans engagement, résiliable à tout moment. Accès illimité à toutes les fonctionnalités : messages, quiz et dictées illimités, synthèse vocale, upload d'images, saisie vocale et remédiation avancée.</li>
+      <li data-i18n-html="cgv.art2.annual"><strong>Plan Annuel — 9,99 € / mois</strong> (facturé 119,88 € par an, soit une économie de 29 %) : accès illimité à toutes les fonctionnalités, identique au plan mensuel.</li>
     </ul>
-    <p>Les tarifs sont indiqués en euros TTC. L'Éditeur se réserve le droit de modifier les tarifs à tout moment. Toute modification tarifaire sera notifiée aux Clients avant la prochaine échéance de facturation.</p>
+    <p data-i18n="cgv.art2.note">Les tarifs sont indiqués en euros TTC. L'Éditeur se réserve le droit de modifier les tarifs à tout moment. Toute modification tarifaire sera notifiée aux Clients avant la prochaine échéance de facturation.</p>
 
-    <h2>3. Souscription et paiement</h2>
-    <p>La souscription à un abonnement payant s'effectue en ligne via la page de tarification de Galac6. Le paiement est géré de manière sécurisée par Stripe (Stripe Inc.). Les moyens de paiement acceptés sont : carte bancaire (Visa, Mastercard, American Express). Le paiement est prélevé automatiquement à la date de souscription, puis à chaque échéance (mensuelle ou annuelle selon la formule choisie).</p>
+    <h2 data-i18n="cgv.art3.title">3. Souscription et paiement</h2>
+    <p data-i18n="cgv.art3.text">La souscription à un abonnement payant s'effectue en ligne via la page de tarification de Galac6. Le paiement est géré de manière sécurisée par Stripe (Stripe Inc.). Les moyens de paiement acceptés sont : carte bancaire (Visa, Mastercard, American Express). Le paiement est prélevé automatiquement à la date de souscription, puis à chaque échéance (mensuelle ou annuelle selon la formule choisie).</p>
 
-    <h2>4. Droit de rétractation</h2>
-    <p>Conformément aux articles L.221-18 et suivants du Code de la consommation, le Client dispose d'un délai de <strong>14 jours</strong> à compter de la date de souscription pour exercer son droit de rétractation, sans avoir à justifier de motifs ni à payer de pénalités.</p>
-    <p>Pour exercer ce droit, le Client peut contacter l'Éditeur par email à <a href="mailto:hello@galac6.io">hello@galac6.io</a> en indiquant clairement sa volonté de se rétracter. Le remboursement sera effectué dans un délai de 14 jours suivant la réception de la demande, via le même moyen de paiement que celui utilisé pour la transaction initiale.</p>
-    <p>Si le Client a expressément demandé l'exécution du service avant l'expiration du délai de rétractation et a utilisé le service, le montant dû au titre du service consommé lui sera facturé au prorata.</p>
+    <h2 data-i18n="cgv.art4.title">4. Droit de rétractation</h2>
+    <p data-i18n-html="cgv.art4.p1">Conformément aux articles L.221-18 et suivants du Code de la consommation, le Client dispose d'un délai de <strong>14 jours</strong> à compter de la date de souscription pour exercer son droit de rétractation, sans avoir à justifier de motifs ni à payer de pénalités.</p>
+    <p data-i18n-html="cgv.art4.p2">Pour exercer ce droit, le Client peut contacter l'Éditeur par email à <a href="mailto:hello@galac6.io">hello@galac6.io</a> en indiquant clairement sa volonté de se rétracter. Le remboursement sera effectué dans un délai de 14 jours suivant la réception de la demande, via le même moyen de paiement que celui utilisé pour la transaction initiale.</p>
+    <p data-i18n="cgv.art4.p3">Si le Client a expressément demandé l'exécution du service avant l'expiration du délai de rétractation et a utilisé le service, le montant dû au titre du service consommé lui sera facturé au prorata.</p>
 
-    <h2>5. Durée et renouvellement</h2>
-    <p>L'abonnement mensuel est conclu pour une durée d'un mois et se renouvelle automatiquement à chaque échéance. L'abonnement annuel est conclu pour une durée de douze mois et se renouvelle automatiquement à chaque anniversaire de souscription.</p>
-    <p>Le Client peut à tout moment consulter la date de son prochain renouvellement et gérer son abonnement depuis le portail de gestion Stripe, accessible depuis la section « Mon abonnement » de l'application.</p>
+    <h2 data-i18n="cgv.art5.title">5. Durée et renouvellement</h2>
+    <p data-i18n="cgv.art5.p1">L'abonnement mensuel est conclu pour une durée d'un mois et se renouvelle automatiquement à chaque échéance. L'abonnement annuel est conclu pour une durée de douze mois et se renouvelle automatiquement à chaque anniversaire de souscription.</p>
+    <p data-i18n="cgv.art5.p2">Le Client peut à tout moment consulter la date de son prochain renouvellement et gérer son abonnement depuis le portail de gestion Stripe, accessible depuis la section « Mon abonnement » de l'application.</p>
 
-    <h2>6. Résiliation</h2>
-    <p>Le Client peut résilier son abonnement à tout moment depuis le portail de gestion Stripe. La résiliation prend effet à la fin de la période déjà payée : le Client conserve l'accès aux fonctionnalités payantes jusqu'à la date d'expiration de sa période en cours.</p>
-    <p>Aucun remboursement au prorata ne sera effectué pour la période restante, sauf dans le cadre du droit de rétractation (article 4).</p>
-    <p>L'Éditeur se réserve le droit de suspendre ou résilier l'accès d'un Client en cas de violation des <a href="/terms">Conditions Générales d'Utilisation</a>.</p>
+    <h2 data-i18n="cgv.art6.title">6. Résiliation</h2>
+    <p data-i18n="cgv.art6.p1">Le Client peut résilier son abonnement à tout moment depuis le portail de gestion Stripe. La résiliation prend effet à la fin de la période déjà payée : le Client conserve l'accès aux fonctionnalités payantes jusqu'à la date d'expiration de sa période en cours.</p>
+    <p data-i18n="cgv.art6.p2">Aucun remboursement au prorata ne sera effectué pour la période restante, sauf dans le cadre du droit de rétractation (article 4).</p>
+    <p data-i18n-html="cgv.art6.p3">L'Éditeur se réserve le droit de suspendre ou résilier l'accès d'un Client en cas de violation des <a href="/terms">Conditions Générales d'Utilisation</a>.</p>
 
-    <h2>7. Responsabilité</h2>
-    <p>Galac6 est un outil d'accompagnement éducatif utilisant l'intelligence artificielle. Il ne se substitue en aucun cas à un enseignant, un tuteur ou un professionnel de l'éducation. Les contenus générés par l'IA sont fournis à titre indicatif et peuvent contenir des inexactitudes.</p>
-    <p>L'Éditeur ne saurait être tenu responsable :</p>
+    <h2 data-i18n="cgv.art7.title">7. Responsabilité</h2>
+    <p data-i18n="cgv.art7.p1">Galac6 est un outil d'accompagnement éducatif utilisant l'intelligence artificielle. Il ne se substitue en aucun cas à un enseignant, un tuteur ou un professionnel de l'éducation. Les contenus générés par l'IA sont fournis à titre indicatif et peuvent contenir des inexactitudes.</p>
+    <p data-i18n="cgv.art7.p2">L'Éditeur ne saurait être tenu responsable :</p>
     <ul>
-      <li>des résultats scolaires obtenus par l'élève ;</li>
-      <li>des interruptions temporaires du service liées à la maintenance ou à des dysfonctionnements techniques ;</li>
-      <li>de l'utilisation faite du service par le Client ou l'élève.</li>
-    </ul>
-
-    <h2>8. Protection des données personnelles</h2>
-    <p>Le traitement des données personnelles dans le cadre de l'utilisation de Galac6 est décrit dans notre <a href="/privacy">Politique de confidentialité</a>. Le Client est invité à en prendre connaissance avant toute souscription.</p>
-
-    <h2>9. Droit applicable et litiges</h2>
-    <p>Les présentes CGV sont soumises au droit français.</p>
-    <p>En cas de litige, le Client peut recourir gratuitement à un médiateur de la consommation dans les conditions prévues aux articles L.611-1 et suivants du Code de la consommation. Le médiateur compétent sera communiqué sur simple demande à <a href="mailto:hello@galac6.io">hello@galac6.io</a>.</p>
-    <p>À défaut de résolution amiable, le litige sera porté devant les tribunaux compétents conformément aux règles de droit commun.</p>
-
-    <h2>10. Contact</h2>
-    <p>Pour toute question relative aux présentes Conditions Générales de Vente, vous pouvez contacter l'Éditeur :</p>
-    <ul>
-      <li><strong>Email</strong> : <a href="mailto:hello@galac6.io">hello@galac6.io</a></li>
-      <li><strong>Éditeur</strong> : RHK Conseil</li>
+      <li data-i18n="cgv.art7.li1">des résultats scolaires obtenus par l'élève ;</li>
+      <li data-i18n="cgv.art7.li2">des interruptions temporaires du service liées à la maintenance ou à des dysfonctionnements techniques ;</li>
+      <li data-i18n="cgv.art7.li3">de l'utilisation faite du service par le Client ou l'élève.</li>
     </ul>
 
-    <p style="color: var(--text-muted); font-size: 0.82rem; font-style: italic; margin-top: 2rem;">Dernière mise à jour : 25 février 2026</p>
+    <h2 data-i18n="cgv.art8.title">8. Protection des données personnelles</h2>
+    <p data-i18n-html="cgv.art8.text">Le traitement des données personnelles dans le cadre de l'utilisation de Galac6 est décrit dans notre <a href="/privacy">Politique de confidentialité</a>. Le Client est invité à en prendre connaissance avant toute souscription.</p>
+
+    <h2 data-i18n="cgv.art9.title">9. Droit applicable et litiges</h2>
+    <p data-i18n="cgv.art9.p1">Les présentes CGV sont soumises au droit français.</p>
+    <p data-i18n-html="cgv.art9.p2">En cas de litige, le Client peut recourir gratuitement à un médiateur de la consommation dans les conditions prévues aux articles L.611-1 et suivants du Code de la consommation. Le médiateur compétent sera communiqué sur simple demande à <a href="mailto:hello@galac6.io">hello@galac6.io</a>.</p>
+    <p data-i18n="cgv.art9.p3">À défaut de résolution amiable, le litige sera porté devant les tribunaux compétents conformément aux règles de droit commun.</p>
+
+    <h2 data-i18n="cgv.art10.title">10. Contact</h2>
+    <p data-i18n="cgv.art10.text">Pour toute question relative aux présentes Conditions Générales de Vente, vous pouvez contacter l'Éditeur :</p>
+    <ul>
+      <li data-i18n-html="cgv.art10.email"><strong>Email</strong> : <a href="mailto:hello@galac6.io">hello@galac6.io</a></li>
+      <li data-i18n-html="cgv.art10.editor"><strong>Éditeur</strong> : RHK Conseil</li>
+    </ul>
+
+    <p style="color: var(--text-muted); font-size: 0.82rem; font-style: italic; margin-top: 2rem;" data-i18n="cgv.lastupdate">Dernière mise à jour : 25 février 2026</p>
   </div>
 
   <!-- ═══ FOOTER ═══ -->
   <footer>
-    <div>Galac6 — L'IA de soutien scolaire et de révisions.</div>
+    <div data-i18n="cgv.footer.tagline">Galac6 — L'IA de soutien scolaire et de révisions.</div>
     <div class="footer-badges">
-      <a href="/about" style="color: var(--text-muted);">À propos</a>
-      <a href="/mentions-legales" style="color: var(--text-muted);">Mentions légales</a>
-      <span class="footer-badge">🇫🇷 Made in France</span>
+      <a href="/about" style="color: var(--text-muted);" data-i18n="nav.about">À propos</a>
+      <a href="/mentions-legales" style="color: var(--text-muted);" data-i18n="footer.legal.mentions">Mentions légales</a>
+      <span class="footer-badge" data-i18n="cgv.footer.france">🇫🇷 Made in France</span>
     </div>
   </footer>
 
+<script src="i18n.js"></script>
 <script src="cookie-consent.js"></script>
 </body>
 </html>

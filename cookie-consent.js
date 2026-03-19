@@ -71,16 +71,25 @@
   ].join('\n');
   document.head.appendChild(style);
 
+  var isEN = localStorage.getItem('galac6-lang') === 'en';
+
   var banner = document.createElement('div');
   banner.id = 'galac6-cookie-banner';
-  banner.innerHTML =
-    '<p>Galac6 utilise des cookies fonctionnels pour mémoriser vos préférences (thème, accessibilité). ' +
-    'Aucun cookie publicitaire ni de traçage. ' +
-    '<a href="/privacy">En savoir plus</a></p>' +
-    '<div class="cookie-btns">' +
-    '<button id="galac6-cookie-accept">Accepter</button>' +
-    '<button id="galac6-cookie-refuse">Continuer sans accepter</button>' +
-    '</div>';
+  banner.innerHTML = isEN
+    ? '<p>Galac6 uses functional cookies to remember your preferences (theme, accessibility). ' +
+      'No advertising or tracking cookies. ' +
+      '<a href="/privacy">Learn more</a></p>' +
+      '<div class="cookie-btns">' +
+      '<button id="galac6-cookie-accept">Accept</button>' +
+      '<button id="galac6-cookie-refuse">Continue without accepting</button>' +
+      '</div>'
+    : '<p>Galac6 utilise des cookies fonctionnels pour mémoriser vos préférences (thème, accessibilité). ' +
+      'Aucun cookie publicitaire ni de traçage. ' +
+      '<a href="/privacy">En savoir plus</a></p>' +
+      '<div class="cookie-btns">' +
+      '<button id="galac6-cookie-accept">Accepter</button>' +
+      '<button id="galac6-cookie-refuse">Continuer sans accepter</button>' +
+      '</div>';
   document.body.appendChild(banner);
 
   document.getElementById('galac6-cookie-accept').addEventListener('click', function () {

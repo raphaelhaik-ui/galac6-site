@@ -568,6 +568,44 @@
       .navbar-links a { padding: 0.6rem 0; font-size: 1rem; }
     }
 
+    /* ─── EN Banner ─── */
+    .en-banner {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      text-align: center;
+      padding: 0.6rem 2.5rem;
+      font-size: 0.85rem;
+      position: relative;
+    }
+    .en-banner a { color: #fff; text-decoration: underline; }
+    .en-banner-close {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      opacity: 0.8;
+      padding: 0.25rem;
+    }
+    .en-banner-close:hover { opacity: 1; }
+
+    /* ─── Lang toggle ─── */
+    .lang-toggle {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 0.25rem;
+      line-height: 1;
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+    .lang-toggle:hover { transform: scale(1.15); }
+
     @media (max-width: 640px) {
       .btn { width: 100%; max-width: 340px; justify-content: center; }
       .features-grid { grid-template-columns: 1fr; }
@@ -582,6 +620,12 @@
 </head>
 <body>
 
+  <!-- ═══ EN BANNER (hidden by default) ═══ -->
+  <div id="en-banner" class="en-banner en-only" style="display:none;" data-i18n-html="banner.text">
+    🌍 Currently available in France only (French school system). Want Galac6 in your country? <a href="mailto:hello@galac6.io" style="color:#fff;text-decoration:underline;">Send a request →</a>
+    <button class="en-banner-close" onclick="closeBanner()" aria-label="Close">&times;</button>
+  </div>
+
   <!-- ═══ NAVBAR ═══ -->
   <div class="navbar-wrapper">
     <nav class="navbar">
@@ -594,11 +638,12 @@
         <span></span><span></span><span></span>
       </button>
       <div class="navbar-links">
-        <a href="/#features">Fonctionnalités</a>
-        <a href="/ecole" class="active">École</a>
-        <a href="/#pricing">Tarif</a>
-        <a href="/about">À propos</a>
-        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
+        <a href="/#features" data-i18n="nav.features">Fonctionnalités</a>
+        <a href="/ecole" class="active" data-i18n="nav.school">École</a>
+        <a href="/#pricing" data-i18n="nav.pricing">Tarif</a>
+        <a href="/about" data-i18n="nav.about">À propos</a>
+        <button id="lang-toggle" class="lang-toggle" onclick="toggleLanguage()" aria-label="Switch to English">🇬🇧</button>
+        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;" data-i18n="nav.signup">Inscription ou connexion</a>
       </div>
     </nav>
   </div>
@@ -606,10 +651,10 @@
   <!-- ═══ HERO ═══ -->
   <div class="hero">
     <div class="hero-content">
-      <a href="/" class="back-link">&larr; Retour &agrave; l'accueil</a>
-      <div class="hero-badge">🏫 Offre Établissements Scolaires</div>
-      <h1>Galac6 pour <span class="gradient">votre établissement</span></h1>
-      <p class="subtitle">Déployez Galac6 dans votre établissement. Console centralisée, codes d'invitation, suivi par classe et temps d'écran maîtrisé.</p>
+      <a href="/" class="back-link" data-i18n="ecole.back">&larr; Retour &agrave; l'accueil</a>
+      <div class="hero-badge" data-i18n="ecole.badge">🏫 Offre Établissements Scolaires</div>
+      <h1 data-i18n-html="ecole.hero.title">Galac6 pour <span class="gradient">votre établissement</span></h1>
+      <p class="subtitle" data-i18n="ecole.hero.subtitle">Déployez Galac6 dans votre établissement. Console centralisée, codes d'invitation, suivi par classe et temps d'écran maîtrisé.</p>
     </div>
   </div>
 
@@ -617,19 +662,19 @@
 
   <!-- ═══ 3 PILIERS ═══ -->
   <section>
-    <h2 class="section-title">Un outil pour chaque acteur</h2>
-    <p class="section-subtitle">Élèves, enseignants et direction bénéficient chacun de fonctionnalités dédiées.</p>
+    <h2 class="section-title" data-i18n="ecole.pillars.title">Un outil pour chaque acteur</h2>
+    <p class="section-subtitle" data-i18n="ecole.pillars.subtitle">Élèves, enseignants et direction bénéficient chacun de fonctionnalités dédiées.</p>
 
     <div class="features-grid" style="grid-template-columns: repeat(2, 1fr);">
       <div class="feature-card">
         <div class="feature-icon fi-purple">🎓</div>
-        <h3>Pour l'élève</h3>
-        <p>L'IA ne donne jamais la réponse : elle pose des questions, encourage la réflexion et s'adapte au niveau de chaque élève.</p>
+        <h3 data-i18n="ecole.pillar.student.title">Pour l'élève</h3>
+        <p data-i18n="ecole.pillar.student.desc">L'IA ne donne jamais la réponse : elle pose des questions, encourage la réflexion et s'adapte au niveau de chaque élève.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon fi-green">🏛️</div>
-        <h3>Pour la direction</h3>
-        <p>Déploiement centralisé, facturation transparente, respect du RGPD, données hébergées en France.</p>
+        <h3 data-i18n="ecole.pillar.admin.title">Pour la direction</h3>
+        <p data-i18n="ecole.pillar.admin.desc">Déploiement centralisé, facturation transparente, respect du RGPD, données hébergées en France.</p>
       </div>
     </div>
   </section>
@@ -638,39 +683,39 @@
 
   <!-- ═══ FONCTIONNALITÉS ÉCOLE ═══ -->
   <section>
-    <h2 class="section-title">Fonctionnalités détaillées</h2>
-    <p class="section-subtitle">Tout ce qu'il faut pour accompagner élèves, enseignants et administration.</p>
+    <h2 class="section-title" data-i18n="ecole.features.title">Fonctionnalités détaillées</h2>
+    <p class="section-subtitle" data-i18n="ecole.features.subtitle">Tout ce qu'il faut pour accompagner élèves, enseignants et administration.</p>
 
     <div class="audience-grid" style="grid-template-columns: repeat(2, 1fr);">
       <div class="audience-card">
-        <h3>🎓 Élèves</h3>
+        <h3 data-i18n="ecole.features.students.title">🎓 Élèves</h3>
         <ul>
-          <li>Chat IA socratique — guide par étapes</li>
-          <li>Quiz interactifs avec corrections et XP</li>
-          <li>Dictées vocales (voix IA, 3 vitesses, mode papier)</li>
-          <li>Fiches de révision complètes ou pense-bête express</li>
-          <li>Saisie vocale des questions et formules math</li>
-          <li>OCR — photographier un exercice</li>
-          <li>Éditeur de formules mathématiques</li>
-          <li>Parcours Scratch et Python guidés</li>
-          <li>Gamification : XP, badges, défis quotidiens</li>
-          <li>Modes accessibilité (dyslexie, dyspraxie…)</li>
-          <li>11 matières scolaires (Éduscol)</li>
-          <li>Du CP à la Terminale</li>
-          <li>Brevet blanc DNB — Épreuves complètes en Maths, Français, Sciences et Histoire-Géo avec correction IA</li>
+          <li data-i18n="ecole.features.students.f1">Chat IA socratique — guide par étapes</li>
+          <li data-i18n="ecole.features.students.f2">Quiz interactifs avec corrections et XP</li>
+          <li data-i18n="ecole.features.students.f3">Dictées vocales (voix IA, 3 vitesses, mode papier)</li>
+          <li data-i18n="ecole.features.students.f4">Fiches de révision complètes ou pense-bête express</li>
+          <li data-i18n="ecole.features.students.f5">Saisie vocale des questions et formules math</li>
+          <li data-i18n="ecole.features.students.f6">OCR — photographier un exercice</li>
+          <li data-i18n="ecole.features.students.f7">Éditeur de formules mathématiques</li>
+          <li data-i18n="ecole.features.students.f8">Parcours Scratch et Python guidés</li>
+          <li data-i18n="ecole.features.students.f9">Gamification : XP, badges, défis quotidiens</li>
+          <li data-i18n="ecole.features.students.f10">Modes accessibilité (dyslexie, dyspraxie…)</li>
+          <li data-i18n="ecole.features.students.f11">11 matières scolaires (Éduscol)</li>
+          <li data-i18n="ecole.features.students.f12">Du CP à la Terminale</li>
+          <li data-i18n="ecole.features.students.f13">Brevet blanc DNB — Épreuves complètes en Maths, Français, Sciences et Histoire-Géo avec correction IA</li>
         </ul>
       </div>
       <div class="audience-card">
-        <h3>🏛️ Établissement</h3>
+        <h3 data-i18n="ecole.features.school.title">🏛️ Établissement</h3>
         <ul>
-          <li>Console d'administration centralisée</li>
-          <li>Codes d'invitation par établissement</li>
-          <li>Contrôle du temps d'écran par élève</li>
-          <li>Aménagements d'accessibilité par classe</li>
-          <li>Statistiques d'utilisation par classe</li>
-          <li>Rôles administrateur et enseignant</li>
-          <li>Application de filtrage IA bientôt disponible</li>
-          <li>Brevets blancs IA — Sujets générés et copies corrigées automatiquement</li>
+          <li data-i18n="ecole.features.school.f1">Console d'administration centralisée</li>
+          <li data-i18n="ecole.features.school.f2">Codes d'invitation par établissement</li>
+          <li data-i18n="ecole.features.school.f3">Contrôle du temps d'écran par élève</li>
+          <li data-i18n="ecole.features.school.f4">Aménagements d'accessibilité par classe</li>
+          <li data-i18n="ecole.features.school.f5">Statistiques d'utilisation par classe</li>
+          <li data-i18n="ecole.features.school.f6">Rôles administrateur et enseignant</li>
+          <li data-i18n="ecole.features.school.f7">Application de filtrage IA bientôt disponible</li>
+          <li data-i18n="ecole.features.school.f8">Brevets blancs IA — Sujets générés et copies corrigées automatiquement</li>
         </ul>
       </div>
     </div>
@@ -680,24 +725,24 @@
 
   <!-- ═══ CONFIANCE / SÉCURITÉ ═══ -->
   <section>
-    <h2 class="section-title">Confiance et sécurité</h2>
-    <p class="section-subtitle">Un cadre rigoureux pour protéger les données de vos élèves.</p>
+    <h2 class="section-title" data-i18n="ecole.trust.title">Confiance et sécurité</h2>
+    <p class="section-subtitle" data-i18n="ecole.trust.subtitle">Un cadre rigoureux pour protéger les données de vos élèves.</p>
 
     <div class="trust-grid">
       <div class="trust-item">
         <div class="trust-icon">🛡️</div>
-        <h4>IA responsable</h4>
-        <p>Modération automatique, filtrage de contenu inapproprié.</p>
+        <h4 data-i18n="ecole.trust.ai.title">IA responsable</h4>
+        <p data-i18n="ecole.trust.ai.desc">Modération automatique, filtrage de contenu inapproprié.</p>
       </div>
       <div class="trust-item">
         <div class="trust-icon">📊</div>
-        <h4>Transparence</h4>
-        <p>Coût IA facturé au réel, sans marge cachée.</p>
+        <h4 data-i18n="ecole.trust.transparency.title">Transparence</h4>
+        <p data-i18n="ecole.trust.transparency.desc">Coût IA facturé au réel, sans marge cachée.</p>
       </div>
       <div class="trust-item">
         <div class="trust-icon">🇫🇷</div>
-        <h4>Made in France</h4>
-        <p>Conçu et développé en France.</p>
+        <h4 data-i18n="ecole.trust.france.title">Made in France</h4>
+        <p data-i18n="ecole.trust.france.desc">Conçu et développé en France.</p>
       </div>
     </div>
   </section>
@@ -706,10 +751,10 @@
 
   <!-- ═══ CTA ═══ -->
   <section class="cta-section">
-    <h2>Déployez Galac6 dans votre établissement</h2>
-    <p>Demandez une démonstration gratuite et un devis personnalisé.</p>
+    <h2 data-i18n="ecole.cta.title">Déployez Galac6 dans votre établissement</h2>
+    <p data-i18n="ecole.cta.subtitle">Demandez une démonstration gratuite et un devis personnalisé.</p>
     <div class="cta-row">
-      <a href="mailto:hello@galac6.io?subject=Demande%20de%20d%C3%A9mo%20%E2%80%93%20Offre%20%C3%89cole" class="btn btn-primary">Demander une démo</a>
+      <a href="mailto:hello@galac6.io?subject=Demande%20de%20d%C3%A9mo%20%E2%80%93%20Offre%20%C3%89cole" class="btn btn-primary" data-i18n="ecole.cta.button">Demander une démo</a>
     </div>
   </section>
 
@@ -717,18 +762,18 @@
 
   <!-- ═══ FAQ ═══ -->
   <section>
-    <h2 class="section-title">Questions fréquentes</h2>
-    <p class="section-subtitle">Tout ce que vous devez savoir avant de déployer Galac6.</p>
+    <h2 class="section-title" data-i18n="ecole.faq.title">Questions fréquentes</h2>
+    <p class="section-subtitle" data-i18n="ecole.faq.subtitle">Tout ce que vous devez savoir avant de déployer Galac6.</p>
 
     <div class="faq-list">
 
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          Galac6 fonctionne-t-il sur les tablettes et Chromebooks de l'école ?
+          <span data-i18n="ecole.faq.q1">Galac6 fonctionne-t-il sur les tablettes et Chromebooks de l'école ?</span>
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">
+          <div class="faq-answer-inner" data-i18n="ecole.faq.a1">
             Oui. Galac6 est une application web qui fonctionne sur tout navigateur moderne (Chrome, Firefox, Safari, Edge) — tablettes, Chromebooks, PC et Mac.
           </div>
         </div>
@@ -736,11 +781,11 @@
 
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          L'IA donne-t-elle les réponses aux élèves ?
+          <span data-i18n="ecole.faq.q2">L'IA donne-t-elle les réponses aux élèves ?</span>
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">
+          <div class="faq-answer-inner" data-i18n="ecole.faq.a2">
             Non. Galac6 utilise la méthode socratique : l'IA pose des questions, donne des indices et guide la réflexion étape par étape. L'élève construit sa compréhension.
           </div>
         </div>
@@ -749,11 +794,11 @@
 
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          Peut-on bloquer l'accès aux autres IA (ChatGPT, etc.) ?
+          <span data-i18n="ecole.faq.q3">Peut-on bloquer l'accès aux autres IA (ChatGPT, etc.) ?</span>
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">
+          <div class="faq-answer-inner" data-i18n="ecole.faq.a3">
             Une application dédiée de filtrage est en cours de développement et sera bientôt disponible. Elle permettra de bloquer l'accès aux IA concurrentes sur les appareils de l'école, pour éviter que les élèves n'obtiennent des réponses toutes faites.
           </div>
         </div>
@@ -761,11 +806,11 @@
 
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          Comment se passe le déploiement ?
+          <span data-i18n="ecole.faq.q4">Comment se passe le déploiement ?</span>
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">
+          <div class="faq-answer-inner" data-i18n-html="ecole.faq.a4">
             <ol>
               <li>Création de la console établissement</li>
               <li>Import des élèves et classes (CSV ou saisie manuelle)</li>
@@ -779,11 +824,11 @@
 
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          Y a-t-il un essai gratuit ?
+          <span data-i18n="ecole.faq.q5">Y a-t-il un essai gratuit ?</span>
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">
+          <div class="faq-answer-inner" data-i18n="ecole.faq.a5">
             Oui. Nous proposons un pilote gratuit de 1 mois pour une classe, afin de tester Galac6 en conditions réelles avant de s'engager.
           </div>
         </div>
@@ -791,11 +836,11 @@
 
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          Galac6 utilise-t-il des technologies françaises ?
+          <span data-i18n="ecole.faq.q6">Galac6 utilise-t-il des technologies françaises ?</span>
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">
+          <div class="faq-answer-inner" data-i18n="ecole.faq.a6">
             Galac6 utilise en priorité Mistral, un LLM français souverain, complété par Anthropic et OpenAI. Les données sont hébergées en Europe. Option 100 % souveraine disponible à la demande.
           </div>
         </div>
@@ -806,14 +851,15 @@
 
   <!-- ═══ FOOTER ═══ -->
   <footer>
-    <div>Galac6 — L'IA de soutien scolaire et de révisions.</div>
+    <div data-i18n="ecole.footer.desc">Galac6 — L'IA de soutien scolaire et de révisions.</div>
     <div class="footer-badges">
-      <a href="/about" style="color: var(--text-muted);">À propos</a>
-      <a href="/mentions-legales" style="color: var(--text-muted);">Mentions légales</a>
-      <span class="footer-badge">🇫🇷 Made in France</span>
+      <a href="/about" style="color: var(--text-muted);" data-i18n="footer.contact.about">À propos</a>
+      <a href="/mentions-legales" style="color: var(--text-muted);" data-i18n="footer.legal.mentions">Mentions légales</a>
+      <span class="footer-badge" data-i18n="ecole.footer.france">🇫🇷 Made in France</span>
     </div>
   </footer>
 
+<script src="i18n.js"></script>
 <script src="cookie-consent.js"></script>
 </body>
 </html>
