@@ -816,20 +816,12 @@
 
     if (savedLang === 'en') {
       applyLanguage('en');
-    } else if (savedLang === 'fr') {
-      applyLanguage('fr');
     } else {
-      // Premier visit : détecter la langue du navigateur
-      var browserLang = (navigator.language || navigator.userLanguage || 'fr').toLowerCase();
-      if (browserLang.startsWith('en')) {
-        applyLanguage('en');
-      } else {
-        // Français par défaut — juste masquer les éléments en-only
-        storeOriginals();
-        document.querySelectorAll('.en-only').forEach(function (el) {
-          el.style.display = 'none';
-        });
-      }
+      // Français par défaut — juste masquer les éléments en-only
+      storeOriginals();
+      document.querySelectorAll('.en-only').forEach(function (el) {
+        el.style.display = 'none';
+      });
     }
 
     // Si la bannière a été fermée dans cette session, la garder fermée
