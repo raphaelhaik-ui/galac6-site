@@ -23,7 +23,10 @@
       'hero.title': 'Got a test to prepare?<br>A lesson to understand?<br><span class="gradient">Galac6 is here.</span>',
       'hero.subtitle': 'Galac6, the AI that teaches you how to learn — quizzes, dictations, revision sheets and corrections, designed for the French school curriculum, from 1st grade to 12th grade.',
       'hero.cta': 'Create a free account →',
-      'hero.reassurance': '100% free, unlimited access. No credit card required. 🇫🇷 Designed and hosted in France.',
+      'hero.free.pill': '⭐ NEW',
+      'hero.free.headline': 'Galac6 is now <span class="gradient">100% free</span>',
+      'hero.free.sub': 'Unlimited access to every feature. No credit card.',
+      'hero.reassurance': '🇫🇷 Designed and hosted in France.',
 
       // Positioning
       'positioning.title': 'The AI that would rather teach you than do it for you.',
