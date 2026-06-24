@@ -77,16 +77,14 @@
   banner.id = 'galac6-cookie-banner';
   banner.innerHTML = isEN
     ? '<p>Galac6 uses functional cookies to remember your preferences (theme, accessibility). ' +
-      'With your consent, we also use audience-measurement cookies (Google Analytics) to improve the site. ' +
-      'No advertising cookies. ' +
+      'With your consent, we also use audience-measurement and advertising cookies (Google Analytics, Meta) to improve the site and our campaigns. ' +
       '<a href="/privacy">Learn more</a></p>' +
       '<div class="cookie-btns">' +
       '<button id="galac6-cookie-accept">Accept</button>' +
       '<button id="galac6-cookie-refuse">Continue without accepting</button>' +
       '</div>'
     : '<p>Galac6 utilise des cookies fonctionnels pour mémoriser vos préférences (thème, accessibilité). ' +
-      'Avec votre accord, nous utilisons aussi des cookies de mesure d\'audience (Google Analytics) pour améliorer le site. ' +
-      'Aucun cookie publicitaire. ' +
+      'Avec votre accord, nous utilisons aussi des cookies de mesure d\'audience et de publicité (Google Analytics, Meta) pour améliorer le site et nos campagnes. ' +
       '<a href="/privacy">En savoir plus</a></p>' +
       '<div class="cookie-btns">' +
       '<button id="galac6-cookie-accept">Accepter</button>' +
@@ -98,6 +96,8 @@
     localStorage.setItem('galac6-cookie-consent', 'accepted');
     // Active la mesure d'audience complète (Consent Mode v2)
     if (window.gtag) gtag('consent', 'update', { analytics_storage: 'granted' });
+    // Charge le pixel Meta (publicité) maintenant que le consentement est donné
+    if (window.galac6LoadPixel) galac6LoadPixel();
     banner.remove();
   });
 
