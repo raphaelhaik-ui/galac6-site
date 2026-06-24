@@ -31,6 +31,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://galac6.io/reviser-bac-francais</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://galac6.io/primaire</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://galac6.io/about</loc>
     <lastmod>2026-06-24</lastmod>
     <changefreq>monthly</changefreq>
