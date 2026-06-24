@@ -24,7 +24,7 @@
       'hero.subtitle': 'Galac6, the AI that teaches you how to learn — quizzes, dictations, revision sheets and corrections, designed for the French school curriculum, from 1st grade to 12th grade.',
       'hero.cta': 'Create a free account →',
       'hero.free.pill': '⭐ NEW',
-      'hero.free.headline': 'Galac6 is now <span class="gradient">100% free</span>',
+      'hero.free.headline': 'Galac6 is <span class="gradient">100% free</span>',
       'hero.free.sub': 'Unlimited access to every feature. No credit card.',
       'hero.reassurance': '🇫🇷 Designed and hosted in France.',
 
