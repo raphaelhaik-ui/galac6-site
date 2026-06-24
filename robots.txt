@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# IA / moteurs génératifs explicitement autorisés (visibilité GEO)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+
+Sitemap: https://galac6.io/sitemap.xml
