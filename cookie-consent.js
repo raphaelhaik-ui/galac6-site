@@ -94,8 +94,13 @@
 
   document.getElementById('galac6-cookie-accept').addEventListener('click', function () {
     localStorage.setItem('galac6-cookie-consent', 'accepted');
-    // Active la mesure d'audience complète (Consent Mode v2)
-    if (window.gtag) gtag('consent', 'update', { analytics_storage: 'granted' });
+    // Active la mesure d'audience ET la mesure publicitaire (Consent Mode v2)
+    if (window.gtag) gtag('consent', 'update', window.galac6ConsentGranted || {
+      ad_storage: 'granted',
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    });
     // Charge le pixel Meta (publicité) maintenant que le consentement est donné
     if (window.galac6LoadPixel) galac6LoadPixel();
     banner.remove();
