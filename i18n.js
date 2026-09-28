@@ -394,7 +394,7 @@
 
       // ─── Privacy Policy ───
       'privacy.title': 'Privacy Policy',
-      'privacy.subtitle': 'Last updated: February 25, 2026',
+      'privacy.subtitle': 'Last updated: September 28, 2026',
       'privacy.intro': 'This privacy policy describes how Galac6 (hereinafter "we") collects, uses and protects the personal data of users of the Galac6 platform, in accordance with the General Data Protection Regulation (GDPR) and the French Data Protection Act.',
       'privacy.art1.title': '1. Data controller',
       'privacy.art1.text': 'The data controller is the company publishing Galac6. For any questions regarding your personal data, you may contact us at: <a href="mailto:hello@galac6.io">hello@galac6.io</a>.',
@@ -404,6 +404,7 @@
       'privacy.art2.activity': '<strong>Educational activity data</strong>: chat messages, quiz results, dictations, remediation plans, learning statistics',
       'privacy.art2.technical': '<strong>Technical data</strong>: display preferences (theme, font size), sidebar state',
       'privacy.art2.billing': '<strong>Billing data</strong>: email and Stripe identifier',
+      'privacy.art2.school': '<strong>School (optional)</strong>: name, city and country of the school attended by the student, and its official identifier (UAI). The student or their parent may choose not to answer and can change this information at any time from their profile. It is used only for internal statistics, to know in which schools Galac6 is used and to improve the service; it is never sold or shared with schools. It is hosted in France (Supabase, Paris region). The school search queries the French Ministry of Education\'s public directory (data.education.gouv.fr), sending only the text typed, without any data about the student.',
       'privacy.art2.sensitive': '<strong>Sensitive data</strong>: educational accommodations (where applicable), collected only with your explicit consent (Art. 9 GDPR)',
       'privacy.art3.title': '3. Purposes and legal bases',
       'privacy.art3.intro': 'Your data is processed for the following purposes:',
@@ -443,7 +444,7 @@
       'privacy.art7.cnil': 'You may also file a complaint with the <strong>CNIL</strong> (<a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>), the French data protection authority.',
       'privacy.art8.title': '8. Cookies and local storage',
       'privacy.art8.text': 'Galac6 uses a functional cookie (sidebar state) and the browser\'s local storage for your display preferences (theme, font size). No tracking or advertising cookies are used. Consent for the functional cookie is collected via our cookie banner.',
-      'privacy.lastupdate': 'Last updated: February 25, 2026',
+      'privacy.lastupdate': 'Last updated: September 28, 2026',
 
       // ─── Terms of Use ───
       'terms.title': 'Terms of Use',
