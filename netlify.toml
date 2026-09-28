@@ -16,3 +16,19 @@
   for = "/*.html"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+# Limitation de débit anti-abus (règle "code-based" Netlify, offre gratuite).
+# Réécriture d'un chemin vers lui-même : sans "force", les fichiers existants sont
+# servis normalement ; la règle sert uniquement de support à la limite.
+# Seuil volontairement TRÈS large (classes entières derrière une même IP d'école) :
+# ne vise que les abus massifs. Au-delà : réponse 429.
+[[redirects]]
+  from = "/*"
+  to = "/:splat"
+  status = 200
+
+  [redirects.rate_limit]
+    # 5 000 requêtes par minute et par adresse IP
+    window_limit = 5000
+    window_size = 60
+    aggregate_by = ["ip", "domain"]
