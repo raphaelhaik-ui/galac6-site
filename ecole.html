@@ -3,22 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galac6 pour les écoles et enseignants — IA éducative RGPD</title>
-  <meta name="description" content="Déployez Galac6 dans votre établissement : assistant scolaire par IA aligné sur les programmes, conforme RGPD et hébergé en France. Suivi des élèves, méthode socratique, du CP à la Terminale.">
+  <title>Galac6 pour les écoles : classes, suivi des élèves et dictées du professeur</title>
+  <meta name="description" content="Galac6 pour les écoles, en France et à l'étranger : créez vos classes, invitez vos professeurs par lien, suivez les élèves à relancer et les notions à revoir, envoyez vos propres dictées. Gratuit pour les écoles pilotes.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/ecole">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Galac6">
   <meta property="og:locale" content="fr_FR">
-  <meta property="og:title" content="Galac6 pour les écoles et enseignants">
-  <meta property="og:description" content="Un assistant scolaire par IA conforme RGPD et hébergé en France pour votre établissement. Du CP à la Terminale.">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:title" content="Galac6 pour les écoles et les professeurs">
+  <meta property="og:description" content="Classes, invitation des professeurs par lien, suivi de classe et dictées du professeur. Interface en français et en anglais. Gratuit pour les écoles pilotes.">
   <meta property="og:url" content="https://galac6.io/ecole">
   <meta property="og:image" content="https://galac6.io/images/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Galac6 pour les écoles et enseignants">
-  <meta name="twitter:description" content="Un assistant scolaire par IA conforme RGPD et hébergé en France pour votre établissement.">
+  <meta name="twitter:title" content="Galac6 pour les écoles et les professeurs">
+  <meta name="twitter:description" content="Classes, suivi de classe et dictées du professeur, en français et en anglais. Gratuit pour les écoles pilotes.">
   <meta name="twitter:image" content="https://galac6.io/images/og-image.jpg">
   <link rel="icon" type="image/png" href="icons/32x32.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Combien coûte Galac6 pour une école ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Galac6 est gratuit pour les écoles pilotes. On démarre avec une ou deux classes. Les conditions pour la suite seront discutées avec vous, avant toute facturation." }
+      },
+      {
+        "@type": "Question",
+        "name": "Galac6 convient-il aux écoles françaises à l'étranger ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Oui. Galac6 suit les programmes français du CP à la Terminale. Toute l'interface existe aussi en anglais, pour les professeurs anglophones, et les dictées du professeur peuvent être en français ou en anglais." }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment les élèves rejoignent-ils leur classe ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Chaque classe a un code. Le professeur le distribue aux familles, ou imprime l'affiche de la classe avec son QR code. Les parents saisissent le code dans Galac6 (Paramètres, puis Élèves) et l'enfant rejoint la classe. L'import d'une liste d'élèves par fichier n'est pas encore disponible." }
+      },
+      {
+        "@type": "Question",
+        "name": "Où sont stockées les données des élèves ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Les comptes et les données des élèves sont stockés en Europe, dans une base de données hébergée à Paris. Pas de publicité, aucune revente de données. Certaines fonctions d'intelligence artificielle, comme la voix, font appel à des prestataires dont certains sont situés hors de l'Union européenne : nous vous en donnons la liste sur demande. Un dossier RGPD pour les écoles est en préparation." }
+      },
+      {
+        "@type": "Question",
+        "name": "L'IA donne-t-elle les réponses aux élèves ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Non. Le tuteur de Galac6 pose des questions, donne des indices et guide l'élève étape par étape. L'élève construit sa propre compréhension." }
+      }
+    ]
+  }
+  </script>
   <!-- Google Analytics 4 + Consent Mode v2 (RGPD) -->
   <script src="analytics.js"></script>
   <style>
@@ -628,15 +662,158 @@
       .trust-grid { grid-template-columns: repeat(2, 1fr); }
       footer { flex-direction: column; gap: 1rem; text-align: center; }
     }
+
+    /* ─── Page école : ajouts ─── */
+    .hero { overflow: hidden; } /* évite le défilement horizontal dû aux halos décoratifs */
+    .hero-content .back-link { display: flex; justify-content: center; margin-bottom: 1.25rem; }
+    .hero-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .hero-tag {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 0.3rem 0.85rem;
+      background: rgba(255,255,255,0.02);
+    }
+
+    .status-pill {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      border-radius: 100px;
+      padding: 0.2rem 0.7rem;
+      margin-bottom: 0.8rem;
+    }
+    .status-ok   { background: rgba(34,197,94,0.12); color: #6fd6a2; }
+    .status-soon { background: rgba(245,158,11,0.12); color: #ffbf5e; }
+
+    .feature-card ul {
+      list-style: none;
+      margin-top: 0.6rem;
+    }
+    .feature-card li {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      padding: 0.2rem 0 0.2rem 1.2rem;
+      position: relative;
+      line-height: 1.5;
+    }
+    .feature-card li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--primary-light);
+      font-weight: 700;
+    }
+
+    .soon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .soon-card {
+      background: var(--bg-card);
+      border: 1px dashed rgba(245,158,11,0.35);
+      border-radius: 16px;
+      padding: 1.5rem 1.75rem;
+    }
+    .soon-card h3 { font-size: 1.02rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .soon-card p  { color: var(--text-muted); font-size: 0.9rem; }
+    .soon-note {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-top: 1.75rem;
+    }
+
+    .steps-list {
+      list-style: none;
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      counter-reset: step;
+    }
+    .steps-list li {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 2.6rem 1fr;
+      gap: 1rem;
+      align-items: start;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.1rem 1.25rem;
+    }
+    .steps-list li::before {
+      content: counter(step);
+      width: 2.6rem;
+      height: 2.6rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #fff;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    }
+    .steps-list h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.15rem; }
+    .steps-list p  { color: var(--text-muted); font-size: 0.9rem; }
+
+    .trust-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
+    .trust-grid-4 .trust-item { text-align: left; padding: 1.4rem; }
+    .trust-grid-4 .trust-item h4 { font-size: 0.98rem; }
+    .trust-grid-4 .trust-item p { font-size: 0.86rem; }
+    .trust-note {
+      max-width: 760px;
+      margin: 1.75rem auto 0;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      section { padding: 3.5rem 1rem; }
+      .hero { padding: 1.5rem 1rem 3rem; }
+      .section-title { font-size: 1.6rem; }
+      .feature-card, .soon-card { padding: 1.35rem; }
+      .steps-list li { grid-template-columns: 2.2rem 1fr; gap: 0.8rem; padding: 1rem; }
+      .steps-list li::before { width: 2.2rem; height: 2.2rem; }
+      .en-banner { padding: 0.6rem 2.5rem 0.6rem 1rem; text-align: left; }
+      .hero-actions .btn { width: 100%; }
+    }
   </style>
   <!-- Meta Pixel (Facebook) - charge apres consentement -->
   <script src="meta-pixel.js"></script>
 </head>
 <body>
 
-  <!-- ═══ EN BANNER (hidden by default) ═══ -->
-  <div id="en-banner" class="en-banner en-only" style="display:none;" data-i18n-html="banner.text">
-    🌍 Currently available in France only (French school system). Want Galac6 in your country? <a href="mailto:hello@galac6.io" style="color:#fff;text-decoration:underline;">Send a request →</a>
+  <!-- ═══ BANDEAU ANGLAIS (affiché seulement en anglais) ═══ -->
+  <div id="en-banner" class="en-banner en-only" style="display:none;">
+    🌍 Galac6 follows the French national curriculum and welcomes French schools worldwide. The whole interface is available in English for your teachers. <a href="mailto:hello@galac6.io?subject=Galac6%20for%20schools">Contact us →</a>
     <button class="en-banner-close" onclick="closeBanner()" aria-label="Close">&times;</button>
   </div>
 
@@ -665,109 +842,183 @@
   <div class="hero">
     <div class="hero-content">
       <a href="/" class="back-link" data-i18n="ecole.back">&larr; Retour &agrave; l'accueil</a>
-      <div class="hero-badge" data-i18n="ecole.badge">🏫 Offre Établissements Scolaires</div>
-      <h1 data-i18n-html="ecole.hero.title">Galac6 pour <span class="gradient">votre établissement</span></h1>
-      <p class="subtitle" data-i18n="ecole.hero.subtitle">Déployez Galac6 dans votre établissement. Console centralisée, codes d'invitation, suivi par classe et temps d'écran maîtrisé.</p>
+      <div class="hero-badge" data-k="badge">🏫 Écoles pilotes : gratuit</div>
+      <h1 data-k="hero.title">Galac6 pour <span class="gradient">votre école</span></h1>
+      <p class="subtitle" data-k="hero.subtitle">Créez vos classes, invitez vos professeurs par un simple lien et voyez où vos élèves bloquent. Pour les écoles en France et les écoles françaises à l'étranger, du CP à la Terminale.</p>
+      <div class="hero-actions">
+        <a href="mailto:hello@galac6.io?subject=Demande%20de%20d%C3%A9mo%20%E2%80%93%20Galac6%20pour%20les%20%C3%A9coles" class="btn btn-primary" data-k="hero.cta">Demander une démo</a>
+        <a href="#disponible" class="btn btn-secondary" data-k="hero.cta2">Voir ce qui est prêt</a>
+      </div>
+      <div class="hero-tags">
+        <span class="hero-tag" data-k="tag1">Programmes français</span>
+        <span class="hero-tag" data-k="tag2">Interface en français et en anglais</span>
+        <span class="hero-tag" data-k="tag3">Données stockées à Paris</span>
+      </div>
     </div>
   </div>
 
   <hr class="divider">
 
-  <!-- ═══ 3 PILIERS ═══ -->
-  <section>
-    <h2 class="section-title" data-i18n="ecole.pillars.title">Un outil pour chaque acteur</h2>
-    <p class="section-subtitle" data-i18n="ecole.pillars.subtitle">Élèves, enseignants et direction bénéficient chacun de fonctionnalités dédiées.</p>
+  <!-- ═══ DISPONIBLE AUJOURD'HUI ═══ -->
+  <section id="disponible">
+    <h2 class="section-title" data-k="avail.title">Ce qui est disponible aujourd'hui</h2>
+    <p class="section-subtitle" data-k="avail.subtitle">Tout ce qui figure ici fonctionne déjà dans Galac6.</p>
 
-    <div class="features-grid" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="features-grid">
       <div class="feature-card">
-        <div class="feature-icon fi-purple">🎓</div>
-        <h3 data-i18n="ecole.pillar.student.title">Pour l'élève</h3>
-        <p data-i18n="ecole.pillar.student.desc">L'IA ne donne jamais la réponse : elle pose des questions, encourage la réflexion et s'adapte au niveau de chaque élève.</p>
+        <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
+        <div class="feature-icon fi-purple">🏫</div>
+        <h3 data-k="f1.title">Vos classes et vos professeurs</h3>
+        <p data-k="f1.desc">La direction crée les classes de l'école et invite chaque professeur par un simple lien. Elle indique les matières de chaque professeur dans chaque classe.</p>
       </div>
+
       <div class="feature-card">
-        <div class="feature-icon fi-green">🏛️</div>
-        <h3 data-i18n="ecole.pillar.admin.title">Pour la direction</h3>
-        <p data-i18n="ecole.pillar.admin.desc">Déploiement centralisé, facturation transparente, respect du RGPD, données hébergées en France.</p>
+        <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
+        <div class="feature-icon fi-blue">🔒</div>
+        <h3 data-k="f2.title">Chaque professeur voit ses classes, et seulement elles</h3>
+        <p data-k="f2.desc">Un professeur peut aussi créer sa classe seul, sans attendre : il demande ensuite à la rattacher à son école, et la direction valide. La classe garde ses élèves et leur historique.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
+        <div class="feature-icon fi-green">🔑</div>
+        <h3 data-k="f3.title">Les élèves rejoignent la classe avec un code</h3>
+        <p data-k="f3.desc">Chaque classe a son code. Le professeur le donne aux familles, ou imprime l'affiche de la classe avec son QR code. Les parents saisissent le code et l'enfant rejoint la classe.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
+        <div class="feature-icon fi-amber">📊</div>
+        <h3 data-k="f4.title">Le suivi de la classe</h3>
+        <ul data-k="f4.list">
+          <li>Élèves actifs et minutes d'entraînement, sur 7 jours, 30 jours ou depuis la rentrée</li>
+          <li>Les élèves à relancer, qui n'ont rien fait depuis plusieurs jours</li>
+          <li>Les 3 notions à revoir en classe</li>
+          <li>Une carte de chaleur élèves × notions, pour voir d'un coup d'œil qui bloque sur quoi</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
+        <div class="feature-icon fi-pink">🧑‍🎓</div>
+        <h3 data-k="f5.title">Une fiche par élève</h3>
+        <p data-k="f5.desc">Le professeur ouvre la fiche de chaque élève : ses résultats d'entraînement et sa progression. Il ne voit ni les conversations de l'élève avec le tuteur, ni les réglages de la famille.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
+        <div class="feature-icon fi-purple">✍️</div>
+        <h3 data-k="f6.title">Vos propres dictées</h3>
+        <ul data-k="f6.list">
+          <li>Collez le texte, ou prenez la feuille en photo</li>
+          <li>L'IA repère les pièges (accords, homophones, conjugaison…) ; vous les corrigez si besoin</li>
+          <li>Envoi à la classe, avec une date limite si vous le souhaitez</li>
+          <li>Galac6 lit la dictée à voix haute et la corrige</li>
+          <li>Vous voyez qui l'a faite, la moyenne, les fautes les plus fréquentes et la copie de chaque élève</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
+        <div class="feature-icon fi-green">👨‍👩‍👧</div>
+        <h3 data-k="f7.title">Les parents gardent la main</h3>
+        <p data-k="f7.desc">Les parents voient la classe et les professeurs de leur enfant. Ils peuvent le détacher de la classe à tout moment : l'école et le professeur sont alors prévenus.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
+        <div class="feature-icon fi-blue">🌍</div>
+        <h3 data-k="f8.title">Interface en anglais</h3>
+        <p data-k="f8.desc">Toute l'application passe en anglais en un clic, pour vos professeurs anglophones. Les dictées du professeur peuvent être en français ou en anglais.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
+        <div class="feature-icon fi-amber">🎓</div>
+        <h3 data-k="f9.title">Pour l'élève</h3>
+        <p data-k="f9.desc">Un tuteur qui guide par des questions sans donner la réponse, des dictées lues par une voix naturelle, du calcul mental et des jeux, avec un classement de la semaine entre élèves de la même école.</p>
       </div>
     </div>
   </section>
 
   <hr class="divider">
 
-  <!-- ═══ FONCTIONNALITÉS ÉCOLE ═══ -->
+  <!-- ═══ BIENTÔT ═══ -->
   <section>
-    <h2 class="section-title" data-i18n="ecole.features.title">Fonctionnalités détaillées</h2>
-    <p class="section-subtitle" data-i18n="ecole.features.subtitle">Tout ce qu'il faut pour accompagner élèves, enseignants et administration.</p>
+    <h2 class="section-title" data-k="soon.title">Bientôt</h2>
+    <p class="section-subtitle" data-k="soon.subtitle">En préparation avec nos écoles pilotes. Ces fonctions ne sont pas encore disponibles.</p>
 
-    <div class="audience-grid" style="grid-template-columns: repeat(2, 1fr);">
-      <div class="audience-card">
-        <h3 data-i18n="ecole.features.students.title">🎓 Élèves</h3>
-        <ul>
-          <li data-i18n="ecole.features.students.f1">Chat IA socratique — guide par étapes</li>
-          <li data-i18n="ecole.features.students.f2">Quiz interactifs avec corrections et XP</li>
-          <li data-i18n="ecole.features.students.f3">Dictées vocales (voix IA, 3 vitesses, mode papier)</li>
-          <li data-i18n="ecole.features.students.f4">Fiches de révision complètes ou pense-bête express</li>
-          <li data-i18n="ecole.features.students.f5">Saisie vocale des questions et formules math</li>
-          <li data-i18n="ecole.features.students.f6">OCR — photographier un exercice</li>
-          <li data-i18n="ecole.features.students.f7">Éditeur de formules mathématiques</li>
-          <li data-i18n="ecole.features.students.f8">Parcours Scratch et Python guidés</li>
-          <li data-i18n="ecole.features.students.f9">Gamification : XP, badges, défis quotidiens</li>
-          <li data-i18n="ecole.features.students.f10">Modes accessibilité (dyslexie, dyspraxie…)</li>
-          <li data-i18n="ecole.features.students.f11">11 matières scolaires (Éduscol)</li>
-          <li data-i18n="ecole.features.students.f12">Du CP à la Terminale</li>
-          <li data-i18n="ecole.features.students.f13">Brevet blanc DNB — Épreuves complètes en Maths, Français, Sciences et Histoire-Géo avec correction IA</li>
-        </ul>
+    <div class="soon-grid">
+      <div class="soon-card">
+        <span class="status-pill status-soon" data-k="pill.soon">Bientôt</span>
+        <h3 data-k="s1.title">Chapitres de calcul mental choisis par le professeur</h3>
+        <p data-k="s1.desc">Le professeur choisit les chapitres que sa classe travaille ; les exercices et les jeux de calcul mental s'y alignent.</p>
       </div>
-      <div class="audience-card">
-        <h3 data-i18n="ecole.features.school.title">🏛️ Établissement</h3>
-        <ul>
-          <li data-i18n="ecole.features.school.f1">Console d'administration centralisée</li>
-          <li data-i18n="ecole.features.school.f2">Codes d'invitation par établissement</li>
-          <li data-i18n="ecole.features.school.f3">Contrôle du temps d'écran par élève</li>
-          <li data-i18n="ecole.features.school.f4">Aménagements d'accessibilité par classe</li>
-          <li data-i18n="ecole.features.school.f5">Statistiques d'utilisation par classe</li>
-          <li data-i18n="ecole.features.school.f6">Rôles administrateur et enseignant</li>
-          <li data-i18n="ecole.features.school.f7">Application de filtrage IA bientôt disponible</li>
-          <li data-i18n="ecole.features.school.f8">Brevets blancs IA — Sujets générés et copies corrigées automatiquement</li>
-        </ul>
+      <div class="soon-card">
+        <span class="status-pill status-soon" data-k="pill.soon">Bientôt</span>
+        <h3 data-k="s2.title">Devoirs avec date limite</h3>
+        <p data-k="s2.desc">Un quiz ou une série de calcul mental à faire pour une date donnée, avec les résultats de chaque élève. C'est déjà possible pour les dictées.</p>
       </div>
     </div>
+    <p class="soon-note" data-k="soon.note">Vous avez un besoin qui n'est pas dans cette liste&nbsp;? Dites-le-nous : les écoles pilotes nous aident à choisir la suite.</p>
   </section>
 
   <hr class="divider">
 
-  <!-- ═══ CONFIANCE / SÉCURITÉ ═══ -->
+  <!-- ═══ DÉMARRER ═══ -->
   <section>
-    <h2 class="section-title" data-i18n="ecole.trust.title">Confiance et sécurité</h2>
-    <p class="section-subtitle" data-i18n="ecole.trust.subtitle">Un cadre rigoureux pour protéger les données de vos élèves.</p>
+    <h2 class="section-title" data-k="start.title">Comment démarrer</h2>
+    <p class="section-subtitle" data-k="start.subtitle">On commence petit, avec une ou deux classes.</p>
 
-    <div class="trust-grid">
+    <ol class="steps-list">
+      <li><div><h3 data-k="st1.title">Une démonstration</h3><p data-k="st1.desc">Vingt minutes en visioconférence, pour voir Galac6 côté direction, professeur, élève et parent.</p></div></li>
+      <li><div><h3 data-k="st2.title">L'espace de votre école</h3><p data-k="st2.desc">Nous créons l'espace de votre école et le compte de la direction.</p></div></li>
+      <li><div><h3 data-k="st3.title">Les classes et les professeurs</h3><p data-k="st3.desc">La direction crée ses classes et envoie un lien d'invitation à chaque professeur. Chaque professeur reçoit un guide d'une page, en français ou en anglais.</p></div></li>
+      <li><div><h3 data-k="st4.title">Les élèves</h3><p data-k="st4.desc">Les professeurs donnent le code de la classe ou son affiche à QR code aux familles.</p></div></li>
+      <li><div><h3 data-k="st5.title">On ajuste ensemble</h3><p data-k="st5.desc">Vous nous dites ce qui manque à vos professeurs, et nous le construisons avec vous.</p></div></li>
+    </ol>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ DONNÉES DES ÉLÈVES ═══ -->
+  <section>
+    <h2 class="section-title" data-k="trust.title">Les données de vos élèves</h2>
+    <p class="section-subtitle" data-k="trust.subtitle">Ce que nous faisons, dit simplement.</p>
+
+    <div class="trust-grid-4">
       <div class="trust-item">
-        <div class="trust-icon">🛡️</div>
-        <h4 data-i18n="ecole.trust.ai.title">IA responsable</h4>
-        <p data-i18n="ecole.trust.ai.desc">Modération automatique, filtrage de contenu inapproprié.</p>
+        <div class="trust-icon">🇪🇺</div>
+        <h4 data-k="t1.title">Stockées en Europe</h4>
+        <p data-k="t1.desc">Les comptes et les données des élèves sont stockés dans une base de données hébergée à Paris.</p>
       </div>
       <div class="trust-item">
-        <div class="trust-icon">📊</div>
-        <h4 data-i18n="ecole.trust.transparency.title">Transparence</h4>
-        <p data-i18n="ecole.trust.transparency.desc">Coût IA facturé au réel, sans marge cachée.</p>
+        <div class="trust-icon">🚫</div>
+        <h4 data-k="t2.title">Ni publicité, ni revente</h4>
+        <p data-k="t2.desc">Aucune publicité dans Galac6. Les données des élèves ne sont jamais vendues.</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">👁️</div>
+        <h4 data-k="t3.title">Chacun voit ce qui le concerne</h4>
+        <p data-k="t3.desc">Le professeur voit les résultats de ses classes, pas les conversations des élèves. La direction voit son école, les parents leurs enfants.</p>
       </div>
       <div class="trust-item">
         <div class="trust-icon">🇫🇷</div>
-        <h4 data-i18n="ecole.trust.france.title">Made in France</h4>
-        <p data-i18n="ecole.trust.france.desc">Conçu et développé en France.</p>
+        <h4 data-k="t4.title">Conçu en France</h4>
+        <p data-k="t4.desc">Galac6 est conçu et développé en France, autour des programmes de l'Éducation nationale.</p>
       </div>
     </div>
+    <p class="trust-note" data-k="trust.note">Pour certaines fonctions d'intelligence artificielle, comme la voix, Galac6 fait appel à des prestataires spécialisés, dont certains sont situés hors de l'Union européenne. Nous vous en donnons la liste sur demande. Un dossier RGPD pour les écoles est en préparation.</p>
   </section>
 
   <hr class="divider">
 
   <!-- ═══ CTA ═══ -->
   <section class="cta-section">
-    <h2 data-i18n="ecole.cta.title">Déployez Galac6 dans votre établissement</h2>
-    <p data-i18n="ecole.cta.subtitle">Demandez une démonstration gratuite et un devis personnalisé.</p>
+    <h2 data-k="cta.title">Devenez école pilote</h2>
+    <p data-k="cta.subtitle">Gratuit pour les écoles pilotes. On démarre avec une ou deux classes.</p>
     <div class="cta-row">
-      <a href="mailto:hello@galac6.io?subject=Demande%20de%20d%C3%A9mo%20%E2%80%93%20Offre%20%C3%89cole" class="btn btn-primary" data-i18n="ecole.cta.button">Demander une démo</a>
+      <a href="mailto:hello@galac6.io?subject=Demande%20de%20d%C3%A9mo%20%E2%80%93%20Galac6%20pour%20les%20%C3%A9coles" class="btn btn-primary" data-k="hero.cta">Demander une démo</a>
     </div>
   </section>
 
@@ -775,87 +1026,78 @@
 
   <!-- ═══ FAQ ═══ -->
   <section>
-    <h2 class="section-title" data-i18n="ecole.faq.title">Questions fréquentes</h2>
-    <p class="section-subtitle" data-i18n="ecole.faq.subtitle">Tout ce que vous devez savoir avant de déployer Galac6.</p>
+    <h2 class="section-title" data-k="faq.title">Questions fréquentes</h2>
+    <p class="section-subtitle" data-k="faq.subtitle">Les questions que les écoles nous posent le plus souvent.</p>
 
     <div class="faq-list">
 
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span data-i18n="ecole.faq.q1">Galac6 fonctionne-t-il sur les tablettes et Chromebooks de l'école ?</span>
+          <span data-k="faq.q1">Combien coûte Galac6 pour une école&nbsp;?</span>
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner" data-i18n="ecole.faq.a1">
-            Oui. Galac6 est une application web qui fonctionne sur tout navigateur moderne (Chrome, Firefox, Safari, Edge) — tablettes, Chromebooks, PC et Mac.
-          </div>
+          <div class="faq-answer-inner" data-k="faq.a1">Galac6 est gratuit pour les écoles pilotes. On démarre avec une ou deux classes. Les conditions pour la suite seront discutées avec vous, avant toute facturation.</div>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span data-i18n="ecole.faq.q2">L'IA donne-t-elle les réponses aux élèves ?</span>
+          <span data-k="faq.q2">Galac6 convient-il aux écoles françaises à l'étranger&nbsp;?</span>
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner" data-i18n="ecole.faq.a2">
-            Non. Galac6 utilise la méthode socratique : l'IA pose des questions, donne des indices et guide la réflexion étape par étape. L'élève construit sa compréhension.
-          </div>
-        </div>
-      </div>
-
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span data-i18n="ecole.faq.q3">Peut-on bloquer l'accès aux autres IA (ChatGPT, etc.) ?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner" data-i18n="ecole.faq.a3">
-            Une application dédiée de filtrage est en cours de développement et sera bientôt disponible. Elle permettra de bloquer l'accès aux IA concurrentes sur les appareils de l'école, pour éviter que les élèves n'obtiennent des réponses toutes faites.
-          </div>
+          <div class="faq-answer-inner" data-k="faq.a2">Oui. Galac6 suit les programmes français du CP à la Terminale. Toute l'interface existe aussi en anglais, pour les professeurs anglophones, et les dictées du professeur peuvent être en français ou en anglais.</div>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span data-i18n="ecole.faq.q4">Comment se passe le déploiement ?</span>
+          <span data-k="faq.q3">Comment les élèves rejoignent-ils leur classe&nbsp;?</span>
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner" data-i18n-html="ecole.faq.a4">
-            <ol>
-              <li>Création de la console établissement</li>
-              <li>Import des élèves et classes (CSV ou saisie manuelle)</li>
-              <li>Attribution des accès enseignants</li>
-              <li>Formation à distance (1h)</li>
-              <li>L'établissement est opérationnel en moins d'une journée</li>
-            </ol>
-          </div>
+          <div class="faq-answer-inner" data-k="faq.a3">Chaque classe a un code. Le professeur le distribue aux familles, ou imprime l'affiche de la classe avec son QR code. Les parents saisissent le code dans Galac6 (Paramètres › Élèves) et l'enfant rejoint la classe. L'import d'une liste d'élèves par fichier n'est pas encore disponible.</div>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span data-i18n="ecole.faq.q5">Y a-t-il un essai gratuit ?</span>
+          <span data-k="faq.q4">Que voit le professeur&nbsp;?</span>
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner" data-i18n="ecole.faq.a5">
-            Oui. Nous proposons un pilote gratuit de 1 mois pour une classe, afin de tester Galac6 en conditions réelles avant de s'engager.
-          </div>
+          <div class="faq-answer-inner" data-k="faq.a4">Uniquement ses classes : l'activité de ses élèves, les notions à revoir, la carte de chaleur, la fiche de chaque élève et les résultats de ses dictées. Il ne voit pas les conversations des élèves avec le tuteur, ni les élèves des autres classes.</div>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span data-i18n="ecole.faq.q6">Galac6 utilise-t-il des technologies françaises ?</span>
+          <span data-k="faq.q5">Où sont stockées les données des élèves&nbsp;?</span>
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner" data-i18n="ecole.faq.a6">
-            Galac6 utilise en priorité Mistral, un LLM français souverain, complété par Anthropic et OpenAI. Les données sont hébergées en Europe. Option 100 % souveraine disponible à la demande.
-          </div>
+          <div class="faq-answer-inner" data-k="faq.a5">Les comptes et les données des élèves sont stockés en Europe, dans une base de données hébergée à Paris. Pas de publicité, aucune revente de données. Certaines fonctions d'intelligence artificielle, comme la voix, font appel à des prestataires dont certains sont situés hors de l'Union européenne : nous vous en donnons la liste sur demande. Un dossier RGPD pour les écoles est en préparation.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span data-k="faq.q6">L'IA donne-t-elle les réponses aux élèves&nbsp;?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner" data-k="faq.a6">Non. Le tuteur de Galac6 pose des questions, donne des indices et guide l'élève étape par étape. L'élève construit sa propre compréhension.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span data-k="faq.q7">Galac6 fonctionne-t-il sur les tablettes et les Chromebooks de l'école&nbsp;?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner" data-k="faq.a7">Oui. Galac6 s'utilise dans un navigateur récent (Chrome, Safari, Firefox, Edge), sur tablette, Chromebook, ordinateur ou téléphone. Rien à installer.</div>
         </div>
       </div>
 
@@ -872,6 +1114,108 @@
     </div>
   </footer>
 
+<script>
+  // Traductions anglaises propres à cette page (le fichier commun i18n.js gère la navigation et le pied de page).
+  // On suit l'attribut lang de <html>, que i18n.js change quand on clique sur le drapeau.
+  (function () {
+    'use strict';
+    var EN = {
+      'badge': '🏫 Pilot schools: free',
+      'hero.title': 'Galac6 for <span class="gradient">your school</span>',
+      'hero.subtitle': 'Create your classes, invite your teachers with a simple link and see where your pupils get stuck. For schools in France and French schools abroad, from CP to Terminale.',
+      'hero.cta': 'Request a demo',
+      'hero.cta2': 'See what is ready',
+      'tag1': 'French curriculum',
+      'tag2': 'Interface in French and English',
+      'tag3': 'Data stored in Paris',
+      'avail.title': 'Available today',
+      'avail.subtitle': 'Everything listed here already works in Galac6.',
+      'pill.ok': 'Available',
+      'pill.soon': 'Coming soon',
+      'f1.title': 'Your classes and your teachers',
+      'f1.desc': 'The school management creates the school\'s classes and invites each teacher with a simple link. It sets which subjects each teacher teaches in each class.',
+      'f2.title': 'Each teacher sees their own classes, and only those',
+      'f2.desc': 'A teacher can also create a class on their own, without waiting: they then ask to attach it to their school, and the management approves. The class keeps its pupils and their history.',
+      'f3.title': 'Pupils join the class with a code',
+      'f3.desc': 'Each class has its own code. The teacher gives it to families, or prints the class poster with its QR code. Parents enter the code and the child joins the class.',
+      'f4.title': 'Class tracking',
+      'f4.list': '<li>Active pupils and practice minutes, over 7 days, 30 days or since the start of the year</li><li>Pupils to follow up, who have not done anything for several days</li><li>The top 3 topics to review in class</li><li>A heat map of pupils × topics, to see at a glance who is stuck on what</li>',
+      'f5.title': 'A report for each pupil',
+      'f5.desc': 'The teacher opens each pupil\'s report: practice results and progress. They see neither the pupil\'s conversations with the tutor nor the family\'s settings.',
+      'f6.title': 'Your own dictations',
+      'f6.list': '<li>Paste the text, or take a photo of the sheet</li><li>The AI spots the traps (agreement, homophones, conjugation…); you adjust them if needed</li><li>Send it to the class, with a due date if you wish</li><li>Galac6 reads the dictation aloud and marks it</li><li>You see who has done it, the average, the most frequent mistakes and each pupil\'s work</li>',
+      'f7.title': 'Parents stay in control',
+      'f7.desc': 'Parents see their child\'s class and teachers. They can detach their child from the class at any time: the school and the teacher are then notified.',
+      'f8.title': 'Interface in English',
+      'f8.desc': 'The whole app switches to English in one click, for your English-speaking teachers. Teacher dictations can be in French or in English.',
+      'f9.title': 'For pupils',
+      'f9.desc': 'A tutor that guides with questions instead of giving the answer, dictations read by a natural voice, mental maths and games, with a weekly leaderboard among pupils of the same school.',
+      'soon.title': 'Coming soon',
+      'soon.subtitle': 'Being built with our pilot schools. These features are not available yet.',
+      's1.title': 'Mental maths chapters chosen by the teacher',
+      's1.desc': 'The teacher chooses the chapters the class works on; mental maths exercises and games follow that choice.',
+      's2.title': 'Homework with a due date',
+      's2.desc': 'A quiz or a mental maths series to complete by a given date, with each pupil\'s results. This is already possible for dictations.',
+      'soon.note': 'Need something that is not on this list? Tell us: our pilot schools help us choose what comes next.',
+      'start.title': 'How to get started',
+      'start.subtitle': 'We start small, with one or two classes.',
+      'st1.title': 'A demo',
+      'st1.desc': 'Twenty minutes by video call, to see Galac6 from the management, teacher, pupil and parent side.',
+      'st2.title': 'Your school\'s space',
+      'st2.desc': 'We create your school\'s space and the management account.',
+      'st3.title': 'Classes and teachers',
+      'st3.desc': 'The management creates its classes and sends an invitation link to each teacher. Each teacher gets a one-page guide, in French or in English.',
+      'st4.title': 'Pupils',
+      'st4.desc': 'Teachers give families the class code or the class poster with its QR code.',
+      'st5.title': 'We adjust together',
+      'st5.desc': 'You tell us what your teachers are missing, and we build it with you.',
+      'trust.title': 'Your pupils\' data',
+      'trust.subtitle': 'What we do, in plain words.',
+      't1.title': 'Stored in Europe',
+      't1.desc': 'Accounts and pupil data are stored in a database hosted in Paris.',
+      't2.title': 'No ads, no resale',
+      't2.desc': 'There are no ads in Galac6. Pupil data is never sold.',
+      't3.title': 'Everyone sees what concerns them',
+      't3.desc': 'Teachers see their classes\' results, not pupils\' conversations. The management sees its school, parents see their children.',
+      't4.title': 'Designed in France',
+      't4.desc': 'Galac6 is designed and developed in France, around the French national curriculum.',
+      'trust.note': 'For some artificial intelligence features, such as voice, Galac6 relies on specialised providers, some of which are located outside the European Union. We can give you the full list on request. A GDPR pack for schools is being prepared.',
+      'cta.title': 'Become a pilot school',
+      'cta.subtitle': 'Free for pilot schools. We start with one or two classes.',
+      'faq.title': 'Frequently asked questions',
+      'faq.subtitle': 'The questions schools ask us most often.',
+      'faq.q1': 'How much does Galac6 cost for a school?',
+      'faq.a1': 'Galac6 is free for pilot schools. We start with one or two classes. Terms for afterwards will be discussed with you, before any billing.',
+      'faq.q2': 'Is Galac6 suitable for French schools abroad?',
+      'faq.a2': 'Yes. Galac6 follows the French curriculum from CP to Terminale. The whole interface is also available in English for English-speaking teachers, and teacher dictations can be in French or in English.',
+      'faq.q3': 'How do pupils join their class?',
+      'faq.a3': 'Each class has a code. The teacher gives it to families, or prints the class poster with its QR code. Parents enter the code in Galac6 (Settings › Students) and the child joins the class. Importing a list of pupils from a file is not available yet.',
+      'faq.q4': 'What does a teacher see?',
+      'faq.a4': 'Only their own classes: their pupils\' activity, the topics to review, the heat map, each pupil\'s report and the results of their dictations. They do not see pupils\' conversations with the tutor, nor pupils from other classes.',
+      'faq.q5': 'Where is pupil data stored?',
+      'faq.a5': 'Accounts and pupil data are stored in Europe, in a database hosted in Paris. No ads, no resale of data. Some artificial intelligence features, such as voice, rely on providers, some of which are located outside the European Union: we can give you the list on request. A GDPR pack for schools is being prepared.',
+      'faq.q6': 'Does the AI give pupils the answers?',
+      'faq.a6': 'No. The Galac6 tutor asks questions, gives hints and guides the pupil step by step. The pupil builds their own understanding.',
+      'faq.q7': 'Does Galac6 work on school tablets and Chromebooks?',
+      'faq.a7': 'Yes. Galac6 runs in any recent browser (Chrome, Safari, Firefox, Edge), on a tablet, Chromebook, computer or phone. Nothing to install.'
+    };
+    var TITLE_EN = 'Galac6 for schools: classes, pupil tracking and teacher dictations';
+    var originals = new Map();
+
+    function apply() {
+      var lang = document.documentElement.lang || 'fr';
+      document.querySelectorAll('[data-k]').forEach(function (el) {
+        if (!originals.has(el)) originals.set(el, el.innerHTML);
+        var key = el.getAttribute('data-k');
+        el.innerHTML = (lang === 'en' && EN[key]) ? EN[key] : originals.get(el);
+      });
+      // i18n.js met le titre de l'accueil en anglais : on le remplace par celui de cette page
+      if (lang === 'en') document.title = TITLE_EN;
+    }
+
+    new MutationObserver(apply).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+  })();
+</script>
 <script src="i18n.js"></script>
 <script src="cookie-consent.js"></script>
 </body>
