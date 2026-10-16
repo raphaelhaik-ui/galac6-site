@@ -26,7 +26,7 @@
       'hero.free.pill': '⭐ NEW',
       'hero.free.headline': 'Galac6 is <span class="gradient">100% free</span>',
       'hero.free.sub': 'Unlimited access to every feature. No credit card.',
-      'hero.reassurance': '🇫🇷 Designed and hosted in France.',
+      'hero.reassurance': '🇫🇷 Designed in France. Accounts stored in France.',
 
       // Positioning
       'positioning.title': 'The AI that would rather teach you than do it for you.',
@@ -56,10 +56,10 @@
       'parents.dashboard.desc': 'Dedicated dashboard: subjects studied, screen time, weekly progress.',
 
       // Trust
-      'trust.title': 'Your data stays <span style="background:linear-gradient(135deg,var(--gradient-start),var(--gradient-end));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">in France.</span>',
+      'trust.title': 'Your accounts are stored <span style="background:linear-gradient(135deg,var(--gradient-start),var(--gradient-end));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">in France.</span>',
       'trust.subtitle': 'Parents\' trust is our priority.',
-      'trust.hosting.title': 'Hosted in France',
-      'trust.hosting.desc': 'Your child\'s data is stored in France, on European GDPR-compliant servers.',
+      'trust.hosting.title': 'Accounts stored in France',
+      'trust.hosting.desc': 'Your child\'s account and data are stored in France, in a database hosted in Paris. Some artificial intelligence processing still relies on providers located outside the European Union. We are working to keep all processing in Europe in the near future.',
       'trust.gdpr.title': 'GDPR by design',
       'trust.gdpr.desc': 'Galac6 is built from the ground up to comply with European personal data regulations.',
       'trust.nodata.title': 'No data resale',
@@ -88,7 +88,7 @@
       'faq.a6': '<strong>15 to 30 minutes is enough</strong> for effective revision. Galac6 isn\'t designed to replace leisure — it\'s designed to optimize study time. A few targeted sessions per week already make a real difference in results.',
 
       'faq.q7': 'Is my child\'s data protected?',
-      'faq.a7': 'Yes, and it\'s non-negotiable. Galac6 is <strong>designed and hosted in France</strong>, in full compliance with GDPR. We never sell your children\'s data to third parties. The privacy and security of minors\' data are at the core of our design.',
+      'faq.a7': 'Yes, and it\'s non-negotiable. Galac6 is <strong>designed in France</strong>, in full compliance with GDPR. Accounts are stored in France; some artificial intelligence processing still relies on providers located outside the European Union. We are working to keep all processing in Europe in the near future. We never sell your children\'s data to third parties. The privacy and security of minors\' data are at the core of our design.',
 
       'faq.q8': 'What subjects and grade levels are covered?',
       'faq.a8': 'Galac6 covers the main subjects of the French curriculum: <strong>French, Mathematics, History-Geography, Sciences, English</strong> and more — <strong>from 1st to 12th grade</strong>. Content automatically adapts to the student\'s level and grade.',
@@ -120,7 +120,7 @@
       'cta.note': 'Unlimited access, 100% free. No credit card.',
 
       // Footer
-      'footer.hosted': '🇫🇷 Designed and hosted in France',
+      'footer.hosted': '🇫🇷 Designed in France',
       'footer.copy': '© 2026 Galac6. All rights reserved.',
       'footer.legal.title': 'Legal',
       'footer.legal.mentions': 'Legal notices',
@@ -168,7 +168,7 @@
       'tarifs.unlimited.f7': 'Remediation',
       'tarifs.unlimited.cta': 'Create a free account \u2192',
       'tarifs.unlimited.note': 'No credit card, no commitment',
-      'tarifs.trust.hosting': 'Data hosted in Europe',
+      'tarifs.trust.hosting': 'Accounts stored in France',
       'tarifs.trust.parental': 'Real-time parental monitoring',
       'tarifs.trust.support': 'Responsive support',
       'tarifs.faq.title': 'Frequently asked questions',
@@ -210,7 +210,7 @@
       'ecole.pillar.student.title': 'For students',
       'ecole.pillar.student.desc': 'The AI never gives the answer: it asks questions, encourages critical thinking and adapts to each student\'s level.',
       'ecole.pillar.admin.title': 'For administration',
-      'ecole.pillar.admin.desc': 'Centralized deployment, transparent billing, GDPR compliance, data hosted in France.',
+      'ecole.pillar.admin.desc': 'Centralized deployment, transparent billing, GDPR compliance, accounts stored in France.',
       'ecole.features.title': 'Detailed features',
       'ecole.features.subtitle': 'Everything needed to support students, teachers and administration.',
       'ecole.features.students.title': '\ud83c\udf93 Students',
@@ -260,7 +260,7 @@
       'ecole.faq.q5': 'Is there a free trial?',
       'ecole.faq.a5': 'Yes. We offer a free 1-month pilot for one class, to test Galac6 in real conditions before committing.',
       'ecole.faq.q6': 'Does Galac6 use French technologies?',
-      'ecole.faq.a6': 'Galac6 primarily uses Mistral, a French sovereign LLM, complemented by Anthropic and OpenAI. Data is hosted in Europe. 100% sovereign option available on request.',
+      'ecole.faq.a6': 'Galac6 primarily uses Mistral, a French sovereign LLM, complemented by Anthropic and OpenAI. Accounts are stored in France.',
       'ecole.footer.desc': 'Galac6 \u2014 The AI tutoring and revision assistant.',
       'ecole.footer.france': '\ud83c\uddeb\ud83c\uddf7 Made in France',
 
