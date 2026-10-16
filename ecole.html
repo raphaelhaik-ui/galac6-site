@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galac6 pour les écoles : classes, suivi des élèves et dictées du professeur</title>
-  <meta name="description" content="Galac6 pour les écoles, en France et à l'étranger : créez vos classes, invitez vos professeurs par lien, suivez les élèves à relancer et les notions à revoir, envoyez vos propres dictées. Gratuit pour les écoles pilotes.">
+  <title>Galac6 pour les écoles : classes, devoirs, suivi des élèves et dictées du professeur</title>
+  <meta name="description" content="Galac6 pour les écoles, en France et à l'étranger : créez vos classes, invitez vos professeurs par lien, donnez des quiz et des évaluations en devoir, suivez les élèves à relancer et les notions à revoir, envoyez vos propres dictées. Gratuit pour les écoles pilotes.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/ecole">
   <meta property="og:type" content="website">
@@ -12,12 +12,12 @@
   <meta property="og:locale" content="fr_FR">
   <meta property="og:locale:alternate" content="en_GB">
   <meta property="og:title" content="Galac6 pour les écoles et les professeurs">
-  <meta property="og:description" content="Classes, invitation des professeurs par lien, suivi de classe et dictées du professeur. Interface en français et en anglais. Gratuit pour les écoles pilotes.">
+  <meta property="og:description" content="Classes, invitation des professeurs par lien, devoirs et évaluations, suivi de classe et dictées du professeur. Interface en français et en anglais. Gratuit pour les écoles pilotes.">
   <meta property="og:url" content="https://galac6.io/ecole">
   <meta property="og:image" content="https://galac6.io/images/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Galac6 pour les écoles et les professeurs">
-  <meta name="twitter:description" content="Classes, suivi de classe et dictées du professeur, en français et en anglais. Gratuit pour les écoles pilotes.">
+  <meta name="twitter:description" content="Classes, devoirs, suivi de classe et dictées du professeur, en français et en anglais. Gratuit pour les écoles pilotes.">
   <meta name="twitter:image" content="https://galac6.io/images/og-image.jpg">
   <link rel="icon" type="image/png" href="icons/32x32.png">
   <script type="application/ld+json">
@@ -43,7 +43,7 @@
       {
         "@type": "Question",
         "name": "Où sont stockées les données des élèves ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Les comptes et les données des élèves sont stockés en Europe, dans une base de données hébergée à Paris. Pas de publicité, aucune revente de données. Certaines fonctions d'intelligence artificielle, comme la voix, font appel à des prestataires dont certains sont situés hors de l'Union européenne : nous vous en donnons la liste sur demande. Un dossier RGPD pour les écoles est en préparation." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Les comptes et les données des élèves sont stockés en Europe, dans une base de données hébergée à Paris. Pas de publicité, aucune revente de données. Certaines fonctions d'intelligence artificielle, comme la voix, font appel à des prestataires dont certains sont situés hors de l'Union européenne. La liste complète de nos prestataires figure dans notre politique de confidentialité. Un dossier RGPD pour les écoles est en préparation." }
       },
       {
         "@type": "Question",
@@ -871,14 +871,14 @@
         <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
         <div class="feature-icon fi-purple">🏫</div>
         <h3 data-k="f1.title">Vos classes et vos professeurs</h3>
-        <p data-k="f1.desc">La direction crée les classes de l'école et invite chaque professeur par un simple lien. Elle indique les matières de chaque professeur dans chaque classe.</p>
+        <p data-k="f1.desc">La direction crée les classes de l'école et invite chaque professeur par un simple lien. Elle indique les matières de chaque professeur dans chaque classe et désigne le professeur principal. Elle consulte les classes, les devoirs et les copies, sans pouvoir modifier les notes.</p>
       </div>
 
       <div class="feature-card">
         <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
         <div class="feature-icon fi-blue">🔒</div>
-        <h3 data-k="f2.title">Chaque professeur voit ses classes, et seulement elles</h3>
-        <p data-k="f2.desc">Un professeur peut aussi créer sa classe seul, sans attendre : il demande ensuite à la rattacher à son école, et la direction valide. La classe garde ses élèves et leur historique.</p>
+        <h3 data-k="f2.title">Chaque professeur gère ses classes</h3>
+        <p data-k="f2.desc">Le professeur gère ses propres classes. Il peut aussi consulter, sans rien modifier, les élèves et les résultats des autres classes de son école. Un professeur peut créer sa classe seul, sans attendre : il demande ensuite à la rattacher à son école, et la direction valide. La classe garde ses élèves et leur historique.</p>
       </div>
 
       <div class="feature-card">
@@ -904,7 +904,20 @@
         <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
         <div class="feature-icon fi-pink">🧑‍🎓</div>
         <h3 data-k="f5.title">Une fiche par élève</h3>
-        <p data-k="f5.desc">Le professeur ouvre la fiche de chaque élève : ses résultats d'entraînement et sa progression. Il ne voit ni les conversations de l'élève avec le tuteur, ni les réglages de la famille.</p>
+        <p data-k="f5.desc">Le professeur ouvre la fiche de chaque élève : ses résultats aux devoirs et à l'entraînement, et sa progression. Il ne voit ni les conversations de l'élève avec le tuteur, ni les réglages de la famille.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
+        <div class="feature-icon fi-blue">📝</div>
+        <h3 data-k="f10.title">Quiz et évaluations en devoir</h3>
+        <ul data-k="f10.list">
+          <li>Quiz, interrogation, contrôle ou devoir à la maison, préparés avec l'assistant de Galac6</li>
+          <li>Galac6 propose des questions dont il a vérifié la bonne réponse ; vous relisez et validez chacune d'elles</li>
+          <li>À faire à la maison avant une date limite, ou en classe avec une durée</li>
+          <li>Le temps supplémentaire des élèves qui en ont besoin s'applique automatiquement</li>
+          <li>Galac6 propose une note pour chaque copie, et c'est vous qui la validez</li>
+        </ul>
       </div>
 
       <div class="feature-card">
@@ -958,8 +971,8 @@
       </div>
       <div class="soon-card">
         <span class="status-pill status-soon" data-k="pill.soon">Bientôt</span>
-        <h3 data-k="s2.title">Devoirs avec date limite</h3>
-        <p data-k="s2.desc">Un quiz ou une série de calcul mental à faire pour une date donnée, avec les résultats de chaque élève. C'est déjà possible pour les dictées.</p>
+        <h3 data-k="s2.title">Calcul mental en devoir</h3>
+        <p data-k="s2.desc">Une série de calcul mental à faire pour une date donnée, avec les résultats de chaque élève. C'est déjà possible pour les quiz, les évaluations et les dictées.</p>
       </div>
     </div>
     <p class="soon-note" data-k="soon.note">Vous avez un besoin qui n'est pas dans cette liste&nbsp;? Dites-le-nous : les écoles pilotes nous aident à choisir la suite.</p>
@@ -1002,7 +1015,7 @@
       <div class="trust-item">
         <div class="trust-icon">👁️</div>
         <h4 data-k="t3.title">Chacun voit ce qui le concerne</h4>
-        <p data-k="t3.desc">Le professeur voit les résultats de ses classes, pas les conversations des élèves. La direction voit son école, les parents leurs enfants.</p>
+        <p data-k="t3.desc">Le professeur voit les résultats de ses classes, et consulte sans rien modifier les autres classes de son école. Il ne voit pas les conversations des élèves avec le tuteur. La direction voit son école, les parents leurs enfants.</p>
       </div>
       <div class="trust-item">
         <div class="trust-icon">🇫🇷</div>
@@ -1010,7 +1023,7 @@
         <p data-k="t4.desc">Galac6 est conçu et développé en France, autour des programmes de l'Éducation nationale.</p>
       </div>
     </div>
-    <p class="trust-note" data-k="trust.note">Pour certaines fonctions d'intelligence artificielle, comme la voix, Galac6 fait appel à des prestataires spécialisés, dont certains sont situés hors de l'Union européenne. Nous vous en donnons la liste sur demande. Un dossier RGPD pour les écoles est en préparation.</p>
+    <p class="trust-note" data-k="trust.note">Pour certaines fonctions d'intelligence artificielle, comme la voix, Galac6 fait appel à des prestataires spécialisés, dont certains sont situés hors de l'Union européenne. La liste complète figure dans notre <a href="/privacy">politique de confidentialité</a>, et la page <a href="/donnees-eleves">Vos données et celles de vos élèves</a> résume l'essentiel. Un dossier RGPD pour les écoles est en préparation.</p>
   </section>
 
   <hr class="divider">
@@ -1069,7 +1082,7 @@
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner" data-k="faq.a4">Uniquement ses classes : l'activité de ses élèves, les notions à revoir, la carte de chaleur, la fiche de chaque élève et les résultats de ses dictées. Il ne voit pas les conversations des élèves avec le tuteur, ni les élèves des autres classes.</div>
+          <div class="faq-answer-inner" data-k="faq.a4">Dans ses classes : l'activité de ses élèves, les notions à revoir, la carte de chaleur, la fiche de chaque élève et les résultats de ses devoirs et de ses dictées. Si sa classe est rattachée à une école, il peut aussi consulter, sans rien modifier, les élèves et les résultats des autres classes de cette école. Il ne voit jamais les conversations des élèves avec le tuteur, ni les élèves d'une autre école.</div>
         </div>
       </div>
 
@@ -1079,7 +1092,7 @@
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner" data-k="faq.a5">Les comptes et les données des élèves sont stockés en Europe, dans une base de données hébergée à Paris. Pas de publicité, aucune revente de données. Certaines fonctions d'intelligence artificielle, comme la voix, font appel à des prestataires dont certains sont situés hors de l'Union européenne : nous vous en donnons la liste sur demande. Un dossier RGPD pour les écoles est en préparation.</div>
+          <div class="faq-answer-inner" data-k="faq.a5">Les comptes et les données des élèves sont stockés en Europe, dans une base de données hébergée à Paris. Pas de publicité, aucune revente de données. Certaines fonctions d'intelligence artificielle, comme la voix, font appel à des prestataires dont certains sont situés hors de l'Union européenne. La liste complète figure dans notre <a href="/privacy">politique de confidentialité</a>. Un dossier RGPD pour les écoles est en préparation.</div>
         </div>
       </div>
 
@@ -1135,15 +1148,17 @@
       'pill.ok': 'Available',
       'pill.soon': 'Coming soon',
       'f1.title': 'Your classes and your teachers',
-      'f1.desc': 'The school management creates the school\'s classes and invites each teacher with a simple link. It sets which subjects each teacher teaches in each class.',
-      'f2.title': 'Each teacher sees their own classes, and only those',
-      'f2.desc': 'A teacher can also create a class on their own, without waiting: they then ask to attach it to their school, and the management approves. The class keeps its pupils and their history.',
+      'f1.desc': 'The school management creates the school\'s classes and invites each teacher with a simple link. It sets which subjects each teacher teaches in each class and appoints the head teacher of each class. It can view classes, homework and pupils\' work, without being able to change marks.',
+      'f2.title': 'Each teacher manages their own classes',
+      'f2.desc': 'Teachers manage their own classes. They can also view, without changing anything, the pupils and results of the other classes in their school. A teacher can create a class on their own, without waiting: they then ask to attach it to their school, and the management approves. The class keeps its pupils and their history.',
       'f3.title': 'Pupils join the class with a code',
       'f3.desc': 'Each class has its own code. The teacher gives it to families, or prints the class poster with its QR code. Parents enter the code and the child joins the class.',
       'f4.title': 'Class tracking',
       'f4.list': '<li>Active pupils and practice minutes, over 7 days, 30 days or since the start of the year</li><li>Pupils to follow up, who have not done anything for several days</li><li>The top 3 topics to review in class</li><li>A heat map of pupils × topics, to see at a glance who is stuck on what</li>',
       'f5.title': 'A report for each pupil',
-      'f5.desc': 'The teacher opens each pupil\'s report: practice results and progress. They see neither the pupil\'s conversations with the tutor nor the family\'s settings.',
+      'f5.desc': 'The teacher opens each pupil\'s report: homework and practice results, and progress. They see neither the pupil\'s conversations with the tutor nor the family\'s settings.',
+      'f10.title': 'Quizzes and assessments as homework',
+      'f10.list': '<li>Quiz, test, exam or homework assignment, prepared with the Galac6 assistant</li><li>Galac6 suggests questions whose correct answer it has checked; you review and approve each one</li><li>To be done at home by a due date, or in class with a time limit</li><li>Extra time for the pupils who need it is applied automatically</li><li>Galac6 suggests a mark for each paper, and you are the one who approves it</li>',
       'f6.title': 'Your own dictations',
       'f6.list': '<li>Paste the text, or take a photo of the sheet</li><li>The AI spots the traps (agreement, homophones, conjugation…); you adjust them if needed</li><li>Send it to the class, with a due date if you wish</li><li>Galac6 reads the dictation aloud and marks it</li><li>You see who has done it, the average, the most frequent mistakes and each pupil\'s work</li>',
       'f7.title': 'Parents stay in control',
@@ -1156,8 +1171,8 @@
       'soon.subtitle': 'Being built with our pilot schools. These features are not available yet.',
       's1.title': 'Mental maths chapters chosen by the teacher',
       's1.desc': 'The teacher chooses the chapters the class works on; mental maths exercises and games follow that choice.',
-      's2.title': 'Homework with a due date',
-      's2.desc': 'A quiz or a mental maths series to complete by a given date, with each pupil\'s results. This is already possible for dictations.',
+      's2.title': 'Mental maths as homework',
+      's2.desc': 'A mental maths series to complete by a given date, with each pupil\'s results. This is already possible for quizzes, assessments and dictations.',
       'soon.note': 'Need something that is not on this list? Tell us: our pilot schools help us choose what comes next.',
       'start.title': 'How to get started',
       'start.subtitle': 'We start small, with one or two classes.',
@@ -1178,10 +1193,10 @@
       't2.title': 'No ads, no resale',
       't2.desc': 'There are no ads in Galac6. Pupil data is never sold.',
       't3.title': 'Everyone sees what concerns them',
-      't3.desc': 'Teachers see their classes\' results, not pupils\' conversations. The management sees its school, parents see their children.',
+      't3.desc': 'Teachers see their classes\' results, and can view the other classes of their school without changing anything. They do not see pupils\' conversations with the tutor. The management sees its school, parents see their children.',
       't4.title': 'Designed in France',
       't4.desc': 'Galac6 is designed and developed in France, around the French national curriculum.',
-      'trust.note': 'For some artificial intelligence features, such as voice, Galac6 relies on specialised providers, some of which are located outside the European Union. We can give you the full list on request. A GDPR pack for schools is being prepared.',
+      'trust.note': 'For some artificial intelligence features, such as voice, Galac6 relies on specialised providers, some of which are located outside the European Union. The full list is in our <a href="/privacy">privacy policy</a>, and the page <a href="/donnees-eleves">Your data and your pupils\' data</a> sums up the essentials. A GDPR pack for schools is being prepared.',
       'cta.title': 'Become a pilot school',
       'cta.subtitle': 'Free for pilot schools. We start with one or two classes.',
       'faq.title': 'Frequently asked questions',
@@ -1193,15 +1208,15 @@
       'faq.q3': 'How do pupils join their class?',
       'faq.a3': 'Each class has a code. The teacher gives it to families, or prints the class poster with its QR code. Parents enter the code in Galac6 (Settings › Students) and the child joins the class. Importing a list of pupils from a file is not available yet.',
       'faq.q4': 'What does a teacher see?',
-      'faq.a4': 'Only their own classes: their pupils\' activity, the topics to review, the heat map, each pupil\'s report and the results of their dictations. They do not see pupils\' conversations with the tutor, nor pupils from other classes.',
+      'faq.a4': 'In their own classes: their pupils\' activity, the topics to review, the heat map, each pupil\'s report and the results of their homework and dictations. If their class is attached to a school, they can also view, without changing anything, the pupils and results of the other classes in that school. They never see pupils\' conversations with the tutor, nor pupils from another school.',
       'faq.q5': 'Where is pupil data stored?',
-      'faq.a5': 'Accounts and pupil data are stored in Europe, in a database hosted in Paris. No ads, no resale of data. Some artificial intelligence features, such as voice, rely on providers, some of which are located outside the European Union: we can give you the list on request. A GDPR pack for schools is being prepared.',
+      'faq.a5': 'Accounts and pupil data are stored in Europe, in a database hosted in Paris. No ads, no resale of data. Some artificial intelligence features, such as voice, rely on providers, some of which are located outside the European Union. The full list is in our <a href="/privacy">privacy policy</a>. A GDPR pack for schools is being prepared.',
       'faq.q6': 'Does the AI give pupils the answers?',
       'faq.a6': 'No. The Galac6 tutor asks questions, gives hints and guides the pupil step by step. The pupil builds their own understanding.',
       'faq.q7': 'Does Galac6 work on school tablets and Chromebooks?',
       'faq.a7': 'Yes. Galac6 runs in any recent browser (Chrome, Safari, Firefox, Edge), on a tablet, Chromebook, computer or phone. Nothing to install.'
     };
-    var TITLE_EN = 'Galac6 for schools: classes, pupil tracking and teacher dictations';
+    var TITLE_EN = 'Galac6 for schools: classes, homework, pupil tracking and teacher dictations';
     var originals = new Map();
 
     function apply() {

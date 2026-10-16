@@ -280,7 +280,7 @@
   <!-- ═══ CONTENT ═══ -->
   <div class="content">
     <h1 data-i18n="privacy.title">Politique de confidentialité</h1>
-    <p class="subtitle" data-i18n="privacy.subtitle">Dernière mise à jour : 28 septembre 2026</p>
+    <p class="subtitle" data-i18n="privacy.subtitle">Dernière mise à jour : 16 octobre 2026</p>
 
     <p data-i18n="privacy.intro">La présente politique de confidentialité décrit la manière dont Galac6 (ci-après « nous ») collecte, utilise et protège les données personnelles des utilisateurs de la plateforme Galac6, conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés.</p>
 
@@ -291,7 +291,7 @@
     <p data-i18n="privacy.art2.intro">Nous collectons les catégories de données suivantes :</p>
     <ul>
       <li data-i18n-html="privacy.art2.identity"><strong>Données d'identité</strong> : adresse email, nom de l'élève, année de naissance, niveau scolaire, langue</li>
-      <li data-i18n-html="privacy.art2.activity"><strong>Données d'activité éducative</strong> : messages de chat, résultats de quiz, dictées, plans de remédiation, statistiques d'apprentissage</li>
+      <li data-i18n-html="privacy.art2.activity"><strong>Données d'activité éducative</strong> : messages de chat, résultats de quiz, dictées, devoirs et copies (avec les notes et les commentaires du professeur), plans de remédiation, statistiques d'apprentissage</li>
       <li data-i18n-html="privacy.art2.technical"><strong>Données techniques</strong> : préférences d'affichage (thème, taille de police), état de la barre latérale</li>
       <li data-i18n-html="privacy.art2.billing"><strong>Données de facturation</strong> : email et identifiant Stripe</li>
       <li data-i18n-html="privacy.art2.school"><strong>Établissement scolaire</strong> : nom, ville et pays de l'école ou de l'établissement fréquenté par l'élève, ainsi que son numéro officiel (UAI). Cette information est demandée à la création de chaque nouveau profil élève ; l'élève peut aussi indiquer qu'il n'est pas scolarisé dans un établissement (instruction en famille, CNED…). Pour les profils créés avant le 28 septembre 2026, la réponse reste facultative. L'élève ou son parent peut modifier cette information à tout moment depuis son profil. Elle sert uniquement à des statistiques internes, pour savoir dans quels établissements Galac6 est utilisé et améliorer le service ; elle n'est ni revendue ni communiquée aux établissements. Elle est hébergée en France (Supabase, région Paris). La recherche d'école interroge l'annuaire public de l'Éducation nationale (data.education.gouv.fr) en n'envoyant que le texte saisi, sans aucune donnée sur l'élève.</li>
@@ -315,12 +315,15 @@
     <h2 data-i18n="privacy.art5.title">5. Sous-traitants et transferts de données</h2>
     <p data-i18n="privacy.art5.intro">Nous faisons appel aux sous-traitants suivants :</p>
     <ul>
-      <li data-i18n-html="privacy.art5.supabase"><strong>Supabase</strong> (hébergement, base de données) — France, Union Européenne</li>
-      <li data-i18n-html="privacy.art5.netlify"><strong>Netlify</strong> (hébergement web) — Irlande, Union Européenne</li>
-      <li data-i18n-html="privacy.art5.anthropic"><strong>Anthropic / Claude</strong> (assistance IA par chat) — États-Unis, avec clauses contractuelles types</li>
-      <li data-i18n-html="privacy.art5.mistral"><strong>Mistral</strong> (assistance IA par chat) — France, Union Européenne</li>
-      <li data-i18n-html="privacy.art5.openai"><strong>OpenAI / Whisper</strong> (transcription vocale) — États-Unis, avec clauses contractuelles types</li>
-      <li data-i18n-html="privacy.art5.google"><strong>Google</strong> (synthèse vocale) — États-Unis, avec clauses contractuelles types</li>
+      <li data-i18n-html="privacy.art5.supabase"><strong>Supabase</strong> (hébergement, base de données, comptes et fonctions serveur) — France (région Paris), Union européenne</li>
+      <li data-i18n-html="privacy.art5.netlify"><strong>Netlify</strong> (hébergement web) — Irlande, Union européenne</li>
+      <li data-i18n-html="privacy.art5.vercel"><strong>Vercel</strong> (AI Gateway : passerelle qui transmet les demandes d'intelligence artificielle aux modèles Claude en imposant des centres de données situés dans l'Union européenne) — États-Unis</li>
+      <li data-i18n-html="privacy.art5.bedrock"><strong>Amazon Web Services (Amazon Bedrock)</strong> et <strong>Google Cloud (Vertex AI)</strong> (exécution des modèles Claude d'Anthropic pour le tuteur, les corrections et les outils du professeur) — centres de données situés dans l'Union européenne (Amazon Bedrock : Francfort, Allemagne)</li>
+      <li data-i18n-html="privacy.art5.anthropic"><strong>Anthropic / Claude</strong> (assistance IA, en secours lorsque le passage par l'Union européenne n'est pas possible) — États-Unis, avec clauses contractuelles types</li>
+      <li data-i18n-html="privacy.art5.google"><strong>Google</strong> (synthèse vocale et lecture des dictées ; modèles Gemini en secours de l'assistance IA et des corrections ; images des thèmes) — États-Unis, avec clauses contractuelles types</li>
+      <li data-i18n-html="privacy.art5.openai"><strong>OpenAI</strong> (Whisper : transcription de la voix en texte ; création des images d'avatar ; secours de la synthèse vocale) — États-Unis, avec clauses contractuelles types</li>
+      <li data-i18n-html="privacy.art5.fal"><strong>fal.ai</strong> (animation des avatars) — États-Unis</li>
+      <li data-i18n-html="privacy.art5.scaleway"><strong>Scaleway</strong> (hébergement du correcteur d'orthographe utilisé par Galac6) — Pays-Bas, Union européenne</li>
       <li data-i18n-html="privacy.art5.stripe"><strong>Stripe</strong> (paiement) — États-Unis, certifié et conforme</li>
       <li data-i18n-html="privacy.art5.resend"><strong>Resend</strong> (emails transactionnels) — États-Unis, avec clauses contractuelles types</li>
     </ul>
@@ -350,7 +353,7 @@
     <h2 data-i18n="privacy.art8.title">8. Cookies et stockage local</h2>
     <p data-i18n="privacy.art8.text">Galac6 utilise un cookie fonctionnel (état de la barre latérale) et le stockage local du navigateur pour vos préférences d'affichage (thème, taille de police). Aucun cookie de tracking ou publicitaire n'est utilisé. Le consentement pour le cookie fonctionnel est recueilli via notre bannière de cookies.</p>
 
-    <p style="color: var(--text-muted); font-size: 0.82rem; font-style: italic; margin-top: 2rem;" data-i18n="privacy.lastupdate">Dernière mise à jour : 28 septembre 2026</p>
+    <p style="color: var(--text-muted); font-size: 0.82rem; font-style: italic; margin-top: 2rem;" data-i18n="privacy.lastupdate">Dernière mise à jour : 16 octobre 2026</p>
   </div>
 
   <!-- ═══ FOOTER ═══ -->
