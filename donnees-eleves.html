@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vos données et celles de vos élèves — Galac6</title>
+  <meta name="description" content="Pour les professeurs et les directions : où sont stockées les données des élèves dans Galac6, qui les voit, quels prestataires interviennent, combien de temps elles sont conservées et comment exercer vos droits.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://galac6.io/donnees-eleves">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Galac6">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Vos données et celles de vos élèves">
+  <meta property="og:description" content="Où sont stockées les données des élèves dans Galac6, qui les voit, quels prestataires interviennent et comment exercer vos droits.">
+  <meta property="og:url" content="https://galac6.io/donnees-eleves">
+  <meta property="og:image" content="https://galac6.io/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vos données et celles de vos élèves">
+  <meta name="twitter:description" content="Les données des élèves dans Galac6, expliquées simplement aux professeurs et aux directions.">
+  <meta name="twitter:image" content="https://galac6.io/images/og-image.jpg">
+  <link rel="icon" type="image/png" href="icons/32x32.png">
+  <!-- Google Analytics 4 + Consent Mode v2 (RGPD) -->
+  <script src="analytics.js"></script>
+  <!-- Suivi des UTM (origine des visiteurs, sans cookie) -->
+  <script src="utm.js"></script>
+  <style>
+    :root {
+      --primary: #7c5cfc;
+      --primary-light: #a78bfa;
+      --bg: #0b0b14;
+      --bg-card: #13131f;
+      --bg-card-hover: #1a1a2e;
+      --text: #f0f0f5;
+      --text-muted: #8a8aa3;
+      --border: #1e1e32;
+      --gradient-start: #6366f1;
+      --gradient-end: #a855f7;
+      --glow: rgba(99,102,241,0.15);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: var(--primary-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    /* ─── Navbar (identique aux autres pages) ─── */
+    .navbar-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,11,20,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .navbar-brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+    .navbar-brand img { height: 44px; width: auto; }
+    .navbar-brand span { font-size: 1.6rem; font-weight: 800; color: var(--text); letter-spacing: -0.02em; }
+    .navbar-links { display: flex; align-items: center; gap: 2rem; }
+    .navbar-links a { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; text-decoration: none; transition: color 0.2s; }
+    .navbar-links a:hover { color: var(--text); text-decoration: none; }
+    .navbar-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      min-width: 44px;
+      min-height: 44px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+    .navbar-hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+    .navbar-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .navbar-hamburger.open span:nth-child(2) { opacity: 0; }
+    .navbar-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    /* ─── Boutons ─── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      min-height: 48px;
+      padding: 0.8rem 1.6rem;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(99,102,241,0.25);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(99,102,241,0.35); text-decoration: none; }
+    .btn-secondary { background: var(--bg-card); color: var(--text); border: 1px solid var(--border); }
+    .btn-secondary:hover { border-color: var(--primary); color: var(--primary-light); transform: translateY(-2px); text-decoration: none; }
+    /* ─── Sections ─── */
+    section { max-width: 1100px; margin: 0 auto; padding: 4.5rem 2rem; }
+    .section-title { font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+    .section-subtitle { text-align: center; color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1.05rem; }
+    .divider { border: none; border-top: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
+    /* ─── Hero ─── */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2.5rem 4.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 600px; height: 600px;
+      top: -100px; left: -150px;
+      background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 720px; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(99,102,241,0.1);
+      border: 1px solid rgba(99,102,241,0.2);
+      border-radius: 100px;
+      padding: 0.5rem 1.25rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--primary-light);
+      margin-bottom: 1.5rem;
+    }
+    .hero-content h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 1.25rem; }
+    .gradient {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-content .subtitle { font-size: 1.1rem; color: var(--text-muted); max-width: 620px; margin: 0 auto; line-height: 1.7; }
+    .hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; margin-top: 2rem; }
+    .hero-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-top: 1.5rem; }
+    .hero-tag { font-size: 0.8rem; color: var(--text-muted); border: 1px solid var(--border); border-radius: 100px; padding: 0.3rem 0.85rem; background: rgba(255,255,255,0.02); }
+    /* ─── Cartes ─── */
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+    .feature-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.75rem; }
+    .feature-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 0.9rem; }
+    .feature-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .feature-card p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; }
+    .feature-card p + p { margin-top: 0.5rem; }
+    .feature-card ul { list-style: none; margin-top: 0.6rem; }
+    .feature-card li { color: var(--text-muted); font-size: 0.9rem; padding: 0.2rem 0 0.2rem 1.2rem; position: relative; line-height: 1.5; }
+    .feature-card li::before { content: "✓"; position: absolute; left: 0; color: var(--primary-light); font-weight: 700; }
+    .fi-purple { background: rgba(99,102,241,0.12); }
+    .fi-pink   { background: rgba(236,72,153,0.12); }
+    .fi-amber  { background: rgba(245,158,11,0.12); }
+    .fi-green  { background: rgba(34,197,94,0.12); }
+    .fi-blue   { background: rgba(59,130,246,0.12); }
+    /* ─── Étapes numérotées ─── */
+    .steps-list { list-style: none; max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.9rem; counter-reset: step; }
+    .steps-list > li {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 2.6rem 1fr;
+      gap: 1rem;
+      align-items: start;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.2rem 1.25rem;
+    }
+    .steps-list > li::before {
+      content: counter(step);
+      width: 2.6rem; height: 2.6rem;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; color: #fff;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    }
+    .steps-list > li > div { min-width: 0; }
+    .steps-list h3 { font-size: 1.02rem; font-weight: 700; margin-bottom: 0.25rem; }
+    .steps-list p, .steps-list li li { color: var(--text-muted); font-size: 0.92rem; }
+    .steps-list p + p { margin-top: 0.45rem; }
+    .steps-list ul { margin: 0.45rem 0 0 1.1rem; }
+    .steps-list li li { margin-bottom: 0.25rem; }
+    .step-time { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--primary-light); background: rgba(99,102,241,0.1); border-radius: 100px; padding: 0.1rem 0.6rem; margin-left: 0.4rem; vertical-align: middle; }
+    .ui-label { color: var(--text); font-weight: 600; white-space: normal; }
+    .note-box {
+      max-width: 780px;
+      margin: 1.75rem auto 0;
+      background: rgba(99,102,241,0.06);
+      border: 1px solid rgba(99,102,241,0.2);
+      border-radius: 14px;
+      padding: 1.1rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+    .note-box strong { color: var(--text); }
+    /* ─── Texte long (page données) ─── */
+    .prose { max-width: 780px; margin: 0 auto; }
+    .prose h2 { font-size: 1.35rem; font-weight: 700; margin: 2.5rem 0 0.9rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); }
+    .prose h2:first-child { margin-top: 0; }
+    .prose p, .prose li { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.6rem; line-height: 1.7; }
+    .prose ul { padding-left: 1.4rem; margin-bottom: 1rem; }
+    .prose strong { color: var(--text); }
+    /* ─── Liens entre les pages de la campagne ─── */
+    .page-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; max-width: 780px; margin: 0 auto; }
+    .page-link {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 72px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem 1.25rem;
+      color: var(--text);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .page-link span { color: var(--text-muted); font-size: 0.85rem; font-weight: 400; }
+    .page-link:hover { border-color: var(--primary); text-decoration: none; }
+    /* ─── CTA ─── */
+    .cta-section { text-align: center; }
+    .cta-section h2 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+    .cta-section p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 2rem; }
+    .cta-row { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    /* ─── FAQ ─── */
+    .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.75rem; }
+    .faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+    .faq-question {
+      width: 100%;
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.25rem;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 0.97rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      font-family: inherit;
+      gap: 1rem;
+    }
+    .faq-chevron { flex-shrink: 0; width: 20px; height: 20px; transition: transform 0.25s ease; color: var(--text-muted); }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .faq-item.open .faq-answer { max-height: 600px; }
+    .faq-answer-inner { padding: 0 1.25rem 1.25rem; color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; }
+    /* ─── Pied de page ─── */
+    footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--primary-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .footer-badges { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+    .footer-badges a { display: inline-flex; align-items: center; min-height: 44px; }
+    .footer-badge { display: flex; align-items: center; gap: 0.35rem; color: var(--text-muted); font-size: 0.82rem; }
+    /* ─── Responsive ─── */
+    @media (max-width: 900px) {
+      .hero { padding: 2rem 1.5rem 3rem; }
+      .navbar { padding: 1rem 1.5rem; flex-wrap: wrap; }
+      .navbar-hamburger { display: flex; }
+      .navbar-links { display: none; flex-direction: column; width: 100%; gap: 0.5rem; padding: 1rem 0 0.5rem; }
+      .navbar-links.open { display: flex; }
+      .navbar-links a { padding: 0.6rem 0; font-size: 1rem; min-height: 44px; display: flex; align-items: center; justify-content: center; }
+    }
+    @media (max-width: 640px) {
+      section { padding: 3.25rem 1rem; }
+      .hero { padding: 1.5rem 1rem 3rem; }
+      .section-title, .cta-section h2 { font-size: 1.6rem; }
+      .feature-card { padding: 1.35rem; }
+      .btn { width: 100%; max-width: 360px; }
+      .hero-actions .btn, .cta-row .btn { width: 100%; }
+      .steps-list > li { grid-template-columns: 2.2rem 1fr; gap: 0.8rem; padding: 1rem; }
+      .steps-list > li::before { width: 2.2rem; height: 2.2rem; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1rem; }
+    }
+  </style>
+  <!-- Meta Pixel (Facebook) - charge apres consentement -->
+  <script src="meta-pixel.js"></script>
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <div class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="/" class="navbar-brand">
+        <img src="icons/icon.png" alt="Galac6">
+        <span>Galac6</span>
+      </a>
+      <button class="navbar-hamburger" aria-label="Menu" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="navbar-links">
+        <a href="/">Accueil</a>
+        <a href="/ecole">École</a>
+        <a href="/tarifs">Tarifs</a>
+        <a href="/about">À propos</a>
+        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">🔒 Pour les professeurs et les directions</div>
+      <h1>Vos données et <span class="gradient">celles de vos élèves</span></h1>
+      <p class="subtitle">Ce que Galac6 fait des données, dit simplement. Cette page résume notre <a href="/privacy">politique de confidentialité</a>, qui reste le texte de référence.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══ L'ESSENTIEL ═══ -->
+  <section>
+    <h2 class="section-title">L'essentiel</h2>
+    <p class="section-subtitle">Quatre points à retenir.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon fi-blue">🇫🇷</div>
+        <h3>Stockées en France</h3>
+        <p>Les comptes et les données sont stockés en France, dans une base de données hébergée à Paris par notre prestataire Supabase.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-amber">🌍</div>
+        <h3>Certains traitements hors de l'Union européenne</h3>
+        <p>Certains traitements par intelligence artificielle font appel à des prestataires situés hors de l'Union européenne, encadrés par des clauses contractuelles types.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-green">🚫</div>
+        <h3>Ni publicité, ni revente</h3>
+        <p>Aucune publicité dans l'application Galac6. Les données des élèves ne sont jamais vendues, et elles ne servent pas à entraîner des modèles d'intelligence artificielle.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-purple">👁️</div>
+        <h3>Chacun voit ce qui le concerne</h3>
+        <p>Le professeur voit les résultats de ses classes, pas les conversations des élèves avec le tuteur. Les parents gardent la main sur le compte de leur enfant.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ DÉTAIL ═══ -->
+  <section>
+    <div class="prose">
+      <h2>Quelles données Galac6 collecte</h2>
+      <ul>
+        <li><strong>Données d'identité</strong> : adresse email, nom de l'élève, année de naissance, niveau scolaire et langue.</li>
+        <li><strong>Données d'activité scolaire</strong> : messages échangés avec le tuteur, résultats des quiz, dictées, statistiques d'apprentissage.</li>
+        <li><strong>Établissement scolaire</strong> : nom, ville et pays de l'école de l'élève. Cette information sert uniquement à des statistiques internes ; elle n'est ni revendue ni communiquée aux établissements.</li>
+        <li><strong>Préférences d'affichage</strong> : thème et taille du texte, par exemple.</li>
+      </ul>
+      <p>Les aménagements scolaires d'un élève, quand il y en a, ne sont collectés qu'avec le consentement explicite de sa famille.</p>
+
+      <h2>Qui voit quoi</h2>
+      <ul>
+        <li><strong>Le professeur</strong> voit ses classes : la liste de ses élèves, leurs résultats aux devoirs et à l'entraînement, et la fiche de chaque élève. Si sa classe est rattachée à une école, il peut aussi consulter, sans rien modifier, les élèves et les résultats des autres classes de cette école. Il ne voit ni les conversations des élèves avec le tuteur, ni les réglages des familles.</li>
+        <li><strong>La direction</strong> voit les classes de son école.</li>
+        <li><strong>Les parents</strong> voient la classe et les professeurs de leur enfant. Ils peuvent le détacher de la classe à tout moment ; l'école et le professeur en sont alors prévenus par email.</li>
+      </ul>
+
+      <h2>Où sont les données, et qui intervient</h2>
+      <p>Les comptes et les données sont stockés en France, chez <strong>Supabase</strong> (base de données et comptes), dans sa région de Paris. Le site et l'application sont hébergés par <strong>Netlify</strong>, en Irlande.</p>
+      <p>Pour faire fonctionner le tuteur, la correction et la voix, Galac6 fait appel à des prestataires spécialisés. Une partie des traitements par intelligence artificielle est réalisée dans des centres de données situés dans l'Union européenne. Certains traitements font appel à des prestataires situés hors de l'Union européenne, par exemple :</p>
+      <ul>
+        <li><strong>Anthropic</strong> (Claude), pour l'assistance par intelligence artificielle, aux États-Unis ;</li>
+        <li><strong>OpenAI</strong> (Whisper), pour la transcription de la voix en texte, aux États-Unis ;</li>
+        <li><strong>Google</strong>, pour la synthèse vocale, aux États-Unis.</li>
+      </ul>
+      <p>Ces transferts hors de l'Union européenne sont encadrés par des clauses contractuelles types, conformément à l'article 46 du Règlement général sur la protection des données (RGPD). La liste complète de nos sous-traitants figure dans notre <a href="/privacy">politique de confidentialité</a>.</p>
+
+      <h2>Les élèves mineurs</h2>
+      <p>Galac6 s'adresse aux élèves du CP à la Terminale. Pour les élèves de moins de 15 ans, le consentement d'un parent ou du représentant légal est requis ; il est recueilli à la création du compte.</p>
+
+      <h2>Combien de temps les données sont conservées</h2>
+      <ul>
+        <li><strong>Données de compte</strong> : pendant toute la durée de vie du compte, puis un an après sa suppression.</li>
+        <li><strong>Données d'activité scolaire</strong> : deux ans, ou jusqu'à la fin de la scolarité plus un an.</li>
+        <li><strong>Comptes inactifs</strong> : supprimés après deux ans d'inactivité.</li>
+      </ul>
+
+      <h2>Vos droits, et ceux de vos élèves</h2>
+      <p>Chacun peut demander à accéder à ses données, à les corriger, à les supprimer, à les recevoir dans un format structuré, ou s'opposer à leur traitement. Le consentement donné peut être retiré à tout moment.</p>
+      <p>Pour exercer ces droits ou pour toute question sur les données, écrivez-nous à <a href="mailto:hello@galac6.io?subject=Donn%C3%A9es%20personnelles%20Galac6"><strong>hello@galac6.io</strong></a>. Vous pouvez aussi adresser une réclamation à la <strong>CNIL</strong> (<a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>).</p>
+
+      <h2>Avant d'utiliser Galac6 avec une classe</h2>
+      <p>Pour utiliser Galac6 avec une vraie classe, parlez-en d'abord à votre direction. Pour découvrir l'espace professeur, vous pouvez commencer seul avec une classe de démonstration, sans élèves réels. Une direction qui souhaite en savoir plus peut nous écrire : nous lui répondons directement.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ LIENS ═══ -->
+  <section>
+    <h2 class="section-title">À lire aussi</h2>
+    <p class="section-subtitle">Pour vous lancer.</p>
+    <div class="page-links">
+      <a class="page-link" href="/profs-testeurs">Devenir professeur testeur<span>Ce que nous vous proposons et ce que vous y gagnez.</span></a>
+      <a class="page-link" href="/guide-prof">Le guide de démarrage<span>Votre premier quiz en dix minutes, étape par étape.</span></a>
+      <a class="page-link" href="/privacy">La politique de confidentialité<span>Le texte complet, avec tous nos sous-traitants.</span></a>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div>Galac6 — L'IA de soutien scolaire et de révisions.</div>
+    <div class="footer-badges">
+      <a href="/about" style="color: var(--text-muted);">À propos</a>
+      <a href="/privacy" style="color: var(--text-muted);">Confidentialité</a>
+      <a href="/mentions-legales" style="color: var(--text-muted);">Mentions légales</a>
+      <span class="footer-badge">🇫🇷 Made in France</span>
+    </div>
+  </footer>
+
+<script src="cookie-consent.js"></script>
+</body>
+</html>

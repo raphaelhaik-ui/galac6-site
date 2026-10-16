@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professeurs testeurs : essayez l'espace professeur de Galac6</title>
+  <meta name="description" content="Professeur du primaire, du collège ou du lycée ? Testez gratuitement l'espace professeur de Galac6 : créez un quiz ou une interrogation avec l'assistant, donnez-le en devoir et voyez où chaque élève bloque. Donnez-nous votre avis en vingt minutes.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://galac6.io/profs-testeurs">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Galac6">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Devenez professeur testeur de Galac6">
+  <meta property="og:description" content="Créez un quiz ou une interrogation en quelques minutes avec l'assistant, donnez-le en devoir à votre classe et voyez où chaque élève bloque. Gratuit, et votre avis compte.">
+  <meta property="og:url" content="https://galac6.io/profs-testeurs">
+  <meta property="og:image" content="https://galac6.io/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Devenez professeur testeur de Galac6">
+  <meta name="twitter:description" content="Créez un quiz ou une interrogation en quelques minutes, donnez-le en devoir et voyez où chaque élève bloque. Gratuit.">
+  <meta name="twitter:image" content="https://galac6.io/images/og-image.jpg">
+  <link rel="icon" type="image/png" href="icons/32x32.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Est-ce gratuit ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Oui. Galac6 est en beta ouverte et entièrement gratuite, pour les professeurs comme pour les élèves. Aucune carte bancaire n'est demandée." }
+      },
+      {
+        "@type": "Question",
+        "name": "Mes élèves doivent-ils s'inscrire ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Oui, pour faire vos devoirs dans Galac6, chaque élève a besoin d'un compte. La famille crée un compte gratuit, puis saisit le code de votre classe. L'import d'une liste d'élèves par fichier n'est pas encore disponible." }
+      },
+      {
+        "@type": "Question",
+        "name": "Faut-il l'accord de ma direction ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Pour utiliser Galac6 avec une vraie classe, en principe oui : parlez-en à votre direction avant d'inviter vos élèves. Vous pouvez commencer seul, avec une classe de démonstration sans élèves réels, pour découvrir l'espace professeur." }
+      }
+    ]
+  }
+  </script>
+  <!-- Google Analytics 4 + Consent Mode v2 (RGPD) -->
+  <script src="analytics.js"></script>
+  <!-- Suivi des UTM (origine des visiteurs, sans cookie) -->
+  <script src="utm.js"></script>
+  <style>
+    :root {
+      --primary: #7c5cfc;
+      --primary-light: #a78bfa;
+      --bg: #0b0b14;
+      --bg-card: #13131f;
+      --bg-card-hover: #1a1a2e;
+      --text: #f0f0f5;
+      --text-muted: #8a8aa3;
+      --border: #1e1e32;
+      --gradient-start: #6366f1;
+      --gradient-end: #a855f7;
+      --glow: rgba(99,102,241,0.15);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: var(--primary-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    /* ─── Navbar (identique aux autres pages) ─── */
+    .navbar-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,11,20,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .navbar-brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+    .navbar-brand img { height: 44px; width: auto; }
+    .navbar-brand span { font-size: 1.6rem; font-weight: 800; color: var(--text); letter-spacing: -0.02em; }
+    .navbar-links { display: flex; align-items: center; gap: 2rem; }
+    .navbar-links a { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; text-decoration: none; transition: color 0.2s; }
+    .navbar-links a:hover { color: var(--text); text-decoration: none; }
+    .navbar-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      min-width: 44px;
+      min-height: 44px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+    .navbar-hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+    .navbar-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .navbar-hamburger.open span:nth-child(2) { opacity: 0; }
+    .navbar-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    /* ─── Boutons ─── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      min-height: 48px;
+      padding: 0.8rem 1.6rem;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(99,102,241,0.25);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(99,102,241,0.35); text-decoration: none; }
+    .btn-secondary { background: var(--bg-card); color: var(--text); border: 1px solid var(--border); }
+    .btn-secondary:hover { border-color: var(--primary); color: var(--primary-light); transform: translateY(-2px); text-decoration: none; }
+    /* ─── Sections ─── */
+    section { max-width: 1100px; margin: 0 auto; padding: 4.5rem 2rem; }
+    .section-title { font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+    .section-subtitle { text-align: center; color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1.05rem; }
+    .divider { border: none; border-top: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
+    /* ─── Hero ─── */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2.5rem 4.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 600px; height: 600px;
+      top: -100px; left: -150px;
+      background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 720px; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(99,102,241,0.1);
+      border: 1px solid rgba(99,102,241,0.2);
+      border-radius: 100px;
+      padding: 0.5rem 1.25rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--primary-light);
+      margin-bottom: 1.5rem;
+    }
+    .hero-content h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 1.25rem; }
+    .gradient {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-content .subtitle { font-size: 1.1rem; color: var(--text-muted); max-width: 620px; margin: 0 auto; line-height: 1.7; }
+    .hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; margin-top: 2rem; }
+    .hero-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-top: 1.5rem; }
+    .hero-tag { font-size: 0.8rem; color: var(--text-muted); border: 1px solid var(--border); border-radius: 100px; padding: 0.3rem 0.85rem; background: rgba(255,255,255,0.02); }
+    /* ─── Cartes ─── */
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+    .feature-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.75rem; }
+    .feature-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 0.9rem; }
+    .feature-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .feature-card p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; }
+    .feature-card p + p { margin-top: 0.5rem; }
+    .feature-card ul { list-style: none; margin-top: 0.6rem; }
+    .feature-card li { color: var(--text-muted); font-size: 0.9rem; padding: 0.2rem 0 0.2rem 1.2rem; position: relative; line-height: 1.5; }
+    .feature-card li::before { content: "✓"; position: absolute; left: 0; color: var(--primary-light); font-weight: 700; }
+    .fi-purple { background: rgba(99,102,241,0.12); }
+    .fi-pink   { background: rgba(236,72,153,0.12); }
+    .fi-amber  { background: rgba(245,158,11,0.12); }
+    .fi-green  { background: rgba(34,197,94,0.12); }
+    .fi-blue   { background: rgba(59,130,246,0.12); }
+    /* ─── Étapes numérotées ─── */
+    .steps-list { list-style: none; max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.9rem; counter-reset: step; }
+    .steps-list > li {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 2.6rem 1fr;
+      gap: 1rem;
+      align-items: start;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.2rem 1.25rem;
+    }
+    .steps-list > li::before {
+      content: counter(step);
+      width: 2.6rem; height: 2.6rem;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; color: #fff;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    }
+    .steps-list > li > div { min-width: 0; }
+    .steps-list h3 { font-size: 1.02rem; font-weight: 700; margin-bottom: 0.25rem; }
+    .steps-list p, .steps-list li li { color: var(--text-muted); font-size: 0.92rem; }
+    .steps-list p + p { margin-top: 0.45rem; }
+    .steps-list ul { margin: 0.45rem 0 0 1.1rem; }
+    .steps-list li li { margin-bottom: 0.25rem; }
+    .step-time { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--primary-light); background: rgba(99,102,241,0.1); border-radius: 100px; padding: 0.1rem 0.6rem; margin-left: 0.4rem; vertical-align: middle; }
+    .ui-label { color: var(--text); font-weight: 600; white-space: normal; }
+    .note-box {
+      max-width: 780px;
+      margin: 1.75rem auto 0;
+      background: rgba(99,102,241,0.06);
+      border: 1px solid rgba(99,102,241,0.2);
+      border-radius: 14px;
+      padding: 1.1rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+    .note-box strong { color: var(--text); }
+    /* ─── Texte long (page données) ─── */
+    .prose { max-width: 780px; margin: 0 auto; }
+    .prose h2 { font-size: 1.35rem; font-weight: 700; margin: 2.5rem 0 0.9rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); }
+    .prose h2:first-child { margin-top: 0; }
+    .prose p, .prose li { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.6rem; line-height: 1.7; }
+    .prose ul { padding-left: 1.4rem; margin-bottom: 1rem; }
+    .prose strong { color: var(--text); }
+    /* ─── Liens entre les pages de la campagne ─── */
+    .page-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; max-width: 780px; margin: 0 auto; }
+    .page-link {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 72px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem 1.25rem;
+      color: var(--text);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .page-link span { color: var(--text-muted); font-size: 0.85rem; font-weight: 400; }
+    .page-link:hover { border-color: var(--primary); text-decoration: none; }
+    /* ─── CTA ─── */
+    .cta-section { text-align: center; }
+    .cta-section h2 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+    .cta-section p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 2rem; }
+    .cta-row { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    /* ─── FAQ ─── */
+    .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.75rem; }
+    .faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+    .faq-question {
+      width: 100%;
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.25rem;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 0.97rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      font-family: inherit;
+      gap: 1rem;
+    }
+    .faq-chevron { flex-shrink: 0; width: 20px; height: 20px; transition: transform 0.25s ease; color: var(--text-muted); }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .faq-item.open .faq-answer { max-height: 600px; }
+    .faq-answer-inner { padding: 0 1.25rem 1.25rem; color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; }
+    /* ─── Pied de page ─── */
+    footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--primary-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .footer-badges { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+    .footer-badges a { display: inline-flex; align-items: center; min-height: 44px; }
+    .footer-badge { display: flex; align-items: center; gap: 0.35rem; color: var(--text-muted); font-size: 0.82rem; }
+    /* ─── Responsive ─── */
+    @media (max-width: 900px) {
+      .hero { padding: 2rem 1.5rem 3rem; }
+      .navbar { padding: 1rem 1.5rem; flex-wrap: wrap; }
+      .navbar-hamburger { display: flex; }
+      .navbar-links { display: none; flex-direction: column; width: 100%; gap: 0.5rem; padding: 1rem 0 0.5rem; }
+      .navbar-links.open { display: flex; }
+      .navbar-links a { padding: 0.6rem 0; font-size: 1rem; min-height: 44px; display: flex; align-items: center; justify-content: center; }
+    }
+    @media (max-width: 640px) {
+      section { padding: 3.25rem 1rem; }
+      .hero { padding: 1.5rem 1rem 3rem; }
+      .section-title, .cta-section h2 { font-size: 1.6rem; }
+      .feature-card { padding: 1.35rem; }
+      .btn { width: 100%; max-width: 360px; }
+      .hero-actions .btn, .cta-row .btn { width: 100%; }
+      .steps-list > li { grid-template-columns: 2.2rem 1fr; gap: 0.8rem; padding: 1rem; }
+      .steps-list > li::before { width: 2.2rem; height: 2.2rem; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1rem; }
+    }
+  </style>
+  <!-- Meta Pixel (Facebook) - charge apres consentement -->
+  <script src="meta-pixel.js"></script>
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <div class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="/" class="navbar-brand">
+        <img src="icons/icon.png" alt="Galac6">
+        <span>Galac6</span>
+      </a>
+      <button class="navbar-hamburger" aria-label="Menu" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="navbar-links">
+        <a href="/">Accueil</a>
+        <a href="/ecole">École</a>
+        <a href="/tarifs">Tarifs</a>
+        <a href="/about">À propos</a>
+        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">👩‍🏫 Nous cherchons 40 professeurs testeurs</div>
+      <h1>Testez l'espace professeur de Galac6 et <span class="gradient">aidez-nous à le construire</span></h1>
+      <p class="subtitle">Vous enseignez en primaire, au collège ou au lycée&nbsp;? Créez en quelques minutes un quiz ou une interrogation avec l'assistant de Galac6, donnez-le en devoir à votre classe et voyez où chaque élève bloque. C'est gratuit, et votre avis compte vraiment.</p>
+      <div class="hero-actions">
+        <a href="https://galac6web.netlify.app/?utm_source=linkedin&amp;utm_medium=prospection&amp;utm_campaign=profs-testeurs-2026&amp;inscription=prof" class="btn btn-primary">Créer mon compte professeur</a>
+        <a href="/guide-prof" class="btn btn-secondary">Lire le guide de démarrage</a>
+      </div>
+      <div class="hero-tags">
+        <span class="hero-tag">Beta ouverte et gratuite</span>
+        <span class="hero-tag">Du CP à la Terminale</span>
+        <span class="hero-tag">Programmes français</span>
+        <span class="hero-tag">Données stockées en France</span>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══ CE QU'ON VOUS PROPOSE ═══ -->
+  <section>
+    <h2 class="section-title">Ce que nous vous proposons</h2>
+    <p class="section-subtitle">Trois choses simples, à votre rythme.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon fi-purple">🧪</div>
+        <h3>Tester gratuitement</h3>
+        <p>Vous utilisez l'espace professeur de Galac6 avec vos élèves, ou avec une classe de démonstration si vous préférez commencer seul.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-green">💬</div>
+        <h3>Nous donner votre avis</h3>
+        <p>Ce qui vous fait gagner du temps, ce qui vous gêne, ce qui manque. Les critiques franches nous sont les plus utiles.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-blue">🎥</div>
+        <h3>Un échange de vingt minutes en visioconférence</h3>
+        <p>À la fin de l'essai, nous vous posons quelques questions, au moment qui vous arrange.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ ESPACE PROFESSEUR ═══ -->
+  <section>
+    <h2 class="section-title">Ce que vous pouvez faire dans l'espace professeur</h2>
+    <p class="section-subtitle">Tout ce qui figure ici fonctionne déjà dans Galac6.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon fi-purple">✨</div>
+        <h3>Créer un quiz ou une interrogation en quelques minutes</h3>
+        <p>Vous indiquez la matière et le chapitre. Galac6 vous propose des questions dont il a vérifié la bonne réponse. Vous pouvez aussi demander à l'assistant le genre de questions que vous voulez, par exemple «&nbsp;plus difficile&nbsp;» ou «&nbsp;pour des élèves en difficulté&nbsp;», ou écrire les vôtres.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-amber">✅</div>
+        <h3>Vous gardez la main sur chaque question</h3>
+        <p>Vous relisez, modifiez et validez chaque question avant l'envoi. Rien n'est ajouté à votre évaluation sans votre clic. Vous choisissez aussi le barème et les règles de correction.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-green">📬</div>
+        <h3>Le donner en devoir à votre classe</h3>
+        <p>À faire à la maison avant une date limite, ou en classe, avec une durée. Le temps supplémentaire des élèves qui en ont besoin s'applique automatiquement.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-pink">🔍</div>
+        <h3>Voir où chaque élève bloque</h3>
+        <ul>
+          <li>Qui a fait le devoir, et qui est en retard</li>
+          <li>Les questions les plus ratées par la classe</li>
+          <li>La réussite par notion, avec les élèves en difficulté</li>
+          <li>Pour une évaluation notée, Galac6 propose une note pour chaque copie, et c'est vous qui la validez</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ PARTIE ÉLÈVE ═══ -->
+  <section>
+    <h2 class="section-title">Et pour vos élèves</h2>
+    <p class="section-subtitle">En dehors de vos devoirs, Galac6 les aide à travailler seuls.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon fi-blue">🎓</div>
+        <h3>Un tuteur qui ne donne pas la réponse</h3>
+        <p>L'élève pose sa question ou envoie la photo de son exercice. Le tuteur l'aide par des questions et des indices, étape par étape, sans faire le travail à sa place.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-purple">🔒</div>
+        <h3>Ce que vous voyez, et ce que vous ne voyez pas</h3>
+        <p>Vous voyez les résultats de vos élèves aux devoirs et à l'entraînement. Vous ne voyez pas leurs conversations avec le tuteur.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ CE QU'ON ATTEND ═══ -->
+  <section>
+    <h2 class="section-title">Ce que nous attendons de vous</h2>
+    <p class="section-subtitle">Peu de temps, et aucune obligation de résultat.</p>
+    <ol class="steps-list">
+      <li><div><h3>Vous créez votre compte et votre classe</h3><p>Comptez une dizaine de minutes avec notre guide de démarrage.</p></div></li>
+      <li><div><h3>Vous essayez Galac6 pendant environ deux semaines</h3><p>Par exemple en donnant un ou deux quiz à votre classe, sur le chapitre en cours.</p></div></li>
+      <li><div><h3>Nous échangeons vingt minutes en visioconférence</h3><p>Vous nous dites ce qui marche, ce qui ne marche pas et ce qu'il faudrait ajouter.</p></div></li>
+    </ol>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ CE QUE VOUS Y GAGNEZ ═══ -->
+  <section>
+    <h2 class="section-title">Ce que vous y gagnez</h2>
+    <p class="section-subtitle">Un merci concret pour votre temps.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon fi-green">🎁</div>
+        <h3>Un accès gratuit prolongé</h3>
+        <p>Vous gardez l'accès gratuit à Galac6 au-delà de la beta.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-amber">🏅</div>
+        <h3>La mention «&nbsp;prof pionnier&nbsp;», si vous le souhaitez</h3>
+        <p>Nous pouvons vous remercier publiquement comme l'un des premiers professeurs de Galac6. C'est vous qui décidez.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-purple">🛠️</div>
+        <h3>Une vraie influence sur le produit</h3>
+        <p>Les besoins des professeurs testeurs passent en priorité dans ce que nous construisons ensuite.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ CTA ═══ -->
+  <section class="cta-section">
+    <h2>Prêt à essayer&nbsp;?</h2>
+    <p>Créez votre compte, puis suivez le guide : votre premier quiz peut être prêt en dix minutes.</p>
+    <div class="cta-row">
+      <a href="https://galac6web.netlify.app/?utm_source=linkedin&amp;utm_medium=prospection&amp;utm_campaign=profs-testeurs-2026&amp;inscription=prof" class="btn btn-primary">Créer mon compte professeur</a>
+      <a href="/guide-prof" class="btn btn-secondary">Lire le guide de démarrage</a>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ FAQ ═══ -->
+  <section>
+    <h2 class="section-title">Questions fréquentes</h2>
+    <p class="section-subtitle">Les réponses courtes aux questions que vous vous posez sans doute.</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('open');this.setAttribute('aria-expanded',this.parentElement.classList.contains('open'))">
+          <span>Est-ce gratuit&nbsp;?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Oui. Galac6 est en beta ouverte et entièrement gratuite, pour les professeurs comme pour les élèves. Aucune carte bancaire n'est demandée.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('open');this.setAttribute('aria-expanded',this.parentElement.classList.contains('open'))">
+          <span>Mes élèves doivent-ils s'inscrire&nbsp;?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Oui, pour faire vos devoirs dans Galac6, chaque élève a besoin d'un compte. La famille crée un compte gratuit, puis saisit le code de votre classe dans Galac6 (Paramètres, puis Élèves). Vous pouvez aussi imprimer l'affiche de la classe, avec son QR code. L'import d'une liste d'élèves par fichier n'est pas encore disponible.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('open');this.setAttribute('aria-expanded',this.parentElement.classList.contains('open'))">
+          <span>Faut-il l'accord de ma direction&nbsp;?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Pour utiliser Galac6 avec une vraie classe, en principe oui : parlez-en à votre direction avant d'inviter vos élèves. Notre page <a href="/donnees-eleves">«&nbsp;Vos données et celles de vos élèves&nbsp;»</a> peut l'aider à se décider. En attendant, vous pouvez commencer seul, avec une classe de démonstration sans élèves réels, pour découvrir l'espace professeur.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('open');this.setAttribute('aria-expanded',this.parentElement.classList.contains('open'))">
+          <span>L'intelligence artificielle donne-t-elle les réponses aux élèves&nbsp;?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Non. Le tuteur de Galac6 pose des questions, donne des indices et guide l'élève étape par étape. Pour vos devoirs, c'est vous qui validez chaque question et chaque note.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('open');this.setAttribute('aria-expanded',this.parentElement.classList.contains('open'))">
+          <span>Où sont stockées les données de mes élèves&nbsp;?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Les comptes et les données sont stockés en France, dans une base de données hébergée à Paris. Certains traitements par intelligence artificielle font appel à des prestataires situés hors de l'Union européenne. Tout est expliqué sur notre page <a href="/donnees-eleves">«&nbsp;Vos données et celles de vos élèves&nbsp;»</a>.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ POUR ALLER PLUS LOIN ═══ -->
+  <section>
+    <h2 class="section-title">Pour aller plus loin</h2>
+    <p class="section-subtitle">Deux pages à lire avant de vous lancer, ou à transmettre à votre direction.</p>
+    <div class="page-links">
+      <a class="page-link" href="/guide-prof">Le guide de démarrage<span>Votre premier quiz en dix minutes, étape par étape.</span></a>
+      <a class="page-link" href="/donnees-eleves">Vos données et celles de vos élèves<span>Où elles sont stockées, qui les voit, vos droits.</span></a>
+    </div>
+    <p class="note-box" style="text-align:center;">Une question avant de commencer&nbsp;? Écrivez-nous à <a href="mailto:hello@galac6.io?subject=Professeur%20testeur%20Galac6">hello@galac6.io</a>.</p>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div>Galac6 — L'IA de soutien scolaire et de révisions.</div>
+    <div class="footer-badges">
+      <a href="/about" style="color: var(--text-muted);">À propos</a>
+      <a href="/privacy" style="color: var(--text-muted);">Confidentialité</a>
+      <a href="/mentions-legales" style="color: var(--text-muted);">Mentions légales</a>
+      <span class="footer-badge">🇫🇷 Made in France</span>
+    </div>
+  </footer>
+
+<script src="cookie-consent.js"></script>
+</body>
+</html>

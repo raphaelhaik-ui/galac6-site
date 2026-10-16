@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guide professeur : votre premier quiz Galac6 en dix minutes</title>
+  <meta name="description" content="Guide de démarrage pour les professeurs : créer son compte, créer une classe et obtenir son code d'invitation, préparer un quiz avec l'assistant de Galac6, le relire, le donner en devoir et lire les résultats.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://galac6.io/guide-prof">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Galac6">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Votre premier quiz Galac6 en dix minutes">
+  <meta property="og:description" content="Le guide de démarrage de l'espace professeur : compte, classe, quiz préparé avec l'assistant, devoir et résultats.">
+  <meta property="og:url" content="https://galac6.io/guide-prof">
+  <meta property="og:image" content="https://galac6.io/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Votre premier quiz Galac6 en dix minutes">
+  <meta name="twitter:description" content="Le guide de démarrage de l'espace professeur de Galac6.">
+  <meta name="twitter:image" content="https://galac6.io/images/og-image.jpg">
+  <link rel="icon" type="image/png" href="icons/32x32.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Créer et donner un premier quiz avec Galac6",
+    "totalTime": "PT10M",
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "Créer son compte", "text": "Créez votre compte adulte Galac6, confirmez votre adresse email, puis ouvrez l'espace professeur avec le bouton en haut à droite de l'écran." },
+      { "@type": "HowToStep", "position": 2, "name": "Créer une classe et obtenir son code", "text": "Dans « Mes classes », cliquez sur « Créer une classe », puis récupérez le code d'invitation dans les réglages de la classe." },
+      { "@type": "HowToStep", "position": 3, "name": "Préparer un quiz", "text": "Dans l'onglet « Devoirs » de la classe, cliquez sur « Créer une évaluation », choisissez « Quiz », la matière et le chapitre, puis demandez des questions à Galac6." },
+      { "@type": "HowToStep", "position": 4, "name": "Relire et valider", "text": "Relisez chaque question et sa bonne réponse, modifiez-la si besoin, puis validez-la." },
+      { "@type": "HowToStep", "position": 5, "name": "Donner le quiz en devoir", "text": "À l'étape « Envoi », choisissez à la maison ou en classe, une date limite ou une durée, puis envoyez le quiz à la classe." },
+      { "@type": "HowToStep", "position": 6, "name": "Lire les résultats", "text": "Ouvrez le quiz envoyé : vous voyez qui l'a fait, les questions les plus ratées, la réussite par notion, et vous validez les notes proposées par Galac6." }
+    ]
+  }
+  </script>
+  <!-- Google Analytics 4 + Consent Mode v2 (RGPD) -->
+  <script src="analytics.js"></script>
+  <!-- Suivi des UTM (origine des visiteurs, sans cookie) -->
+  <script src="utm.js"></script>
+  <style>
+    :root {
+      --primary: #7c5cfc;
+      --primary-light: #a78bfa;
+      --bg: #0b0b14;
+      --bg-card: #13131f;
+      --bg-card-hover: #1a1a2e;
+      --text: #f0f0f5;
+      --text-muted: #8a8aa3;
+      --border: #1e1e32;
+      --gradient-start: #6366f1;
+      --gradient-end: #a855f7;
+      --glow: rgba(99,102,241,0.15);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: var(--primary-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    /* ─── Navbar (identique aux autres pages) ─── */
+    .navbar-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,11,20,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .navbar-brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+    .navbar-brand img { height: 44px; width: auto; }
+    .navbar-brand span { font-size: 1.6rem; font-weight: 800; color: var(--text); letter-spacing: -0.02em; }
+    .navbar-links { display: flex; align-items: center; gap: 2rem; }
+    .navbar-links a { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; text-decoration: none; transition: color 0.2s; }
+    .navbar-links a:hover { color: var(--text); text-decoration: none; }
+    .navbar-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      min-width: 44px;
+      min-height: 44px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+    .navbar-hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+    .navbar-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .navbar-hamburger.open span:nth-child(2) { opacity: 0; }
+    .navbar-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    /* ─── Boutons ─── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      min-height: 48px;
+      padding: 0.8rem 1.6rem;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(99,102,241,0.25);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(99,102,241,0.35); text-decoration: none; }
+    .btn-secondary { background: var(--bg-card); color: var(--text); border: 1px solid var(--border); }
+    .btn-secondary:hover { border-color: var(--primary); color: var(--primary-light); transform: translateY(-2px); text-decoration: none; }
+    /* ─── Sections ─── */
+    section { max-width: 1100px; margin: 0 auto; padding: 4.5rem 2rem; }
+    .section-title { font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+    .section-subtitle { text-align: center; color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1.05rem; }
+    .divider { border: none; border-top: 1px solid var(--border); max-width: 1100px; margin: 0 auto; }
+    /* ─── Hero ─── */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2.5rem 4.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 600px; height: 600px;
+      top: -100px; left: -150px;
+      background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 720px; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(99,102,241,0.1);
+      border: 1px solid rgba(99,102,241,0.2);
+      border-radius: 100px;
+      padding: 0.5rem 1.25rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--primary-light);
+      margin-bottom: 1.5rem;
+    }
+    .hero-content h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 1.25rem; }
+    .gradient {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-content .subtitle { font-size: 1.1rem; color: var(--text-muted); max-width: 620px; margin: 0 auto; line-height: 1.7; }
+    .hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; margin-top: 2rem; }
+    .hero-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-top: 1.5rem; }
+    .hero-tag { font-size: 0.8rem; color: var(--text-muted); border: 1px solid var(--border); border-radius: 100px; padding: 0.3rem 0.85rem; background: rgba(255,255,255,0.02); }
+    /* ─── Cartes ─── */
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+    .feature-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.75rem; }
+    .feature-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 0.9rem; }
+    .feature-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .feature-card p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; }
+    .feature-card p + p { margin-top: 0.5rem; }
+    .feature-card ul { list-style: none; margin-top: 0.6rem; }
+    .feature-card li { color: var(--text-muted); font-size: 0.9rem; padding: 0.2rem 0 0.2rem 1.2rem; position: relative; line-height: 1.5; }
+    .feature-card li::before { content: "✓"; position: absolute; left: 0; color: var(--primary-light); font-weight: 700; }
+    .fi-purple { background: rgba(99,102,241,0.12); }
+    .fi-pink   { background: rgba(236,72,153,0.12); }
+    .fi-amber  { background: rgba(245,158,11,0.12); }
+    .fi-green  { background: rgba(34,197,94,0.12); }
+    .fi-blue   { background: rgba(59,130,246,0.12); }
+    /* ─── Étapes numérotées ─── */
+    .steps-list { list-style: none; max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.9rem; counter-reset: step; }
+    .steps-list > li {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 2.6rem 1fr;
+      gap: 1rem;
+      align-items: start;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.2rem 1.25rem;
+    }
+    .steps-list > li::before {
+      content: counter(step);
+      width: 2.6rem; height: 2.6rem;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; color: #fff;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    }
+    .steps-list > li > div { min-width: 0; }
+    .steps-list h3 { font-size: 1.02rem; font-weight: 700; margin-bottom: 0.25rem; }
+    .steps-list p, .steps-list li li { color: var(--text-muted); font-size: 0.92rem; }
+    .steps-list p + p { margin-top: 0.45rem; }
+    .steps-list ul { margin: 0.45rem 0 0 1.1rem; }
+    .steps-list li li { margin-bottom: 0.25rem; }
+    .step-time { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--primary-light); background: rgba(99,102,241,0.1); border-radius: 100px; padding: 0.1rem 0.6rem; margin-left: 0.4rem; vertical-align: middle; }
+    .ui-label { color: var(--text); font-weight: 600; white-space: normal; }
+    .note-box {
+      max-width: 780px;
+      margin: 1.75rem auto 0;
+      background: rgba(99,102,241,0.06);
+      border: 1px solid rgba(99,102,241,0.2);
+      border-radius: 14px;
+      padding: 1.1rem 1.25rem;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+    .note-box strong { color: var(--text); }
+    /* ─── Texte long (page données) ─── */
+    .prose { max-width: 780px; margin: 0 auto; }
+    .prose h2 { font-size: 1.35rem; font-weight: 700; margin: 2.5rem 0 0.9rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); }
+    .prose h2:first-child { margin-top: 0; }
+    .prose p, .prose li { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.6rem; line-height: 1.7; }
+    .prose ul { padding-left: 1.4rem; margin-bottom: 1rem; }
+    .prose strong { color: var(--text); }
+    /* ─── Liens entre les pages de la campagne ─── */
+    .page-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; max-width: 780px; margin: 0 auto; }
+    .page-link {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 72px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem 1.25rem;
+      color: var(--text);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .page-link span { color: var(--text-muted); font-size: 0.85rem; font-weight: 400; }
+    .page-link:hover { border-color: var(--primary); text-decoration: none; }
+    /* ─── CTA ─── */
+    .cta-section { text-align: center; }
+    .cta-section h2 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+    .cta-section p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 2rem; }
+    .cta-row { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    /* ─── FAQ ─── */
+    .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.75rem; }
+    .faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+    .faq-question {
+      width: 100%;
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.25rem;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 0.97rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      font-family: inherit;
+      gap: 1rem;
+    }
+    .faq-chevron { flex-shrink: 0; width: 20px; height: 20px; transition: transform 0.25s ease; color: var(--text-muted); }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .faq-item.open .faq-answer { max-height: 600px; }
+    .faq-answer-inner { padding: 0 1.25rem 1.25rem; color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; }
+    /* ─── Pied de page ─── */
+    footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--primary-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .footer-badges { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+    .footer-badges a { display: inline-flex; align-items: center; min-height: 44px; }
+    .footer-badge { display: flex; align-items: center; gap: 0.35rem; color: var(--text-muted); font-size: 0.82rem; }
+    /* ─── Responsive ─── */
+    @media (max-width: 900px) {
+      .hero { padding: 2rem 1.5rem 3rem; }
+      .navbar { padding: 1rem 1.5rem; flex-wrap: wrap; }
+      .navbar-hamburger { display: flex; }
+      .navbar-links { display: none; flex-direction: column; width: 100%; gap: 0.5rem; padding: 1rem 0 0.5rem; }
+      .navbar-links.open { display: flex; }
+      .navbar-links a { padding: 0.6rem 0; font-size: 1rem; min-height: 44px; display: flex; align-items: center; justify-content: center; }
+    }
+    @media (max-width: 640px) {
+      section { padding: 3.25rem 1rem; }
+      .hero { padding: 1.5rem 1rem 3rem; }
+      .section-title, .cta-section h2 { font-size: 1.6rem; }
+      .feature-card { padding: 1.35rem; }
+      .btn { width: 100%; max-width: 360px; }
+      .hero-actions .btn, .cta-row .btn { width: 100%; }
+      .steps-list > li { grid-template-columns: 2.2rem 1fr; gap: 0.8rem; padding: 1rem; }
+      .steps-list > li::before { width: 2.2rem; height: 2.2rem; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1rem; }
+    }
+  </style>
+  <!-- Meta Pixel (Facebook) - charge apres consentement -->
+  <script src="meta-pixel.js"></script>
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <div class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="/" class="navbar-brand">
+        <img src="icons/icon.png" alt="Galac6">
+        <span>Galac6</span>
+      </a>
+      <button class="navbar-hamburger" aria-label="Menu" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="navbar-links">
+        <a href="/">Accueil</a>
+        <a href="/ecole">École</a>
+        <a href="/tarifs">Tarifs</a>
+        <a href="/about">À propos</a>
+        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inscription ou connexion</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">⏱️ Environ dix minutes</div>
+      <h1>Votre premier quiz Galac6, <span class="gradient">étape par étape</span></h1>
+      <p class="subtitle">De la création de votre compte jusqu'à la lecture des résultats de votre classe. Les noms des boutons sont écrits en gras, tels que vous les verrez dans Galac6.</p>
+      <div class="hero-actions">
+        <a href="https://galac6web.netlify.app/?utm_source=linkedin&amp;utm_medium=prospection&amp;utm_campaign=profs-testeurs-2026&amp;inscription=prof" class="btn btn-primary">Créer mon compte professeur</a>
+        <a href="/profs-testeurs" class="btn btn-secondary">Le programme professeurs testeurs</a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══ ÉTAPES ═══ -->
+  <section>
+    <h2 class="section-title">Les six étapes</h2>
+    <p class="section-subtitle">Sur ordinateur, tablette ou téléphone, dans un navigateur récent. Rien à installer.</p>
+    <ol class="steps-list">
+      <li>
+        <div>
+          <h3>Créez votre compte <span class="step-time">2 min</span></h3>
+          <p>Cliquez sur <span class="ui-label">Créer mon compte professeur</span>, puis remplissez le formulaire d'inscription : prénom, nom, adresse email et mot de passe. Si Galac6 vous demande si vous êtes «&nbsp;Un parent&nbsp;» ou «&nbsp;Un élève&nbsp;», choisissez <span class="ui-label">Un parent</span> : c'est le compte adulte de Galac6, celui qui donne accès à l'espace professeur.</p>
+          <p>Galac6 vous envoie un email de confirmation : cliquez sur le lien qu'il contient.</p>
+          <p>Une fois connecté, touchez le petit bouton en haut à droite de l'écran (<span class="ui-label">Paramètres administrateur</span>). La première fois, Galac6 vous demande de choisir un code PIN : il protège votre espace adulte. Dans le menu, ouvrez <span class="ui-label">Mes classes</span> : c'est votre espace professeur.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Créez une classe et obtenez son code d'invitation <span class="step-time">1 min</span></h3>
+          <p>Dans <span class="ui-label">Mes classes</span>, cliquez sur <span class="ui-label">Créer une classe</span>. Donnez-lui un nom (par exemple «&nbsp;4e B&nbsp;»), choisissez son niveau, puis cliquez sur <span class="ui-label">Créer la classe</span>. Si votre école n'est pas encore inscrite sur Galac6, votre classe est personnelle : vous pourrez demander plus tard à la rattacher à votre école.</p>
+          <p>Ouvrez la classe, touchez le bouton des réglages (la roue dentée), puis <span class="ui-label">Code d'invitation et affiche</span>. Donnez ce code aux familles, ou imprimez l'affiche de la classe avec son QR code. Les parents saisissent le code dans Galac6 (Paramètres, puis Élèves) et leur enfant rejoint la classe.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Demandez un quiz sur le chapitre en cours <span class="step-time">3 min</span></h3>
+          <p>Dans votre classe, ouvrez l'onglet <span class="ui-label">Devoirs</span>, puis <span class="ui-label">Quiz</span>, et cliquez sur <span class="ui-label">Créer une évaluation</span>. La création se fait en quatre étapes : Contenu, Questions, Correction et Envoi.</p>
+          <ul>
+            <li><strong>Contenu</strong> : choisissez le type <span class="ui-label">Quiz</span> (vous pouvez aussi choisir Interrogation, Contrôle ou Devoir à la maison), puis la matière, le chapitre ou le thème, et un titre.</li>
+            <li><strong>Questions</strong> : dans l'onglet <span class="ui-label">Propositions</span>, Galac6 propose une dizaine de questions vérifiées, faciles, moyennes et difficiles. Gardez celles qui vous conviennent. Dans l'onglet <span class="ui-label">Assistant</span>, écrivez ce que vous voulez, par exemple «&nbsp;3 questions avec un piège&nbsp;», «&nbsp;Plus difficile&nbsp;» ou «&nbsp;Pour des élèves en difficulté&nbsp;». Dans l'onglet <span class="ui-label">Écrire</span>, vous rédigez vos propres questions.</li>
+          </ul>
+          <p>La préparation des questions peut prendre une minute, parfois un peu plus. Galac6 ne garde que les questions dont il a pu vérifier la bonne réponse.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Relisez et modifiez <span class="step-time">2 min</span></h3>
+          <p>Relisez chaque question et sa bonne réponse. Cliquez sur <span class="ui-label">Modifier</span> pour changer un énoncé, un choix ou l'explication montrée aux élèves après le quiz. Galac6 vous signale une faute d'orthographe possible ou un doute sur une réponse, mais c'est vous qui décidez.</p>
+          <p>Validez chaque question avec <span class="ui-label">Valider</span>, ou toutes d'un coup avec <span class="ui-label">Tout valider</span>. Le quiz ne peut être envoyé que lorsque toutes ses questions sont validées.</p>
+          <p>L'étape <strong>Correction</strong> est facultative : sans réglage, Galac6 corrige avec ses règles habituelles. Vous pouvez y écrire vos propres consignes de correction : Galac6 les reformule en règles et ne les applique qu'avec votre accord.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Donnez-le en devoir <span class="step-time">1 min</span></h3>
+          <p>À l'étape <strong>Envoi</strong>, choisissez où se déroule le quiz :</p>
+          <ul>
+            <li><span class="ui-label">À la maison</span>, jusqu'à une date limite (facultative). Sans date limite, le quiz reste à faire jusqu'à ce que vous le retiriez.</li>
+            <li><span class="ui-label">En classe</span>, avec une durée. Vous le lancez vous-même au début du cours. Pendant l'épreuve, le tuteur de Galac6 est coupé pour l'élève jusqu'à ce qu'il rende sa copie.</li>
+          </ul>
+          <p>Par défaut, un quiz n'est pas noté et l'élève voit sa correction dès qu'il a rendu sa copie. Si vous voulez une note, cochez <span class="ui-label">Noté</span> à cette étape, ou choisissez plutôt le type Interrogation à l'étape Contenu. Vous pouvez aussi choisir le moment où l'élève voit sa correction.</p>
+          <p>Vérifiez le récapitulatif, puis cliquez sur le bouton d'envoi à votre classe (par exemple <span class="ui-label">Envoyer à 4e B</span>). Vos élèves voient le quiz en se connectant à Galac6.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Lisez les résultats <span class="step-time">1 min</span></h3>
+          <p>Dans l'onglet <span class="ui-label">Devoirs</span>, ouvrez le quiz envoyé. Vous y voyez :</p>
+          <ul>
+            <li>le nombre d'élèves qui l'ont fait, et ceux qui sont en retard ;</li>
+            <li>les questions les plus ratées par la classe ;</li>
+            <li>la réussite par notion, avec les élèves en difficulté ;</li>
+            <li>la copie de chaque élève.</li>
+          </ul>
+          <p>Pour une évaluation notée, Galac6 propose une note pour chaque copie. Ouvrez une copie avec <span class="ui-label">Voir la copie</span> pour la relire ou changer une décision, puis cliquez sur <span class="ui-label">Valider la note</span>. Vous pouvez aussi valider en une seule fois toutes les copies que vous n'avez pas modifiées. Tant que vous n'avez pas validé, l'élève voit sa note comme provisoire.</p>
+          <p>Si vous avez choisi de rendre la correction vous-même, cliquez sur <span class="ui-label">Rendre les copies</span> quand toute la classe a terminé : chaque élève voit alors sa correction.</p>
+          <p>L'onglet <span class="ui-label">Notions</span> de la classe et la fiche de chaque élève (onglet <span class="ui-label">Élèves</span>) vous donnent une vue d'ensemble de leur travail.</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="note-box">
+      <strong>Vous voulez d'abord essayer sans vos élèves&nbsp;?</strong> Créez une classe de démonstration, préparez un quiz et regardez chaque écran sans rien envoyer. Pour utiliser Galac6 avec une vraie classe, parlez-en d'abord à votre direction.
+    </div>
+    <div class="note-box">
+      <strong>Un écran ne correspond pas à ce guide, ou vous êtes bloqué&nbsp;?</strong> Galac6 évolue chaque semaine pendant la beta. Écrivez-nous à <a href="mailto:hello@galac6.io?subject=Guide%20professeur%20Galac6">hello@galac6.io</a> : nous vous répondons et nous corrigeons le guide.
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ LIENS ═══ -->
+  <section>
+    <h2 class="section-title">À lire aussi</h2>
+    <p class="section-subtitle">Pour vous, et pour votre direction.</p>
+    <div class="page-links">
+      <a class="page-link" href="/profs-testeurs">Devenir professeur testeur<span>Ce que nous vous proposons et ce que vous y gagnez.</span></a>
+      <a class="page-link" href="/donnees-eleves">Vos données et celles de vos élèves<span>Où elles sont stockées, qui les voit, vos droits.</span></a>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div>Galac6 — L'IA de soutien scolaire et de révisions.</div>
+    <div class="footer-badges">
+      <a href="/about" style="color: var(--text-muted);">À propos</a>
+      <a href="/privacy" style="color: var(--text-muted);">Confidentialité</a>
+      <a href="/mentions-legales" style="color: var(--text-muted);">Mentions légales</a>
+      <span class="footer-badge">🇫🇷 Made in France</span>
+    </div>
+  </footer>
+
+<script src="cookie-consent.js"></script>
+</body>
+</html>
