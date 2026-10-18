@@ -356,18 +356,19 @@
         <li><strong>Amazon Web Services (Amazon Bedrock, Francfort)</strong> et <strong>Google Cloud (Vertex AI)</strong> — exécution de l'IA principale (modèles Claude d'Anthropic) pour le tuteur, les corrections et les outils des profs : centres de données dans l'Union européenne.</li>
         <li><strong>Mistral AI</strong> — certaines tâches d'IA : France.</li>
         <li><strong>Scaleway</strong> — correcteur d'orthographe : Pays-Bas.</li>
+        <li><strong>Google Cloud</strong> — voix du tuteur (lecture à voix haute) par le point d'accès européen de Google Cloud Text-to-Speech, et deuxième vérification de certaines questions par Google Gemini via Vertex AI : traitement dans l'Union européenne.</li>
+        <li><strong>Avatar à partir d'une photo</strong> (facultatif) : la photo est décrite par l'IA Claude (Anthropic, via la passerelle Vercel AI Gateway, traitement en Europe), puis elle est jetée ; le dessin est fait par Google Gemini via Google Cloud Vertex AI, traitement en Europe. Seuls « fille » ou « garçon » et une tranche d'âge sont transmis : ni le prénom, ni l'âge exact. L'animation de l'avatar est faite par l'application elle-même.</li>
       </ul>
       <p>Certains services sont situés hors de l'Union européenne ou sont des sociétés américaines :</p>
       <ul>
         <li><strong>Voix au micro</strong> : reconnaissance vocale de Google (navigateur Chrome, Android) ou d'OpenAI Whisper (iPhone) — États-Unis.</li>
-        <li><strong>Voix du tuteur</strong> (lecture à voix haute) : Google, avec OpenAI en secours — États-Unis.</li>
-        <li><strong>Avatar à partir d'une photo</strong> (facultatif) : OpenAI (dessin) et fal.ai (animation) — États-Unis.</li>
-        <li><strong>Vérification et secours de l'IA</strong> : Google Gemini (deuxième vérification de certaines questions, secours si l'IA principale ne répond pas) ; Anthropic en direct, en secours — États-Unis.</li>
+        <li><strong>Dictées lues à voix haute</strong> : voix « Achernar » de Google Gemini, par son point d'accès mondial — États-Unis.</li>
+        <li><strong>Secours de l'IA</strong> : Google Gemini en direct (secours rare du chat si l'IA principale ne répond pas) ; Anthropic en direct, en secours — États-Unis.</li>
         <li><strong>Emails</strong> : Resend — États-Unis.</li>
         <li><strong>Questionnaires d'avis</strong> (facultatifs) : Tally.</li>
         <li><strong>Hébergement du site et de l'application</strong> : Netlify ; <strong>passerelle vers l'IA</strong> : Vercel, qui impose des centres de données européens — sociétés américaines.</li>
         <li><strong>Paiement</strong> (anciens abonnements uniquement) : Stripe — États-Unis.</li>
-        <li>Pour afficher certaines ressources (police adaptée à la dyslexie, couvertures de livres, figures de maths), votre navigateur contacte jsDelivr, Open Library et Kroki, qui ne reçoivent que votre adresse IP.</li>
+        <li>Pour afficher certaines ressources (couvertures de livres, figures de maths), votre navigateur contacte Open Library et Kroki, qui ne reçoivent que votre adresse IP.</li>
       </ul>
       <p>Ces transferts hors de l'Union européenne sont encadrés par les <strong>clauses contractuelles types</strong> de la Commission européenne (article 46 du RGPD) ou par le <strong>Data Privacy Framework</strong> UE–États-Unis lorsque le prestataire y est certifié. Nous envoyons à ces services le moins de données possible.</p>
 
@@ -464,18 +465,19 @@
         <li><strong>Amazon Web Services (Amazon Bedrock, Frankfurt)</strong> and <strong>Google Cloud (Vertex AI)</strong> — running the main AI (Anthropic's Claude models) for the tutor, corrections and teacher tools: data centres in the European Union.</li>
         <li><strong>Mistral AI</strong> — some AI tasks: France.</li>
         <li><strong>Scaleway</strong> — spell checker: Netherlands.</li>
+        <li><strong>Google Cloud</strong> — tutor's voice (reading aloud) through the European endpoint of Google Cloud Text-to-Speech, and second check of some questions by Google Gemini via Vertex AI: processed in the European Union.</li>
+        <li><strong>Avatar from a photo</strong> (optional): the photo is described by the Claude AI (Anthropic, via the Vercel AI Gateway, processed in Europe), then discarded; the drawing is made by Google Gemini via Google Cloud Vertex AI, processed in Europe. Only "girl" or "boy" and an age range are sent: neither the first name nor the exact age. The avatar's animation is done by the app itself.</li>
       </ul>
       <p>Some services are located outside the European Union or are US companies:</p>
       <ul>
         <li><strong>Voice input</strong>: speech recognition by Google (Chrome browser, Android) or OpenAI Whisper (iPhone) — United States.</li>
-        <li><strong>Tutor's voice</strong> (reading aloud): Google, with OpenAI as backup — United States.</li>
-        <li><strong>Avatar from a photo</strong> (optional): OpenAI (drawing) and fal.ai (animation) — United States.</li>
-        <li><strong>AI checks and backup</strong>: Google Gemini (second check of some questions, backup if the main AI does not respond); Anthropic directly, as backup — United States.</li>
+        <li><strong>Dictations read aloud</strong>: Google Gemini's "Achernar" voice, through its global endpoint — United States.</li>
+        <li><strong>AI backup</strong>: Google Gemini directly (rare chat backup if the main AI does not respond); Anthropic directly, as backup — United States.</li>
         <li><strong>Emails</strong>: Resend — United States.</li>
         <li><strong>Feedback surveys</strong> (optional): Tally.</li>
         <li><strong>Website and app hosting</strong>: Netlify; <strong>AI gateway</strong>: Vercel, which enforces European data centres — US companies.</li>
         <li><strong>Payment</strong> (former subscriptions only): Stripe — United States.</li>
-        <li>To display some resources (dyslexia-friendly font, book covers, maths figures), your browser contacts jsDelivr, Open Library and Kroki, which only receive your IP address.</li>
+        <li>To display some resources (book covers, maths figures), your browser contacts Open Library and Kroki, which only receive your IP address.</li>
       </ul>
       <p>These transfers outside the European Union are covered by the European Commission's <strong>standard contractual clauses</strong> (Article 46 GDPR) or by the EU–US <strong>Data Privacy Framework</strong> where the provider is certified. We send these services as little data as possible.</p>
 
