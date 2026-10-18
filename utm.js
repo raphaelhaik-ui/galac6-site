@@ -1,7 +1,11 @@
 // Suivi de l'origine des visiteurs (paramètres UTM, ex. posts Facebook par groupe).
-// - Mémorise les UTM du premier contact dans localStorage (clé galac6_utm, 30 jours).
+// - Sert uniquement à savoir d'où viennent les inscriptions (attribution), propre au site.
+// - Sans accord « mesure d'audience » : UTM gardés seulement pour la visite en cours
+//   (sessionStorage, effacé à la fermeture de l'onglet) — exempté de consentement.
+// - Avec accord « mesure d'audience » : UTM du premier contact gardés 30 jours
+//   (localStorage, clé galac6_utm).
 // - Ajoute ces UTM aux liens vers l'application pour garder l'origine à l'inscription.
-// Aucune donnée personnelle, aucun cookie, aucune dépendance externe.
+// Aucun identifiant, aucun cookie, aucune dépendance externe.
 // Syntaxe volontairement ancienne (ES5) pour les vieux Safari iOS.
 (function () {
   var CLE = 'galac6_utm';
@@ -40,10 +44,38 @@
     return trouve ? utm : null;
   }
 
+  // Accord « mesure d'audience » donné il y a moins de 6 mois ? (bandeau cookies)
+  function audienceAcceptee() {
+    try {
+      var brut = window.localStorage.getItem('galac6-cookie-consent');
+      if (!brut || brut.charAt(0) !== '{') return false;
+      var choix = JSON.parse(brut);
+      return !!choix && choix.audience === true && typeof choix.date === 'number' &&
+        new Date().getTime() - choix.date <= 182 * 24 * 60 * 60 * 1000;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  // Avec accord : localStorage (30 jours). Sans accord : sessionStorage (visite en cours)
+  // et on efface un éventuel ancien enregistrement de longue durée.
+  var stockage = null;
+  try {
+    if (audienceAcceptee()) {
+      stockage = window.localStorage;
+    } else {
+      try { window.localStorage.removeItem(CLE); } catch (e) {}
+      stockage = window.sessionStorage;
+    }
+  } catch (e) {
+    stockage = null;
+  }
+
   // Lit l'enregistrement stocké (null si absent, illisible ou trop vieux)
   function lireStockage() {
     try {
-      var brut = window.localStorage.getItem(CLE);
+      if (!stockage) return null;
+      var brut = stockage.getItem(CLE);
       if (!brut) return null;
       var donnees = JSON.parse(brut);
       if (!donnees || typeof donnees.ts !== 'number') return null;
@@ -57,10 +89,21 @@
   // Règle « premier contact » : on n'écrase pas un enregistrement de moins de 30 jours
   var utmCourants = utmDeLaPage();
   var stocke = lireStockage();
+  // Accord donné pendant la visite : on reprend les UTM gardés pour la visite en cours
+  if (!stocke && stockage) {
+    try {
+      var brutSession = stockage === window.localStorage ? window.sessionStorage.getItem(CLE) : null;
+      if (brutSession) {
+        stockage.setItem(CLE, brutSession);
+        window.sessionStorage.removeItem(CLE);
+        stocke = lireStockage();
+      }
+    } catch (e) {}
+  }
   if (utmCourants && !stocke) {
     utmCourants.ts = new Date().getTime();
     try {
-      window.localStorage.setItem(CLE, JSON.stringify(utmCourants));
+      if (stockage) stockage.setItem(CLE, JSON.stringify(utmCourants));
     } catch (e) {}
     stocke = utmCourants;
   }

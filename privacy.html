@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Politique de confidentialité — Galac6</title>
-  <meta name="description" content="Politique de confidentialité de Galac6 : comment nous protégeons les données des élèves, conformément au RGPD. Données hébergées en France.">
+  <meta name="description" content="Politique de confidentialité de Galac6 : comment nous protégeons les données des élèves, conformément au RGPD. Données stockées en France, IA principale en Europe.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://galac6.io/privacy">
   <link rel="icon" type="image/png" href="icons/32x32.png">
@@ -196,6 +196,16 @@
 
     .content strong { color: var(--text); }
 
+    /* Encadré « En bref, pour les élèves » */
+    .en-bref {
+      background: var(--bg-card);
+      border: 1px solid var(--primary);
+      border-radius: 14px;
+      padding: 1.2rem 1.4rem 0.6rem;
+      margin: 1.5rem 0 1rem;
+    }
+    .en-bref h2 { margin-top: 0 !important; }
+
     footer {
       max-width: 1200px;
       margin: 0 auto;
@@ -279,81 +289,222 @@
 
   <!-- ═══ CONTENT ═══ -->
   <div class="content">
-    <h1 data-i18n="privacy.title">Politique de confidentialité</h1>
-    <p class="subtitle" data-i18n="privacy.subtitle">Dernière mise à jour : 16 octobre 2026</p>
+    <div class="fr-only" lang="fr">
+      <h1>Politique de confidentialité</h1>
+      <p class="subtitle">Dernière mise à jour : 18 octobre 2026</p>
+      <p>Cette politique explique quelles données Galac6 utilise, pourquoi, où elles vont, combien de temps elles sont gardées et comment exercer vos droits (RGPD et loi Informatique et Libertés). C'est la même politique sur le site galac6.io et dans l'application.</p>
+      <div class="en-bref">
+        <h2>En bref, pour les élèves</h2>
+        <ul>
+          <li>Galac6 est une <strong>intelligence artificielle</strong> qui t'aide à apprendre. Elle peut se tromper : vérifie avec ton cours ou ton prof.</li>
+          <li>On garde seulement ce qu'il faut pour t'aider : ton prénom, ta classe, tes messages, tes exercices et tes résultats.</li>
+          <li>Tes données sont <strong>stockées en France</strong>. L'IA principale fonctionne <strong>en Europe</strong>. Quelques services sont aux États-Unis, par exemple la reconnaissance de ta voix quand tu parles au micro.</li>
+          <li>On ne vend jamais tes données, il n'y a pas de publicité dans l'appli, et tes données ne servent pas à entraîner des IA.</li>
+          <li>Si tu as <strong>moins de 15 ans</strong>, un de tes parents doit donner son accord par email.</li>
+          <li>Ton parent rattaché à ton compte, et tes profs si tu utilises Galac6 avec ta classe, peuvent voir ton travail.</li>
+          <li>Tu peux demander à voir tes données, les télécharger ou les effacer : depuis ton compte, ou en écrivant à <a href="mailto:hello@galac6.io">hello@galac6.io</a> (tu peux demander à un parent de t'aider).</li>
+        </ul>
+      </div>
 
-    <p data-i18n="privacy.intro">La présente politique de confidentialité décrit la manière dont Galac6 (ci-après « nous ») collecte, utilise et protège les données personnelles des utilisateurs de la plateforme Galac6, conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés.</p>
+      <h2>1. Qui est responsable de vos données ?</h2>
+      <p>Galac6 est édité par <strong>RHK Conseil</strong> (entreprise individuelle), 19 rue de Croulebarbe, 75013 Paris, France — SIRET 944 058 866 00012. RHK Conseil est responsable du traitement des données des utilisateurs de Galac6. Contact : <a href="mailto:hello@galac6.io">hello@galac6.io</a>.</p>
+      <p><strong>Cas des écoles.</strong> Quand une école utilise Galac6 avec ses élèves (classes, devoirs, suivi par les profs et la direction), c'est l'école qui décide de cet usage : pour les données de ses élèves liées à cet usage, Galac6 agit comme <strong>sous-traitant de l'école</strong> (article 28 du RGPD) et ne les utilise que pour le compte de l'école. Les demandes concernant ces données peuvent être adressées à l'école ou à Galac6, qui les transmettra.</p>
 
-    <h2 data-i18n="privacy.art1.title">1. Responsable du traitement</h2>
-    <p data-i18n-html="privacy.art1.text">Le responsable du traitement des données est la société éditrice de Galac6. Pour toute question relative à vos données personnelles, vous pouvez nous contacter à l'adresse : <a href="mailto:hello@galac6.io">hello@galac6.io</a>.</p>
+      <h2>2. Qui utilise Galac6 ?</h2>
+      <p>Galac6 est <strong>gratuit</strong> pendant sa bêta ouverte : aucun abonnement payant n'est proposé. Il existe quatre types de comptes : <strong>élève</strong> (du CP à la Terminale), <strong>parent</strong>, <strong>professeur</strong> et <strong>direction d'école</strong>.</p>
 
-    <h2 data-i18n="privacy.art2.title">2. Données collectées</h2>
-    <p data-i18n="privacy.art2.intro">Nous collectons les catégories de données suivantes :</p>
-    <ul>
-      <li data-i18n-html="privacy.art2.identity"><strong>Données d'identité</strong> : adresse email, nom de l'élève, année de naissance, niveau scolaire, langue</li>
-      <li data-i18n-html="privacy.art2.activity"><strong>Données d'activité éducative</strong> : messages de chat, résultats de quiz, dictées, devoirs et copies (avec les notes et les commentaires du professeur), plans de remédiation, statistiques d'apprentissage</li>
-      <li data-i18n-html="privacy.art2.technical"><strong>Données techniques</strong> : préférences d'affichage (thème, taille de police), état de la barre latérale</li>
-      <li data-i18n-html="privacy.art2.billing"><strong>Données de facturation</strong> : email et identifiant Stripe</li>
-      <li data-i18n-html="privacy.art2.school"><strong>Établissement scolaire</strong> : nom, ville et pays de l'école ou de l'établissement fréquenté par l'élève, ainsi que son numéro officiel (UAI). Cette information est demandée à la création de chaque nouveau profil élève ; l'élève peut aussi indiquer qu'il n'est pas scolarisé dans un établissement (instruction en famille, CNED…). Pour les profils créés avant le 28 septembre 2026, la réponse reste facultative. L'élève ou son parent peut modifier cette information à tout moment depuis son profil. Elle sert uniquement à des statistiques internes, pour savoir dans quels établissements Galac6 est utilisé et améliorer le service ; elle n'est ni revendue ni communiquée aux établissements. Elle est hébergée en France (Supabase, région Paris). La recherche d'école interroge l'annuaire public de l'Éducation nationale (data.education.gouv.fr) en n'envoyant que le texte saisi, sans aucune donnée sur l'élève.</li>
-      <li data-i18n-html="privacy.art2.sensitive"><strong>Données sensibles</strong> : aménagements scolaires (le cas échéant), collectées uniquement avec votre consentement explicite (Art. 9 RGPD)</li>
-    </ul>
+      <h2>3. Quelles données ?</h2>
+      <ul>
+        <li><strong>Compte</strong> : adresse email, prénom et nom, type de compte, mois et année de naissance (élèves), niveau scolaire, langue, école fréquentée (nom, ville, numéro officiel), et, si vous le dites, comment vous avez connu Galac6. Nous gardons aussi le lien publicitaire ou la campagne d'où vient l'inscription (paramètres « UTM »), sans identifiant publicitaire.</li>
+        <li><strong>Accord parental</strong> (élèves de moins de 15 ans) : adresse email du parent, date et preuve de son accord.</li>
+        <li><strong>Travail de l'élève</strong> : messages échangés avec le tuteur, photos envoyées (cours, exercices, copies, dictées écrites à la main), texte dicté au micro, réponses et résultats (quiz, dictées, exercices, examens blancs), fiches, compétences travaillées, points et badges.</li>
+        <li><strong>Classes et écoles</strong> : classes, devoirs, notes et commentaires des profs, copies papier scannées par un prof, messages entre profs et parents, tableaux de suivi de la direction.</li>
+        <li><strong>Avatar</strong> (facultatif) : si l'élève crée un avatar à partir d'une photo, la photo sert seulement à créer le dessin ; elle n'est pas gardée.</li>
+        <li><strong>Préférences</strong> : thème, taille du texte, profil d'accessibilité (dyslexie, dyspraxie, troubles visuels ou auditifs). Un profil d'accessibilité peut révéler une information de santé : il est facultatif, choisi par l'utilisateur, sert à adapter l'affichage et peut être retiré à tout moment.</li>
+        <li><strong>Données techniques</strong> : statistiques d'utilisation de l'appli (pages ouvertes, durée), journaux d'erreurs, adresse IP (traitée par nos hébergeurs).</li>
+        <li><strong>Paiement</strong> : aucun paiement n'est demandé pendant la bêta. Les éventuelles données de facturation d'anciens abonnements (identifiant Stripe, factures) sont conservées pour nos obligations comptables.</li>
+      </ul>
 
-    <h2 data-i18n="privacy.art3.title">3. Finalités et bases légales</h2>
-    <p data-i18n="privacy.art3.intro">Vos données sont traitées pour les finalités suivantes :</p>
-    <ul>
-      <li data-i18n="privacy.art3.li1">Fourniture du service éducatif (exécution du contrat)</li>
-      <li data-i18n="privacy.art3.li2">Personnalisation de l'apprentissage via l'IA (intérêt légitime)</li>
-      <li data-i18n="privacy.art3.li3">Suivi de la progression scolaire (exécution du contrat)</li>
-      <li data-i18n="privacy.art3.li4">Facturation et gestion des abonnements (exécution du contrat)</li>
-      <li data-i18n="privacy.art3.li5">Amélioration du service (intérêt légitime)</li>
-      <li data-i18n="privacy.art3.li6">Respect des obligations légales (obligation légale)</li>
-    </ul>
+      <h2>4. Pourquoi ? (finalités et bases légales)</h2>
+      <ul>
+        <li>Fournir le service : tuteur, exercices, corrections, suivi des progrès, comptes parents — <em>exécution des conditions d'utilisation</em>.</li>
+        <li>Classes, devoirs et suivi par les profs et la direction — <em>pour le compte de l'école</em>, selon ses instructions.</li>
+        <li>Recueillir et prouver l'accord parental — <em>obligation légale</em> (article 8 du RGPD, article 45 de la loi Informatique et Libertés).</li>
+        <li>Emails de service (code de connexion, accord parental, récapitulatifs, avertissements) — <em>exécution des conditions d'utilisation</em>.</li>
+        <li>Sécurité, lutte contre les abus, correction des erreurs, statistiques internes pour améliorer Galac6, questionnaires d'avis facultatifs — <em>intérêt légitime</em>. Vous pouvez refuser les questionnaires à tout moment.</li>
+        <li>Profil d'accessibilité — <em>votre consentement</em>, que vous pouvez retirer en désactivant le profil.</li>
+        <li>Cookies de mesure d'audience et de publicité du site galac6.io — <em>votre consentement</em>, via le bandeau cookies.</li>
+      </ul>
+      <p>Nous ne vendons aucune donnée. Il n'y a pas de publicité ni de traceur publicitaire dans l'application. Les données ne servent pas à entraîner des modèles d'IA. Les notes et corrections données par l'IA sont indicatives : elles n'entraînent aucune décision automatique ayant un effet juridique pour l'élève.</p>
 
-    <h2 data-i18n="privacy.art4.title">4. Protection des mineurs</h2>
-    <p data-i18n="privacy.art4.text">Galac6 est destiné aux élèves du CP à la Terminale. Conformément à l'article 8 du RGPD et à l'article 45 de la loi Informatique et Libertés, le consentement du parent ou représentant légal est requis pour les utilisateurs de moins de 15 ans. Ce consentement est recueilli lors de la création du compte.</p>
+      <h2>5. Les élèves de moins de 15 ans</h2>
+      <p>Un élève de 15 ans ou plus peut accepter seul les conditions de Galac6. En dessous de 15 ans, l'accord d'un parent (ou représentant légal) est obligatoire : depuis le 17 octobre 2026, l'élève indique l'adresse email d'un parent, qui reçoit un message avec un bouton pour accepter. En attendant, l'élève peut utiliser Galac6 pendant 30 jours au plus ; sans accord, le compte est ensuite mis en pause. La preuve de l'accord est conservée 5 ans après la fin du compte.</p>
 
-    <h2 data-i18n="privacy.art5.title">5. Sous-traitants et transferts de données</h2>
-    <p data-i18n="privacy.art5.intro">Nous faisons appel aux sous-traitants suivants :</p>
-    <ul>
-      <li data-i18n-html="privacy.art5.supabase"><strong>Supabase</strong> (hébergement, base de données, comptes et fonctions serveur) — France (région Paris), Union européenne</li>
-      <li data-i18n-html="privacy.art5.netlify"><strong>Netlify</strong> (hébergement web) — Irlande, Union européenne</li>
-      <li data-i18n-html="privacy.art5.vercel"><strong>Vercel</strong> (AI Gateway : passerelle qui transmet les demandes d'intelligence artificielle aux modèles Claude en imposant des centres de données situés dans l'Union européenne) — États-Unis</li>
-      <li data-i18n-html="privacy.art5.bedrock"><strong>Amazon Web Services (Amazon Bedrock)</strong> et <strong>Google Cloud (Vertex AI)</strong> (exécution des modèles Claude d'Anthropic pour le tuteur, les corrections et les outils du professeur) — centres de données situés dans l'Union européenne (Amazon Bedrock : Francfort, Allemagne)</li>
-      <li data-i18n-html="privacy.art5.anthropic"><strong>Anthropic / Claude</strong> (assistance IA, en secours lorsque le passage par l'Union européenne n'est pas possible) — États-Unis, avec clauses contractuelles types</li>
-      <li data-i18n-html="privacy.art5.google"><strong>Google</strong> (synthèse vocale et lecture des dictées ; modèles Gemini en secours de l'assistance IA et des corrections ; images des thèmes) — États-Unis, avec clauses contractuelles types</li>
-      <li data-i18n-html="privacy.art5.openai"><strong>OpenAI</strong> (Whisper : transcription de la voix en texte ; création des images d'avatar ; secours de la synthèse vocale) — États-Unis, avec clauses contractuelles types</li>
-      <li data-i18n-html="privacy.art5.fal"><strong>fal.ai</strong> (animation des avatars) — États-Unis</li>
-      <li data-i18n-html="privacy.art5.scaleway"><strong>Scaleway</strong> (hébergement du correcteur d'orthographe utilisé par Galac6) — Pays-Bas, Union européenne</li>
-      <li data-i18n-html="privacy.art5.stripe"><strong>Stripe</strong> (paiement) — États-Unis, certifié et conforme</li>
-      <li data-i18n-html="privacy.art5.resend"><strong>Resend</strong> (emails transactionnels) — États-Unis, avec clauses contractuelles types</li>
-    </ul>
-    <p data-i18n="privacy.art5.note">Les transferts hors Union Européenne sont encadrés par des clauses contractuelles types (CCT) conformément à l'article 46 du RGPD. Aucune donnée n'est utilisée pour l'entraînement des modèles d'IA.</p>
+      <h2>6. Qui peut voir les données ?</h2>
+      <ul>
+        <li>L'élève lui-même.</li>
+        <li>Le ou les parents rattachés à son compte.</li>
+        <li>Ses professeurs et la direction de son école, quand Galac6 est utilisé avec l'école.</li>
+        <li>L'équipe de Galac6, seulement quand c'est nécessaire (assistance, sécurité, correction d'erreurs).</li>
+        <li>Nos prestataires techniques, uniquement pour faire fonctionner le service (voir ci-dessous).</li>
+      </ul>
 
-    <h2 data-i18n="privacy.art6.title">6. Durées de conservation</h2>
-    <ul>
-      <li data-i18n-html="privacy.art6.account"><strong>Données de compte</strong> : durée de vie du compte + 1 an après suppression</li>
-      <li data-i18n-html="privacy.art6.activity"><strong>Données d'activité éducative</strong> : 2 ans ou fin de scolarité + 1 an</li>
-      <li data-i18n-html="privacy.art6.billing"><strong>Données de facturation</strong> : durée légale de conservation (10 ans)</li>
-      <li data-i18n-html="privacy.art6.inactive"><strong>Comptes inactifs</strong> : suppression après 2 ans d'inactivité</li>
-    </ul>
+      <h2>7. Où vont les données ? (prestataires)</h2>
+      <p><strong>Données stockées en France, IA principale en Europe.</strong></p>
+      <ul>
+        <li><strong>Supabase</strong> — base de données, comptes, fichiers et fonctions serveur : stockage en France (Paris).</li>
+        <li><strong>Amazon Web Services (Amazon Bedrock, Francfort)</strong> et <strong>Google Cloud (Vertex AI)</strong> — exécution de l'IA principale (modèles Claude d'Anthropic) pour le tuteur, les corrections et les outils des profs : centres de données dans l'Union européenne.</li>
+        <li><strong>Mistral AI</strong> — certaines tâches d'IA : France.</li>
+        <li><strong>Scaleway</strong> — correcteur d'orthographe : Pays-Bas.</li>
+      </ul>
+      <p>Certains services sont situés hors de l'Union européenne ou sont des sociétés américaines :</p>
+      <ul>
+        <li><strong>Voix au micro</strong> : reconnaissance vocale de Google (navigateur Chrome, Android) ou d'OpenAI Whisper (iPhone) — États-Unis.</li>
+        <li><strong>Voix du tuteur</strong> (lecture à voix haute) : Google, avec OpenAI en secours — États-Unis.</li>
+        <li><strong>Avatar à partir d'une photo</strong> (facultatif) : OpenAI (dessin) et fal.ai (animation) — États-Unis.</li>
+        <li><strong>Vérification et secours de l'IA</strong> : Google Gemini (deuxième vérification de certaines questions, secours si l'IA principale ne répond pas) ; Anthropic en direct, en secours — États-Unis.</li>
+        <li><strong>Emails</strong> : Resend — États-Unis.</li>
+        <li><strong>Questionnaires d'avis</strong> (facultatifs) : Tally.</li>
+        <li><strong>Hébergement du site et de l'application</strong> : Netlify ; <strong>passerelle vers l'IA</strong> : Vercel, qui impose des centres de données européens — sociétés américaines.</li>
+        <li><strong>Paiement</strong> (anciens abonnements uniquement) : Stripe — États-Unis.</li>
+        <li>Pour afficher certaines ressources (police adaptée à la dyslexie, couvertures de livres, figures de maths), votre navigateur contacte jsDelivr, Open Library et Kroki, qui ne reçoivent que votre adresse IP.</li>
+      </ul>
+      <p>Ces transferts hors de l'Union européenne sont encadrés par les <strong>clauses contractuelles types</strong> de la Commission européenne (article 46 du RGPD) ou par le <strong>Data Privacy Framework</strong> UE–États-Unis lorsque le prestataire y est certifié. Nous envoyons à ces services le moins de données possible.</p>
 
-    <h2 data-i18n="privacy.art7.title">7. Vos droits</h2>
-    <p data-i18n="privacy.art7.intro">Conformément au RGPD, vous disposez des droits suivants :</p>
-    <ul>
-      <li data-i18n-html="privacy.art7.access"><strong>Droit d'accès</strong> (Art. 15) : obtenir une copie de vos données</li>
-      <li data-i18n-html="privacy.art7.rectification"><strong>Droit de rectification</strong> (Art. 16) : corriger vos données</li>
-      <li data-i18n-html="privacy.art7.erasure"><strong>Droit à l'effacement</strong> (Art. 17) : demander la suppression de vos données</li>
-      <li data-i18n-html="privacy.art7.portability"><strong>Droit à la portabilité</strong> (Art. 20) : recevoir vos données dans un format structuré</li>
-      <li data-i18n-html="privacy.art7.objection"><strong>Droit d'opposition</strong> (Art. 21) : vous opposer au traitement de vos données</li>
-      <li data-i18n-html="privacy.art7.withdraw"><strong>Droit de retirer votre consentement</strong> à tout moment</li>
-    </ul>
-    <p data-i18n-html="privacy.art7.contact">Pour exercer ces droits, contactez-nous à : <strong><a href="mailto:hello@galac6.io">hello@galac6.io</a></strong>.</p>
-    <p data-i18n-html="privacy.art7.cnil">Vous pouvez également introduire une réclamation auprès de la <strong>CNIL</strong> (<a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>).</p>
+      <h2>8. Combien de temps ?</h2>
+      <ul>
+        <li><strong>Compte et travail de l'élève</strong> : tant que le compte est utilisé. Un compte sans connexion pendant <strong>2 ans</strong> est supprimé.</li>
+        <li><strong>Compte supprimé à votre demande</strong> : effacé sous <strong>30 jours</strong>.</li>
+        <li><strong>Copies papier scannées par un prof et messages entre profs et parents</strong> : supprimés avec le compte de l'élève, et au plus tard <strong>2 ans</strong> après le dernier message.</li>
+        <li><strong>Statistiques d'utilisation</strong> : <strong>13 mois</strong>.</li>
+        <li><strong>Journaux d'erreurs</strong> : <strong>12 mois</strong>.</li>
+        <li><strong>Preuve de l'accord parental</strong> : <strong>5 ans</strong> après la fin du compte.</li>
+        <li><strong>Factures d'anciens abonnements</strong> : 10 ans (obligation comptable).</li>
+      </ul>
 
-    <h2 data-i18n="privacy.art8.title">8. Cookies et stockage local</h2>
-    <p data-i18n="privacy.art8.text">Galac6 utilise un cookie fonctionnel (état de la barre latérale) et le stockage local du navigateur pour vos préférences d'affichage (thème, taille de police). Aucun cookie de tracking ou publicitaire n'est utilisé. Le consentement pour le cookie fonctionnel est recueilli via notre bannière de cookies.</p>
+      <h2>9. Sécurité</h2>
+      <p>Les échanges sont chiffrés, l'accès aux données est limité à ce que chaque compte a le droit de voir, et les fichiers (photos, copies) ne sont pas accessibles publiquement. En cas de violation de données présentant un risque, nous prévenons la CNIL et, si nécessaire, les personnes concernées.</p>
 
-    <p style="color: var(--text-muted); font-size: 0.82rem; font-style: italic; margin-top: 2rem;" data-i18n="privacy.lastupdate">Dernière mise à jour : 16 octobre 2026</p>
+      <h2>10. Vos droits</h2>
+      <p>Vous pouvez à tout moment : <strong>accéder</strong> à vos données, les <strong>corriger</strong>, les <strong>effacer</strong>, les <strong>télécharger</strong> (portabilité), <strong>limiter</strong> leur utilisation, vous <strong>opposer</strong> à un traitement fondé sur l'intérêt légitime et <strong>retirer votre consentement</strong>. Pour un élève de moins de 15 ans, ses parents peuvent exercer ces droits pour lui.</p>
+      <p>Comment faire : depuis l'application, rubrique « Mon compte » (télécharger mes données, supprimer mon compte), ou par email à <a href="mailto:hello@galac6.io">hello@galac6.io</a>. Nous répondons dans un délai d'un mois.</p>
+      <p>Si vous pensez que vos droits ne sont pas respectés, vous pouvez déposer une réclamation auprès de la <strong>CNIL</strong> : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a> — 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07.</p>
+
+      <h2>11. Cookies et stockage</h2>
+      <p><strong>Dans l'application</strong> : seulement ce qui est nécessaire (rester connecté, langue, thème, taille du texte, état du menu). Aucun cookie publicitaire ni de mesure d'audience.</p>
+      <p><strong>Sur le site galac6.io</strong> : Google Analytics (mesure d'audience) et Google Ads et Meta (publicité) ne sont chargés qu'avec votre accord, demandé par le bandeau cookies. Votre choix est gardé 6 mois et peut être changé à tout moment avec le lien « Gérer les cookies » en bas de chaque page. Le détail est dans les mentions légales.</p>
+
+      <h2>12. Modifications</h2>
+      <p>Nous pouvons mettre à jour cette politique, par exemple quand un prestataire change. En cas de changement important, nous vous prévenons dans l'application ou par email. Date de la dernière mise à jour : 18 octobre 2026.</p>
+    </div>
+    <div class="en-only" lang="en" style="display:none;">
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">Last updated: October 18, 2026</p>
+      <p>This policy explains what data Galac6 uses, why, where it goes, how long it is kept and how to exercise your rights (GDPR and the French Data Protection Act). It is the same policy on the galac6.io website and in the app.</p>
+      <div class="en-bref">
+        <h2>In short, for students</h2>
+        <ul>
+          <li>Galac6 is an <strong>artificial intelligence</strong> that helps you learn. It can make mistakes: check with your lesson or your teacher.</li>
+          <li>We only keep what we need to help you: your first name, your class, your messages, your exercises and your results.</li>
+          <li>Your data is <strong>stored in France</strong>. The main AI runs <strong>in Europe</strong>. A few services are in the United States, for example the recognition of your voice when you speak into the microphone.</li>
+          <li>We never sell your data, there are no ads in the app, and your data is not used to train AIs.</li>
+          <li>If you are <strong>under 15</strong>, one of your parents must give their consent by email.</li>
+          <li>The parent linked to your account, and your teachers if you use Galac6 with your class, can see your work.</li>
+          <li>You can ask to see your data, download it or delete it: from your account, or by writing to <a href="mailto:hello@galac6.io">hello@galac6.io</a> (you can ask a parent to help you).</li>
+        </ul>
+      </div>
+
+      <h2>1. Who is responsible for your data?</h2>
+      <p>Galac6 is published by <strong>RHK Conseil</strong> (sole proprietorship), 19 rue de Croulebarbe, 75013 Paris, France — SIRET 944 058 866 00012. RHK Conseil is the data controller for the data of Galac6 users. Contact: <a href="mailto:hello@galac6.io">hello@galac6.io</a>.</p>
+      <p><strong>Schools.</strong> When a school uses Galac6 with its students (classes, homework, follow-up by teachers and school management), the school decides on this use: for its students' data related to this use, Galac6 acts as the <strong>school's processor</strong> (Article 28 GDPR) and only uses it on the school's behalf. Requests about this data can be sent to the school or to Galac6, which will forward them.</p>
+
+      <h2>2. Who uses Galac6?</h2>
+      <p>Galac6 is <strong>free</strong> during its open beta: no paid subscription is offered. There are four types of accounts: <strong>student</strong> (1st to 12th grade), <strong>parent</strong>, <strong>teacher</strong> and <strong>school management</strong>.</p>
+
+      <h2>3. What data?</h2>
+      <ul>
+        <li><strong>Account</strong>: email address, first and last name, account type, month and year of birth (students), school level, language, school attended (name, town, official number), and, if you tell us, how you heard about Galac6. We also keep the ad link or campaign the sign-up came from ("UTM" parameters), without any advertising identifier.</li>
+        <li><strong>Parental consent</strong> (students under 15): the parent's email address, date and proof of consent.</li>
+        <li><strong>Student work</strong>: messages exchanged with the tutor, photos sent (lessons, exercises, tests, handwritten dictations), text dictated into the microphone, answers and results (quizzes, dictations, exercises, mock exams), revision sheets, skills practised, points and badges.</li>
+        <li><strong>Classes and schools</strong>: classes, homework, teachers' grades and comments, paper tests scanned by a teacher, messages between teachers and parents, school management dashboards.</li>
+        <li><strong>Avatar</strong> (optional): if a student creates an avatar from a photo, the photo is only used to create the drawing; it is not kept.</li>
+        <li><strong>Preferences</strong>: theme, text size, accessibility profile (dyslexia, dyspraxia, visual or hearing impairment). An accessibility profile may reveal health information: it is optional, chosen by the user, used to adapt the display and can be removed at any time.</li>
+        <li><strong>Technical data</strong>: app usage statistics (pages opened, time spent), error logs, IP address (processed by our hosting providers).</li>
+        <li><strong>Payment</strong>: no payment is requested during the beta. Any billing data from former subscriptions (Stripe identifier, invoices) is kept for our accounting obligations.</li>
+      </ul>
+
+      <h2>4. Why? (purposes and legal bases)</h2>
+      <ul>
+        <li>Providing the service: tutor, exercises, corrections, progress tracking, parent accounts — <em>performance of the terms of use</em>.</li>
+        <li>Classes, homework and follow-up by teachers and school management — <em>on behalf of the school</em>, following its instructions.</li>
+        <li>Collecting and proving parental consent — <em>legal obligation</em> (Article 8 GDPR, Article 45 of the French Data Protection Act).</li>
+        <li>Service emails (login code, parental consent, summaries, notices) — <em>performance of the terms of use</em>.</li>
+        <li>Security, abuse prevention, fixing errors, internal statistics to improve Galac6, optional feedback surveys — <em>legitimate interest</em>. You can refuse the surveys at any time.</li>
+        <li>Accessibility profile — <em>your consent</em>, which you can withdraw by turning the profile off.</li>
+        <li>Audience measurement and advertising cookies on the galac6.io website — <em>your consent</em>, through the cookie banner.</li>
+      </ul>
+      <p>We do not sell any data. There are no ads or advertising trackers in the app. Data is not used to train AI models. Grades and corrections given by the AI are indicative: they do not lead to any automated decision with legal effect for the student.</p>
+
+      <h2>5. Students under 15</h2>
+      <p>A student aged 15 or over can accept Galac6's terms on their own. Under 15, the consent of a parent (or legal guardian) is required: since October 17, 2026, the student enters a parent's email address, and the parent receives a message with a button to accept. In the meantime, the student can use Galac6 for up to 30 days; without consent, the account is then paused. Proof of consent is kept for 5 years after the account ends.</p>
+
+      <h2>6. Who can see the data?</h2>
+      <ul>
+        <li>The student.</li>
+        <li>The parent(s) linked to the student's account.</li>
+        <li>The student's teachers and school management, when Galac6 is used with the school.</li>
+        <li>The Galac6 team, only when necessary (support, security, fixing errors).</li>
+        <li>Our technical providers, only to run the service (see below).</li>
+      </ul>
+
+      <h2>7. Where does the data go? (providers)</h2>
+      <p><strong>Data stored in France, main AI in Europe.</strong></p>
+      <ul>
+        <li><strong>Supabase</strong> — database, accounts, files and server functions: stored in France (Paris).</li>
+        <li><strong>Amazon Web Services (Amazon Bedrock, Frankfurt)</strong> and <strong>Google Cloud (Vertex AI)</strong> — running the main AI (Anthropic's Claude models) for the tutor, corrections and teacher tools: data centres in the European Union.</li>
+        <li><strong>Mistral AI</strong> — some AI tasks: France.</li>
+        <li><strong>Scaleway</strong> — spell checker: Netherlands.</li>
+      </ul>
+      <p>Some services are located outside the European Union or are US companies:</p>
+      <ul>
+        <li><strong>Voice input</strong>: speech recognition by Google (Chrome browser, Android) or OpenAI Whisper (iPhone) — United States.</li>
+        <li><strong>Tutor's voice</strong> (reading aloud): Google, with OpenAI as backup — United States.</li>
+        <li><strong>Avatar from a photo</strong> (optional): OpenAI (drawing) and fal.ai (animation) — United States.</li>
+        <li><strong>AI checks and backup</strong>: Google Gemini (second check of some questions, backup if the main AI does not respond); Anthropic directly, as backup — United States.</li>
+        <li><strong>Emails</strong>: Resend — United States.</li>
+        <li><strong>Feedback surveys</strong> (optional): Tally.</li>
+        <li><strong>Website and app hosting</strong>: Netlify; <strong>AI gateway</strong>: Vercel, which enforces European data centres — US companies.</li>
+        <li><strong>Payment</strong> (former subscriptions only): Stripe — United States.</li>
+        <li>To display some resources (dyslexia-friendly font, book covers, maths figures), your browser contacts jsDelivr, Open Library and Kroki, which only receive your IP address.</li>
+      </ul>
+      <p>These transfers outside the European Union are covered by the European Commission's <strong>standard contractual clauses</strong> (Article 46 GDPR) or by the EU–US <strong>Data Privacy Framework</strong> where the provider is certified. We send these services as little data as possible.</p>
+
+      <h2>8. How long?</h2>
+      <ul>
+        <li><strong>Account and student work</strong>: as long as the account is used. An account with no login for <strong>2 years</strong> is deleted.</li>
+        <li><strong>Account deleted at your request</strong>: erased within <strong>30 days</strong>.</li>
+        <li><strong>Paper tests scanned by a teacher and messages between teachers and parents</strong>: deleted with the student's account, and at the latest <strong>2 years</strong> after the last message.</li>
+        <li><strong>Usage statistics</strong>: <strong>13 months</strong>.</li>
+        <li><strong>Error logs</strong>: <strong>12 months</strong>.</li>
+        <li><strong>Proof of parental consent</strong>: <strong>5 years</strong> after the account ends.</li>
+        <li><strong>Invoices from former subscriptions</strong>: 10 years (accounting obligation).</li>
+      </ul>
+
+      <h2>9. Security</h2>
+      <p>Exchanges are encrypted, access to data is limited to what each account is allowed to see, and files (photos, tests) are not publicly accessible. In the event of a data breach presenting a risk, we notify the CNIL and, where necessary, the people concerned.</p>
+
+      <h2>10. Your rights</h2>
+      <p>At any time, you can: <strong>access</strong> your data, <strong>correct</strong> it, <strong>delete</strong> it, <strong>download</strong> it (portability), <strong>restrict</strong> its use, <strong>object</strong> to processing based on legitimate interest and <strong>withdraw your consent</strong>. For a student under 15, their parents can exercise these rights on their behalf.</p>
+      <p>How: in the app, under "My account" (download my data, delete my account), or by email to <a href="mailto:hello@galac6.io">hello@galac6.io</a>. We reply within one month.</p>
+      <p>If you believe your rights are not respected, you can lodge a complaint with the <strong>CNIL</strong> (French data protection authority): <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a> — 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07, France.</p>
+
+      <h2>11. Cookies and storage</h2>
+      <p><strong>In the app</strong>: only what is necessary (staying logged in, language, theme, text size, menu state). No advertising or audience measurement cookies.</p>
+      <p><strong>On the galac6.io website</strong>: Google Analytics (audience measurement) and Google Ads and Meta (advertising) are only loaded with your consent, requested through the cookie banner. Your choice is kept for 6 months and can be changed at any time with the "Manage cookies" link at the bottom of every page. Details are in the legal notices.</p>
+
+      <h2>12. Changes</h2>
+      <p>We may update this policy, for example when a provider changes. If there is an important change, we will let you know in the app or by email. Last updated: October 18, 2026.</p>
+    </div>
   </div>
 
   <!-- ═══ FOOTER ═══ -->
@@ -362,6 +513,7 @@
     <div class="footer-badges">
       <a href="/about" style="color: var(--text-muted);" data-i18n="nav.about">À propos</a>
       <a href="/mentions-legales" style="color: var(--text-muted);" data-i18n="footer.legal.mentions">Mentions légales</a>
+      <a href="#" data-cookie-settings style="color: var(--text-muted);" data-i18n="footer.cookies">Gérer les cookies</a>
       <span class="footer-badge" data-i18n="cgv.footer.france">🇫🇷 Made in France</span>
     </div>
   </footer>

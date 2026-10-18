@@ -1,7 +1,9 @@
-// Pixel Meta (Facebook) — chargé UNIQUEMENT après consentement cookies (RGPD).
-// Tant que le visiteur n'a pas cliqué « Accepter », aucun cookie publicitaire n'est posé.
+// Pixel Meta (Facebook) — chargé UNIQUEMENT si le visiteur accepte la catégorie
+// « Publicité » du bandeau cookies (RGPD / CNIL). Sans accord, rien n'est chargé.
 (function () {
   var PIXEL_ID = '1365191655374063';
+  var CLE = 'galac6-cookie-consent';
+  var DUREE_MAX = 182 * 24 * 60 * 60 * 1000; // 6 mois
 
   function loadPixel() {
     if (window.fbq) return; // déjà chargé
@@ -14,13 +16,18 @@
     fbq('track', 'PageView');
   }
 
-  // Visiteur ayant déjà accepté lors d'une précédente visite → on charge le pixel.
+  // Visiteur ayant déjà accepté la publicité il y a moins de 6 mois → on charge le pixel.
   try {
-    if (localStorage.getItem('galac6-cookie-consent') === 'accepted') {
-      loadPixel();
+    var brut = window.localStorage.getItem(CLE);
+    if (brut && brut.charAt(0) === '{') {
+      var choix = JSON.parse(brut);
+      if (choix && choix.ads === true && typeof choix.date === 'number' &&
+          new Date().getTime() - choix.date <= DUREE_MAX) {
+        loadPixel();
+      }
     }
   } catch (e) {}
 
-  // Permet à cookie-consent.js de déclencher le pixel au clic « Accepter ».
+  // Permet à cookie-consent.js de déclencher le pixel quand la publicité est acceptée.
   window.galac6LoadPixel = loadPixel;
 })();
