@@ -312,6 +312,25 @@
       .steps-list > li::before { width: 2.2rem; height: 2.2rem; }
       footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1rem; }
     }
+    /* ─── Confidentialité et sécurité (composant partagé : index, ecole, donnees-eleves) ─── */
+    .pp-section { background: var(--bg-card, #13131f); border-top: 1px solid var(--border, #1e1e32); border-bottom: 1px solid var(--border, #1e1e32); }
+    .pp-inner { max-width: 1100px; margin: 0 auto; padding: 4.5rem max(16px, env(safe-area-inset-left, 0px)) 4rem; }
+    .pp-title { font-size: clamp(1.6rem, 3.4vw, 2rem); font-weight: 700; text-align: center; letter-spacing: -0.02em; margin: 0 0 0.5rem; color: var(--text, #f0f0f5); }
+    .pp-subtitle { text-align: center; color: var(--text-muted, #8a8aa3); font-size: 1.02rem; margin: 0 auto 2.25rem; max-width: 560px; }
+    .pp-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; }
+    .pp-card { display: flex; flex-direction: column; align-items: flex-start; gap: 0.9rem; background: var(--bg, #0b0b14); border: 1px solid var(--border, #1e1e32); border-radius: 16px; padding: 1.5rem; min-width: 0; }
+    .pp-icon { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex: 0 0 44px; border-radius: 12px; background: rgba(124, 92, 252, 0.14); color: var(--primary-light, #a78bfa); }
+    .pp-icon svg { width: 24px; height: 24px; }
+    .pp-text { font-size: 1rem; font-weight: 700; line-height: 1.4; color: var(--text, #f0f0f5); overflow-wrap: anywhere; }
+    .pp-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem 1.25rem; margin: 1.75rem 0 0; }
+    .pp-links a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 0.5rem; font-size: 0.92rem; color: var(--text-muted, #8a8aa3); text-decoration: underline; text-underline-offset: 3px; }
+    .pp-links a:hover { color: var(--text, #f0f0f5); }
+    @media (max-width: 900px) { .pp-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 560px) {
+      .pp-inner { padding-top: 3.25rem; padding-bottom: 3rem; }
+      .pp-grid { grid-template-columns: minmax(0, 1fr); gap: 0.75rem; }
+      .pp-card { flex-direction: row; align-items: center; padding: 1rem 1.1rem; }
+    }
   </style>
   <!-- Meta Pixel (Facebook) - charge apres consentement -->
   <script src="meta-pixel.js"></script>
@@ -349,6 +368,35 @@
 
   <hr class="divider">
 
+  <!-- ═══ CONFIDENTIALITÉ ET SÉCURITÉ (composant partagé : index, ecole, donnees-eleves) ═══ -->
+  <div class="pp-section" id="confidentialite">
+    <div class="pp-inner">
+      <h2 class="pp-title" data-i18n="pledge.title">Confidentialité et sécurité</h2>
+      <p class="pp-subtitle" data-i18n="pledge.subtitle">Nos quatre engagements pour les données des élèves.</p>
+      <ul class="pp-grid">
+        <li class="pp-card">
+          <span class="pp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <span class="pp-text" data-i18n="pledge.p1">Données hébergées en France</span>
+        </li>
+        <li class="pp-card">
+          <span class="pp-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="3.5" r="1.4"/><circle cx="16.25" cy="4.64" r="1.4"/><circle cx="19.36" cy="7.75" r="1.4"/><circle cx="20.5" cy="12" r="1.4"/><circle cx="19.36" cy="16.25" r="1.4"/><circle cx="16.25" cy="19.36" r="1.4"/><circle cx="12" cy="20.5" r="1.4"/><circle cx="7.75" cy="19.36" r="1.4"/><circle cx="4.64" cy="16.25" r="1.4"/><circle cx="3.5" cy="12" r="1.4"/><circle cx="4.64" cy="7.75" r="1.4"/><circle cx="7.75" cy="4.64" r="1.4"/></svg></span>
+          <span class="pp-text" data-i18n="pledge.p2">Intelligence artificielle traitée en Europe</span>
+        </li>
+        <li class="pp-card">
+          <span class="pp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l8 3v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10v-6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
+          <span class="pp-text" data-i18n="pledge.p3">Dans le respect du RGPD</span>
+        </li>
+        <li class="pp-card">
+          <span class="pp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M5.3 5.3l13.4 13.4"/></svg></span>
+          <span class="pp-text" data-i18n="pledge.p4">Vos données ne sont jamais revendues ni utilisées pour de la publicité</span>
+        </li>
+      </ul>
+      <p class="pp-links">
+        <a href="/privacy" data-i18n="pledge.more">En savoir plus</a>
+      </p>
+    </div>
+  </div>
+
   <!-- ═══ L'ESSENTIEL ═══ -->
   <section>
     <h2 class="section-title">L'essentiel</h2>
@@ -361,8 +409,8 @@
       </div>
       <div class="feature-card">
         <div class="feature-icon fi-amber">🌍</div>
-        <h3>Certains traitements hors de l'Union européenne</h3>
-        <p>Certains traitements par intelligence artificielle font appel à des prestataires situés hors de l'Union européenne, encadrés par des clauses contractuelles types. Nous travaillons à ce que tous les traitements restent bientôt en Europe.</p>
+        <h3>Intelligence artificielle traitée en Europe</h3>
+        <p>L'intelligence artificielle de Galac6 est traitée en Europe. Seuls quelques services, comme l'envoi des e-mails, font appel à des prestataires situés hors de l'Union européenne, encadrés par des clauses contractuelles types.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon fi-green">🚫</div>
@@ -399,13 +447,15 @@
       </ul>
 
       <h2>Où sont les données, et qui intervient</h2>
-      <p>Les comptes et les données sont hébergés en France, chez <strong>Supabase</strong> (base de données et comptes), dans sa région de Paris. Le site et l'application sont hébergés par <strong>Netlify</strong>, en Irlande.</p>
-      <p>Pour faire fonctionner le tuteur, la correction et la voix, Galac6 fait appel à des prestataires spécialisés. Une partie des traitements par intelligence artificielle est réalisée dans des centres de données situés dans l'Union européenne. Certains traitements font appel à des prestataires situés hors de l'Union européenne, par exemple :</p>
+      <p>Les comptes et les données sont hébergés en France, chez <strong>Supabase</strong> (base de données et comptes), dans sa région de Paris.</p>
+      <p>Pour faire fonctionner le tuteur, la correction et la voix, Galac6 fait appel à des prestataires spécialisés. L'intelligence artificielle de Galac6 est traitée dans des centres de données situés dans l'Union européenne :</p>
       <ul>
-        <li><strong>Anthropic</strong> (Claude), pour l'assistance par intelligence artificielle, aux États-Unis ;</li>
-        <li><strong>OpenAI</strong> (Whisper), pour la transcription de la voix en texte, aux États-Unis ;</li>
-        <li><strong>Google</strong>, pour la synthèse vocale, aux États-Unis.</li>
+        <li><strong>Claude</strong> (Anthropic), pour le tuteur, les corrections et les outils des profs, par Amazon Bedrock (Francfort), Google Cloud Vertex AI et la passerelle Vercel AI Gateway : traitement en Europe ;</li>
+        <li><strong>Google Cloud</strong>, pour la voix du tuteur, les dictées et les annales lues à voix haute, par son point d'accès européen : traitement en Europe ;</li>
+        <li><strong>Mistral AI</strong> (Voxtral), pour la reconnaissance de la voix au micro, par son point d'accès européen : traitement en Europe ;</li>
+        <li><strong>Google Gemini</strong> (Vertex AI), pour le dessin de l'avatar créé à partir d'une photo (facultatif) : traitement en Europe.</li>
       </ul>
+      <p>Quelques services restent situés hors de l'Union européenne ou sont assurés par des sociétés américaines : l'envoi des e-mails (Resend), de rares secours de l'IA du chat quand l'IA principale ne répond pas, les questionnaires d'avis facultatifs (Tally), l'hébergement du site et de l'application (Netlify) et la passerelle vers l'IA (Vercel, qui impose des centres de données européens).</p>
       <p>Ces transferts hors de l'Union européenne sont encadrés par des clauses contractuelles types, conformément à l'article 46 du Règlement général sur la protection des données (RGPD). La liste complète de nos sous-traitants figure dans notre <a href="/privacy">politique de confidentialité</a>.</p>
 
       <h2>Les élèves mineurs</h2>

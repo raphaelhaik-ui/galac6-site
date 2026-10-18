@@ -55,15 +55,15 @@
       'parents.dashboard.title': 'Parent dashboard',
       'parents.dashboard.desc': 'Dedicated dashboard: subjects studied, screen time, weekly progress.',
 
-      // Trust
-      'trust.title': 'Your data is hosted <span style="background:linear-gradient(135deg,var(--gradient-start),var(--gradient-end));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">in France.</span>',
-      'trust.subtitle': 'Parents\' trust is our priority.',
-      'trust.hosting.title': 'Data hosted in France',
-      'trust.hosting.desc': 'Your child\'s account and data are hosted in France, in a database in Paris. Some artificial intelligence processing still relies on providers located outside the European Union. We are working to keep all processing in Europe in the near future.',
-      'trust.gdpr.title': 'GDPR by design',
-      'trust.gdpr.desc': 'Galac6 is built from the ground up to comply with European personal data regulations.',
-      'trust.nodata.title': 'No data resale',
-      'trust.nodata.desc': 'School data is never shared with third parties or used to train AI models.',
+      // Confidentialité et sécurité (composant partagé)
+      'pledge.title': 'Privacy & security',
+      'pledge.subtitle': 'Our four commitments for students\' data.',
+      'pledge.p1': 'Data hosted in France',
+      'pledge.p2': 'AI processed in Europe',
+      'pledge.p3': 'In line with the GDPR',
+      'pledge.p4': 'Your data is never sold or used for advertising',
+      'pledge.more': 'Learn more',
+      'pledge.more2': 'Student data: the details',
 
       // FAQ
       'faq.title': 'Frequently asked <span style="background:linear-gradient(135deg,var(--gradient-start),var(--gradient-end));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">questions</span>',
@@ -88,7 +88,7 @@
       'faq.a6': '<strong>15 to 30 minutes is enough</strong> for effective revision. Galac6 isn\'t designed to replace leisure — it\'s designed to optimize study time. A few targeted sessions per week already make a real difference in results.',
 
       'faq.q7': 'Is my child\'s data protected?',
-      'faq.a7': 'Yes, and it\'s non-negotiable. Galac6 is <strong>designed in France</strong>, in full compliance with GDPR. Data is hosted in France; some artificial intelligence processing still relies on providers located outside the European Union. We are working to keep all processing in Europe in the near future. We never sell your children\'s data to third parties. The privacy and security of minors\' data are at the core of our design.',
+      'faq.a7': 'Yes, and it\'s non-negotiable. Galac6 is <strong>designed in France</strong>, in line with the GDPR. Data is hosted in France and Galac6\'s artificial intelligence is processed in Europe; only a few services, such as sending emails, rely on providers located outside the European Union. We never sell your children\'s data to third parties. The privacy and security of minors\' data are at the core of our design.',
 
       'faq.q8': 'What subjects and grade levels are covered?',
       'faq.a8': 'Galac6 covers the main subjects of the French curriculum: <strong>French, Mathematics, History-Geography, Sciences, English</strong> and more — <strong>from 1st to 12th grade</strong>. Content automatically adapts to the student\'s level and grade.',
@@ -298,7 +298,7 @@
       'ecole.prom.p6.title': 'Data you can trust',
       'ecole.prom.p6.desc': 'Your data is protected and processed in line with the GDPR.',
       'ecole.trust.t1': 'Data hosted in France',
-      'ecole.trust.t2': 'Designed with the GDPR in mind',
+      'ecole.trust.t2': 'In line with the GDPR',
       'ecole.trust.t3': 'Innovation in the service of teaching',
       'ecole.steps.eyebrow': 'How it starts',
       'ecole.steps.title': 'Three steps, three classes to begin with',
