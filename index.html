@@ -888,13 +888,13 @@
 
   <style>
     /* Pastille d'appel aux écoles, au-dessus du titre */
-    .school-pill { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 6px 8px 6px 6px; margin-bottom: 1.5rem; border-radius: 99px; border: 1px solid #3a3170; background: rgba(124,92,252,0.1); color: var(--text); text-decoration: none; font-size: 0.9rem; max-width: 100%; transition: border-color .2s, background .2s; }
+    .school-pill { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 6px 8px 6px 6px; margin-top: -3.5rem; margin-bottom: 1.5rem; border-radius: 99px; border: 1px solid #3a3170; background: rgba(124,92,252,0.1); color: var(--text); text-decoration: none; font-size: 0.9rem; max-width: 100%; transition: border-color .2s, background .2s; }
     .school-pill:hover, .school-pill:focus-visible { border-color: var(--primary-light); background: rgba(124,92,252,0.18); outline: none; }
     .school-pill-tag { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-weight: 800; font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 5px 10px; border-radius: 99px; white-space: nowrap; }
     .school-pill-text { text-align: left; }
     .school-pill-short { display: none; }
     .school-pill-arrow { color: var(--primary-light); font-weight: 700; padding-right: 6px; }
-    @media (max-width: 560px) { .school-pill-long { display: none; } .school-pill-short { display: inline; } }
+    @media (max-width: 560px) { .school-pill { margin-top: -2.5rem; } .school-pill-long { display: none; } .school-pill-short { display: inline; } }
 
     .hero-free-banner {
       max-width: 560px;
