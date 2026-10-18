@@ -91,7 +91,7 @@
       'faq.a6': '<strong>15 to 30 minutes is enough</strong> for effective revision. Galac6 isn\'t designed to replace leisure — it\'s designed to optimize study time. A few targeted sessions per week already make a real difference in results.',
 
       'faq.q7': 'Is my child\'s data protected?',
-      'faq.a7': 'Yes, and it\'s non-negotiable. Galac6 is <strong>designed in France</strong>, in line with the GDPR. Data is hosted in France and Galac6\'s artificial intelligence is processed in Europe; only a few services, such as sending emails, rely on providers located outside the European Union. We never sell your children\'s data to third parties. The privacy and security of minors\' data are at the core of our design.',
+      'faq.a7': 'Yes, and it\'s non-negotiable. Galac6 is <strong>designed in France</strong>, in line with the GDPR. Data is hosted in France and Galac6\'s artificial intelligence is processed in Europe; only a few services, such as optional feedback questionnaires, rely on providers located outside the European Union. We never sell your children\'s data to third parties. The privacy and security of minors\' data are at the core of our design.',
 
       'faq.q8': 'What subjects and grade levels are covered?',
       'faq.a8': 'Galac6 covers the main subjects of the French curriculum: <strong>French, Mathematics, History-Geography, Sciences, English</strong> and more — <strong>from 1st to 12th grade</strong>. Content automatically adapts to the student\'s level and grade.',
@@ -244,7 +244,7 @@
       'tarifs.faq.a4': 'Yes. Card payments go through a secure payment provider: Galac6 never sees your card number. In the mobile app, purchases go through the App Store or Google Play.',
       'tarifs.faq.q5': 'Where is my child\'s data?',
       'tarifs.faq.a5': 'Data is hosted in France, in a database in Paris. No ads, no resale of data.',
-      'tarifs.faq.a5b': 'Galac6\'s artificial intelligence is processed in Europe; only a few services, such as sending emails, rely on providers located outside the European Union. The list is in our privacy policy.',
+      'tarifs.faq.a5b': 'Galac6\'s artificial intelligence is processed in Europe; only a few services, such as optional feedback questionnaires, rely on providers located outside the European Union. The list is in our privacy policy.',
       'tarifs.faq.q6': 'I already have a free account. What will happen?',
       'tarifs.faq.a6': 'Current users will be informed before any change.',
       'tarifs.faq.q7': 'My child uses Galac6 with their school. Do I have to pay?',
