@@ -887,6 +887,15 @@
   </div>
 
   <style>
+    /* Pastille d'appel aux écoles, au-dessus du titre */
+    .school-pill { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 6px 8px 6px 6px; margin-bottom: 1.5rem; border-radius: 99px; border: 1px solid #3a3170; background: rgba(124,92,252,0.1); color: var(--text); text-decoration: none; font-size: 0.9rem; max-width: 100%; transition: border-color .2s, background .2s; }
+    .school-pill:hover, .school-pill:focus-visible { border-color: var(--primary-light); background: rgba(124,92,252,0.18); outline: none; }
+    .school-pill-tag { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-weight: 800; font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 5px 10px; border-radius: 99px; white-space: nowrap; }
+    .school-pill-text { text-align: left; }
+    .school-pill-short { display: none; }
+    .school-pill-arrow { color: var(--primary-light); font-weight: 700; padding-right: 6px; }
+    @media (max-width: 560px) { .school-pill-long { display: none; } .school-pill-short { display: inline; } }
+
     .hero-free-banner {
       max-width: 560px;
       margin: 0 auto;
@@ -943,6 +952,7 @@
   <!-- ═══ HERO ═══ -->
   <div class="hero">
     <div class="hero-inner">
+      <a class="school-pill" href="/ecole"><span class="school-pill-tag" data-i18n="hero.school.tag">Écoles</span><span class="school-pill-text"><span class="school-pill-long" data-i18n="hero.school.long">Vous êtes une école ? Transformez vos capacités pédagogiques avec Galac6</span><span class="school-pill-short" data-i18n="hero.school.short">Vous êtes une école ? Découvrez Galac6</span></span><span class="school-pill-arrow" aria-hidden="true">→</span></a>
       <h1 data-i18n-html="hero.title">Un contrôle à préparer ?<br>Une leçon à comprendre ?<br><span class="gradient">Galac6 est là.</span></h1>
       <p class="subtitle" data-i18n="hero.subtitle">Galac6, l'IA qui t'apprend à apprendre — quiz, dictées, fiches et corrections, faits pour les programmes scolaires français, du CP à la Terminale.</p>
       <div class="hero-cta-group">
