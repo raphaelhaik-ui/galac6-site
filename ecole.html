@@ -2,54 +2,31 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galac6 pour les écoles : classes, devoirs, suivi des élèves et dictées du professeur</title>
-  <meta name="description" content="Galac6 pour les écoles, en France et à l'étranger : créez vos classes, invitez vos professeurs par lien, donnez des quiz et des évaluations en devoir, suivez les élèves à relancer et les notions à revoir, envoyez vos propres dictées. Gratuit pour les écoles pilotes.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Galac6 pour les écoles : devoirs prêts en quelques minutes, suivi des classes, devis</title>
+  <meta name="description" content="Galac6 pour les écoles, collèges et lycées : devoirs et corrections préparés par l'IA, suivi des classes et de chaque élève, IA socratique, parents associés, données hébergées en France. Pilote gratuit de 3 mois sur 3 classes, tarif sur devis.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/ecole">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Galac6">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:locale:alternate" content="en_GB">
-  <meta property="og:title" content="Galac6 pour les écoles et les professeurs">
-  <meta property="og:description" content="Classes, invitation des professeurs par lien, devoirs et évaluations, suivi de classe et dictées du professeur. Interface en français et en anglais. Gratuit pour les écoles pilotes.">
+  <meta property="og:title" content="Galac6 : l'IA qui fait gagner du temps à toute votre école">
+  <meta property="og:description" content="Galac6 se charge du répétitif, vos professeurs se consacrent à l'essentiel. Pilote gratuit de 3 mois sur 3 classes, tarif sur devis.">
   <meta property="og:url" content="https://galac6.io/ecole">
   <meta property="og:image" content="https://galac6.io/images/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Galac6 pour les écoles et les professeurs">
-  <meta name="twitter:description" content="Classes, devoirs, suivi de classe et dictées du professeur, en français et en anglais. Gratuit pour les écoles pilotes.">
+  <meta name="twitter:title" content="Galac6 : l'IA qui fait gagner du temps à toute votre école">
+  <meta name="twitter:description" content="Galac6 se charge du répétitif, vos professeurs se consacrent à l'essentiel. Pilote gratuit de 3 mois sur 3 classes, tarif sur devis.">
   <meta name="twitter:image" content="https://galac6.io/images/og-image.jpg">
   <link rel="icon" type="image/png" href="icons/32x32.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Combien coûte Galac6 pour une école ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Galac6 est gratuit pour les écoles pilotes. On démarre avec une ou deux classes. Les conditions pour la suite seront discutées avec vous, avant toute facturation." }
-      },
-      {
-        "@type": "Question",
-        "name": "Galac6 convient-il aux écoles françaises à l'étranger ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Oui. Galac6 suit les programmes français du CP à la Terminale. Toute l'interface existe aussi en anglais, pour les professeurs anglophones, et les dictées du professeur peuvent être en français ou en anglais." }
-      },
-      {
-        "@type": "Question",
-        "name": "Comment les élèves rejoignent-ils leur classe ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Chaque classe a un code. Le professeur le distribue aux familles, ou imprime l'affiche de la classe avec son QR code. Les parents saisissent le code dans Galac6 (Paramètres, puis Élèves) et l'enfant rejoint la classe. L'import d'une liste d'élèves par fichier n'est pas encore disponible." }
-      },
-      {
-        "@type": "Question",
-        "name": "Où sont stockées les données des élèves ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Les comptes et les données des élèves sont hébergés en France, dans une base de données à Paris. Pas de publicité, aucune revente de données. Certaines fonctions d'intelligence artificielle, comme la voix, font appel à des prestataires dont certains sont situés hors de l'Union européenne. Nous travaillons à ce que tous les traitements restent bientôt en Europe. La liste complète de nos prestataires figure dans notre politique de confidentialité. Un dossier RGPD pour les écoles est en préparation." }
-      },
-      {
-        "@type": "Question",
-        "name": "L'IA donne-t-elle les réponses aux élèves ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Non. Le tuteur de Galac6 pose des questions, donne des indices et guide l'élève étape par étape. L'élève construit sa propre compréhension." }
-      }
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://galac6.io/" },
+      { "@type": "ListItem", "position": 2, "name": "École", "item": "https://galac6.io/ecole" }
     ]
   }
   </script>
@@ -63,750 +40,232 @@
       --primary-light: #a78bfa;
       --bg: #0b0b14;
       --bg-card: #13131f;
-      --bg-card-hover: #1a1a2e;
+      --bg-raised: #1a1a2b;
+      --screen: #0f0f1a;
       --text: #f0f0f5;
       --text-muted: #8a8aa3;
       --border: #1e1e32;
+      --border-strong: #2c2c48;
       --gradient-start: #6366f1;
       --gradient-end: #a855f7;
-      --glow: rgba(99,102,241,0.15);
+      --g1: #6366f1;
+      --g2: #a855f7;
+      --tint: rgba(99,102,241,0.10);
+      --tint-line: rgba(99,102,241,0.25);
+      --ok: #34d399;
+      --bad: #f87171;
+      --ok-bg: rgba(52,211,153,0.12);
+      --bad-bg: rgba(248,113,113,0.12);
+      --example: #fbbf24;
+      --example-bg: rgba(251,191,36,0.10);
+      --on-accent: #ffffff;
+      --shadow: 0 8px 32px rgba(0,0,0,0.35);
+      color-scheme: dark;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    [hidden] { display: none !important; }
 
+    html { -webkit-text-size-adjust: 100%; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
+      font-size: 16px;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
-
+    h1, h2, h3, h4 { text-wrap: balance; letter-spacing: -0.02em; line-height: 1.2; }
+    ul, ol { list-style: none; }
     a { color: var(--primary-light); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    button { font-family: inherit; }
+    :focus-visible { outline: 2px solid var(--primary-light); outline-offset: 2px; border-radius: 6px; }
+    [id] { scroll-margin-top: 90px; }
 
-    /* ─── Navbar ─── */
+    /* ─── Navbar (identique aux autres pages du site) ─── */
     .navbar-wrapper {
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      position: sticky; top: 0; z-index: 100;
       background: rgba(11,11,20,0.85);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
     }
-
-    .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.25rem 2.5rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .navbar-brand {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      text-decoration: none;
-    }
-
+    .navbar { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 2.5rem; max-width: 1200px; margin: 0 auto; }
+    .navbar-brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
     .navbar-brand img { height: 44px; width: auto; }
-
-    .navbar-brand span {
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: var(--text);
-      letter-spacing: -0.02em;
-    }
-
-    .navbar-france {
-      font-size: 1.1rem;
-      margin-left: 0.1rem;
-    }
-
-    .navbar-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .navbar-links a {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
+    .navbar-brand span { font-size: 1.6rem; font-weight: 800; color: var(--text); letter-spacing: -0.02em; }
+    .navbar-links { display: flex; align-items: center; gap: 2rem; }
+    .navbar-links a { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; text-decoration: none; transition: color 0.2s; }
     .navbar-links a:hover { color: var(--text); text-decoration: none; }
     .navbar-links a.active { color: var(--text); }
-
-    .navbar-hamburger {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0.5rem;
-      flex-direction: column;
-      gap: 5px;
-    }
-    .navbar-hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--text);
-      border-radius: 2px;
-      transition: transform 0.3s, opacity 0.3s;
-    }
+    .navbar-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; flex-direction: column; justify-content: center; align-items: center; gap: 5px; min-width: 44px; min-height: 44px; }
+    .navbar-hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
     .navbar-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .navbar-hamburger.open span:nth-child(2) { opacity: 0; }
     .navbar-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-    /* ─── Back Link ─── */
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      color: var(--primary-light);
-      text-decoration: none;
-      font-weight: 600;
-      margin-bottom: 2rem;
-    }
-    .back-link:hover { text-decoration: underline; }
-
-    /* ─── Buttons ─── */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.8rem 1.6rem;
-      border-radius: 12px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      cursor: pointer;
-      border: none;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-      color: #fff;
-      box-shadow: 0 4px 20px rgba(99,102,241,0.25);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 28px rgba(99,102,241,0.35);
-      text-decoration: none;
-    }
-
-    .btn-secondary {
-      background: var(--bg-card);
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--primary);
-      color: var(--primary-light);
-      transform: translateY(-2px);
-      text-decoration: none;
-    }
-
-    /* ─── Sections ─── */
-    section {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 5rem 2rem;
-    }
-
-    .section-title {
-      font-size: 2rem;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.02em;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      color: var(--text-muted);
-      margin-bottom: 3rem;
-      font-size: 1.05rem;
-    }
-
-    .divider {
-      border: none;
-      border-top: 1px solid var(--border);
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    /* ─── Hero ─── */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 3rem 2.5rem 5rem;
-      position: relative;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 600px;
-      height: 600px;
-      top: -100px;
-      left: -150px;
-      background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      bottom: -100px;
-      right: -100px;
-      background: radial-gradient(circle, rgba(168,85,247,0.08) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 700px;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(99,102,241,0.1);
-      border: 1px solid rgba(99,102,241,0.2);
-      border-radius: 100px;
-      padding: 0.5rem 1.25rem;
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--primary-light);
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-content h1 {
-      font-size: clamp(2.2rem, 5vw, 3.2rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
-      margin-bottom: 1.25rem;
-    }
-
-    .hero-content h1 .gradient {
-      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero-content .subtitle {
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      max-width: 600px;
-      margin: 0 auto;
-      line-height: 1.7;
-    }
-
-    /* ─── Features Grid ─── */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .feature-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.75rem;
-      transition: all 0.25s ease;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-      border-color: rgba(99,102,241,0.3);
-    }
-
-    .feature-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      margin-bottom: 0.9rem;
-    }
-
-    .feature-card h3 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      margin-bottom: 0.4rem;
-    }
-
-    .feature-card p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      line-height: 1.6;
-    }
-
-    .fi-purple { background: rgba(99,102,241,0.12); }
-    .fi-pink   { background: rgba(236,72,153,0.12); }
-    .fi-amber  { background: rgba(245,158,11,0.12); }
-    .fi-green  { background: rgba(34,197,94,0.12); }
-    .fi-blue   { background: rgba(59,130,246,0.12); }
-
-    /* ─── Audience Cards ─── */
-    .audience-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .audience-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.75rem;
-    }
-
-    .audience-card h3 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-    }
-
-    .audience-card ul { list-style: none; }
-
-    .audience-card li {
-      padding: 0.35rem 0;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    .audience-card li::before {
-      content: "✓ ";
-      color: var(--primary-light);
-      font-weight: 700;
-    }
-
-    /* ─── Trust Grid ─── */
-    .trust-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .trust-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.25rem;
-      text-align: center;
-      transition: all 0.25s ease;
-    }
-
-    .trust-item:hover {
-      transform: translateY(-2px);
-      border-color: rgba(99,102,241,0.3);
-    }
-
-    .trust-icon {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .trust-item h4 {
-      font-size: 0.9rem;
-      font-weight: 700;
-      margin-bottom: 0.25rem;
-    }
-
-    .trust-item p {
-      color: var(--text-muted);
-      font-size: 0.8rem;
-      line-height: 1.5;
-    }
-
-    /* ─── Testimonial ─── */
-    .testimonial {
-      max-width: 640px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .testimonial blockquote {
-      font-size: 1.1rem;
-      font-style: italic;
-      color: var(--text);
-      line-height: 1.8;
-      border-left: 3px solid var(--primary);
-      padding: 1.25rem 1.5rem;
-      background: rgba(99,102,241,0.06);
-      border-radius: 0 14px 14px 0;
-      text-align: left;
-      margin-bottom: 0.75rem;
-    }
-
-    .testimonial cite {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      font-style: normal;
-    }
-
-    .testimonial .placeholder-note {
-      color: var(--text-muted);
-      font-size: 0.82rem;
-      margin-top: 0.75rem;
-      font-style: italic;
-    }
-
-    /* ─── CTA Section ─── */
-    .cta-section {
-      text-align: center;
-    }
-
-    .cta-section h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.02em;
-    }
-
-    .cta-section p {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      margin-bottom: 2rem;
-    }
-
-    .cta-row {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    /* ─── FAQ Accordion ─── */
-    .faq-list {
-      max-width: 720px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .faq-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      overflow: hidden;
-      transition: border-color 0.2s;
-    }
-
-    .faq-item:hover {
-      border-color: rgba(99,102,241,0.3);
-    }
-
-    .faq-question {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.1rem 1.25rem;
-      background: none;
-      border: none;
-      color: var(--text);
-      font-size: 0.95rem;
-      font-weight: 600;
-      text-align: left;
-      cursor: pointer;
-      font-family: inherit;
-      gap: 1rem;
-    }
-
-    .faq-chevron {
-      flex-shrink: 0;
-      width: 20px;
-      height: 20px;
-      transition: transform 0.25s ease;
-      color: var(--text-muted);
-    }
-
-    .faq-item.open .faq-chevron {
-      transform: rotate(180deg);
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease, padding 0.3s ease;
-    }
-
-    .faq-item.open .faq-answer {
-      max-height: 500px;
-    }
-
-    .faq-answer-inner {
-      padding: 0 1.25rem 1.25rem;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      line-height: 1.7;
-    }
-
-    .faq-answer-inner ol {
-      padding-left: 1.25rem;
-      margin-top: 0.5rem;
-    }
-
-    .faq-answer-inner li {
-      margin-bottom: 0.25rem;
-    }
-
-    /* ─── Footer ─── */
-    footer {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      color: var(--text-muted);
-      font-size: 0.82rem;
-      border-top: 1px solid var(--border);
-    }
-
-    footer a { color: var(--primary-light); text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-
-    .footer-badges { display: flex; gap: 1.5rem; }
-
-    .footer-badge {
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-      color: var(--text-muted);
-      font-size: 0.82rem;
-    }
-
-    /* ─── Responsive ─── */
+    .lang-toggle { background: none; border: none; font-size: 1.3rem; cursor: pointer; padding: 0.25rem; line-height: 1; border-radius: 50%; transition: transform 0.2s; min-width: 44px; min-height: 44px; }
+    .lang-toggle:hover { transform: scale(1.15); }
     @media (max-width: 900px) {
-      .hero { padding: 2rem 1.5rem 3rem; }
       .navbar { padding: 1rem 1.5rem; flex-wrap: wrap; }
       .navbar-hamburger { display: flex; }
-      .navbar-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        gap: 0.5rem;
-        padding: 1rem 0 0.5rem;
-      }
+      .navbar-links { display: none; flex-direction: column; width: 100%; gap: 0.5rem; padding: 1rem 0 0.5rem; }
       .navbar-links.open { display: flex; }
-      .navbar-links a { padding: 0.6rem 0; font-size: 1rem; }
+      .navbar-links a { padding: 0.6rem 0; font-size: 1rem; min-height: 44px; display: flex; align-items: center; justify-content: center; }
     }
+    @media (max-width: 480px) { .navbar { padding: 0.75rem 1rem; } }
 
-    /* ─── EN Banner ─── */
-    .en-banner {
-      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-      color: #fff;
-      text-align: center;
-      padding: 0.6rem 2.5rem;
-      font-size: 0.85rem;
-      position: relative;
-    }
+    /* ─── Bandeau anglais ─── */
+    .en-banner { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; text-align: center; padding: 0.6rem 2.5rem; font-size: 0.85rem; position: relative; }
     .en-banner a { color: #fff; text-decoration: underline; }
-    .en-banner-close {
-      position: absolute;
-      right: 1rem;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 1.1rem;
-      cursor: pointer;
-      opacity: 0.8;
-      padding: 0.25rem;
-    }
+    .en-banner-close { position: absolute; right: 0.25rem; top: 50%; transform: translateY(-50%); background: none; border: none; color: #fff; font-size: 1.1rem; cursor: pointer; opacity: 0.8; min-width: 44px; min-height: 44px; }
     .en-banner-close:hover { opacity: 1; }
 
-    /* ─── Lang toggle ─── */
-    .lang-toggle {
-      background: none;
-      border: none;
-      font-size: 1.3rem;
-      cursor: pointer;
-      padding: 0.25rem;
-      line-height: 1;
-      border-radius: 50%;
-      transition: transform 0.2s;
-    }
-    .lang-toggle:hover { transform: scale(1.15); }
+    /* ─── Éléments communs ─── */
+    .wrap { max-width: 1100px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+    .num { font-variant-numeric: tabular-nums; }
+    .grad { background: linear-gradient(135deg, var(--g1), var(--g2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .section { padding-block: 72px; border-top: 1px solid var(--border); }
+    .section.first { border-top: 0; }
+    .eyebrow { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary-light); margin-bottom: 10px; }
+    .h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); font-weight: 800; }
+    .lead { color: var(--text-muted); font-size: 1.05rem; max-width: 62ch; margin-top: 12px; }
+    .sec-head { margin-bottom: 36px; }
+    .sec-head.center { text-align: center; }
+    .sec-head.center .lead { margin-left: auto; margin-right: auto; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 12px; font-size: 0.98rem; font-weight: 600; text-decoration: none; cursor: pointer; border: 1px solid transparent; text-align: center; }
+    .btn:hover { text-decoration: none; }
+    .btn-primary { background: linear-gradient(135deg, var(--g1), var(--g2)); color: var(--on-accent); box-shadow: 0 4px 20px rgba(99,102,241,0.25); }
+    .btn-outline { background: transparent; color: var(--text); border-color: var(--border-strong); }
+    .btn-outline:hover { border-color: var(--primary); color: var(--primary-light); }
+    .btn-block { width: 100%; }
+    .btn[disabled] { opacity: 0.6; cursor: wait; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; background: var(--tint); border: 1px solid var(--tint-line); border-radius: 100px; padding: 6px 16px; font-size: 0.86rem; font-weight: 600; color: var(--primary-light); }
+    .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 18px; padding: 24px; min-width: 0; }
+    .card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+    .card p, .card li { color: var(--text-muted); font-size: 0.93rem; }
+    .ticks { list-style: none; display: grid; gap: 8px; align-content: start; }
+    .ticks li { display: grid; grid-template-columns: 18px 1fr; gap: 8px; align-items: start; }
+    .ticks li::before { content: ""; width: 10px; height: 6px; border-left: 2px solid var(--ok); border-bottom: 2px solid var(--ok); transform: rotate(-45deg); margin-top: 7px; margin-left: 3px; }
+    @media (prefers-reduced-motion: no-preference) { .btn, .plan { transition: transform .2s ease, border-color .2s ease; } .btn:hover { transform: translateY(-1px); } }
+    @media (max-width: 640px) { .section { padding-block: 52px; } }
 
-    @media (max-width: 640px) {
-      .btn { width: 100%; max-width: 340px; justify-content: center; }
-      .features-grid { grid-template-columns: 1fr; }
-      .trust-grid { grid-template-columns: repeat(2, 1fr); }
-      footer { flex-direction: column; gap: 1rem; text-align: center; }
+    /* ─── Footer (identique aux autres pages du site) ─── */
+    footer { max-width: 1200px; margin: 0 auto; padding: 2rem 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; color: var(--text-muted); font-size: 0.82rem; border-top: 1px solid var(--border); }
+    footer a { color: var(--primary-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .footer-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 0 1.5rem; }
+    .footer-badges a { min-height: 44px; display: inline-flex; align-items: center; }
+    .footer-badge { display: flex; align-items: center; gap: 0.35rem; color: var(--text-muted); font-size: 0.82rem; }
+    @media (max-width: 768px) {
+      footer { flex-direction: column; text-align: center; padding: 2rem 1rem; }
+      .footer-badges { justify-content: center; }
     }
-
-    /* ─── Page école : ajouts ─── */
-    .hero { overflow: hidden; } /* évite le défilement horizontal dû aux halos décoratifs */
-    .hero-content .back-link { display: flex; justify-content: center; margin-bottom: 1.25rem; }
-    .hero-actions {
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 2rem;
+    /* ─── Haut de page ─── */
+    .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .e-hero { position: relative; overflow: hidden; }
+    .e-hero::before { content: ""; position: absolute; right: -10%; top: -20%; width: 70%; height: 140%; background: radial-gradient(closest-side, rgba(124,92,252,0.20), transparent); pointer-events: none; }
+    .e-hero-grid { position: relative; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 40px; align-items: center; padding-block: 64px 72px; }
+    .e-hero-text { display: grid; gap: 20px; justify-items: start; min-width: 0; }
+    .e-hero h1 { font-size: clamp(2.1rem, 5.2vw, 3.5rem); font-weight: 800; }
+    .e-hero .sub { color: var(--text-muted); font-size: 1.15rem; max-width: 44ch; }
+    .e-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+    .e-cta .btn { min-height: 54px; padding: 0 28px; font-size: 1.05rem; }
+    .e-art { width: 100%; max-width: 440px; justify-self: center; color: var(--text); }
+    .e-art svg { display: block; width: 100%; height: auto; }
+    .e-twinkle { opacity: 0.6; }
+    @media (prefers-reduced-motion: no-preference) {
+      .e-art svg > g:first-of-type { transform-origin: 200px 200px; animation: e-spin 60s linear infinite; }
+      @keyframes e-spin { to { transform: rotate(360deg); } }
     }
-
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-top: 1.5rem;
-    }
-
-    .hero-tag {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      padding: 0.3rem 0.85rem;
-      background: rgba(255,255,255,0.02);
-    }
-
-    .status-pill {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      border-radius: 100px;
-      padding: 0.2rem 0.7rem;
-      margin-bottom: 0.8rem;
-    }
-    .status-ok   { background: rgba(34,197,94,0.12); color: #6fd6a2; }
-    .status-soon { background: rgba(245,158,11,0.12); color: #ffbf5e; }
-
-    .feature-card ul {
-      list-style: none;
-      margin-top: 0.6rem;
-    }
-    .feature-card li {
-      color: var(--text-muted);
-      font-size: 0.88rem;
-      padding: 0.2rem 0 0.2rem 1.2rem;
-      position: relative;
-      line-height: 1.5;
-    }
-    .feature-card li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--primary-light);
-      font-weight: 700;
+    @media (max-width: 860px) {
+      .e-hero-grid { grid-template-columns: minmax(0, 1fr); padding-block: 40px 52px; gap: 28px; }
+      .e-art { max-width: 190px; order: -1; }
     }
 
-    .soon-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.25rem;
-    }
-    .soon-card {
-      background: var(--bg-card);
-      border: 1px dashed rgba(245,158,11,0.35);
-      border-radius: 16px;
-      padding: 1.5rem 1.75rem;
-    }
-    .soon-card h3 { font-size: 1.02rem; font-weight: 700; margin-bottom: 0.4rem; }
-    .soon-card p  { color: var(--text-muted); font-size: 0.9rem; }
-    .soon-note {
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.92rem;
-      margin-top: 1.75rem;
-    }
+    /* ─── Mini-formulaire « Être recontacté » ─── */
+    .quick { width: 100%; max-width: 560px; display: grid; gap: 8px; }
+    .quick-title { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); }
+    .quick-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .quick-row input { flex: 1 1 180px; min-width: 0; min-height: 48px; border-radius: 12px; border: 1px solid var(--border-strong); background: var(--bg-card); color: var(--text); padding: 0 14px; font: inherit; font-size: 16px; }
+    .quick-row .btn { flex: 0 0 auto; }
+    .quick-msg { font-size: 0.86rem; border-radius: 10px; padding: 10px 12px; border: 1px solid var(--ok); background: var(--ok-bg); }
+    .quick-msg.bad { border-color: var(--bad); background: var(--bad-bg); }
+    .quick-msg a { color: inherit; text-decoration: underline; }
 
-    .steps-list {
-      list-style: none;
-      max-width: 760px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 0.9rem;
-      counter-reset: step;
-    }
-    .steps-list li {
-      counter-increment: step;
-      display: grid;
-      grid-template-columns: 2.6rem 1fr;
-      gap: 1rem;
-      align-items: start;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.1rem 1.25rem;
-    }
-    .steps-list li::before {
-      content: counter(step);
-      width: 2.6rem;
-      height: 2.6rem;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      color: #fff;
-      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-    }
-    .steps-list h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.15rem; }
-    .steps-list p  { color: var(--text-muted); font-size: 0.9rem; }
+    /* ─── Le professeur aux commandes ─── */
+    .ctrl-band { background: linear-gradient(135deg, var(--tint), transparent 75%); border-block: 1px solid var(--tint-line); }
+    .ctrl-grid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 48px; align-items: center; padding-block: 64px; }
+    .ctrl-art { width: 100%; max-width: 380px; justify-self: center; }
+    .ctrl-art svg { display: block; width: 100%; height: auto; filter: drop-shadow(0 18px 40px rgba(99,102,241,0.35)); }
+    .ctrl-text { display: grid; gap: 14px; min-width: 0; }
+    .ctrl-text .h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); }
+    .ctrl-points { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 18px; }
+    .ctrl-points li { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 14px; align-items: start; }
+    .c-icon { width: 48px; height: 48px; border-radius: 14px; background: var(--bg-card); border: 1px solid var(--tint-line); display: grid; place-items: center; }
+    .c-icon svg { width: 30px; height: 30px; }
+    .ctrl-points b { display: block; font-size: 1.08rem; }
+    .ctrl-points span { color: var(--text-muted); font-size: 0.97rem; }
+    @media (max-width: 860px) { .ctrl-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-block: 48px; } .ctrl-art { max-width: 240px; } }
 
-    .trust-grid-4 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.25rem;
-    }
-    .trust-grid-4 .trust-item { text-align: left; padding: 1.4rem; }
-    .trust-grid-4 .trust-item h4 { font-size: 0.98rem; }
-    .trust-grid-4 .trust-item p { font-size: 0.86rem; }
-    .trust-note {
-      max-width: 760px;
-      margin: 1.75rem auto 0;
-      color: var(--text-muted);
-      font-size: 0.88rem;
-      line-height: 1.7;
-      text-align: center;
-    }
+    /* ─── Promesses ─── */
+    .promises { display: grid; gap: 18px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    @media (max-width: 900px) { .promises { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 560px) { .promises { grid-template-columns: minmax(0, 1fr); } }
+    .promise { background: var(--bg-card); border: 1px solid var(--border); border-radius: 22px; padding: 28px 24px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+    .p-icon { width: 76px; height: 76px; border-radius: 22px; background: var(--tint); border: 1px solid var(--tint-line); display: grid; place-items: center; margin-bottom: 6px; }
+    .p-icon svg { width: 46px; height: 46px; }
+    .promise h3 { font-size: 1.2rem; font-weight: 800; }
+    .promise p { color: var(--text-muted); font-size: 0.98rem; }
 
-    @media (max-width: 640px) {
-      section { padding: 3.5rem 1rem; }
-      .hero { padding: 1.5rem 1rem 3rem; }
-      .section-title { font-size: 1.6rem; }
-      .feature-card, .soon-card { padding: 1.35rem; }
-      .steps-list li { grid-template-columns: 2.2rem 1fr; gap: 0.8rem; padding: 1rem; }
-      .steps-list li::before { width: 2.2rem; height: 2.2rem; }
-      .en-banner { padding: 0.6rem 2.5rem 0.6rem 1rem; text-align: left; }
-      .hero-actions .btn { width: 100%; }
-    }
+    /* ─── Bande confiance ─── */
+    .trust-band { background: linear-gradient(135deg, var(--tint), transparent 70%); border-block: 1px solid var(--border); }
+    .trust-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; padding-block: 32px; }
+    @media (max-width: 760px) { .trust-row { grid-template-columns: minmax(0, 1fr); } }
+    .trust-item { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1rem; min-width: 0; }
+    .trust-item svg { width: 48px; height: 48px; flex: 0 0 48px; }
+
+    /* ─── Étapes ─── */
+    .e-steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; position: relative; }
+    .e-steps::before { content: ""; position: absolute; top: 48px; left: 16%; right: 16%; height: 3px; border-radius: 2px; background: linear-gradient(90deg, var(--g1), var(--g2)); opacity: 0.5; }
+    .e-steps li { position: relative; display: grid; justify-items: center; text-align: center; gap: 8px; }
+    .s-icon { width: 96px; height: 96px; border-radius: 50%; background: var(--bg-card); border: 2px solid var(--tint-line); display: grid; place-items: center; box-shadow: 0 0 0 8px var(--bg); }
+    .s-icon svg { width: 54px; height: 54px; }
+    .e-steps b { font-size: 1.1rem; margin-top: 6px; }
+    .e-steps li > span:last-child { color: var(--text-muted); font-size: 0.95rem; max-width: 30ch; }
+    @media (max-width: 760px) { .e-steps { grid-template-columns: minmax(0, 1fr); } .e-steps::before { top: 48px; bottom: 48px; left: 50%; right: auto; width: 3px; height: auto; background: linear-gradient(180deg, var(--g1), var(--g2)); } }
+
+    /* ─── Appel à l'action final ─── */
+    .cta-band { border-radius: 22px; padding: 2px; background: linear-gradient(135deg, var(--g1), var(--g2)); }
+    .cta-inner { border-radius: 20px; background: var(--bg-card); padding: 40px 28px; text-align: center; display: grid; gap: 14px; justify-items: center; }
+    .cta-inner h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; }
+    .cta-inner p { color: var(--text-muted); max-width: 56ch; }
+    .e-final .quick { justify-items: center; margin-top: 8px; }
+    .e-final .quick-row { justify-content: center; }
+    @media (max-width: 640px) { .cta-inner { padding: 30px 18px; } }
+
+    /* ─── Demande de devis ─── */
+    .form-layout { display: grid; gap: 32px; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); align-items: start; }
+    @media (max-width: 900px) { .form-layout { grid-template-columns: minmax(0, 1fr); } }
+    form.card { display: grid; gap: 18px; padding: 28px; }
+    @media (max-width: 640px) { form.card { padding: 20px; } }
+    .f-row { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+    .field { display: grid; gap: 6px; min-width: 0; }
+    .field label, .field legend { font-size: 0.88rem; font-weight: 600; }
+    .field .hint { font-size: 0.78rem; color: var(--text-muted); font-weight: 400; }
+    input[type="text"], input[type="email"], select, textarea { width: 100%; min-height: 48px; border-radius: 12px; border: 1px solid var(--border-strong); background: var(--screen); color: var(--text); padding: 10px 14px; font: inherit; font-size: 16px; }
+    textarea { min-height: 110px; resize: vertical; }
+    fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 8px; min-width: 0; }
+    .choices { display: flex; flex-wrap: wrap; gap: 8px; }
+    .choice { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border: 1px solid var(--border-strong); border-radius: 12px; cursor: pointer; font-size: 0.9rem; font-weight: 400; }
+    .choice input { width: 18px; height: 18px; accent-color: var(--primary); }
+    .choice:has(input:checked) { border-color: var(--primary); background: var(--tint); }
+    .consent { display: grid; grid-template-columns: 22px 1fr; gap: 10px; font-size: 0.85rem; color: var(--text-muted); align-items: start; cursor: pointer; }
+    .consent input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--primary); }
+    .form-msg { border-radius: 12px; padding: 14px 16px; font-size: 0.92rem; border: 1px solid var(--ok); background: var(--ok-bg); color: var(--text); }
+    .form-msg.bad { border-color: var(--bad); background: var(--bad-bg); }
+    .form-msg a { color: inherit; text-decoration: underline; }
+    .err { color: var(--bad); font-size: 0.8rem; }
+    .side { display: grid; gap: 16px; }
   </style>
   <!-- Meta Pixel (Facebook) - charge apres consentement -->
   <script src="meta-pixel.js"></script>
@@ -832,7 +291,7 @@
       <div class="navbar-links">
         <a href="/#features" data-i18n="nav.features">Fonctionnalités</a>
         <a href="/ecole" class="active" data-i18n="nav.school">École</a>
-        <a href="/#pricing" data-i18n="nav.pricing">Tarif</a>
+        <a href="/tarifs" data-i18n="nav.pricing">Tarif</a>
         <a href="/about" data-i18n="nav.about">À propos</a>
         <button id="lang-toggle" class="lang-toggle" onclick="toggleLanguage()" aria-label="Switch to English">🇬🇧</button>
         <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;" data-i18n="nav.signup">Inscription ou connexion</a>
@@ -840,284 +299,307 @@
     </nav>
   </div>
 
-  <!-- ═══ HERO ═══ -->
-  <div class="hero">
-    <div class="hero-content">
-      <a href="/" class="back-link" data-i18n="ecole.back">&larr; Retour &agrave; l'accueil</a>
-      <div class="hero-badge" data-k="badge">🏫 Écoles pilotes : gratuit</div>
-      <h1 data-k="hero.title">Galac6 pour <span class="gradient">votre école</span></h1>
-      <p class="subtitle" data-k="hero.subtitle">Créez vos classes, invitez vos professeurs par un simple lien et voyez où vos élèves bloquent. Pour les écoles en France et les écoles françaises à l'étranger, du CP à la Terminale.</p>
-      <div class="hero-actions">
-        <a href="mailto:hello@galac6.io?subject=Demande%20de%20d%C3%A9mo%20%E2%80%93%20Galac6%20pour%20les%20%C3%A9coles" class="btn btn-primary" data-k="hero.cta">Demander une démo</a>
-        <a href="#disponible" class="btn btn-secondary" data-k="hero.cta2">Voir ce qui est prêt</a>
+<main>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="gx" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+      <linearGradient id="gx2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#818cf8"/><stop offset="1" stop-color="#c084fc"/></linearGradient>
+      <radialGradient id="gglow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#a855f7" stop-opacity="0.55"/><stop offset="1" stop-color="#6366f1" stop-opacity="0"/></radialGradient>
+    </defs>
+  </svg>
+
+  <!-- ═══ HAUT DE PAGE ═══ -->
+  <div class="e-hero">
+    <div class="wrap e-hero-grid">
+      <div class="e-hero-text">
+        <span class="badge" data-i18n="ecole.badge">Pilote gratuit de 3 mois sur 3 classes</span>
+        <h1 data-i18n-html="ecole.hero.title">L'IA qui fait gagner du temps <span class="grad">à toute votre école</span></h1>
+        <p class="sub" data-i18n="ecole.hero.sub">Galac6 se charge du répétitif, vos professeurs se consacrent à l'essentiel.</p>
+        <div class="e-cta">
+          <a class="btn btn-primary" href="#devis" data-type="devis" data-i18n="ecole.cta.quote">Demander un devis</a>
+        </div>
+        <form class="quick" id="quick-top" data-where="haut de page" novalidate aria-label="Être recontacté">
+          <p class="quick-title" data-i18n="ecole.quick.title">Être recontacté</p>
+          <div class="quick-row">
+            <label class="sr" for="qt-email" data-i18n="ecole.f.email">Email professionnel</label>
+            <input type="email" id="qt-email" placeholder="Email professionnel" data-ph-en="Work email" autocomplete="email">
+            <label class="sr" for="qt-etab" data-i18n="ecole.f.etab">Établissement</label>
+            <input type="text" id="qt-etab" placeholder="Établissement" data-ph-en="School" autocomplete="organization">
+            <button class="btn btn-outline" type="submit" data-i18n="ecole.quick.send">Envoyer</button>
+          </div>
+          <p class="quick-msg" hidden role="status"></p>
+        </form>
       </div>
-      <div class="hero-tags">
-        <span class="hero-tag" data-k="tag1">Programmes français</span>
-        <span class="hero-tag" data-k="tag2">Interface en français et en anglais</span>
-        <span class="hero-tag" data-k="tag3">Données hébergées en France</span>
+
+      <!-- Illustration abstraite : une galaxie d'orbites autour d'un noyau -->
+      <div class="e-art" aria-hidden="true">
+        <svg viewBox="0 0 400 400">
+          <circle cx="200" cy="200" r="190" fill="url(#gglow)"/>
+          <g fill="none" stroke-width="1.5">
+            <ellipse cx="200" cy="200" rx="170" ry="70" transform="rotate(-24 200 200)" stroke="url(#gx)" opacity="0.55"/>
+            <ellipse cx="200" cy="200" rx="130" ry="130" stroke="url(#gx2)" opacity="0.35" stroke-dasharray="3 9"/>
+            <ellipse cx="200" cy="200" rx="160" ry="58" transform="rotate(38 200 200)" stroke="url(#gx2)" opacity="0.5"/>
+            <ellipse cx="200" cy="200" rx="90" ry="90" stroke="url(#gx)" opacity="0.45"/>
+          </g>
+          <circle cx="200" cy="200" r="46" fill="url(#gx)"/>
+          <circle cx="200" cy="200" r="46" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2"/>
+          <path d="M184 204 l12 12 l22 -28" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="47" cy="250" r="14" fill="url(#gx2)"/>
+          <circle cx="352" cy="148" r="18" fill="url(#gx)"/>
+          <circle cx="290" cy="330" r="10" fill="url(#gx2)"/>
+          <circle cx="110" cy="80" r="11" fill="url(#gx)"/>
+          <circle cx="290" cy="110" r="7" fill="url(#gx2)"/>
+          <circle cx="130" cy="300" r="6" fill="url(#gx)"/>
+          <g class="e-twinkle" fill="currentColor">
+            <circle cx="60" cy="130" r="2"/><circle cx="340" cy="260" r="2.5"/><circle cx="240" cy="40" r="1.8"/>
+            <circle cx="360" cy="70" r="1.6"/><circle cx="40" cy="340" r="2"/><circle cx="200" cy="370" r="1.6"/>
+          </g>
+        </svg>
       </div>
     </div>
   </div>
 
-  <hr class="divider">
-
-  <!-- ═══ DISPONIBLE AUJOURD'HUI ═══ -->
-  <section id="disponible">
-    <h2 class="section-title" data-k="avail.title">Ce qui est disponible aujourd'hui</h2>
-    <p class="section-subtitle" data-k="avail.subtitle">Tout ce qui figure ici fonctionne déjà dans Galac6.</p>
-
-    <div class="features-grid">
-      <div class="feature-card">
-        <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
-        <div class="feature-icon fi-purple">🏫</div>
-        <h3 data-k="f1.title">Vos classes et vos professeurs</h3>
-        <p data-k="f1.desc">La direction crée les classes de l'école et invite chaque professeur par un simple lien. Elle indique les matières de chaque professeur dans chaque classe et désigne le professeur principal. Elle consulte les classes, les devoirs et les copies, sans pouvoir modifier les notes.</p>
+  <!-- ═══ LE PROFESSEUR AUX COMMANDES ═══ -->
+  <div class="ctrl-band">
+    <div class="wrap ctrl-grid">
+      <div class="ctrl-art" aria-hidden="true">
+        <svg viewBox="0 0 240 200">
+          <rect x="8" y="20" width="224" height="150" rx="26" fill="url(#gx)"/>
+          <rect x="8" y="20" width="224" height="150" rx="26" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2"/>
+          <g stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-opacity="0.45"><path d="M40 62 H130"/><path d="M40 98 H130"/><path d="M40 134 H130"/></g>
+          <circle cx="104" cy="62" r="12" fill="#ffffff"/><circle cx="62" cy="98" r="12" fill="#ffffff"/><circle cx="118" cy="134" r="12" fill="#ffffff"/>
+          <circle cx="182" cy="76" r="20" fill="#ffffff" fill-opacity="0.95"/>
+          <path d="M146 150 c0-24 16-38 36-38 s36 14 36 38 z" fill="#ffffff" fill-opacity="0.95"/>
+          <circle cx="206" cy="128" r="20" fill="#34d399" stroke="#ffffff" stroke-width="4"/>
+          <path d="M197 128 l6 6 l12 -13" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </div>
-
-      <div class="feature-card">
-        <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
-        <div class="feature-icon fi-blue">🔒</div>
-        <h3 data-k="f2.title">Chaque professeur gère ses classes</h3>
-        <p data-k="f2.desc">Le professeur gère ses propres classes. Il peut aussi consulter, sans rien modifier, les élèves et les résultats des autres classes de son école. Un professeur peut créer sa classe seul, sans attendre : il demande ensuite à la rattacher à son école, et la direction valide. La classe garde ses élèves et leur historique.</p>
-      </div>
-
-      <div class="feature-card">
-        <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
-        <div class="feature-icon fi-green">🔑</div>
-        <h3 data-k="f3.title">Les élèves rejoignent la classe avec un code</h3>
-        <p data-k="f3.desc">Chaque classe a son code. Le professeur le donne aux familles, ou imprime l'affiche de la classe avec son QR code. Les parents saisissent le code et l'enfant rejoint la classe.</p>
-      </div>
-
-      <div class="feature-card">
-        <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
-        <div class="feature-icon fi-amber">📊</div>
-        <h3 data-k="f4.title">Le suivi de la classe</h3>
-        <ul data-k="f4.list">
-          <li>Élèves actifs et minutes d'entraînement, sur 7 jours, 30 jours ou depuis la rentrée</li>
-          <li>Les élèves à relancer, qui n'ont rien fait depuis plusieurs jours</li>
-          <li>Les 3 notions à revoir en classe</li>
-          <li>Une carte de chaleur élèves × notions, pour voir d'un coup d'œil qui bloque sur quoi</li>
+      <div class="ctrl-text">
+        <p class="eyebrow" data-i18n="ecole.ctrl.eyebrow">Une école augmentée</p>
+        <h2 class="h2" data-i18n="ecole.ctrl.title">Les capacités pédagogiques de votre école reboostées</h2>
+        <ul class="ctrl-points">
+          <li>
+            <span class="c-icon"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4 l4.5 10 l10.5 1 l-8 7 l2.5 10.5 l-9.5 -5.5 l-9.5 5.5 l2.5 -10.5 l-8 -7 l10.5 -1 z" fill="url(#gx)"/></svg></span>
+            <div><b data-i18n="ecole.ctrl.p1.title">Des innovations pédagogiques uniques</b><span data-i18n="ecole.ctrl.p1.desc">Des outils conçus pour faire réfléchir chaque élève, à son rythme.</span></div>
+          </li>
+          <li>
+            <span class="c-icon"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="url(#gx)"/><path d="M12 20 l6 6 l11 -12" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div><b data-i18n="ecole.ctrl.p2.title">Le professeur reste maître</b><span data-i18n="ecole.ctrl.p2.desc">Il décide de ce que Galac6 propose à ses élèves.</span></div>
+          </li>
+          <li>
+            <span class="c-icon"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" fill="none" stroke="url(#gx)" stroke-width="4"/><path d="M20 11 v10 l7 4" fill="none" stroke="url(#gx)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div><b data-i18n="ecole.ctrl.p3.title">Plus de temps pour enseigner</b><span data-i18n="ecole.ctrl.p3.desc">Du temps rendu pour la pédagogie et pour accompagner chaque élève.</span></div>
+          </li>
         </ul>
       </div>
+    </div>
+  </div>
 
-      <div class="feature-card">
-        <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
-        <div class="feature-icon fi-pink">🧑‍🎓</div>
-        <h3 data-k="f5.title">Une fiche par élève</h3>
-        <p data-k="f5.desc">Le professeur ouvre la fiche de chaque élève : ses résultats aux devoirs et à l'entraînement, et sa progression. Il ne voit ni les conversations de l'élève avec le tuteur, ni les réglages de la famille.</p>
+  <!-- ═══ PROMESSES ═══ -->
+  <div class="section">
+    <div class="wrap">
+      <div class="sec-head center">
+        <p class="eyebrow" data-i18n="ecole.prom.eyebrow">Ce que Galac6 change</p>
+        <h2 class="h2" data-i18n="ecole.prom.title">Pour vos professeurs, vos élèves et leurs familles</h2>
       </div>
-
-      <div class="feature-card">
-        <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
-        <div class="feature-icon fi-blue">📝</div>
-        <h3 data-k="f10.title">Quiz et évaluations en devoir</h3>
-        <ul data-k="f10.list">
-          <li>Quiz, interrogation, contrôle ou devoir à la maison, préparés avec l'assistant de Galac6</li>
-          <li>Galac6 propose des questions dont il a vérifié la bonne réponse ; vous relisez et validez chacune d'elles</li>
-          <li>À faire à la maison avant une date limite, ou en classe avec une durée</li>
-          <li>Le temps supplémentaire des élèves qui en ont besoin s'applique automatiquement</li>
-          <li>Galac6 propose une note pour chaque copie, et c'est vous qui la validez</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
-        <div class="feature-icon fi-purple">✍️</div>
-        <h3 data-k="f6.title">Vos propres dictées</h3>
-        <ul data-k="f6.list">
-          <li>Collez le texte, ou prenez la feuille en photo</li>
-          <li>L'IA repère les pièges (accords, homophones, conjugaison…) ; vous les corrigez si besoin</li>
-          <li>Envoi à la classe, avec une date limite si vous le souhaitez</li>
-          <li>Galac6 lit la dictée à voix haute et la corrige</li>
-          <li>Vous voyez qui l'a faite, la moyenne, les fautes les plus fréquentes et la copie de chaque élève</li>
-        </ul>
-      </div>
-
-      <div class="feature-card">
-        <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
-        <div class="feature-icon fi-green">👨‍👩‍👧</div>
-        <h3 data-k="f7.title">Les parents gardent la main</h3>
-        <p data-k="f7.desc">Les parents voient la classe et les professeurs de leur enfant. Ils peuvent le détacher de la classe à tout moment : l'école et le professeur sont alors prévenus.</p>
-      </div>
-
-      <div class="feature-card">
-        <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
-        <div class="feature-icon fi-blue">🌍</div>
-        <h3 data-k="f8.title">Interface en anglais</h3>
-        <p data-k="f8.desc">Toute l'application passe en anglais en un clic, pour vos professeurs anglophones. Les dictées du professeur peuvent être en français ou en anglais.</p>
-      </div>
-
-      <div class="feature-card">
-        <span class="status-pill status-ok" data-k="pill.ok">Disponible</span>
-        <div class="feature-icon fi-amber">🎓</div>
-        <h3 data-k="f9.title">Pour l'élève</h3>
-        <p data-k="f9.desc">Un tuteur qui guide par des questions sans donner la réponse, des dictées lues par une voix naturelle, du calcul mental et des jeux, avec un classement de la semaine entre élèves de la même école.</p>
+      <div class="promises">
+        <article class="promise">
+          <span class="p-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="30" cy="34" r="22" fill="none" stroke="url(#gx)" stroke-width="5"/><path d="M30 22 v12 l8 6" fill="none" stroke="url(#gx2)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="16" r="11" fill="url(#gx)"/><path d="M45 16 l4 4 l6 -8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3 data-i18n="ecole.prom.p1.title">Des devoirs prêts en quelques minutes</h3>
+          <p data-i18n="ecole.prom.p1.desc">Galac6 prépare les devoirs et leur correction à partir de vos consignes.</p>
+        </article>
+        <article class="promise">
+          <span class="p-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="36" width="10" height="20" rx="3" fill="url(#gx2)" opacity="0.7"/><rect x="24" y="28" width="10" height="28" rx="3" fill="url(#gx2)" opacity="0.85"/><rect x="40" y="18" width="10" height="38" rx="3" fill="url(#gx)"/><path d="M8 26 L26 16 L38 20 L56 6" fill="none" stroke="url(#gx)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="56" cy="6" r="4" fill="url(#gx)"/></svg></span>
+          <h3 data-i18n="ecole.prom.p2.title">Chaque classe en un regard</h3>
+          <p data-i18n="ecole.prom.p2.desc">Les moyennes et la progression de vos classes restent toujours à jour.</p>
+        </article>
+        <article class="promise">
+          <span class="p-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="24" cy="20" r="10" fill="url(#gx)"/><path d="M6 54 c0-12 8-20 18-20 s18 8 18 20 z" fill="url(#gx2)" opacity="0.85"/><circle cx="48" cy="40" r="13" fill="none" stroke="url(#gx)" stroke-width="4"/><circle cx="48" cy="40" r="6" fill="none" stroke="url(#gx2)" stroke-width="3"/><circle cx="48" cy="40" r="2" fill="url(#gx)"/></svg></span>
+          <h3 data-i18n="ecole.prom.p3.title">Chaque élève mieux compris</h3>
+          <p data-i18n="ecole.prom.p3.desc">Ses points forts et les notions à revoir apparaissent d'un coup d'œil.</p>
+        </article>
+        <article class="promise">
+          <span class="p-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 12 h40 a8 8 0 0 1 8 8 v18 a8 8 0 0 1 -8 8 h-22 l-12 10 v-10 h-6 a8 8 0 0 1 -8 -8 v-18 a8 8 0 0 1 8 -8 z" fill="url(#gx)"/><path d="M23 23 a6 6 0 1 1 9 5 c-2 1-3 2-3 5" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/><circle cx="29" cy="39" r="2.6" fill="#fff"/></svg></span>
+          <h3 data-i18n="ecole.prom.p4.title">Une IA anti-IA classique</h3>
+          <p data-i18n="ecole.prom.p4.desc">Socratique, elle questionne l'élève et ne lui donne jamais les réponses.</p>
+        </article>
+        <article class="promise">
+          <span class="p-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M6 30 L32 8 L58 30" fill="none" stroke="url(#gx)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 28 v26 h38 v-26" fill="url(#gx2)" opacity="0.3"/><circle cx="25" cy="34" r="6" fill="url(#gx)"/><circle cx="40" cy="36" r="4.5" fill="url(#gx2)"/><path d="M15 54 c0-8 4-12 10-12 s10 4 10 12 z" fill="url(#gx)"/><path d="M33 54 c0-6 3-9 7-9 s7 3 7 9 z" fill="url(#gx2)"/></svg></span>
+          <h3 data-i18n="ecole.prom.p5.title">Des parents associés</h3>
+          <p data-i18n="ecole.prom.p5.desc">Les familles suivent le travail et les devoirs de leur enfant.</p>
+        </article>
+        <article class="promise">
+          <span class="p-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4 L54 12 v18 c0 15 -10 25 -22 30 c-12 -5 -22 -15 -22 -30 v-18 z" fill="url(#gx)"/><rect x="22" y="28" width="20" height="16" rx="3" fill="#fff" fill-opacity="0.95"/><path d="M26 28 v-5 a6 6 0 0 1 12 0 v5" fill="none" stroke="#fff" stroke-width="3.5"/><circle cx="32" cy="35" r="2.5" fill="#7c5cfc"/></svg></span>
+          <h3 data-i18n="ecole.prom.p6.title">Des données en confiance</h3>
+          <p data-i18n="ecole.prom.p6.desc">Vos données sont protégées et traitées dans le respect du RGPD.</p>
+        </article>
       </div>
     </div>
-  </section>
+  </div>
 
-  <hr class="divider">
-
-  <!-- ═══ BIENTÔT ═══ -->
-  <section>
-    <h2 class="section-title" data-k="soon.title">Bientôt</h2>
-    <p class="section-subtitle" data-k="soon.subtitle">En préparation avec nos écoles pilotes. Ces fonctions ne sont pas encore disponibles.</p>
-
-    <div class="soon-grid">
-      <div class="soon-card">
-        <span class="status-pill status-soon" data-k="pill.soon">Bientôt</span>
-        <h3 data-k="s1.title">Chapitres de calcul mental choisis par le professeur</h3>
-        <p data-k="s1.desc">Le professeur choisit les chapitres que sa classe travaille ; les exercices et les jeux de calcul mental s'y alignent.</p>
-      </div>
-      <div class="soon-card">
-        <span class="status-pill status-soon" data-k="pill.soon">Bientôt</span>
-        <h3 data-k="s2.title">Calcul mental en devoir</h3>
-        <p data-k="s2.desc">Une série de calcul mental à faire pour une date donnée, avec les résultats de chaque élève. C'est déjà possible pour les quiz, les évaluations et les dictées.</p>
-      </div>
-    </div>
-    <p class="soon-note" data-k="soon.note">Vous avez un besoin qui n'est pas dans cette liste&nbsp;? Dites-le-nous : les écoles pilotes nous aident à choisir la suite.</p>
-  </section>
-
-  <hr class="divider">
-
-  <!-- ═══ DÉMARRER ═══ -->
-  <section>
-    <h2 class="section-title" data-k="start.title">Comment démarrer</h2>
-    <p class="section-subtitle" data-k="start.subtitle">On commence petit, avec une ou deux classes.</p>
-
-    <ol class="steps-list">
-      <li><div><h3 data-k="st1.title">Une démonstration</h3><p data-k="st1.desc">Vingt minutes en visioconférence, pour voir Galac6 côté direction, professeur, élève et parent.</p></div></li>
-      <li><div><h3 data-k="st2.title">L'espace de votre école</h3><p data-k="st2.desc">Nous créons l'espace de votre école et le compte de la direction.</p></div></li>
-      <li><div><h3 data-k="st3.title">Les classes et les professeurs</h3><p data-k="st3.desc">La direction crée ses classes et envoie un lien d'invitation à chaque professeur. Chaque professeur reçoit un guide d'une page, en français ou en anglais.</p></div></li>
-      <li><div><h3 data-k="st4.title">Les élèves</h3><p data-k="st4.desc">Les professeurs donnent le code de la classe ou son affiche à QR code aux familles.</p></div></li>
-      <li><div><h3 data-k="st5.title">On ajuste ensemble</h3><p data-k="st5.desc">Vous nous dites ce qui manque à vos professeurs, et nous le construisons avec vous.</p></div></li>
-    </ol>
-  </section>
-
-  <hr class="divider">
-
-  <!-- ═══ DONNÉES DES ÉLÈVES ═══ -->
-  <section>
-    <h2 class="section-title" data-k="trust.title">Les données de vos élèves</h2>
-    <p class="section-subtitle" data-k="trust.subtitle">Ce que nous faisons, dit simplement.</p>
-
-    <div class="trust-grid-4">
+  <!-- ═══ BANDE CONFIANCE ═══ -->
+  <div class="trust-band">
+    <div class="wrap trust-row">
       <div class="trust-item">
-        <div class="trust-icon">🇪🇺</div>
-        <h4 data-k="t1.title">Données hébergées en France</h4>
-        <p data-k="t1.desc">Les comptes et les données des élèves sont hébergés en France, dans une base de données à Paris. Nous travaillons à ce que tous les traitements restent bientôt en Europe.</p>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="10" width="13.3" height="28" rx="3" fill="#6366f1"/><rect x="17.3" y="10" width="13.4" height="28" fill="#f5f5fb"/><rect x="30.7" y="10" width="13.3" height="28" rx="3" fill="#ef4444"/><rect x="4" y="10" width="40" height="28" rx="3" fill="none" stroke="url(#gx)" stroke-width="2"/></svg>
+        <span data-i18n="ecole.trust.t1">Données hébergées en France</span>
       </div>
       <div class="trust-item">
-        <div class="trust-icon">🚫</div>
-        <h4 data-k="t2.title">Ni publicité, ni revente</h4>
-        <p data-k="t2.desc">Aucune publicité dans Galac6. Les données des élèves ne sont jamais vendues.</p>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="19" fill="none" stroke="url(#gx)" stroke-width="3"/><g fill="url(#gx2)"><circle cx="24" cy="10" r="2.4"/><circle cx="31" cy="12" r="2.4"/><circle cx="36" cy="17" r="2.4"/><circle cx="38" cy="24" r="2.4"/><circle cx="36" cy="31" r="2.4"/><circle cx="31" cy="36" r="2.4"/><circle cx="24" cy="38" r="2.4"/><circle cx="17" cy="36" r="2.4"/><circle cx="12" cy="31" r="2.4"/><circle cx="10" cy="24" r="2.4"/><circle cx="12" cy="17" r="2.4"/><circle cx="17" cy="12" r="2.4"/></g></svg>
+        <span data-i18n="ecole.trust.t2">Pensé pour le RGPD</span>
       </div>
       <div class="trust-item">
-        <div class="trust-icon">👁️</div>
-        <h4 data-k="t3.title">Chacun voit ce qui le concerne</h4>
-        <p data-k="t3.desc">Le professeur voit les résultats de ses classes, et consulte sans rien modifier les autres classes de son école. Il ne voit pas les conversations des élèves avec le tuteur. La direction voit son école, les parents leurs enfants.</p>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">🇫🇷</div>
-        <h4 data-k="t4.title">Conçu en France</h4>
-        <p data-k="t4.desc">Galac6 est conçu et développé en France, autour des programmes de l'Éducation nationale.</p>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6 a13 13 0 0 0 -7.5 23.6 c1.2 0.9 1.9 2.2 1.9 3.6 v1.8 h11.2 v-1.8 c0 -1.4 0.7 -2.7 1.9 -3.6 A13 13 0 0 0 24 6 z" fill="url(#gx)"/><rect x="18.5" y="37" width="11" height="3.2" rx="1.6" fill="url(#gx2)"/><rect x="20" y="41.5" width="8" height="3.2" rx="1.6" fill="url(#gx2)"/><path d="M24 13 v8 M20 17 h8" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>
+        <span data-i18n="ecole.trust.t3">Une innovation au service de l'enseignement</span>
       </div>
     </div>
-    <p class="trust-note" data-k="trust.note">Pour certaines fonctions d'intelligence artificielle, comme la voix, Galac6 fait appel à des prestataires spécialisés, dont certains sont situés hors de l'Union européenne. La liste complète figure dans notre <a href="/privacy">politique de confidentialité</a>, et la page <a href="/donnees-eleves">Vos données et celles de vos élèves</a> résume l'essentiel. Un dossier RGPD pour les écoles est en préparation.</p>
-  </section>
+  </div>
 
-  <hr class="divider">
+  <!-- ═══ COMMENT ÇA DÉMARRE ═══ -->
+  <div class="section">
+    <div class="wrap">
+      <div class="sec-head center">
+        <p class="eyebrow" data-i18n="ecole.steps.eyebrow">Comment ça démarre</p>
+        <h2 class="h2" data-i18n="ecole.steps.title">Trois étapes, trois classes pour commencer</h2>
+      </div>
+      <ol class="e-steps">
+        <li>
+          <span class="s-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="6" y="14" width="38" height="30" rx="6" fill="url(#gx)"/><path d="M44 24 L58 16 v26 L44 34 z" fill="url(#gx2)"/><circle cx="25" cy="27" r="6" fill="#fff" fill-opacity="0.9"/><path d="M15 41 c0-6 4-9 10-9 s10 3 10 9" fill="#fff" fill-opacity="0.9"/></svg></span>
+          <b data-i18n="ecole.steps.s1.title">Un premier échange</b>
+          <span data-i18n="ecole.steps.s1.desc">Nous vous présentons Galac6 en visioconférence.</span>
+        </li>
+        <li>
+          <span class="s-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 L58 20 H6 z" fill="url(#gx)"/><rect x="10" y="22" width="44" height="4" fill="url(#gx2)"/><rect x="14" y="28" width="6" height="20" rx="2" fill="url(#gx2)"/><rect x="29" y="28" width="6" height="20" rx="2" fill="url(#gx2)"/><rect x="44" y="28" width="6" height="20" rx="2" fill="url(#gx2)"/><rect x="8" y="50" width="48" height="6" rx="2" fill="url(#gx)"/></svg></span>
+          <b data-i18n="ecole.steps.s2.title">L'espace de votre école</b>
+          <span data-i18n="ecole.steps.s2.desc">Nous l'ouvrons, la direction invite les professeurs.</span>
+        </li>
+        <li>
+          <span class="s-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="18" cy="20" r="8" fill="url(#gx)"/><circle cx="46" cy="20" r="8" fill="url(#gx)"/><circle cx="32" cy="16" r="9" fill="url(#gx2)"/><path d="M4 50 c0-10 6-16 14-16 s14 6 14 16 z" fill="url(#gx)" opacity="0.8"/><path d="M32 50 c0-10 6-16 14-16 s14 6 14 16 z" fill="url(#gx)" opacity="0.8"/><path d="M17 52 c0-12 7-19 15-19 s15 7 15 19 z" fill="url(#gx2)"/></svg></span>
+          <b data-i18n="ecole.steps.s3.title">Vos classes au travail</b>
+          <span data-i18n="ecole.steps.s3.desc">Les élèves rejoignent leur classe avec un code.</span>
+        </li>
+      </ol>
+    </div>
+  </div>
 
-  <!-- ═══ CTA ═══ -->
-  <section class="cta-section">
-    <h2 data-k="cta.title">Devenez école pilote</h2>
-    <p data-k="cta.subtitle">Gratuit pour les écoles pilotes. On démarre avec une ou deux classes.</p>
-    <div class="cta-row">
-      <a href="mailto:hello@galac6.io?subject=Demande%20de%20d%C3%A9mo%20%E2%80%93%20Galac6%20pour%20les%20%C3%A9coles" class="btn btn-primary" data-k="hero.cta">Demander une démo</a>
+  <!-- ═══ APPEL À L'ACTION FINAL ═══ -->
+  <div class="section">
+    <div class="wrap">
+      <div class="cta-band">
+        <div class="cta-inner e-final">
+          <span class="badge" data-i18n="ecole.badge">Pilote gratuit de 3 mois sur 3 classes</span>
+          <h2 data-i18n="ecole.final.title">Et si votre école essayait Galac6 ?</h2>
+          <p data-i18n="ecole.final.sub">Recevez un devis adapté au nombre de vos élèves.</p>
+          <a class="btn btn-primary" href="#devis" data-type="devis" data-i18n="ecole.cta.quote">Demander un devis</a>
+          <form class="quick" id="quick-bottom" data-where="bas de page" novalidate aria-label="Être recontacté">
+            <p class="quick-title" data-i18n="ecole.quick.title2">Ou laissez-nous vos coordonnées pour être recontacté</p>
+            <div class="quick-row">
+              <label class="sr" for="qb-email" data-i18n="ecole.f.email">Email professionnel</label>
+              <input type="email" id="qb-email" placeholder="Email professionnel" data-ph-en="Work email" autocomplete="email">
+              <label class="sr" for="qb-etab" data-i18n="ecole.f.etab">Établissement</label>
+              <input type="text" id="qb-etab" placeholder="Établissement" data-ph-en="School" autocomplete="organization">
+              <button class="btn btn-outline" type="submit" data-i18n="ecole.quick.send">Envoyer</button>
+            </div>
+            <p class="quick-msg" hidden role="status"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ DEMANDE DE DEVIS ═══ -->
+  <section class="section" id="devis">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow" data-i18n="ecole.devis.eyebrow">Établissements</p>
+        <h2 class="h2" id="devis-title">Demander un devis</h2>
+        <p class="lead" data-i18n="ecole.devis.lead">Dites-nous en quelques lignes qui vous êtes. Nous vous répondons avec un devis adapté au nombre de vos élèves, ou une proposition pour devenir école pilote.</p>
+      </div>
+      <div class="form-layout">
+        <form class="card" id="quote-form" novalidate>
+          <fieldset class="field">
+            <legend data-i18n="ecole.devis.type">Votre demande</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="type" id="t-devis" value="devis" checked> <span data-i18n="ecole.devis.type.devis">Un devis</span></label>
+              <label class="choice"><input type="radio" name="type" id="t-pilote" value="pilote"> <span data-i18n="ecole.devis.type.pilote">Devenir école pilote</span></label>
+              <label class="choice"><input type="radio" name="type" id="t-demo" value="demo"> <span data-i18n="ecole.devis.type.demo">Une démonstration</span></label>
+            </div>
+          </fieldset>
+          <div class="f-row">
+            <div class="field"><label for="f-nom" data-i18n="ecole.f.nom">Prénom et nom</label><input type="text" id="f-nom" autocomplete="name" required></div>
+            <div class="field"><label for="f-fonction" data-i18n="ecole.f.fonction">Fonction</label>
+              <select id="f-fonction">
+                <option value="Chef d'établissement" data-i18n="ecole.f.fonction.o1">Chef d'établissement</option>
+                <option value="Directeur ou directrice d'école" data-i18n="ecole.f.fonction.o2">Directeur ou directrice d'école</option>
+                <option value="Professeur" data-i18n="ecole.f.fonction.o3">Professeur</option>
+                <option value="Organisme de gestion ou réseau" data-i18n="ecole.f.fonction.o4">Organisme de gestion ou réseau</option>
+                <option value="Autre" data-i18n="ecole.f.fonction.o5">Autre</option>
+              </select></div>
+          </div>
+          <div class="f-row">
+            <div class="field"><label for="f-etab" data-i18n="ecole.f.etab">Établissement</label><input type="text" id="f-etab" autocomplete="organization" required></div>
+            <div class="field"><label for="f-ville" data-i18n="ecole.f.ville">Ville et pays</label><input type="text" id="f-ville" placeholder="Par exemple : Lyon, France" data-ph-en="For example: Lyon, France"></div>
+          </div>
+          <div class="f-row">
+            <div class="field"><label for="f-eleves" data-i18n="ecole.f.eleves">Nombre d'élèves</label>
+              <select id="f-eleves">
+                <option value="Moins de 200" data-i18n="ecole.f.eleves.o1">Moins de 200</option>
+                <option value="De 200 à 500" data-i18n="ecole.f.eleves.o2">De 200 à 500</option>
+                <option value="De 501 à 1 000" data-i18n="ecole.f.eleves.o3">De 501 à 1 000</option>
+                <option value="Plus de 1 000" data-i18n="ecole.f.eleves.o4">Plus de 1 000</option>
+                <option value="Plusieurs établissements" data-i18n="ecole.f.eleves.o5">Plusieurs établissements</option>
+              </select></div>
+            <div class="field"><label for="f-email" data-i18n="ecole.f.email">Email professionnel</label><input type="email" id="f-email" autocomplete="email" required><span class="err" id="e-email" hidden data-i18n="ecole.f.email.err">Indiquez une adresse email complète, par exemple prenom.nom@ecole.fr.</span></div>
+          </div>
+          <fieldset class="field">
+            <legend data-i18n="ecole.f.niveaux">Niveaux concernés</legend>
+            <div class="choices">
+              <label class="choice"><input type="checkbox" id="n-prim" value="Primaire"> <span data-i18n="ecole.f.niveaux.prim">Primaire</span></label>
+              <label class="choice"><input type="checkbox" id="n-coll" value="Collège" checked> <span data-i18n="ecole.f.niveaux.coll">Collège</span></label>
+              <label class="choice"><input type="checkbox" id="n-lyc" value="Lycée"> <span data-i18n="ecole.f.niveaux.lyc">Lycée</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="field">
+            <legend data-i18n="ecole.f.modules">Modules qui vous intéressent</legend>
+            <div class="choices">
+              <label class="choice"><input type="checkbox" id="m-eleve" value="Module Élève"> <span data-i18n="ecole.f.modules.eleve">Module Élève</span></label>
+              <label class="choice"><input type="checkbox" id="m-ecole" value="Élève + École" checked> <span data-i18n="ecole.f.modules.ecole">Élève + École</span></label>
+              <label class="choice"><input type="checkbox" id="m-examens" value="Examens et Oral"> <span data-i18n="ecole.f.modules.examens">Examens et Oral</span></label>
+            </div>
+          </fieldset>
+          <div class="field"><label for="f-msg"><span data-i18n="ecole.f.msg">Votre message</span> <span class="hint" data-i18n="ecole.f.msg.hint">(facultatif)</span></label><textarea id="f-msg" placeholder="Vos besoins, vos questions, le calendrier souhaité" data-ph-en="Your needs, your questions, your preferred timeline"></textarea></div>
+          <label class="consent"><input type="checkbox" id="f-consent" required><span data-i18n="ecole.f.consent">J'accepte que Galac6 utilise ces informations pour répondre à ma demande.</span></label>
+          <span class="err" id="e-form" hidden data-i18n="ecole.f.err">Remplissez votre nom, votre établissement et votre email, et cochez la case d'accord.</span>
+          <button class="btn btn-primary btn-block" type="submit" id="f-submit" data-i18n="ecole.f.submit">Envoyer ma demande</button>
+          <div class="form-msg" id="form-msg" hidden role="status"></div>
+        </form>
+
+        <aside class="side">
+          <div class="card">
+            <h3 data-i18n="ecole.side.next.title">Ce qui se passe ensuite</h3>
+            <ol class="ticks" style="margin-top:8px">
+              <li data-i18n="ecole.side.next.l1">Nous vous recontactons pour comprendre vos besoins.</li>
+              <li data-i18n="ecole.side.next.l2">Nous vous proposons une démonstration de vingt minutes en visioconférence.</li>
+              <li data-i18n="ecole.side.next.l3">Vous recevez un devis selon le nombre d'élèves et les modules choisis.</li>
+            </ol>
+          </div>
+          <div class="card">
+            <h3 data-i18n="ecole.side.incl.title">Toujours compris</h3>
+            <ul class="ticks" style="margin-top:8px">
+              <li data-i18n="ecole.side.incl.l1">Comptes professeurs, direction et parents gratuits et illimités</li>
+              <li data-i18n="ecole.side.incl.l2">Données hébergées en France</li>
+              <li data-i18n="ecole.side.incl.l3">Mise en route et formation des professeurs en visioconférence la première année</li>
+            </ul>
+          </div>
+          <div class="card" style="border-color:var(--tint-line);background:var(--tint)">
+            <h3 data-i18n="ecole.side.pilot.title">Écoles pilotes</h3>
+            <p data-i18n="ecole.side.pilot.desc">3 mois gratuits sur 3 classes, sans engagement.</p>
+          </div>
+        </aside>
+      </div>
     </div>
   </section>
-
-  <hr class="divider">
-
-  <!-- ═══ FAQ ═══ -->
-  <section>
-    <h2 class="section-title" data-k="faq.title">Questions fréquentes</h2>
-    <p class="section-subtitle" data-k="faq.subtitle">Les questions que les écoles nous posent le plus souvent.</p>
-
-    <div class="faq-list">
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span data-k="faq.q1">Combien coûte Galac6 pour une école&nbsp;?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner" data-k="faq.a1">Galac6 est gratuit pour les écoles pilotes. On démarre avec une ou deux classes. Les conditions pour la suite seront discutées avec vous, avant toute facturation.</div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span data-k="faq.q2">Galac6 convient-il aux écoles françaises à l'étranger&nbsp;?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner" data-k="faq.a2">Oui. Galac6 suit les programmes français du CP à la Terminale. Toute l'interface existe aussi en anglais, pour les professeurs anglophones, et les dictées du professeur peuvent être en français ou en anglais.</div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span data-k="faq.q3">Comment les élèves rejoignent-ils leur classe&nbsp;?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner" data-k="faq.a3">Chaque classe a un code. Le professeur le distribue aux familles, ou imprime l'affiche de la classe avec son QR code. Les parents saisissent le code dans Galac6 (Paramètres › Élèves) et l'enfant rejoint la classe. L'import d'une liste d'élèves par fichier n'est pas encore disponible.</div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span data-k="faq.q4">Que voit le professeur&nbsp;?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner" data-k="faq.a4">Dans ses classes : l'activité de ses élèves, les notions à revoir, la carte de chaleur, la fiche de chaque élève et les résultats de ses devoirs et de ses dictées. Si sa classe est rattachée à une école, il peut aussi consulter, sans rien modifier, les élèves et les résultats des autres classes de cette école. Il ne voit jamais les conversations des élèves avec le tuteur, ni les élèves d'une autre école.</div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span data-k="faq.q5">Où sont stockées les données des élèves&nbsp;?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner" data-k="faq.a5">Les comptes et les données des élèves sont hébergés en France, dans une base de données à Paris. Pas de publicité, aucune revente de données. Certaines fonctions d'intelligence artificielle, comme la voix, font appel à des prestataires dont certains sont situés hors de l'Union européenne. Nous travaillons à ce que tous les traitements restent bientôt en Europe. La liste complète figure dans notre <a href="/privacy">politique de confidentialité</a>. Un dossier RGPD pour les écoles est en préparation.</div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span data-k="faq.q6">L'IA donne-t-elle les réponses aux élèves&nbsp;?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner" data-k="faq.a6">Non. Le tuteur de Galac6 pose des questions, donne des indices et guide l'élève étape par étape. L'élève construit sa propre compréhension.</div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-          <span data-k="faq.q7">Galac6 fonctionne-t-il sur les tablettes et les Chromebooks de l'école&nbsp;?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        </button>
-        <div class="faq-answer">
-          <div class="faq-answer-inner" data-k="faq.a7">Oui. Galac6 s'utilise dans un navigateur récent (Chrome, Safari, Firefox, Edge), sur tablette, Chromebook, ordinateur ou téléphone. Rien à installer.</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
+</main>
 
   <!-- ═══ FOOTER ═══ -->
   <footer>
@@ -1131,107 +613,168 @@
   </footer>
 
 <script>
-  // Traductions anglaises propres à cette page (le fichier commun i18n.js gère la navigation et le pied de page).
-  // On suit l'attribut lang de <html>, que i18n.js change quand on clique sur le drapeau.
+  // Page École : textes dynamiques (FR/EN), préremplissage et envoi des demandes.
+  // Les textes fixes sont traduits par i18n.js (attributs data-i18n) ; ce script suit l'attribut lang de <html>.
   (function () {
     'use strict';
-    var EN = {
-      'badge': '🏫 Pilot schools: free',
-      'hero.title': 'Galac6 for <span class="gradient">your school</span>',
-      'hero.subtitle': 'Create your classes, invite your teachers with a simple link and see where your pupils get stuck. For schools in France and French schools abroad, from CP to Terminale.',
-      'hero.cta': 'Request a demo',
-      'hero.cta2': 'See what is ready',
-      'tag1': 'French curriculum',
-      'tag2': 'Interface in French and English',
-      'tag3': 'Data hosted in France',
-      'avail.title': 'Available today',
-      'avail.subtitle': 'Everything listed here already works in Galac6.',
-      'pill.ok': 'Available',
-      'pill.soon': 'Coming soon',
-      'f1.title': 'Your classes and your teachers',
-      'f1.desc': 'The school management creates the school\'s classes and invites each teacher with a simple link. It sets which subjects each teacher teaches in each class and appoints the head teacher of each class. It can view classes, homework and pupils\' work, without being able to change marks.',
-      'f2.title': 'Each teacher manages their own classes',
-      'f2.desc': 'Teachers manage their own classes. They can also view, without changing anything, the pupils and results of the other classes in their school. A teacher can create a class on their own, without waiting: they then ask to attach it to their school, and the management approves. The class keeps its pupils and their history.',
-      'f3.title': 'Pupils join the class with a code',
-      'f3.desc': 'Each class has its own code. The teacher gives it to families, or prints the class poster with its QR code. Parents enter the code and the child joins the class.',
-      'f4.title': 'Class tracking',
-      'f4.list': '<li>Active pupils and practice minutes, over 7 days, 30 days or since the start of the year</li><li>Pupils to follow up, who have not done anything for several days</li><li>The top 3 topics to review in class</li><li>A heat map of pupils × topics, to see at a glance who is stuck on what</li>',
-      'f5.title': 'A report for each pupil',
-      'f5.desc': 'The teacher opens each pupil\'s report: homework and practice results, and progress. They see neither the pupil\'s conversations with the tutor nor the family\'s settings.',
-      'f10.title': 'Quizzes and assessments as homework',
-      'f10.list': '<li>Quiz, test, exam or homework assignment, prepared with the Galac6 assistant</li><li>Galac6 suggests questions whose correct answer it has checked; you review and approve each one</li><li>To be done at home by a due date, or in class with a time limit</li><li>Extra time for the pupils who need it is applied automatically</li><li>Galac6 suggests a mark for each paper, and you are the one who approves it</li>',
-      'f6.title': 'Your own dictations',
-      'f6.list': '<li>Paste the text, or take a photo of the sheet</li><li>The AI spots the traps (agreement, homophones, conjugation…); you adjust them if needed</li><li>Send it to the class, with a due date if you wish</li><li>Galac6 reads the dictation aloud and marks it</li><li>You see who has done it, the average, the most frequent mistakes and each pupil\'s work</li>',
-      'f7.title': 'Parents stay in control',
-      'f7.desc': 'Parents see their child\'s class and teachers. They can detach their child from the class at any time: the school and the teacher are then notified.',
-      'f8.title': 'Interface in English',
-      'f8.desc': 'The whole app switches to English in one click, for your English-speaking teachers. Teacher dictations can be in French or in English.',
-      'f9.title': 'For pupils',
-      'f9.desc': 'A tutor that guides with questions instead of giving the answer, dictations read by a natural voice, mental maths and games, with a weekly leaderboard among pupils of the same school.',
-      'soon.title': 'Coming soon',
-      'soon.subtitle': 'Being built with our pilot schools. These features are not available yet.',
-      's1.title': 'Mental maths chapters chosen by the teacher',
-      's1.desc': 'The teacher chooses the chapters the class works on; mental maths exercises and games follow that choice.',
-      's2.title': 'Mental maths as homework',
-      's2.desc': 'A mental maths series to complete by a given date, with each pupil\'s results. This is already possible for quizzes, assessments and dictations.',
-      'soon.note': 'Need something that is not on this list? Tell us: our pilot schools help us choose what comes next.',
-      'start.title': 'How to get started',
-      'start.subtitle': 'We start small, with one or two classes.',
-      'st1.title': 'A demo',
-      'st1.desc': 'Twenty minutes by video call, to see Galac6 from the management, teacher, pupil and parent side.',
-      'st2.title': 'Your school\'s space',
-      'st2.desc': 'We create your school\'s space and the management account.',
-      'st3.title': 'Classes and teachers',
-      'st3.desc': 'The management creates its classes and sends an invitation link to each teacher. Each teacher gets a one-page guide, in French or in English.',
-      'st4.title': 'Pupils',
-      'st4.desc': 'Teachers give families the class code or the class poster with its QR code.',
-      'st5.title': 'We adjust together',
-      'st5.desc': 'You tell us what your teachers are missing, and we build it with you.',
-      'trust.title': 'Your pupils\' data',
-      'trust.subtitle': 'What we do, in plain words.',
-      't1.title': 'Data hosted in France',
-      't1.desc': 'Accounts and pupil data are hosted in France, in a database in Paris. We are working to keep all processing in Europe in the near future.',
-      't2.title': 'No ads, no resale',
-      't2.desc': 'There are no ads in Galac6. Pupil data is never sold.',
-      't3.title': 'Everyone sees what concerns them',
-      't3.desc': 'Teachers see their classes\' results, and can view the other classes of their school without changing anything. They do not see pupils\' conversations with the tutor. The management sees its school, parents see their children.',
-      't4.title': 'Designed in France',
-      't4.desc': 'Galac6 is designed and developed in France, around the French national curriculum.',
-      'trust.note': 'For some artificial intelligence features, such as voice, Galac6 relies on specialised providers, some of which are located outside the European Union. The full list is in our <a href="/privacy">privacy policy</a>, and the page <a href="/donnees-eleves">Your data and your pupils\' data</a> sums up the essentials. A GDPR pack for schools is being prepared.',
-      'cta.title': 'Become a pilot school',
-      'cta.subtitle': 'Free for pilot schools. We start with one or two classes.',
-      'faq.title': 'Frequently asked questions',
-      'faq.subtitle': 'The questions schools ask us most often.',
-      'faq.q1': 'How much does Galac6 cost for a school?',
-      'faq.a1': 'Galac6 is free for pilot schools. We start with one or two classes. Terms for afterwards will be discussed with you, before any billing.',
-      'faq.q2': 'Is Galac6 suitable for French schools abroad?',
-      'faq.a2': 'Yes. Galac6 follows the French curriculum from CP to Terminale. The whole interface is also available in English for English-speaking teachers, and teacher dictations can be in French or in English.',
-      'faq.q3': 'How do pupils join their class?',
-      'faq.a3': 'Each class has a code. The teacher gives it to families, or prints the class poster with its QR code. Parents enter the code in Galac6 (Settings › Students) and the child joins the class. Importing a list of pupils from a file is not available yet.',
-      'faq.q4': 'What does a teacher see?',
-      'faq.a4': 'In their own classes: their pupils\' activity, the topics to review, the heat map, each pupil\'s report and the results of their homework and dictations. If their class is attached to a school, they can also view, without changing anything, the pupils and results of the other classes in that school. They never see pupils\' conversations with the tutor, nor pupils from another school.',
-      'faq.q5': 'Where is pupil data stored?',
-      'faq.a5': 'Accounts and pupil data are hosted in France, in a database in Paris. No ads, no resale of data. Some artificial intelligence features, such as voice, rely on providers, some of which are located outside the European Union. We are working to keep all processing in Europe in the near future. The full list is in our <a href="/privacy">privacy policy</a>. A GDPR pack for schools is being prepared.',
-      'faq.q6': 'Does the AI give pupils the answers?',
-      'faq.a6': 'No. The Galac6 tutor asks questions, gives hints and guides the pupil step by step. The pupil builds their own understanding.',
-      'faq.q7': 'Does Galac6 work on school tablets and Chromebooks?',
-      'faq.a7': 'Yes. Galac6 runs in any recent browser (Chrome, Safari, Firefox, Edge), on a tablet, Chromebook, computer or phone. Nothing to install.'
+    var TXT = {
+      fr: {
+        title: 'Galac6 pour les écoles : devoirs prêts en quelques minutes, suivi des classes, devis',
+        devis: 'Demander un devis', pilote: 'Devenir école pilote', demo: 'Demander une démonstration',
+        quickErr: 'Indiquez une adresse email complète et le nom de votre établissement.',
+        sending: 'Envoi en cours…',
+        ok: 'Merci, votre demande est bien envoyée. Nous vous répondons au plus vite à l\'adresse indiquée.',
+        fail: 'L\'envoi n\'a pas abouti. Réessayez dans un instant, ou écrivez-nous à <a href="mailto:hello@galac6.io">hello@galac6.io</a>.'
+      },
+      en: {
+        title: 'Galac6 for schools: homework ready in minutes, class tracking, quotes',
+        devis: 'Request a quote', pilote: 'Become a pilot school', demo: 'Request a demo',
+        quickErr: 'Enter a full email address and the name of your school.',
+        sending: 'Sending…',
+        ok: 'Thank you, your request has been sent. We will get back to you as soon as possible at the address you gave.',
+        fail: 'Your request could not be sent. Please try again in a moment, or write to us at <a href="mailto:hello@galac6.io">hello@galac6.io</a>.'
+      }
     };
-    var TITLE_EN = 'Galac6 for schools: classes, homework, pupil tracking and teacher dictations';
-    var originals = new Map();
+    // Libellés envoyés dans le message (toujours en français, pour l'équipe Galac6)
+    var TYPE_FR = { devis: 'Demande de devis', pilote: 'Devenir école pilote', demo: 'Demande de démonstration' };
+    var ENDPOINT = 'https://obhzumzqullnsnnfjlbt.supabase.co/functions/v1/notify-contact';
+    var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    function apply() {
-      var lang = document.documentElement.lang || 'fr';
-      document.querySelectorAll('[data-k]').forEach(function (el) {
-        if (!originals.has(el)) originals.set(el, el.innerHTML);
-        var key = el.getAttribute('data-k');
-        el.innerHTML = (lang === 'en' && EN[key]) ? EN[key] : originals.get(el);
-      });
-      // i18n.js met le titre de l'accueil en anglais : on le remplace par celui de cette page
-      if (lang === 'en') document.title = TITLE_EN;
+    function lang() { return document.documentElement.lang === 'en' ? 'en' : 'fr'; }
+    function t(key) { return TXT[lang()][key]; }
+    function $(id) { return document.getElementById(id); }
+
+    // Même envoi que le formulaire de contact de la page À propos (fonction notify-contact)
+    function send(name, email, message) {
+      return fetch(ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: name, email: email, message: message })
+      }).then(function (res) { return res.ok; }, function () { return false; });
     }
 
-    new MutationObserver(apply).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+    function setTitle() {
+      var r = document.querySelector('input[name="type"]:checked');
+      $('devis-title').textContent = t(r ? r.value : 'devis');
+    }
+
+    // Textes dynamiques, placeholders et titre de l'onglet selon la langue
+    function render() {
+      var l = lang();
+      document.querySelectorAll('[data-ph-en]').forEach(function (el) {
+        if (!el.hasAttribute('data-ph-fr')) el.setAttribute('data-ph-fr', el.getAttribute('placeholder') || '');
+        el.setAttribute('placeholder', el.getAttribute(l === 'en' ? 'data-ph-en' : 'data-ph-fr'));
+      });
+      setTitle();
+      document.title = t('title');
+    }
+
+    // Préremplit le formulaire de devis (type de demande, module)
+    function preset(type, mod) {
+      var radio = type && $('t-' + type);
+      if (radio) radio.checked = true;
+      var box = mod && $('m-' + mod);
+      if (box) box.checked = true;
+      setTitle();
+    }
+
+    document.querySelectorAll('a[href="#devis"][data-type]').forEach(function (a) {
+      a.addEventListener('click', function () { preset(a.getAttribute('data-type'), a.getAttribute('data-module')); });
+    });
+    document.querySelectorAll('input[name="type"]').forEach(function (r) { r.addEventListener('change', setTitle); });
+
+    // Arrivée depuis la page Tarifs : /ecole?type=pilote&module=ecole#devis
+    try {
+      var q = new URLSearchParams(location.search);
+      preset(q.get('type'), q.get('module'));
+    } catch (e) {}
+
+    // Mini-formulaires « Être recontacté »
+    document.querySelectorAll('form.quick').forEach(function (f) {
+      f.addEventListener('submit', function (ev) {
+        ev.preventDefault();
+        var emailEl = f.querySelector('input[type="email"]');
+        var etabEl = f.querySelector('input[type="text"]');
+        var btn = f.querySelector('button[type="submit"]');
+        var msg = f.querySelector('.quick-msg');
+        var email = emailEl.value.trim();
+        var etab = etabEl.value.trim();
+        if (!EMAIL_RE.test(email) || !etab) {
+          msg.classList.add('bad');
+          msg.textContent = t('quickErr');
+          msg.hidden = false;
+          return;
+        }
+        var label = btn.textContent;
+        btn.disabled = true;
+        btn.textContent = t('sending');
+        msg.hidden = true;
+        var text = 'Type de demande : Être recontacté (page École, ' + f.getAttribute('data-where') + ')\n' +
+          'Établissement : ' + etab + '\n' +
+          'Email professionnel : ' + email + '\n' +
+          'Langue de la page : ' + lang();
+        send('Être recontacté · ' + etab, email, text).then(function (ok) {
+          btn.disabled = false;
+          btn.textContent = label;
+          msg.classList.toggle('bad', !ok);
+          msg.innerHTML = ok ? t('ok') : t('fail');
+          msg.hidden = false;
+          if (ok) { emailEl.value = ''; etabEl.value = ''; }
+        });
+      });
+    });
+
+    // Formulaire complet de demande de devis
+    $('quote-form').addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var nom = $('f-nom').value.trim();
+      var etab = $('f-etab').value.trim();
+      var email = $('f-email').value.trim();
+      var okEmail = EMAIL_RE.test(email);
+      var okAll = nom && etab && okEmail && $('f-consent').checked;
+      $('e-email').hidden = !email || okEmail;
+      $('e-form').hidden = !!okAll;
+      var msg = $('form-msg');
+      msg.hidden = true;
+      if (!okAll) return;
+
+      function checked(ids) {
+        return ids.filter(function (id) { return $(id).checked; })
+          .map(function (id) { return $(id).value; }).join(', ') || 'non précisé';
+      }
+      var type = document.querySelector('input[name="type"]:checked').value;
+      var text = 'Type de demande : ' + TYPE_FR[type] + ' (page École)\n' +
+        'Prénom et nom : ' + nom + '\n' +
+        'Fonction : ' + $('f-fonction').value + '\n' +
+        'Établissement : ' + etab + '\n' +
+        'Ville et pays : ' + ($('f-ville').value.trim() || 'non précisé') + '\n' +
+        'Nombre d\'élèves : ' + $('f-eleves').value + '\n' +
+        'Email professionnel : ' + email + '\n' +
+        'Niveaux concernés : ' + checked(['n-prim', 'n-coll', 'n-lyc']) + '\n' +
+        'Modules : ' + checked(['m-eleve', 'm-ecole', 'm-examens']) + '\n' +
+        'Accord pour l\'utilisation des informations : oui\n' +
+        'Langue de la page : ' + lang() + '\n\n' +
+        'Message :\n' + ($('f-msg').value.trim() || '(aucun)');
+
+      var btn = $('f-submit');
+      var label = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = t('sending');
+      send(TYPE_FR[type] + ' · ' + nom + ' · ' + etab, email, text).then(function (ok) {
+        btn.disabled = false;
+        btn.textContent = label;
+        msg.classList.toggle('bad', !ok);
+        msg.innerHTML = ok ? t('ok') : t('fail');
+        msg.hidden = false;
+        if (ok) {
+          ['f-nom', 'f-etab', 'f-ville', 'f-email', 'f-msg'].forEach(function (id) { $(id).value = ''; });
+          $('f-consent').checked = false;
+        }
+      });
+    });
+
+    new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+    render();
   })();
 </script>
 <script src="i18n.js"></script>
