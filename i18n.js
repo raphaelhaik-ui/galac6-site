@@ -60,11 +60,14 @@
 
       // Confidentialité et sécurité (composant partagé)
       'pledge.title': 'Privacy & security',
-      'pledge.subtitle': 'Our four commitments for students\' data.',
+      'pledge.subtitle': 'Our commitments for students\' data.',
       'pledge.p1': 'Data hosted in France',
       'pledge.p2': 'AI processed in Europe',
       'pledge.p3': 'In line with the GDPR',
       'pledge.p4': 'Your data is never sold or used for advertising',
+      'pledge.p5': 'Parental consent required under 15',
+      'pledge.p6': 'Only the student\'s teachers and school leadership see their work',
+      'pledge.p7': 'Data deleted automatically after 2 years of inactivity',
       'pledge.more': 'Learn more',
       'pledge.more2': 'Student data: the details',
 
