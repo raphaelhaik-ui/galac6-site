@@ -499,7 +499,7 @@
       'mentions.art8.p1': 'These legal notices are governed by French law.',
       'mentions.art8.p2': 'In case of dispute, and after an attempt at amicable resolution, jurisdiction is granted to the competent courts of Paris.',
       'mentions.art8.mediation_title': 'Consumer mediation',
-      'mentions.art8.mediation_text': 'In accordance with articles L.611-1 et seq. of the French Consumer Code, consumers may use a consumer mediator free of charge for amicable dispute resolution. The competent mediator will be communicated upon request at <a href="mailto:hello@galac6.io">hello@galac6.io</a>.',
+      'mentions.art8.mediation_text': 'In accordance with articles L.611-1 et seq. of the French Consumer Code, consumers may use a consumer mediator free of charge for amicable dispute resolution. After a written complaint sent to <a href="mailto:hello@galac6.io">hello@galac6.io</a> has not been satisfactorily resolved, consumers may refer the matter to the mediator: CM2C, 49 rue de Ponthieu, 75008 Paris, France – <a href="https://www.cm2c.net" rel="noopener">www.cm2c.net</a>.',
       'mentions.art9.title': '9. Credits',
       'mentions.art9.th1': 'Element',
       'mentions.art9.th2': 'Source',
