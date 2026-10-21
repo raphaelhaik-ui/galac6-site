@@ -9,7 +9,7 @@
   var translations = {
     en: {
       // Page title
-      'page.title': 'Galac6 — Got a test to prepare? A lesson to understand? Galac6 is here.',
+      'page.title': 'Galac6 — AI in the service of teaching · Tutoring from 1st to 12th grade',
 
       // Navbar
       'nav.features': 'Features',
@@ -23,6 +23,7 @@
       'hero.title': 'Got a test to prepare?<br>A lesson to understand?<br><span class="gradient">Galac6 is here.</span>',
       'hero.subtitle': 'Galac6, the AI that teaches you how to learn — quizzes, dictations, revision sheets and corrections, designed for the French school curriculum, from 1st grade to 12th grade.',
       'hero.cta': 'Create a free account →',
+      'hero.tagline': 'Galac6. AI in the service of teaching',
       'hero.school.tag': 'Schools',
       'hero.school.long': 'Are you a school? Transform your teaching capacity with Galac6',
       'hero.school.short': 'Are you a school? Discover Galac6',
@@ -126,6 +127,7 @@
       'cta.note': 'Unlimited access, 100% free. No credit card.',
 
       // Footer
+      'footer.tagline': 'Galac6. AI in the service of teaching',
       'footer.hosted': '🇫🇷 Designed in France · Data hosted in France',
       'footer.copy': '© 2026 Galac6. All rights reserved.',
       'footer.legal.title': 'Legal',
@@ -254,7 +256,7 @@
       'tarifs.faq.a7': 'What the school provides is paid for by the school. For free practice at home, you can choose the Student or Family plan.',
       'tarifs.faq.q8': 'How much does Galac6 cost for a school?',
       'tarifs.faq.a8': 'The price is set on quote, based on the number of pupils and the modules chosen. To discover Galac6, we offer a free 3-month pilot on 3 classes.',
-      'tarifs.footer.desc': 'Galac6 — The AI tutoring and revision assistant.',
+      'tarifs.footer.desc': 'Galac6. AI in the service of teaching',
       'tarifs.footer.france': '🇫🇷 Made in France',
 
       // ─── About page ───
@@ -270,7 +272,7 @@
       'about.contact.message': 'Message',
       'about.contact.send': 'Send \u2192',
       'about.contact.success': 'Message sent, thank you! I will reply as soon as possible.',
-      'about.footer.desc': 'Galac6 \u2014 The AI tutoring and revision assistant.',
+      'about.footer.desc': 'Galac6. AI in the service of teaching',
       'about.footer.france': '\ud83c\uddeb\ud83c\uddf7 Made in France',
 
       // ─── Ecole page ───
@@ -362,7 +364,7 @@
       'ecole.side.incl.l3': 'Onboarding and teacher training by video call in the first year',
       'ecole.side.pilot.title': 'Pilot schools',
       'ecole.side.pilot.desc': '3 free months on 3 classes, with no commitment.',
-      'ecole.footer.desc': 'Galac6 — The AI tutoring and revision assistant.',
+      'ecole.footer.desc': 'Galac6. AI in the service of teaching',
       'ecole.footer.france': '🇫🇷 Made in France',
 
       // ─── Createur-contenu page ───
@@ -410,7 +412,7 @@
       'createur.apply.step3': 'Your daily rate or desired monthly fee',
       'createur.apply.highlight': 'No corporate CV. We want to see what you can DO.',
       'createur.apply.discover': '<a href="https://galac6web.netlify.app/">Discover the product on galac6.io</a>',
-      'createur.footer.desc': 'Galac6 \u2014 The AI tutoring and revision assistant.',
+      'createur.footer.desc': 'Galac6. AI in the service of teaching',
       'createur.footer.france': '\ud83c\uddeb\ud83c\uddf7 Made in France',
 
       // ─── Recherche page ───
@@ -440,14 +442,14 @@
       'recherche.synthesis.s3': '<strong>Adaptive quizzes and XP</strong>: regular practice rewarded, spaced repetition (study 3)',
       'recherche.synthesis.s4': '<strong>Immediate feedback</strong>: detailed corrections for every quiz and dictation (study 5)',
       'recherche.cta.back': '\u2190 Back to home',
-      'recherche.footer.desc': 'Galac6 \u2014 The AI tutoring and revision assistant.',
+      'recherche.footer.desc': 'Galac6. AI in the service of teaching',
       'recherche.footer.doi': 'All cited studies are accessible via their respective DOIs.',
 
       // ─── Shared nav (secondary pages) ───
       'nav.home': 'Home',
 
       // ─── Shared footer (secondary pages) ───
-      'cgv.footer.tagline': 'Galac6 — The AI-powered tutoring and revision platform.',
+      'cgv.footer.tagline': 'Galac6. AI in the service of teaching',
       'cgv.footer.france': '🇫🇷 Made in France',
 
       // (CGV, politique de confidentialité et CGU : textes FR/EN directement dans
