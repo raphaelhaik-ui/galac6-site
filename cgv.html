@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- PROJET À FAIRE RELIRE PAR UN JURISTE (21/10/2026) -->
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -196,6 +197,12 @@
 
     .content strong { color: var(--text); }
 
+    /* Tableau des formules (défile horizontalement sur petit écran) */
+    .table-wrap { overflow-x: auto; margin-bottom: 1rem; -webkit-overflow-scrolling: touch; }
+    .offer-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; min-width: 520px; }
+    .offer-table th, .offer-table td { text-align: left; vertical-align: top; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); color: var(--text-muted); }
+    .offer-table th { color: var(--text); font-weight: 600; background: var(--bg-card); }
+
     footer {
       max-width: 1200px;
       margin: 0 auto;
@@ -281,96 +288,133 @@
   <div class="content">
     <div class="fr-only" lang="fr">
       <h1>Conditions Générales de Vente</h1>
-      <p class="subtitle">Dernière mise à jour : 19 octobre 2026</p>
-      <p>Ces conditions générales de vente (CGV) encadrent les offres payantes de Galac6. Pendant la bêta ouverte, Galac6 est gratuit : aucun abonnement n'est vendu et aucun paiement n'est demandé. Ces CGV s'appliqueront aux offres payantes lorsqu'elles seront proposées.</p>
+      <p class="subtitle">Dernière mise à jour : 21 octobre 2026</p>
+      <p>Ces conditions générales de vente (CGV) s'appliquent aux offres de Galac6 proposées aux familles : la formule gratuite Découverte, les abonnements Élève et Famille, et le Pack Examen. Elles expliquent ce que vous achetez, comment vous payez, comment arrêter et quels sont vos droits. Les écoles et autres établissements bénéficient d'une offre sur devis (article 18).</p>
 
       <h2>1. Le vendeur</h2>
       <p>Galac6 est édité et vendu par RHK Conseil, entreprise individuelle.</p>
       <ul>
         <li>Adresse : 19 rue de Croulebarbe, 75013 Paris, France</li>
         <li>SIRET : 944 058 866 00012</li>
+        <li>Numéro de TVA intracommunautaire : [À COMPLÉTER]</li>
         <li>Email : <a href="mailto:hello@galac6.io">hello@galac6.io</a></li>
         <li>Téléphone : [À COMPLÉTER — numéro de téléphone]</li>
       </ul>
       <p>Dans ces CGV, « nous » désigne RHK Conseil et « vous » désigne la personne qui achète une offre.</p>
 
-      <h2>2. Champ d'application et gratuité pendant la bêta</h2>
-      <p>Ces CGV s'appliquent à tout achat d'une offre payante de Galac6 :</p>
-      <ul>
-        <li>par un consommateur, c'est-à-dire un parent ou un autre adulte qui achète pour lui-même ou pour ses enfants ;</li>
-        <li>par un établissement scolaire ou une autre structure professionnelle (article 15).</li>
-      </ul>
+      <h2>2. Champ d'application</h2>
+      <p>Ces CGV s'appliquent à toute souscription d'une offre Galac6 par un consommateur : un parent ou un autre adulte qui achète pour lui-même ou pour ses enfants, ou un élève de 16 ou 17 ans dans les cas prévus à l'article 7.</p>
       <p>Elles complètent les <a href="https://galac6.io/terms">conditions générales d'utilisation (CGU)</a>, qui règlent l'usage du service, et la <a href="https://galac6.io/privacy">politique de confidentialité</a>. La version applicable est celle publiée le jour de la commande. Vous l'acceptez en cochant la case prévue avant de payer.</p>
-      <p>Gratuité pendant la bêta : tant que Galac6 est en bêta ouverte, le service est gratuit et ces CGV ne s'appliquent à aucun achat. Une offre payante sera toujours facultative et rien ne sera facturé sans votre accord exprès.</p>
 
       <h2>3. Le service</h2>
-      <p>Galac6 est un service en ligne de soutien scolaire par intelligence artificielle, pour les élèves du CP à la Terminale. Il comprend notamment un tuteur qui guide l'élève sans lui donner directement la réponse, des quiz, des exercices, des dictées, des fiches de révision, du calcul mental et des sujets d'entraînement au brevet et au bac. Le contenu exact de chaque offre (fonctions, limites d'usage, nombre de profils élèves) est décrit sur la <a href="/tarifs">page Tarifs</a> avant la commande.</p>
+      <p>Galac6 est un service en ligne de soutien scolaire par intelligence artificielle, pour les élèves du CP à la Terminale. Il comprend notamment un tuteur qui guide l'élève sans lui donner directement la réponse, des quiz, des exercices, des dictées, des fiches de révision, du calcul mental et des sujets d'entraînement au brevet et au bac. Les sujets d'entraînement créés par l'intelligence artificielle sont signalés comme tels : ce ne sont pas des sujets officiels.</p>
       <p>Pour l'utiliser, il faut une connexion internet et un navigateur récent, sur ordinateur, tablette ou téléphone. Aucun logiciel n'est à installer.</p>
       <p>L'intelligence artificielle peut se tromper. Galac6 est une aide aux apprentissages : il ne remplace ni l'enseignant ni l'accompagnement d'un adulte.</p>
 
-      <h2>4. Prix</h2>
-      <p>Les prix sont indiqués en euros, toutes taxes comprises (TTC). Le prix applicable est celui affiché sur la <a href="/tarifs">page Tarifs</a> au moment de la commande. Avant le paiement, un récapitulatif indique le prix total, la durée de l'abonnement et la fréquence des paiements.</p>
-      <p>Si le prix d'un abonnement change, nous vous prévenons par email au moins 30 jours avant. Le nouveau prix ne s'applique qu'à la période suivante. Si vous le refusez, vous pouvez résilier sans frais avant cette date.</p>
+      <h2>4. Les formules</h2>
+      <div class="table-wrap">
+        <table class="offer-table">
+          <thead>
+            <tr><th>Formule</th><th>Pour qui</th><th>Prix TTC</th><th>Durée</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Découverte</strong></td><td>Tout compte</td><td>0 €</td><td>Sans durée ; quantités rechargées le 1er de chaque mois</td></tr>
+            <tr><td><strong>Élève</strong></td><td>1 élève</td><td>69 € par an ou 7,99 € par mois</td><td>12 mois ou 1 mois, renouvellement automatique</td></tr>
+            <tr><td><strong>Famille</strong></td><td>Jusqu'à 4 enfants ; achat réservé aux adultes</td><td>99 € par an ou 11,99 € par mois</td><td>12 mois ou 1 mois, renouvellement automatique</td></tr>
+            <tr><td><strong>Pack Examen</strong></td><td>1 élève</td><td>19 €, ou 14 € pour un abonné à l'année</td><td>Achat unique, valable 12 mois, sans renouvellement</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul>
+        <li><strong>Découverte</strong> : toutes les fonctions de Galac6, en petite quantité. Chaque mois, le 1er, vous retrouvez : 5 messages au tuteur, 1 dictée, 1 quiz, 1 aide aux devoirs à partir d'une photo et 1 sujet type brevet ou bac. Les quantités non utilisées ne sont pas reportées au mois suivant. Aucun moyen de paiement n'est demandé.</li>
+        <li><strong>Élève</strong> : un profil élève, sans les limites de la formule Découverte, dans le respect d'un usage normal du service (article 5 des CGU).</li>
+        <li><strong>Famille</strong> : jusqu'à 4 profils enfants, sans les limites de la formule Découverte, dans le respect d'un usage normal du service. Pour plus de 4 enfants, il faut ouvrir un second compte Famille. Cette offre ne peut être achetée que par un adulte.</li>
+        <li><strong>Pack Examen</strong> : des outils de préparation aux examens (examens blancs, copies corrigées, oraux blancs) pour un profil élève, pendant 12 mois à compter de l'achat. Il ne se renouvelle pas tout seul. Le prix de 14 € s'applique si vous avez un abonnement annuel en cours le jour de l'achat.</li>
+      </ul>
+      <p>Le contenu détaillé de chaque formule est décrit sur la <a href="/tarifs">page Tarifs</a> avant la commande.</p>
 
-      <h2>5. Commande, réservée aux adultes</h2>
-      <p>Seul un adulte (18 ans ou plus) peut commander, depuis son propre compte. Un élève mineur ne peut pas payer : il doit demander à un parent de s'abonner depuis son compte.</p>
+      <h2>5. Prix</h2>
+      <p>Les prix sont indiqués en euros, toutes taxes comprises (TTC). La TVA est calculée au moment du paiement, au taux en vigueur, par notre prestataire de paiement Stripe. Le prix applicable est celui affiché au moment de la commande. Avant le paiement, un récapitulatif indique le prix total, la durée et la fréquence des paiements.</p>
+      <p>Changement de prix : si le prix d'un abonnement change, nous vous prévenons par email au moins 30 jours avant. Le nouveau prix ne s'applique qu'à partir du renouvellement suivant ; la période déjà payée n'est jamais modifiée. Si vous refusez le nouveau prix, vous pouvez désactiver le renouvellement sans frais avant cette date (article 9).</p>
+
+      <h2>6. Commande</h2>
       <p>Étapes de la commande :</p>
       <ul>
-        <li>vous choisissez une offre sur la <a href="/tarifs">page Tarifs</a> ;</li>
-        <li>vous vérifiez le récapitulatif : offre, prix TTC, durée et reconduction ;</li>
-        <li>vous acceptez les CGV et vous indiquez si vous voulez commencer tout de suite (article 8) ;</li>
-        <li>vous cliquez sur le bouton de paiement, qui indique clairement que la commande vous oblige à payer ;</li>
-        <li>vous payez.</li>
+        <li>vous choisissez une formule et, pour un abonnement, la durée (au mois ou à l'année) ;</li>
+        <li>vous vérifiez le récapitulatif : formule, prix TTC, durée et renouvellement automatique ;</li>
+        <li>vous acceptez les CGV ;</li>
+        <li>vous cochez la case « Je demande l'accès immédiat et je renonce à mon droit de rétractation » (article 10) ; sans elle, le paiement n'est pas possible ;</li>
+        <li>vous cliquez sur le bouton de paiement, qui indique clairement que la commande vous oblige à payer, puis vous payez.</li>
       </ul>
-      <p>Le contrat est conclu dès que le paiement est validé. Nous vous envoyons ensuite par email une confirmation de commande, avec ces CGV et le formulaire de rétractation.</p>
+      <p>Le contrat est conclu dès que le paiement est validé. Vous recevez ensuite par email une confirmation qui reprend votre commande, ces CGV, votre demande d'accès immédiat et votre renonciation au droit de rétractation, ainsi que le formulaire de rétractation (annexe).</p>
 
-      <h2>6. Paiement</h2>
-      <p>Le paiement se fait par carte bancaire, par l'intermédiaire de Stripe, prestataire de paiement sécurisé. Galac6 ne voit pas et ne conserve pas votre numéro de carte complet.</p>
-      <p>Le premier paiement a lieu à la commande. Ensuite, chaque période (mois ou année) est payée automatiquement au début de la période, tant que l'abonnement n'est pas résilié. Vos factures sont disponibles dans votre espace.</p>
-      <p>Si un paiement échoue, nous vous prévenons par email. Sans régularisation après relance, l'accès aux fonctions payantes peut être suspendu, puis l'abonnement résilié.</p>
-
-      <h2>7. Durée, reconduction et résiliation</h2>
-      <p>Durée : l'abonnement est mensuel ou annuel, selon l'offre choisie.</p>
-      <p>Reconduction tacite : à la fin de chaque période, l'abonnement est renouvelé automatiquement pour la même durée, sauf si vous l'avez résilié.</p>
-      <p>Rappel avant reconduction : pour un abonnement annuel, nous vous envoyons un email au plus tôt 3 mois et au plus tard 1 mois avant la fin de la période. Il vous rappelle la date de reconduction et votre droit de ne pas renouveler. Si ce rappel ne vous a pas été envoyé, vous pouvez résilier gratuitement à tout moment après la reconduction, et les sommes payées pour la période qui suit la résiliation vous sont remboursées dans les 30 jours (article L215-1 du Code de la consommation). L'abonnement mensuel, lui, peut être résilié à tout moment.</p>
-      <p>Résiliation en trois clics : vous pouvez résilier à tout moment, en ligne, depuis votre espace (Abonnement, puis « Gérer mon abonnement », puis « Résilier »), sans frais et sans avoir à vous justifier. Vous recevez aussitôt un email qui confirme la résiliation et indique sa date d'effet. Vous pouvez aussi résilier par email à <a href="mailto:hello@galac6.io">hello@galac6.io</a>.</p>
-      <p>Effet : la résiliation prend effet à la fin de la période déjà payée, et vous gardez l'accès jusqu'à cette date. La période commencée n'est pas remboursée, sauf dans les cas prévus aux articles 8, 9 et 10.</p>
-
-      <h2>8. Droit de rétractation de 14 jours</h2>
-      <p>Vous disposez de 14 jours pour vous rétracter, sans avoir à vous justifier ni à payer de pénalité. Le délai commence le jour de la conclusion du contrat, c'est-à-dire le jour du paiement.</p>
-      <p>Pour vous rétracter, envoyez-nous avant la fin du délai le formulaire de rétractation (en annexe) ou toute déclaration claire, par email à <a href="mailto:hello@galac6.io">hello@galac6.io</a> ou par courrier à l'adresse de l'article 1. Nous vous envoyons un accusé de réception par email.</p>
-      <p>Commencer tout de suite : à la commande, vous pouvez demander à utiliser l'abonnement immédiatement, sans attendre la fin des 14 jours. Dans ce cas :</p>
+      <h2>7. Élèves mineurs</h2>
       <ul>
-        <li>vous gardez le droit de vous rétracter, mais vous payez la part du prix qui correspond à la période d'utilisation jusqu'à votre rétractation (article L221-25 du Code de la consommation) ;</li>
-        <li>pour un contenu numérique fourni tout de suite et en entier, par exemple un document à télécharger, vous perdez votre droit de rétractation dès le début de la fourniture, si vous avez donné votre accord exprès et renoncé expressément à ce droit (article L221-28, 13°, du Code de la consommation). Nous vous confirmons cet accord par email.</li>
+        <li><strong>Élève de moins de 16 ans</strong> : il ne peut pas payer lui-même. Le bouton « Demander à mon parent » envoie un email à son parent, avec un lien de paiement. C'est le parent qui commande et qui paie.</li>
+        <li><strong>Élève de 16 ou 17 ans</strong> : il peut acheter lui-même l'offre Élève et le Pack Examen, avec sa propre carte, comme un acte de la vie courante (article 388-1-1 du Code civil). Son parent est informé de l'achat par email.</li>
+        <li><strong>Offre Famille</strong> : elle est réservée aux adultes (18 ans ou plus).</li>
+        <li><strong>Remboursement à la demande d'un parent</strong> : si un élève mineur a fait un achat, son parent ou représentant légal peut demander le remboursement dans les 30 jours qui suivent l'achat, par email à <a href="mailto:hello@galac6.io">hello@galac6.io</a>. Nous remboursons la totalité du prix payé, sans demander de justification, et l'offre s'arrête.</li>
       </ul>
-      <p>Si vous ne demandez pas à commencer tout de suite, l'accès payant commence à la fin du délai de 14 jours.</p>
 
-      <h2>9. Remboursement</h2>
-      <p>En cas de rétractation, nous vous remboursons toutes les sommes payées, moins la part due pour la période déjà utilisée si vous avez demandé à commencer tout de suite (article 8). Le remboursement a lieu au plus tard 14 jours après la réception de votre décision, avec le même moyen de paiement, sans frais pour vous.</p>
-      <p>Autres cas de remboursement :</p>
+      <h2>8. Paiement et impayés</h2>
+      <p>Le paiement se fait par carte bancaire, par l'intermédiaire de Stripe, prestataire de paiement sécurisé. Galac6 ne voit pas et ne conserve pas votre numéro de carte : il est traité directement par Stripe.</p>
+      <p>Le premier paiement a lieu à la commande. Pour un abonnement, chaque période suivante est payée automatiquement à la date anniversaire du premier paiement, tant que le renouvellement automatique est activé. Vos factures sont disponibles dans « Mon abonnement ».</p>
+      <p>Paiement refusé : si un paiement échoue, Stripe essaie à nouveau de débiter votre carte et nous vous prévenons par email. Votre accès est maintenu pendant ces nouvelles tentatives. Si le paiement n'est toujours pas réglé 15 jours après le premier échec, l'abonnement est annulé et le compte repasse à la formule Découverte. Vos données ne sont pas supprimées.</p>
+
+      <h2>9. Durée, renouvellement et résiliation</h2>
+      <p><strong>Durée</strong> : l'abonnement dure 12 mois (à l'année) ou 1 mois (au mois), à compter de la date du paiement.</p>
+      <p><strong>Renouvellement automatique</strong> : il est activé par défaut. À la fin de chaque période, l'abonnement est renouvelé pour la même durée, sauf si vous avez désactivé le renouvellement. Vous pouvez le désactiver à tout moment, en un clic, dans « Mon abonnement ».</p>
+      <p><strong>Rappel avant le renouvellement annuel</strong> : pour un abonnement à l'année, nous vous envoyons un email de rappel au plus tôt 3 mois et au plus tard 1 mois avant la date de renouvellement. Il vous rappelle cette date, le prix et votre droit de ne pas renouveler. Si ce rappel ne vous a pas été envoyé, vous pouvez résilier gratuitement à tout moment après le renouvellement, et les sommes payées pour la période qui suit la résiliation vous sont remboursées dans les 30 jours (article L215-1 du Code de la consommation).</p>
+      <p><strong>Résilier</strong> : vous pouvez résilier à tout moment, en ligne, sans frais et sans vous justifier : dans « Mon abonnement », le bouton « Gérer mon abonnement » ouvre l'espace sécurisé de Stripe, où un clic suffit pour annuler. Vous recevez aussitôt un email qui confirme la résiliation et sa date d'effet. Vous pouvez aussi résilier par email à <a href="mailto:hello@galac6.io">hello@galac6.io</a>.</p>
+      <p><strong>Effet</strong> : la résiliation prend effet à la fin de la période déjà payée ; vous gardez l'accès jusqu'à cette date, puis le compte repasse à la formule Découverte. La période commencée n'est pas remboursée, sauf dans les cas prévus à l'article 11.</p>
+
+      <h2>10. Droit de rétractation et renonciation</h2>
+      <p>En principe, un consommateur dispose de 14 jours pour se rétracter après un achat à distance, sans se justifier ni payer de pénalité. Le délai commence le jour de la conclusion du contrat, c'est-à-dire le jour du paiement.</p>
+      <p><strong>Accès immédiat</strong> : avec Galac6, l'accès payant commence dès le paiement. C'est pourquoi, avant de payer, vous devez cocher la case : « Je demande l'accès immédiat et je renonce à mon droit de rétractation. » En la cochant, vous donnez votre accord exprès pour que la fourniture commence tout de suite et vous reconnaissez que vous perdez ainsi votre droit de rétractation (article L221-28, 13°, du Code de la consommation).</p>
+      <p><strong>Preuve</strong> : nous conservons la preuve de votre choix (date, heure, texte de la case et compte concerné) et nous vous la confirmons dans l'email de confirmation de commande.</p>
+      <p><strong>Si la renonciation ne s'appliquait pas</strong> : si la loi ne permettait pas cette renonciation pour votre achat, vous gardez votre droit de rétractation pendant 14 jours. Vous payez alors seulement la part du prix qui correspond à la période d'utilisation jusqu'à votre rétractation (article L221-25 du Code de la consommation). Pour vous rétracter, envoyez-nous le formulaire en annexe ou toute déclaration claire, par email à <a href="mailto:hello@galac6.io">hello@galac6.io</a> ou par courrier à l'adresse de l'article 1.</p>
+      <p>Dans tous les cas, l'achat d'un élève mineur peut être remboursé à la demande de son parent pendant 30 jours (article 7).</p>
+
+      <h2>11. Remboursements</h2>
+      <p>Nous remboursons, avec le même moyen de paiement et sans frais pour vous :</p>
       <ul>
-        <li>défaut de conformité qui n'est pas corrigé (article 10) : réduction du prix ou remboursement ;</li>
-        <li>arrêt définitif du service par Galac6 : remboursement de la part non utilisée de la période payée ;</li>
-        <li>reconduction sans rappel (article 7) : remboursement dans les 30 jours qui suivent la résiliation, moins la période déjà utilisée.</li>
+        <li>la totalité du prix, si un parent le demande dans les 30 jours qui suivent l'achat fait par son enfant mineur (article 7) ;</li>
+        <li>le prix moins la part déjà utilisée, en cas de rétractation lorsque celle-ci est possible (article 10) ;</li>
+        <li>une réduction du prix ou le remboursement, en cas de défaut de conformité qui n'est pas corrigé (article 14) ;</li>
+        <li>la part non utilisée de la période payée, en cas d'arrêt définitif du service par Galac6 ;</li>
+        <li>les sommes payées pour la période qui suit la résiliation, en cas de renouvellement sans rappel (article 9).</li>
+      </ul>
+      <p>Le remboursement a lieu au plus tard 14 jours après votre demande, sauf délai plus court prévu par la loi.</p>
+
+      <h2>12. Parrainage</h2>
+      <ul>
+        <li>Un abonné à l'année peut inviter une autre famille. Si cette famille prend un abonnement à l'année (Élève ou Famille), chacune des deux familles reçoit une réduction de 10 €.</li>
+        <li>La réduction est déduite du prochain renouvellement annuel de chaque famille. Elle ne concerne pas les abonnements au mois ni le Pack Examen.</li>
+        <li>Le parrainage est validé 14 jours après le paiement de la famille invitée, si cet achat n'a pas été annulé ou remboursé entre-temps.</li>
+        <li>Une même famille peut être récompensée 3 fois par an au plus.</li>
+        <li>La réduction ne peut pas être échangée contre de l'argent. Elle est perdue si l'abonnement n'est pas renouvelé.</li>
+        <li>Un parrainage obtenu de façon abusive (par exemple en se parrainant soi-même) peut être annulé.</li>
       </ul>
 
-      <h2>10. Garantie légale de conformité</h2>
+      <h2>13. Inscrits avant le passage aux offres payantes (FREE2026)</h2>
+      <p>Les comptes créés avant le [À COMPLÉTER — date de passage aux offres payantes], qui bénéficient de l'offre de lancement FREE2026, gardent un accès gratuit à Galac6 à vie, c'est-à-dire tant que Galac6 est proposé et que le compte existe, sans les limites de la formule Découverte. Aucun moyen de paiement ne leur est demandé.</p>
+
+      <h2>14. Garantie légale de conformité</h2>
       <p>Nous devons vous fournir un service conforme au contrat et à ce que vous pouvez raisonnablement attendre (articles L224-25-12 et suivants du Code de la consommation). Cette garantie est gratuite et s'ajoute à vos autres droits.</p>
       <ul>
-        <li>Pour un abonnement, la garantie couvre tout défaut de conformité qui apparaît pendant toute la durée de l'abonnement. Pendant cette durée, c'est à nous de prouver que le service est conforme.</li>
+        <li>Pour un abonnement ou le Pack Examen, la garantie couvre tout défaut de conformité qui apparaît pendant toute la durée prévue. Pendant cette durée, c'est à nous de prouver que le service est conforme.</li>
         <li>Nous fournissons les mises à jour, y compris de sécurité, nécessaires pour que le service reste conforme.</li>
         <li>En cas de défaut, vous pouvez demander la mise en conformité, sans frais, dans un délai raisonnable et sans inconvénient majeur pour vous. Si elle est impossible, si elle n'est pas faite à temps ou si le défaut persiste, vous pouvez obtenir une réduction du prix ou, si le défaut n'est pas mineur, mettre fin au contrat et être remboursé.</li>
       </ul>
       <p>Pour signaler un défaut : <a href="mailto:hello@galac6.io">hello@galac6.io</a>.</p>
 
-      <h2>11. Responsabilité</h2>
+      <h2>15. Responsabilité</h2>
       <p>Nous faisons tout notre possible pour que Galac6 soit disponible et fonctionne bien. Le service peut être interrompu un court moment pour une maintenance ou en cas de panne d'un prestataire. Nous prévenons à l'avance des interruptions prévues quand c'est possible.</p>
       <p>L'intelligence artificielle peut faire des erreurs. Les réponses, corrections et notes de Galac6 sont des aides : elles ne remplacent pas l'avis d'un enseignant. Les notes des examens blancs sont indicatives.</p>
       <p>Le titulaire du compte reste responsable de l'usage du service par les enfants à qui il le confie.</p>
       <p>Nous ne sommes pas responsables d'un dommage dû à une mauvaise utilisation du service, à votre matériel, à votre connexion internet ou à un cas de force majeure. Rien dans ces CGV ne limite les droits que la loi vous donne en tant que consommateur.</p>
 
-      <h2>12. Données personnelles et sécurité</h2>
+      <h2>16. Données personnelles et sécurité</h2>
       <p>Nos engagements :</p>
       <ul>
         <li>les données sont <strong>hébergées en France</strong> ;</li>
@@ -378,12 +422,19 @@
         <li>les données sont traitées <strong>dans le respect du RGPD</strong> ;</li>
         <li>vos données ne sont <strong>jamais revendues ni utilisées pour de la publicité</strong>.</li>
       </ul>
-      <p>Quelques services techniques, comme l'hébergement du site internet, sont situés hors de l'Union européenne : ils sont listés dans la <a href="https://galac6.io/privacy">politique de confidentialité</a>, qui explique en détail l'utilisation de vos données et fait foi.</p>
+      <p>Les données de paiement sont traitées par Stripe. Quelques services techniques, comme l'hébergement du site internet, sont situés hors de l'Union européenne : ils sont listés dans la <a href="https://galac6.io/privacy">politique de confidentialité</a>, qui explique en détail l'utilisation de vos données et fait foi.</p>
 
-      <h2>13. Service client et réclamations</h2>
-      <p>Pour toute question ou réclamation, y compris sur un ancien abonnement ou une ancienne facture : <a href="mailto:hello@galac6.io">hello@galac6.io</a>, ou par courrier à l'adresse de l'article 1. Nous répondons dans les meilleurs délais.</p>
+      <h2>17. Service client et réclamations</h2>
+      <p>Pour toute question ou réclamation : <a href="mailto:hello@galac6.io">hello@galac6.io</a>, ou par courrier à l'adresse de l'article 1. Nous répondons dans les meilleurs délais.</p>
 
-      <h2>14. Médiation de la consommation</h2>
+      <h2>18. Écoles et établissements</h2>
+      <ul>
+        <li>Les écoles, collèges, lycées et autres établissements bénéficient d'une offre <strong>sur devis</strong>. Les conditions particulières (prix, durée, nombre d'élèves, paiement, traitement des données des élèves) figurent dans le devis, qui l'emporte sur ces CGV en cas de contradiction.</li>
+        <li><strong>Pilote gratuit</strong> : un établissement peut tester Galac6 gratuitement pendant 3 mois, sur 3 classes au plus, sans engagement. Rien n'est facturé à la fin du pilote sans devis signé.</li>
+        <li>Les règles propres aux consommateurs (rétractation, rappel avant renouvellement, médiation de la consommation) ne s'appliquent pas aux établissements, sauf mention contraire du devis.</li>
+      </ul>
+
+      <h2>19. Médiation de la consommation</h2>
       <p>Si un litige n'est pas réglé avec notre service client, vous pouvez recourir gratuitement au médiateur de la consommation dont nous relevons (articles L612-1 et suivants du Code de la consommation) :</p>
       <ul>
         <li>Médiateur : [À COMPLÉTER — médiateur à désigner]</li>
@@ -391,29 +442,14 @@
       </ul>
       <p>Avant de saisir le médiateur, vous devez d'abord nous avoir envoyé une réclamation écrite. Vous pouvez saisir le médiateur au plus tard un an après cette réclamation. La médiation est facultative : vous pouvez aussi saisir directement le tribunal.</p>
 
-      <h2>15. Ventes aux établissements</h2>
-      <p>Les écoles, collèges, lycées, associations et autres professionnels peuvent souscrire une offre pour leurs élèves et leurs équipes.</p>
-      <ul>
-        <li>Commande : sur devis. La commande est ferme à la signature du devis ou à la réception d'un bon de commande. Le devis précise l'offre, le nombre d'élèves ou de comptes, la durée, le prix hors taxes (HT) et TTC, et les conditions de paiement.</li>
-        <li>Paiement : sur facture, par virement, dans les 30 jours qui suivent la date de la facture, sauf mention contraire du devis. Pour les établissements publics, les factures sont déposées sur Chorus Pro et les règles de la commande publique s'appliquent.</li>
-        <li>Retard de paiement : pour un client professionnel de droit privé, pénalités au taux de la Banque centrale européenne majoré de 10 points, et indemnité forfaitaire de 40 € pour frais de recouvrement (articles L441-10 et D441-5 du Code de commerce). Pour un acheteur public, les intérêts moratoires du code de la commande publique s'appliquent.</li>
-        <li>Pas de droit de rétractation : il est réservé aux consommateurs. Les règles propres aux consommateurs (rétractation, rappel avant reconduction, garantie légale de conformité, médiation de la consommation) ne s'appliquent pas, sauf mention contraire du devis.</li>
-        <li>Données des élèves : l'établissement décide de l'usage des données de ses élèves ; Galac6 les traite pour son compte, selon un accord de traitement des données (article 28 du RGPD) joint au devis.</li>
-      </ul>
-      <p>En cas de contradiction, le devis signé l'emporte sur ces CGV.</p>
+      <h2>20. Modification des CGV</h2>
+      <p>Nous pouvons modifier ces CGV. La version applicable est celle que vous avez acceptée lors de la commande. Pour un abonnement en cours, toute modification importante vous est annoncée par email au moins 30 jours avant de s'appliquer, au renouvellement suivant. Si vous la refusez, vous pouvez désactiver le renouvellement sans frais.</p>
 
-      <h2>16. Modification des CGV</h2>
-      <p>Nous pouvons modifier ces CGV. La version applicable est celle que vous avez acceptée lors de la commande. Pour un abonnement en cours, toute modification importante vous est annoncée par email au moins 30 jours avant de s'appliquer, au renouvellement suivant. Si vous la refusez, vous pouvez résilier sans frais.</p>
-
-      <h2>17. Droit applicable et litiges</h2>
-      <p>Ces CGV sont soumises au droit français. En cas de litige, nous cherchons d'abord une solution amiable (articles 13 et 14). À défaut :</p>
-      <ul>
-        <li>consommateur : vous pouvez saisir le tribunal du lieu où vous habitiez au moment de la commande, ou un autre tribunal compétent selon la loi (article R631-3 du Code de la consommation) ;</li>
-        <li>professionnel : les tribunaux de Paris sont compétents, sous réserve des règles impératives, notamment pour les acheteurs publics.</li>
-      </ul>
+      <h2>21. Droit applicable et litiges</h2>
+      <p>Ces CGV sont soumises au droit français. En cas de litige, nous cherchons d'abord une solution amiable (articles 17 et 19). À défaut, vous pouvez saisir le tribunal du lieu où vous habitiez au moment de la commande, ou un autre tribunal compétent selon la loi (article R631-3 du Code de la consommation).</p>
 
       <h2>Annexe : formulaire de rétractation</h2>
-      <p>Remplissez et renvoyez ce formulaire uniquement si vous souhaitez vous rétracter du contrat.</p>
+      <p>Remplissez et renvoyez ce formulaire uniquement si vous souhaitez vous rétracter du contrat, dans les cas où la rétractation est possible (article 10).</p>
       <p>À l'attention de RHK Conseil (Galac6), 19 rue de Croulebarbe, 75013 Paris, France — <a href="mailto:hello@galac6.io">hello@galac6.io</a> :</p>
       <p>Je/nous (*) vous notifie/notifions (*) par la présente ma/notre (*) rétractation du contrat portant sur la prestation de services ci-dessous :</p>
       <ul>
@@ -429,96 +465,133 @@
     </div>
     <div class="en-only" lang="en" style="display:none;">
       <h1>Terms of Sale</h1>
-      <p class="subtitle">Last updated: October 19, 2026</p>
-      <p>These general terms of sale (GTS) cover Galac6's paid offers. During the open beta, Galac6 is free: no subscription is sold and no payment is requested. These GTS will apply to paid offers when they are made available.</p>
+      <p class="subtitle">Last updated: October 21, 2026</p>
+      <p>These general terms of sale (GTS) apply to the Galac6 offers for families: the free Discovery plan, the Student and Family subscriptions, and the Exam Pack. They explain what you buy, how you pay, how to stop and what your rights are. Schools and other organisations are offered a quotation (article 18).</p>
 
       <h2>1. The seller</h2>
       <p>Galac6 is published and sold by RHK Conseil, a sole proprietorship.</p>
       <ul>
         <li>Address: 19 rue de Croulebarbe, 75013 Paris, France</li>
         <li>SIRET: 944 058 866 00012</li>
+        <li>EU VAT number: [TO BE COMPLETED]</li>
         <li>Email: <a href="mailto:hello@galac6.io">hello@galac6.io</a></li>
         <li>Phone: [TO BE COMPLETED — phone number]</li>
       </ul>
       <p>In these GTS, "we" means RHK Conseil and "you" means the person who buys an offer.</p>
 
-      <h2>2. Scope and free access during the beta</h2>
-      <p>These GTS apply to any purchase of a paid Galac6 offer:</p>
-      <ul>
-        <li>by a consumer, that is, a parent or another adult buying for themselves or for their children;</li>
-        <li>by a school or another professional organisation (article 15).</li>
-      </ul>
+      <h2>2. Scope</h2>
+      <p>These GTS apply to any Galac6 offer taken out by a consumer: a parent or another adult buying for themselves or for their children, or a 16- or 17-year-old student in the cases set out in article 7.</p>
       <p>They complement the <a href="https://galac6.io/terms">terms of use</a>, which govern the use of the service, and the <a href="https://galac6.io/privacy">privacy policy</a>. The applicable version is the one published on the day of the order. You accept it by ticking the box provided before paying.</p>
-      <p>Free during the beta: as long as Galac6 is in open beta, the service is free and these GTS apply to no purchase. A paid offer will always be optional and nothing will be charged without your express consent.</p>
 
       <h2>3. The service</h2>
-      <p>Galac6 is an online tutoring service powered by artificial intelligence, for pupils from first grade to the final year of secondary school. It includes, among other things, a tutor that guides the pupil without giving the answer directly, quizzes, exercises, dictations, revision sheets, mental arithmetic and practice papers for the brevet and the baccalauréat. The exact content of each offer (features, usage limits, number of pupil profiles) is described on the <a href="/tarifs">Pricing page</a> before the order.</p>
+      <p>Galac6 is an online tutoring service powered by artificial intelligence, for pupils from first grade to the final year of secondary school. It includes, among other things, a tutor that guides the pupil without giving the answer directly, quizzes, exercises, dictations, revision sheets, mental arithmetic and practice papers for the brevet and the baccalauréat. Practice papers created by the artificial intelligence are labelled as such: they are not official exam papers.</p>
       <p>To use it, you need an internet connection and a recent browser, on a computer, tablet or phone. No software needs to be installed.</p>
       <p>Artificial intelligence can make mistakes. Galac6 is a learning aid: it replaces neither the teacher nor the support of an adult.</p>
 
-      <h2>4. Prices</h2>
-      <p>Prices are shown in euros, all taxes included. The applicable price is the one shown on the <a href="/tarifs">Pricing page</a> at the time of the order. Before payment, a summary shows the total price, the length of the subscription and how often you pay.</p>
-      <p>If the price of a subscription changes, we notify you by email at least 30 days in advance. The new price only applies from the next period. If you refuse it, you can cancel free of charge before that date.</p>
+      <h2>4. Plans</h2>
+      <div class="table-wrap">
+        <table class="offer-table">
+          <thead>
+            <tr><th>Plan</th><th>For whom</th><th>Price incl. VAT</th><th>Length</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Discovery</strong></td><td>Any account</td><td>€0</td><td>No time limit; allowances refilled on the 1st of each month</td></tr>
+            <tr><td><strong>Student</strong></td><td>1 student</td><td>€69 per year or €7.99 per month</td><td>12 months or 1 month, automatic renewal</td></tr>
+            <tr><td><strong>Family</strong></td><td>Up to 4 children; adults only</td><td>€99 per year or €11.99 per month</td><td>12 months or 1 month, automatic renewal</td></tr>
+            <tr><td><strong>Exam Pack</strong></td><td>1 student</td><td>€19, or €14 for an annual subscriber</td><td>One-off purchase, valid 12 months, no renewal</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul>
+        <li><strong>Discovery</strong>: all Galac6 features, in small amounts. Every month, on the 1st, you get: 5 messages to the tutor, 1 dictation, 1 quiz, 1 homework help from a photo and 1 brevet- or bac-style practice paper. Unused allowances do not carry over to the next month. No payment method is requested.</li>
+        <li><strong>Student</strong>: one student profile, without the Discovery limits, subject to normal use of the service (article 5 of the terms of use).</li>
+        <li><strong>Family</strong>: up to 4 child profiles, without the Discovery limits, subject to normal use of the service. For more than 4 children, a second Family account is needed. This offer can only be bought by an adult.</li>
+        <li><strong>Exam Pack</strong>: exam preparation tools (mock exams, marked papers, mock oral exams) for one student profile, for 12 months from the purchase. It does not renew automatically. The €14 price applies if you have an ongoing annual subscription on the day of purchase.</li>
+      </ul>
+      <p>The detailed content of each plan is described on the <a href="/tarifs">Pricing page</a> before the order.</p>
 
-      <h2>5. Orders, reserved for adults</h2>
-      <p>Only an adult (18 or over) can order, from their own account. A minor pupil cannot pay: they must ask a parent to subscribe from their own account.</p>
+      <h2>5. Prices</h2>
+      <p>Prices are shown in euros, all taxes included. VAT is calculated at the time of payment, at the applicable rate, by our payment provider Stripe. The applicable price is the one shown at the time of the order. Before payment, a summary shows the total price, the length and how often you pay.</p>
+      <p>Price changes: if the price of a subscription changes, we notify you by email at least 30 days in advance. The new price only applies from the next renewal; the period already paid is never changed. If you refuse the new price, you can turn off renewal free of charge before that date (article 9).</p>
+
+      <h2>6. Orders</h2>
       <p>Order steps:</p>
       <ul>
-        <li>you choose an offer on the <a href="/tarifs">Pricing page</a>;</li>
-        <li>you check the summary: offer, price including taxes, length and renewal;</li>
-        <li>you accept the GTS and say whether you want to start straight away (article 8);</li>
-        <li>you click the payment button, which clearly states that the order involves an obligation to pay;</li>
-        <li>you pay.</li>
+        <li>you choose a plan and, for a subscription, the length (monthly or annual);</li>
+        <li>you check the summary: plan, price including VAT, length and automatic renewal;</li>
+        <li>you accept the GTS;</li>
+        <li>you tick the box "I request immediate access and waive my right of withdrawal" (article 10); without it, payment is not possible;</li>
+        <li>you click the payment button, which clearly states that the order involves an obligation to pay, then you pay.</li>
       </ul>
-      <p>The contract is concluded as soon as the payment is confirmed. We then send you an order confirmation by email, with these GTS and the withdrawal form.</p>
+      <p>The contract is concluded as soon as the payment is confirmed. You then receive a confirmation email that sets out your order, these GTS, your request for immediate access and your waiver of the right of withdrawal, together with the withdrawal form (appendix).</p>
 
-      <h2>6. Payment</h2>
-      <p>Payment is made by bank card, through Stripe, a secure payment provider. Galac6 does not see or store your full card number.</p>
-      <p>The first payment is made when you order. After that, each period (month or year) is paid automatically at the start of the period, as long as the subscription is not cancelled. Your invoices are available in your account.</p>
-      <p>If a payment fails, we notify you by email. If it is not settled after a reminder, access to the paid features may be suspended, then the subscription cancelled.</p>
-
-      <h2>7. Length, renewal and cancellation</h2>
-      <p>Length: the subscription is monthly or annual, depending on the offer chosen.</p>
-      <p>Automatic renewal: at the end of each period, the subscription is renewed automatically for the same length, unless you have cancelled it.</p>
-      <p>Reminder before renewal: for an annual subscription, we send you an email no earlier than 3 months and no later than 1 month before the end of the period. It reminds you of the renewal date and of your right not to renew. If this reminder was not sent to you, you can cancel free of charge at any time after the renewal, and the amounts paid for the period after the cancellation are refunded within 30 days (article L215-1 of the French Consumer Code). The monthly subscription can be cancelled at any time.</p>
-      <p>Cancellation in three clicks: you can cancel at any time, online, from your account (Subscription, then "Manage subscription", then "Cancel"), free of charge and without giving a reason. You immediately receive an email confirming the cancellation and its effective date. You can also cancel by email at <a href="mailto:hello@galac6.io">hello@galac6.io</a>.</p>
-      <p>Effect: cancellation takes effect at the end of the period already paid, and you keep access until that date. The period already started is not refunded, except in the cases set out in articles 8, 9 and 10.</p>
-
-      <h2>8. 14-day right of withdrawal</h2>
-      <p>You have 14 days to withdraw, without giving a reason or paying a penalty. The period starts on the day the contract is concluded, that is, the day of payment.</p>
-      <p>To withdraw, send us before the end of the period the withdrawal form (in the appendix) or any clear statement, by email at <a href="mailto:hello@galac6.io">hello@galac6.io</a> or by post to the address in article 1. We send you an acknowledgement of receipt by email.</p>
-      <p>Starting straight away: when you order, you can ask to use the subscription immediately, without waiting for the end of the 14 days. In that case:</p>
+      <h2>7. Minor students</h2>
       <ul>
-        <li>you keep the right to withdraw, but you pay the part of the price that corresponds to the period of use until your withdrawal (article L221-25 of the French Consumer Code);</li>
-        <li>for digital content supplied immediately and in full, for example a document to download, you lose your right of withdrawal as soon as the supply begins, if you gave your express consent and expressly waived this right (article L221-28, 13°, of the French Consumer Code). We confirm this consent to you by email.</li>
+        <li><strong>Students under 16</strong>: they cannot pay themselves. The "Ask my parent" button sends an email to their parent with a payment link. The parent places the order and pays.</li>
+        <li><strong>Students aged 16 or 17</strong>: they can buy the Student offer and the Exam Pack themselves, with their own card, as an everyday transaction (article 388-1-1 of the French Civil Code). Their parent is informed of the purchase by email.</li>
+        <li><strong>Family offer</strong>: reserved for adults (18 or over).</li>
+        <li><strong>Refund at a parent's request</strong>: if a minor student made a purchase, their parent or legal guardian can ask for a refund within 30 days of the purchase, by email at <a href="mailto:hello@galac6.io">hello@galac6.io</a>. We refund the full price paid, without asking for a reason, and the offer stops.</li>
       </ul>
-      <p>If you do not ask to start straight away, paid access begins at the end of the 14-day period.</p>
 
-      <h2>9. Refunds</h2>
-      <p>If you withdraw, we refund all amounts paid, minus the part due for the period already used if you asked to start straight away (article 8). The refund is made no later than 14 days after we receive your decision, using the same payment method, at no cost to you.</p>
-      <p>Other refund cases:</p>
+      <h2>8. Payment and failed payments</h2>
+      <p>Payment is made by bank card, through Stripe, a secure payment provider. Galac6 does not see or store your card number: it is handled directly by Stripe.</p>
+      <p>The first payment is made when you order. For a subscription, each following period is paid automatically on the anniversary date of the first payment, as long as automatic renewal is on. Your invoices are available under "My subscription".</p>
+      <p>Failed payment: if a payment fails, Stripe tries to charge your card again and we notify you by email. Your access is kept during these new attempts. If the payment is still not settled 15 days after the first failure, the subscription is cancelled and the account goes back to the Discovery plan. Your data is not deleted.</p>
+
+      <h2>9. Length, renewal and cancellation</h2>
+      <p><strong>Length</strong>: the subscription lasts 12 months (annual) or 1 month (monthly), from the date of payment.</p>
+      <p><strong>Automatic renewal</strong>: it is on by default. At the end of each period, the subscription is renewed for the same length, unless you have turned renewal off. You can turn it off at any time, in one click, under "My subscription".</p>
+      <p><strong>Reminder before annual renewal</strong>: for an annual subscription, we send you a reminder email no earlier than 3 months and no later than 1 month before the renewal date. It reminds you of that date, the price and your right not to renew. If this reminder was not sent to you, you can cancel free of charge at any time after the renewal, and the amounts paid for the period after the cancellation are refunded within 30 days (article L215-1 of the French Consumer Code).</p>
+      <p><strong>Cancelling</strong>: you can cancel at any time, online, free of charge and without giving a reason: under "My subscription", the "Manage my subscription" button opens Stripe's secure area, where one click is enough to cancel. You immediately receive an email confirming the cancellation and its effective date. You can also cancel by email at <a href="mailto:hello@galac6.io">hello@galac6.io</a>.</p>
+      <p><strong>Effect</strong>: cancellation takes effect at the end of the period already paid; you keep access until that date, then the account goes back to the Discovery plan. The period already started is not refunded, except in the cases set out in article 11.</p>
+
+      <h2>10. Right of withdrawal and waiver</h2>
+      <p>As a rule, a consumer has 14 days to withdraw after a distance purchase, without giving a reason or paying a penalty. The period starts on the day the contract is concluded, that is, the day of payment.</p>
+      <p><strong>Immediate access</strong>: with Galac6, paid access starts as soon as you pay. This is why, before paying, you must tick the box: "I request immediate access and waive my right of withdrawal." By ticking it, you give your express consent for supply to start straight away and you acknowledge that you thereby lose your right of withdrawal (article L221-28, 13°, of the French Consumer Code).</p>
+      <p><strong>Proof</strong>: we keep proof of your choice (date, time, text of the box and account concerned) and confirm it to you in the order confirmation email.</p>
+      <p><strong>If the waiver did not apply</strong>: if the law did not allow this waiver for your purchase, you keep your right of withdrawal for 14 days. You then only pay the part of the price that corresponds to the period of use until your withdrawal (article L221-25 of the French Consumer Code). To withdraw, send us the form in the appendix or any clear statement, by email at <a href="mailto:hello@galac6.io">hello@galac6.io</a> or by post to the address in article 1.</p>
+      <p>In all cases, a purchase made by a minor student can be refunded at their parent's request for 30 days (article 7).</p>
+
+      <h2>11. Refunds</h2>
+      <p>We refund, using the same payment method and at no cost to you:</p>
       <ul>
-        <li>a lack of conformity that is not fixed (article 10): price reduction or refund;</li>
-        <li>permanent shutdown of the service by Galac6: refund of the unused part of the paid period;</li>
-        <li>renewal without reminder (article 7): refund within 30 days after cancellation, minus the period already used.</li>
+        <li>the full price, if a parent asks within 30 days of a purchase made by their minor child (article 7);</li>
+        <li>the price minus the part already used, in case of withdrawal where it is possible (article 10);</li>
+        <li>a price reduction or a refund, in case of a lack of conformity that is not fixed (article 14);</li>
+        <li>the unused part of the paid period, if Galac6 permanently shuts down the service;</li>
+        <li>the amounts paid for the period after cancellation, in case of renewal without reminder (article 9).</li>
+      </ul>
+      <p>The refund is made no later than 14 days after your request, unless the law sets a shorter time.</p>
+
+      <h2>12. Referrals</h2>
+      <ul>
+        <li>An annual subscriber can invite another family. If that family takes out an annual subscription (Student or Family), each of the two families receives a €10 discount.</li>
+        <li>The discount is deducted from each family's next annual renewal. It does not apply to monthly subscriptions or to the Exam Pack.</li>
+        <li>The referral is confirmed 14 days after the invited family's payment, if that purchase has not been cancelled or refunded in the meantime.</li>
+        <li>The same family can be rewarded no more than 3 times a year.</li>
+        <li>The discount cannot be exchanged for money. It is lost if the subscription is not renewed.</li>
+        <li>A referral obtained improperly (for example by referring yourself) may be cancelled.</li>
       </ul>
 
-      <h2>10. Legal guarantee of conformity</h2>
+      <h2>13. Accounts created before paid plans (FREE2026)</h2>
+      <p>Accounts created before [TO BE COMPLETED — date paid plans start], which benefit from the FREE2026 launch offer, keep free access to Galac6 for life, that is, as long as Galac6 is offered and the account exists, without the Discovery limits. No payment method is requested from them.</p>
+
+      <h2>14. Legal guarantee of conformity</h2>
       <p>We must provide a service that complies with the contract and with what you can reasonably expect (articles L224-25-12 and following of the French Consumer Code). This guarantee is free and comes on top of your other rights.</p>
       <ul>
-        <li>For a subscription, the guarantee covers any lack of conformity that appears during the whole length of the subscription. During that time, it is up to us to prove that the service complies.</li>
+        <li>For a subscription or the Exam Pack, the guarantee covers any lack of conformity that appears during the whole planned length. During that time, it is up to us to prove that the service complies.</li>
         <li>We provide the updates, including security updates, needed to keep the service compliant.</li>
         <li>In case of a defect, you can ask for the service to be brought into conformity, free of charge, within a reasonable time and without major inconvenience for you. If this is impossible, not done in time, or if the defect persists, you can obtain a price reduction or, if the defect is not minor, end the contract and be refunded.</li>
       </ul>
       <p>To report a defect: <a href="mailto:hello@galac6.io">hello@galac6.io</a>.</p>
 
-      <h2>11. Liability</h2>
+      <h2>15. Liability</h2>
       <p>We do our best to keep Galac6 available and working well. The service may be interrupted briefly for maintenance or if a provider fails. We give advance notice of planned interruptions when possible.</p>
       <p>Artificial intelligence can make mistakes. Galac6's answers, corrections and marks are aids: they do not replace a teacher's opinion. Marks given in mock exams are indicative.</p>
       <p>The account holder remains responsible for the use of the service by the children they entrust it to.</p>
       <p>We are not liable for damage caused by misuse of the service, by your equipment, by your internet connection or by force majeure. Nothing in these GTS limits the rights the law gives you as a consumer.</p>
 
-      <h2>12. Personal data and security</h2>
+      <h2>16. Personal data and security</h2>
       <p>Our commitments:</p>
       <ul>
         <li>data is <strong>hosted in France</strong>;</li>
@@ -526,12 +599,19 @@
         <li>data is processed <strong>in line with the GDPR</strong>;</li>
         <li>your data is <strong>never sold or used for advertising</strong>.</li>
       </ul>
-      <p>A few technical services, such as hosting of the website, are located outside the European Union: they are listed in the <a href="https://galac6.io/privacy">privacy policy</a>, which explains in detail how your data is used and prevails.</p>
+      <p>Payment data is processed by Stripe. A few technical services, such as hosting of the website, are located outside the European Union: they are listed in the <a href="https://galac6.io/privacy">privacy policy</a>, which explains in detail how your data is used and prevails.</p>
 
-      <h2>13. Customer service and complaints</h2>
-      <p>For any question or complaint, including about a former subscription or invoice: <a href="mailto:hello@galac6.io">hello@galac6.io</a>, or by post to the address in article 1. We reply as quickly as possible.</p>
+      <h2>17. Customer service and complaints</h2>
+      <p>For any question or complaint: <a href="mailto:hello@galac6.io">hello@galac6.io</a>, or by post to the address in article 1. We reply as quickly as possible.</p>
 
-      <h2>14. Consumer mediation</h2>
+      <h2>18. Schools and organisations</h2>
+      <ul>
+        <li>Primary schools, secondary schools and other organisations are offered a <strong>quotation</strong>. The specific terms (price, length, number of students, payment, processing of students' data) are set out in the quotation, which prevails over these GTS in case of conflict.</li>
+        <li><strong>Free pilot</strong>: a school can try Galac6 free of charge for 3 months, on up to 3 classes, with no commitment. Nothing is charged at the end of the pilot without a signed quotation.</li>
+        <li>The consumer-specific rules (withdrawal, reminder before renewal, consumer mediation) do not apply to schools and organisations, unless the quotation says otherwise.</li>
+      </ul>
+
+      <h2>19. Consumer mediation</h2>
       <p>If a dispute is not settled with our customer service, you can use, free of charge, the consumer mediator we have appointed (articles L612-1 and following of the French Consumer Code):</p>
       <ul>
         <li>Mediator: [TO BE COMPLETED — mediator to be appointed]</li>
@@ -539,29 +619,14 @@
       </ul>
       <p>Before contacting the mediator, you must first have sent us a written complaint. You can contact the mediator no later than one year after that complaint. Mediation is optional: you can also go directly to court.</p>
 
-      <h2>15. Sales to schools and organisations</h2>
-      <p>Schools, associations and other professionals can subscribe to an offer for their pupils and staff.</p>
-      <ul>
-        <li>Order: on quotation. The order is firm when the quotation is signed or a purchase order is received. The quotation states the offer, the number of pupils or accounts, the length, the price excluding and including taxes, and the payment terms.</li>
-        <li>Payment: on invoice, by bank transfer, within 30 days of the invoice date, unless the quotation says otherwise. For public schools, invoices are filed on Chorus Pro and public procurement rules apply.</li>
-        <li>Late payment: for a private-sector professional customer, penalties at the European Central Bank rate plus 10 points, and a fixed collection fee of €40 (articles L441-10 and D441-5 of the French Commercial Code). For a public buyer, the late-payment interest of the public procurement code applies.</li>
-        <li>No right of withdrawal: it is reserved for consumers. The consumer-specific rules (withdrawal, reminder before renewal, legal guarantee of conformity, consumer mediation) do not apply, unless the quotation says otherwise.</li>
-        <li>Pupils' data: the school decides how its pupils' data is used; Galac6 processes it on the school's behalf, under a data processing agreement (article 28 of the GDPR) attached to the quotation.</li>
-      </ul>
-      <p>If there is a conflict, the signed quotation prevails over these GTS.</p>
+      <h2>20. Changes to these GTS</h2>
+      <p>We may change these GTS. The applicable version is the one you accepted when you ordered. For an ongoing subscription, any significant change is announced to you by email at least 30 days before it applies, at the next renewal. If you refuse it, you can turn off renewal free of charge.</p>
 
-      <h2>16. Changes to these GTS</h2>
-      <p>We may change these GTS. The applicable version is the one you accepted when you ordered. For an ongoing subscription, any significant change is announced to you by email at least 30 days before it applies, at the next renewal. If you refuse it, you can cancel free of charge.</p>
-
-      <h2>17. Applicable law and disputes</h2>
-      <p>These GTS are governed by French law. In case of dispute, we first look for an amicable solution (articles 13 and 14). Failing that:</p>
-      <ul>
-        <li>consumer: you can go to the court of the place where you lived at the time of the order, or to another court that has jurisdiction under the law (article R631-3 of the French Consumer Code);</li>
-        <li>professional: the courts of Paris have jurisdiction, subject to mandatory rules, in particular for public buyers.</li>
-      </ul>
+      <h2>21. Applicable law and disputes</h2>
+      <p>These GTS are governed by French law. In case of dispute, we first look for an amicable solution (articles 17 and 19). Failing that, you can go to the court of the place where you lived at the time of the order, or to another court that has jurisdiction under the law (article R631-3 of the French Consumer Code).</p>
 
       <h2>Appendix: withdrawal form</h2>
-      <p>Fill in and return this form only if you wish to withdraw from the contract.</p>
+      <p>Fill in and return this form only if you wish to withdraw from the contract, where withdrawal is possible (article 10).</p>
       <p>To RHK Conseil (Galac6), 19 rue de Croulebarbe, 75013 Paris, France — <a href="mailto:hello@galac6.io">hello@galac6.io</a>:</p>
       <p>I/We (*) hereby give notice that I/We (*) withdraw from my/our (*) contract for the provision of the following service:</p>
       <ul>
