@@ -227,7 +227,11 @@
     .plans { display: grid; gap: 18px; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; margin-top: 34px; }
     @media (max-width: 920px) { .plans { grid-template-columns: minmax(0, 1fr); max-width: 520px; margin-left: auto; margin-right: auto; } }
     .plan { position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 30px 24px 24px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
-    .plan.hl { border-color: var(--tint-line); background: linear-gradient(180deg, var(--tint), var(--bg-card) 60%); }
+    /* Carte cliquable : toute la carte sélectionne la formule (Recommandé par défaut) */
+    .plan.is-selectable { cursor: pointer; }
+    .plan.is-selectable:hover { border-color: var(--border-strong); }
+    .plan.is-selectable:focus-visible { outline: 2px solid var(--primary-light); outline-offset: 3px; }
+    .plan.is-selected, .plan.is-selectable.is-selected:hover { border-color: var(--tint-line); background: linear-gradient(180deg, var(--tint), var(--bg-card) 60%); }
     .plan-flag { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--g1), var(--g2)); color: var(--on-accent); font-size: 0.76rem; font-weight: 700; padding: 4px 14px; border-radius: 100px; white-space: nowrap; }
     .plan-name { font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.07em; }
     .plan-for { font-size: 0.9rem; color: var(--text-muted); margin-top: 2px; }
@@ -365,7 +369,7 @@
           <a class="btn btn-outline btn-block" href="https://galac6web.netlify.app/" data-i18n="tarifs.decouverte.cta">Commencer avec Découverte</a>
           <p class="plan-note" data-i18n="tarifs.decouverte.note">Sans carte bancaire</p>
         </article>
-        <article class="plan hl">
+        <article class="plan hl is-selected">
           <span class="plan-flag" data-i18n="tarifs.flag">Recommandé</span>
           <div><p class="plan-name" data-i18n="tarifs.eleve.name">Élève</p><p class="plan-for" data-i18n="tarifs.eleve.for">Un enfant</p></div>
           <div>
@@ -449,7 +453,7 @@
           </ul>
           <a class="btn btn-outline btn-block" href="/ecole?type=devis&amp;module=eleve#devis" data-i18n="tarifs.quote">Demander un devis</a>
         </article>
-        <article class="plan hl">
+        <article class="plan hl is-selected">
           <span class="plan-flag" data-i18n="tarifs.flag">Recommandé</span>
           <div><p class="plan-name" data-i18n="tarifs.sp2.name">Le plus complet</p><h3 class="quote-tag" data-i18n-html="tarifs.sp2.title">Élève + École<small>Tarif selon le nombre d'élèves</small></h3></div>
           <ul class="ticks">
@@ -583,6 +587,43 @@
 
     new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
     render();
+  })();
+</script>
+<script>
+  // Formules (familles et établissements) : un clic (ou Entrée / Espace) sur une carte la sélectionne ;
+  // son bouton passe en bouton plein, les autres en bouton à contour. Les liens restent inchangés.
+  (function () {
+    document.querySelectorAll('.plans, .school-plans').forEach(function (group, g) {
+      var cards = Array.prototype.slice.call(group.querySelectorAll('.plan'));
+      group.setAttribute('role', 'radiogroup');
+      group.setAttribute('aria-label', document.documentElement.lang === 'en' ? 'Plans' : 'Formules');
+      function select(card) {
+        cards.forEach(function (c) {
+          var on = c === card;
+          c.classList.toggle('is-selected', on);
+          c.setAttribute('aria-checked', on ? 'true' : 'false');
+          var btn = c.querySelector('.btn');
+          if (btn) { btn.classList.toggle('btn-primary', on); btn.classList.toggle('btn-outline', !on); }
+        });
+      }
+      cards.forEach(function (card, i) {
+        var name = card.querySelector('.quote-tag') || card.querySelector('.plan-name');
+        if (name) { name.id = name.id || 'plan-name-' + g + '-' + i; card.setAttribute('aria-labelledby', name.id); }
+        card.classList.add('is-selectable');
+        card.setAttribute('role', 'radio');
+        card.setAttribute('tabindex', '0');
+        card.addEventListener('click', function () { select(card); });
+        card.addEventListener('keydown', function (e) {
+          if (e.target !== card) return; // Entrée sur le bouton : on garde le lien
+          var k = e.key, next = null;
+          if (k === 'Enter' || k === ' ') { e.preventDefault(); select(card); return; }
+          if (k === 'ArrowRight' || k === 'ArrowDown') next = cards[(i + 1) % cards.length];
+          if (k === 'ArrowLeft' || k === 'ArrowUp') next = cards[(i - 1 + cards.length) % cards.length];
+          if (next) { e.preventDefault(); select(next); next.focus(); }
+        });
+      });
+      select(group.querySelector('.plan.is-selected') || cards[0]);
+    });
   })();
 </script>
 <script src="i18n.js"></script>

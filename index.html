@@ -579,7 +579,15 @@
       position: relative;
     }
 
-    .pricing-card.highlighted {
+    /* Carte cliquable : toute la carte sélectionne la formule */
+    .pricing-card.is-selectable { cursor: pointer; transition: border-color .2s ease, transform .2s ease; }
+    .pricing-card.is-selectable:hover { border-color: rgba(99,102,241,0.25); transform: translateY(-2px); }
+    .pricing-card.is-selectable:focus-visible { outline: 2px solid var(--primary-light, #a78bfa); outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) { .pricing-card.is-selectable, .pricing-card.is-selectable:hover { transition: none; transform: none; } }
+
+    /* Carte sélectionnée : contour violet (Élève par défaut) */
+    .pricing-card.is-selected,
+    .pricing-card.is-selectable.is-selected:hover {
       border-color: rgba(99,102,241,0.4);
       background: linear-gradient(180deg, rgba(99,102,241,0.06) 0%, var(--bg-card) 100%);
     }
@@ -1243,7 +1251,7 @@
 
   <!-- ═══ PRICING ═══ -->
   <section id="pricing">
-    <h2 class="section-title" data-i18n="pricing.title">Nos formules</h2>
+    <h2 class="section-title" id="pricing-title" data-i18n="pricing.title">Nos formules</h2>
 
     <div class="pricing-simple pricing-three">
       <div class="pricing-card">
@@ -1252,7 +1260,7 @@
         <p class="pricing-detail" data-i18n="pricing.disc.detail">Pour essayer : toutes les fonctionnalités, en quantité limitée chaque mois.</p>
         <a href="https://galac6web.netlify.app/" class="btn btn-secondary" style="width: 100%; justify-content: center;" data-i18n="pricing.disc.cta">Commencer avec Découverte</a>
       </div>
-      <div class="pricing-card highlighted">
+      <div class="pricing-card highlighted is-selected">
         <div class="pricing-badge" data-i18n="pricing.badge">⭐ Tout Galac6 en illimité</div>
         <div class="pricing-name" data-i18n="pricing.eleve.name">Élève</div>
         <div class="pricing-amount gradient-text">69 <span class="currency">€</span><span class="period" data-i18n="pricing.per.year">/an</span></div>
@@ -1322,6 +1330,42 @@
 <script src="cookie-consent.js"></script>
 <script src="i18n.js"></script>
 <script>
+  // Formules : un clic (ou Entrée / Espace) sur une carte la sélectionne ;
+  // son bouton passe en bouton plein, les autres en bouton à contour. Les liens restent inchangés.
+  (function () {
+    var group = document.querySelector('#pricing .pricing-three');
+    if (!group) return;
+    var cards = Array.prototype.slice.call(group.querySelectorAll('.pricing-card'));
+    group.setAttribute('role', 'radiogroup');
+    group.setAttribute('aria-labelledby', 'pricing-title');
+    function select(card) {
+      cards.forEach(function (c) {
+        var on = c === card;
+        c.classList.toggle('is-selected', on);
+        c.setAttribute('aria-checked', on ? 'true' : 'false');
+        var btn = c.querySelector('.btn');
+        if (btn) { btn.classList.toggle('btn-primary', on); btn.classList.toggle('btn-secondary', !on); }
+      });
+    }
+    cards.forEach(function (card, i) {
+      var name = card.querySelector('.pricing-name');
+      if (name) { name.id = name.id || 'pricing-name-' + i; card.setAttribute('aria-labelledby', name.id); }
+      card.classList.add('is-selectable');
+      card.setAttribute('role', 'radio');
+      card.setAttribute('tabindex', '0');
+      card.addEventListener('click', function () { select(card); });
+      card.addEventListener('keydown', function (e) {
+        if (e.target !== card) return; // Entrée sur le bouton : on garde le lien
+        var k = e.key, next = null;
+        if (k === 'Enter' || k === ' ') { e.preventDefault(); select(card); return; }
+        if (k === 'ArrowRight' || k === 'ArrowDown') next = cards[(i + 1) % cards.length];
+        if (k === 'ArrowLeft' || k === 'ArrowUp') next = cards[(i - 1 + cards.length) % cards.length];
+        if (next) { e.preventDefault(); select(next); next.focus(); }
+      });
+    });
+    select(group.querySelector('.pricing-card.is-selected') || cards[0]);
+  })();
+
   document.querySelectorAll('.faq-question').forEach(function(btn) {
     btn.addEventListener('click', function() {
       var item = btn.closest('.faq-item');
