@@ -287,6 +287,14 @@
       .pp-grid > .pp-card { flex-basis: 100%; }
       .pp-card { flex-direction: row; align-items: center; padding: 1rem 1.1rem; }
     }
+    /* ─── FAQ (même style que tarifs.html) ─── */
+    .faq { display: grid; gap: 10px; max-width: 820px; margin: 0 auto; }
+    .faq details { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; }
+    .faq summary { cursor: pointer; list-style: none; min-height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 12px 20px; font-weight: 600; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; font-size: 1.3rem; color: var(--primary-light); font-weight: 400; }
+    .faq details[open] summary::after { content: "–"; }
+    .faq .ans { padding: 0 20px 18px; color: var(--text-muted); font-size: 0.95rem; }
   </style>
   <!-- Meta Pixel (Facebook) - charge apres consentement -->
   <script src="meta-pixel.js"></script>
@@ -542,6 +550,16 @@
         <a href="/privacy" data-i18n="pledge.more">En savoir plus</a>
         <a href="/donnees-eleves" data-i18n="pledge.more2">Données des élèves : le détail</a>
       </p>
+    </div>
+  </div>
+
+  <!-- ═══ FAQ SÉCURITÉ DES DONNÉES ═══ -->
+  <div class="section">
+    <div class="wrap">
+      <div class="sec-head center"><p class="eyebrow" data-i18n="ecole.faq.eyebrow">Questions fréquentes</p><h2 class="h2" data-i18n="ecole.faq.title">La sécurité des données</h2></div>
+      <div class="faq">
+        <details><summary data-i18n="ecole.faq.q1">Les données des élèves sont-elles en sécurité ?</summary><div class="ans"><p data-i18n-html="ecole.faq.a1">Oui, c'est une priorité. Les <strong>données sont hébergées en France</strong>, à Paris, et l'intelligence artificielle principale de Galac6 est traitée en Europe. Chaque compte ne voit que ce qu'il a le droit de voir : côté école, seuls les professeurs de l'élève et la direction de son école accèdent à son travail. Les comptes d'administration de la plateforme Galac6 sont protégés par une double authentification, et les mots de passe connus pour avoir fuité sont refusés. Les données ne sont jamais revendues ni utilisées pour entraîner des IA, et un compte supprimé est effacé sous 30 jours. Quelques services restent hors de l'Union européenne, comme l'hébergement du site internet : tout est détaillé sur la page <a href="/donnees-eleves">Données des élèves</a>.</p></div></details>
+      </div>
     </div>
   </div>
 

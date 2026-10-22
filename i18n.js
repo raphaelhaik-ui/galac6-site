@@ -97,6 +97,9 @@
       'faq.q7': 'Is my child\'s data protected?',
       'faq.a7': 'Yes, and it\'s non-negotiable. Galac6 is <strong>designed in France</strong>, in line with the GDPR. Data is hosted in France and Galac6\'s artificial intelligence is processed in Europe; only a few technical services, such as hosting of the website, rely on providers located outside the European Union. We never sell your children\'s data to third parties. The privacy and security of minors\' data are at the core of our design.',
 
+      'faq.qsecu': 'Is students\' data secure?',
+      'faq.asecu': 'Yes, it is a priority. <strong>Data is hosted in France</strong>, in Paris, and Galac6\'s main artificial intelligence is processed in Europe. Each account only sees what it is allowed to see: at school, only the student\'s teachers and school leadership can access their work. Galac6 platform administration accounts are protected by two-factor authentication, and passwords known to have leaked are refused. Data is never sold or used to train AIs, and a deleted account is erased within 30 days. A few services remain outside the European Union, such as hosting of the website: everything is detailed on the <a href="/donnees-eleves">Student data</a> page.',
+
       'faq.q8': 'What subjects and grade levels are covered?',
       'faq.a8': 'Galac6 covers the main subjects of the French curriculum: <strong>French, Mathematics, History-Geography, Sciences, English</strong> and more — <strong>from 1st to 12th grade</strong>. Content automatically adapts to the student\'s level and grade.',
 
@@ -323,6 +326,10 @@
       'ecole.steps.s2.desc': 'We open it, and the management invites the teachers.',
       'ecole.steps.s3.title': 'Your classes at work',
       'ecole.steps.s3.desc': 'Pupils join their class with a code.',
+      'ecole.faq.eyebrow': 'Frequently asked questions',
+      'ecole.faq.title': 'Data security',
+      'ecole.faq.q1': 'Is students\' data secure?',
+      'ecole.faq.a1': 'Yes, it is a priority. <strong>Data is hosted in France</strong>, in Paris, and Galac6\'s main artificial intelligence is processed in Europe. Each account only sees what it is allowed to see: at school, only the student\'s teachers and school leadership can access their work. Galac6 platform administration accounts are protected by two-factor authentication, and passwords known to have leaked are refused. Data is never sold or used to train AIs, and a deleted account is erased within 30 days. A few services remain outside the European Union, such as hosting of the website: everything is detailed on the <a href="/donnees-eleves">Student data</a> page.',
       'ecole.final.title': 'What if your school tried Galac6?',
       'ecole.final.sub': 'Get a quote tailored to the number of your pupils.',
       'ecole.devis.eyebrow': 'Schools',
