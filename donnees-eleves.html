@@ -386,7 +386,7 @@
         </li>
         <li class="pp-card">
           <span class="pp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l8 3v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10v-6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
-          <span class="pp-text" data-i18n="pledge.p3">Dans le respect du RGPD</span>
+          <span class="pp-text" data-i18n="pledge.p3admin">Double authentification des comptes d'administration</span>
         </li>
         <li class="pp-card">
           <span class="pp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M5.3 5.3l13.4 13.4"/></svg></span>
@@ -394,7 +394,7 @@
         </li>
         <li class="pp-card">
           <span class="pp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7.5" r="3.5"/><path d="M2.5 20.5c0-3.6 2.9-6.5 6.5-6.5 1.6 0 3 .6 4.2 1.5"/><path d="M15 18l2 2 4.5-4.5"/></svg></span>
-          <span class="pp-text" data-i18n="pledge.p5">Accord d'un parent obligatoire pour les moins de 15 ans</span>
+          <span class="pp-text" data-i18n="pledge.p5hors">Accord d'un parent obligatoire pour les moins de 15 ans, en dehors du cadre scolaire</span>
         </li>
         <li class="pp-card">
           <span class="pp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
@@ -455,7 +455,7 @@
 
       <h2>Qui voit quoi</h2>
       <ul>
-        <li><strong>Le professeur</strong> voit ses classes : la liste de ses élèves, leurs résultats aux devoirs et à l'entraînement, et la fiche de chaque élève. Si sa classe est rattachée à une école, il peut aussi consulter, sans rien modifier, les élèves et les résultats des autres classes de cette école. Il ne voit ni les conversations des élèves avec le tuteur, ni les réglages des familles.</li>
+        <li><strong>Le professeur</strong> voit ses classes : la liste de ses élèves, leurs résultats aux devoirs et à l'entraînement, et la fiche de chaque élève. La fiche complète d'un élève est réservée à ses propres professeurs. Il ne voit ni les conversations des élèves avec le tuteur, ni les réglages des familles.</li>
         <li><strong>La direction</strong> voit les classes de son école.</li>
         <li><strong>Les parents</strong> voient la classe et les professeurs de leur enfant. Ils peuvent le détacher de la classe à tout moment ; l'école et le professeur en sont alors prévenus par email.</li>
       </ul>
@@ -469,13 +469,28 @@
         <li><strong>Mistral AI</strong> (Voxtral), pour la reconnaissance de la voix au micro, par son point d'accès européen : traitement en Europe ;</li>
         <li><strong>Google Gemini</strong> (Vertex AI), pour le dessin de l'avatar créé à partir d'une photo (facultatif) : traitement en Europe ;</li>
         <li><strong>Brevo</strong> (société française), pour les e-mails de l'application et les e-mails de connexion : traitement dans l'Union européenne (OVH en France et Google Cloud en Belgique) ;</li>
-        <li><strong>Tally</strong> (société belge), pour les questionnaires d'avis facultatifs : données stockées dans l'Union européenne (Belgique) ; certains de ses prestataires techniques peuvent être situés hors de l'UE.</li>
+        <li><strong>Tally</strong> (société belge), pour les questionnaires d'avis facultatifs : données stockées dans l'Union européenne (Belgique) ; certains de ses prestataires techniques peuvent être situés hors de l'UE ;</li>
+        <li><strong>Solutions de secours</strong> : si l'IA principale ne répond pas, les fonctions qui traitent le travail des élèves basculent sur des modèles de secours eux aussi servis en Europe (depuis le 22 octobre 2026).</li>
       </ul>
-      <p>Quelques services restent situés hors de l'Union européenne ou sont assurés par des sociétés américaines : de rares secours de l'IA du chat quand l'IA principale ne répond pas (Google Gemini ou Anthropic en direct), l'hébergement du site et de l'application (Netlify), la passerelle vers l'IA (Vercel, qui impose des centres de données européens), le paiement des anciens abonnements (Stripe) et, jusqu'à leur transfert chez Brevo, les campagnes de questionnaires envoyées par e-mail aux parents (Resend).</p>
+      <p>Quelques services restent situés hors de l'Union européenne ou sont assurés par des sociétés américaines : l'hébergement du site et de l'application (Netlify), la passerelle vers l'IA (Vercel, qui impose des centres de données européens) et le paiement des abonnements des familles (Stripe). Restent aussi hors de l'Union européenne : le dessin de l'image de fond du thème, à partir de la description qu'en donne l'élève (Google Gemini), et des fonctions qui ne traitent aucune donnée d'élève, comme la génération de sujets d'entraînement et la lecture des annales officielles publiques.</p>
       <p>Ces transferts hors de l'Union européenne sont encadrés par des clauses contractuelles types, conformément à l'article 46 du Règlement général sur la protection des données (RGPD). La liste complète de nos sous-traitants figure dans notre <a href="/privacy">politique de confidentialité</a>.</p>
 
+      <h2>Sécurité</h2>
+      <ul>
+        <li>Les échanges sont chiffrés (HTTPS), et les copies sont rangées dans des espaces privés, jamais publics.</li>
+        <li>Les règles d'accès sont appliquées côté serveur, pour chaque table de la base de données.</li>
+        <li>Les comptes d'administration de la plateforme Galac6 sont protégés par une double authentification.</li>
+        <li>Les mots de passe déjà apparus dans une fuite de données sont refusés.</li>
+        <li>Les noms des élèves sont progressivement masqués avant l'envoi à l'IA.</li>
+        <li>Les notes proposées par l'IA restent indicatives : le professeur valide toujours.</li>
+        <li>Si un élève écrit un message inquiétant, un adulte de l'école est prévenu.</li>
+        <li>Les photos des dictées sur papier et des corrigés déposés par les professeurs sont effacées à la fin de chaque année scolaire.</li>
+      </ul>
+      <p>L'école garde la main : elle décide qui rejoint ses classes, ses professeurs valident chaque devoir et chaque note, et Galac6 n'agit que pour son compte.</p>
+      <p><a href="/downloads/Galac6-securite-donnees.pdf" download>Télécharger la note de sécurité (PDF)</a></p>
+
       <h2>Les élèves mineurs</h2>
-      <p>Galac6 s'adresse aux élèves du CP à la Terminale. Pour les élèves de moins de 15 ans, le consentement d'un parent ou du représentant légal est requis ; il est recueilli à la création du compte.</p>
+      <p>Galac6 s'adresse aux élèves du CP à la Terminale. En dehors du cadre scolaire, pour les élèves de moins de 15 ans, le consentement d'un parent ou du représentant légal est requis ; il est recueilli à la création du compte. Pour un compte créé dans le cadre d'une école, c'est le cadre défini par l'école qui s'applique.</p>
 
       <h2>Combien de temps les données sont conservées</h2>
       <ul>
