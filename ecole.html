@@ -170,6 +170,9 @@
     .e-hero .sub { color: var(--text-muted); font-size: 1.15rem; max-width: 44ch; }
     .e-cta { display: flex; flex-wrap: wrap; gap: 12px; }
     .e-cta .btn { min-height: 54px; padding: 0 28px; font-size: 1.05rem; }
+    .e-pilot { max-width: 52ch; border-left: 3px solid var(--primary-light); padding: 4px 0 4px 14px; color: var(--text-muted); font-size: 1rem; }
+    .e-pilot strong { color: var(--text); }
+    @media (max-width: 480px) { .e-cta { width: 100%; } .e-cta .btn { flex: 1 1 100%; } }
     .e-art { width: 100%; max-width: 440px; justify-self: center; color: var(--text); }
     .e-art svg { display: block; width: 100%; height: auto; }
     .e-twinkle { opacity: 0.6; }
@@ -232,6 +235,10 @@
     .s-icon svg { width: 54px; height: 54px; }
     .e-steps b { font-size: 1.1rem; margin-top: 6px; }
     .e-steps li > span:last-child { color: var(--text-muted); font-size: 0.95rem; max-width: 30ch; }
+    .e-steps.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .e-steps.four::before { left: 12%; right: 12%; }
+    .e-steps.four li { align-content: start; }
+    @media (max-width: 960px) { .e-steps.four { grid-template-columns: minmax(0, 1fr); } .e-steps.four::before { top: 48px; bottom: 48px; left: 50%; right: auto; width: 3px; height: auto; background: linear-gradient(180deg, var(--g1), var(--g2)); } }
     @media (max-width: 760px) { .e-steps { grid-template-columns: minmax(0, 1fr); } .e-steps::before { top: 48px; bottom: 48px; left: 50%; right: auto; width: 3px; height: auto; background: linear-gradient(180deg, var(--g1), var(--g2)); } }
 
     /* ─── Appel à l'action final ─── */
@@ -344,8 +351,10 @@
         <span class="badge" data-i18n="ecole.badge">Pilote gratuit de 3 mois sur 3 classes</span>
         <h1 data-i18n-html="ecole.hero.title">L'IA qui fait gagner du temps <span class="grad">à toute votre école</span></h1>
         <p class="sub" data-i18n="ecole.hero.sub">Galac6 se charge du répétitif, vos professeurs se consacrent à l'essentiel.</p>
+        <p class="e-pilot" data-i18n-html="ecole.pilot.offer"><strong>Pilote gratuit : 3 mois sur 3 classes, sans engagement.</strong> Ensuite, tarif sur devis.</p>
         <div class="e-cta">
-          <a class="btn btn-primary" href="#devis" data-type="devis" data-i18n="ecole.cta.quote">Demander un devis</a>
+          <a class="btn btn-primary" href="#devis" data-type="pilote" data-i18n="ecole.cta.pilot">Devenir école pilote</a>
+          <a class="btn btn-outline" href="#devis" data-type="devis" data-i18n="ecole.cta.quote">Demander un devis</a>
         </div>
         <form class="quick" id="quick-top" data-where="haut de page" novalidate aria-label="Être recontacté">
           <p class="quick-title" data-i18n="ecole.quick.title">Être recontacté</p>
@@ -484,30 +493,38 @@
     </div>
   </div>
 
-  <!-- ═══ COMMENT ÇA DÉMARRE ═══ -->
-  <div class="section">
+  <!-- ═══ COMMENT SE PASSE LE PILOTE ═══ -->
+  <div class="section" id="pilote-etapes">
     <div class="wrap">
       <div class="sec-head center">
-        <p class="eyebrow" data-i18n="ecole.steps.eyebrow">Comment ça démarre</p>
-        <h2 class="h2" data-i18n="ecole.steps.title">Trois étapes, trois classes pour commencer</h2>
+        <p class="eyebrow" data-i18n="ecole.steps.eyebrow">Pilote gratuit, sans engagement</p>
+        <h2 class="h2" data-i18n="ecole.steps.title">Comment se passe le pilote</h2>
       </div>
-      <ol class="e-steps">
+      <ol class="e-steps four">
         <li>
           <span class="s-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="6" y="14" width="38" height="30" rx="6" fill="url(#gx)"/><path d="M44 24 L58 16 v26 L44 34 z" fill="url(#gx2)"/><circle cx="25" cy="27" r="6" fill="#fff" fill-opacity="0.9"/><path d="M15 41 c0-6 4-9 10-9 s10 3 10 9" fill="#fff" fill-opacity="0.9"/></svg></span>
-          <b data-i18n="ecole.steps.s1.title">Un premier échange</b>
+          <b data-i18n="ecole.steps.s1.title">On échange 20 minutes</b>
           <span data-i18n="ecole.steps.s1.desc">Nous vous présentons Galac6 en visioconférence.</span>
         </li>
         <li>
           <span class="s-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 L58 20 H6 z" fill="url(#gx)"/><rect x="10" y="22" width="44" height="4" fill="url(#gx2)"/><rect x="14" y="28" width="6" height="20" rx="2" fill="url(#gx2)"/><rect x="29" y="28" width="6" height="20" rx="2" fill="url(#gx2)"/><rect x="44" y="28" width="6" height="20" rx="2" fill="url(#gx2)"/><rect x="8" y="50" width="48" height="6" rx="2" fill="url(#gx)"/></svg></span>
-          <b data-i18n="ecole.steps.s2.title">L'espace de votre école</b>
-          <span data-i18n="ecole.steps.s2.desc">Nous l'ouvrons, la direction invite les professeurs.</span>
+          <b data-i18n="ecole.steps.s2.title">Votre école et 3 classes</b>
+          <span data-i18n="ecole.steps.s2.desc">Nous ouvrons l'espace de votre école et 3 classes, la direction invite les professeurs.</span>
         </li>
         <li>
           <span class="s-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="18" cy="20" r="8" fill="url(#gx)"/><circle cx="46" cy="20" r="8" fill="url(#gx)"/><circle cx="32" cy="16" r="9" fill="url(#gx2)"/><path d="M4 50 c0-10 6-16 14-16 s14 6 14 16 z" fill="url(#gx)" opacity="0.8"/><path d="M32 50 c0-10 6-16 14-16 s14 6 14 16 z" fill="url(#gx)" opacity="0.8"/><path d="M17 52 c0-12 7-19 15-19 s15 7 15 19 z" fill="url(#gx2)"/></svg></span>
-          <b data-i18n="ecole.steps.s3.title">Vos classes au travail</b>
-          <span data-i18n="ecole.steps.s3.desc">Les élèves rejoignent leur classe avec un code.</span>
+          <b data-i18n="ecole.steps.s3.title">3 mois d'utilisation</b>
+          <span data-i18n="ecole.steps.s3.desc">Vos professeurs utilisent Galac6 avec leurs classes ; les élèves les rejoignent avec un code.</span>
+        </li>
+        <li>
+          <span class="s-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="6" width="40" height="52" rx="6" fill="url(#gx)"/><rect x="22" y="2" width="20" height="10" rx="3" fill="url(#gx2)"/><g stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-opacity="0.9"><path d="M21 26 H43"/><path d="M21 36 H43"/></g><path d="M22 47 l5 5 l10 -11" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <b data-i18n="ecole.steps.s4.title">Bilan, puis devis</b>
+          <span data-i18n="ecole.steps.s4.desc">Nous faisons le bilan ensemble. Si vous continuez, nous vous proposons un devis.</span>
         </li>
       </ol>
+      <div class="e-cta" style="justify-content: center; margin-top: 36px;">
+        <a class="btn btn-primary" href="#devis" data-type="pilote" data-i18n="ecole.cta.pilot">Devenir école pilote</a>
+      </div>
     </div>
   </div>
 
@@ -769,6 +786,17 @@
       var q = new URLSearchParams(location.search);
       preset(q.get('type'), q.get('module'));
     } catch (e) {}
+
+    // Arrivée par #pilote (lien des campagnes) : coche « Devenir école pilote » et descend au formulaire.
+    // Seule l'ancre change : les paramètres utm de l'adresse restent intacts.
+    function fromHash() {
+      if (location.hash !== '#pilote') return;
+      preset('pilote');
+      var target = $('devis');
+      if (target) target.scrollIntoView();
+    }
+    window.addEventListener('hashchange', fromHash);
+    fromHash();
 
     // Mini-formulaires « Être recontacté »
     document.querySelectorAll('form.quick').forEach(function (f) {
