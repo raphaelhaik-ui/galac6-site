@@ -5,6 +5,8 @@
 // - Avec accord « mesure d'audience » : UTM du premier contact gardés 30 jours
 //   (localStorage, clé galac6_utm).
 // - Ajoute ces UTM aux liens vers l'application pour garder l'origine à l'inscription.
+//   L'origine réelle du visiteur remplace les UTM écrits en dur dans un lien
+//   (ex. lien « LinkedIn » de profs-testeurs.html), qui ne servent que par défaut.
 // Aucun identifiant, aucun cookie, aucune dépendance externe.
 // Syntaxe volontairement ancienne (ES5) pour les vieux Safari iOS.
 (function () {
@@ -131,19 +133,22 @@
       href = href.substring(0, posAncre);
     }
     var posRequete = href.indexOf('?');
-    var requete = posRequete !== -1 ? href.substring(posRequete) : '';
+    var base = posRequete !== -1 ? href.substring(0, posRequete) : href;
+    var requete = posRequete !== -1 ? href.substring(posRequete + 1) : '';
+    // On garde les paramètres du lien qui ne sont pas des UTM (ex. inscription=prof)
+    var gardes = [];
+    var morceaux = requete ? requete.split('&') : [];
+    for (var j = 0; j < morceaux.length; j++) {
+      if (morceaux[j] && morceaux[j].indexOf('utm_') !== 0) gardes.push(morceaux[j]);
+    }
+    // Les UTM du visiteur remplacent ceux écrits en dur dans le lien
     var ajouts = [];
     for (var i = 0; i < NOMS.length; i++) {
-      var nom = NOMS[i];
-      var valeur = utmATransmettre[nom];
-      // On ne touche pas à un paramètre déjà présent dans le lien
-      if (valeur && requete.indexOf(nom + '=') === -1) {
-        ajouts.push(nom + '=' + encodeURIComponent(valeur));
-      }
+      var valeur = utmATransmettre[NOMS[i]];
+      if (valeur) ajouts.push(NOMS[i] + '=' + encodeURIComponent(valeur));
     }
-    if (!ajouts.length) return;
-    var separateur = posRequete === -1 ? '?' : (/[?&]$/.test(href) ? '' : '&');
-    lien.setAttribute('href', href + separateur + ajouts.join('&') + ancre);
+    var nouveau = base + '?' + gardes.concat(ajouts).join('&') + ancre;
+    if (nouveau !== lien.getAttribute('href')) lien.setAttribute('href', nouveau);
   }
 
   // Enrichit tous les liens présents dans la page
