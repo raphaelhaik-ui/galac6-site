@@ -254,8 +254,6 @@
     .cta-inner { border-radius: 20px; background: var(--bg-card); padding: 40px 28px; text-align: center; display: grid; gap: 14px; justify-items: center; }
     .cta-inner h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; }
     .cta-inner p { color: var(--text-muted); max-width: 56ch; }
-    .e-final .quick { justify-items: center; margin-top: 8px; }
-    .e-final .quick-row { justify-content: center; }
     @media (max-width: 640px) { .cta-inner { padding: 30px 18px; } }
 
     /* ─── Demande de devis ─── */
@@ -611,17 +609,6 @@
           <h2 data-i18n="ecole.final.title">Et si votre école essayait Galac6 ?</h2>
           <p data-i18n="ecole.final.sub">Recevez un devis adapté au nombre de vos élèves.</p>
           <a class="btn btn-primary" href="#devis" data-type="devis" data-i18n="ecole.cta.quote">Demander un devis</a>
-          <form class="quick" id="quick-bottom" data-where="bas de page" novalidate aria-label="Être recontacté">
-            <p class="quick-title" data-i18n="ecole.quick.title2">Ou laissez-nous vos coordonnées pour être recontacté</p>
-            <div class="quick-row">
-              <label class="sr" for="qb-email" data-i18n="ecole.f.email">Email professionnel</label>
-              <input type="email" id="qb-email" placeholder="Email professionnel" data-ph-en="Work email" autocomplete="email">
-              <label class="sr" for="qb-etab" data-i18n="ecole.f.etab">Établissement</label>
-              <input type="text" id="qb-etab" placeholder="Établissement" data-ph-en="School" autocomplete="organization">
-              <button class="btn btn-outline" type="submit" data-i18n="ecole.quick.send">Envoyer</button>
-            </div>
-            <p class="quick-msg" hidden role="status"></p>
-          </form>
         </div>
       </div>
     </div>

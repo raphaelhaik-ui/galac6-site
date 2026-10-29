@@ -295,7 +295,6 @@
       'ecole.cta.pilot': 'Become a pilot school',
       'ecole.pilot.offer': '<strong>Free pilot: 3 months on 3 classes, no commitment.</strong> After that, pricing on quote.',
       'ecole.quick.title': 'Ask us to get back to you',
-      'ecole.quick.title2': 'Or leave us your details and we will get back to you',
       'ecole.quick.send': 'Send',
       'ecole.video.eyebrow': 'Demo',
       'ecole.video.title': 'See Galac6 in action',
