@@ -126,6 +126,14 @@
     .grad { background: linear-gradient(135deg, var(--g1), var(--g2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
     .section { padding-block: 72px; border-top: 1px solid var(--border); }
     .section.first { border-top: 0; }
+    .video-box { position: relative; max-width: 880px; margin: 0 auto; aspect-ratio: 16 / 9; border-radius: 18px; overflow: hidden; border: 1px solid var(--border); background: radial-gradient(120% 90% at 85% 10%, rgba(168,85,247,.45), transparent 60%), radial-gradient(90% 80% at 10% 100%, rgba(99,102,241,.40), transparent 60%), var(--bg-card); }
+    .video-box iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .video-play { position: absolute; inset: 0; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: none; border: 0; color: var(--text); font: inherit; cursor: pointer; }
+    .video-icon { width: 76px; height: 76px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(135deg, var(--g1), var(--g2)); box-shadow: 0 10px 30px rgba(124,92,252,.45); transition: transform .2s; }
+    .video-icon svg { width: 34px; height: 34px; margin-left: 4px; }
+    .video-play:hover .video-icon, .video-play:focus-visible .video-icon { transform: scale(1.08); }
+    .video-label { font-weight: 700; font-size: 1.05rem; }
+    .video-note { text-align: center; color: var(--text-muted); font-size: .82rem; margin-top: 12px; }
     .eyebrow { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary-light); margin-bottom: 10px; }
     .h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); font-weight: 800; }
     .lead { color: var(--text-muted); font-size: 1.05rem; max-width: 62ch; margin-top: 12px; }
@@ -394,6 +402,24 @@
           </g>
         </svg>
       </div>
+    </div>
+  </div>
+
+  <!-- ═══ VIDÉO DE DÉMONSTRATION ═══ -->
+  <!-- RGPD : rien n'est chargé depuis YouTube avant le clic (domaine youtube-nocookie ensuite) -->
+  <div class="section" id="video">
+    <div class="wrap">
+      <div class="sec-head center">
+        <p class="eyebrow" data-i18n="ecole.video.eyebrow">Démonstration</p>
+        <h2 class="h2" data-i18n="ecole.video.title">Découvrez Galac6 en vidéo</h2>
+      </div>
+      <div class="video-box" id="video-box">
+        <button type="button" class="video-play" id="video-play" aria-label="Lancer la vidéo de démonstration">
+          <span class="video-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#fff"/></svg></span>
+          <span class="video-label" data-i18n="ecole.video.play">Lancer la démonstration (2 min)</span>
+        </button>
+      </div>
+      <p class="video-note" data-i18n="ecole.video.note">La vidéo est hébergée par YouTube : elle ne se charge que si vous cliquez.</p>
     </div>
   </div>
 
@@ -776,6 +802,17 @@
       a.addEventListener('click', function () { preset(a.getAttribute('data-type'), a.getAttribute('data-module')); });
     });
     document.querySelectorAll('input[name="type"]').forEach(function (r) { r.addEventListener('change', setTitle); });
+
+    // Vidéo de démonstration : le lecteur YouTube n'est inséré qu'au clic
+    var vPlay = $('video-play');
+    if (vPlay) vPlay.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/7-tak84IhaY?autoplay=1&rel=0';
+      f.title = 'Galac6 — démonstration';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      var box = $('video-box'); box.innerHTML = ''; box.appendChild(f);
+    });
 
     // Arrivée depuis la page Tarifs : /ecole?type=pilote&module=ecole#devis
     try {
