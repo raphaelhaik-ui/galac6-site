@@ -1,0 +1,56 @@
+# Galac6
+
+> Galac6 is a French edtech: a didactic AI tutor for pupils from CP to Terminale (primary school, collège and lycée, roughly grades 1 to 12), built on the French national curriculum (programme scolaire français). It guides pupils with questions and hints instead of giving them the answers. Data is hosted in France. Galac6 follows the French curriculum only: it does not follow any other country's curriculum.
+
+Galac6 (galac6.io) is designed in France. It is designed for pupils and their parents at home, and for teachers and school leaders in schools that follow the French curriculum, in France and in French schools abroad. The web app is at https://galac6web.netlify.app/.
+
+What Galac6 does:
+- AI tutor for homework help and lessons, didactic (it explains and asks questions, it does not do the work for the pupil).
+- Quizzes, exercises (in unlimited number, created by the AI) and revision sheets made from a photo of the lesson.
+- Dictations read aloud and marked mistake by mistake, with the rule explained: over 2,000 dictations, from CP to lycée.
+- Mental maths (calcul mental).
+- Mock exams for the brevet des collèges (DNB) and the baccalauréat, with detailed marking by the AI.
+- Over 400 official past papers (brevet, French bac, maths bac, Concours général, course aux nombres), including over 250 in maths and 112 papers set outside France. AI-generated practice papers are always labelled as such and are never presented as official past papers. The marking is written by the AI from the original mark scheme; it is not an official answer key.
+- For schools: dictations and paper copies marked (paper copies are scanned, then marked), follow-up of every pupil and class, pupils imported from a list exported from Pronote or École Directe, or a pasted list.
+
+Pricing (France, in euros): a Discovery plan to try every feature in limited amounts each month; Student plan at €69 a year or €7.99 a month; Family plan (up to 4 children) at €99 a year or €11.99 a month; Exam Pack at €19. Schools: pricing on quote, with a free 3-month pilot on 3 classes.
+
+Languages of the website: French (main), English, Spanish, Italian, German. The app content follows the French curriculum, in French.
+
+## Key pages (French)
+
+- [Accueil](https://galac6.io/): AI tutor from CP to Terminale
+- [Soutien scolaire par IA](https://galac6.io/soutien-scolaire-ia): homework help and revision
+- [Dictée en ligne](https://galac6.io/dictee-en-ligne): dictations read aloud and marked
+- [Annales du brevet et du bac](https://galac6.io/annales-brevet-bac): official past papers with AI marking
+- [Réviser le brevet](https://galac6.io/reviser-brevet): mock brevet (DNB)
+- [Réviser le bac de français](https://galac6.io/reviser-bac-francais): commentary, essay, oral
+- [Primaire](https://galac6.io/primaire): CP to CM2
+- [Galac6 pour les écoles](https://galac6.io/ecole): for schools and teachers
+- [Écoles françaises à l'étranger](https://galac6.io/ecoles-francaises-etranger): for French schools abroad
+- [Familles françaises à l'étranger](https://galac6.io/familles-francaises-etranger): French curriculum for families living abroad
+- [Tarifs](https://galac6.io/tarifs): pricing
+- [Données des élèves](https://galac6.io/donnees-eleves): where pupil data is stored and who sees it
+- [À propos](https://galac6.io/about)
+- [Blog](https://galac6.io/blog)
+
+## Key pages (English)
+
+- [Home](https://galac6.io/en/)
+- [For schools](https://galac6.io/en/ecole)
+- [French schools abroad](https://galac6.io/en/french-schools-abroad)
+- [French curriculum for families abroad](https://galac6.io/en/french-curriculum-abroad)
+- [French dictation online](https://galac6.io/en/french-dictation-online)
+- [Brevet and bac past papers](https://galac6.io/en/brevet-bac-past-papers)
+- [Pricing](https://galac6.io/en/tarifs)
+- [Bring Galac6 to your country (vote)](https://galac6.io/international)
+
+## Other languages
+
+- [Español](https://galac6.io/es/), [programa escolar francés en el extranjero](https://galac6.io/es/programa-escolar-frances)
+- [Italiano](https://galac6.io/it/), [programma scolastico francese all'estero](https://galac6.io/it/programma-scolastico-francese)
+- [Deutsch](https://galac6.io/de/), [französischer Lehrplan im Ausland](https://galac6.io/de/franzoesischer-lehrplan)
+
+## Contact
+
+- Email: hello@galac6.io

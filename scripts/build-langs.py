@@ -57,10 +57,19 @@ GROUPS = {
     'tarifs': {'src': 'tarifs.html', 'src_lang': 'fr'},
     'vote': {'src': 'international.html', 'src_lang': 'en'},
     'etranger': {'src': 'ecoles-francaises-etranger.html', 'src_lang': 'fr'},
+    'expat': {'src': 'familles-francaises-etranger.html', 'src_lang': 'fr'},
+    'dictee': {'src': 'dictee-en-ligne.html', 'src_lang': 'fr'},
+    'annales': {'src': 'annales-brevet-bac.html', 'src_lang': 'fr'},
 }
-# Pages à adresse propre par langue, sans les autres langues (fr et en seulement)
+# Pages à adresse propre par langue (une langue absente = pas de page dans cette langue)
 SLUGS = {
     'etranger': {'fr': '/ecoles-francaises-etranger', 'en': '/en/french-schools-abroad'},
+    # Familles françaises à l'étranger : adresses construites sur les requêtes réelles de chaque langue (SEO, 31/10/2026)
+    'expat': {'fr': '/familles-francaises-etranger', 'en': '/en/french-curriculum-abroad',
+              'es': '/es/programa-escolar-frances', 'it': '/it/programma-scolastico-francese',
+              'de': '/de/franzoesischer-lehrplan'},
+    'dictee': {'fr': '/dictee-en-ligne', 'en': '/en/french-dictation-online'},
+    'annales': {'fr': '/annales-brevet-bac', 'en': '/en/brevet-bac-past-papers'},
 }
 # Chemin (adresse) d'une page traduite → groupe
 PATH_TO_GROUP = {
@@ -69,6 +78,29 @@ PATH_TO_GROUP = {
     '/international': 'vote', '/international.html': 'vote',
     '/ecoles-francaises-etranger': 'etranger', '/ecoles-francaises-etranger.html': 'etranger',
     '/french-schools-abroad': 'etranger',
+    '/french-curriculum-abroad': 'expat', '/french-dictation-online': 'dictee', '/brevet-bac-past-papers': 'annales',
+    '/familles-francaises-etranger': 'expat', '/familles-francaises-etranger.html': 'expat',
+    '/dictee-en-ligne': 'dictee', '/dictee-en-ligne.html': 'dictee',
+    '/annales-brevet-bac': 'annales', '/annales-brevet-bac.html': 'annales',
+}
+# Fil d'Ariane des pages françaises (les autres langues : clés nav.* ou <groupe>.crumb des dictionnaires)
+CRUMB_FR = {'ecole': 'Pour les écoles', 'about': 'À propos', 'tarifs': 'Tarifs',
+            'etranger': "Écoles françaises à l'étranger", 'expat': "Familles françaises à l'étranger",
+            'dictee': 'Dictée en ligne', 'annales': 'Annales du brevet et du bac'}
+CRUMB_KEY = {'ecole': 'nav.school', 'about': 'nav.about', 'tarifs': 'nav.pricing', 'etranger': 'etranger.crumb',
+             'expat': 'expat.crumb', 'dictee': 'dictee.crumb', 'annales': 'annales.crumb'}
+# Pages françaises dont les données structurées sont écrites par ce script (les autres : à la main)
+AUTO_LD_FR = ('ecole', 'about', 'etranger', 'expat', 'dictee', 'annales')
+# Pays servis (données structurées) : la France et les pays d'Europe qui ont des écoles françaises.
+# Galac6 y suit toujours le programme français, sans promesse d'un programme local.
+AREA_SERVED = ['FR', 'BE', 'LU', 'CH', 'MC', 'AD', 'ES', 'PT', 'IT', 'DE', 'AT', 'NL', 'GB', 'IE',
+               'DK', 'SE', 'NO', 'FI', 'PL', 'CZ', 'HU', 'RO', 'GR', 'HR', 'BG', 'SK', 'SI', 'CY', 'MT']
+ORG_DESC = {
+    'fr': "Edtech française d'innovation pédagogique : un tuteur IA scolaire didactique pour le primaire, le collège et le lycée, du CP à la Terminale, construit sur le programme scolaire français. Données hébergées en France.",
+    'en': "French edtech for the future of school: a didactic AI tutor from CP to Terminale (grades 1 to 12), built on the French national curriculum. Data hosted in France.",
+    'es': "Edtech francesa para el futuro de la escuela: un tutor con IA didáctico del CP a la Terminale, según el programa escolar francés. Datos alojados en Francia.",
+    'it': "Edtech francese per il futuro della scuola: un tutor IA didattico dalla primaria al liceo, sul programma scolastico francese. Dati ospitati in Francia.",
+    'de': "Französisches Edtech für die Schule der Zukunft: ein didaktischer KI-Tutor von der 1. bis zur 12. Klasse, nach dem französischen Lehrplan. Daten in Frankreich.",
 }
 EMOJI = re.compile('[\U0001F000-\U0001FAFF☀-➿⭐️\U0001F1E6-\U0001F1FF]\\s?')
 
@@ -262,6 +294,63 @@ def hreflang_html(group):
     return '\n'.join(lines)
 
 
+# ───────────────────── données structurées (JSON-LD) ─────────────────────
+
+def faq_items(soup):
+    """Questions et réponses visibles d'une page (FAQ « .faq-item » ou « .faq details »)."""
+    def hidden(el):
+        return el.find_parent(class_='en-only') is not None or 'en-only' in (el.get('class') or [])
+    out = []
+    for item in soup.select('.faq-item'):
+        q = item.select_one('.faq-question span') or item.select_one('.faq-question')
+        a = item.select_one('.faq-answer-inner') or item.select_one('.faq-answer')
+        if q and a and not hidden(item):
+            out.append((q, a))
+    for item in soup.select('.faq details'):
+        q, a = item.find('summary'), item.select_one('.ans')
+        if q and a and not hidden(item):
+            out.append((q, a))
+    return [{'@type': 'Question', 'name': norm(q.get_text()),
+             'acceptedAnswer': {'@type': 'Answer', 'text': norm(EMOJI.sub('', a.get_text()))}} for q, a in out]
+
+
+def organization_ld(lang):
+    return {'@type': 'Organization', '@id': SITE + '/#organization', 'name': 'Galac6', 'url': SITE + '/',
+            'logo': SITE + '/icons/logo.png', 'slogan': "L'IA au service de la pédagogie",
+            'description': ORG_DESC.get(lang, ORG_DESC['en']), 'email': 'hello@galac6.io',
+            'areaServed': AREA_SERVED, 'knowsLanguage': ALL}
+
+
+def page_ld(soup, group, lang, url, home_name, crumb_name):
+    """Page (WebPage, ou FAQPage si la page a une FAQ visible), fil d'Ariane, et pour l'accueil l'organisation et le site."""
+    title = norm(soup.title.get_text()) if soup.title else 'Galac6'
+    desc_tag = soup.find('meta', attrs={'name': 'description'})
+    faq = faq_items(soup)
+    website_id = SITE + page_path('index', lang) + '#website'
+    page = {'@type': 'FAQPage' if faq else 'WebPage', '@id': url + '#webpage', 'url': url, 'name': title,
+            'inLanguage': lang, 'isPartOf': {'@id': website_id}, 'publisher': {'@id': SITE + '/#organization'}}
+    if desc_tag is not None:
+        page['description'] = desc_tag.get('content', '')
+    if faq:
+        page['mainEntity'] = faq
+    graph = []
+    if group == 'index':
+        graph += [organization_ld(lang),
+                  {'@type': 'WebSite', '@id': website_id, 'url': url, 'name': 'Galac6', 'inLanguage': lang,
+                   'publisher': {'@id': SITE + '/#organization'}}]
+    else:
+        graph.append({'@type': 'BreadcrumbList', 'itemListElement': [
+            {'@type': 'ListItem', 'position': 1, 'name': home_name, 'item': SITE + page_path('index', lang)},
+            {'@type': 'ListItem', 'position': 2, 'name': crumb_name, 'item': url}]})
+    graph.insert(0 if group != 'index' else len(graph), page)
+    return {'@context': 'https://schema.org', '@graph': graph}
+
+
+def ld_script(ld):
+    return ('<script type="application/ld+json" id="g6-ld">\n%s\n  </script>'
+            % json.dumps(ld, ensure_ascii=False, indent=2))
+
+
 # ─────────────────── 1. mise à jour des pages sources ───────────────────
 
 def source_pages():
@@ -351,6 +440,13 @@ def update_sources():
                 s = re.sub(r'<script id="g6-cookie-txt">.*?</script>', lambda m: block, s, flags=re.S)
             else:
                 s = s.replace('</head>', '  ' + block + '\n</head>', 1)
+
+        # Données structurées des pages françaises écrites par le script (fil d'Ariane, FAQ, langue)
+        if group in AUTO_LD_FR:
+            soup = BeautifulSoup(s, 'html.parser')
+            block = ld_script(page_ld(soup, group, 'fr', SITE + page_path(group, 'fr'), 'Accueil', CRUMB_FR[group]))
+            s = re.sub(r'[ \t]*<script type="application/ld\+json"[^>]*>.*?</script>\n?', '', s, flags=re.S)
+            s = re.sub(r'(<link rel="canonical"[^>]*>\n)', lambda m: m.group(1) + '  ' + block + '\n', s, count=1)
 
         # hreflang des pages traduites
         if group:
@@ -570,29 +666,10 @@ def build_page(group, lang, D, countries, errors):
         menu.replace_with(new)
 
     # ── données structurées traduites ──
-    ld = None
-    if group == 'index':
-        faq = []
-        for item in soup.select('.faq-item'):
-            q = item.select_one('.faq-question span')
-            a = item.select_one('.faq-answer-inner')
-            if q and a:
-                faq.append({'@type': 'Question', 'name': norm(q.get_text()),
-                            'acceptedAnswer': {'@type': 'Answer', 'text': norm(EMOJI.sub('', a.get_text()))}})
-        ld = {'@context': 'https://schema.org', '@graph': [
-            {'@type': 'Organization', '@id': SITE + '/#organization', 'name': 'Galac6', 'url': SITE + '/',
-             'logo': SITE + '/icons/logo.png', 'description': meta('description')},
-            {'@type': 'WebSite', '@id': SITE + path + '#website', 'url': url, 'name': 'Galac6',
-             'inLanguage': lang, 'publisher': {'@id': SITE + '/#organization'}},
-            {'@type': 'FAQPage', 'inLanguage': lang, 'mainEntity': faq}]}
-    elif group in ('ecole', 'about', 'tarifs', 'etranger'):
-        name = need({'ecole': 'nav.school', 'about': 'nav.about', 'tarifs': 'nav.pricing', 'etranger': 'etranger.crumb'}[group])
-        ld = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
-            {'@type': 'ListItem', 'position': 1, 'name': need('gen.home'), 'item': SITE + page_path('index', lang)},
-            {'@type': 'ListItem', 'position': 2, 'name': name, 'item': url}]}
+    crumb = need(CRUMB_KEY[group]) if group in CRUMB_KEY else None
+    ld = None if group == 'vote' else page_ld(soup, group, lang, url, need('gen.home'), crumb)
     if ld:
-        tag = soup.new_tag('script', type='application/ld+json')
-        tag.string = '\n' + json.dumps(ld, ensure_ascii=False, indent=2) + '\n'
+        tag = BeautifulSoup(ld_script(ld), 'html.parser').script
         canon_last = head.find_all('link', attrs={'rel': 'alternate'})
         (canon_last[-1] if canon_last else canon).insert_after(tag)
 
@@ -657,21 +734,69 @@ def build_page(group, lang, D, countries, errors):
 
 # ─────────────── 3. _redirects et sitemap.xml ───────────────
 
+def clean_path(rel):
+    """Adresse propre d'un fichier : index.html → /, blog/index.html → /blog, en/index.html → /en/, about.html → /about."""
+    if rel == 'index.html':
+        return '/'
+    if rel.endswith('/index.html'):
+        d = rel[:-len('index.html')]
+        return '/' + (d if d.strip('/') in LANGS else d.rstrip('/'))
+    return '/' + rel[:-len('.html')]
+
+
+def all_html_pages():
+    files = source_pages() + ['teaser/index.html']
+    for l in LANGS:
+        d = os.path.join(ROOT, l)
+        if os.path.isdir(d):
+            files += ['%s/%s' % (l, n) for n in sorted(os.listdir(d)) if n.endswith('.html')]
+    return files
+
+
 def update_redirects():
     lines = ['# Pages traduites (généré par scripts/build-langs.py) : adresses sans .html']
     for l in LANGS:
-        for g in ('ecole', 'about', 'tarifs', 'vote', 'etranger'):
+        for g in GROUPS:
             p = page_path(g, l)
-            if p and p != '/international':
+            if g != 'index' and p and p != '/international':
                 lines.append('%-24s %-28s 200' % (p, '/' + out_file(p)))
+    for g in GROUPS:  # pages françaises ajoutées par groupe (adresse sans .html)
+        p = page_path(g, 'fr')
+        if g not in ('index', 'ecole', 'about', 'tarifs', 'etranger') and p:
+            lines.append('%-24s %-28s 200' % (p, '/' + out_file(p)))
     lines.append('# /pages traduites')
+    # Redirections 301 des adresses en .html vers les adresses propres (un seul exemplaire de chaque page pour Google).
+    # « 301! » : obligatoire, le fichier .html existant aurait sinon priorité sur la règle.
+    # Pas de règle avec barre finale (Netlify confond /blog et /blog/ : la règle bouclerait).
+    lines.append('# Adresses en .html → adresses propres (301, généré par scripts/build-langs.py)')
+    for rel in all_html_pages():
+        if rel == 'teaser/index.html':  # images en chemins relatifs : la page doit rester servie sous /teaser/
+            continue
+        lines.append('%-40s %-34s 301!' % ('/' + rel, clean_path(rel)))
+    lines.append('# /adresses en .html')
     block = '\n'.join(lines)
     s = read('_redirects')
+    s = re.sub(r'\n?# Adresses en \.html.*?# /adresses en \.html\n?', '\n', s, flags=re.S)
     if '# Pages traduites' in s:
         s = re.sub(r'# Pages traduites.*?# /pages traduites', lambda m: block, s, flags=re.S)
     else:
         s = s.rstrip('\n') + '\n' + block + '\n'
-    write('_redirects', s)
+    write('_redirects', s.rstrip('\n') + '\n')
+
+
+def file_date(rel):
+    """Date réelle de dernière modification d'un fichier : aujourd'hui s'il a changé depuis le dernier commit,
+    sinon la date de son dernier commit (git)."""
+    try:
+        dirty = subprocess.run(['git', '-C', ROOT, 'status', '--porcelain', '--', rel],
+                               capture_output=True, text=True).stdout.strip()
+        if dirty:
+            return TODAY
+        d = subprocess.run(['git', '-C', ROOT, 'log', '-1', '--format=%cs', '--', rel],
+                           capture_output=True, text=True).stdout.strip()
+        return d or TODAY
+    except Exception:
+        return TODAY
 
 
 def update_sitemap():
@@ -681,11 +806,21 @@ def update_sitemap():
     for g in GROUPS:
         for l in group_langs(g):
             group_paths.add(SITE + page_path(g, l))
-    kept = [u for u in urls if re.search(r'<loc>([^<]*)</loc>', u).group(1) not in group_paths]
-    prio = {'index': '1.0', 'tarifs': '0.9', 'ecole': '0.9', 'about': '0.5', 'vote': '0.6', 'etranger': '0.8'}
+    redirects = redirect_map()
+    kept = []
+    for u in urls:  # pages hors groupes (gardées telles quelles, date réelle recalculée)
+        loc = re.search(r'<loc>([^<]*)</loc>', u).group(1)
+        if loc in group_paths:
+            continue
+        rel = resolve(loc[len(SITE):] or '/', redirects)
+        if rel:
+            u = re.sub(r'<lastmod>[^<]*</lastmod>', '<lastmod>%s</lastmod>' % file_date(rel), u)
+        kept.append(u)
+    prio = {'index': '1.0', 'tarifs': '0.9', 'ecole': '0.9', 'about': '0.5', 'vote': '0.6', 'etranger': '0.8',
+            'expat': '0.8', 'dictee': '0.8', 'annales': '0.8'}
     freq = {'index': 'weekly'}
     new = []
-    for g in ('index', 'tarifs', 'ecole', 'etranger', 'about', 'vote'):
+    for g in ('index', 'tarifs', 'ecole', 'etranger', 'expat', 'dictee', 'annales', 'about', 'vote'):
         alts = ''.join('    <xhtml:link rel="alternate" hreflang="%s" href="%s%s"/>\n' % (l, SITE, page_path(g, l))
                        for l in group_langs(g))
         alts += '    <xhtml:link rel="alternate" hreflang="x-default" href="%s%s"/>\n' % (
@@ -695,7 +830,9 @@ def update_sitemap():
             if l != 'fr' and g != 'vote':
                 p -= 0.1
             new.append('  <url>\n    <loc>%s%s</loc>\n%s    <lastmod>%s</lastmod>\n    <changefreq>%s</changefreq>\n'
-                       '    <priority>%.1f</priority>\n  </url>\n' % (SITE, page_path(g, l), alts, TODAY, freq.get(g, 'monthly'), p))
+                       '    <priority>%.1f</priority>\n  </url>\n' % (SITE, page_path(g, l), alts,
+                                                                       file_date(out_file(page_path(g, l)) if page_path(g, l) != '/' else 'index.html'),
+                                                                       freq.get(g, 'monthly'), p))
     out = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
            + ''.join(new) + ''.join(kept) + '</urlset>\n')
@@ -774,11 +911,7 @@ def check_links():
     """Tous les href/src internes de toutes les pages du site (y compris les ancres #)."""
     redirects = redirect_map()
     problems = []
-    files = source_pages() + ['teaser/index.html']
-    for l in LANGS:
-        d = os.path.join(ROOT, l)
-        if os.path.isdir(d):
-            files += ['%s/%s' % (l, n) for n in sorted(os.listdir(d)) if n.endswith('.html')]
+    files = all_html_pages()
     ids_cache = {}
 
     def ids(rel):
