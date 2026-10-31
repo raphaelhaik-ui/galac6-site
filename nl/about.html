@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Over Galac6: AI in dienst van de pedagogiek</title>
+<meta content="Franse edtech voor onderwijsinnovatie: een didactische AI-tutor die de leerling laat nadenken, volgens het Franse curriculum, van CP tot Terminale." name="description"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<link href="https://galac6.io/nl/about" rel="canonical"/>
+<!-- hreflang (généré par scripts/build-langs.py) -->
+<link href="https://galac6.io/about" hreflang="fr" rel="alternate"/>
+<link href="https://galac6.io/en/about" hreflang="en" rel="alternate"/>
+<link href="https://galac6.io/es/about" hreflang="es" rel="alternate"/>
+<link href="https://galac6.io/it/about" hreflang="it" rel="alternate"/>
+<link href="https://galac6.io/de/about" hreflang="de" rel="alternate"/>
+<link href="https://galac6.io/pt/about" hreflang="pt" rel="alternate"/>
+<link href="https://galac6.io/nl/about" hreflang="nl" rel="alternate"/>
+<link href="https://galac6.io/about" hreflang="x-default" rel="alternate"/><script id="g6-ld" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://galac6.io/nl/about#webpage",
+      "url": "https://galac6.io/nl/about",
+      "name": "Over Galac6: AI in dienst van de pedagogiek",
+      "inLanguage": "nl",
+      "isPartOf": {
+        "@id": "https://galac6.io/nl/#website"
+      },
+      "publisher": {
+        "@id": "https://galac6.io/#organization"
+      },
+      "description": "Franse edtech voor onderwijsinnovatie: een didactische AI-tutor die de leerling laat nadenken, volgens het Franse curriculum, van CP tot Terminale."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://galac6.io/nl/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Over ons",
+          "item": "https://galac6.io/nl/about"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+<!-- /hreflang -->
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content="website" property="og:type"/>
+<meta content="Galac6" property="og:site_name"/>
+<meta content="nl_NL" property="og:locale"/>
+<meta content="Over Galac6: onze educatieve missie" property="og:title"/>
+<meta content="Schoolondersteuning met AI voor iedereen bereikbaar maken, met een didactische aanpak. Een Franse EdTech." property="og:description"/>
+<meta content="https://galac6.io/nl/about" property="og:url"/>
+<meta content="https://galac6.io/images/og-image-v2.jpg" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Over Galac6: onze educatieve missie" name="twitter:title"/>
+<meta content="Schoolondersteuning met AI voor iedereen bereikbaar maken, met een didactische aanpak. Een Franse EdTech." name="twitter:description"/>
+<meta content="https://galac6.io/images/og-image-v2.jpg" name="twitter:image"/>
+<link href="/icons/32x32.png" rel="icon" type="image/png"/>
+<!-- Google Analytics 4 + Consent Mode v2 (RGPD) -->
+<script src="/analytics.js"></script>
+<!-- Suivi des UTM (origine des visiteurs, sans cookie) -->
+<script src="/utm.js"></script>
+<style>
+    :root {
+      --primary: #7c5cfc;
+      --primary-light: #a78bfa;
+      --bg: #0b0b14;
+      --bg-card: #13131f;
+      --bg-card-hover: #1a1a2e;
+      --text: #f0f0f5;
+      --text-muted: #8a8aa3;
+      --border: #1e1e32;
+      --gradient-start: #6366f1;
+      --gradient-end: #a855f7;
+      --glow: rgba(99,102,241,0.15);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--primary-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ─── Navbar ─── */
+    .navbar-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,11,20,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+
+    .navbar-brand img { height: 44px; width: auto; }
+
+    .navbar-brand span {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .navbar-france { font-size: 1.1rem; margin-left: 0.1rem; }
+
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .navbar-links a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .navbar-links a:hover { color: var(--text); text-decoration: none; }
+    .navbar-links a.active { color: var(--text); }
+
+    .navbar-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .navbar-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .navbar-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .navbar-hamburger.open span:nth-child(2) { opacity: 0; }
+    .navbar-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ─── About page ─── */
+    .about-page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .about-intro {
+      display: flex;
+      gap: 3rem;
+      align-items: flex-start;
+    }
+
+    .about-photo {
+      width: 220px;
+      min-width: 220px;
+      height: auto;
+      border-radius: 1rem;
+      object-fit: cover;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+
+    .about-text h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+    }
+
+    /* ─── Contact form ─── */
+    .contact-section {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-section p.contact-subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      max-width: 560px;
+    }
+
+    .contact-form label {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      color: var(--text);
+      font-size: 0.95rem;
+      font-family: inherit;
+      transition: border-color 0.2s;
+      outline: none;
+      resize: vertical;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--primary);
+    }
+
+    .contact-form textarea {
+      min-height: 130px;
+    }
+
+    .contact-form button {
+      align-self: flex-start;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 0.75rem 2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .contact-form button:hover { opacity: 0.85; }
+
+    .contact-success {
+      display: none;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--primary-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    .footer-badges {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .footer-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 900px) {
+      .navbar { padding: 1rem 1.5rem; flex-wrap: wrap; }
+      .navbar-hamburger { display: flex; }
+      .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        padding: 1rem 0 0.5rem;
+      }
+      .navbar-links.open { display: flex; }
+      .navbar-links a { padding: 0.6rem 0; font-size: 1rem; }
+    }
+
+    /* ─── EN Banner ─── */
+    .en-banner {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: #fff;
+      text-align: center;
+      padding: 0.6rem 2.5rem;
+      font-size: 0.85rem;
+      position: relative;
+    }
+    .en-banner a { color: #fff; text-decoration: underline; }
+    .en-banner-close {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      opacity: 0.8;
+      padding: 0.25rem;
+    }
+    .en-banner-close:hover { opacity: 1; }
+
+    /* ─── Lang toggle ─── */
+    .lang-toggle {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 0.25rem;
+      line-height: 1;
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+    .lang-toggle:hover { transform: scale(1.15); }
+
+    @media (max-width: 640px) {
+      .about-intro { flex-direction: column; align-items: center; }
+      .about-photo { width: 160px; min-width: 160px; }
+      .about-text h1 { font-size: 1.6rem; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+      /* Menu : une seule ligne, plus serré sur écran moyen */
+    .navbar-links a { white-space: nowrap; }
+    @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
+  </style>
+<!-- Meta Pixel (Facebook) - charge apres consentement -->
+<script src="/meta-pixel.js"></script>
+<style id="g6-nav-css">
+    /* Menu : marge du logo, sélecteur de langue (généré par scripts/build-langs.py) */
+    html, body { overflow-x: clip; } /* les halos décoratifs du haut de page ne créent plus de défilement horizontal */
+    .navbar-brand { margin-inline-end: 1.5rem; flex-shrink: 0; }
+    .navbar-links a { white-space: nowrap; }
+    .lang-menu { position: relative; }
+    .lang-menu summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; min-height: 44px; padding: 0 4px; color: var(--text-muted, #8a8aa3); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; user-select: none; }
+    .lang-menu summary::-webkit-details-marker { display: none; }
+    .lang-menu summary::after { content: ""; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid currentColor; }
+    .lang-menu summary:hover, .lang-menu[open] summary { color: var(--text, #f0f0f5); }
+    .lang-menu-list { position: absolute; top: 100%; inset-inline-end: 0; z-index: 300; min-width: 160px; display: grid; gap: 2px; padding: 6px; background: #13131f; border: 1px solid #2a2a44; border-radius: 12px; box-shadow: 0 12px 32px rgba(0,0,0,0.45); }
+    .navbar .lang-menu-list a { display: block; padding: 0.55rem 0.8rem; border-radius: 8px; color: var(--text-muted, #8a8aa3); font-size: 0.9rem; font-weight: 500; text-decoration: none; white-space: nowrap; min-height: 0; }
+    .navbar .lang-menu-list a:hover { background: rgba(124,92,252,0.14); color: var(--text, #f0f0f5); }
+    .navbar .lang-menu-list a[aria-current] { color: var(--text, #f0f0f5); font-weight: 700; }
+    /* Grand écran : menu un peu resserré pour tenir sur une ligne */
+    @media (min-width: 1241px) {
+      .navbar-links { gap: 1.25rem !important; }
+      .navbar-links a { font-size: 0.88rem; }
+      .navbar-brand { margin-inline-end: 1.25rem; }
+    }
+    @media (min-width: 901px) and (max-width: 1240px) {
+      .navbar { padding-left: 2rem !important; padding-right: 2rem !important; }
+      .navbar-links { gap: 0.75rem !important; }
+      .navbar-links a { font-size: 0.8rem !important; }
+      .navbar-links a[href^="https://galac6web"] { padding: 0.45rem 0.9rem !important; }
+      .navbar-brand { margin-inline-end: 1rem; }
+      .navbar-brand span { font-size: 1.35rem; }
+      .navbar-brand img { height: 38px; }
+    }
+    /* Menu hamburger (900 px et moins, réglage d'origine des pages) */
+    @media (max-width: 900px) {
+      .navbar-brand { margin-inline-end: 0; }
+      .lang-menu { align-self: center; }
+      .lang-menu summary { font-size: 0.95rem; }
+      .lang-menu-list { position: static; display: flex; flex-wrap: wrap; justify-content: center; min-width: 0; margin-top: 4px; }
+      .navbar .lang-menu-list a { padding: 0.6rem 0.75rem; font-size: 0.95rem !important; }
+    }
+  </style>
+<style id="g6-banner-css">
+    /* Bandeau anglais « Currently available in France only » : toutes les pages, collé en haut avec le menu (généré par scripts/build-langs.py) */
+    .g6-intl-banner { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 8px 16px; background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; font-size: 0.85rem; font-weight: 500; line-height: 1.45; text-align: center; direction: ltr; }
+    .g6-intl-banner svg { flex: none; opacity: 0.9; }
+    .g6-intl-banner span { min-width: 0; overflow-wrap: anywhere; }
+    .g6-intl-banner a { color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.5); }
+    .g6-intl-banner a:hover, .g6-intl-banner a:focus-visible { border-bottom-color: #fff; text-decoration: none; }
+    body > .g6-intl-banner { position: sticky; top: 0; z-index: 120; }
+    @media (max-width: 480px) { .g6-intl-banner { font-size: 0.8rem; padding: 7px 12px; } }
+  </style>
+<script>window.G6_DYN = {"error": "Er is een fout opgetreden, probeer het opnieuw.", "send": "Verzenden →", "sending": "Bezig met verzenden..."};</script>
+<script>window.G6_COOKIE_TXT = {"texte": "We willen graag de bezoeken aan deze website meten (Google Analytics) en de resultaten van onze advertenties (Google Ads, Meta). Deze diensten plaatsen cookies en worden alleen geladen als u toestemming geeft. U kunt op elk moment van gedachten veranderen via de link «Cookies beheren» onderaan elke pagina.", "plus": "Meer weten", "refuser": "Alles weigeren", "perso": "Aanpassen", "accepter": "Alles accepteren", "titrePerso": "Kies uw cookies", "audienceTitre": "Bezoekersstatistieken", "audienceTexte": "Google Analytics: telt de bezoeken en bekeken pagina's, om de website te verbeteren.", "pubTitre": "Reclame", "pubTexte": "Google Ads en Meta (Facebook, Instagram): meten de resultaten van onze advertenties.", "enregistrer": "Mijn keuzes opslaan", "necessaires": "De website bewaart ook uw taal en deze keuze op uw apparaat (noodzakelijk, geen toestemming nodig).", "lien": "/mentions-legales#cookies-en"};</script>
+<style id="g6-lang-css">
+    /* Bandeau d'information des pages es/it/de/pt/nl, sous le menu (généré par scripts/build-langs.py) */
+    .lang-notice { margin: 0; padding: 10px 16px; background: rgba(99,102,241,0.12); border-bottom: 1px solid rgba(139,147,255,0.3); color: #d6d9f5; font-size: 0.88rem; line-height: 1.5; text-align: center; }
+    .lang-notice a { color: #fff; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.5); }
+  </style>
+</head>
+<body>
+<!-- ═══ NAVBAR ═══ -->
+<div class="navbar-wrapper">
+<!-- intl-banner --><div class="g6-intl-banner" dir="ltr" id="g6-intl-banner" lang="en" role="note"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span>Currently available in France only (French school system). Want Galac6 in your country? <a href="/nl/international">Send a request →</a></span></div><!-- /intl-banner -->
+<nav class="navbar">
+<a class="navbar-brand" href="/nl/">
+<img alt="Galac6" height="132" src="/icons/icon-nav.png" width="132"/>
+<span>Galac6</span>
+</a>
+<button aria-label="Menu" class="navbar-hamburger" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+<span></span><span></span><span></span>
+</button>
+<div class="navbar-links">
+<a href="/nl/">Home</a>
+<a href="/nl/ecole">Voor scholen</a>
+<a href="/nl/tarifs">Prijzen</a>
+<a class="active" href="/nl/about">Over ons</a>
+<!-- lang-menu --><details class="lang-menu"><summary aria-label="Taal : Nederlands">NL</summary><div class="lang-menu-list"><a href="/about" hreflang="fr" lang="fr">Français</a><a href="/en/about" hreflang="en" lang="en">English</a><a href="/es/about" hreflang="es" lang="es">Español</a><a href="/it/about" hreflang="it" lang="it">Italiano</a><a href="/de/about" hreflang="de" lang="de">Deutsch</a><a href="/pt/about" hreflang="pt" lang="pt">Português</a><a aria-current="page" href="/nl/about" hreflang="nl" lang="nl">Nederlands</a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
+<a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inloggen of registreren</a>
+</div>
+</nav>
+</div><div class="lang-notice" role="note">Galac6 volgt vandaag het Franse curriculum. De app is in het Frans en de interface is ook beschikbaar in het Engels. Wilt u dat Galac6 wordt aangepast aan uw land? <a href="/nl/international">Stem voor uw land</a>: we passen Galac6 aan voor de landen die er het vaakst om vragen.</div>
+<!-- ═══ CONTENT ═══ -->
+<div class="about-page">
+<div class="about-intro">
+<img alt="Oprichter van Galac6" class="about-photo" height="880" src="/images/raphael.jpg" width="660"/>
+<div class="about-text">
+<h1>Over Galac6</h1>
+<p>Als ingenieur, ondernemer en vooral vader van 3 kinderen heb ik Galac6 opgericht vanuit een eenvoudige vaststelling: huiswerk neemt een enorme plaats in het gezinsleven in en is een bron van stress, voor kinderen en ouders.</p>
+<p>Zoals veel ouders heb ik de verleiding van ChatGPT gezien: snel, op elk moment beschikbaar, in staat om alles uit te leggen. Maar ook slecht afgestemd op de schoolcontext en bijna onmogelijk te gebruiken zonder te spieken.</p>
+<p>Daarom heb ik Galac6 ontwikkeld, een alternatief dat voor leerlingen is bedacht: een AI die helpt begrijpen, herhalen en vooruitgaan, zonder het huiswerk in hun plaats te maken. Galac6 steunt op de beste AI-modellen op de markt (Anthropic, Google, Mistral), elk ingezet waar het het sterkst is, voor antwoorden die altijd relevant en pedagogisch zijn.</p>
+<p style="margin-top: 2rem; font-style: italic; color: var(--text);">Raphael Haik, Parijs, Frankrijk</p>
+</div>
+</div>
+<!-- ─── Contact ─── -->
+<div class="contact-section">
+<h2>Contact met mij</h2>
+<p class="contact-subtitle">Een vraag, een suggestie, een samenwerking? Schrijf mij rechtstreeks.</p>
+<form class="contact-form" id="contact-form">
+<label>
+<span>Uw naam</span>
+<input id="contact-name" placeholder="Voor- en achternaam" required="" type="text"/>
+</label>
+<label>
+<span>Uw e-mailadres</span>
+<input id="contact-email" placeholder="naam@voorbeeld.nl" required="" type="email"/>
+</label>
+<label>
+<span>Bericht</span>
+<textarea id="contact-message" placeholder="Uw bericht..." required=""></textarea>
+</label>
+<button id="contact-btn" type="submit">Verzenden →</button>
+</form>
+<div class="contact-success" id="contact-success">Bericht verzonden, dank u! Ik antwoord zo snel mogelijk.</div>
+</div>
+</div>
+<!-- ═══ FOOTER ═══ -->
+<footer>
+<div>Galac6. AI in dienst van de pedagogiek</div>
+<div class="footer-badges">
+<a href="/nl/about" style="color: var(--text-muted);">Over ons</a>
+<a href="/dictee-en-ligne" hreflang="fr" style="color: var(--text-muted);">Dictees online (in het Frans)</a>
+<a href="/annales-brevet-bac" hreflang="fr" style="color: var(--text-muted);">Examens brevet en bac (in het Frans)</a>
+<a href="/nl/frans-curriculum" style="color: var(--text-muted);">Gezinnen in het buitenland</a>
+<a href="/mentions-legales" hreflang="fr" style="color: var(--text-muted);">Juridische informatie</a>
+<a href="/nl/international" style="color: var(--text-muted);">Staat uw school buiten Frankrijk?</a>
+<a data-cookie-settings="" href="#" style="color: var(--text-muted);">Cookies beheren</a>
+<span class="footer-badge">Gemaakt in Frankrijk</span>
+</div>
+</footer>
+
+<script src="/cookie-consent.js"></script>
+<script>
+  // Textes du formulaire : français par défaut, remplacés sur les pages traduites (window.G6_DYN, scripts/build-langs.py)
+  var CONTACT_TXT = window.G6_DYN || { sending: 'Envoi en cours...', send: 'Envoyer →', error: 'Une erreur est survenue, veuillez réessayer.' };
+  document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('contact-btn');
+    btn.disabled = true;
+    btn.textContent = CONTACT_TXT.sending;
+    var name = document.getElementById('contact-name').value;
+    var email = document.getElementById('contact-email').value;
+    var message = document.getElementById('contact-message').value;
+    try {
+      var res = await fetch('https://obhzumzqullnsnnfjlbt.supabase.co/functions/v1/notify-contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: name, email: email, message: message })
+      });
+      if (res.ok) {
+        document.getElementById('contact-form').style.display = 'none';
+        document.getElementById('contact-success').style.display = 'block';
+      } else {
+        btn.disabled = false;
+        btn.textContent = CONTACT_TXT.send;
+        alert(CONTACT_TXT.error);
+      }
+    } catch(err) {
+      btn.disabled = false;
+      btn.textContent = CONTACT_TXT.send;
+      alert(CONTACT_TXT.error);
+    }
+  });
+</script>
+</body>
+</html>

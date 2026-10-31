@@ -43,6 +43,16 @@
 /de/tarifs               /de/tarifs.html              200
 /de/international        /de/international.html       200
 /de/franzoesischer-lehrplan /de/franzoesischer-lehrplan.html 200
+/pt/ecole                /pt/ecole.html               200
+/pt/about                /pt/about.html               200
+/pt/tarifs               /pt/tarifs.html              200
+/pt/international        /pt/international.html       200
+/pt/curriculo-frances    /pt/curriculo-frances.html   200
+/nl/ecole                /nl/ecole.html               200
+/nl/about                /nl/about.html               200
+/nl/tarifs               /nl/tarifs.html              200
+/nl/international        /nl/international.html       200
+/nl/frans-curriculum     /nl/frans-curriculum.html    200
 /familles-francaises-etranger /familles-francaises-etranger.html 200
 /dictee-en-ligne         /dictee-en-ligne.html        200
 /annales-brevet-bac      /annales-brevet-bac.html     200
@@ -107,4 +117,16 @@
 /de/index.html                           /de/                               301!
 /de/international.html                   /de/international                  301!
 /de/tarifs.html                          /de/tarifs                         301!
+/pt/about.html                           /pt/about                          301!
+/pt/curriculo-frances.html               /pt/curriculo-frances              301!
+/pt/ecole.html                           /pt/ecole                          301!
+/pt/index.html                           /pt/                               301!
+/pt/international.html                   /pt/international                  301!
+/pt/tarifs.html                          /pt/tarifs                         301!
+/nl/about.html                           /nl/about                          301!
+/nl/ecole.html                           /nl/ecole                          301!
+/nl/frans-curriculum.html                /nl/frans-curriculum               301!
+/nl/index.html                           /nl/                               301!
+/nl/international.html                   /nl/international                  301!
+/nl/tarifs.html                          /nl/tarifs                         301!
 # /adresses en .html

@@ -50,6 +50,8 @@ Languages of the website: French (main), English, Spanish, Italian, German. The 
 - [Español](https://galac6.io/es/), [programa escolar francés en el extranjero](https://galac6.io/es/programa-escolar-frances)
 - [Italiano](https://galac6.io/it/), [programma scolastico francese all'estero](https://galac6.io/it/programma-scolastico-francese)
 - [Deutsch](https://galac6.io/de/), [französischer Lehrplan im Ausland](https://galac6.io/de/franzoesischer-lehrplan)
+- [Português](https://galac6.io/pt/), [currículo francês no estrangeiro](https://galac6.io/pt/curriculo-frances)
+- [Nederlands](https://galac6.io/nl/), [Frans curriculum in het buitenland](https://galac6.io/nl/frans-curriculum)
 
 ## Contact
 

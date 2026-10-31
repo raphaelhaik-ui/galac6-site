@@ -1,4 +1,4 @@
-// Génère scripts/langs/countries.json : noms de pays traduits (es, it, de, he) pour la page de vote,
+// Génère scripts/langs/countries.json : noms de pays traduits (es, it, de, he, pt, nl) pour la page de vote,
 // à partir de la liste anglaise d'international.html (les valeurs envoyées restent en anglais).
 // Usage (rarement utile, le fichier est déjà dans le dépôt) : node scripts/make-countries.js
 const fs = require('fs'), path = require('path');
@@ -24,17 +24,21 @@ const LABEL = {
   es: { 'Hong Kong': 'Hong Kong', 'Macao': 'Macao', 'Palestine': 'Palestina', 'Congo (Republic of the)': 'Congo (República del)' },
   it: { 'Hong Kong': 'Hong Kong', 'Macao': 'Macao', 'Palestine': 'Palestina', 'Congo (Republic of the)': 'Congo (Repubblica del)', 'Congo (Democratic Republic of the)': 'Congo (Repubblica Democratica del)' },
   de: { 'Hong Kong': 'Hongkong', 'Macao': 'Macau', 'Palestine': 'Palästina', 'Congo (Republic of the)': 'Kongo (Republik)', 'Congo (Democratic Republic of the)': 'Kongo (Demokratische Republik)' },
+  pt: { 'Hong Kong': 'Hong Kong', 'Macao': 'Macau', 'Palestine': 'Palestina', "Côte d'Ivoire": 'Costa do Marfim', 'Congo (Republic of the)': 'Congo (República do)', 'Congo (Democratic Republic of the)': 'Congo (República Democrática do)' },
+  nl: { 'Hong Kong': 'Hongkong', 'Macao': 'Macau', 'Palestine': 'Palestina', 'Congo (Republic of the)': 'Congo (Republiek)', 'Congo (Democratic Republic of the)': 'Congo (Democratische Republiek)' },
   he: { 'Hong Kong': 'הונג קונג', 'Macao': 'מקאו', 'Palestine': 'פלסטין', 'Congo (Republic of the)': 'קונגו (הרפובליקה של)', 'Congo (Democratic Republic of the)': 'קונגו (הרפובליקה הדמוקרטית של)' }
 };
 const out = {};
-for (const lang of ['es', 'it', 'de', 'he']) {
-  const dn = new Intl.DisplayNames([lang], { type: 'region' });
+// Portugais du Portugal (pt-PT) : « Irão », « Vietname »… et non les formes brésiliennes
+const LOCALE = { pt: 'pt-PT' };
+for (const lang of ['es', 'it', 'de', 'he', 'pt', 'nl']) {
+  const dn = new Intl.DisplayNames([LOCALE[lang] || lang], { type: 'region' });
   const list = names.map(n => {
     const code = fix[n] || byName[n];
     if (!code) throw new Error('Pays sans code : ' + n);
     return { value: n, label: (LABEL[lang] && LABEL[lang][n]) || dn.of(code) };
   });
-  list.sort((x, y) => x.label.localeCompare(y.label, lang));
+  list.sort((x, y) => x.label.localeCompare(y.label, LOCALE[lang] || lang));
   out[lang] = list;
 }
 fs.writeFileSync(path.join(__dirname, 'langs', 'countries.json'), JSON.stringify(out, null, 1) + '\n');

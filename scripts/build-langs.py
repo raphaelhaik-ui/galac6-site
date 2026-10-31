@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Galac6 — fabrication des pages traduites du site vitrine (en, es, it, de, he).
+Galac6 — fabrication des pages traduites du site vitrine (en, es, it, de, pt, nl ; he en réserve).
 
 Pourquoi : la traduction anglaise d'i18n.js ne s'affiche qu'après un clic dans le navigateur,
 Google ne voit donc que le français. Ce script écrit de vraies pages statiques par langue :
   /en/  /en/ecole  /en/about  /en/tarifs           (vote anglais = /international, inchangé)
-  /es/  /es/ecole  /es/about  /es/tarifs  /es/international   (idem it, de, he)
+  /es/  /es/ecole  /es/about  /es/tarifs  /es/international   (idem it, de, pt, nl)
   /ecoles-francaises-etranger → /en/french-schools-abroad    (français et anglais seulement)
 
 Sources des textes :
   - français : les pages françaises elles-mêmes (index.html, ecole.html, about.html, tarifs.html) ;
   - anglais : i18n.js (+ compléments dans scripts/langs/en.json) ; page de vote : international.html ;
-  - es, it, de, he : scripts/langs/<langue>.json (mêmes clés qu'i18n.js) ;
+  - es, it, de, pt, nl (et he) : scripts/langs/<langue>.json (mêmes clés qu'i18n.js) ;
   - noms de pays de la page de vote : scripts/langs/countries.json (voir make-countries.js).
 
 Ce que fait le script, dans l'ordre :
@@ -42,11 +42,12 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LANGDIR = os.path.join(ROOT, 'scripts', 'langs')
 SITE = 'https://galac6.io'
 # Hébreu retiré pour l'instant (Raphaël, 31/10/2026) : remettre 'he' ici pour le republier, le dictionnaire scripts/langs/he.json est gardé
-LANGS = ['en', 'es', 'it', 'de']
+# Portugais (du Portugal) et néerlandais ajoutés le 31/10/2026
+LANGS = ['en', 'es', 'it', 'de', 'pt', 'nl']
 ALL = ['fr'] + LANGS
-NAMES = {'fr': 'Français', 'en': 'English', 'es': 'Español', 'it': 'Italiano', 'de': 'Deutsch', 'he': 'עברית'}
+NAMES = {'fr': 'Français', 'en': 'English', 'es': 'Español', 'it': 'Italiano', 'de': 'Deutsch', 'pt': 'Português', 'nl': 'Nederlands', 'he': 'עברית'}
 LANG_LABEL_FR = 'Langue'
-OG_LOCALE = {'fr': 'fr_FR', 'en': 'en_GB', 'es': 'es_ES', 'it': 'it_IT', 'de': 'de_DE', 'he': 'he_IL'}
+OG_LOCALE = {'fr': 'fr_FR', 'en': 'en_GB', 'es': 'es_ES', 'it': 'it_IT', 'de': 'de_DE', 'pt': 'pt_PT', 'nl': 'nl_NL', 'he': 'he_IL'}
 TODAY = datetime.date.today().isoformat()
 
 # Groupes de pages traduites : fichier source et langue de la source
@@ -67,7 +68,7 @@ SLUGS = {
     # Familles françaises à l'étranger : adresses construites sur les requêtes réelles de chaque langue (SEO, 31/10/2026)
     'expat': {'fr': '/familles-francaises-etranger', 'en': '/en/french-curriculum-abroad',
               'es': '/es/programa-escolar-frances', 'it': '/it/programma-scolastico-francese',
-              'de': '/de/franzoesischer-lehrplan'},
+              'de': '/de/franzoesischer-lehrplan', 'pt': '/pt/curriculo-frances', 'nl': '/nl/frans-curriculum'},
     'dictee': {'fr': '/dictee-en-ligne', 'en': '/en/french-dictation-online'},
     'annales': {'fr': '/annales-brevet-bac', 'en': '/en/brevet-bac-past-papers'},
 }
@@ -101,6 +102,8 @@ ORG_DESC = {
     'es': "Edtech francesa para el futuro de la escuela: un tutor con IA didáctico del CP a la Terminale, según el programa escolar francés. Datos alojados en Francia.",
     'it': "Edtech francese per il futuro della scuola: un tutor IA didattico dalla primaria al liceo, sul programma scolastico francese. Dati ospitati in Francia.",
     'de': "Französisches Edtech für die Schule der Zukunft: ein didaktischer KI-Tutor von der 1. bis zur 12. Klasse, nach dem französischen Lehrplan. Daten in Frankreich.",
+    'pt': "Edtech francesa de inovação pedagógica: um tutor IA didático do CP à Terminale, segundo o currículo francês. Dados alojados em França.",
+    'nl': "Franse edtech voor onderwijsinnovatie: een didactische AI-tutor van CP tot Terminale, volgens het Franse curriculum. Gegevens gehost in Frankrijk.",
 }
 EMOJI = re.compile('[\U0001F000-\U0001FAFF☀-➿⭐️\U0001F1E6-\U0001F1FF]\\s?')
 
@@ -180,7 +183,7 @@ RTL_CSS = """
 """
 
 NOTICE_CSS = """
-    /* Bandeau d'information des pages es/it/de/he, sous le menu (généré par scripts/build-langs.py) */
+    /* Bandeau d'information des pages es/it/de/pt/nl, sous le menu (généré par scripts/build-langs.py) */
     .lang-notice { margin: 0; padding: 10px 16px; background: rgba(99,102,241,0.12); border-bottom: 1px solid rgba(139,147,255,0.3); color: #d6d9f5; font-size: 0.88rem; line-height: 1.5; text-align: center; }
     .lang-notice a { color: #fff; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.5); }
 """
@@ -582,7 +585,7 @@ def build_page(group, lang, D, countries, errors):
     for tag in soup.find_all('script', src=re.compile(r'(^|/)i18n\.js$')):
         tag.decompose()
 
-    # ── bandeau d'information traduit, sous le menu (es, it, de, he ; l'anglais a déjà le bandeau du haut) ──
+    # ── bandeau d'information traduit, sous le menu (es, it, de, pt, nl ; l'anglais a déjà le bandeau du haut) ──
     if lang != 'en':
         notice = BeautifulSoup('<div class="lang-notice" role="note">%s</div>' % need('gen.notice'), 'html.parser').div
         anchor = soup.find('div', class_='navbar-wrapper')
