@@ -366,6 +366,56 @@
     .toc-list a.is-active .toc-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); border-color: transparent; color: #fff; box-shadow: 0 0 0 4px rgba(124,92,252,0.22); }
     .toc-src .toc-n { width: 1.6rem; }
     .toc-src .toc-n::after { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+    /* V2 : Galac6 mis en avant dans les sommaires */
+    .g6-tag { flex: none; display: inline-block; margin-left: auto; padding: 0.05rem 0.5rem; border-radius: 999px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.03em; line-height: 1.5; color: #d9ccff; background: rgba(124,92,252,0.22); border: 1px solid rgba(167,139,250,0.4); align-self: center; }
+    .plan-toc li.is-g6, .toc-sheet .plan-toc li.is-g6 { background: rgba(124,92,252,0.1); border: 1px solid rgba(167,139,250,0.32); border-radius: 12px; margin: 0.15rem 0; }
+    .plan-toc li.is-g6 .pt-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; }
+    .plan .plan-toc li.is-g6 .pt-d { margin-right: 0.6rem; }
+    .toc-list li.is-g6 > a { background: rgba(124,92,252,0.1); border: 1px solid rgba(167,139,250,0.3); border-radius: 10px; margin: 0.15rem 0 0.15rem calc(-0.3rem - 1px); padding-left: 0.3rem; color: var(--text); flex-wrap: wrap; row-gap: 0.25rem; }
+    .toc-list li.is-g6 .toc-t { flex: 1 1 0; min-width: 0; }
+    .toc-list li.is-g6 .g6-tag { margin-left: 0; margin-top: 0.1rem; align-self: flex-start; }
+    .jump-cmp { margin: -0.4rem 0 1.6rem; }
+    .article p.jump-cmp { margin: -0.4rem 0 1.6rem; }
+    .jump-cmp a { display: inline-flex; align-items: center; gap: 0.5rem; min-height: 44px; padding: 0.55rem 1.1rem; border-radius: 12px; background: rgba(124,92,252,0.14); border: 1px solid rgba(167,139,250,0.45); color: var(--text); font-weight: 700; font-size: 0.98rem; line-height: 1.3; }
+    .jump-cmp a:hover { background: rgba(124,92,252,0.22); text-decoration: none; }
+    .jump-cmp svg { flex: none; width: 18px; height: 18px; fill: none; stroke: var(--primary-light); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* V2 : tableau comparatif Galac6 / IA généraliste */
+    .cmp { width: 100%; border-collapse: separate; border-spacing: 0; margin: 0; font-size: 0.95rem; }
+    .cmp th, .cmp td { text-align: left; vertical-align: top; font-weight: 400; padding: 0.95rem 1rem; border-bottom: 1px solid var(--border); }
+    .cmp thead th { position: sticky; top: var(--nav-h, 0px); z-index: 2; background: var(--bg); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); padding-top: 0.8rem; padding-bottom: 0.8rem; border-bottom: 1px solid rgba(167,139,250,0.35); }
+    .cmp thead th.cmp-hg { background: #1a1533; color: var(--text); border: 1px solid rgba(167,139,250,0.5); border-bottom-color: rgba(167,139,250,0.35); border-radius: 14px 14px 0 0; font-size: 0.9rem; text-transform: none; letter-spacing: 0; }
+    .cmp-brand { display: inline-flex; align-items: center; gap: 0.5rem; }
+    .cmp-brand img { width: 22px; height: 22px; border-radius: 6px; }
+    .cmp th.cmp-q { width: 34%; padding-left: 0; }
+    .cmp td.cmp-g { width: 36%; background: rgba(124,92,252,0.08); border-left: 1px solid rgba(167,139,250,0.5); border-right: 1px solid rgba(167,139,250,0.5); }
+    .cmp tbody tr:last-child td.cmp-g { border-bottom: 1px solid rgba(167,139,250,0.5); border-radius: 0 0 14px 14px; }
+    .cmp td.cmp-c { width: 30%; }
+    .cmp-who { display: none; }
+    .cmp-a { display: flex; align-items: flex-start; gap: 0.6rem; }
+    .cmp-a p { margin: 0 !important; font-size: 0.93rem !important; line-height: 1.5; }
+    .cmp-g .cmp-a p { color: var(--text); }
+    .cmp-c .cmp-a p { color: var(--text-muted); }
+    .pc-ic { flex: none; display: inline-flex; margin-top: 0.05rem; }
+    .pc-ic svg { width: 22px; height: 22px; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .pc-ic.pos svg { stroke: #4cc38a; }
+    .pc-ic.neg svg { stroke: #6e6e88; }
+    .cmp .pc-q span:not(.pc-n) { font-size: 0.85rem; }
+    .cmp .pc-src { font-size: 0.78rem; }
+    @media (max-width: 760px) {
+      .cmp, .cmp tbody, .cmp tr, .cmp th, .cmp td { display: block; width: auto !important; }
+      .cmp thead { display: none; }
+      .cmp tbody tr { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 0.9rem; margin-bottom: 0.7rem; }
+      .cmp th, .cmp td { border: 0; padding: 0; }
+      .cmp th.cmp-q { padding: 0 0 0.75rem; }
+      .cmp td.cmp-g, .cmp tbody tr:last-child td.cmp-g { background: rgba(124,92,252,0.1); border: 1px solid rgba(167,139,250,0.5); border-radius: 10px; padding: 0.65rem 0.75rem; box-shadow: 0 0 0 3px rgba(124,92,252,0.08); }
+      .cmp td.cmp-c { padding: 0.65rem 0.75rem 0; }
+      .cmp-who { display: block; margin-bottom: 0.3rem; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); }
+      .cmp-g .cmp-who { color: var(--primary-light); }
+      .cmp-c .cmp-a p { font-size: 0.88rem !important; }
+      .cmp-c .pc-ic svg { width: 18px; height: 18px; }
+    }
     @media (prefers-reduced-motion: reduce) { .toc-btn, .toc-n, .toc-list a { transition: none; } html { scroll-behavior: auto; } }
   </style>
   <style id="g6-nav-css">
@@ -461,13 +511,14 @@
         <li><a href="#ai-risks"><span class="pt-n">3</span><span class="pt-t">AI and results</span></a><p class="pt-d"><strong>The risks of AI.</strong> When it does the work for the pupil, and why its ready-made answers are a problem.</p></li>
         <li><a href="#learning-to-learn"><span class="pt-n">4</span><span class="pt-t">Learning to learn</span></a></li>
         <li><a href="#three-questions"><span class="pt-n">5</span><span class="pt-t">Three questions to judge an AI for education</span></a></li>
-        <li><a href="#galac6-answer"><span class="pt-n">6</span><span class="pt-t">How Galac6 answers</span></a><p class="pt-d"><strong>How Galac6 responds.</strong> An AI designed around the principles the OECD highlights: preserving effort, making pupils more autonomous, and putting AI at the service of teachers.</p></li>
+        <li class="is-g6"><a href="#galac6-answer"><span class="pt-n">6</span><span class="pt-t">How Galac6 answers</span><span class="g6-tag">Galac6</span></a><p class="pt-d"><strong>How Galac6 responds.</strong> An AI designed around the principles the OECD highlights: preserving effort, making pupils more autonomous, and putting AI at the service of teachers.</p></li>
         <li><a href="#school-of-the-future"><span class="pt-n">7</span><span class="pt-t">The school of the future</span></a><p class="pt-d"><strong>To conclude</strong>: what the school of the future could look like, with AI in the service of teaching, plus a rated comparison with a general-purpose AI.</p></li>
-        <li><a href="#in-summary"><span class="pt-n">8</span><span class="pt-t">In summary</span></a></li>
+        <li class="is-g6"><a href="#in-summary"><span class="pt-n">8</span><span class="pt-t">Galac6 vs general-purpose AI</span><span class="g6-tag">Galac6</span></a></li>
         <li><a href="#faq"><span class="pt-n">9</span><span class="pt-t">Frequently asked questions</span></a></li>
         <li class="pt-src"><a href="#sources"><span class="pt-n" aria-hidden="true"></span><span class="pt-t">Sources</span></a></li>
       </ol>
     </nav>
+    <p class="jump-cmp"><a href="#in-summary">Jump to the Galac6 comparison<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a></p>
 
     <aside class="essentiel" aria-labelledby="key-points-title">
       <h2 id="key-points-title">The key points in 30 seconds</h2>
@@ -718,49 +769,51 @@
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Back to contents</a></p>
 
-    <h2 class="sec" id="in-summary"><span class="sec-n" aria-hidden="true">8</span><span>In summary: the findings of PISA 2025 and Galac6's answers</span></h2>
+    <h2 class="sec" id="in-summary"><span class="sec-n" aria-hidden="true">8</span><span>In summary: Galac6 vs general-purpose AI</span></h2>
     <p>This table sets out the recommendations, risks and problems raised by the study. For each one, it shows Galac6's answer, and what happens when a pupil uses a general-purpose AI such as ChatGPT on their own.</p>
     <div class="pisa-compare">
-      <div class="pc-head" aria-hidden="true"><span>What PISA 2025 raises</span><span>Galac6</span><span>General-purpose AI used alone</span></div>
-      <ol class="pc-list">
-        <li class="pc-row">
-          <div class="pc-q"><span class="pc-n">1</span><div><strong>Doing the work for the pupil</strong><span>Summarising, writing or researching with AI goes hand in hand with lower results in science.</span><a class="pc-src" href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf#page=238" target="_blank" rel="noopener">PISA report, chapter 4, use of AI, p. 236 →</a></div></div>
-          <div class="pc-a pc-g"><div class="pc-h"><span class="pc-who">Galac6</span><span class="pz-score pos" aria-label="very relevant" title="very relevant">+++</span></div><p>Guides with questions and hints, and never writes for the pupil.</p></div>
-          <div class="pc-a pc-c"><div class="pc-h"><span class="pc-who">General-purpose AI</span><span class="pz-score neg" aria-label="counter-productive" title="counter-productive">−−−</span></div><p>Summarises, writes or solves the exercise as soon as it is asked.</p></div>
-        </li>
-        <li class="pc-row">
-          <div class="pc-q"><span class="pc-n">2</span><div><strong>Preserving effort</strong><span>AI should be "a scaffold, not a crutch".</span><a class="pc-src" href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf#page=8" target="_blank" rel="noopener">PISA report, foreword, p. 6 →</a></div></div>
-          <div class="pc-a pc-g"><div class="pc-h"><span class="pc-who">Galac6</span><span class="pz-score pos" aria-label="very relevant" title="very relevant">+++</span></div><p>Help increases only if the pupil is stuck. The final answer remains theirs.</p></div>
-          <div class="pc-a pc-c"><div class="pc-h"><span class="pc-who">General-purpose AI</span><span class="pz-score neg" aria-label="not relevant" title="not relevant">−−</span></div><p>Gives the full answer straight away.</p></div>
-        </li>
-        <li class="pc-row">
-          <div class="pc-q"><span class="pc-n">3</span><div><strong>Making pupils think rather than answering for them</strong><span>Setting goals, asking for help when stuck: pupil autonomy.</span><a class="pc-src" href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf#page=180" target="_blank" rel="noopener">PISA report, chapter 3, pupil autonomy, p. 178 →</a></div></div>
-          <div class="pc-a pc-g"><div class="pc-h"><span class="pc-who">Galac6</span><span class="pz-score pos" aria-label="relevant" title="relevant">++</span></div><p>Answers with questions. The pupil searches and finds their own answer.</p></div>
-          <div class="pc-a pc-c"><div class="pc-h"><span class="pc-who">General-purpose AI</span><span class="pz-score neg" aria-label="not relevant" title="not relevant">−−</span></div><p>Thinks for the pupil, who no longer has to question themselves.</p></div>
-        </li>
-        <li class="pc-row">
-          <div class="pc-q"><span class="pc-n">4</span><div><strong>Tracking your progress</strong><span>Spotting your gaps, coming back to them, checking you have understood: self-regulation.</span><a class="pc-src" href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf#page=189" target="_blank" rel="noopener">PISA report, chapter 3, autonomy, p. 187 →</a></div></div>
-          <div class="pc-a pc-g"><div class="pc-h"><span class="pc-who">Galac6</span><span class="pz-score pos" aria-label="relevant" title="relevant">++</span></div><p>"My topics", "Quiz me on my lesson" and tailored dictations.</p></div>
-          <div class="pc-a pc-c"><div class="pc-h"><span class="pc-who">General-purpose AI</span><span class="pz-score neg" aria-label="not relevant" title="not relevant">−−</span></div><p>No follow-up by topic, no link with the curriculum.</p></div>
-        </li>
-        <li class="pc-row">
-          <div class="pc-q"><span class="pc-n">5</span><div><strong>Persevering after a mistake</strong><span>Improving your work after negative feedback.</span><a class="pc-src" href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf#page=183" target="_blank" rel="noopener">PISA report, chapter 3, perseverance, p. 181 →</a></div></div>
-          <div class="pc-a pc-g"><div class="pc-h"><span class="pc-who">Galac6</span><span class="pz-score pos" aria-label="relevant" title="relevant">++</span></div><p>A second chance with a hint. Every mistake is explained with its rule.</p></div>
-          <div class="pc-a pc-c"><div class="pc-h"><span class="pc-who">General-purpose AI</span><span class="pz-score neg" aria-label="not very relevant" title="not very relevant">−</span></div><p>Explains the mistake if asked, often by giving the answer.</p></div>
-        </li>
-        <li class="pc-row">
-          <div class="pc-q"><span class="pc-n">6</span><div><strong>The teacher's role</strong><span>Teachers' support remains decisive.</span><a class="pc-src" href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf#page=189" target="_blank" rel="noopener">PISA report, chapter 3, teacher support, p. 187 →</a></div></div>
-          <div class="pc-a pc-g"><div class="pc-h"><span class="pc-who">Galac6</span><span class="pz-score pos" aria-label="very relevant" title="very relevant">+++</span></div><p>The class's success by topic, tutor switched off during assessments.</p></div>
-          <div class="pc-a pc-c"><div class="pc-h"><span class="pc-who">General-purpose AI</span><span class="pz-score neg" aria-label="counter-productive" title="counter-productive">−−−</span></div><p>The teacher sees nothing and cannot adjust anything.</p></div>
-        </li>
-        <li class="pc-row">
-          <div class="pc-q"><span class="pc-n">7</span><div><strong>Avoiding a new divide</strong><span>Advantaged pupils more often learn to use AI well.</span><a class="pc-src" href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf#page=243" target="_blank" rel="noopener">PISA report, chapter 4, social background, p. 241 →</a></div></div>
-          <div class="pc-a pc-g"><div class="pc-h"><span class="pc-who">Galac6</span><span class="pz-score pos" aria-label="relevant" title="relevant">++</span></div><p>In class, every pupil has the same tool, supervised by the teacher.</p></div>
-          <div class="pc-a pc-c"><div class="pc-h"><span class="pc-who">General-purpose AI</span><span class="pz-score neg" aria-label="not relevant" title="not relevant">−−</span></div><p>Everything depends on the family and its subscription.</p></div>
-        </li>
-      </ol>
+      <table class="cmp">
+        <thead><tr><th scope="col" class="cmp-hq">What PISA 2025 raises</th><th scope="col" class="cmp-hg"><span class="cmp-brand"><img src="/icons/icon.png" alt="" width="22" height="22">Galac6</span></th><th scope="col" class="cmp-hc">General-purpose AI used alone</th></tr></thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="cmp-q"><div class="pc-q"><span class="pc-n">1</span><div><strong>Doing the work for the pupil</strong><span>Summarising, writing or researching with AI goes hand in hand with lower results in science.</span><a class="pc-src" href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf#page=238" target="_blank" rel="noopener">PISA report, chapter 4, use of AI, p. 236 →</a></div></div></th>
+            <td class="cmp-g"><span class="cmp-who">Galac6</span><div class="cmp-a"><span class="pc-ic pos" role="img" aria-label="very relevant" title="very relevant"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.4l2.8 2.8L16.2 9.6"/></svg></span><p>Guides with questions and hints, and never writes for the pupil.</p></div></td>
+            <td class="cmp-c"><span class="cmp-who">General-purpose AI</span><div class="cmp-a"><span class="pc-ic neg" role="img" aria-label="counter-productive" title="counter-productive"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></svg></span><p>Summarises, writes or solves the exercise as soon as it is asked.</p></div></td>
+          </tr>
+          <tr>
+            <th scope="row" class="cmp-q"><div class="pc-q"><span class="pc-n">2</span><div><strong>Preserving effort</strong><span>AI should be "a scaffold, not a crutch".</span><a class="pc-src" href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf#page=8" target="_blank" rel="noopener">PISA report, foreword, p. 6 →</a></div></div></th>
+            <td class="cmp-g"><span class="cmp-who">Galac6</span><div class="cmp-a"><span class="pc-ic pos" role="img" aria-label="very relevant" title="very relevant"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.4l2.8 2.8L16.2 9.6"/></svg></span><p>Help increases only if the pupil is stuck. The final answer remains theirs.</p></div></td>
+            <td class="cmp-c"><span class="cmp-who">General-purpose AI</span><div class="cmp-a"><span class="pc-ic neg" role="img" aria-label="not relevant" title="not relevant"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></svg></span><p>Gives the full answer straight away.</p></div></td>
+          </tr>
+          <tr>
+            <th scope="row" class="cmp-q"><div class="pc-q"><span class="pc-n">3</span><div><strong>Making pupils think rather than answering for them</strong><span>Setting goals, asking for help when stuck: pupil autonomy.</span><a class="pc-src" href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf#page=180" target="_blank" rel="noopener">PISA report, chapter 3, pupil autonomy, p. 178 →</a></div></div></th>
+            <td class="cmp-g"><span class="cmp-who">Galac6</span><div class="cmp-a"><span class="pc-ic pos" role="img" aria-label="relevant" title="relevant"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.4l2.8 2.8L16.2 9.6"/></svg></span><p>Answers with questions. The pupil searches and finds their own answer.</p></div></td>
+            <td class="cmp-c"><span class="cmp-who">General-purpose AI</span><div class="cmp-a"><span class="pc-ic neg" role="img" aria-label="not relevant" title="not relevant"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></svg></span><p>Thinks for the pupil, who no longer has to question themselves.</p></div></td>
+          </tr>
+          <tr>
+            <th scope="row" class="cmp-q"><div class="pc-q"><span class="pc-n">4</span><div><strong>Tracking your progress</strong><span>Spotting your gaps, coming back to them, checking you have understood: self-regulation.</span><a class="pc-src" href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf#page=189" target="_blank" rel="noopener">PISA report, chapter 3, autonomy, p. 187 →</a></div></div></th>
+            <td class="cmp-g"><span class="cmp-who">Galac6</span><div class="cmp-a"><span class="pc-ic pos" role="img" aria-label="relevant" title="relevant"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.4l2.8 2.8L16.2 9.6"/></svg></span><p>"My topics", "Quiz me on my lesson" and tailored dictations.</p></div></td>
+            <td class="cmp-c"><span class="cmp-who">General-purpose AI</span><div class="cmp-a"><span class="pc-ic neg" role="img" aria-label="not relevant" title="not relevant"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></svg></span><p>No follow-up by topic, no link with the curriculum.</p></div></td>
+          </tr>
+          <tr>
+            <th scope="row" class="cmp-q"><div class="pc-q"><span class="pc-n">5</span><div><strong>Persevering after a mistake</strong><span>Improving your work after negative feedback.</span><a class="pc-src" href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf#page=183" target="_blank" rel="noopener">PISA report, chapter 3, perseverance, p. 181 →</a></div></div></th>
+            <td class="cmp-g"><span class="cmp-who">Galac6</span><div class="cmp-a"><span class="pc-ic pos" role="img" aria-label="relevant" title="relevant"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.4l2.8 2.8L16.2 9.6"/></svg></span><p>A second chance with a hint. Every mistake is explained with its rule.</p></div></td>
+            <td class="cmp-c"><span class="cmp-who">General-purpose AI</span><div class="cmp-a"><span class="pc-ic neg" role="img" aria-label="not very relevant" title="not very relevant"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></svg></span><p>Explains the mistake if asked, often by giving the answer.</p></div></td>
+          </tr>
+          <tr>
+            <th scope="row" class="cmp-q"><div class="pc-q"><span class="pc-n">6</span><div><strong>The teacher's role</strong><span>Teachers' support remains decisive.</span><a class="pc-src" href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf#page=189" target="_blank" rel="noopener">PISA report, chapter 3, teacher support, p. 187 →</a></div></div></th>
+            <td class="cmp-g"><span class="cmp-who">Galac6</span><div class="cmp-a"><span class="pc-ic pos" role="img" aria-label="very relevant" title="very relevant"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.4l2.8 2.8L16.2 9.6"/></svg></span><p>The class's success by topic, tutor switched off during assessments.</p></div></td>
+            <td class="cmp-c"><span class="cmp-who">General-purpose AI</span><div class="cmp-a"><span class="pc-ic neg" role="img" aria-label="counter-productive" title="counter-productive"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></svg></span><p>The teacher sees nothing and cannot adjust anything.</p></div></td>
+          </tr>
+          <tr>
+            <th scope="row" class="cmp-q"><div class="pc-q"><span class="pc-n">7</span><div><strong>Avoiding a new divide</strong><span>Advantaged pupils more often learn to use AI well.</span><a class="pc-src" href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf#page=243" target="_blank" rel="noopener">PISA report, chapter 4, social background, p. 241 →</a></div></div></th>
+            <td class="cmp-g"><span class="cmp-who">Galac6</span><div class="cmp-a"><span class="pc-ic pos" role="img" aria-label="relevant" title="relevant"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.4l2.8 2.8L16.2 9.6"/></svg></span><p>In class, every pupil has the same tool, supervised by the teacher.</p></div></td>
+            <td class="cmp-c"><span class="cmp-who">General-purpose AI</span><div class="cmp-a"><span class="pc-ic neg" role="img" aria-label="not relevant" title="not relevant"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.2l5.6 5.6"/><path d="M14.8 9.2l-5.6 5.6"/></svg></span><p>Everything depends on the family and its subscription.</p></div></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <p class="pisa-table-note">Comparison with the default use of a general-purpose AI (ChatGPT, Gemini, Copilot…), which is not designed for school. Some offer a "study" mode that asks more questions, but the pupil can switch it on or off freely, and the teacher sees none of it. The ratings (from +++ very relevant to −−− counter-productive) are our assessment of the answer given to each finding, not an OECD measurement. The PISA findings are taken from the OECD report (Volume I); the OECD specifies that they describe associations, not cause and effect.</p>
+    <p class="pisa-table-note">Comparison with the default use of a general-purpose AI (ChatGPT, Gemini, Copilot…), which is not designed for school. Some offer a "study" mode that asks more questions, but the pupil can switch it on or off freely, and the teacher sees none of it. The ticks and crosses are our assessment of the answer given to each finding, not an OECD measurement. The PISA findings are taken from the OECD report (Volume I); the OECD specifies that they describe associations, not cause and effect.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Back to contents</a></p>
 
@@ -826,9 +879,9 @@
         <li><a href="#ai-risks"><span class="toc-n">3</span><span class="toc-t">AI and results</span></a></li>
         <li><a href="#learning-to-learn"><span class="toc-n">4</span><span class="toc-t">Learning to learn</span></a></li>
         <li><a href="#three-questions"><span class="toc-n">5</span><span class="toc-t">Three questions to judge an AI for education</span></a></li>
-        <li><a href="#galac6-answer"><span class="toc-n">6</span><span class="toc-t">How Galac6 answers</span></a></li>
+        <li class="is-g6"><a href="#galac6-answer"><span class="toc-n">6</span><span class="toc-t">How Galac6 answers</span><span class="g6-tag">Galac6</span></a></li>
         <li><a href="#school-of-the-future"><span class="toc-n">7</span><span class="toc-t">The school of the future</span></a></li>
-        <li><a href="#in-summary"><span class="toc-n">8</span><span class="toc-t">In summary</span></a></li>
+        <li class="is-g6"><a href="#in-summary"><span class="toc-n">8</span><span class="toc-t">Galac6 vs general-purpose AI</span><span class="g6-tag">Galac6</span></a></li>
         <li><a href="#faq"><span class="toc-n">9</span><span class="toc-t">Frequently asked questions</span></a></li>
         <li class="toc-src"><a href="#sources"><span class="toc-n" aria-hidden="true"></span><span class="toc-t">Sources</span></a></li>
       </ol></div>
@@ -846,9 +899,9 @@
         <li><a href="#ai-risks"><span class="pt-n">3</span><span class="pt-t">AI and results</span></a></li>
         <li><a href="#learning-to-learn"><span class="pt-n">4</span><span class="pt-t">Learning to learn</span></a></li>
         <li><a href="#three-questions"><span class="pt-n">5</span><span class="pt-t">Three questions to judge an AI for education</span></a></li>
-        <li><a href="#galac6-answer"><span class="pt-n">6</span><span class="pt-t">How Galac6 answers</span></a></li>
+        <li class="is-g6"><a href="#galac6-answer"><span class="pt-n">6</span><span class="pt-t">How Galac6 answers</span><span class="g6-tag">Galac6</span></a></li>
         <li><a href="#school-of-the-future"><span class="pt-n">7</span><span class="pt-t">The school of the future</span></a></li>
-        <li><a href="#in-summary"><span class="pt-n">8</span><span class="pt-t">In summary</span></a></li>
+        <li class="is-g6"><a href="#in-summary"><span class="pt-n">8</span><span class="pt-t">Galac6 vs general-purpose AI</span><span class="g6-tag">Galac6</span></a></li>
         <li><a href="#faq"><span class="pt-n">9</span><span class="pt-t">Frequently asked questions</span></a></li>
         <li class="pt-src"><a href="#sources"><span class="pt-n" aria-hidden="true"></span><span class="pt-t">Sources</span></a></li>
       </ol>
@@ -881,6 +934,9 @@
     var sheet = document.getElementById('toc-sheet'), plan = document.getElementById('sommaire');
     if (!article || !heads.length) return;
     var LINE = 170; /* ligne de lecture, sous le menu collant */
+    /* hauteur du menu collant, pour l'en-tête collant du tableau comparatif */
+    function navH() { var n = document.querySelector('.navbar-wrapper'); if (n) document.documentElement.style.setProperty('--nav-h', n.offsetHeight + 'px'); }
+    navH(); window.addEventListener('resize', navH);
     var active = -1, ticking = false;
 
     function absTop(el) { return el.getBoundingClientRect().top + window.pageYOffset; }
