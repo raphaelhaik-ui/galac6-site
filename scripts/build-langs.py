@@ -375,6 +375,9 @@ def source_pages():
 
 def update_banner(s):
     """Retire l'ancien bandeau anglais caché (en-banner) et place le bandeau anglais visible en haut de page."""
+    # Pages marquées « no-intl-banner » (article PISA) : pas de bandeau « France only »
+    if '<!-- no-intl-banner -->' in s:
+        return re.sub(r'\n?[ \t]*<!-- intl-banner -->.*?<!-- /intl-banner -->', '', s, flags=re.S)
     s = re.sub(r'\n[ \t]*<!-- ═══ EN BANNER[^>]*-->[ \t]*', '', s)
     s = re.sub(r'\n[ \t]*<div [^>]*id="en-banner"[^>]*>.*?</div>[ \t]*(?=\n)', '', s, flags=re.S)
     if '<!-- intl-banner -->' in s:
