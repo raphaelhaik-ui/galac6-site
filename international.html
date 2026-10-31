@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Bring Galac6 to your country: vote for your school system</title>
+  <meta name="description" content="Galac6 is built on the French national curriculum. Schools outside France can vote to have the platform adapted to their country: curriculum, language and dictations.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://galac6.io/international">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Galac6">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:title" content="Bring Galac6 to your country">
+  <meta property="og:description" content="Vote for your school system: Galac6 will be adapted to the countries that ask for it most.">
+  <meta property="og:url" content="https://galac6.io/international">
+  <meta property="og:image" content="https://galac6.io/images/og-image-v2.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bring Galac6 to your country">
+  <meta name="twitter:description" content="Vote for your school system: Galac6 will be adapted to the countries that ask for it most.">
+  <meta name="twitter:image" content="https://galac6.io/images/og-image-v2.jpg">
+  <link rel="icon" type="image/png" href="icons/32x32.png">
+  <!-- Google Analytics 4 + Consent Mode v2 (RGPD) -->
+  <script src="analytics.js"></script>
+  <!-- Suivi des UTM (origine des visiteurs, sans cookie) -->
+  <script src="utm.js"></script>
+  <style>
+    /* Mêmes couleurs, composants et formulaire que ecole.html */
+    :root {
+      --primary: #7c5cfc;
+      --primary-light: #a78bfa;
+      --bg: #0b0b14;
+      --bg-card: #13131f;
+      --screen: #0f0f1a;
+      --text: #f0f0f5;
+      --text-muted: #8a8aa3;
+      --border: #1e1e32;
+      --border-strong: #2c2c48;
+      --gradient-start: #6366f1;
+      --gradient-end: #a855f7;
+      --g1: #6366f1;
+      --g2: #a855f7;
+      --tint: rgba(99,102,241,0.10);
+      --tint-line: rgba(99,102,241,0.25);
+      --ok: #34d399;
+      --bad: #f87171;
+      --ok-bg: rgba(52,211,153,0.12);
+      --bad-bg: rgba(248,113,113,0.12);
+      --on-accent: #ffffff;
+      color-scheme: dark;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.6; font-size: 16px;
+      -webkit-font-smoothing: antialiased; overflow-x: hidden;
+    }
+    h1, h2, h3, h4 { text-wrap: balance; letter-spacing: -0.02em; line-height: 1.2; }
+    ul, ol { list-style: none; }
+    a { color: var(--primary-light); text-decoration: none; }
+    button { font-family: inherit; }
+    :focus-visible { outline: 2px solid var(--primary-light); outline-offset: 2px; border-radius: 6px; }
+    [id] { scroll-margin-top: 90px; }
+
+    /* ─── Navbar (identique aux autres pages du site) ─── */
+    .navbar-wrapper { position: sticky; top: 0; z-index: 100; background: rgba(11,11,20,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    .navbar { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 2.5rem; max-width: 1200px; margin: 0 auto; }
+    .navbar-brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+    .navbar-brand img { height: 44px; width: auto; }
+    .navbar-brand span { font-size: 1.6rem; font-weight: 800; color: var(--text); letter-spacing: -0.02em; }
+    .navbar-links { display: flex; align-items: center; gap: 2rem; }
+    .navbar-links a { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; text-decoration: none; transition: color 0.2s; }
+    .navbar-links a:hover { color: var(--text); }
+    .navbar-links a.active { color: var(--text); }
+    .navbar-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; flex-direction: column; justify-content: center; align-items: center; gap: 5px; min-width: 44px; min-height: 44px; }
+    .navbar-hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+    .navbar-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .navbar-hamburger.open span:nth-child(2) { opacity: 0; }
+    .navbar-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 900px) {
+      .navbar { padding: 1rem 1.5rem; flex-wrap: wrap; }
+      .navbar-hamburger { display: flex; }
+      .navbar-links { display: none; flex-direction: column; width: 100%; gap: 0.5rem; padding: 1rem 0 0.5rem; }
+      .navbar-links.open { display: flex; }
+      .navbar-links a { padding: 0.6rem 0; font-size: 1rem; min-height: 44px; display: flex; align-items: center; justify-content: center; }
+    }
+    @media (max-width: 480px) { .navbar { padding: 0.75rem 1rem; } }
+
+    /* ─── Éléments communs ─── */
+    .wrap { max-width: 1100px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+    .grad { background: linear-gradient(135deg, var(--g1), var(--g2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .section { padding-block: 72px; border-top: 1px solid var(--border); }
+    .eyebrow { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary-light); margin-bottom: 10px; }
+    .h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); font-weight: 800; }
+    .lead { color: var(--text-muted); font-size: 1.05rem; max-width: 62ch; margin-top: 12px; }
+    .sec-head { margin-bottom: 36px; }
+    .sec-head.center { text-align: center; }
+    .sec-head.center .lead { margin-left: auto; margin-right: auto; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 12px; font-size: 0.98rem; font-weight: 600; text-decoration: none; cursor: pointer; border: 1px solid transparent; text-align: center; }
+    .btn-primary { background: linear-gradient(135deg, var(--g1), var(--g2)); color: var(--on-accent); box-shadow: 0 4px 20px rgba(99,102,241,0.25); }
+    .btn-outline { background: transparent; color: var(--text); border-color: var(--border-strong); }
+    .btn-outline:hover { border-color: var(--primary); color: var(--primary-light); }
+    .btn-block { width: 100%; }
+    .btn[disabled] { opacity: 0.6; cursor: wait; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; background: var(--tint); border: 1px solid var(--tint-line); border-radius: 100px; padding: 6px 16px; font-size: 0.86rem; font-weight: 600; color: var(--primary-light); }
+    .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 18px; padding: 24px; min-width: 0; }
+    .card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+    .card p, .card li { color: var(--text-muted); font-size: 0.93rem; }
+    .ticks { list-style: none; display: grid; gap: 8px; align-content: start; }
+    .ticks li { display: grid; grid-template-columns: 18px 1fr; gap: 8px; align-items: start; }
+    .ticks li::before { content: ""; width: 10px; height: 6px; border-left: 2px solid var(--ok); border-bottom: 2px solid var(--ok); transform: rotate(-45deg); margin-top: 7px; margin-left: 3px; }
+    @media (prefers-reduced-motion: no-preference) { .btn { transition: transform .2s ease, border-color .2s ease; } .btn:hover { transform: translateY(-1px); } }
+    @media (max-width: 640px) { .section { padding-block: 52px; } }
+
+    /* ─── Haut de page ─── */
+    .i-hero { position: relative; overflow: hidden; }
+    .i-hero::before { content: ""; position: absolute; right: -10%; top: -20%; width: 70%; height: 140%; background: radial-gradient(closest-side, rgba(124,92,252,0.20), transparent); pointer-events: none; }
+    .i-hero-inner { position: relative; display: grid; gap: 20px; justify-items: start; padding-block: 64px 72px; max-width: 760px; }
+    .i-hero h1 { font-size: clamp(2.1rem, 5.2vw, 3.4rem); font-weight: 800; }
+    .i-hero .sub { color: var(--text-muted); font-size: 1.12rem; max-width: 58ch; }
+    .i-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+    .i-cta .btn { min-height: 54px; padding: 0 28px; font-size: 1.05rem; }
+    .fr-note { max-width: 58ch; border-left: 3px solid var(--primary-light); padding: 4px 0 4px 14px; color: var(--text-muted); font-size: 0.95rem; }
+    .fr-note strong { color: var(--text); }
+    @media (max-width: 480px) { .i-cta { width: 100%; } .i-cta .btn { flex: 1 1 100%; } .i-hero-inner { padding-block: 40px 52px; } }
+
+    /* ─── Étapes et cartes ─── */
+    .grid3 { display: grid; gap: 18px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    @media (max-width: 860px) { .grid3 { grid-template-columns: minmax(0, 1fr); } }
+    .i-card { display: grid; gap: 10px; align-content: start; }
+    .i-icon { width: 52px; height: 52px; border-radius: 14px; background: var(--tint); border: 1px solid var(--tint-line); display: grid; place-items: center; color: var(--primary-light); margin-bottom: 4px; }
+    .i-icon svg { width: 28px; height: 28px; }
+    .i-step { font-size: 0.78rem; font-weight: 700; color: var(--primary-light); text-transform: uppercase; letter-spacing: 0.08em; }
+    .note-card { margin-top: 22px; border-color: var(--tint-line); background: var(--tint); }
+    .note-card a { text-decoration: underline; text-underline-offset: 3px; }
+
+    /* ─── Formulaire (repris de ecole.html) ─── */
+    .form-layout { display: grid; gap: 32px; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); align-items: start; }
+    @media (max-width: 900px) { .form-layout { grid-template-columns: minmax(0, 1fr); } }
+    form.card { display: grid; gap: 18px; padding: 28px; }
+    @media (max-width: 640px) { form.card { padding: 20px; } }
+    .f-row { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+    .field { display: grid; gap: 6px; min-width: 0; }
+    .field label { font-size: 0.88rem; font-weight: 600; }
+    .field .hint { font-size: 0.78rem; color: var(--text-muted); font-weight: 400; }
+    input[type="text"], input[type="email"], input[type="tel"], select, textarea { width: 100%; min-height: 48px; border-radius: 12px; border: 1px solid var(--border-strong); background: var(--screen); color: var(--text); padding: 10px 14px; font: inherit; font-size: 16px; }
+    textarea { min-height: 120px; resize: vertical; }
+    .consent { display: grid; grid-template-columns: 22px 1fr; gap: 10px; font-size: 0.85rem; color: var(--text-muted); align-items: start; cursor: pointer; }
+    .consent input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--primary); }
+    .consent a { text-decoration: underline; }
+    .form-msg { border-radius: 12px; padding: 14px 16px; font-size: 0.92rem; border: 1px solid var(--ok); background: var(--ok-bg); color: var(--text); }
+    .form-msg.bad { border-color: var(--bad); background: var(--bad-bg); }
+    .form-msg a { color: inherit; text-decoration: underline; }
+    .err { color: var(--bad); font-size: 0.8rem; }
+    .side { display: grid; gap: 16px; }
+
+    /* ─── Footer (identique aux autres pages du site) ─── */
+    footer { max-width: 1200px; margin: 0 auto; padding: 2rem 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; color: var(--text-muted); font-size: 0.82rem; border-top: 1px solid var(--border); }
+    footer a { color: var(--primary-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .footer-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 0 1.5rem; }
+    .footer-badges a { min-height: 44px; display: inline-flex; align-items: center; }
+    .footer-badge { display: flex; align-items: center; gap: 0.35rem; color: var(--text-muted); font-size: 0.82rem; }
+    @media (max-width: 768px) { footer { flex-direction: column; text-align: center; padding: 2rem 1rem; } .footer-badges { justify-content: center; } }
+  </style>
+  <!-- Meta Pixel (Facebook) - charge apres consentement -->
+  <script src="meta-pixel.js"></script>
+</head>
+<body>
+  <!-- ═══ NAVBAR ═══ -->
+  <div class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="/" class="navbar-brand">
+        <img src="icons/icon.png" alt="Galac6">
+        <span>Galac6</span>
+      </a>
+      <button class="navbar-hamburger" aria-label="Menu" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="navbar-links">
+        <a href="/#features">Features</a>
+        <a href="/ecole">Schools in France</a>
+        <a href="/international" class="active">Outside France</a>
+        <a href="/about">About</a>
+        <a href="#vote" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Vote for your country</a>
+      </div>
+    </nav>
+  </div>
+
+<main>
+  <!-- ═══ HAUT DE PAGE ═══ -->
+  <div class="i-hero">
+    <div class="wrap">
+      <div class="i-hero-inner">
+        <span class="badge">For schools outside France</span>
+        <h1>Bring Galac6 to your country: <span class="grad">vote for your school system</span></h1>
+        <p class="sub">Galac6 is an AI tutoring platform for pupils from primary school to the end of secondary school, with a dedicated space for teachers and school leaders. Today, it is built on the French national curriculum. Raphaël, Galac6's founder, will adapt the platform (curriculum, language, dictations) to the countries that ask for it most.</p>
+        <div class="i-cta">
+          <a class="btn btn-primary" href="#vote">Vote for your country</a>
+          <a class="btn btn-outline" href="#how">How it works</a>
+        </div>
+        <p class="fr-note" lang="fr"><strong>En français :</strong> votre école n'est pas en France ? Galac6 suit aujourd'hui le programme français. Votez pour que nous l'adaptions à votre pays en remplissant le formulaire ci-dessous.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ COMMENT SE PASSE LE VOTE ═══ -->
+  <section class="section" id="how">
+    <div class="wrap">
+      <div class="sec-head center">
+        <p class="eyebrow">How the vote works</p>
+        <h2 class="h2">Your school's request decides where Galac6 goes next</h2>
+      </div>
+      <div class="grid3">
+        <article class="card i-card">
+          <span class="i-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
+          <span class="i-step">Step 1</span>
+          <h3>You vote for your country</h3>
+          <p>Fill in the short form below with your school and your country. One request per school is enough.</p>
+        </article>
+        <article class="card i-card">
+          <span class="i-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"/></svg></span>
+          <span class="i-step">Step 2</span>
+          <h3>We count the requests, country by country</h3>
+          <p>Every request is read by our team and added to the count for its country.</p>
+        </article>
+        <article class="card i-card">
+          <span class="i-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg></span>
+          <span class="i-step">Step 3</span>
+          <h3>We adapt Galac6 to the most requested countries</h3>
+          <p>The countries with the most requests come first. We get back to you when work starts on your country.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CE QUE L'ADAPTATION COMPREND ═══ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head center">
+        <p class="eyebrow">What adapting Galac6 means</p>
+        <h2 class="h2">Galac6, built for your pupils and your teachers</h2>
+      </div>
+      <div class="grid3">
+        <article class="card i-card">
+          <span class="i-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/><path d="M9 8h7M9 12h5"/></svg></span>
+          <h3>Your national curriculum</h3>
+          <p>Subjects, year groups and topics aligned with the programme your school follows.</p>
+        </article>
+        <article class="card i-card">
+          <span class="i-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 10h6M9 14h4"/></svg></span>
+          <h3>Your language of instruction</h3>
+          <p>The interface and the AI tutor in the language your pupils learn in.</p>
+        </article>
+        <article class="card i-card">
+          <span class="i-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span>
+          <h3>Dictations and texts</h3>
+          <p>Dictations and reading extracts suited to your language and to each level.</p>
+        </article>
+      </div>
+      <div class="card note-card">
+        <h3>Your school already follows the French curriculum?</h3>
+        <p>Then Galac6 is ready for you today, wherever you are, and the whole interface is available in English for your teachers. See our <a href="/ecole">schools page</a> to request a quote or a pilot.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FORMULAIRE DE VOTE ═══ -->
+  <section class="section" id="vote">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Vote</p>
+        <h2 class="h2">Vote for your country</h2>
+        <p class="lead">Tell us who you are and where your school is. Fields marked "required" must be filled in.</p>
+      </div>
+      <div class="form-layout">
+        <form class="card" id="vote-form" novalidate>
+          <div class="f-row">
+            <div class="field"><label for="v-nom">First and last name <span class="hint">(required)</span></label><input type="text" id="v-nom" autocomplete="name" maxlength="120" required></div>
+            <div class="field"><label for="v-role">Your role</label>
+              <select id="v-role">
+                <option value="Teacher">Teacher</option>
+                <option value="Head of school or principal">Head of school or principal</option>
+                <option value="Deputy head or coordinator">Deputy head or coordinator</option>
+                <option value="School administration">School administration</option>
+                <option value="School network or education authority">School network or education authority</option>
+                <option value="Parent">Parent</option>
+                <option value="Other">Other</option>
+              </select></div>
+          </div>
+          <div class="f-row">
+            <div class="field"><label for="v-email">Work email <span class="hint">(required)</span></label><input type="email" id="v-email" autocomplete="email" maxlength="200" required><span class="err" id="e-email" hidden>Enter a full email address, for example name@school.org.</span></div>
+            <div class="field"><label for="v-tel">Phone <span class="hint">(optional)</span></label><input type="tel" id="v-tel" autocomplete="tel" maxlength="40"></div>
+          </div>
+          <div class="f-row">
+            <div class="field"><label for="v-ecole">School name <span class="hint">(required)</span></label><input type="text" id="v-ecole" autocomplete="organization" maxlength="150" required></div>
+            <div class="field"><label for="v-ville">City</label><input type="text" id="v-ville" autocomplete="address-level2" maxlength="100"></div>
+          </div>
+          <div class="f-row">
+            <div class="field"><label for="v-pays">Country <span class="hint">(required)</span></label>
+              <select id="v-pays" required>
+                <option value="">Choose your country</option>
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Albania">Albania</option>
+                <option value="Algeria">Algeria</option>
+                <option value="Andorra">Andorra</option>
+                <option value="Angola">Angola</option>
+                <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Armenia">Armenia</option>
+                <option value="Australia">Australia</option>
+                <option value="Austria">Austria</option>
+                <option value="Azerbaijan">Azerbaijan</option>
+                <option value="Bahamas">Bahamas</option>
+                <option value="Bahrain">Bahrain</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Barbados">Barbados</option>
+                <option value="Belarus">Belarus</option>
+                <option value="Belgium">Belgium</option>
+                <option value="Belize">Belize</option>
+                <option value="Benin">Benin</option>
+                <option value="Bhutan">Bhutan</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                <option value="Botswana">Botswana</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Brunei">Brunei</option>
+                <option value="Bulgaria">Bulgaria</option>
+                <option value="Burkina Faso">Burkina Faso</option>
+                <option value="Burundi">Burundi</option>
+                <option value="Cabo Verde">Cabo Verde</option>
+                <option value="Cambodia">Cambodia</option>
+                <option value="Cameroon">Cameroon</option>
+                <option value="Canada">Canada</option>
+                <option value="Central African Republic">Central African Republic</option>
+                <option value="Chad">Chad</option>
+                <option value="Chile">Chile</option>
+                <option value="China">China</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Comoros">Comoros</option>
+                <option value="Congo (Republic of the)">Congo (Republic of the)</option>
+                <option value="Congo (Democratic Republic of the)">Congo (Democratic Republic of the)</option>
+                <option value="Costa Rica">Costa Rica</option>
+                <option value="Côte d&#x27;Ivoire">Côte d'Ivoire</option>
+                <option value="Croatia">Croatia</option>
+                <option value="Cuba">Cuba</option>
+                <option value="Cyprus">Cyprus</option>
+                <option value="Czechia">Czechia</option>
+                <option value="Denmark">Denmark</option>
+                <option value="Djibouti">Djibouti</option>
+                <option value="Dominica">Dominica</option>
+                <option value="Dominican Republic">Dominican Republic</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Egypt">Egypt</option>
+                <option value="El Salvador">El Salvador</option>
+                <option value="Equatorial Guinea">Equatorial Guinea</option>
+                <option value="Eritrea">Eritrea</option>
+                <option value="Estonia">Estonia</option>
+                <option value="Eswatini">Eswatini</option>
+                <option value="Ethiopia">Ethiopia</option>
+                <option value="Fiji">Fiji</option>
+                <option value="Finland">Finland</option>
+                <option value="Gabon">Gabon</option>
+                <option value="Gambia">Gambia</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Germany">Germany</option>
+                <option value="Ghana">Ghana</option>
+                <option value="Greece">Greece</option>
+                <option value="Grenada">Grenada</option>
+                <option value="Guatemala">Guatemala</option>
+                <option value="Guinea">Guinea</option>
+                <option value="Guinea-Bissau">Guinea-Bissau</option>
+                <option value="Guyana">Guyana</option>
+                <option value="Haiti">Haiti</option>
+                <option value="Honduras">Honduras</option>
+                <option value="Hong Kong">Hong Kong</option>
+                <option value="Hungary">Hungary</option>
+                <option value="Iceland">Iceland</option>
+                <option value="India">India</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Iran">Iran</option>
+                <option value="Iraq">Iraq</option>
+                <option value="Ireland">Ireland</option>
+                <option value="Israel">Israel</option>
+                <option value="Italy">Italy</option>
+                <option value="Jamaica">Jamaica</option>
+                <option value="Japan">Japan</option>
+                <option value="Jordan">Jordan</option>
+                <option value="Kazakhstan">Kazakhstan</option>
+                <option value="Kenya">Kenya</option>
+                <option value="Kiribati">Kiribati</option>
+                <option value="Kosovo">Kosovo</option>
+                <option value="Kuwait">Kuwait</option>
+                <option value="Kyrgyzstan">Kyrgyzstan</option>
+                <option value="Laos">Laos</option>
+                <option value="Latvia">Latvia</option>
+                <option value="Lebanon">Lebanon</option>
+                <option value="Lesotho">Lesotho</option>
+                <option value="Liberia">Liberia</option>
+                <option value="Libya">Libya</option>
+                <option value="Liechtenstein">Liechtenstein</option>
+                <option value="Lithuania">Lithuania</option>
+                <option value="Luxembourg">Luxembourg</option>
+                <option value="Macao">Macao</option>
+                <option value="Madagascar">Madagascar</option>
+                <option value="Malawi">Malawi</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Maldives">Maldives</option>
+                <option value="Mali">Mali</option>
+                <option value="Malta">Malta</option>
+                <option value="Marshall Islands">Marshall Islands</option>
+                <option value="Mauritania">Mauritania</option>
+                <option value="Mauritius">Mauritius</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Micronesia">Micronesia</option>
+                <option value="Moldova">Moldova</option>
+                <option value="Monaco">Monaco</option>
+                <option value="Mongolia">Mongolia</option>
+                <option value="Montenegro">Montenegro</option>
+                <option value="Morocco">Morocco</option>
+                <option value="Mozambique">Mozambique</option>
+                <option value="Myanmar">Myanmar</option>
+                <option value="Namibia">Namibia</option>
+                <option value="Nauru">Nauru</option>
+                <option value="Nepal">Nepal</option>
+                <option value="Netherlands">Netherlands</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="Nicaragua">Nicaragua</option>
+                <option value="Niger">Niger</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="North Korea">North Korea</option>
+                <option value="North Macedonia">North Macedonia</option>
+                <option value="Norway">Norway</option>
+                <option value="Oman">Oman</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Palau">Palau</option>
+                <option value="Palestine">Palestine</option>
+                <option value="Panama">Panama</option>
+                <option value="Papua New Guinea">Papua New Guinea</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Peru">Peru</option>
+                <option value="Philippines">Philippines</option>
+                <option value="Poland">Poland</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Puerto Rico">Puerto Rico</option>
+                <option value="Qatar">Qatar</option>
+                <option value="Romania">Romania</option>
+                <option value="Russia">Russia</option>
+                <option value="Rwanda">Rwanda</option>
+                <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                <option value="Saint Lucia">Saint Lucia</option>
+                <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                <option value="Samoa">Samoa</option>
+                <option value="San Marino">San Marino</option>
+                <option value="São Tomé and Príncipe">São Tomé and Príncipe</option>
+                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="Senegal">Senegal</option>
+                <option value="Serbia">Serbia</option>
+                <option value="Seychelles">Seychelles</option>
+                <option value="Sierra Leone">Sierra Leone</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Slovakia">Slovakia</option>
+                <option value="Slovenia">Slovenia</option>
+                <option value="Solomon Islands">Solomon Islands</option>
+                <option value="Somalia">Somalia</option>
+                <option value="South Africa">South Africa</option>
+                <option value="South Korea">South Korea</option>
+                <option value="South Sudan">South Sudan</option>
+                <option value="Spain">Spain</option>
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="Sudan">Sudan</option>
+                <option value="Suriname">Suriname</option>
+                <option value="Sweden">Sweden</option>
+                <option value="Switzerland">Switzerland</option>
+                <option value="Syria">Syria</option>
+                <option value="Taiwan">Taiwan</option>
+                <option value="Tajikistan">Tajikistan</option>
+                <option value="Tanzania">Tanzania</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Timor-Leste">Timor-Leste</option>
+                <option value="Togo">Togo</option>
+                <option value="Tonga">Tonga</option>
+                <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                <option value="Tunisia">Tunisia</option>
+                <option value="Türkiye">Türkiye</option>
+                <option value="Turkmenistan">Turkmenistan</option>
+                <option value="Tuvalu">Tuvalu</option>
+                <option value="Uganda">Uganda</option>
+                <option value="Ukraine">Ukraine</option>
+                <option value="United Arab Emirates">United Arab Emirates</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="United States">United States</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Uzbekistan">Uzbekistan</option>
+                <option value="Vanuatu">Vanuatu</option>
+                <option value="Vatican City">Vatican City</option>
+                <option value="Venezuela">Venezuela</option>
+                <option value="Vietnam">Vietnam</option>
+                <option value="Yemen">Yemen</option>
+                <option value="Zambia">Zambia</option>
+                <option value="Zimbabwe">Zimbabwe</option>
+                <option value="Other">Other</option>
+              </select></div>
+            <div class="field"><label for="v-langue">Language of instruction</label><input type="text" id="v-langue" maxlength="100" placeholder="For example: Spanish, English"></div>
+          </div>
+          <div class="field"><label for="v-eleves">Number of pupils <span class="hint">(optional)</span></label>
+            <select id="v-eleves">
+              <option value="">Not specified</option>
+              <option value="Fewer than 200">Fewer than 200</option>
+              <option value="200 to 500">200 to 500</option>
+              <option value="501 to 1,000">501 to 1,000</option>
+              <option value="More than 1,000">More than 1,000</option>
+              <option value="Several schools">Several schools</option>
+            </select></div>
+          <div class="field"><label for="v-comment">Comment <span class="hint">(optional)</span></label><textarea id="v-comment" maxlength="4000" placeholder="Your curriculum, your needs, the subjects and levels that matter most to you"></textarea></div>
+          <label class="consent"><input type="checkbox" id="v-consent" required><span>I agree that Galac6 may use this information to contact me about adapting Galac6 to my country. See our <a href="/privacy">privacy policy</a>.</span></label>
+          <span class="err" id="e-form" hidden>Please fill in your name, your work email, your school and your country, and tick the consent box.</span>
+          <button class="btn btn-primary btn-block" type="submit" id="v-submit">Send my vote</button>
+          <div class="form-msg" id="form-msg" hidden role="status"></div>
+        </form>
+
+        <aside class="side">
+          <div class="card">
+            <h3>What happens next</h3>
+            <ol class="ticks" style="margin-top:8px">
+              <li>Your vote is added to the count for your country.</li>
+              <li>We may contact you to better understand your curriculum and your needs.</li>
+              <li>When work starts on your country, you are among the first to know.</li>
+            </ol>
+          </div>
+          <div class="card">
+            <h3>Already true today</h3>
+            <ul class="ticks" style="margin-top:8px">
+              <li>A Socratic AI tutor that guides pupils without giving them the answers</li>
+              <li>The teacher stays in charge of what Galac6 offers their pupils</li>
+              <li>Data hosted in France</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div>Galac6. L'IA au service de la pédagogie</div>
+    <div class="footer-badges">
+      <a href="/about" style="color: var(--text-muted);">About</a>
+      <a href="/privacy" style="color: var(--text-muted);">Privacy</a>
+      <a href="/mentions-legales" style="color: var(--text-muted);">Legal notice</a>
+      <a href="/international" style="color: var(--text-muted);">School outside France?</a>
+      <a href="#" data-cookie-settings style="color: var(--text-muted);">Cookie settings</a>
+      <span class="footer-badge">Made in France</span>
+    </div>
+  </footer>
+
+<script>
+  // Page International : envoi du vote par la même fonction que ecole.html / about.html (notify-contact).
+  // La fonction n'accepte que name, email et message : le sujet de l'email reprend « name »,
+  // tous les autres champs sont écrits lisiblement dans « message ».
+  (function () {
+    'use strict';
+    var ENDPOINT = 'https://obhzumzqullnsnnfjlbt.supabase.co/functions/v1/notify-contact';
+    var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var MSG_OK = 'Thank you, your vote has been sent. It now counts for your country, and we will get back to you at the address you gave.';
+    var MSG_FAIL = 'Your vote could not be sent. Please try again in a moment, or write to us at <a href="mailto:hello@galac6.io">hello@galac6.io</a>.';
+
+    function $(id) { return document.getElementById(id); }
+    function val(id) { return $(id).value.trim(); }
+
+    // Même envoi que le formulaire de ecole.html (fonction notify-contact, inchangée)
+    function send(name, email, message) {
+      return fetch(ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: name, email: email, message: message })
+      }).then(function (res) { return res.ok; }, function () { return false; });
+    }
+
+    // Construit la requête (exposée pour vérification, sans envoi)
+    function buildRequest() {
+      var pays = val('v-pays');
+      var ecole = val('v-ecole');
+      // « name » devient le sujet de l'email : 200 caractères maximum côté serveur
+      var subject = ('[International] Vote — ' + pays + ' — ' + ecole).slice(0, 200);
+      var message = 'Type de demande : Vote International (page /international)\n' +
+        'Pays : ' + pays + '\n' +
+        'École : ' + ecole + '\n' +
+        'Ville : ' + (val('v-ville') || 'non précisé') + '\n' +
+        'Prénom et nom : ' + val('v-nom') + '\n' +
+        'Fonction : ' + $('v-role').value + '\n' +
+        'Email professionnel : ' + val('v-email') + '\n' +
+        'Téléphone : ' + (val('v-tel') || 'non précisé') + '\n' +
+        'Langue d\'enseignement : ' + (val('v-langue') || 'non précisé') + '\n' +
+        'Nombre d\'élèves : ' + ($('v-eleves').value || 'non précisé') + '\n' +
+        'Accord pour être recontacté : oui\n' +
+        'Langue de la page : en\n\n' +
+        'Commentaire :\n' + (val('v-comment') || '(aucun)');
+      return { name: subject, email: val('v-email'), message: message };
+    }
+    window.galac6VoteRequest = buildRequest;
+
+    $('vote-form').addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var email = val('v-email');
+      var okEmail = EMAIL_RE.test(email);
+      var okAll = val('v-nom') && val('v-ecole') && val('v-pays') && okEmail && $('v-consent').checked;
+      $('e-email').hidden = !email || okEmail;
+      $('e-form').hidden = !!okAll;
+      var msg = $('form-msg');
+      msg.hidden = true;
+      if (!okAll) return;
+
+      var req = buildRequest();
+      var btn = $('v-submit');
+      var label = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      send(req.name, req.email, req.message).then(function (ok) {
+        btn.disabled = false;
+        btn.textContent = label;
+        msg.classList.toggle('bad', !ok);
+        msg.innerHTML = ok ? MSG_OK : MSG_FAIL;
+        msg.hidden = false;
+        if (ok) {
+          ['v-nom', 'v-email', 'v-tel', 'v-ecole', 'v-ville', 'v-langue', 'v-comment'].forEach(function (id) { $(id).value = ''; });
+          $('v-pays').value = '';
+          $('v-eleves').value = '';
+          $('v-consent').checked = false;
+        }
+      });
+    });
+  })();
+</script>
+<script src="cookie-consent.js"></script>
+</body>
+</html>
