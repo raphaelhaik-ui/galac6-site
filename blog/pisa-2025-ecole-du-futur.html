@@ -301,6 +301,78 @@
       .ls-block { width: calc(1.4rem + var(--i) * 1.2rem); }
     }
       html { scroll-padding-top: 140px; }
+
+    /* Chapitrage : parties numérotées, sommaire collant, barres d'avancement */
+    .art-layout { max-width: 760px; margin: 0 auto; }
+    .art-layout > .article { max-width: 760px; }
+    .article h2.sec { display: flex; align-items: center; gap: 0.85rem; font-size: clamp(1.55rem, 3.6vw, 1.95rem); font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; color: var(--text); margin: 3.4rem 0 1.2rem; padding-top: 1.6rem; border-top: 1px solid var(--border); position: relative; }
+    .article h2.sec::before { content: ""; position: absolute; top: -1px; left: 0; width: 72px; height: 2px; background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); }
+    .sec-n { flex: none; width: 2.6rem; height: 2.6rem; border-radius: 12px; display: grid; place-items: center; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-size: 1.25rem; font-weight: 800; letter-spacing: 0; box-shadow: 0 6px 18px rgba(124,92,252,0.28); }
+    .faq h2.sec { margin-top: 3.4rem; }
+    .related h2.sec-src { scroll-margin-top: 140px; }
+    .article h3.sub { display: flex; align-items: baseline; gap: 0.6rem; font-size: 1.18rem; margin: 2rem 0 0.6rem; padding-left: 0.85rem; border-left: 2px solid rgba(124,92,252,0.45); }
+    .sub-n { flex: none; font-size: 0.9rem; font-weight: 800; color: var(--primary-light); font-variant-numeric: tabular-nums; }
+
+    /* Sommaire en tête */
+    .plan-toc { list-style: none; margin: 0 !important; padding: 0; display: grid; gap: 0.15rem; }
+    .plan-toc li { margin: 0; }
+    .plan-toc a { display: flex; align-items: center; gap: 0.7rem; padding: 0.45rem 0.4rem; border-radius: 10px; color: var(--text); text-decoration: none; min-height: 44px; }
+    .plan-toc a:hover { background: rgba(124,92,252,0.12); text-decoration: none; }
+    .pt-n { flex: none; width: 1.8rem; height: 1.8rem; border-radius: 8px; display: grid; place-items: center; background: rgba(124,92,252,0.18); color: var(--primary-light); font-weight: 800; font-size: 0.9rem; }
+    .pt-t { font-weight: 700; line-height: 1.3; }
+    .plan .pt-d { margin: -0.1rem 0 0.4rem 2.9rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); }
+    .plan .pt-d strong { color: var(--text); }
+    .pt-src .pt-n { background: transparent; border: 1px dashed rgba(167,139,250,0.5); }
+
+    /* Lien « Revenir au sommaire » (téléphone et tablette) */
+    .article p.back-toc { margin: 1.6rem 0 0; font-size: 0.85rem; }
+    .back-toc a { display: inline-flex; align-items: center; gap: 0.35rem; min-height: 44px; color: var(--text-muted); }
+    .back-toc a:hover { color: var(--primary-light); }
+    .back-toc svg, .toc-btn svg, .toc-close svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* Barre d'avancement horizontale, sous le menu (téléphone et tablette) */
+    .read-progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; pointer-events: none; }
+    .read-progress span { display: block; height: 100%; width: 100%; transform-origin: 0 50%; transform: scaleX(0); background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); }
+
+    /* Bouton et panneau « Sommaire » (téléphone et tablette) */
+    .toc-btn { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 90; display: inline-flex; align-items: center; gap: 0.45rem; min-height: 44px; padding: 0 1rem; border-radius: 999px; border: 1px solid rgba(124,92,252,0.45); background: rgba(19,19,31,0.92); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); color: var(--text); font: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,0.4); opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity 0.2s, transform 0.2s; }
+    .toc-btn.show { opacity: 1; transform: none; pointer-events: auto; }
+    .toc-btn-n { color: var(--primary-light); font-variant-numeric: tabular-nums; }
+    .toc-sheet[hidden] { display: none; }
+    .toc-sheet { position: fixed; inset: 0; z-index: 400; }
+    .toc-sheet-bg { position: absolute; inset: 0; background: rgba(5,5,12,0.6); }
+    .toc-sheet-panel { position: absolute; left: 0; right: 0; bottom: 0; max-height: 80vh; overflow-y: auto; background: var(--bg-card); border-top: 1px solid rgba(124,92,252,0.4); border-radius: 18px 18px 0 0; padding: 0.8rem 16px calc(1rem + env(safe-area-inset-bottom, 0px)); }
+    .toc-sheet-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem; }
+    .toc-sheet-head p { font-weight: 800; color: var(--text); }
+    .toc-close { display: grid; place-items: center; width: 44px; height: 44px; border: 0; background: none; color: var(--text-muted); cursor: pointer; border-radius: 10px; }
+    .toc-sheet .plan-toc a.is-active { background: rgba(124,92,252,0.16); }
+    .toc-sheet .plan-toc a.is-active .pt-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; }
+
+    /* Sommaire collant à côté du texte (ordinateur) */
+    .toc-side { display: none; }
+    @media (min-width: 1024px) {
+      .art-layout { max-width: 1120px; display: flex; align-items: flex-start; gap: 2rem; padding: 0 1.5rem; }
+      .art-layout > .article { flex: 1 1 auto; min-width: 0; margin: 0; padding-left: 0; padding-right: 0; }
+      .toc-side { display: block; flex: 0 0 230px; position: sticky; top: 150px; margin-top: 3rem; max-height: calc(100vh - 170px); overflow-y: auto; padding: 0.2rem 0.2rem 1rem; }
+      .read-progress, .toc-btn, .toc-sheet, .back-toc { display: none !important; }
+    }
+    @media (min-width: 1200px) { .toc-side { flex-basis: 260px; } }
+    .toc-side-title { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin: 0 0 0.8rem; }
+    .toc-track { position: relative; }
+    .toc-rail { position: absolute; left: calc(0.8rem - 1px); width: 2px; background: var(--border); border-radius: 2px; }
+    .toc-fill { position: absolute; left: 0; top: 0; width: 100%; height: 0; border-radius: 2px; background: linear-gradient(180deg, var(--gradient-start), var(--gradient-end)); }
+    .toc-list { list-style: none; margin: 0; padding: 0; position: relative; }
+    .toc-list li { margin: 0; }
+    .toc-list a { display: flex; align-items: flex-start; gap: 0.65rem; padding: 0.4rem 0.3rem 0.4rem 0; color: var(--text-muted); font-size: 0.88rem; line-height: 1.35; text-decoration: none; transition: color 0.15s; }
+    .toc-list a:hover { color: var(--text); text-decoration: none; }
+    .toc-n { position: relative; z-index: 1; flex: none; width: 1.6rem; height: 1.6rem; border-radius: 50%; display: grid; place-items: center; font-size: 0.75rem; font-weight: 800; background: var(--bg); border: 2px solid var(--border); color: var(--text-muted); transition: background 0.2s, border-color 0.2s, color 0.2s; }
+    .toc-t { padding-top: 0.12rem; }
+    .toc-list a.is-done .toc-n { border-color: var(--primary); color: var(--primary-light); }
+    .toc-list a.is-active { color: var(--text); font-weight: 700; }
+    .toc-list a.is-active .toc-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); border-color: transparent; color: #fff; box-shadow: 0 0 0 4px rgba(124,92,252,0.22); }
+    .toc-src .toc-n { width: 1.6rem; }
+    .toc-src .toc-n::after { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+    @media (prefers-reduced-motion: reduce) { .toc-btn, .toc-n, .toc-list a { transition: none; } html { scroll-behavior: auto; } }
   </style>
   <style id="g6-nav-css">
     /* Menu : marge du logo, sélecteur de langue (généré par scripts/build-langs.py) */
@@ -373,9 +445,11 @@
         <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600;">Inscription ou connexion</a>
       </div>
     </nav>
+    <div class="read-progress" aria-hidden="true"><span></span></div>
   </div>
 
   <!-- ARTICLE -->
+  <div class="art-layout">
   <article class="article">
     <nav class="breadcrumb"><a href="/">Accueil</a> › <a href="/blog">Blog</a> › PISA 2025 et l'école du futur</nav>
 
@@ -384,14 +458,20 @@
 
     <p class="lead">Les premiers résultats de PISA 2025 ont été publiés par l'OCDE le 8 septembre 2026. La presse a surtout retenu deux choses : des scores français au plus bas, et des élèves moins bons quand ils utilisent l'IA. Le rapport de l'OCDE est plus nuancé. Ce qui compte, ce n'est pas l'IA elle-même, mais la façon dont elle fait travailler l'élève.</p>
 
-    <nav class="plan" aria-labelledby="plan-titre">
+    <nav class="plan" id="sommaire" aria-labelledby="plan-titre">
       <h2 id="plan-titre">Ce que vous allez apprendre</h2>
-      <ol>
-        <li><a href="#pisa-en-bref"><strong>Ce que dit PISA 2025.</strong></a> Les scores de la France et ce que mesure le nouveau domaine : apprendre dans le monde numérique.</li>
-        <li><a href="#risques-ia"><strong>Les risques de l'IA.</strong></a> Quand elle fait le travail à la place de l'élève, et pourquoi ses réponses toutes faites posent problème.</li>
-        <li><a href="#reponse-galac6"><strong>Comment Galac6 y répond.</strong></a> Une IA conçue sur les principes que met en avant l'OCDE : préserver l'effort, rendre l'élève plus autonome, mettre l'IA au service du professeur.</li>
+      <ol class="plan-toc">
+        <li><a href="#pisa-en-bref"><span class="pt-n">1</span><span class="pt-t">PISA 2025 en bref</span></a><p class="pt-d"><strong>Ce que dit PISA 2025.</strong> Les scores de la France et ce que mesure le nouveau domaine : apprendre dans le monde numérique.</p></li>
+        <li><a href="#resultats-france"><span class="pt-n">2</span><span class="pt-t">Les résultats de la France</span></a></li>
+        <li><a href="#risques-ia"><span class="pt-n">3</span><span class="pt-t">L'IA et les résultats</span></a><p class="pt-d"><strong>Les risques de l'IA.</strong> Quand elle fait le travail à la place de l'élève, et pourquoi ses réponses toutes faites posent problème.</p></li>
+        <li><a href="#apprendre-a-apprendre"><span class="pt-n">4</span><span class="pt-t">Apprendre à apprendre</span></a></li>
+        <li><a href="#trois-questions"><span class="pt-n">5</span><span class="pt-t">Trois questions pour juger une IA éducative</span></a></li>
+        <li><a href="#reponse-galac6"><span class="pt-n">6</span><span class="pt-t">Comment Galac6 répond</span></a><p class="pt-d"><strong>Comment Galac6 y répond.</strong> Une IA conçue sur les principes que met en avant l'OCDE : préserver l'effort, rendre l'élève plus autonome, mettre l'IA au service du professeur.</p></li>
+        <li><a href="#ecole-du-futur"><span class="pt-n">7</span><span class="pt-t">L'école du futur</span></a><p class="pt-d"><strong>En conclusion</strong> : à quoi peut ressembler l'école du futur, avec une IA au service de la pédagogie, et un comparatif noté avec une IA généraliste.</p></li>
+        <li><a href="#en-resume"><span class="pt-n">8</span><span class="pt-t">En résumé</span></a></li>
+        <li><a href="#questions-frequentes"><span class="pt-n">9</span><span class="pt-t">Questions fréquentes</span></a></li>
+        <li class="pt-src"><a href="#sources"><span class="pt-n" aria-hidden="true"></span><span class="pt-t">Sources</span></a></li>
       </ol>
-      <p class="plan-fin"><a href="#ecole-du-futur">En conclusion</a> : à quoi peut ressembler l'école du futur, avec une IA au service de la pédagogie, et un comparatif noté avec une IA généraliste.</p>
     </nav>
 
     <aside class="essentiel" aria-labelledby="essentiel-titre">
@@ -406,7 +486,7 @@
       </ul>
     </aside>
 
-    <h2 id="pisa-en-bref">PISA 2025 en bref</h2>
+    <h2 class="sec" id="pisa-en-bref"><span class="sec-n" aria-hidden="true">1</span><span>PISA 2025 en bref</span></h2>
     <p>PISA évalue les élèves de 15 ans tous les trois ans. Voici les repères clés, d'après la <a href="https://www.oecd.org/content/dam/oecd/fr/publications/reports/2026/09/pisa-2025-results-volume-i-country-notes_88d1164e/france_69779694/9840dc6b-fr.pdf" target="_blank" rel="noopener">note de l'OCDE consacrée à la France</a> :</p>
     <ul>
       <li><strong>Domaine majeur en 2025 :</strong> les sciences.</li>
@@ -416,7 +496,9 @@
       <li><strong>En 2027 :</strong> les analyses sur l'autonomie d'apprentissage et les résultats en anglais langue étrangère.</li>
     </ul>
 
-    <h2>Les résultats de la France</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 class="sec" id="resultats-france"><span class="sec-n" aria-hidden="true">2</span><span>Les résultats de la France</span></h2>
     <p>Premier constat : la France est proche de la moyenne, mais en baisse. Voici ses scores en 2025, d'après le <a href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf" target="_blank" rel="noopener">rapport international de l'OCDE (Volume I)</a> :</p>
     <ul>
       <li><strong>Sciences : 483 points</strong> (moyenne de l'OCDE : 482).</li>
@@ -450,7 +532,7 @@
       </svg>
       <figcaption id="pisa-chart-cap">Scores PISA 2025, France et moyenne de l'OCDE (en points). * Nouveau domaine en 2025. L'échelle commence à 440 pour rendre les écarts lisibles. Source : OCDE, rapport PISA 2025, Volume I.</figcaption>
     </figure>
-    <h3>Des résultats parmi les plus faibles</h3>
+    <h3 class="sub"><span class="sub-n" aria-hidden="true">2.1</span><span>Des résultats parmi les plus faibles</span></h3>
     <p>La note France de l'OCDE apporte trois précisions :</p>
     <ul>
       <li>les résultats restent proches de la moyenne de l'OCDE ;</li>
@@ -459,7 +541,9 @@
     </ul>
     <p>En sciences, le score était de 495 points en 2015, rappelle la <a href="https://www.education.gouv.fr/sites/default/files/document/depp-ni-2026-39pisa-sciencespdf-520225.pdf" target="_blank" rel="noopener">note d'information de la DEPP</a>. Le ministère y a consacré un dossier : <a href="https://www.education.gouv.fr/pisa-2025-une-baisse-des-resultats-commune-l-ocde-un-relevement-poursuivre-505690" target="_blank" rel="noopener">« une baisse des résultats commune à l'OCDE, un relèvement à poursuivre »</a>.</p>
 
-    <h2 id="risques-ia">L'IA et les résultats : ce que dit vraiment l'OCDE</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 class="sec" id="risques-ia"><span class="sec-n" aria-hidden="true">3</span><span>L'IA et les résultats : ce que dit vraiment l'OCDE</span></h2>
     <p>Venons-en à l'IA. Le Volume I consacre une section entière à l'usage des chatbots d'IA pour le travail scolaire. Voici ses deux constats principaux, résumés fidèlement.</p>
     <ul>
       <li><strong>Faire faire des tâches précises.</strong> Résumer un texte, faire une première recherche, rédiger : les élèves qui confient ces tâches à l'IA ont de moins bons résultats en sciences. C'est le cas dans la plupart des pays.</li>
@@ -486,7 +570,7 @@
       <figcaption id="usage-ia-cap">Illustration qualitative, sans chiffres : la courbe montre seulement le sens de l'association décrite par l'OCDE (usage modéré associé à des scores légèrement plus élevés qu'un usage rare ou intensif). Ce n'est pas une mesure. Source : OCDE, rapport PISA 2025, Volume I.</figcaption>
     </figure>
     <p>L'OCDE insiste sur un point : ces données ne prouvent pas de lien de cause à effet. Plusieurs analyses le rappellent, comme celle de <a href="https://www.futura-sciences.com/formation/actualites/ecoles-formations-pisa-2025-ia-elle-vraiment-responsable-chute-resultats-137681/" target="_blank" rel="noopener">The Conversation, reprise par Futura</a> : la baisse des résultats a commencé avant la diffusion de l'IA générative.</p>
-    <h3>Un échafaudage, pas une béquille</h3>
+    <h3 class="sub"><span class="sub-n" aria-hidden="true">3.1</span><span>Un échafaudage, pas une béquille</span></h3>
     <p>Le directeur de l'éducation de l'OCDE résume l'enjeu dans son éditorial : « AI becomes a scaffold, not a crutch » (l'IA doit devenir un échafaudage, pas une béquille). Son raisonnement tient en deux idées :</p>
     <ul>
       <li>on apprend par un effort cognitif productif face à une matière nouvelle ;</li>
@@ -494,7 +578,7 @@
     </ul>
     <p>Le rapport recommande donc une IA ciblée, pour le retour sur le travail et l'entraînement personnalisé. Elle doit venir <strong>en complément de l'effort de l'élève, et non à sa place</strong>.</p>
 
-    <h3>La limite des IA généralistes : des réponses à contrôler</h3>
+    <h3 class="sub"><span class="sub-n" aria-hidden="true">3.2</span><span>La limite des IA généralistes : des réponses à contrôler</span></h3>
     <p>Une IA généraliste livre des réponses toutes faites. L'élève doit donc apprendre à les contrôler. Le rapport montre que la France est en retard sur ce point :</p>
     <ul>
       <li><strong>47&nbsp;% des élèves</strong> disent qu'on leur demande en cours, au moins parfois, d'évaluer les informations d'un chatbot d'IA (OCDE : <strong>63&nbsp;%</strong>) ;</li>
@@ -503,7 +587,9 @@
     </ul>
     <p>Une IA conçue pour l'école peut prendre le problème à la racine : ne pas livrer de réponse à croire sur parole, et faire chercher l'élève. Reste alors la vraie question, celle que pose le nouveau domaine de PISA : l'élève apprend-il à apprendre ?</p>
 
-    <h2>Apprendre à apprendre : ce que mesure le nouveau domaine</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 class="sec" id="apprendre-a-apprendre"><span class="sec-n" aria-hidden="true">4</span><span>Apprendre à apprendre : ce que mesure le nouveau domaine</span></h2>
     <p>Le nouveau domaine de PISA s'intéresse à une compétence clé : savoir piloter son propre apprentissage.</p>
     <p>Son <a href="https://www.oecd.org/content/dam/oecd/en/topics/policy-sub-issues/learning-in-the-digital-world/PISA%202025%20Learning%20in%20the%20Digital%20World%20Assessment%20Framework%20-%20Second%20Draft.pdf/_jcr_content/renditions/original./PISA%202025%20Learning%20in%20the%20Digital%20World%20Assessment%20Framework%20-%20Second%20Draft.pdf" target="_blank" rel="noopener">cadre d'évaluation « Learning in the Digital World »</a> est une version de travail publiée par l'OCDE. Il décrit un processus que l'élève répète et règle lui-même : construire des connaissances et résoudre des problèmes avec des outils et des pratiques computationnels.</p>
     <p>Au cœur de cette définition : l'<strong>autorégulation</strong>. Le cadre la décompose en trois volets :</p>
@@ -512,7 +598,7 @@
       <li><strong>Évaluer sa performance</strong> par rapport à son objectif.</li>
       <li><strong>Maintenir sa motivation :</strong> persévérer, et améliorer son travail après un retour négatif.</li>
     </ul>
-    <h3>Où en sont les élèves français ?</h3>
+    <h3 class="sub"><span class="sub-n" aria-hidden="true">4.1</span><span>Où en sont les élèves français ?</span></h3>
     <p>Les questionnaires de PISA donnent une première réponse, d'après la note France de l'OCDE. Les élèves français planifient et persévèrent un peu moins que la moyenne. En revanche, ils sont plus nombreux à penser qu'on peut développer son intelligence par le travail.</p>
     <figure class="pisa-chart" aria-labelledby="apprendre-cap">
       <div class="pz-legend"><span><i style="background:#7c5cfc"></i>France</span><span><i style="background:#2a9d8f"></i>Moyenne de l'OCDE</span></div>
@@ -538,7 +624,9 @@
       <figcaption id="apprendre-cap"><strong>Comment les élèves français apprennent.</strong> Part des élèves de 15 ans qui disent : planifier souvent leur travail scolaire (France : environ 33&nbsp;%) ; se poser des questions pour vérifier qu'ils ont compris ; redoubler d'efforts quand le travail devient difficile ; penser qu'on peut développer son intelligence par le travail. Source : OCDE, note pays France, PISA 2025.</figcaption>
     </figure>
 
-    <h2>Trois questions pour juger une IA éducative</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 class="sec" id="trois-questions"><span class="sec-n" aria-hidden="true">5</span><span>Trois questions pour juger une IA éducative</span></h2>
     <p>De ces résultats, on peut tirer une grille simple. Elle sert aux parents, aux professeurs et aux établissements, pour juger n'importe quel outil d'IA.</p>
     <figure class="q3" aria-label="Trois questions pour juger une IA éducative">
       <ol class="q3-list">
@@ -560,7 +648,9 @@
       </ol>
     </figure>
 
-    <h2 id="reponse-galac6">Comment Galac6 répond à ces trois questions</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 class="sec" id="reponse-galac6"><span class="sec-n" aria-hidden="true">6</span><span>Comment Galac6 répond à ces trois questions</span></h2>
     <p>Ces trois questions, nous ne les avons pas découvertes avec PISA : <strong>Galac6 a été construit autour d'elles dès le premier jour</strong>, bien avant la publication de l'enquête. Nous nous sommes notamment appuyés sur les travaux de Salman Khan, fondateur de la Khan Academy, qui défend depuis des années une IA tuteur qui guide l'élève sans faire le travail à sa place. PISA 2025 vient aujourd'hui confirmer cette intuition. Voici comment, question par question.</p>
     <aside class="essentiel recherche" aria-labelledby="recherche-titre">
       <h3 id="recherche-titre"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6L4.5 18.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"/><path d="M7.5 15h9"/></svg>Ce que montre la recherche</h3>
@@ -572,7 +662,7 @@
       </ul>
       <p class="recherche-fin">Une IA qui fait à la place nuit à l'apprentissage. Une IA qui guide le renforce. Utiliser l'IA <strong>à bon escient</strong> change tout : c'est le choix fait par Galac6.</p>
     </aside>
-    <h3>1. Préserver l'effort : une aide didactique</h3>
+    <h3 class="sub"><span class="sub-n" aria-hidden="true">6.1</span><span>Préserver l'effort : une aide didactique</span></h3>
     <p>Un élève en difficulté qui demande de l'aide à une IA généraliste reçoit souvent l'exercice tout fait. Le devoir est rendu, mais rien n'est appris.</p>
     <p><strong>Galac6 fait exactement l'inverse : il aide l'élève à trouver lui-même.</strong> Et c'est là que tout se joue, car une réponse trouvée seul, on la retient.</p>
     <p>L'élève envoie sa question ou la photo de son exercice. Le tuteur IA ne lui souffle rien : il le guide pas à pas, par des questions et des indices de plus en plus précis.</p>
@@ -592,7 +682,7 @@
     </figure>
     <p>Le tuteur refuse aussi de rédiger un commentaire ou une dissertation à la place de l'élève.</p>
     <p>Galac6 ne livre donc pas de réponse à croire sur parole. En mathématiques, un moteur de calcul contrôle en plus les calculs : l'IA ne peut pas valider une erreur.</p>
-    <h3>2. Rendre l'élève plus autonome : apprendre à apprendre</h3>
+    <h3 class="sub"><span class="sub-n" aria-hidden="true">6.2</span><span>Rendre l'élève plus autonome : apprendre à apprendre</span></h3>
     <p>Réussir un exercice, c'est bien. <strong>Savoir apprendre seul, c'est ce qui change une scolarité.</strong> C'est précisément ce que mesure PISA 2025, et c'est ce que Galac6 entraîne chaque jour.</p>
     <ul>
       <li><strong>Se questionner :</strong> le tuteur répond par des questions. L'élève cherche, explique, et trouve sa propre réponse. Il en sort fier, et il s'en souvient.</li>
@@ -601,7 +691,7 @@
       <li><strong>Dictée sur mesure :</strong> Galac6 propose ensuite une dictée qui revient sur les erreurs de l'élève, pour qu'il ne les refasse plus.</li>
     </ul>
     <p><strong>Repérer ce qu'on n'a pas compris, y revenir, persévérer :</strong> l'élève ne subit plus ses difficultés, il apprend à les surmonter.</p>
-    <h3>3. Mettre l'IA au service du professeur, pour tous les élèves</h3>
+    <h3 class="sub"><span class="sub-n" aria-hidden="true">6.3</span><span>Mettre l'IA au service du professeur, pour tous les élèves</span></h3>
     <p>Aucune IA ne remplace un professeur. <strong>Avec Galac6, c'est le professeur qui décide, et l'IA qui travaille pour lui.</strong></p>
     <ul>
       <li>Il donne les devoirs et voit en un coup d'œil la <strong>réussite par notion</strong> de sa classe, et les élèves qui décrochent.</li>
@@ -615,7 +705,9 @@
       <p><strong>Une limite à garder en tête :</strong> aucun outil ne fait progresser un élève à sa place. PISA rappelle que l'effort, la persévérance et l'accompagnement des enseignants restent décisifs.</p>
     </div>
 
-    <h2 id="ecole-du-futur">L'école du futur : l'IA au service de la pédagogie</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 class="sec" id="ecole-du-futur"><span class="sec-n" aria-hidden="true">7</span><span>L'école du futur : l'IA au service de la pédagogie</span></h2>
     <p>PISA 2025 ne dit pas que l'IA va sauver ou ruiner l'école. Il montre que les compétences qui comptent le plus sont profondément humaines :</p>
     <ul class="pills">
       <li>planifier</li><li>se questionner</li><li>persévérer</li><li>demander de l'aide</li><li>vérifier qu'on a compris</li>
@@ -629,7 +721,9 @@
     <p>C'est le choix de Galac6 : une IA au service de la pédagogie. Elle guide l'élève sans faire le travail à sa place. Elle donne au professeur une vision plus fine de sa classe, sans jamais prendre sa place.</p>
     <p>Pour aller plus loin, découvrez <a href="/soutien-scolaire-ia">le soutien scolaire par IA</a> ou <a href="/ecole">Galac6 pour les écoles</a>.</p>
 
-    <h2>En résumé : les constats de PISA 2025 et les réponses de Galac6</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 class="sec" id="en-resume"><span class="sec-n" aria-hidden="true">8</span><span>En résumé : les constats de PISA 2025 et les réponses de Galac6</span></h2>
     <p>Ce tableau reprend les recommandations, les risques et les problèmes soulevés par l'étude. Pour chacun, il montre la réponse de Galac6, et ce qui se passe quand un élève utilise seul une IA généraliste comme ChatGPT.</p>
     <div class="pisa-compare">
       <div class="pc-head" aria-hidden="true"><span>Ce que soulève PISA 2025</span><span>Galac6</span><span>IA généraliste utilisée seule</span></div>
@@ -673,9 +767,11 @@
     </div>
     <p class="pisa-table-note">Comparaison avec l'usage par défaut d'une IA généraliste (ChatGPT, Gemini, Copilot…), qui n'est pas conçu pour l'école. Certains proposent un mode « étude » qui pose davantage de questions, mais l'élève peut l'activer ou le quitter librement, et le professeur n'en voit rien. Les notes (de +++ très pertinent à −−− contre-productif) sont notre appréciation de la réponse apportée à chaque constat, pas une mesure de l'OCDE. Les constats de PISA sont tirés du rapport de l'OCDE (Volume I) ; l'OCDE précise qu'ils décrivent des associations, pas des liens de cause à effet.</p>
 
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
     <!-- FAQ -->
     <section class="faq">
-      <h2>Questions fréquentes</h2>
+      <h2 class="sec" id="questions-frequentes"><span class="sec-n" aria-hidden="true">9</span><span>Questions fréquentes</span></h2>
       <h3>Quand les résultats de PISA 2025 ont-ils été publiés ?</h3>
       <p>Les premiers résultats (sciences, mathématiques, compréhension de l'écrit et résolution de problèmes dans un contexte computationnel) ont été publiés par l'OCDE le 8 septembre 2026. Les analyses sur l'autonomie d'apprentissage et les résultats en anglais langue étrangère sont annoncés pour 2027.</p>
       <h3>Quels sont les scores de la France à PISA 2025 ?</h3>
@@ -686,9 +782,11 @@
       <p>C'est le domaine innovant de PISA 2025. Il mesure la résolution de problèmes dans un contexte computationnel et la capacité des élèves à piloter eux-mêmes leur apprentissage dans un environnement numérique : suivre leurs progrès, repérer leurs lacunes, tenir compte des retours et persévérer.</p>
     </section>
 
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
     <!-- Sources officielles -->
     <div class="related">
-      <h2>Sources</h2>
+      <h2 class="sec-src" id="sources">Sources</h2>
       <ul>
         <li><a href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf" target="_blank" rel="noopener">OCDE : PISA 2025 Results (Volume I), Future-Ready Students (PDF, en anglais)</a></li>
         <li><a href="https://www.oecd.org/content/dam/oecd/fr/publications/reports/2026/09/pisa-2025-results-volume-i-country-notes_88d1164e/france_69779694/9840dc6b-fr.pdf" target="_blank" rel="noopener">OCDE : Résultats du PISA 2025 (Volume I), note pays France (PDF)</a></li>
@@ -724,6 +822,44 @@
     </div>
   </article>
 
+    <aside class="toc-side" aria-label="Sommaire de l'article">
+      <p class="toc-side-title">Sommaire</p>
+      <div class="toc-track"><span class="toc-rail" aria-hidden="true"><span class="toc-fill"></span></span>
+      <ol class="toc-list" id="toc-side-list">
+        <li><a href="#pisa-en-bref"><span class="toc-n">1</span><span class="toc-t">PISA 2025 en bref</span></a></li>
+        <li><a href="#resultats-france"><span class="toc-n">2</span><span class="toc-t">Les résultats de la France</span></a></li>
+        <li><a href="#risques-ia"><span class="toc-n">3</span><span class="toc-t">L'IA et les résultats</span></a></li>
+        <li><a href="#apprendre-a-apprendre"><span class="toc-n">4</span><span class="toc-t">Apprendre à apprendre</span></a></li>
+        <li><a href="#trois-questions"><span class="toc-n">5</span><span class="toc-t">Trois questions pour juger une IA éducative</span></a></li>
+        <li><a href="#reponse-galac6"><span class="toc-n">6</span><span class="toc-t">Comment Galac6 répond</span></a></li>
+        <li><a href="#ecole-du-futur"><span class="toc-n">7</span><span class="toc-t">L'école du futur</span></a></li>
+        <li><a href="#en-resume"><span class="toc-n">8</span><span class="toc-t">En résumé</span></a></li>
+        <li><a href="#questions-frequentes"><span class="toc-n">9</span><span class="toc-t">Questions fréquentes</span></a></li>
+        <li class="toc-src"><a href="#sources"><span class="toc-n" aria-hidden="true"></span><span class="toc-t">Sources</span></a></li>
+      </ol></div>
+    </aside>
+  </div>
+
+  <button class="toc-btn" id="toc-btn" type="button" aria-controls="toc-sheet" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg><span>Sommaire</span><span class="toc-btn-n" id="toc-btn-n"></span></button>
+  <div class="toc-sheet" id="toc-sheet" hidden>
+    <div class="toc-sheet-bg"></div>
+    <div class="toc-sheet-panel" role="dialog" aria-modal="true" aria-label="Sommaire de l'article">
+      <div class="toc-sheet-head"><p>Sommaire</p><button class="toc-close" type="button" aria-label="Fermer le sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg></button></div>
+      <ol class="plan-toc">
+        <li><a href="#pisa-en-bref"><span class="pt-n">1</span><span class="pt-t">PISA 2025 en bref</span></a></li>
+        <li><a href="#resultats-france"><span class="pt-n">2</span><span class="pt-t">Les résultats de la France</span></a></li>
+        <li><a href="#risques-ia"><span class="pt-n">3</span><span class="pt-t">L'IA et les résultats</span></a></li>
+        <li><a href="#apprendre-a-apprendre"><span class="pt-n">4</span><span class="pt-t">Apprendre à apprendre</span></a></li>
+        <li><a href="#trois-questions"><span class="pt-n">5</span><span class="pt-t">Trois questions pour juger une IA éducative</span></a></li>
+        <li><a href="#reponse-galac6"><span class="pt-n">6</span><span class="pt-t">Comment Galac6 répond</span></a></li>
+        <li><a href="#ecole-du-futur"><span class="pt-n">7</span><span class="pt-t">L'école du futur</span></a></li>
+        <li><a href="#en-resume"><span class="pt-n">8</span><span class="pt-t">En résumé</span></a></li>
+        <li><a href="#questions-frequentes"><span class="pt-n">9</span><span class="pt-t">Questions fréquentes</span></a></li>
+        <li class="pt-src"><a href="#sources"><span class="pt-n" aria-hidden="true"></span><span class="pt-t">Sources</span></a></li>
+      </ol>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer>
     <div>Galac6. L'IA au service de la pédagogie</div>
@@ -736,6 +872,86 @@
     </div>
   </footer>
 
+
+  <script>
+  /* Chapitrage : partie en cours (IntersectionObserver), barres d'avancement, panneau Sommaire */
+  (function () {
+    var article = document.querySelector('.article');
+    var links = Array.prototype.slice.call(document.querySelectorAll('#toc-side-list a'));
+    var heads = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+    var sheetLinks = Array.prototype.slice.call(document.querySelectorAll('#toc-sheet a'));
+    var bar = document.querySelector('.read-progress span');
+    var rail = document.querySelector('.toc-rail'), fill = document.querySelector('.toc-fill');
+    var btn = document.getElementById('toc-btn'), btnN = document.getElementById('toc-btn-n');
+    var sheet = document.getElementById('toc-sheet'), plan = document.getElementById('sommaire');
+    if (!article || !heads.length) return;
+    var LINE = 170; /* ligne de lecture, sous le menu collant */
+    var active = -1, ticking = false;
+
+    function absTop(el) { return el.getBoundingClientRect().top + window.pageYOffset; }
+    function center(i) { var n = links[i].querySelector('.toc-n'); return n.offsetTop + n.offsetHeight / 2; } /* relatif à la liste */
+
+    function findActive() {
+      var idx = -1;
+      for (var i = 0; i < heads.length; i++) { if (heads[i].getBoundingClientRect().top - LINE <= 0) idx = i; }
+      if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4) idx = heads.length - 1;
+      return idx;
+    }
+
+    function setActive(idx) {
+      if (idx === active) return;
+      active = idx;
+      links.forEach(function (a, i) {
+        a.classList.toggle('is-active', i === idx);
+        a.classList.toggle('is-done', i < idx);
+        if (i === idx) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+      });
+      sheetLinks.forEach(function (a, i) { a.classList.toggle('is-active', i === idx); });
+      if (btnN) btnN.textContent = idx >= 0 ? (links[idx].querySelector('.toc-n').textContent || '') : '';
+    }
+
+    function update() {
+      ticking = false;
+      setActive(findActive());
+      var y = window.pageYOffset, start = absTop(article), end = start + article.offsetHeight - window.innerHeight;
+      var p = Math.min(1, Math.max(0, (y - start) / Math.max(1, end - start)));
+      if (bar) bar.style.transform = 'scaleX(' + p + ')';
+      if (rail && rail.offsetParent) {
+        var c0 = center(0), cN = center(links.length - 1);
+        rail.style.top = c0 + 'px'; rail.style.height = (cN - c0) + 'px';
+        var h = 0;
+        if (active >= 0) {
+          var a = active, ca = center(a);
+          if (a < heads.length - 1) {
+            var t0 = absTop(heads[a]), t1 = absTop(heads[a + 1]);
+            var w = Math.min(1, Math.max(0, (y + LINE - t0) / Math.max(1, t1 - t0)));
+            h = ca - c0 + w * (center(a + 1) - ca);
+          } else { h = ca - c0; }
+        }
+        fill.style.height = Math.max(0, h) + 'px';
+      }
+      if (btn && plan) btn.classList.toggle('show', plan.getBoundingClientRect().bottom < 0);
+    }
+    function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } }
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function () { setActive(findActive()); }, { rootMargin: '-' + LINE + 'px 0px -55% 0px' });
+      heads.forEach(function (h) { io.observe(h); });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    update();
+
+    /* Panneau Sommaire sur téléphone */
+    function openSheet() { sheet.hidden = false; btn.setAttribute('aria-expanded', 'true'); var c = sheet.querySelector('.toc-close'); if (c) c.focus(); }
+    function closeSheet() { sheet.hidden = true; btn.setAttribute('aria-expanded', 'false'); }
+    if (btn && sheet) {
+      btn.addEventListener('click', openSheet);
+      sheet.addEventListener('click', function (e) { if (e.target.closest('.toc-sheet-bg, .toc-close, a')) closeSheet(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !sheet.hidden) { closeSheet(); btn.focus(); } });
+    }
+  })();
+  </script>
   <script src="/cookie-consent.js"></script>
 </body>
 </html>
