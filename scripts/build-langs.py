@@ -84,6 +84,9 @@ PATH_TO_GROUP = {
     '/dictee-en-ligne': 'dictee', '/dictee-en-ligne.html': 'dictee',
     '/annales-brevet-bac': 'annales', '/annales-brevet-bac.html': 'annales',
 }
+# Pages faites à la main (hors groupes) qui ont une version anglaise : liens traduits et sélecteur de langue (31/10/2026)
+PAIRES_EN = {'/ecoles-francaises-royaume-uni': '/en/french-schools-uk',
+             '/blog/pisa-2025-ecole-du-futur': '/en/blog/pisa-2025-school-of-the-future'}
 # Fil d'Ariane des pages françaises (les autres langues : clés nav.* ou <groupe>.crumb des dictionnaires)
 CRUMB_FR = {'ecole': 'Pour les écoles', 'about': 'À propos', 'tarifs': 'Tarifs',
             'etranger': "Écoles françaises à l'étranger", 'expat': "Familles françaises à l'étranger",
@@ -283,6 +286,8 @@ def menu_links(group, current_path):
         p = page_path(group, l) if group else None
         if not p:
             p = current_path if (l == 'fr' and not group) else page_path('index', l)
+        if l == 'en' and not group and current_path in PAIRES_EN:
+            p = PAIRES_EN[current_path]
         links[l] = p
     return links
 
@@ -475,6 +480,8 @@ def map_href(href, lang):
     path, rest = m.group(1), m.group(2)
     if path == '/en' or path.startswith('/en/'):
         path = path[3:] or '/'
+    if lang == 'en' and path in PAIRES_EN:
+        return PAIRES_EN[path] + rest, True
     g = PATH_TO_GROUP.get(path)
     if g and page_path(g, lang):
         return page_path(g, lang) + rest, True

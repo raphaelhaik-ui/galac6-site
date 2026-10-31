@@ -19,6 +19,7 @@
 /primaire             /primaire.html               200
 /teaser               /teaser/index.html           200
 /blog                 /blog/index.html             200
+/en/blog/pisa-2025-school-of-the-future.html /en/blog/pisa-2025-school-of-the-future 301!
 /demo                 /ecole?type=demo&utm_source=educatech&utm_medium=carte&utm_content=demo#devis  302
 # Pages traduites (généré par scripts/build-langs.py) : adresses sans .html
 /en/ecole                /en/ecole.html               200
@@ -66,6 +67,7 @@
 /donnees-eleves.html                     /donnees-eleves                    301!
 /ecole.html                              /ecole                             301!
 /ecoles-francaises-etranger.html         /ecoles-francaises-etranger        301!
+/ecoles-francaises-royaume-uni.html      /ecoles-francaises-royaume-uni     301!
 /familles-francaises-etranger.html       /familles-francaises-etranger      301!
 /guide-installation.html                 /guide-installation                301!
 /guide-prof.html                         /guide-prof                        301!
@@ -97,6 +99,7 @@
 /en/french-curriculum-abroad.html        /en/french-curriculum-abroad       301!
 /en/french-dictation-online.html         /en/french-dictation-online        301!
 /en/french-schools-abroad.html           /en/french-schools-abroad          301!
+/en/french-schools-uk.html               /en/french-schools-uk              301!
 /en/index.html                           /en/                               301!
 /en/tarifs.html                          /en/tarifs                         301!
 /es/about.html                           /es/about                          301!
