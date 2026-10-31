@@ -215,6 +215,26 @@
     .pz-d { cursor: default; transition: r 0.15s; }
     .pz-d:hover { r: 8; }
     .pisa-chart figcaption { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.4rem; line-height: 1.45; }
+  
+    /* Tableau de synthèse PISA 2025 / Galac6 / chatbot généraliste */
+    .pisa-table-wrap { margin: 1.4rem 0 0.6rem; }
+    .pisa-table { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; font-size: 0.95rem; line-height: 1.5; }
+    .pisa-table th { text-align: left; padding: 0.8rem 0.9rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text); background: rgba(124,92,252,0.14); border-bottom: 1px solid var(--border); }
+    .pisa-table th:nth-child(2) { color: var(--primary-light); }
+    .pisa-table td { padding: 0.85rem 0.9rem; vertical-align: top; color: var(--text-muted); border-bottom: 1px solid var(--border); }
+    .pisa-table tr:last-child td { border-bottom: none; }
+    .pisa-table td:first-child { color: var(--text); font-weight: 600; }
+    .pisa-table td:nth-child(2) { color: var(--text); background: rgba(124,92,252,0.06); }
+    .pisa-table-note { font-size: 0.85rem; color: var(--text-muted); }
+    @media (max-width: 700px) {
+      .pisa-table, .pisa-table tbody, .pisa-table tr, .pisa-table td { display: block; width: 100%; }
+      .pisa-table thead { display: none; }
+      .pisa-table { border: none; background: none; }
+      .pisa-table tr { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 0.9rem; overflow: hidden; }
+      .pisa-table td { border-bottom: 1px solid var(--border); }
+      .pisa-table td::before { content: attr(data-label); display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--primary-light); margin-bottom: 0.3rem; }
+      .pisa-table td:last-child::before { color: var(--text-muted); }
+    }
   </style>
   <style id="g6-nav-css">
     /* Menu : marge du logo, sélecteur de langue (généré par scripts/build-langs.py) */
@@ -392,6 +412,54 @@
     <h2>L'école du futur : l'IA au service de la pédagogie</h2>
     <p>PISA 2025 ne dit pas que l'IA va sauver ou ruiner l'école. Il montre que les compétences qui comptent le plus sont profondément humaines : planifier, se questionner, persévérer, demander de l'aide, vérifier. Les élèves utilisent déjà l'IA ; l'enjeu de l'innovation scolaire est qu'elle les fasse réfléchir au lieu de réfléchir à leur place, et que cet usage critique soit accessible à tous, pas seulement aux plus favorisés.</p>
     <p>C'est le choix de Galac6 : une IA au service de la pédagogie, qui guide l'élève sans faire le travail à sa place et donne au professeur une vision plus fine de sa classe, sans jamais prendre sa place. Pour aller plus loin, découvrez <a href="/soutien-scolaire-ia">le soutien scolaire par IA</a> ou <a href="/ecole">Galac6 pour les écoles</a>.</p>
+
+    <h2>En résumé : les constats de PISA 2025 et les réponses de Galac6</h2>
+    <p>Ce tableau reprend les recommandations, les risques et les problèmes soulevés par l'étude, la façon dont Galac6 y répond, et ce qui se passe quand un élève utilise seul une IA généraliste comme ChatGPT.</p>
+    <div class="pisa-table-wrap">
+      <table class="pisa-table">
+        <thead>
+          <tr><th scope="col">Ce que soulève PISA 2025</th><th scope="col">Comment Galac6 y répond</th><th scope="col">Chatbot généraliste utilisé seul</th></tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td data-label="Ce que soulève PISA 2025">Utiliser l'IA pour faire à la place de l'élève (résumer, rédiger, faire une première recherche) va de pair avec de moins bons résultats en sciences.</td>
+          <td data-label="Comment Galac6 y répond">Le tuteur guide par des questions et des indices, sans donner la réponse. Il refuse de rédiger un commentaire ou une dissertation à la place de l'élève.</td>
+          <td data-label="Chatbot généraliste utilisé seul">Par défaut, il répond à la demande : il résume, rédige ou résout l'exercice en entier si l'élève le lui demande.</td>
+        </tr>
+        <tr>
+          <td data-label="Ce que soulève PISA 2025">L'IA doit être « un échafaudage, pas une béquille » : on apprend par l'effort face à une notion nouvelle.</td>
+          <td data-label="Comment Galac6 y répond">L'aide monte d'un cran seulement si l'élève reste bloqué : indice plus précis, puis exemple semblable résolu, puis notion réexpliquée. La réponse finale reste à l'élève.</td>
+          <td data-label="Chatbot généraliste utilisé seul">La réponse complète arrive tout de suite. L'élève peut sauter l'effort en une question.</td>
+        </tr>
+        <tr>
+          <td data-label="Ce que soulève PISA 2025">Apprendre à vérifier les réponses d'une IA : seuls 47 % des élèves français le font en classe, contre 63 % dans l'OCDE.</td>
+          <td data-label="Comment Galac6 y répond">En mathématiques, les calculs sont contrôlés par un moteur de calcul. L'élève doit justifier et vérifier sa réponse, le tuteur ne la valide pas à sa place.</td>
+          <td data-label="Chatbot généraliste utilisé seul">Il peut se tromper avec assurance. C'est à l'élève de repérer l'erreur, sans y être guidé.</td>
+        </tr>
+        <tr>
+          <td data-label="Ce que soulève PISA 2025">Autorégulation : suivre ses progrès, repérer ses lacunes, vérifier qu'on a compris.</td>
+          <td data-label="Comment Galac6 y répond">Les notions à retravailler sont repérées et réunies dans « Mes notions ». « Interroge-moi sur ma leçon » vérifie que la leçon est sue, et la dictée sur mesure revient sur les erreurs.</td>
+          <td data-label="Chatbot généraliste utilisé seul">Chaque conversation repart de zéro, sans suivi par notion ni lien avec le programme de la classe.</td>
+        </tr>
+        <tr>
+          <td data-label="Ce que soulève PISA 2025">Persévérer et améliorer son travail après un retour négatif.</td>
+          <td data-label="Comment Galac6 y répond">Seconde chance avec un indice quand l'élève se trompe en interrogation. En dictée, chaque erreur est expliquée avec sa règle.</td>
+          <td data-label="Chatbot généraliste utilisé seul">L'erreur est généralement corrigée en donnant directement la bonne réponse.</td>
+        </tr>
+        <tr>
+          <td data-label="Ce que soulève PISA 2025">Le rôle de l'enseignant et de l'accompagnement reste décisif.</td>
+          <td data-label="Comment Galac6 y répond">Le professeur voit la réussite par notion de sa classe, envoie des dictées sur mesure et coupe le tuteur pendant ses évaluations.</td>
+          <td data-label="Chatbot généraliste utilisé seul">Le professeur ne voit rien de l'usage qui en est fait, et ne peut pas le régler pour sa classe.</td>
+        </tr>
+        <tr>
+          <td data-label="Ce que soulève PISA 2025">Risque d'une nouvelle fracture : l'apprentissage critique de l'IA profite surtout aux élèves favorisés.</td>
+          <td data-label="Comment Galac6 y répond">Quand l'école équipe une classe, tous les élèves ont le même outil encadré par le professeur, et pas seulement ceux dont la famille sait s'en servir.</td>
+          <td data-label="Chatbot généraliste utilisé seul">L'usage dépend de chaque famille : de ce qu'elle sait de l'IA et de l'abonnement qu'elle paie.</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="pisa-table-note">Comparaison avec l'usage par défaut d'un chatbot généraliste (ChatGPT, Gemini, Copilot…), qui n'est pas conçu pour l'école. Certains proposent un mode « étude » qui pose davantage de questions, mais l'élève peut l'activer ou le quitter librement, et le professeur n'en voit rien. Les constats de PISA sont tirés du rapport de l'OCDE (Volume I) ; l'OCDE précise qu'ils décrivent des associations, pas des liens de cause à effet.</p>
 
     <!-- FAQ -->
     <section class="faq">
