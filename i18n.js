@@ -298,7 +298,7 @@
       'ecole.gains.time.eyebrow': 'Time saved',
       'ecole.gains.time.title': 'Huge time savings',
       'ecole.gains.prep.title': 'Prepare an assessment in minutes',
-      'ecole.gains.prep.l1': '<span><strong>Over 2,000 dictations</strong> already checked and ready to set, including extracts from great authors</span>',
+      'ecole.gains.prep.l1': '<span><strong>Over 2,000 dictations read aloud and marked by Galac6</strong>: each pupil does the dictation alone on their screen, in class or at home, without you having to dictate it. Checked texts, including extracts from great authors</span>',
       'ecole.gains.prep.l2': '<span><strong>Over 250 official maths papers</strong>: brevet, baccalauréat, course aux nombres, Concours général</span>',
       'ecole.gains.prep.l3': '<span><strong>Quizzes and tests</strong> created with the help of AI: you review and approve every question</span>',
       'ecole.gains.corr.title': 'Mark with almost no effort',
