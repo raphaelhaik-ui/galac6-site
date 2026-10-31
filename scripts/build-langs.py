@@ -70,13 +70,10 @@ GLOBE = ('<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="cu
 
 # Styles communs du menu, insérés dans chaque page (bloc <style id="g6-nav-css">)
 NAV_CSS = """
-    /* Menu : marge du logo, bouton « Galac6 in your country », sélecteur de langue (généré par scripts/build-langs.py) */
+    /* Menu : marge du logo, sélecteur de langue (généré par scripts/build-langs.py) */
     html, body { overflow-x: clip; } /* les halos décoratifs du haut de page ne créent plus de défilement horizontal */
     .navbar-brand { margin-inline-end: 1.5rem; flex-shrink: 0; }
     .navbar-links a { white-space: nowrap; }
-    .navbar-links .nav-intl { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 0.4rem 0.85rem; border: 1.5px solid rgba(139,147,255,0.75); border-radius: 10px; background: rgba(99,102,241,0.1); color: #e9ebfa; font-weight: 600; text-decoration: none; }
-    .navbar-links .nav-intl:hover, .navbar-links .nav-intl:focus-visible { border-color: #a78bfa; background: rgba(99,102,241,0.22); color: #fff; text-decoration: none; }
-    .navbar-links .nav-intl svg { flex: none; }
     .lang-menu { position: relative; }
     .lang-menu summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; min-height: 44px; padding: 0 4px; color: var(--text-muted, #8a8aa3); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; user-select: none; }
     .lang-menu summary::-webkit-details-marker { display: none; }
@@ -86,33 +83,24 @@ NAV_CSS = """
     .navbar .lang-menu-list a { display: block; padding: 0.55rem 0.8rem; border-radius: 8px; color: var(--text-muted, #8a8aa3); font-size: 0.9rem; font-weight: 500; text-decoration: none; white-space: nowrap; min-height: 0; }
     .navbar .lang-menu-list a:hover { background: rgba(124,92,252,0.14); color: var(--text, #f0f0f5); }
     .navbar .lang-menu-list a[aria-current] { color: var(--text, #f0f0f5); font-weight: 700; }
-    /* Grand écran : menu un peu resserré pour tenir sur une ligne avec le bouton */
+    /* Grand écran : menu un peu resserré pour tenir sur une ligne */
     @media (min-width: 1241px) {
       .navbar-links { gap: 1.25rem !important; }
       .navbar-links a { font-size: 0.88rem; }
       .navbar-brand { margin-inline-end: 1.25rem; }
     }
-    @media (min-width: 1101px) and (max-width: 1240px) {
+    @media (min-width: 901px) and (max-width: 1240px) {
       .navbar { padding-left: 2rem !important; padding-right: 2rem !important; }
       .navbar-links { gap: 0.75rem !important; }
       .navbar-links a { font-size: 0.8rem !important; }
-      .navbar-links .nav-intl { padding: 0.35rem 0.6rem; gap: 5px; }
       .navbar-links a[href^="https://galac6web"] { padding: 0.45rem 0.9rem !important; }
       .navbar-brand { margin-inline-end: 1rem; }
       .navbar-brand span { font-size: 1.35rem; }
       .navbar-brand img { height: 38px; }
     }
-    /* Menu hamburger jusqu'à 1100 px (au lieu de 900) : le menu complet ne tient plus sur une ligne en dessous */
-    @media (min-width: 901px) and (max-width: 1100px) {
-      .navbar { padding: 1rem 1.5rem !important; flex-wrap: wrap; }
-      .navbar-hamburger { display: flex !important; }
-      .navbar-links { display: none !important; flex-direction: column; align-items: center; width: 100%; gap: 0.5rem !important; padding: 1rem 0 0.5rem; }
-      .navbar-links.open { display: flex !important; }
-      .navbar-links a { padding: 0.6rem 0; font-size: 1rem !important; }
-    }
-    @media (max-width: 1100px) {
+    /* Menu hamburger (900 px et moins, réglage d'origine des pages) */
+    @media (max-width: 900px) {
       .navbar-brand { margin-inline-end: 0; }
-      .navbar-links .nav-intl { order: -1; width: 100%; max-width: 340px; min-height: 44px; margin: 0 auto 0.25rem; padding: 0.6rem 1rem; font-size: 1rem; }
       .lang-menu { align-self: center; }
       .lang-menu summary { font-size: 0.95rem; }
       .lang-menu-list { position: static; display: flex; flex-wrap: wrap; justify-content: center; min-width: 0; margin-top: 4px; }
@@ -311,18 +299,10 @@ def update_sources():
         url_path = '/' + re.sub(r'(index)?\.html$', '', rel)
         group = PATH_TO_GROUP.get(url_path) or PATH_TO_GROUP.get('/' + rel)
 
-        # Bouton « Galac6 in your country » (toujours en anglais, avec un globe)
-        def intl(m):
-            attrs = m.group(1)
-            attrs = attrs.replace(' data-i18n="nav.intl"', '')
-            cls = re.search(r'class="([^"]*)"', attrs)
-            if cls:
-                if 'nav-intl' not in cls.group(1):
-                    attrs = attrs.replace(cls.group(0), 'class="%s nav-intl"' % cls.group(1))
-            else:
-                attrs += ' class="nav-intl"'
-            return '<a href="/international"%s>%s<span>Galac6 in your country</span></a>' % (attrs, GLOBE)
-        s = re.sub(r'<a href="/international"([^>]*)>(?:Galac6 dans votre pays|Galac6 in your country)</a>', intl, s)
+        # Plus de bouton « Galac6 in your country » dans le menu (décision du 31/10/2026) :
+        # le bandeau anglais du haut suffit. On retire l'ancien lien, quelle que soit sa forme.
+        s = re.sub(r'\n[ \t]*<a href="/international"[^>]*>(?:Galac6 dans votre pays|Galac6 in your country|<svg[^>]*>.*?</svg><span>Galac6 in your country</span>)</a>',
+                   '', s, flags=re.S)
 
         # Sélecteur de langue (remplace le bouton drapeau FR/EN)
         menu = lang_menu_html(lang, menu_links(group, url_path), 'Language' if lang == 'en' else LANG_LABEL_FR)
@@ -349,6 +329,17 @@ def update_sources():
         # Langue fixe : i18n.js ne traduit plus sur place (le choix se fait par adresse)
         if lang == 'fr' and 'data-static-lang' not in s:
             s = s.replace('<html lang="fr">', '<html lang="fr" data-static-lang>', 1)
+
+        # Page de vote anglaise : bandeau cookies en anglais (mêmes textes que /en/)
+        if is_vote:
+            en = load_en()
+            txt = {k: en['gen.cookie.' + k] for k in COOKIE_KEYS}
+            txt['lien'] = '/mentions-legales#cookies-en'
+            block = '<script id="g6-cookie-txt">window.G6_COOKIE_TXT = %s;</script>' % json.dumps(txt, ensure_ascii=False)
+            if '<script id="g6-cookie-txt">' in s:
+                s = re.sub(r'<script id="g6-cookie-txt">.*?</script>', lambda m: block, s, flags=re.S)
+            else:
+                s = s.replace('</head>', '  ' + block + '\n</head>', 1)
 
         # hreflang des pages traduites
         if group:
@@ -406,6 +397,11 @@ def set_html(el, html):
     frag = BeautifulSoup(html, 'html.parser')
     for node in list(frag.contents):
         el.append(node)
+
+
+# Textes du bandeau cookies (mêmes clés que l'objet T de cookie-consent.js)
+COOKIE_KEYS = ('texte', 'plus', 'refuser', 'perso', 'accepter', 'titrePerso', 'audienceTitre',
+               'audienceTexte', 'pubTitre', 'pubTexte', 'enregistrer', 'necessaires')
 
 
 def dyn_object(group, D):
@@ -524,6 +520,16 @@ def build_page(group, lang, D, countries, errors):
         tag.string = 'window.G6_DYN = %s;' % json.dumps(dyn, ensure_ascii=False)
         head.append(tag)
         head.append('\n')
+
+    # ── bandeau cookies (cookie-consent.js) dans la langue de la page ──
+    for old_tag in soup.select('script#g6-cookie-txt'):
+        old_tag.decompose()
+    cookie_txt = {k: need('gen.cookie.' + k) for k in COOKIE_KEYS}
+    cookie_txt['lien'] = '/mentions-legales#cookies-en'
+    tag = soup.new_tag('script')
+    tag.string = 'window.G6_COOKIE_TXT = %s;' % json.dumps(cookie_txt, ensure_ascii=False)
+    head.append(tag)
+    head.append('\n')
 
     # ── liste des pays (page de vote) ──
     if group == 'vote' and lang in countries:
@@ -838,6 +844,8 @@ def export_source():
     add('meta.vote.description', None, h.find('meta', attrs={'name': 'description'})['content'], 'vote')
     add('meta.vote.og_title', None, h.find('meta', attrs={'property': 'og:title'})['content'], 'vote')
     add('meta.vote.og_description', None, h.find('meta', attrs={'property': 'og:description'})['content'], 'vote')
+    for k in COOKIE_KEYS:
+        add('gen.cookie.' + k, None, en.get('gen.cookie.' + k), 'toutes')
     old = {}
     try:
         old = json.load(open(os.path.join(LANGDIR, '_source.json'), encoding='utf-8'))

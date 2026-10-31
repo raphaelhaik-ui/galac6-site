@@ -384,13 +384,10 @@
 <!-- Meta Pixel (Facebook) - charge apres consentement -->
 <script src="/meta-pixel.js"></script>
 <style id="g6-nav-css">
-    /* Menu : marge du logo, bouton « Galac6 in your country », sélecteur de langue (généré par scripts/build-langs.py) */
+    /* Menu : marge du logo, sélecteur de langue (généré par scripts/build-langs.py) */
     html, body { overflow-x: clip; } /* les halos décoratifs du haut de page ne créent plus de défilement horizontal */
     .navbar-brand { margin-inline-end: 1.5rem; flex-shrink: 0; }
     .navbar-links a { white-space: nowrap; }
-    .navbar-links .nav-intl { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 0.4rem 0.85rem; border: 1.5px solid rgba(139,147,255,0.75); border-radius: 10px; background: rgba(99,102,241,0.1); color: #e9ebfa; font-weight: 600; text-decoration: none; }
-    .navbar-links .nav-intl:hover, .navbar-links .nav-intl:focus-visible { border-color: #a78bfa; background: rgba(99,102,241,0.22); color: #fff; text-decoration: none; }
-    .navbar-links .nav-intl svg { flex: none; }
     .lang-menu { position: relative; }
     .lang-menu summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; min-height: 44px; padding: 0 4px; color: var(--text-muted, #8a8aa3); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; user-select: none; }
     .lang-menu summary::-webkit-details-marker { display: none; }
@@ -400,33 +397,24 @@
     .navbar .lang-menu-list a { display: block; padding: 0.55rem 0.8rem; border-radius: 8px; color: var(--text-muted, #8a8aa3); font-size: 0.9rem; font-weight: 500; text-decoration: none; white-space: nowrap; min-height: 0; }
     .navbar .lang-menu-list a:hover { background: rgba(124,92,252,0.14); color: var(--text, #f0f0f5); }
     .navbar .lang-menu-list a[aria-current] { color: var(--text, #f0f0f5); font-weight: 700; }
-    /* Grand écran : menu un peu resserré pour tenir sur une ligne avec le bouton */
+    /* Grand écran : menu un peu resserré pour tenir sur une ligne */
     @media (min-width: 1241px) {
       .navbar-links { gap: 1.25rem !important; }
       .navbar-links a { font-size: 0.88rem; }
       .navbar-brand { margin-inline-end: 1.25rem; }
     }
-    @media (min-width: 1101px) and (max-width: 1240px) {
+    @media (min-width: 901px) and (max-width: 1240px) {
       .navbar { padding-left: 2rem !important; padding-right: 2rem !important; }
       .navbar-links { gap: 0.75rem !important; }
       .navbar-links a { font-size: 0.8rem !important; }
-      .navbar-links .nav-intl { padding: 0.35rem 0.6rem; gap: 5px; }
       .navbar-links a[href^="https://galac6web"] { padding: 0.45rem 0.9rem !important; }
       .navbar-brand { margin-inline-end: 1rem; }
       .navbar-brand span { font-size: 1.35rem; }
       .navbar-brand img { height: 38px; }
     }
-    /* Menu hamburger jusqu'à 1100 px (au lieu de 900) : le menu complet ne tient plus sur une ligne en dessous */
-    @media (min-width: 901px) and (max-width: 1100px) {
-      .navbar { padding: 1rem 1.5rem !important; flex-wrap: wrap; }
-      .navbar-hamburger { display: flex !important; }
-      .navbar-links { display: none !important; flex-direction: column; align-items: center; width: 100%; gap: 0.5rem !important; padding: 1rem 0 0.5rem; }
-      .navbar-links.open { display: flex !important; }
-      .navbar-links a { padding: 0.6rem 0; font-size: 1rem !important; }
-    }
-    @media (max-width: 1100px) {
+    /* Menu hamburger (900 px et moins, réglage d'origine des pages) */
+    @media (max-width: 900px) {
       .navbar-brand { margin-inline-end: 0; }
-      .navbar-links .nav-intl { order: -1; width: 100%; max-width: 340px; min-height: 44px; margin: 0 auto 0.25rem; padding: 0.6rem 1rem; font-size: 1rem; }
       .lang-menu { align-self: center; }
       .lang-menu summary { font-size: 0.95rem; }
       .lang-menu-list { position: static; display: flex; flex-wrap: wrap; justify-content: center; min-width: 0; margin-top: 4px; }
@@ -444,6 +432,7 @@
     @media (max-width: 480px) { .g6-intl-banner { font-size: 0.8rem; padding: 7px 12px; } }
   </style>
 <script>window.G6_DYN = {"demo": "Solicitar una demostración", "devis": "Solicitar un presupuesto", "fail": "No se ha podido enviar. Inténtelo de nuevo en un momento o escríbanos a <a href=\"mailto:hello@galac6.io\">hello@galac6.io</a>.", "ok": "Gracias, su solicitud se ha enviado correctamente. Le responderemos lo antes posible en la dirección indicada.", "pilote": "Ser centro piloto", "quickErr": "Indique una dirección de correo electrónico completa y el nombre de su centro.", "sending": "Enviando…", "title": "Galac6 para centros: más tiempo para sus profesores"};</script>
+<script>window.G6_COOKIE_TXT = {"texte": "Nos gustaría medir las visitas a este sitio (Google Analytics) y los resultados de nuestros anuncios (Google Ads, Meta). Estos servicios instalan cookies y solo se cargan si usted da su consentimiento. Puede cambiar de opinión en cualquier momento con el enlace «Gestionar las cookies» al pie de cada página.", "plus": "Más información", "refuser": "Rechazar todo", "perso": "Personalizar", "accepter": "Aceptar todo", "titrePerso": "Elija sus cookies", "audienceTitre": "Medición de audiencia", "audienceTexte": "Google Analytics: cuenta las visitas y las páginas vistas, para mejorar el sitio.", "pubTitre": "Publicidad", "pubTexte": "Google Ads y Meta (Facebook, Instagram): miden los resultados de nuestros anuncios.", "enregistrer": "Guardar mis opciones", "necessaires": "El sitio también guarda su idioma y esta elección en su dispositivo (imprescindible, sin necesidad de consentimiento).", "lien": "/mentions-legales#cookies-en"};</script>
 <style id="g6-lang-css">
     /* Bandeau d'information des pages es/it/de/he, sous le menu (généré par scripts/build-langs.py) */
     .lang-notice { margin: 0; padding: 10px 16px; background: rgba(99,102,241,0.12); border-bottom: 1px solid rgba(139,147,255,0.3); color: #d6d9f5; font-size: 0.88rem; line-height: 1.5; text-align: center; }
@@ -466,7 +455,6 @@
 <div class="navbar-links">
 <a href="/es/#features">Para alumnos</a>
 <a class="active" href="/es/ecole">Para centros</a>
-<a class="nav-intl" href="/es/international"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span>Galac6 in your country</span></a>
 <a href="/es/tarifs">Tarifas</a>
 <a href="/es/about">Acerca de</a>
 <!-- lang-menu --><details class="lang-menu"><summary aria-label="Idioma : Español">ES</summary><div class="lang-menu-list"><a href="/ecole" hreflang="fr" lang="fr">Français</a><a href="/en/ecole" hreflang="en" lang="en">English</a><a aria-current="page" href="/es/ecole" hreflang="es" lang="es">Español</a><a href="/it/ecole" hreflang="it" lang="it">Italiano</a><a href="/de/ecole" hreflang="de" lang="de">Deutsch</a><a dir="rtl" href="/he/ecole" hreflang="he" lang="he">עברית</a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->

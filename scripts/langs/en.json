@@ -63,5 +63,17 @@
   "dyn.tarifs.month.eleve.alt": "No commitment. Only €69 if you pay yearly.",
   "dyn.tarifs.month.fam.price": "€11.99 <small>per month</small>",
   "dyn.tarifs.month.fam.alt": "No commitment. Only €99 if you pay yearly.",
-  "dyn.tarifs.month.note": "Cancel in one click."
+  "dyn.tarifs.month.note": "Cancel in one click.",
+  "gen.cookie.texte": "We would like to measure visits to this site (Google Analytics) and the results of our ads (Google Ads, Meta). These services set cookies and are only loaded if you agree. You can change your mind at any time with the “Manage cookies” link at the bottom of each page.",
+  "gen.cookie.plus": "Learn more",
+  "gen.cookie.refuser": "Refuse all",
+  "gen.cookie.perso": "Customise",
+  "gen.cookie.accepter": "Accept all",
+  "gen.cookie.titrePerso": "Choose your cookies",
+  "gen.cookie.audienceTitre": "Audience measurement",
+  "gen.cookie.audienceTexte": "Google Analytics: counts visits and the pages viewed, to improve the site.",
+  "gen.cookie.pubTitre": "Advertising",
+  "gen.cookie.pubTexte": "Google Ads and Meta (Facebook, Instagram): measure the results of our ads.",
+  "gen.cookie.enregistrer": "Save my choices",
+  "gen.cookie.necessaires": "The site also remembers your language and this choice on your device (required, no consent needed)."
 }

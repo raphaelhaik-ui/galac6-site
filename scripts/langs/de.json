@@ -514,5 +514,17 @@
   "vote.true.h3": "Schon heute Realität",
   "vote.true.li1": "Ein didaktischer KI-Tutor, der Schüler anleitet, ohne ihnen die Antworten zu geben",
   "vote.true.li2": "Die Lehrkraft entscheidet, was Galac6 ihren Schülern anbietet",
-  "vote.true.li3": "Daten in Frankreich gehostet"
+  "vote.true.li3": "Daten in Frankreich gehostet",
+  "gen.cookie.texte": "Wir möchten die Besuche dieser Website (Google Analytics) und die Ergebnisse unserer Werbung (Google Ads, Meta) messen. Diese Dienste setzen Cookies und werden nur geladen, wenn Sie zustimmen. Sie können Ihre Entscheidung jederzeit über den Link „Cookie-Einstellungen“ unten auf jeder Seite ändern.",
+  "gen.cookie.plus": "Mehr erfahren",
+  "gen.cookie.refuser": "Alle ablehnen",
+  "gen.cookie.perso": "Anpassen",
+  "gen.cookie.accepter": "Alle akzeptieren",
+  "gen.cookie.titrePerso": "Cookies auswählen",
+  "gen.cookie.audienceTitre": "Reichweitenmessung",
+  "gen.cookie.audienceTexte": "Google Analytics: zählt die Besuche und die aufgerufenen Seiten, um die Website zu verbessern.",
+  "gen.cookie.pubTitre": "Werbung",
+  "gen.cookie.pubTexte": "Google Ads und Meta (Facebook, Instagram): messen die Ergebnisse unserer Werbung.",
+  "gen.cookie.enregistrer": "Auswahl speichern",
+  "gen.cookie.necessaires": "Die Website speichert außerdem Ihre Sprache und diese Auswahl auf Ihrem Gerät (notwendig, ohne Einwilligung)."
 }

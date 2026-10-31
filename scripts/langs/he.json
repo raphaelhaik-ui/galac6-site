@@ -468,7 +468,7 @@
   "vote.f.school": "שם בית הספר <span class=\"hint\">(חובה)</span>",
   "vote.f.tel": "טלפון <span class=\"hint\">(לא חובה)</span>",
   "vote.footer.about": "אודות",
-  "vote.footer.cookies": "הגדרות עוגיות",
+  "vote.footer.cookies": "ניהול עוגיות",
   "vote.footer.intl": "בית ספר מחוץ לצרפת?",
   "vote.footer.legal": "מידע משפטי",
   "vote.footer.made": "Made in France",
@@ -514,5 +514,17 @@
   "vote.true.h3": "כבר נכון היום",
   "vote.true.li1": "מורה פרטי דידקטי בבינה מלאכותית שמנחה את התלמידים בלי לתת להם את התשובות",
   "vote.true.li2": "המורה נשאר אחראי על מה ש-Galac6 מציעה לתלמידיו",
-  "vote.true.li3": "נתונים מאוחסנים בצרפת"
+  "vote.true.li3": "נתונים מאוחסנים בצרפת",
+  "gen.cookie.texte": "נשמח למדוד את הביקורים באתר (Google Analytics) ואת תוצאות הפרסומות שלנו (Google Ads, Meta). שירותים אלה שומרים עוגיות (cookies) ונטענים רק אם תסכימו לכך. אפשר לשנות את הבחירה בכל עת באמצעות הקישור „ניהול עוגיות” בתחתית כל עמוד.",
+  "gen.cookie.plus": "למידע נוסף",
+  "gen.cookie.refuser": "לדחות הכול",
+  "gen.cookie.perso": "התאמה אישית",
+  "gen.cookie.accepter": "לאשר הכול",
+  "gen.cookie.titrePerso": "בחירת העוגיות",
+  "gen.cookie.audienceTitre": "מדידת קהל",
+  "gen.cookie.audienceTexte": "Google Analytics: סופר את הביקורים ואת העמודים שנצפו, כדי לשפר את האתר.",
+  "gen.cookie.pubTitre": "פרסום",
+  "gen.cookie.pubTexte": "Google Ads ו-Meta (Facebook, Instagram): מודדים את תוצאות הפרסומות שלנו.",
+  "gen.cookie.enregistrer": "שמירת הבחירות שלי",
+  "gen.cookie.necessaires": "האתר שומר גם את השפה שלכם ואת הבחירה הזו במכשיר שלכם (הכרחי, ללא צורך בהסכמה)."
 }

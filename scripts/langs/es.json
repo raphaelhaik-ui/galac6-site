@@ -468,7 +468,7 @@
  "vote.f.school": "Nombre del centro <span class=\"hint\">(obligatorio)</span>",
  "vote.f.tel": "Teléfono <span class=\"hint\">(opcional)</span>",
  "vote.footer.about": "Acerca de",
- "vote.footer.cookies": "Configuración de cookies",
+ "vote.footer.cookies": "Gestionar las cookies",
  "vote.footer.intl": "¿Su centro está fuera de Francia?",
  "vote.footer.legal": "Aviso legal",
  "vote.footer.made": "Hecho en Francia",
@@ -514,5 +514,17 @@
  "vote.true.h3": "Ya disponible hoy",
  "vote.true.li1": "Un tutor de IA didáctico que guía a los alumnos sin darles las respuestas",
  "vote.true.li2": "El profesor decide lo que Galac6 ofrece a sus alumnos",
- "vote.true.li3": "Datos alojados en Francia"
+ "vote.true.li3": "Datos alojados en Francia",
+ "gen.cookie.texte": "Nos gustaría medir las visitas a este sitio (Google Analytics) y los resultados de nuestros anuncios (Google Ads, Meta). Estos servicios instalan cookies y solo se cargan si usted da su consentimiento. Puede cambiar de opinión en cualquier momento con el enlace «Gestionar las cookies» al pie de cada página.",
+ "gen.cookie.plus": "Más información",
+ "gen.cookie.refuser": "Rechazar todo",
+ "gen.cookie.perso": "Personalizar",
+ "gen.cookie.accepter": "Aceptar todo",
+ "gen.cookie.titrePerso": "Elija sus cookies",
+ "gen.cookie.audienceTitre": "Medición de audiencia",
+ "gen.cookie.audienceTexte": "Google Analytics: cuenta las visitas y las páginas vistas, para mejorar el sitio.",
+ "gen.cookie.pubTitre": "Publicidad",
+ "gen.cookie.pubTexte": "Google Ads y Meta (Facebook, Instagram): miden los resultados de nuestros anuncios.",
+ "gen.cookie.enregistrer": "Guardar mis opciones",
+ "gen.cookie.necessaires": "El sitio también guarda su idioma y esta elección en su dispositivo (imprescindible, sin necesidad de consentimiento)."
 }

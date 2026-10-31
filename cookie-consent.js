@@ -26,7 +26,11 @@
   var enAnglais = false;
   try { enAnglais = window.localStorage.getItem('galac6-lang') === 'en'; } catch (e) {}
 
-  var T = enAnglais ? {
+  // Pages traduites (en, es, it, de, he) : textes fournis par la page (window.G6_COOKIE_TXT,
+  // généré par scripts/build-langs.py). Sinon, français (ou anglais si choisi).
+  var TXT_PAGE = window.G6_COOKIE_TXT || null;
+
+  var T = TXT_PAGE ? TXT_PAGE : enAnglais ? {
     texte: 'We would like to measure visits to this site (Google Analytics) and the results of our ads (Google Ads, Meta). ' +
       'These services set cookies and are only loaded if you agree. You can change your mind at any time with the “Manage cookies” link at the bottom of each page.',
     plus: 'Learn more',
@@ -174,7 +178,7 @@
     var p = document.createElement('p');
     p.textContent = T.texte + ' ';
     var lien = document.createElement('a');
-    lien.href = enAnglais ? '/mentions-legales#cookies-en' : '/mentions-legales#cookies';
+    lien.href = TXT_PAGE && TXT_PAGE.lien ? TXT_PAGE.lien : (enAnglais ? '/mentions-legales#cookies-en' : '/mentions-legales#cookies');
     lien.textContent = T.plus;
     p.appendChild(lien);
     inner.appendChild(p);

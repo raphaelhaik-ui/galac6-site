@@ -1754,6 +1754,90 @@
    "index"
   ]
  },
+ "gen.cookie.accepter": {
+  "fr": null,
+  "en": "Accept all",
+  "pages": [
+   "toutes"
+  ]
+ },
+ "gen.cookie.audienceTexte": {
+  "fr": null,
+  "en": "Google Analytics: counts visits and the pages viewed, to improve the site.",
+  "pages": [
+   "toutes"
+  ]
+ },
+ "gen.cookie.audienceTitre": {
+  "fr": null,
+  "en": "Audience measurement",
+  "pages": [
+   "toutes"
+  ]
+ },
+ "gen.cookie.enregistrer": {
+  "fr": null,
+  "en": "Save my choices",
+  "pages": [
+   "toutes"
+  ]
+ },
+ "gen.cookie.necessaires": {
+  "fr": null,
+  "en": "The site also remembers your language and this choice on your device (required, no consent needed).",
+  "pages": [
+   "toutes"
+  ]
+ },
+ "gen.cookie.perso": {
+  "fr": null,
+  "en": "Customise",
+  "pages": [
+   "toutes"
+  ]
+ },
+ "gen.cookie.plus": {
+  "fr": null,
+  "en": "Learn more",
+  "pages": [
+   "toutes"
+  ]
+ },
+ "gen.cookie.pubTexte": {
+  "fr": null,
+  "en": "Google Ads and Meta (Facebook, Instagram): measure the results of our ads.",
+  "pages": [
+   "toutes"
+  ]
+ },
+ "gen.cookie.pubTitre": {
+  "fr": null,
+  "en": "Advertising",
+  "pages": [
+   "toutes"
+  ]
+ },
+ "gen.cookie.refuser": {
+  "fr": null,
+  "en": "Refuse all",
+  "pages": [
+   "toutes"
+  ]
+ },
+ "gen.cookie.texte": {
+  "fr": null,
+  "en": "We would like to measure visits to this site (Google Analytics) and the results of our ads (Google Ads, Meta). These services set cookies and are only loaded if you agree. You can change your mind at any time with the “Manage cookies” link at the bottom of each page.",
+  "pages": [
+   "toutes"
+  ]
+ },
+ "gen.cookie.titrePerso": {
+  "fr": null,
+  "en": "Choose your cookies",
+  "pages": [
+   "toutes"
+  ]
+ },
  "gen.home": {
   "fr": null,
   "en": "Home",
@@ -3327,7 +3411,7 @@
  },
  "vote.footer.cookies": {
   "fr": null,
-  "en": "Cookie settings",
+  "en": "Manage cookies",
   "pages": [
    "vote"
   ]
