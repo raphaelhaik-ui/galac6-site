@@ -871,6 +871,16 @@
       .pricing-card.highlighted { order: -1; }
       .positioning-block { padding: 2rem 1.5rem; }
     }
+  
+    /* Bandeau vote des écoles hors de France (/international) */
+    .intl-banner { display: flex; align-items: center; gap: 16px; max-width: 1000px; margin: 32px auto; padding: 18px 22px; border-radius: 16px; border: 1px solid rgba(139,147,255,0.45); background: linear-gradient(135deg, rgba(99,102,241,0.18), rgba(168,85,247,0.12)); color: #e9ebfa; text-decoration: none; }
+    .intl-banner:hover { border-color: rgba(139,147,255,0.8); }
+    .intl-banner svg { flex: none; }
+    .intl-banner .intl-txt { flex: 1; min-width: 0; display: grid; gap: 2px; }
+    .intl-banner strong { font-size: 1.05rem; }
+    .intl-banner .intl-sub { color: #b4bae0; font-size: 0.92rem; }
+    .intl-banner .intl-cta { flex: none; min-height: 44px; display: inline-flex; align-items: center; padding: 0 18px; border-radius: 12px; background: #6366f1; color: #fff; font-weight: 600; }
+    @media (max-width: 640px) { .intl-banner { flex-wrap: wrap; margin: 24px 16px; } .intl-banner .intl-cta { width: 100%; justify-content: center; } }
   </style>
   <!-- Meta Pixel (Facebook) - charge apres consentement -->
   <script src="meta-pixel.js"></script>
@@ -1035,6 +1045,13 @@
       </div>
     </div>
   </section>
+
+  <a class="intl-banner" href="/international">
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#a5b4fc" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+    <span class="intl-txt"><strong data-i18n="intl.banner.title">Votre école est hors de France ?</strong><span class="intl-sub" data-i18n="intl.banner.sub">Votez pour que Galac6 s'adapte au programme et à la langue de votre pays.</span></span>
+    <span class="intl-cta" data-i18n="intl.banner.cta">Voter pour mon pays</span>
+  </a>
+
 
   <hr class="divider">
 
@@ -1257,7 +1274,7 @@
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner" data-i18n-html="faq.a11">
-            Galac6 is currently available in <strong>France only</strong>, as it is designed around the French school curriculum (Éducation Nationale). If you'd like Galac6 in your country, <a href="mailto:hello@galac6.io">contact us</a> — we're exploring international expansion and would love to hear from you!
+            Galac6 is currently available in <strong>France only</strong>, as it is designed around the French school curriculum (Éducation Nationale). If you'd like Galac6 in your country, <a href="/international">vote for your country</a> — we're exploring international expansion and would love to hear from you!
           </div>
         </div>
       </div>
