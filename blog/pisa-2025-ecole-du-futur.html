@@ -207,12 +207,13 @@
     .pisa-chart svg { display: block; width: 100%; height: auto; }
     .pz-legend { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.4rem; }
     .pz-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+    .pz-legend .pz-gap { display: inline-block; width: 16px; height: 3px; border-radius: 2px; margin-right: 6px; vertical-align: middle; }
     .pz-lb { font-size: 16px; fill: var(--text); font-weight: 600; }
     .pz-v { font-size: 16px; fill: var(--text-muted); }
     .pz-vf { fill: var(--text); font-weight: 700; }
     .pz-ax { font-size: 13px; fill: var(--text-muted); }
     .pz-d { cursor: default; transition: r 0.15s; }
-    .pz-d:hover { r: 9; }
+    .pz-d:hover { r: 8; }
     .pisa-chart figcaption { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.4rem; line-height: 1.45; }
   </style>
   <style id="g6-nav-css">
@@ -315,30 +316,30 @@
       <li><strong>497 points en résolution de problèmes dans un contexte computationnel</strong> (OCDE : 500).</li>
     </ul>
     <figure class="pisa-chart" aria-labelledby="pisa-chart-cap">
-      <div class="pz-legend"><span><i style="background:#7c5cfc"></i>France</span><span><i style="background:#2a9d8f"></i>Moyenne de l'OCDE</span></div>
+      <div class="pz-legend"><span><i style="background:#7c5cfc"></i>France</span><span><i style="background:#2a9d8f"></i>Moyenne de l'OCDE</span><span><b class="pz-gap" style="background:#e5484d"></b>France en retard</span><span><b class="pz-gap" style="background:#30a46c"></b>France en avance</span></div>
       <svg viewBox="0 0 420 316" role="img" aria-label="Scores PISA 2025 : France 483 en sciences (OCDE 482), 456 en compréhension de l'écrit (OCDE 461), 458 en mathématiques (OCDE 463), 497 en résolution de problèmes (OCDE 500).">
       <line x1="20.0" y1="40" x2="20.0" y2="290" stroke="#1e1e32" stroke-width="1"/><text x="20.0" y="306" text-anchor="middle" class="pz-ax">440</text>
       <line x1="128.6" y1="40" x2="128.6" y2="290" stroke="#1e1e32" stroke-width="1"/><text x="128.6" y="306" text-anchor="middle" class="pz-ax">460</text>
       <line x1="237.1" y1="40" x2="237.1" y2="290" stroke="#1e1e32" stroke-width="1"/><text x="237.1" y="306" text-anchor="middle" class="pz-ax">480</text>
       <line x1="345.7" y1="40" x2="345.7" y2="290" stroke="#1e1e32" stroke-width="1"/><text x="345.7" y="306" text-anchor="middle" class="pz-ax">500</text>
-      <text x="20" y="48" class="pz-lb">Sciences</text><text x="400" y="48" text-anchor="end" class="pz-v"><tspan class="pz-vf">483</tspan> / 482</text>
-      <line x1="248.0" y1="70" x2="253.4" y2="70" stroke="#4a4a66" stroke-width="2"/>
-      <circle class="pz-d" cx="248.0" cy="70" r="7" fill="#2a9d8f" stroke="#13131f" stroke-width="2"><title>Sciences — moyenne OCDE : 482 points</title></circle>
-      <circle class="pz-d" cx="253.4" cy="70" r="7" fill="#7c5cfc" stroke="#13131f" stroke-width="2"><title>Sciences — France : 483 points (stable par rapport à 2022)</title></circle>
-      <text x="20" y="112" class="pz-lb">Compréhension de l'écrit</text><text x="400" y="112" text-anchor="end" class="pz-v"><tspan class="pz-vf">456</tspan> / 461</text>
-      <line x1="106.9" y1="134" x2="134.0" y2="134" stroke="#4a4a66" stroke-width="2"/>
-      <circle class="pz-d" cx="134.0" cy="134" r="7" fill="#2a9d8f" stroke="#13131f" stroke-width="2"><title>Compréhension de l'écrit — moyenne OCDE : 461 points</title></circle>
-      <circle class="pz-d" cx="106.9" cy="134" r="7" fill="#7c5cfc" stroke="#13131f" stroke-width="2"><title>Compréhension de l'écrit — France : 456 points (−18 points depuis 2022)</title></circle>
-      <text x="20" y="176" class="pz-lb">Mathématiques</text><text x="400" y="176" text-anchor="end" class="pz-v"><tspan class="pz-vf">458</tspan> / 463</text>
-      <line x1="117.7" y1="198" x2="144.9" y2="198" stroke="#4a4a66" stroke-width="2"/>
-      <circle class="pz-d" cx="144.9" cy="198" r="7" fill="#2a9d8f" stroke="#13131f" stroke-width="2"><title>Mathématiques — moyenne OCDE : 463 points</title></circle>
-      <circle class="pz-d" cx="117.7" cy="198" r="7" fill="#7c5cfc" stroke="#13131f" stroke-width="2"><title>Mathématiques — France : 458 points (−16 points depuis 2022)</title></circle>
-      <text x="20" y="240" class="pz-lb">Résolution de problèmes (nouveau)</text><text x="400" y="240" text-anchor="end" class="pz-v"><tspan class="pz-vf">497</tspan> / 500</text>
-      <line x1="329.4" y1="262" x2="345.7" y2="262" stroke="#4a4a66" stroke-width="2"/>
-      <circle class="pz-d" cx="345.7" cy="262" r="7" fill="#2a9d8f" stroke="#13131f" stroke-width="2"><title>Résolution de problèmes (nouveau) — moyenne OCDE : 500 points</title></circle>
-      <circle class="pz-d" cx="329.4" cy="262" r="7" fill="#7c5cfc" stroke="#13131f" stroke-width="2"><title>Résolution de problèmes (nouveau) — France : 497 points (nouveau domaine)</title></circle>
+      <text x="20" y="48" class="pz-lb">Sciences</text><text x="400" y="48" text-anchor="end" class="pz-v"><tspan class="pz-vf">483</tspan> / 482 <tspan fill="#30a46c" font-weight="700">(+1)</tspan></text>
+      <line x1="248.0" y1="70" x2="253.4" y2="70" stroke="#30a46c" stroke-width="6" stroke-linecap="round"/>
+      <circle class="pz-d" cx="248.0" cy="70" r="5.5" fill="#2a9d8f" stroke="#13131f" stroke-width="2"><title>Sciences — moyenne OCDE : 482 points</title></circle>
+      <circle class="pz-d" cx="253.4" cy="70" r="5.5" fill="#7c5cfc" stroke="#13131f" stroke-width="2"><title>Sciences — France : 483 points (stable par rapport à 2022)</title></circle>
+      <text x="20" y="112" class="pz-lb">Compréhension de l'écrit</text><text x="400" y="112" text-anchor="end" class="pz-v"><tspan class="pz-vf">456</tspan> / 461 <tspan fill="#e5484d" font-weight="700">(−5)</tspan></text>
+      <line x1="106.9" y1="134" x2="134.0" y2="134" stroke="#e5484d" stroke-width="6" stroke-linecap="round"/>
+      <circle class="pz-d" cx="134.0" cy="134" r="5.5" fill="#2a9d8f" stroke="#13131f" stroke-width="2"><title>Compréhension de l'écrit — moyenne OCDE : 461 points</title></circle>
+      <circle class="pz-d" cx="106.9" cy="134" r="5.5" fill="#7c5cfc" stroke="#13131f" stroke-width="2"><title>Compréhension de l'écrit — France : 456 points (−18 points depuis 2022)</title></circle>
+      <text x="20" y="176" class="pz-lb">Mathématiques</text><text x="400" y="176" text-anchor="end" class="pz-v"><tspan class="pz-vf">458</tspan> / 463 <tspan fill="#e5484d" font-weight="700">(−5)</tspan></text>
+      <line x1="117.7" y1="198" x2="144.9" y2="198" stroke="#e5484d" stroke-width="6" stroke-linecap="round"/>
+      <circle class="pz-d" cx="144.9" cy="198" r="5.5" fill="#2a9d8f" stroke="#13131f" stroke-width="2"><title>Mathématiques — moyenne OCDE : 463 points</title></circle>
+      <circle class="pz-d" cx="117.7" cy="198" r="5.5" fill="#7c5cfc" stroke="#13131f" stroke-width="2"><title>Mathématiques — France : 458 points (−16 points depuis 2022)</title></circle>
+      <text x="20" y="240" class="pz-lb">Résolution de problèmes*</text><text x="400" y="240" text-anchor="end" class="pz-v"><tspan class="pz-vf">497</tspan> / 500 <tspan fill="#e5484d" font-weight="700">(−3)</tspan></text>
+      <line x1="329.4" y1="262" x2="345.7" y2="262" stroke="#e5484d" stroke-width="6" stroke-linecap="round"/>
+      <circle class="pz-d" cx="345.7" cy="262" r="5.5" fill="#2a9d8f" stroke="#13131f" stroke-width="2"><title>Résolution de problèmes (nouveau domaine) — moyenne OCDE : 500 points</title></circle>
+      <circle class="pz-d" cx="329.4" cy="262" r="5.5" fill="#7c5cfc" stroke="#13131f" stroke-width="2"><title>Résolution de problèmes (nouveau domaine) — France : 497 points (nouveau domaine)</title></circle>
       </svg>
-      <figcaption id="pisa-chart-cap">Scores PISA 2025, France et moyenne de l'OCDE (en points). L'échelle commence à 440 pour rendre les écarts lisibles. Source : OCDE, rapport PISA 2025, Volume I.</figcaption>
+      <figcaption id="pisa-chart-cap">Scores PISA 2025, France et moyenne de l'OCDE (en points). * Nouveau domaine en 2025. L'échelle commence à 440 pour rendre les écarts lisibles. Source : OCDE, rapport PISA 2025, Volume I.</figcaption>
     </figure>
     <p>La note France de l'OCDE précise que ces résultats restent proches de la moyenne de l'OCDE, mais comptent <strong>parmi les plus faibles jamais obtenus</strong> par la France à PISA, et que depuis 2015, la part d'élèves peu performants a augmenté de 12 points en mathématiques et de 11 points en compréhension de l'écrit. En sciences, la <a href="https://www.education.gouv.fr/sites/default/files/document/depp-ni-2026-39pisa-sciencespdf-520225.pdf" target="_blank" rel="noopener">note d'information de la DEPP</a> rappelle que le score était de 495 points en 2015. Le ministère y a consacré un dossier, <a href="https://www.education.gouv.fr/pisa-2025-une-baisse-des-resultats-commune-l-ocde-un-relevement-poursuivre-505690" target="_blank" rel="noopener">« une baisse des résultats commune à l'OCDE, un relèvement à poursuivre »</a>.</p>
 
