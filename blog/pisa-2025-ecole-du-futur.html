@@ -221,10 +221,15 @@
     .pisa-table { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; font-size: 0.95rem; line-height: 1.5; }
     .pisa-table th { text-align: left; padding: 0.8rem 0.9rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text); background: rgba(124,92,252,0.14); border-bottom: 1px solid var(--border); }
     .pisa-table th:nth-child(2) { color: var(--primary-light); }
+    .pisa-table .pz-note { text-align: center; white-space: nowrap; width: 4.5rem; }
+    .pisa-table td.pz-note { background: none; }
+    .pz-score { display: inline-block; min-width: 2.6rem; padding: 0.2rem 0.5rem; border-radius: 999px; font-weight: 800; letter-spacing: 0.05em; font-size: 0.95rem; }
+    .pz-score.pos { color: #4cc38a; background: rgba(48,164,108,0.14); border: 1px solid rgba(48,164,108,0.35); }
+    .pz-score.neg { color: #f2555a; background: rgba(229,72,77,0.12); border: 1px solid rgba(229,72,77,0.35); }
     .pisa-table td { padding: 0.85rem 0.9rem; vertical-align: top; color: var(--text-muted); border-bottom: 1px solid var(--border); }
     .pisa-table tr:last-child td { border-bottom: none; }
     .pisa-table td:first-child { color: var(--text); font-weight: 600; }
-    .pisa-table td:nth-child(2) { color: var(--text); background: rgba(124,92,252,0.06); }
+    .pisa-table td:nth-child(2), .pisa-table td:nth-child(3) { color: var(--text); background: rgba(124,92,252,0.06); }
     .pisa-table-note { font-size: 0.85rem; color: var(--text-muted); }
     @media (max-width: 700px) {
       .pisa-table, .pisa-table tbody, .pisa-table tr, .pisa-table td { display: block; width: 100%; }
@@ -233,7 +238,9 @@
       .pisa-table tr { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 0.9rem; overflow: hidden; }
       .pisa-table td { border-bottom: 1px solid var(--border); }
       .pisa-table td::before { content: attr(data-label); display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--primary-light); margin-bottom: 0.3rem; }
-      .pisa-table td:last-child::before { color: var(--text-muted); }
+      .pisa-table td:nth-child(4)::before { color: var(--text-muted); }
+      .pisa-table td.pz-note { width: 100%; text-align: left; display: flex; align-items: center; gap: 0.6rem; padding-top: 0.5rem; padding-bottom: 0.7rem; }
+      .pisa-table td.pz-note::before { margin: 0; }
     }
   </style>
   <style id="g6-nav-css">
@@ -303,7 +310,7 @@
         <a href="/blog">Blog</a>
         <a href="/tarifs">Tarifs</a>
         <a href="/about">À propos</a>
-        <!-- lang-menu --><details class="lang-menu"><summary aria-label="Langue : Français">FR</summary><div class="lang-menu-list"><a href="/blog/pisa-2025-ecole-du-futur" hreflang="fr" lang="fr" aria-current="page">Français</a><a href="/en/" hreflang="en" lang="en">English</a><a href="/es/" hreflang="es" lang="es">Español</a><a href="/it/" hreflang="it" lang="it">Italiano</a><a href="/de/" hreflang="de" lang="de">Deutsch</a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
+        <!-- lang-menu --><details class="lang-menu"><summary aria-label="Langue : Français">FR</summary><div class="lang-menu-list"><a href="/blog/pisa-2025-ecole-du-futur" hreflang="fr" lang="fr" aria-current="page">Français</a><a href="/en/" hreflang="en" lang="en">English</a><a href="/es/" hreflang="es" lang="es">Español</a><a href="/it/" hreflang="it" lang="it">Italiano</a><a href="/de/" hreflang="de" lang="de">Deutsch</a><a href="/pt/" hreflang="pt" lang="pt">Português</a><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
         <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600;">Inscription ou connexion</a>
       </div>
     </nav>
@@ -418,48 +425,62 @@
     <div class="pisa-table-wrap">
       <table class="pisa-table">
         <thead>
-          <tr><th scope="col">Ce que soulève PISA 2025</th><th scope="col">Comment Galac6 y répond</th><th scope="col">Chatbot généraliste utilisé seul</th></tr>
+          <tr><th scope="col">Ce que soulève PISA 2025</th><th scope="col">Comment Galac6 y répond</th><th scope="col" class="pz-note">Galac6</th><th scope="col">Chatbot généraliste utilisé seul</th><th scope="col" class="pz-note">Chatbot</th></tr>
         </thead>
         <tbody>
         <tr>
           <td data-label="Ce que soulève PISA 2025">Utiliser l'IA pour faire à la place de l'élève (résumer, rédiger, faire une première recherche) va de pair avec de moins bons résultats en sciences.</td>
           <td data-label="Comment Galac6 y répond">Le tuteur guide par des questions et des indices, sans donner la réponse. Il refuse de rédiger un commentaire ou une dissertation à la place de l'élève.</td>
+          <td class="pz-note" data-label="Note Galac6"><span class="pz-score pos" title="très pertinent" aria-label="très pertinent">+++</span></td>
           <td data-label="Chatbot généraliste utilisé seul">Par défaut, il répond à la demande : il résume, rédige ou résout l'exercice en entier si l'élève le lui demande.</td>
+          <td class="pz-note" data-label="Note chatbot"><span class="pz-score neg" title="contre-productif" aria-label="contre-productif">−−−</span></td>
         </tr>
         <tr>
           <td data-label="Ce que soulève PISA 2025">L'IA doit être « un échafaudage, pas une béquille » : on apprend par l'effort face à une notion nouvelle.</td>
           <td data-label="Comment Galac6 y répond">L'aide monte d'un cran seulement si l'élève reste bloqué : indice plus précis, puis exemple semblable résolu, puis notion réexpliquée. La réponse finale reste à l'élève.</td>
+          <td class="pz-note" data-label="Note Galac6"><span class="pz-score pos" title="très pertinent" aria-label="très pertinent">+++</span></td>
           <td data-label="Chatbot généraliste utilisé seul">La réponse complète arrive tout de suite. L'élève peut sauter l'effort en une question.</td>
+          <td class="pz-note" data-label="Note chatbot"><span class="pz-score neg" title="pas pertinent" aria-label="pas pertinent">−−</span></td>
         </tr>
         <tr>
           <td data-label="Ce que soulève PISA 2025">Apprendre à vérifier les réponses d'une IA : seuls 47 % des élèves français le font en classe, contre 63 % dans l'OCDE.</td>
           <td data-label="Comment Galac6 y répond">En mathématiques, les calculs sont contrôlés par un moteur de calcul. L'élève doit justifier et vérifier sa réponse, le tuteur ne la valide pas à sa place.</td>
+          <td class="pz-note" data-label="Note Galac6"><span class="pz-score pos" title="pertinent" aria-label="pertinent">++</span></td>
           <td data-label="Chatbot généraliste utilisé seul">Il peut se tromper avec assurance. C'est à l'élève de repérer l'erreur, sans y être guidé.</td>
+          <td class="pz-note" data-label="Note chatbot"><span class="pz-score neg" title="pas pertinent" aria-label="pas pertinent">−−</span></td>
         </tr>
         <tr>
           <td data-label="Ce que soulève PISA 2025">Autorégulation : suivre ses progrès, repérer ses lacunes, vérifier qu'on a compris.</td>
           <td data-label="Comment Galac6 y répond">Les notions à retravailler sont repérées et réunies dans « Mes notions ». « Interroge-moi sur ma leçon » vérifie que la leçon est sue, et la dictée sur mesure revient sur les erreurs.</td>
-          <td data-label="Chatbot généraliste utilisé seul">Chaque conversation repart de zéro, sans suivi par notion ni lien avec le programme de la classe.</td>
+          <td class="pz-note" data-label="Note Galac6"><span class="pz-score pos" title="pertinent" aria-label="pertinent">++</span></td>
+          <td data-label="Chatbot généraliste utilisé seul">Pas de suivi par notion ni de lien avec le programme de la classe : ce que l'élève a vraiment acquis n'est pas mesuré.</td>
+          <td class="pz-note" data-label="Note chatbot"><span class="pz-score neg" title="pas pertinent" aria-label="pas pertinent">−−</span></td>
         </tr>
         <tr>
           <td data-label="Ce que soulève PISA 2025">Persévérer et améliorer son travail après un retour négatif.</td>
           <td data-label="Comment Galac6 y répond">Seconde chance avec un indice quand l'élève se trompe en interrogation. En dictée, chaque erreur est expliquée avec sa règle.</td>
+          <td class="pz-note" data-label="Note Galac6"><span class="pz-score pos" title="pertinent" aria-label="pertinent">++</span></td>
           <td data-label="Chatbot généraliste utilisé seul">L'erreur est généralement corrigée en donnant directement la bonne réponse.</td>
+          <td class="pz-note" data-label="Note chatbot"><span class="pz-score neg" title="peu pertinent" aria-label="peu pertinent">−</span></td>
         </tr>
         <tr>
           <td data-label="Ce que soulève PISA 2025">Le rôle de l'enseignant et de l'accompagnement reste décisif.</td>
           <td data-label="Comment Galac6 y répond">Le professeur voit la réussite par notion de sa classe, envoie des dictées sur mesure et coupe le tuteur pendant ses évaluations.</td>
+          <td class="pz-note" data-label="Note Galac6"><span class="pz-score pos" title="très pertinent" aria-label="très pertinent">+++</span></td>
           <td data-label="Chatbot généraliste utilisé seul">Le professeur ne voit rien de l'usage qui en est fait, et ne peut pas le régler pour sa classe.</td>
+          <td class="pz-note" data-label="Note chatbot"><span class="pz-score neg" title="contre-productif" aria-label="contre-productif">−−−</span></td>
         </tr>
         <tr>
           <td data-label="Ce que soulève PISA 2025">Risque d'une nouvelle fracture : l'apprentissage critique de l'IA profite surtout aux élèves favorisés.</td>
           <td data-label="Comment Galac6 y répond">Quand l'école équipe une classe, tous les élèves ont le même outil encadré par le professeur, et pas seulement ceux dont la famille sait s'en servir.</td>
+          <td class="pz-note" data-label="Note Galac6"><span class="pz-score pos" title="pertinent" aria-label="pertinent">++</span></td>
           <td data-label="Chatbot généraliste utilisé seul">L'usage dépend de chaque famille : de ce qu'elle sait de l'IA et de l'abonnement qu'elle paie.</td>
+          <td class="pz-note" data-label="Note chatbot"><span class="pz-score neg" title="pas pertinent" aria-label="pas pertinent">−−</span></td>
         </tr>
         </tbody>
       </table>
     </div>
-    <p class="pisa-table-note">Comparaison avec l'usage par défaut d'un chatbot généraliste (ChatGPT, Gemini, Copilot…), qui n'est pas conçu pour l'école. Certains proposent un mode « étude » qui pose davantage de questions, mais l'élève peut l'activer ou le quitter librement, et le professeur n'en voit rien. Les constats de PISA sont tirés du rapport de l'OCDE (Volume I) ; l'OCDE précise qu'ils décrivent des associations, pas des liens de cause à effet.</p>
+    <p class="pisa-table-note">Comparaison avec l'usage par défaut d'un chatbot généraliste (ChatGPT, Gemini, Copilot…), qui n'est pas conçu pour l'école. Certains proposent un mode « étude » qui pose davantage de questions, mais l'élève peut l'activer ou le quitter librement, et le professeur n'en voit rien. Les notes (de +++ très pertinent à −−− contre-productif) sont notre appréciation de la réponse apportée à chaque constat, pas une mesure de l'OCDE. Les constats de PISA sont tirés du rapport de l'OCDE (Volume I) ; l'OCDE précise qu'ils décrivent des associations, pas des liens de cause à effet.</p>
 
     <!-- FAQ -->
     <section class="faq">
