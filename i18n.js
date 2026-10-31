@@ -12,8 +12,8 @@
       'page.title': 'Galac6 — AI in the service of teaching · Tutoring from 1st to 12th grade',
 
       // Navbar
-      'nav.features': 'Features',
-      'nav.school': 'Schools',
+      'nav.features': 'For pupils',
+      'nav.school': 'For schools',
       'nav.faq': 'FAQ',
       'nav.pricing': 'Pricing',
       'nav.about': 'About',
