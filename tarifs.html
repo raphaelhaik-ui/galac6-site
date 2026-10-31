@@ -284,6 +284,9 @@
     .faq details[open] summary::after { content: "–"; }
     .faq .ans { padding: 0 20px 18px; color: var(--text-muted); font-size: 0.95rem; }
     .faq .ans p + p { margin-top: 8px; }
+      /* Menu : une seule ligne, plus serré sur écran moyen */
+    .navbar-links a { white-space: nowrap; }
+    @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
   </style>
   <!-- Meta Pixel (Facebook) - charge apres consentement -->
   <script src="meta-pixel.js"></script>
@@ -309,6 +312,7 @@
       <div class="navbar-links">
         <a href="/#features" data-i18n="nav.features">Pour les élèves</a>
         <a href="/ecole" data-i18n="nav.school">Pour les écoles</a>
+        <a href="/international" data-i18n="nav.intl">Galac6 dans votre pays</a>
         <a href="/tarifs" class="active" data-i18n="nav.pricing">Tarif</a>
         <a href="/about" data-i18n="nav.about">À propos</a>
         <button id="lang-toggle" class="lang-toggle" onclick="toggleLanguage()" aria-label="Switch to English">🇬🇧</button>

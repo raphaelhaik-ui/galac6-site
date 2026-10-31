@@ -159,6 +159,9 @@
       .navbar-links a { padding: 0.6rem 0; font-size: 1rem; }
       footer { flex-direction: column; gap: 1rem; text-align: center; }
     }
+      /* Menu : une seule ligne, plus serré sur écran moyen */
+    .navbar-links a { white-space: nowrap; }
+    @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
   </style>
 </head>
 <body>
@@ -176,6 +179,7 @@
       <div class="navbar-links">
         <a href="/" data-i18n="about.nav.home">Accueil</a>
         <a href="/ecole" data-i18n="nav.school">Pour les écoles</a>
+        <a href="/international" data-i18n="nav.intl">Galac6 dans votre pays</a>
         <a href="/tarifs" data-i18n="nav.pricing">Tarifs</a>
         <a href="/about" data-i18n="nav.about">À propos</a>
         <button id="lang-toggle" class="lang-toggle" onclick="toggleLanguage&&toggleLanguage()" aria-label="Switch to English">🇬🇧</button>

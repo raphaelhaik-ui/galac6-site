@@ -164,6 +164,9 @@
     .footer-badges a { min-height: 44px; display: inline-flex; align-items: center; }
     .footer-badge { display: flex; align-items: center; gap: 0.35rem; color: var(--text-muted); font-size: 0.82rem; }
     @media (max-width: 768px) { footer { flex-direction: column; text-align: center; padding: 2rem 1rem; } .footer-badges { justify-content: center; } }
+      /* Menu : une seule ligne, plus serré sur écran moyen */
+    .navbar-links a { white-space: nowrap; }
+    @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
   </style>
   <!-- Meta Pixel (Facebook) - charge apres consentement -->
   <script src="meta-pixel.js"></script>
@@ -182,6 +185,7 @@
       <div class="navbar-links">
         <a href="/#features">Features</a>
         <a href="/ecole">Schools in France</a>
+        <a href="/international" class="active">Galac6 in your country</a>
         <a href="/international" class="active">Outside France</a>
         <a href="/about">About</a>
         <a href="#vote" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Vote for your country</a>
@@ -196,7 +200,7 @@
       <div class="i-hero-inner">
         <span class="badge">For schools outside France</span>
         <h1>Bring Galac6 to your country: <span class="grad">vote for your school system</span></h1>
-        <p class="sub">Galac6 is an AI tutoring platform for pupils from primary school to the end of secondary school, with a dedicated space for teachers and school leaders. Today, it is built on the French national curriculum. Raphaël, Galac6's founder, will adapt the platform (curriculum, language, dictations) to the countries that ask for it most.</p>
+        <p class="sub">Galac6 is an AI tutoring platform for pupils from primary school to the end of secondary school, with a dedicated space for teachers and school leaders. Today, it is built on the French national curriculum. We will adapt the platform (curriculum, language, dictations) to the countries that ask for it most.</p>
         <div class="i-cta">
           <a class="btn btn-primary" href="#vote">Vote for your country</a>
           <a class="btn btn-outline" href="#how">How it works</a>
@@ -218,7 +222,7 @@
           <span class="i-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
           <span class="i-step">Step 1</span>
           <h3>You vote for your country</h3>
-          <p>Fill in the short form below with your school and your country. One request per school is enough.</p>
+          <p>Fill in the short form below: your school, your country, why you are asking and what you are looking for in Galac6. One request per school is enough.</p>
         </article>
         <article class="card i-card">
           <span class="i-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"/></svg></span>
@@ -514,7 +518,7 @@
               <option value="More than 1,000">More than 1,000</option>
               <option value="Several schools">Several schools</option>
             </select></div>
-          <div class="field"><label for="v-comment">Comment <span class="hint">(optional)</span></label><textarea id="v-comment" maxlength="4000" placeholder="Your curriculum, your needs, the subjects and levels that matter most to you"></textarea></div>
+          <div class="field"><label for="v-comment">Your reasons and what you are looking for in Galac6 <span class="hint">(required)</span></label><textarea id="v-comment" maxlength="4000" required placeholder="Why you are asking, what you expect from Galac6, your curriculum, the subjects and levels that matter most to you"></textarea></div>
           <label class="consent"><input type="checkbox" id="v-consent" required><span>I agree that Galac6 may use this information to contact me about adapting Galac6 to my country. See our <a href="/privacy">privacy policy</a>.</span></label>
           <span class="err" id="e-form" hidden>Please fill in your name, your work email, your school and your country, and tick the consent box.</span>
           <button class="btn btn-primary btn-block" type="submit" id="v-submit">Send my vote</button>
@@ -598,7 +602,7 @@
         'Nombre d\'élèves : ' + ($('v-eleves').value || 'non précisé') + '\n' +
         'Accord pour être recontacté : oui\n' +
         'Langue de la page : en\n\n' +
-        'Commentaire :\n' + (val('v-comment') || '(aucun)');
+        'Motivations et attentes :\n' + val('v-comment');
       return { name: subject, email: val('v-email'), message: message };
     }
     window.galac6VoteRequest = buildRequest;
@@ -607,7 +611,7 @@
       ev.preventDefault();
       var email = val('v-email');
       var okEmail = EMAIL_RE.test(email);
-      var okAll = val('v-nom') && val('v-ecole') && val('v-pays') && okEmail && $('v-consent').checked;
+      var okAll = val('v-nom') && val('v-ecole') && val('v-pays') && val('v-comment') && okEmail && $('v-consent').checked;
       $('e-email').hidden = !email || okEmail;
       $('e-form').hidden = !!okAll;
       var msg = $('form-msg');

@@ -339,6 +339,7 @@
   
     /* Bandeau vote des écoles hors de France (/international) */
     .intl-banner { display: flex; align-items: center; gap: 16px; max-width: 1000px; margin: 32px auto; padding: 18px 22px; border-radius: 16px; border: 1px solid rgba(139,147,255,0.45); background: linear-gradient(135deg, rgba(99,102,241,0.18), rgba(168,85,247,0.12)); color: #e9ebfa; text-decoration: none; }
+    .intl-banner, .intl-banner * { text-decoration: none !important; }
     .intl-banner:hover { border-color: rgba(139,147,255,0.8); }
     .intl-banner svg { flex: none; }
     .intl-banner .intl-txt { flex: 1; min-width: 0; display: grid; gap: 2px; }
@@ -346,6 +347,9 @@
     .intl-banner .intl-sub { color: #b4bae0; font-size: 0.92rem; }
     .intl-banner .intl-cta { flex: none; min-height: 44px; display: inline-flex; align-items: center; padding: 0 18px; border-radius: 12px; background: #6366f1; color: #fff; font-weight: 600; }
     @media (max-width: 640px) { .intl-banner { flex-wrap: wrap; margin: 24px 16px; } .intl-banner .intl-cta { width: 100%; justify-content: center; } }
+      /* Menu : une seule ligne, plus serré sur écran moyen */
+    .navbar-links a { white-space: nowrap; }
+    @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
   </style>
   <!-- Meta Pixel (Facebook) - charge apres consentement -->
   <script src="meta-pixel.js"></script>
@@ -371,6 +375,7 @@
       <div class="navbar-links">
         <a href="/#features" data-i18n="nav.features">Pour les élèves</a>
         <a href="/ecole" class="active" data-i18n="nav.school">Pour les écoles</a>
+        <a href="/international" data-i18n="nav.intl">Galac6 dans votre pays</a>
         <a href="/tarifs" data-i18n="nav.pricing">Tarif</a>
         <a href="/about" data-i18n="nav.about">À propos</a>
         <button id="lang-toggle" class="lang-toggle" onclick="toggleLanguage()" aria-label="Switch to English">🇬🇧</button>

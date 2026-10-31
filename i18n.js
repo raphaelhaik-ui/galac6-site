@@ -14,6 +14,7 @@
       // Navbar
       'nav.features': 'For pupils',
       'nav.school': 'For schools',
+      'nav.intl': 'Galac6 in your country',
       'nav.faq': 'FAQ',
       'nav.pricing': 'Pricing',
       'nav.about': 'About',
