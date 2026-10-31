@@ -262,6 +262,12 @@
     .essentiel { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--primary); border-radius: 14px; padding: 1.2rem 1.4rem 0.4rem; margin: 0 0 2rem; }
     .essentiel h2 { margin: 0 0 0.7rem; font-size: 1.15rem; }
     .essentiel ul { margin-left: 1.1rem; }
+    .recherche { margin: 1.4rem 0 1.8rem; }
+    .recherche h3 { display: flex; align-items: center; gap: 0.55rem; margin: 0 0 0.7rem; font-size: 1.1rem; }
+    .recherche h3 svg { flex: none; width: 22px; height: 22px; fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .recherche li { margin-bottom: 0.6rem; line-height: 1.55; overflow-wrap: anywhere; }
+    .recherche li a { color: var(--primary-light); font-size: 0.9rem; white-space: nowrap; }
+    .recherche .recherche-fin { margin: 0.2rem 0 0.9rem; color: var(--text); }
     .pz-bv { font-size: 14px; fill: var(--text-muted); }
     .pz-bvv { fill: var(--text); font-weight: 700; }
     .q3 { margin: 1.4rem 0 1.8rem; }
@@ -551,6 +557,16 @@
 
     <h2 id="reponse-galac6">Comment Galac6 répond à ces trois questions</h2>
     <p>Ces trois questions, nous ne les avons pas découvertes avec PISA : <strong>Galac6 a été construit autour d'elles dès le premier jour</strong>, bien avant la publication de l'enquête. Nous nous sommes notamment appuyés sur les travaux de Salman Khan, fondateur de la Khan Academy, qui défend depuis des années une IA tuteur qui guide l'élève sans faire le travail à sa place. PISA 2025 vient aujourd'hui confirmer cette intuition. Voici comment, question par question.</p>
+    <aside class="essentiel recherche" aria-labelledby="recherche-titre">
+      <h3 id="recherche-titre"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6L4.5 18.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"/><path d="M7.5 15h9"/></svg>Ce que montre la recherche</h3>
+      <ul>
+        <li>Un élève moyen suivi par un tuteur individuel fait mieux que <strong>98 % des élèves</strong> d'une classe classique. C'est le point de départ, repris par Salman Khan. <a href="https://doi.org/10.3102/0013189X013006004" target="_blank" rel="noopener">Bloom, 1984</a></li>
+        <li>À Harvard, des étudiants en physique guidés par un tuteur IA conçu selon des principes pédagogiques ont progressé <strong>plus de deux fois plus</strong> qu'en cours actif, en moins de temps. <a href="https://doi.org/10.1038/s41598-025-97652-6" target="_blank" rel="noopener">Kestin et al., Scientific Reports, 2025</a></li>
+        <li>Au Nigeria, six semaines de tutorat par IA après l'école, avec des enseignants, ont apporté en anglais l'équivalent de <strong>près de deux ans</strong> d'apprentissage habituel. <a href="https://blogs.worldbank.org/en/education/From-chalkboards-to-chatbots-Transforming-learning-in-Nigeria" target="_blank" rel="noopener">Banque mondiale, 2025</a></li>
+        <li>En Turquie, des lycéens qui utilisaient ChatGPT librement en maths ont eu des notes <strong>17 % plus basses</strong> une fois l'IA retirée. Avec un tuteur IA muni de garde-fous, cette baisse a en grande partie disparu. <a href="https://doi.org/10.1073/pnas.2422633122" target="_blank" rel="noopener">Bastani et al., PNAS, 2025</a></li>
+      </ul>
+      <p class="recherche-fin">Une IA qui fait à la place nuit à l'apprentissage. Une IA qui guide le renforce. Utiliser l'IA <strong>à bon escient</strong> change tout : c'est le choix fait par Galac6.</p>
+    </aside>
     <h3>1. Préserver l'effort : une aide didactique</h3>
     <p>Un élève en difficulté qui demande de l'aide à une IA généraliste reçoit souvent l'exercice tout fait. Le devoir est rendu, mais rien n'est appris.</p>
     <p><strong>Galac6 fait exactement l'inverse : il aide l'élève à trouver lui-même.</strong> Et c'est là que tout se joue, car une réponse trouvée seul, on la retient.</p>
@@ -674,6 +690,10 @@
         <li><a href="https://www.education.gouv.fr/sites/default/files/document/depp-ni-2026-39pisa-sciencespdf-520225.pdf" target="_blank" rel="noopener">DEPP, ministère de l'Éducation nationale : PISA 2025 en culture scientifique (PDF)</a></li>
         <li><a href="https://www.education.gouv.fr/pisa-2025-une-baisse-des-resultats-commune-l-ocde-un-relevement-poursuivre-505690" target="_blank" rel="noopener">Ministère de l'Éducation nationale : PISA 2025, une baisse des résultats commune à l'OCDE, un relèvement à poursuivre</a></li>
         <li><a href="https://www.futura-sciences.com/formation/actualites/ecoles-formations-pisa-2025-ia-elle-vraiment-responsable-chute-resultats-137681/" target="_blank" rel="noopener">The Conversation, repris par Futura : PISA 2025, l'IA est-elle vraiment responsable de la chute des résultats ?</a></li>
+        <li><a href="https://doi.org/10.3102/0013189X013006004" target="_blank" rel="noopener">Bloom (1984) : The 2 Sigma Problem, Educational Researcher (en anglais)</a></li>
+        <li><a href="https://doi.org/10.1038/s41598-025-97652-6" target="_blank" rel="noopener">Kestin, Miller et al., Harvard (2025) : AI tutoring outperforms in-class active learning, Scientific Reports (en anglais)</a></li>
+        <li><a href="https://blogs.worldbank.org/en/education/From-chalkboards-to-chatbots-Transforming-learning-in-Nigeria" target="_blank" rel="noopener">Banque mondiale (2025) : From chalkboards to chatbots, Transforming learning in Nigeria (en anglais)</a></li>
+        <li><a href="https://doi.org/10.1073/pnas.2422633122" target="_blank" rel="noopener">Bastani et al., Wharton (2025) : Generative AI without guardrails can harm learning, PNAS (en anglais)</a></li>
       </ul>
     </div>
 
