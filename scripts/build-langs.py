@@ -7,6 +7,7 @@ Pourquoi : la traduction anglaise d'i18n.js ne s'affiche qu'après un clic dans 
 Google ne voit donc que le français. Ce script écrit de vraies pages statiques par langue :
   /en/  /en/ecole  /en/about  /en/tarifs           (vote anglais = /international, inchangé)
   /es/  /es/ecole  /es/about  /es/tarifs  /es/international   (idem it, de, he)
+  /ecoles-francaises-etranger → /en/french-schools-abroad    (français et anglais seulement)
 
 Sources des textes :
   - français : les pages françaises elles-mêmes (index.html, ecole.html, about.html, tarifs.html) ;
@@ -54,12 +55,19 @@ GROUPS = {
     'about': {'src': 'about.html', 'src_lang': 'fr'},
     'tarifs': {'src': 'tarifs.html', 'src_lang': 'fr'},
     'vote': {'src': 'international.html', 'src_lang': 'en'},
+    'etranger': {'src': 'ecoles-francaises-etranger.html', 'src_lang': 'fr'},
+}
+# Pages à adresse propre par langue, sans les autres langues (fr et en seulement)
+SLUGS = {
+    'etranger': {'fr': '/ecoles-francaises-etranger', 'en': '/en/french-schools-abroad'},
 }
 # Chemin (adresse) d'une page traduite → groupe
 PATH_TO_GROUP = {
     '/': 'index', '/index.html': 'index', '/ecole': 'ecole', '/ecole.html': 'ecole',
     '/about': 'about', '/about.html': 'about', '/tarifs': 'tarifs', '/tarifs.html': 'tarifs',
     '/international': 'vote', '/international.html': 'vote',
+    '/ecoles-francaises-etranger': 'etranger', '/ecoles-francaises-etranger.html': 'etranger',
+    '/french-schools-abroad': 'etranger',
 }
 EMOJI = re.compile('[\U0001F000-\U0001FAFF☀-➿⭐️\U0001F1E6-\U0001F1FF]\\s?')
 
@@ -168,6 +176,8 @@ def norm(s):
 
 def page_path(group, lang):
     """Adresse publique d'une page (None si elle n'existe pas dans cette langue)."""
+    if group in SLUGS:
+        return SLUGS[group].get(lang)
     if group == 'vote':
         if lang == 'fr':
             return None
@@ -368,6 +378,8 @@ def map_href(href, lang):
     g = PATH_TO_GROUP.get(path)
     if g and page_path(g, lang):
         return page_path(g, lang) + rest, True
+    if g in SLUGS:  # page absente dans cette langue : version française
+        return page_path(g, 'fr') + rest, False
     return path + rest, False
 
 
@@ -572,8 +584,8 @@ def build_page(group, lang, D, countries, errors):
             {'@type': 'WebSite', '@id': SITE + path + '#website', 'url': url, 'name': 'Galac6',
              'inLanguage': lang, 'publisher': {'@id': SITE + '/#organization'}},
             {'@type': 'FAQPage', 'inLanguage': lang, 'mainEntity': faq}]}
-    elif group in ('ecole', 'about', 'tarifs'):
-        name = need({'ecole': 'nav.school', 'about': 'nav.about', 'tarifs': 'nav.pricing'}[group])
+    elif group in ('ecole', 'about', 'tarifs', 'etranger'):
+        name = need({'ecole': 'nav.school', 'about': 'nav.about', 'tarifs': 'nav.pricing', 'etranger': 'etranger.crumb'}[group])
         ld = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
             {'@type': 'ListItem', 'position': 1, 'name': need('gen.home'), 'item': SITE + page_path('index', lang)},
             {'@type': 'ListItem', 'position': 2, 'name': name, 'item': url}]}
@@ -647,7 +659,7 @@ def build_page(group, lang, D, countries, errors):
 def update_redirects():
     lines = ['# Pages traduites (généré par scripts/build-langs.py) : adresses sans .html']
     for l in LANGS:
-        for g in ('ecole', 'about', 'tarifs', 'vote'):
+        for g in ('ecole', 'about', 'tarifs', 'vote', 'etranger'):
             p = page_path(g, l)
             if p and p != '/international':
                 lines.append('%-24s %-28s 200' % (p, '/' + out_file(p)))
@@ -669,10 +681,10 @@ def update_sitemap():
         for l in group_langs(g):
             group_paths.add(SITE + page_path(g, l))
     kept = [u for u in urls if re.search(r'<loc>([^<]*)</loc>', u).group(1) not in group_paths]
-    prio = {'index': '1.0', 'tarifs': '0.9', 'ecole': '0.9', 'about': '0.5', 'vote': '0.6'}
+    prio = {'index': '1.0', 'tarifs': '0.9', 'ecole': '0.9', 'about': '0.5', 'vote': '0.6', 'etranger': '0.8'}
     freq = {'index': 'weekly'}
     new = []
-    for g in ('index', 'tarifs', 'ecole', 'about', 'vote'):
+    for g in ('index', 'tarifs', 'ecole', 'etranger', 'about', 'vote'):
         alts = ''.join('    <xhtml:link rel="alternate" hreflang="%s" href="%s%s"/>\n' % (l, SITE, page_path(g, l))
                        for l in group_langs(g))
         alts += '    <xhtml:link rel="alternate" hreflang="x-default" href="%s%s"/>\n' % (

@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="fr" data-static-lang>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Plateforme IA pour lycée français à l'étranger : Galac6 pour les écoles françaises de l'étranger</title>
+  <meta name="description" content="Galac6, la plateforme IA des établissements français homologués à l'étranger : même programme qu'en France, dictées et copies corrigées, brevet et bac avec 112 sujets passés hors de France, données hébergées en France. Pilote gratuit de 3 mois sur 3 classes.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://galac6.io/ecoles-francaises-etranger">
+  <!-- hreflang (généré par scripts/build-langs.py) -->
+  <link rel="alternate" hreflang="fr" href="https://galac6.io/ecoles-francaises-etranger">
+  <link rel="alternate" hreflang="en" href="https://galac6.io/en/french-schools-abroad">
+  <link rel="alternate" hreflang="x-default" href="https://galac6.io/ecoles-francaises-etranger">
+  <!-- /hreflang -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Galac6">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:title" content="Galac6 : la plateforme IA des écoles françaises à l'étranger">
+  <meta property="og:description" content="Le programme français, du CP à la terminale, avec l'IA : du temps pour vos professeurs, un suivi sur mesure de chaque élève, le brevet et le bac préparés depuis l'étranger. Pilote gratuit de 3 mois sur 3 classes.">
+  <meta property="og:url" content="https://galac6.io/ecoles-francaises-etranger">
+  <meta property="og:image" content="https://galac6.io/images/og-image-v2.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Galac6 : la plateforme IA des écoles françaises à l'étranger">
+  <meta name="twitter:description" content="Le programme français, du CP à la terminale, avec l'IA : du temps pour vos professeurs, un suivi sur mesure de chaque élève, le brevet et le bac préparés depuis l'étranger. Pilote gratuit de 3 mois sur 3 classes.">
+  <meta name="twitter:image" content="https://galac6.io/images/og-image-v2.jpg">
+  <link rel="icon" type="image/png" href="icons/32x32.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://galac6.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Écoles françaises à l'étranger", "item": "https://galac6.io/ecoles-francaises-etranger" }
+    ]
+  }
+  </script>
+  <!-- Google Analytics 4 + Consent Mode v2 (RGPD) -->
+  <script src="analytics.js"></script>
+  <!-- Suivi des UTM (origine des visiteurs, sans cookie) -->
+  <script src="utm.js"></script>
+  <style>
+    :root {
+      --primary: #7c5cfc;
+      --primary-light: #a78bfa;
+      --bg: #0b0b14;
+      --bg-card: #13131f;
+      --bg-raised: #1a1a2b;
+      --screen: #0f0f1a;
+      --text: #f0f0f5;
+      --text-muted: #8a8aa3;
+      --border: #1e1e32;
+      --border-strong: #2c2c48;
+      --gradient-start: #6366f1;
+      --gradient-end: #a855f7;
+      --g1: #6366f1;
+      --g2: #a855f7;
+      --tint: rgba(99,102,241,0.10);
+      --tint-line: rgba(99,102,241,0.25);
+      --ok: #34d399;
+      --bad: #f87171;
+      --ok-bg: rgba(52,211,153,0.12);
+      --bad-bg: rgba(248,113,113,0.12);
+      --example: #fbbf24;
+      --example-bg: rgba(251,191,36,0.10);
+      --on-accent: #ffffff;
+      --shadow: 0 8px 32px rgba(0,0,0,0.35);
+      color-scheme: dark;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    [hidden] { display: none !important; }
+
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4 { text-wrap: balance; letter-spacing: -0.02em; line-height: 1.2; }
+    ul, ol { list-style: none; }
+    a { color: var(--primary-light); text-decoration: none; }
+    button { font-family: inherit; }
+    :focus-visible { outline: 2px solid var(--primary-light); outline-offset: 2px; border-radius: 6px; }
+    [id] { scroll-margin-top: 90px; }
+
+    /* ─── Navbar (identique aux autres pages du site) ─── */
+    .navbar-wrapper {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(11,11,20,0.85);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .navbar { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 2.5rem; max-width: 1200px; margin: 0 auto; }
+    .navbar-brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+    .navbar-brand img { height: 44px; width: auto; }
+    .navbar-brand span { font-size: 1.6rem; font-weight: 800; color: var(--text); letter-spacing: -0.02em; }
+    .navbar-links { display: flex; align-items: center; gap: 2rem; }
+    .navbar-links a { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; text-decoration: none; transition: color 0.2s; }
+    .navbar-links a:hover { color: var(--text); text-decoration: none; }
+    .navbar-links a.active { color: var(--text); }
+    .navbar-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; flex-direction: column; justify-content: center; align-items: center; gap: 5px; min-width: 44px; min-height: 44px; }
+    .navbar-hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+    .navbar-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .navbar-hamburger.open span:nth-child(2) { opacity: 0; }
+    .navbar-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .lang-toggle { background: none; border: none; font-size: 1.3rem; cursor: pointer; padding: 0.25rem; line-height: 1; border-radius: 50%; transition: transform 0.2s; min-width: 44px; min-height: 44px; }
+    .lang-toggle:hover { transform: scale(1.15); }
+    @media (max-width: 900px) {
+      .navbar { padding: 1rem 1.5rem; flex-wrap: wrap; }
+      .navbar-hamburger { display: flex; }
+      .navbar-links { display: none; flex-direction: column; width: 100%; gap: 0.5rem; padding: 1rem 0 0.5rem; }
+      .navbar-links.open { display: flex; }
+      .navbar-links a { padding: 0.6rem 0; font-size: 1rem; min-height: 44px; display: flex; align-items: center; justify-content: center; }
+    }
+    @media (max-width: 480px) { .navbar { padding: 0.75rem 1rem; } }
+
+    /* ─── Bandeau anglais ─── */
+    .en-banner { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; text-align: center; padding: 0.6rem 2.5rem; font-size: 0.85rem; position: relative; }
+    .en-banner a { color: #fff; text-decoration: underline; }
+    .en-banner-close { position: absolute; right: 0.25rem; top: 50%; transform: translateY(-50%); background: none; border: none; color: #fff; font-size: 1.1rem; cursor: pointer; opacity: 0.8; min-width: 44px; min-height: 44px; }
+    .en-banner-close:hover { opacity: 1; }
+
+    /* ─── Éléments communs ─── */
+    .wrap { max-width: 1100px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+    .num { font-variant-numeric: tabular-nums; }
+    .grad { background: linear-gradient(135deg, var(--g1), var(--g2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .section { padding-block: 72px; border-top: 1px solid var(--border); }
+    .section.first { border-top: 0; }
+    .video-box { position: relative; max-width: 880px; margin: 0 auto; aspect-ratio: 16 / 9; border-radius: 18px; overflow: hidden; border: 1px solid var(--border); background: radial-gradient(120% 90% at 85% 10%, rgba(168,85,247,.45), transparent 60%), radial-gradient(90% 80% at 10% 100%, rgba(99,102,241,.40), transparent 60%), var(--bg-card); }
+    .video-box iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .video-play { position: absolute; inset: 0; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: none; border: 0; color: var(--text); font: inherit; cursor: pointer; }
+    .video-icon { width: 76px; height: 76px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(135deg, var(--g1), var(--g2)); box-shadow: 0 10px 30px rgba(124,92,252,.45); transition: transform .2s; }
+    .video-icon svg { width: 34px; height: 34px; margin-left: 4px; }
+    .video-play:hover .video-icon, .video-play:focus-visible .video-icon { transform: scale(1.08); }
+    .video-label { font-weight: 700; font-size: 1.05rem; }
+    .video-note { text-align: center; color: var(--text-muted); font-size: .82rem; margin-top: 12px; }
+    .eyebrow { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary-light); margin-bottom: 10px; }
+    .h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); font-weight: 800; }
+    .lead { color: var(--text-muted); font-size: 1.05rem; max-width: 62ch; margin-top: 12px; }
+    .sec-head { margin-bottom: 36px; }
+    .sec-head.center { text-align: center; }
+    .sec-head.center .lead { margin-left: auto; margin-right: auto; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 12px; font-size: 0.98rem; font-weight: 600; text-decoration: none; cursor: pointer; border: 1px solid transparent; text-align: center; }
+    .btn:hover { text-decoration: none; }
+    .btn-primary { background: linear-gradient(135deg, var(--g1), var(--g2)); color: var(--on-accent); box-shadow: 0 4px 20px rgba(99,102,241,0.25); }
+    .btn-outline { background: transparent; color: var(--text); border-color: var(--border-strong); }
+    .btn-outline:hover { border-color: var(--primary); color: var(--primary-light); }
+    .btn-block { width: 100%; }
+    .btn[disabled] { opacity: 0.6; cursor: wait; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; background: var(--tint); border: 1px solid var(--tint-line); border-radius: 100px; padding: 6px 16px; font-size: 0.86rem; font-weight: 600; color: var(--primary-light); }
+    .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 18px; padding: 24px; min-width: 0; }
+    .card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+    .card p, .card li { color: var(--text-muted); font-size: 0.93rem; }
+    .ticks { list-style: none; display: grid; gap: 8px; align-content: start; }
+    .ticks li { display: grid; grid-template-columns: 18px 1fr; gap: 8px; align-items: start; }
+    .ticks li::before { content: ""; width: 10px; height: 6px; border-left: 2px solid var(--ok); border-bottom: 2px solid var(--ok); transform: rotate(-45deg); margin-top: 7px; margin-left: 3px; }
+    @media (prefers-reduced-motion: no-preference) { .btn, .plan { transition: transform .2s ease, border-color .2s ease; } .btn:hover { transform: translateY(-1px); } }
+    @media (max-width: 640px) { .section { padding-block: 52px; } }
+
+    /* ─── Footer (identique aux autres pages du site) ─── */
+    footer { max-width: 1200px; margin: 0 auto; padding: 2rem 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; color: var(--text-muted); font-size: 0.82rem; border-top: 1px solid var(--border); }
+    footer a { color: var(--primary-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .footer-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 0 1.5rem; }
+    .footer-badges a { min-height: 44px; display: inline-flex; align-items: center; }
+    .footer-badge { display: flex; align-items: center; gap: 0.35rem; color: var(--text-muted); font-size: 0.82rem; }
+    @media (max-width: 768px) {
+      footer { flex-direction: column; text-align: center; padding: 2rem 1rem; }
+      .footer-badges { justify-content: center; }
+    }
+    /* ─── Haut de page ─── */
+    .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .e-hero { position: relative; overflow: hidden; }
+    .e-hero::before { content: ""; position: absolute; right: -10%; top: -20%; width: 70%; height: 140%; background: radial-gradient(closest-side, rgba(124,92,252,0.20), transparent); pointer-events: none; }
+    .e-hero-grid { position: relative; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 40px; align-items: center; padding-block: 64px 72px; }
+    .e-hero-text { display: grid; gap: 20px; justify-items: start; min-width: 0; }
+    .e-hero h1 { font-size: clamp(2.1rem, 5.2vw, 3.5rem); font-weight: 800; }
+    .e-hero .sub { color: var(--text-muted); font-size: 1.15rem; max-width: 44ch; }
+    .e-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+    .e-cta .btn { min-height: 54px; padding: 0 28px; font-size: 1.05rem; }
+    .e-pilot { max-width: 52ch; border-left: 3px solid var(--primary-light); padding: 4px 0 4px 14px; color: var(--text-muted); font-size: 1rem; }
+    .e-pilot strong { color: var(--text); }
+    @media (max-width: 480px) { .e-cta { width: 100%; } .e-cta .btn { flex: 1 1 100%; } }
+    .e-art { width: 100%; max-width: 440px; justify-self: center; color: var(--text); }
+    .e-art svg { display: block; width: 100%; height: auto; }
+    .e-twinkle { opacity: 0.6; }
+    @media (prefers-reduced-motion: no-preference) {
+      .e-art svg > g:first-of-type { transform-origin: 200px 200px; animation: e-spin 60s linear infinite; }
+      @keyframes e-spin { to { transform: rotate(360deg); } }
+    }
+    @media (max-width: 860px) {
+      .e-hero-grid { grid-template-columns: minmax(0, 1fr); padding-block: 40px 52px; gap: 28px; }
+      .e-art { max-width: 190px; order: -1; }
+    }
+
+    /* ─── Les deux bénéfices (haut de page + section dédiée) ─── */
+    .e-gains { display: grid; gap: 8px; }
+    .e-trio { font-weight: 800; font-size: 1.08rem; color: var(--primary-light); max-width: 52ch; }
+    .e-gains li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; align-items: start; color: var(--text-muted); font-size: 1rem; }
+    .e-gains svg { width: 22px; height: 22px; color: var(--primary-light); margin-top: 2px; }
+    .e-gains strong { color: var(--text); }
+    .gains-grid { display: grid; gap: 22px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    @media (max-width: 860px) { .gains-grid { grid-template-columns: minmax(0, 1fr); } }
+    .gain { background: var(--bg-card); border: 1px solid var(--tint-line); border-radius: 22px; padding: 28px 26px; display: grid; gap: 18px; align-content: start; min-width: 0; }
+    .gain-head { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 16px; align-items: center; }
+    .gain-icon { width: 64px; height: 64px; border-radius: 18px; background: var(--tint); border: 1px solid var(--tint-line); display: grid; place-items: center; color: var(--primary-light); }
+    .gain-icon svg { width: 36px; height: 36px; }
+    .gain-head .eyebrow { margin-bottom: 4px; }
+    .gain-head h3 { font-size: clamp(1.3rem, 2.6vw, 1.6rem); font-weight: 800; }
+    .gain-block { display: grid; gap: 10px; }
+    .gain-block h4 { font-size: 1.05rem; font-weight: 700; }
+    .gain-block .ticks li { color: var(--text-muted); font-size: 0.97rem; }
+    .gain-block .ticks strong { color: var(--text); }
+    .gain-note { border-top: 1px solid var(--border); padding-top: 14px; color: var(--text); font-weight: 600; font-size: 0.98rem; }
+    @media (max-width: 480px) { .gain { padding: 22px 18px; } .gain-head { grid-template-columns: 52px minmax(0, 1fr); } .gain-icon { width: 52px; height: 52px; border-radius: 14px; } .gain-icon svg { width: 30px; height: 30px; } }
+    .trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: -8px 0 32px; }
+    .trio li { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 16px 18px; border-radius: 16px; background: var(--tint); border: 1px solid var(--tint-line); font-weight: 800; font-size: clamp(1.02rem, 1.8vw, 1.2rem); text-align: center; min-width: 0; }
+    .trio svg { width: 28px; height: 28px; flex: 0 0 28px; color: var(--primary-light); }
+    @media (max-width: 760px) { .trio { grid-template-columns: minmax(0, 1fr); } .trio li { justify-content: flex-start; text-align: left; } }
+    .intl-link { margin-top: 18px; text-align: center; font-size: 0.9rem; }
+    .intl-link a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px; color: var(--text-muted); text-decoration: underline; text-underline-offset: 3px; }
+    .intl-link a:hover { color: var(--text); }
+
+    /* ─── Mini-formulaire « Être recontacté » ─── */
+    .quick { width: 100%; max-width: 560px; display: grid; gap: 8px; }
+    .quick-title { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); }
+    .quick-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .quick-row input { flex: 1 1 180px; min-width: 0; min-height: 48px; border-radius: 12px; border: 1px solid var(--border-strong); background: var(--bg-card); color: var(--text); padding: 0 14px; font: inherit; font-size: 16px; }
+    .quick-row .btn { flex: 0 0 auto; }
+    .quick-msg { font-size: 0.86rem; border-radius: 10px; padding: 10px 12px; border: 1px solid var(--ok); background: var(--ok-bg); }
+    .quick-msg.bad { border-color: var(--bad); background: var(--bad-bg); }
+    .quick-msg a { color: inherit; text-decoration: underline; }
+
+    /* ─── Le professeur aux commandes ─── */
+    .ctrl-band { background: linear-gradient(135deg, var(--tint), transparent 75%); border-block: 1px solid var(--tint-line); }
+    .ctrl-grid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 48px; align-items: center; padding-block: 64px; }
+    .ctrl-art { width: 100%; max-width: 380px; justify-self: center; }
+    .ctrl-art svg { display: block; width: 100%; height: auto; filter: drop-shadow(0 18px 40px rgba(99,102,241,0.35)); }
+    .ctrl-text { display: grid; gap: 14px; min-width: 0; }
+    .ctrl-text .h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); }
+    .ctrl-points { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 18px; }
+    .ctrl-points li { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 14px; align-items: start; }
+    .c-icon { width: 48px; height: 48px; border-radius: 14px; background: var(--bg-card); border: 1px solid var(--tint-line); display: grid; place-items: center; }
+    .c-icon svg { width: 30px; height: 30px; }
+    .ctrl-points b { display: block; font-size: 1.08rem; }
+    .ctrl-points span { color: var(--text-muted); font-size: 0.97rem; }
+    @media (max-width: 860px) { .ctrl-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-block: 48px; } .ctrl-art { max-width: 240px; } }
+
+    /* ─── Promesses ─── */
+    .promises { display: grid; gap: 18px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    @media (max-width: 900px) { .promises { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 560px) { .promises { grid-template-columns: minmax(0, 1fr); } }
+    .promise { background: var(--bg-card); border: 1px solid var(--border); border-radius: 22px; padding: 28px 24px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+    .p-icon { width: 76px; height: 76px; border-radius: 22px; background: var(--tint); border: 1px solid var(--tint-line); display: grid; place-items: center; margin-bottom: 6px; }
+    .p-icon svg { width: 46px; height: 46px; }
+    .promise h3 { font-size: 1.2rem; font-weight: 800; }
+    .promise p { color: var(--text-muted); font-size: 0.98rem; }
+
+    /* ─── Bande confiance ─── */
+    .trust-band { background: linear-gradient(135deg, var(--tint), transparent 70%); border-block: 1px solid var(--border); }
+    .trust-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; padding-block: 32px; }
+    @media (max-width: 760px) { .trust-row { grid-template-columns: minmax(0, 1fr); } }
+    .trust-item { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1rem; min-width: 0; }
+    .trust-item svg { width: 48px; height: 48px; flex: 0 0 48px; }
+
+    /* ─── Étapes ─── */
+    .e-steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; position: relative; }
+    .e-steps::before { content: ""; position: absolute; top: 48px; left: 16%; right: 16%; height: 3px; border-radius: 2px; background: linear-gradient(90deg, var(--g1), var(--g2)); opacity: 0.5; }
+    .e-steps li { position: relative; display: grid; justify-items: center; text-align: center; gap: 8px; }
+    .s-icon { width: 96px; height: 96px; border-radius: 50%; background: var(--bg-card); border: 2px solid var(--tint-line); display: grid; place-items: center; box-shadow: 0 0 0 8px var(--bg); }
+    .s-icon svg { width: 54px; height: 54px; }
+    .e-steps b { font-size: 1.1rem; margin-top: 6px; }
+    .e-steps li > span:last-child { color: var(--text-muted); font-size: 0.95rem; max-width: 30ch; }
+    .e-steps.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .e-steps.four::before { left: 12%; right: 12%; }
+    .e-steps.four li { align-content: start; }
+    @media (max-width: 960px) { .e-steps.four { grid-template-columns: minmax(0, 1fr); } .e-steps.four::before { top: 48px; bottom: 48px; left: 50%; right: auto; width: 3px; height: auto; background: linear-gradient(180deg, var(--g1), var(--g2)); } }
+    @media (max-width: 760px) { .e-steps { grid-template-columns: minmax(0, 1fr); } .e-steps::before { top: 48px; bottom: 48px; left: 50%; right: auto; width: 3px; height: auto; background: linear-gradient(180deg, var(--g1), var(--g2)); } }
+
+    /* ─── Appel à l'action final ─── */
+    .cta-band { border-radius: 22px; padding: 2px; background: linear-gradient(135deg, var(--g1), var(--g2)); }
+    .cta-inner { border-radius: 20px; background: var(--bg-card); padding: 40px 28px; text-align: center; display: grid; gap: 14px; justify-items: center; }
+    .cta-inner h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; }
+    .cta-inner p { color: var(--text-muted); max-width: 56ch; }
+    @media (max-width: 640px) { .cta-inner { padding: 30px 18px; } }
+
+    /* ─── Demande de devis ─── */
+    .form-layout { display: grid; gap: 32px; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); align-items: start; }
+    @media (max-width: 900px) { .form-layout { grid-template-columns: minmax(0, 1fr); } }
+    form.card { display: grid; gap: 18px; padding: 28px; }
+    @media (max-width: 640px) { form.card { padding: 20px; } }
+    .f-row { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+    .field { display: grid; gap: 6px; min-width: 0; }
+    .field label, .field legend { font-size: 0.88rem; font-weight: 600; }
+    .field .hint { font-size: 0.78rem; color: var(--text-muted); font-weight: 400; }
+    input[type="text"], input[type="email"], select, textarea { width: 100%; min-height: 48px; border-radius: 12px; border: 1px solid var(--border-strong); background: var(--screen); color: var(--text); padding: 10px 14px; font: inherit; font-size: 16px; }
+    textarea { min-height: 110px; resize: vertical; }
+    fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 8px; min-width: 0; }
+    .choices { display: flex; flex-wrap: wrap; gap: 8px; }
+    .choice { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border: 1px solid var(--border-strong); border-radius: 12px; cursor: pointer; font-size: 0.9rem; font-weight: 400; }
+    .choice input { width: 18px; height: 18px; accent-color: var(--primary); }
+    .choice:has(input:checked) { border-color: var(--primary); background: var(--tint); }
+    .consent { display: grid; grid-template-columns: 22px 1fr; gap: 10px; font-size: 0.85rem; color: var(--text-muted); align-items: start; cursor: pointer; }
+    .consent input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--primary); }
+    .form-msg { border-radius: 12px; padding: 14px 16px; font-size: 0.92rem; border: 1px solid var(--ok); background: var(--ok-bg); color: var(--text); }
+    .form-msg.bad { border-color: var(--bad); background: var(--bad-bg); }
+    .form-msg a { color: inherit; text-decoration: underline; }
+    .err { color: var(--bad); font-size: 0.8rem; }
+    .side { display: grid; gap: 16px; }
+    /* ─── Confidentialité et sécurité (composant partagé : index, ecole, donnees-eleves) ─── */
+    .pp-section { background: var(--bg-card, #13131f); border-top: 1px solid var(--border, #1e1e32); border-bottom: 1px solid var(--border, #1e1e32); }
+    .pp-inner { max-width: 1100px; margin: 0 auto; padding: 4.5rem max(16px, env(safe-area-inset-left, 0px)) 4rem; }
+    .pp-title { font-size: clamp(1.6rem, 3.4vw, 2rem); font-weight: 700; text-align: center; letter-spacing: -0.02em; margin: 0 0 0.5rem; color: var(--text, #f0f0f5); }
+    .pp-subtitle { text-align: center; color: var(--text-muted, #8a8aa3); font-size: 1.02rem; margin: 0 auto 2.25rem; max-width: 560px; }
+    .pp-grid { --pp-gap: 1.25rem; list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: var(--pp-gap); }
+    .pp-grid > .pp-card { flex: 0 0 calc((100% - 2 * var(--pp-gap)) / 3); }
+    .pp-card { display: flex; flex-direction: column; align-items: flex-start; gap: 0.9rem; background: var(--bg, #0b0b14); border: 1px solid var(--border, #1e1e32); border-radius: 16px; padding: 1.5rem; min-width: 0; }
+    .pp-icon { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex: 0 0 44px; border-radius: 12px; background: rgba(124, 92, 252, 0.14); color: var(--primary-light, #a78bfa); }
+    .pp-icon svg { width: 24px; height: 24px; }
+    .pp-text { font-size: 1rem; font-weight: 700; line-height: 1.4; color: var(--text, #f0f0f5); overflow-wrap: anywhere; }
+    .pp-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem 1.25rem; margin: 1.75rem 0 0; }
+    .pp-links a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 0.5rem; font-size: 0.92rem; color: var(--text-muted, #8a8aa3); text-decoration: underline; text-underline-offset: 3px; }
+    .pp-links a:hover { color: var(--text, #f0f0f5); }
+    @media (max-width: 900px) { .pp-grid > .pp-card { flex-basis: calc((100% - var(--pp-gap)) / 2); } }
+    @media (max-width: 560px) {
+      .pp-inner { padding-top: 3.25rem; padding-bottom: 3rem; }
+      .pp-grid { --pp-gap: 0.75rem; }
+      .pp-grid > .pp-card { flex-basis: 100%; }
+      .pp-card { flex-direction: row; align-items: center; padding: 1rem 1.1rem; }
+    }
+    /* ─── FAQ (même style que tarifs.html) ─── */
+    .faq { display: grid; gap: 10px; max-width: 820px; margin: 0 auto; }
+    .faq details { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; }
+    .faq summary { cursor: pointer; list-style: none; min-height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 12px 20px; font-weight: 600; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; font-size: 1.3rem; color: var(--primary-light); font-weight: 400; }
+    .faq details[open] summary::after { content: "–"; }
+    .faq .ans { padding: 0 20px 18px; color: var(--text-muted); font-size: 0.95rem; }
+  
+    /* Bandeau vote des écoles hors de France (/international) */
+    .intl-banner { display: flex; align-items: center; gap: 16px; max-width: 1000px; margin: 32px auto; padding: 18px 22px; border-radius: 16px; border: 1px solid rgba(139,147,255,0.45); background: linear-gradient(135deg, rgba(99,102,241,0.18), rgba(168,85,247,0.12)); color: #e9ebfa; text-decoration: none; }
+    .intl-banner, .intl-banner * { text-decoration: none !important; }
+    .intl-banner:hover { border-color: rgba(139,147,255,0.8); }
+    .intl-banner svg { flex: none; }
+    .intl-banner .intl-txt { flex: 1; min-width: 0; display: grid; gap: 2px; }
+    .intl-banner strong { font-size: 1.05rem; }
+    .intl-banner .intl-sub { color: #b4bae0; font-size: 0.92rem; }
+    .intl-banner .intl-cta { flex: none; min-height: 44px; display: inline-flex; align-items: center; padding: 0 18px; border-radius: 12px; background: #6366f1; color: #fff; font-weight: 600; }
+    @media (max-width: 640px) { .intl-banner { flex-wrap: wrap; margin: 24px 16px; } .intl-banner .intl-cta { width: 100%; justify-content: center; } }
+      /* Menu : une seule ligne, plus serré sur écran moyen */
+    .navbar-links a { white-space: nowrap; }
+    @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
+    /* ─── Propre à la page Écoles françaises à l'étranger ─── */
+    .who { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0 auto; max-width: 900px; }
+    .who li { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 8px 16px; border-radius: 100px; background: var(--tint); border: 1px solid var(--tint-line); font-weight: 600; font-size: 0.95rem; }
+    .who svg { width: 20px; height: 20px; flex: 0 0 20px; color: var(--primary-light); }
+    .who-note { text-align: center; color: var(--text); font-weight: 700; font-size: 1.08rem; margin: 26px auto 0; max-width: 60ch; }
+    .feats { display: grid; gap: 18px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    @media (max-width: 900px) { .feats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 560px) { .feats { grid-template-columns: minmax(0, 1fr); } }
+    .feat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 24px 22px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+    .f-icon { width: 52px; height: 52px; border-radius: 14px; background: var(--tint); border: 1px solid var(--tint-line); display: grid; place-items: center; color: var(--primary-light); }
+    .f-icon svg { width: 28px; height: 28px; }
+    .feat h3 { font-size: 1.12rem; font-weight: 800; }
+    .feat p { color: var(--text-muted); font-size: 0.96rem; }
+    .stats { display: grid; gap: 18px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    @media (max-width: 760px) { .stats { grid-template-columns: minmax(0, 1fr); } }
+    .stat { background: var(--bg-card); border: 1px solid var(--tint-line); border-radius: 20px; padding: 24px 22px; display: grid; gap: 6px; align-content: start; min-width: 0; text-align: center; }
+    .stat b { font-size: clamp(1.9rem, 4vw, 2.5rem); font-weight: 800; line-height: 1.1; }
+    .stat span { color: var(--text-muted); font-size: 0.96rem; }
+    .stats-note { text-align: center; color: var(--text-muted); font-size: 0.92rem; margin-top: 18px; }
+    .offer { display: grid; gap: 18px; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 900px; margin: 0 auto; }
+    @media (max-width: 760px) { .offer { grid-template-columns: minmax(0, 1fr); } }
+    .offer .card h3 { font-size: 1.2rem; }
+    .offer .card.hl { border-color: var(--tint-line); background: var(--tint); }
+  </style>
+  <!-- Meta Pixel (Facebook) - charge apres consentement -->
+  <script src="meta-pixel.js"></script>
+  <style id="g6-banner-css">
+    /* Bandeau anglais « Currently available in France only » : toutes les pages, collé en haut avec le menu (généré par scripts/build-langs.py) */
+    .g6-intl-banner { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 8px 16px; background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; font-size: 0.85rem; font-weight: 500; line-height: 1.45; text-align: center; direction: ltr; }
+    .g6-intl-banner svg { flex: none; opacity: 0.9; }
+    .g6-intl-banner span { min-width: 0; overflow-wrap: anywhere; }
+    .g6-intl-banner a { color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.5); }
+    .g6-intl-banner a:hover, .g6-intl-banner a:focus-visible { border-bottom-color: #fff; text-decoration: none; }
+    body > .g6-intl-banner { position: sticky; top: 0; z-index: 120; }
+    @media (max-width: 480px) { .g6-intl-banner { font-size: 0.8rem; padding: 7px 12px; } }
+  </style>
+  <style id="g6-nav-css">
+    /* Menu : marge du logo, sélecteur de langue (généré par scripts/build-langs.py) */
+    html, body { overflow-x: clip; } /* les halos décoratifs du haut de page ne créent plus de défilement horizontal */
+    .navbar-brand { margin-inline-end: 1.5rem; flex-shrink: 0; }
+    .navbar-links a { white-space: nowrap; }
+    .lang-menu { position: relative; }
+    .lang-menu summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; min-height: 44px; padding: 0 4px; color: var(--text-muted, #8a8aa3); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; user-select: none; }
+    .lang-menu summary::-webkit-details-marker { display: none; }
+    .lang-menu summary::after { content: ""; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid currentColor; }
+    .lang-menu summary:hover, .lang-menu[open] summary { color: var(--text, #f0f0f5); }
+    .lang-menu-list { position: absolute; top: 100%; inset-inline-end: 0; z-index: 300; min-width: 160px; display: grid; gap: 2px; padding: 6px; background: #13131f; border: 1px solid #2a2a44; border-radius: 12px; box-shadow: 0 12px 32px rgba(0,0,0,0.45); }
+    .navbar .lang-menu-list a { display: block; padding: 0.55rem 0.8rem; border-radius: 8px; color: var(--text-muted, #8a8aa3); font-size: 0.9rem; font-weight: 500; text-decoration: none; white-space: nowrap; min-height: 0; }
+    .navbar .lang-menu-list a:hover { background: rgba(124,92,252,0.14); color: var(--text, #f0f0f5); }
+    .navbar .lang-menu-list a[aria-current] { color: var(--text, #f0f0f5); font-weight: 700; }
+    /* Grand écran : menu un peu resserré pour tenir sur une ligne */
+    @media (min-width: 1241px) {
+      .navbar-links { gap: 1.25rem !important; }
+      .navbar-links a { font-size: 0.88rem; }
+      .navbar-brand { margin-inline-end: 1.25rem; }
+    }
+    @media (min-width: 901px) and (max-width: 1240px) {
+      .navbar { padding-left: 2rem !important; padding-right: 2rem !important; }
+      .navbar-links { gap: 0.75rem !important; }
+      .navbar-links a { font-size: 0.8rem !important; }
+      .navbar-links a[href^="https://galac6web"] { padding: 0.45rem 0.9rem !important; }
+      .navbar-brand { margin-inline-end: 1rem; }
+      .navbar-brand span { font-size: 1.35rem; }
+      .navbar-brand img { height: 38px; }
+    }
+    /* Menu hamburger (900 px et moins, réglage d'origine des pages) */
+    @media (max-width: 900px) {
+      .navbar-brand { margin-inline-end: 0; }
+      .lang-menu { align-self: center; }
+      .lang-menu summary { font-size: 0.95rem; }
+      .lang-menu-list { position: static; display: flex; flex-wrap: wrap; justify-content: center; min-width: 0; margin-top: 4px; }
+      .navbar .lang-menu-list a { padding: 0.6rem 0.75rem; font-size: 0.95rem !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <div class="navbar-wrapper">
+    <!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-banner" lang="en" dir="ltr" role="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Currently available in France only (French school system). Want Galac6 in your country? <a href="/international">Send a request&nbsp;&rarr;</a></span></div><!-- /intl-banner -->
+    <nav class="navbar">
+      <a href="/" class="navbar-brand">
+        <img src="icons/icon.png" alt="Galac6">
+        <span>Galac6</span>
+      </a>
+      <button class="navbar-hamburger" aria-label="Menu" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="navbar-links">
+        <a href="/#features" data-i18n="nav.features">Pour les élèves</a>
+        <a href="/ecole" class="active" data-i18n="nav.school">Pour les écoles</a>
+        <a href="/tarifs" data-i18n="nav.pricing">Tarif</a>
+        <a href="/about" data-i18n="nav.about">À propos</a>
+        <!-- lang-menu --><details class="lang-menu"><summary aria-label="Langue : Français">FR</summary><div class="lang-menu-list"><a href="/ecoles-francaises-etranger" hreflang="fr" lang="fr" aria-current="page">Français</a><a href="/en/french-schools-abroad" hreflang="en" lang="en">English</a><a href="/es/" hreflang="es" lang="es">Español</a><a href="/it/" hreflang="it" lang="it">Italiano</a><a href="/de/" hreflang="de" lang="de">Deutsch</a><a href="/he/" hreflang="he" lang="he" dir="rtl">עברית</a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
+        <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;" data-i18n="nav.signup">Inscription ou connexion</a>
+      </div>
+    </nav>
+  </div>
+
+<main>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="gx" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+    </defs>
+  </svg>
+
+  <!-- ═══ HAUT DE PAGE ═══ -->
+  <div class="e-hero">
+    <div class="wrap e-hero-grid">
+      <div class="e-hero-text">
+        <span class="badge" data-i18n="etranger.badge">Établissements français à l'étranger</span>
+        <h1 data-i18n-html="etranger.hero.title">La plateforme IA des écoles françaises <span class="grad">à l'étranger</span></h1>
+        <p class="sub" data-i18n="etranger.hero.sub">Galac6 suit le programme français, du CP à la terminale. Vos professeurs gagnent du temps, et chaque élève est suivi sur mesure, où que se trouve votre établissement.</p>
+        <ul class="e-gains">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n-html="etranger.hero.g1"><strong>Même programme qu'en France :</strong> rien à adapter.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n-html="etranger.hero.g2"><strong>Brevet et bac depuis l'étranger,</strong> avec les sujets officiels passés hors de France.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n-html="etranger.hero.g3"><strong>Données hébergées en France,</strong> intelligence artificielle traitée en Europe.</span></li>
+        </ul>
+        <p class="e-pilot" data-i18n-html="etranger.pilot.offer"><strong>Pilote gratuit : 3 mois sur 3 classes, sans engagement.</strong> Ensuite, devis en euros.</p>
+        <div class="e-cta">
+          <a class="btn btn-primary" href="#devis" data-type="pilote" data-i18n="ecole.cta.pilot">Devenir école pilote</a>
+          <a class="btn btn-outline" href="#devis" data-type="devis" data-i18n="ecole.cta.quote">Demander un devis</a>
+        </div>
+      </div>
+      <div class="e-art" aria-hidden="true">
+        <svg viewBox="0 0 400 400" fill="none" stroke="url(#gx)" stroke-linecap="round" stroke-linejoin="round">
+          <g>
+            <circle cx="200" cy="200" r="150" stroke-width="6"/>
+            <ellipse cx="200" cy="200" rx="62" ry="150" stroke-width="4"/>
+            <path d="M50 200h300M72 125h256M72 275h256" stroke-width="4"/>
+          </g>
+          <g stroke-width="5">
+            <path d="M200 92c-20 0-36 16-36 36 0 27 36 62 36 62s36-35 36-62c0-20-16-36-36-36z" fill="#13131f"/>
+            <circle cx="200" cy="128" r="12"/>
+            <path d="M292 246c-14 0-25 11-25 25 0 19 25 43 25 43s25-24 25-43c0-14-11-25-25-25z" fill="#13131f"/>
+            <circle cx="292" cy="271" r="8"/>
+            <path d="M112 226c-14 0-25 11-25 25 0 19 25 43 25 43s25-24 25-43c0-14-11-25-25-25z" fill="#13131f"/>
+            <circle cx="112" cy="251" r="8"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ POUR QUI ═══ -->
+  <section class="section" id="pour-qui">
+    <div class="wrap">
+      <div class="sec-head center">
+        <p class="eyebrow" data-i18n="etranger.who.eyebrow">Pour qui</p>
+        <h2 class="h2" data-i18n="etranger.who.title">Pour les établissements homologués par l'Éducation nationale</h2>
+        <p class="lead" data-i18n="etranger.who.lead">Écoles, collèges et lycées français à l'étranger, quel que soit leur statut.</p>
+      </div>
+      <ul class="who">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg><span data-i18n="etranger.who.l1">Établissements en gestion directe</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg><span data-i18n="etranger.who.l2">Établissements conventionnés</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg><span data-i18n="etranger.who.l3">Établissements partenaires</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><path d="M8.5 7.5 11 16M15.5 7.5 13 16M9 6h6"/></svg><span data-i18n="etranger.who.l4">Réseaux Mission laïque française (MLF), AFLEC et autres</span></li>
+      </ul>
+      <p class="who-note" data-i18n="etranger.who.note">Vous suivez déjà le programme français : Galac6 fonctionne chez vous tel quel, il n'y a rien à adapter.</p>
+    </div>
+  </section>
+
+  <!-- ═══ CE QUE GALAC6 APPORTE ═══ -->
+  <section class="section" id="benefices">
+    <div class="wrap">
+      <div class="sec-head center">
+        <p class="eyebrow" data-i18n="etranger.feats.eyebrow">Ce que Galac6 apporte</p>
+        <h2 class="h2" data-i18n="etranger.feats.title">Tout Galac6, pour votre établissement, où qu'il soit</h2>
+      </div>
+      <div class="feats">
+        <article class="feat">
+          <span class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg></span>
+          <h3 data-i18n="etranger.f1.t">Le programme français, tel quel</h3>
+          <p data-i18n="etranger.f1.d">Du CP à la terminale, les mêmes notions et les mêmes examens qu'en France. Un tuteur IA didactique guide chaque élève pas à pas, sans lui donner la réponse.</p>
+        </article>
+        <article class="feat">
+          <span class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <h3 data-i18n="etranger.f2.t">Du temps pour vos professeurs</h3>
+          <p data-i18n="etranger.f2.d">Dictées lues et corrigées, copies papier scannées puis corrigées, quiz prêts en quelques minutes. Le temps gagné revient à l'enseignement.</p>
+        </article>
+        <article class="feat">
+          <span class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span>
+          <h3 data-i18n="etranger.f3.t">Un suivi sur mesure de chaque élève</h3>
+          <p data-i18n="etranger.f3.d">Vous voyez ce que chaque élève maîtrise et ce qui lui pose difficulté. Vous savez qui aider, et sur quoi.</p>
+        </article>
+        <article class="feat">
+          <span class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/><path d="M22 10v5"/></svg></span>
+          <h3 data-i18n="etranger.f4.t">Brevet et bac depuis l'étranger</h3>
+          <p data-i18n="etranger.f4.d">Vos élèves s'entraînent sur les annales officielles, y compris les sujets passés hors de France, en examen blanc et avec une correction détaillée.</p>
+        </article>
+        <article class="feat">
+          <span class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 16v-4M12 16V8M17 16v-6"/></svg></span>
+          <h3 data-i18n="etranger.f5.t">Un espace pour la direction</h3>
+          <p data-i18n="etranger.f5.d">Vos classes, leurs moyennes et les notions à retravailler, réunies dans un espace dédié à l'équipe de direction.</p>
+        </article>
+        <article class="feat">
+          <span class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M12 18v-6M9 15l3-3 3 3"/></svg></span>
+          <h3 data-i18n="etranger.f6.t">Vos élèves importés depuis un fichier</h3>
+          <p data-i18n="etranger.f6.d">Importez la liste de vos élèves depuis un fichier exporté de Pronote ou d'École Directe, ou depuis une simple liste collée. Pas besoin de les saisir un par un.</p>
+        </article>
+        <article class="feat">
+          <span class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <h3 data-i18n="etranger.f7.t">Les familles informées dans leur langue</h3>
+          <p data-i18n="etranger.f7.d">Les emails aux familles partent en français ou en anglais, selon le choix de votre établissement.</p>
+        </article>
+        <article class="feat">
+          <span class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
+          <h3 data-i18n="etranger.f8.t">À l'heure de votre école</h3>
+          <p data-i18n="etranger.f8.d">Les envois automatiques suivent l'heure locale de votre établissement, et non celle de Paris.</p>
+        </article>
+        <article class="feat">
+          <span class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l8 3v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10v-6z"/><rect x="9" y="10.5" width="6" height="5" rx="1"/><path d="M10 10.5V9a2 2 0 0 1 4 0v1.5"/></svg></span>
+          <h3 data-i18n="etranger.f9.t">Données hébergées en France</h3>
+          <p data-i18n="etranger.f9.d">Les données sont hébergées en France, dans l'Union européenne, et traitées dans le respect du RGPD. Elles ne sont jamais revendues.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CHIFFRES ═══ -->
+  <section class="section" id="contenus">
+    <div class="wrap">
+      <div class="sec-head center">
+        <p class="eyebrow" data-i18n="etranger.stats.eyebrow">Des contenus prêts à l'emploi</p>
+        <h2 class="h2" data-i18n="etranger.stats.title">Le brevet et le bac, préparés depuis l'étranger</h2>
+      </div>
+      <div class="stats">
+        <div class="stat"><b class="grad num" data-i18n="etranger.stats.s1.n">Plus de 2&nbsp;000</b><span data-i18n="etranger.stats.s1.l">dictées, lues et corrigées</span></div>
+        <div class="stat"><b class="grad num" data-i18n="etranger.stats.s2.n">Plus de 400</b><span data-i18n="etranger.stats.s2.l">sujets d'annales officielles du brevet et du bac, dont plus de 250 en mathématiques</span></div>
+        <div class="stat"><b class="grad num">112</b><span data-i18n="etranger.stats.s3.l">sujets officiels passés hors de France&nbsp;: 76&nbsp;de brevet, 29&nbsp;de bac de français et 7&nbsp;de bac de maths</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ OFFRE ═══ -->
+  <section class="section" id="offre">
+    <div class="wrap">
+      <div class="sec-head center">
+        <p class="eyebrow" data-i18n="ecole.steps.eyebrow">Pilote gratuit, sans engagement</p>
+        <h2 class="h2" data-i18n="etranger.offer.title">Essayez Galac6 avant de décider</h2>
+      </div>
+      <div class="offer">
+        <div class="card hl">
+          <h3 data-i18n="etranger.offer.pilot.t">Pilote gratuit de 3 mois</h3>
+          <ul class="ticks" style="margin-top:8px">
+            <li data-i18n="etranger.offer.pilot.l1">Sur 3 classes de votre choix</li>
+            <li data-i18n="etranger.offer.pilot.l2">Sans engagement</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 data-i18n="etranger.offer.quote.t">Ensuite, un devis en euros</h3>
+          <ul class="ticks" style="margin-top:8px">
+            <li data-i18n="etranger.offer.quote.l1">Selon le nombre d'élèves et les modules choisis</li>
+            <li data-i18n="ecole.side.incl.l1">Comptes professeurs, direction et parents inclus, sans limite</li>
+            <li data-i18n="ecole.side.incl.l2">Données hébergées en France</li>
+          </ul>
+        </div>
+      </div>
+      <div class="e-cta" style="justify-content: center; margin-top: 32px;">
+        <a class="btn btn-primary" href="#devis" data-type="pilote" data-i18n="ecole.cta.pilot">Devenir école pilote</a>
+        <a class="btn btn-outline" href="#devis" data-type="demo" data-i18n="ecole.gains.cta.demo">Demander une démonstration</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <div class="section">
+    <div class="wrap">
+      <div class="sec-head center"><p class="eyebrow" data-i18n="ecole.faq.eyebrow">Questions fréquentes</p><h2 class="h2" data-i18n="etranger.faq.title">Vos questions</h2></div>
+      <div class="faq">
+        <details><summary data-i18n="etranger.faq.q1">Faut-il adapter Galac6 à notre établissement ?</summary><div class="ans"><p data-i18n="etranger.faq.a1">Non. Galac6 suit le programme officiel français, du CP à la terminale, le même que dans votre établissement. Vos professeurs retrouvent les notions, les niveaux et les examens qu'ils connaissent.</p></div></details>
+        <details><summary data-i18n="etranger.faq.q2">Comment ajouter nos élèves ?</summary><div class="ans"><p data-i18n="etranger.faq.a2">Vous importez la liste de vos élèves depuis un fichier : un export de Pronote ou d'École Directe, ou une simple liste collée. Pas besoin de les saisir un par un.</p></div></details>
+        <details><summary data-i18n="etranger.faq.q3">Toutes nos familles ne lisent pas le français. Comment faire ?</summary><div class="ans"><p data-i18n="etranger.faq.a3">Les emails envoyés aux familles partent en français ou en anglais, selon le choix de votre établissement, et à l'heure locale de votre école.</p></div></details>
+        <details><summary data-i18n="etranger.faq.q4">Où sont hébergées les données des élèves ?</summary><div class="ans"><p data-i18n-html="etranger.faq.a4">Les <strong>données sont hébergées en France</strong>, à Paris, et l'intelligence artificielle principale de Galac6 est traitée en Europe. Seuls les professeurs de l'élève et la direction de son école voient son travail. Tout est détaillé sur la page <a href="/donnees-eleves">Données des élèves</a>.</p></div></details>
+        <details><summary data-i18n="etranger.faq.q5">Combien coûte Galac6 ?</summary><div class="ans"><p data-i18n="etranger.faq.a5">Le pilote est gratuit pendant 3 mois sur 3 classes, sans engagement. Ensuite, nous vous adressons un devis en euros selon le nombre de vos élèves et les modules choisis.</p></div></details>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ DEMANDE (même envoi que la page École : fonction notify-contact) ═══ -->
+  <section class="section" id="devis">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow" data-i18n="etranger.form.eyebrow">Établissements français à l'étranger</p>
+        <h2 class="h2" id="devis-title" data-i18n="ecole.cta.pilot">Devenir école pilote</h2>
+        <p class="lead" data-i18n="etranger.form.lead">Dites-nous en quelques lignes qui vous êtes. Nous vous répondons avec une proposition de pilote, une démonstration ou un devis en euros.</p>
+      </div>
+      <div class="form-layout">
+        <form class="card" id="quote-form" novalidate>
+          <fieldset class="field">
+            <legend data-i18n="ecole.devis.type">Votre demande</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="type" id="t-pilote" value="pilote" checked> <span data-i18n="ecole.devis.type.pilote">Devenir école pilote</span></label>
+              <label class="choice"><input type="radio" name="type" id="t-devis" value="devis"> <span data-i18n="ecole.devis.type.devis">Un devis</span></label>
+              <label class="choice"><input type="radio" name="type" id="t-demo" value="demo"> <span data-i18n="ecole.devis.type.demo">Une démonstration</span></label>
+            </div>
+          </fieldset>
+          <div class="f-row">
+            <div class="field"><label for="f-nom" data-i18n="ecole.f.nom">Prénom et nom</label><input type="text" id="f-nom" autocomplete="name" required></div>
+            <div class="field"><label for="f-fonction" data-i18n="ecole.f.fonction">Fonction</label>
+              <select id="f-fonction">
+                <option value="Chef d'établissement" data-i18n="ecole.f.fonction.o1">Chef d'établissement</option>
+                <option value="Directeur ou directrice d'école" data-i18n="ecole.f.fonction.o2">Directeur ou directrice d'école</option>
+                <option value="Professeur" data-i18n="ecole.f.fonction.o3">Professeur</option>
+                <option value="Organisme de gestion ou réseau" data-i18n="ecole.f.fonction.o4">Organisme de gestion ou réseau</option>
+                <option value="Autre" data-i18n="ecole.f.fonction.o5">Autre</option>
+              </select></div>
+          </div>
+          <div class="f-row">
+            <div class="field"><label for="f-etab" data-i18n="ecole.f.etab">Établissement</label><input type="text" id="f-etab" autocomplete="organization" required></div>
+            <div class="field"><label for="f-ville" data-i18n="ecole.f.ville">Ville et pays</label><input type="text" id="f-ville" placeholder="Par exemple : Madrid, Espagne" data-i18n-ph="etranger.ph.city"></div>
+          </div>
+          <div class="f-row">
+            <div class="field"><label for="f-statut" data-i18n="etranger.f.statut">Statut de l'établissement</label>
+              <select id="f-statut">
+                <option value="Partenaire" data-i18n="etranger.f.statut.o1">Partenaire</option>
+                <option value="Conventionné" data-i18n="etranger.f.statut.o2">Conventionné</option>
+                <option value="Gestion directe" data-i18n="etranger.f.statut.o3">Gestion directe</option>
+                <option value="Autre ou je ne sais pas" data-i18n="etranger.f.statut.o4">Autre ou je ne sais pas</option>
+              </select></div>
+            <div class="field"><label for="f-eleves" data-i18n="ecole.f.eleves">Nombre d'élèves</label>
+              <select id="f-eleves">
+                <option value="Moins de 200" data-i18n="ecole.f.eleves.o1">Moins de 200</option>
+                <option value="De 200 à 500" data-i18n="ecole.f.eleves.o2">De 200 à 500</option>
+                <option value="De 501 à 1 000" data-i18n="ecole.f.eleves.o3">De 501 à 1 000</option>
+                <option value="Plus de 1 000" data-i18n="ecole.f.eleves.o4">Plus de 1 000</option>
+                <option value="Plusieurs établissements" data-i18n="ecole.f.eleves.o5">Plusieurs établissements</option>
+              </select></div>
+          </div>
+          <div class="field"><label for="f-email" data-i18n="ecole.f.email">Email professionnel</label><input type="email" id="f-email" autocomplete="email" required><span class="err" id="e-email" hidden data-i18n="etranger.f.email.err">Indiquez une adresse email complète, par exemple prenom.nom@lycee-francais.org.</span></div>
+          <fieldset class="field">
+            <legend data-i18n="ecole.f.niveaux">Niveaux concernés</legend>
+            <div class="choices">
+              <label class="choice"><input type="checkbox" id="n-prim" value="Primaire"> <span data-i18n="ecole.f.niveaux.prim">Primaire</span></label>
+              <label class="choice"><input type="checkbox" id="n-coll" value="Collège" checked> <span data-i18n="ecole.f.niveaux.coll">Collège</span></label>
+              <label class="choice"><input type="checkbox" id="n-lyc" value="Lycée"> <span data-i18n="ecole.f.niveaux.lyc">Lycée</span></label>
+            </div>
+          </fieldset>
+          <div class="field"><label for="f-msg"><span data-i18n="ecole.f.msg">Votre message</span> <span class="hint" data-i18n="ecole.f.msg.hint">(facultatif)</span></label><textarea id="f-msg" placeholder="Vos besoins, vos questions, le calendrier souhaité" data-i18n-ph="ecole.ph.msg"></textarea></div>
+          <label class="consent"><input type="checkbox" id="f-consent" required><span data-i18n="ecole.f.consent">J'accepte que Galac6 utilise ces informations pour répondre à ma demande.</span></label>
+          <span class="err" id="e-form" hidden data-i18n="ecole.f.err">Remplissez votre nom, votre établissement et votre email, et cochez la case d'accord.</span>
+          <button class="btn btn-primary btn-block" type="submit" id="f-submit" data-i18n="ecole.f.submit">Envoyer ma demande</button>
+          <div class="form-msg" id="form-msg" hidden role="status"></div>
+        </form>
+
+        <aside class="side">
+          <div class="card">
+            <h3 data-i18n="ecole.side.next.title">Ce qui se passe ensuite</h3>
+            <ol class="ticks" style="margin-top:8px">
+              <li data-i18n="ecole.side.next.l1">Nous vous recontactons pour comprendre vos besoins.</li>
+              <li data-i18n="ecole.side.next.l2">Nous vous proposons une démonstration de vingt minutes en visioconférence.</li>
+              <li data-i18n="etranger.side.next.l3">Nous lançons le pilote sur 3 classes, puis vous recevez un devis en euros.</li>
+            </ol>
+          </div>
+          <div class="card" style="border-color:var(--tint-line);background:var(--tint)">
+            <h3 data-i18n="ecole.side.pilot.title">Écoles pilotes</h3>
+            <p data-i18n="ecole.side.pilot.desc">3 mois gratuits sur 3 classes, sans engagement.</p>
+          </div>
+        </aside>
+      </div>
+      <p class="intl-link"><a href="/ecole" data-i18n="etranger.back">Voir la page Galac6 pour toutes les écoles</a></p>
+    </div>
+  </section>
+</main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div data-i18n="ecole.footer.desc">Galac6. L'IA au service de la pédagogie</div>
+    <div class="footer-badges">
+      <a href="/about" style="color: var(--text-muted);" data-i18n="footer.contact.about">À propos</a>
+      <a href="/mentions-legales" style="color: var(--text-muted);" data-i18n="footer.legal.mentions">Mentions légales</a>
+      <a href="/international" style="color: var(--text-muted);" data-i18n="footer.international">École hors de France ?</a>
+      <a href="#" data-cookie-settings style="color: var(--text-muted);" data-i18n="footer.cookies">Gérer les cookies</a>
+    </div>
+  </footer>
+
+<script>
+  // Page Écoles françaises à l'étranger : préremplissage et envoi de la demande.
+  // Même envoi que les pages École et À propos (fonction notify-contact) ; ce script suit l'attribut lang de <html>.
+  (function () {
+    'use strict';
+    var TXT = {
+      fr: {
+        devis: 'Demander un devis', pilote: 'Devenir école pilote', demo: 'Demander une démonstration',
+        sending: 'Envoi en cours…',
+        ok: 'Merci, votre demande est bien envoyée. Nous vous répondons au plus vite à l\'adresse indiquée.',
+        fail: 'L\'envoi n\'a pas abouti. Réessayez dans un instant, ou écrivez-nous à <a href="mailto:hello@galac6.io">hello@galac6.io</a>.'
+      },
+      en: {
+        devis: 'Request a quote', pilote: 'Become a pilot school', demo: 'Request a demo',
+        sending: 'Sending…',
+        ok: 'Thank you, your request has been sent. We will get back to you as soon as possible at the address you gave.',
+        fail: 'Your request could not be sent. Please try again in a moment, or write to us at <a href="mailto:hello@galac6.io">hello@galac6.io</a>.'
+      }
+    };
+    // Libellés envoyés dans le message (toujours en français, pour l'équipe Galac6)
+    var TYPE_FR = { devis: 'Demande de devis', pilote: 'Devenir école pilote', demo: 'Demande de démonstration' };
+    var ENDPOINT = 'https://obhzumzqullnsnnfjlbt.supabase.co/functions/v1/notify-contact';
+    var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    function lang() { var l = document.documentElement.lang; return TXT[l] ? l : 'fr'; }
+    function t(key) { return TXT[lang()][key]; }
+    function $(id) { return document.getElementById(id); }
+
+    function send(name, email, message) {
+      return fetch(ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: name, email: email, message: message })
+      }).then(function (res) { return res.ok; }, function () { return false; });
+    }
+
+    function setTitle() {
+      var r = document.querySelector('input[name="type"]:checked');
+      $('devis-title').textContent = t(r ? r.value : 'pilote');
+    }
+
+    function preset(type) {
+      var radio = type && $('t-' + type);
+      if (radio) radio.checked = true;
+      setTitle();
+    }
+
+    document.querySelectorAll('a[href="#devis"][data-type]').forEach(function (a) {
+      a.addEventListener('click', function () { preset(a.getAttribute('data-type')); });
+    });
+    document.querySelectorAll('input[name="type"]').forEach(function (r) { r.addEventListener('change', setTitle); });
+
+    // Arrivée par #pilote : coche « Devenir école pilote » et descend au formulaire
+    function fromHash() {
+      if (location.hash !== '#pilote') return;
+      preset('pilote');
+      var target = $('devis');
+      if (target) target.scrollIntoView();
+    }
+    window.addEventListener('hashchange', fromHash);
+    fromHash();
+
+    $('quote-form').addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var nom = $('f-nom').value.trim();
+      var etab = $('f-etab').value.trim();
+      var email = $('f-email').value.trim();
+      var okEmail = EMAIL_RE.test(email);
+      var okAll = nom && etab && okEmail && $('f-consent').checked;
+      $('e-email').hidden = !email || okEmail;
+      $('e-form').hidden = !!okAll;
+      var msg = $('form-msg');
+      msg.hidden = true;
+      if (!okAll) return;
+
+      var niveaux = ['n-prim', 'n-coll', 'n-lyc'].filter(function (id) { return $(id).checked; })
+        .map(function (id) { return $(id).value; }).join(', ') || 'non précisé';
+      var type = document.querySelector('input[name="type"]:checked').value;
+      var text = 'Type de demande : ' + TYPE_FR[type] + ' (page Écoles françaises à l\'étranger)\n' +
+        'Prénom et nom : ' + nom + '\n' +
+        'Fonction : ' + $('f-fonction').value + '\n' +
+        'Établissement : ' + etab + '\n' +
+        'Ville et pays : ' + ($('f-ville').value.trim() || 'non précisé') + '\n' +
+        'Statut : ' + $('f-statut').value + '\n' +
+        'Nombre d\'élèves : ' + $('f-eleves').value + '\n' +
+        'Email professionnel : ' + email + '\n' +
+        'Niveaux concernés : ' + niveaux + '\n' +
+        'Accord pour l\'utilisation des informations : oui\n' +
+        'Langue de la page : ' + lang() + '\n\n' +
+        'Message :\n' + ($('f-msg').value.trim() || '(aucun)');
+
+      var btn = $('f-submit');
+      var label = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = t('sending');
+      send(TYPE_FR[type] + ' · étranger · ' + nom + ' · ' + etab, email, text).then(function (ok) {
+        btn.disabled = false;
+        btn.textContent = label;
+        msg.classList.toggle('bad', !ok);
+        msg.innerHTML = ok ? t('ok') : t('fail');
+        msg.hidden = false;
+        if (ok) {
+          ['f-nom', 'f-etab', 'f-ville', 'f-email', 'f-msg'].forEach(function (id) { $(id).value = ''; });
+          $('f-consent').checked = false;
+        }
+      });
+    });
+
+    setTitle();
+  })();
+</script>
+<script src="i18n.js"></script>
+<script src="cookie-consent.js"></script>
+</body>
+</html>

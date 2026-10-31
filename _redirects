@@ -4,6 +4,7 @@
 /recherche            /recherche.html              200
 /tarifs               /tarifs.html                 200
 /ecole                /ecole.html                  200
+/ecoles-francaises-etranger /ecoles-francaises-etranger.html 200
 /international        /international.html          200
 /profs-testeurs       /profs-testeurs.html         200
 /guide-prof           /guide-prof.html             200
@@ -23,6 +24,7 @@
 /en/ecole                /en/ecole.html               200
 /en/about                /en/about.html               200
 /en/tarifs               /en/tarifs.html              200
+/en/french-schools-abroad /en/french-schools-abroad.html 200
 /es/ecole                /es/ecole.html               200
 /es/about                /es/about.html               200
 /es/tarifs               /es/tarifs.html              200
