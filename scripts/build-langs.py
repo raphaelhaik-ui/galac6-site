@@ -41,7 +41,8 @@ from bs4 import BeautifulSoup, Comment, NavigableString
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LANGDIR = os.path.join(ROOT, 'scripts', 'langs')
 SITE = 'https://galac6.io'
-LANGS = ['en', 'es', 'it', 'de', 'he']
+# Hébreu retiré pour l'instant (Raphaël, 31/10/2026) : remettre 'he' ici pour le republier, le dictionnaire scripts/langs/he.json est gardé
+LANGS = ['en', 'es', 'it', 'de']
 ALL = ['fr'] + LANGS
 NAMES = {'fr': 'Français', 'en': 'English', 'es': 'Español', 'it': 'Italiano', 'de': 'Deutsch', 'he': 'עברית'}
 LANG_LABEL_FR = 'Langue'
