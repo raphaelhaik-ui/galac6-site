@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-static-lang>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -7,6 +7,15 @@
   <meta name="description" content="Galac6 pour les écoles, collèges et lycées : devoirs et corrections préparés par l'IA, suivi des classes et de chaque élève, IA didactique, parents associés, données hébergées en France. Pilote gratuit de 3 mois sur 3 classes, tarif sur devis.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/ecole">
+  <!-- hreflang (généré par scripts/build-langs.py) -->
+  <link rel="alternate" hreflang="fr" href="https://galac6.io/ecole">
+  <link rel="alternate" hreflang="en" href="https://galac6.io/en/ecole">
+  <link rel="alternate" hreflang="es" href="https://galac6.io/es/ecole">
+  <link rel="alternate" hreflang="it" href="https://galac6.io/it/ecole">
+  <link rel="alternate" hreflang="de" href="https://galac6.io/de/ecole">
+  <link rel="alternate" hreflang="he" href="https://galac6.io/he/ecole">
+  <link rel="alternate" hreflang="x-default" href="https://galac6.io/ecole">
+  <!-- /hreflang -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Galac6">
   <meta property="og:locale" content="fr_FR">
@@ -353,17 +362,74 @@
   </style>
   <!-- Meta Pixel (Facebook) - charge apres consentement -->
   <script src="meta-pixel.js"></script>
+  <style id="g6-nav-css">
+    /* Menu : marge du logo, bouton « Galac6 in your country », sélecteur de langue (généré par scripts/build-langs.py) */
+    html, body { overflow-x: clip; } /* les halos décoratifs du haut de page ne créent plus de défilement horizontal */
+    .navbar-brand { margin-inline-end: 1.5rem; flex-shrink: 0; }
+    .navbar-links a { white-space: nowrap; }
+    .navbar-links .nav-intl { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 0.4rem 0.85rem; border: 1.5px solid rgba(139,147,255,0.75); border-radius: 10px; background: rgba(99,102,241,0.1); color: #e9ebfa; font-weight: 600; text-decoration: none; }
+    .navbar-links .nav-intl:hover, .navbar-links .nav-intl:focus-visible { border-color: #a78bfa; background: rgba(99,102,241,0.22); color: #fff; text-decoration: none; }
+    .navbar-links .nav-intl svg { flex: none; }
+    .lang-menu { position: relative; }
+    .lang-menu summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; min-height: 44px; padding: 0 4px; color: var(--text-muted, #8a8aa3); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; user-select: none; }
+    .lang-menu summary::-webkit-details-marker { display: none; }
+    .lang-menu summary::after { content: ""; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid currentColor; }
+    .lang-menu summary:hover, .lang-menu[open] summary { color: var(--text, #f0f0f5); }
+    .lang-menu-list { position: absolute; top: 100%; inset-inline-end: 0; z-index: 300; min-width: 160px; display: grid; gap: 2px; padding: 6px; background: #13131f; border: 1px solid #2a2a44; border-radius: 12px; box-shadow: 0 12px 32px rgba(0,0,0,0.45); }
+    .navbar .lang-menu-list a { display: block; padding: 0.55rem 0.8rem; border-radius: 8px; color: var(--text-muted, #8a8aa3); font-size: 0.9rem; font-weight: 500; text-decoration: none; white-space: nowrap; min-height: 0; }
+    .navbar .lang-menu-list a:hover { background: rgba(124,92,252,0.14); color: var(--text, #f0f0f5); }
+    .navbar .lang-menu-list a[aria-current] { color: var(--text, #f0f0f5); font-weight: 700; }
+    /* Grand écran : menu un peu resserré pour tenir sur une ligne avec le bouton */
+    @media (min-width: 1241px) {
+      .navbar-links { gap: 1.25rem !important; }
+      .navbar-links a { font-size: 0.88rem; }
+      .navbar-brand { margin-inline-end: 1.25rem; }
+    }
+    @media (min-width: 1101px) and (max-width: 1240px) {
+      .navbar { padding-left: 2rem !important; padding-right: 2rem !important; }
+      .navbar-links { gap: 0.75rem !important; }
+      .navbar-links a { font-size: 0.8rem !important; }
+      .navbar-links .nav-intl { padding: 0.35rem 0.6rem; gap: 5px; }
+      .navbar-links a[href^="https://galac6web"] { padding: 0.45rem 0.9rem !important; }
+      .navbar-brand { margin-inline-end: 1rem; }
+      .navbar-brand span { font-size: 1.35rem; }
+      .navbar-brand img { height: 38px; }
+    }
+    /* Menu hamburger jusqu'à 1100 px (au lieu de 900) : le menu complet ne tient plus sur une ligne en dessous */
+    @media (min-width: 901px) and (max-width: 1100px) {
+      .navbar { padding: 1rem 1.5rem !important; flex-wrap: wrap; }
+      .navbar-hamburger { display: flex !important; }
+      .navbar-links { display: none !important; flex-direction: column; align-items: center; width: 100%; gap: 0.5rem !important; padding: 1rem 0 0.5rem; }
+      .navbar-links.open { display: flex !important; }
+      .navbar-links a { padding: 0.6rem 0; font-size: 1rem !important; }
+    }
+    @media (max-width: 1100px) {
+      .navbar-brand { margin-inline-end: 0; }
+      .navbar-links .nav-intl { order: -1; width: 100%; max-width: 340px; min-height: 44px; margin: 0 auto 0.25rem; padding: 0.6rem 1rem; font-size: 1rem; }
+      .lang-menu { align-self: center; }
+      .lang-menu summary { font-size: 0.95rem; }
+      .lang-menu-list { position: static; display: flex; flex-wrap: wrap; justify-content: center; min-width: 0; margin-top: 4px; }
+      .navbar .lang-menu-list a { padding: 0.6rem 0.75rem; font-size: 0.95rem !important; }
+    }
+  </style>
+  <style id="g6-banner-css">
+    /* Bandeau anglais « Currently available in France only » : toutes les pages, collé en haut avec le menu (généré par scripts/build-langs.py) */
+    .g6-intl-banner { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 8px 16px; background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; font-size: 0.85rem; font-weight: 500; line-height: 1.45; text-align: center; direction: ltr; }
+    .g6-intl-banner svg { flex: none; opacity: 0.9; }
+    .g6-intl-banner span { min-width: 0; overflow-wrap: anywhere; }
+    .g6-intl-banner a { color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.5); }
+    .g6-intl-banner a:hover, .g6-intl-banner a:focus-visible { border-bottom-color: #fff; text-decoration: none; }
+    body > .g6-intl-banner { position: sticky; top: 0; z-index: 120; }
+    @media (max-width: 480px) { .g6-intl-banner { font-size: 0.8rem; padding: 7px 12px; } }
+  </style>
 </head>
 <body>
 
   <!-- ═══ BANDEAU ANGLAIS (affiché seulement en anglais) ═══ -->
-  <div id="en-banner" class="en-banner en-only" style="display:none;">
-    Galac6 follows the French national curriculum and welcomes French schools worldwide. The whole interface is available in English for your teachers. <a href="mailto:hello@galac6.io?subject=Galac6%20for%20schools">Contact us →</a>
-    <button class="en-banner-close" onclick="closeBanner()" aria-label="Close">&times;</button>
-  </div>
 
   <!-- ═══ NAVBAR ═══ -->
   <div class="navbar-wrapper">
+    <!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-banner" lang="en" dir="ltr" role="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Currently available in France only (French school system). Want Galac6 in your country? <a href="/international">Send a request&nbsp;&rarr;</a></span></div><!-- /intl-banner -->
     <nav class="navbar">
       <a href="/" class="navbar-brand">
         <img src="icons/icon.png" alt="Galac6">
@@ -375,10 +441,10 @@
       <div class="navbar-links">
         <a href="/#features" data-i18n="nav.features">Pour les élèves</a>
         <a href="/ecole" class="active" data-i18n="nav.school">Pour les écoles</a>
-        <a href="/international" data-i18n="nav.intl">Galac6 dans votre pays</a>
+        <a href="/international" class="nav-intl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Galac6 in your country</span></a>
         <a href="/tarifs" data-i18n="nav.pricing">Tarif</a>
         <a href="/about" data-i18n="nav.about">À propos</a>
-        <button id="lang-toggle" class="lang-toggle" onclick="toggleLanguage()" aria-label="Switch to English">🇬🇧</button>
+        <!-- lang-menu --><details class="lang-menu"><summary aria-label="Langue : Français">FR</summary><div class="lang-menu-list"><a href="/ecole" hreflang="fr" lang="fr" aria-current="page">Français</a><a href="/en/ecole" hreflang="en" lang="en">English</a><a href="/es/ecole" hreflang="es" lang="es">Español</a><a href="/it/ecole" hreflang="it" lang="it">Italiano</a><a href="/de/ecole" hreflang="de" lang="de">Deutsch</a><a href="/he/ecole" hreflang="he" lang="he" dir="rtl">עברית</a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
         <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;" data-i18n="nav.signup">Inscription ou connexion</a>
       </div>
     </nav>
@@ -410,13 +476,13 @@
           <a class="btn btn-primary" href="#devis" data-type="pilote" data-i18n="ecole.cta.pilot">Devenir école pilote</a>
           <a class="btn btn-outline" href="#devis" data-type="devis" data-i18n="ecole.cta.quote">Demander un devis</a>
         </div>
-        <form class="quick" id="quick-top" data-where="haut de page" novalidate aria-label="Être recontacté">
+        <form class="quick" id="quick-top" data-where="haut de page" novalidate aria-label="Être recontacté" data-i18n-aria="ecole.aria.quick">
           <p class="quick-title" data-i18n="ecole.quick.title">Être recontacté</p>
           <div class="quick-row">
             <label class="sr" for="qt-email" data-i18n="ecole.f.email">Email professionnel</label>
-            <input type="email" id="qt-email" placeholder="Email professionnel" data-ph-en="Work email" autocomplete="email">
+            <input type="email" id="qt-email" placeholder="Email professionnel" data-ph-en="Work email" data-i18n-ph="ecole.ph.email" autocomplete="email">
             <label class="sr" for="qt-etab" data-i18n="ecole.f.etab">Établissement</label>
-            <input type="text" id="qt-etab" placeholder="Établissement" data-ph-en="School" autocomplete="organization">
+            <input type="text" id="qt-etab" placeholder="Établissement" data-ph-en="School" data-i18n-ph="ecole.ph.school" autocomplete="organization">
             <button class="btn btn-outline" type="submit" data-i18n="ecole.quick.send">Envoyer</button>
           </div>
           <p class="quick-msg" hidden role="status"></p>
@@ -535,7 +601,7 @@
         <h2 class="h2" data-i18n="ecole.video.title">Découvrez Galac6 en vidéo</h2>
       </div>
       <div class="video-box" id="video-box">
-        <button type="button" class="video-play" id="video-play" aria-label="Lancer la vidéo de démonstration">
+        <button type="button" class="video-play" id="video-play" aria-label="Lancer la vidéo de démonstration" data-i18n-aria="ecole.aria.video">
           <span class="video-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#fff"/></svg></span>
           <span class="video-label" data-i18n="ecole.video.play">Lancer la démonstration (2 min)</span>
         </button>
@@ -768,7 +834,7 @@
           </div>
           <div class="f-row">
             <div class="field"><label for="f-etab" data-i18n="ecole.f.etab">Établissement</label><input type="text" id="f-etab" autocomplete="organization" required></div>
-            <div class="field"><label for="f-ville" data-i18n="ecole.f.ville">Ville et pays</label><input type="text" id="f-ville" placeholder="Par exemple : Lyon, France" data-ph-en="For example: Lyon, France"></div>
+            <div class="field"><label for="f-ville" data-i18n="ecole.f.ville">Ville et pays</label><input type="text" id="f-ville" placeholder="Par exemple : Lyon, France" data-ph-en="For example: Lyon, France" data-i18n-ph="ecole.ph.city"></div>
           </div>
           <div class="f-row">
             <div class="field"><label for="f-eleves" data-i18n="ecole.f.eleves">Nombre d'élèves</label>
@@ -797,7 +863,7 @@
               <label class="choice"><input type="checkbox" id="m-examens" value="Examens et Oral"> <span data-i18n="ecole.f.modules.examens">Examens et Oral</span></label>
             </div>
           </fieldset>
-          <div class="field"><label for="f-msg"><span data-i18n="ecole.f.msg">Votre message</span> <span class="hint" data-i18n="ecole.f.msg.hint">(facultatif)</span></label><textarea id="f-msg" placeholder="Vos besoins, vos questions, le calendrier souhaité" data-ph-en="Your needs, your questions, your preferred timeline"></textarea></div>
+          <div class="field"><label for="f-msg"><span data-i18n="ecole.f.msg">Votre message</span> <span class="hint" data-i18n="ecole.f.msg.hint">(facultatif)</span></label><textarea id="f-msg" placeholder="Vos besoins, vos questions, le calendrier souhaité" data-ph-en="Your needs, your questions, your preferred timeline" data-i18n-ph="ecole.ph.msg"></textarea></div>
           <label class="consent"><input type="checkbox" id="f-consent" required><span data-i18n="ecole.f.consent">J'accepte que Galac6 utilise ces informations pour répondre à ma demande.</span></label>
           <span class="err" id="e-form" hidden data-i18n="ecole.f.err">Remplissez votre nom, votre établissement et votre email, et cochez la case d'accord.</span>
           <button class="btn btn-primary btn-block" type="submit" id="f-submit" data-i18n="ecole.f.submit">Envoyer ma demande</button>
@@ -872,7 +938,9 @@
     var ENDPOINT = 'https://obhzumzqullnsnnfjlbt.supabase.co/functions/v1/notify-contact';
     var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    function lang() { return document.documentElement.lang === 'en' ? 'en' : 'fr'; }
+    // Pages traduites (es, it, de, he…) : textes fournis par window.G6_DYN (scripts/build-langs.py)
+    if (window.G6_DYN) TXT[document.documentElement.lang] = window.G6_DYN;
+    function lang() { var l = document.documentElement.lang; return TXT[l] ? l : 'fr'; }
     function t(key) { return TXT[lang()][key]; }
     function $(id) { return document.getElementById(id); }
 

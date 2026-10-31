@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-static-lang>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -171,11 +171,72 @@
     .navbar-links a { white-space: nowrap; }
     @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
   </style>
+  <style id="g6-nav-css">
+    /* Menu : marge du logo, bouton « Galac6 in your country », sélecteur de langue (généré par scripts/build-langs.py) */
+    html, body { overflow-x: clip; } /* les halos décoratifs du haut de page ne créent plus de défilement horizontal */
+    .navbar-brand { margin-inline-end: 1.5rem; flex-shrink: 0; }
+    .navbar-links a { white-space: nowrap; }
+    .navbar-links .nav-intl { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 0.4rem 0.85rem; border: 1.5px solid rgba(139,147,255,0.75); border-radius: 10px; background: rgba(99,102,241,0.1); color: #e9ebfa; font-weight: 600; text-decoration: none; }
+    .navbar-links .nav-intl:hover, .navbar-links .nav-intl:focus-visible { border-color: #a78bfa; background: rgba(99,102,241,0.22); color: #fff; text-decoration: none; }
+    .navbar-links .nav-intl svg { flex: none; }
+    .lang-menu { position: relative; }
+    .lang-menu summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; min-height: 44px; padding: 0 4px; color: var(--text-muted, #8a8aa3); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; user-select: none; }
+    .lang-menu summary::-webkit-details-marker { display: none; }
+    .lang-menu summary::after { content: ""; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid currentColor; }
+    .lang-menu summary:hover, .lang-menu[open] summary { color: var(--text, #f0f0f5); }
+    .lang-menu-list { position: absolute; top: 100%; inset-inline-end: 0; z-index: 300; min-width: 160px; display: grid; gap: 2px; padding: 6px; background: #13131f; border: 1px solid #2a2a44; border-radius: 12px; box-shadow: 0 12px 32px rgba(0,0,0,0.45); }
+    .navbar .lang-menu-list a { display: block; padding: 0.55rem 0.8rem; border-radius: 8px; color: var(--text-muted, #8a8aa3); font-size: 0.9rem; font-weight: 500; text-decoration: none; white-space: nowrap; min-height: 0; }
+    .navbar .lang-menu-list a:hover { background: rgba(124,92,252,0.14); color: var(--text, #f0f0f5); }
+    .navbar .lang-menu-list a[aria-current] { color: var(--text, #f0f0f5); font-weight: 700; }
+    /* Grand écran : menu un peu resserré pour tenir sur une ligne avec le bouton */
+    @media (min-width: 1241px) {
+      .navbar-links { gap: 1.25rem !important; }
+      .navbar-links a { font-size: 0.88rem; }
+      .navbar-brand { margin-inline-end: 1.25rem; }
+    }
+    @media (min-width: 1101px) and (max-width: 1240px) {
+      .navbar { padding-left: 2rem !important; padding-right: 2rem !important; }
+      .navbar-links { gap: 0.75rem !important; }
+      .navbar-links a { font-size: 0.8rem !important; }
+      .navbar-links .nav-intl { padding: 0.35rem 0.6rem; gap: 5px; }
+      .navbar-links a[href^="https://galac6web"] { padding: 0.45rem 0.9rem !important; }
+      .navbar-brand { margin-inline-end: 1rem; }
+      .navbar-brand span { font-size: 1.35rem; }
+      .navbar-brand img { height: 38px; }
+    }
+    /* Menu hamburger jusqu'à 1100 px (au lieu de 900) : le menu complet ne tient plus sur une ligne en dessous */
+    @media (min-width: 901px) and (max-width: 1100px) {
+      .navbar { padding: 1rem 1.5rem !important; flex-wrap: wrap; }
+      .navbar-hamburger { display: flex !important; }
+      .navbar-links { display: none !important; flex-direction: column; align-items: center; width: 100%; gap: 0.5rem !important; padding: 1rem 0 0.5rem; }
+      .navbar-links.open { display: flex !important; }
+      .navbar-links a { padding: 0.6rem 0; font-size: 1rem !important; }
+    }
+    @media (max-width: 1100px) {
+      .navbar-brand { margin-inline-end: 0; }
+      .navbar-links .nav-intl { order: -1; width: 100%; max-width: 340px; min-height: 44px; margin: 0 auto 0.25rem; padding: 0.6rem 1rem; font-size: 1rem; }
+      .lang-menu { align-self: center; }
+      .lang-menu summary { font-size: 0.95rem; }
+      .lang-menu-list { position: static; display: flex; flex-wrap: wrap; justify-content: center; min-width: 0; margin-top: 4px; }
+      .navbar .lang-menu-list a { padding: 0.6rem 0.75rem; font-size: 0.95rem !important; }
+    }
+  </style>
+  <style id="g6-banner-css">
+    /* Bandeau anglais « Currently available in France only » : toutes les pages, collé en haut avec le menu (généré par scripts/build-langs.py) */
+    .g6-intl-banner { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 8px 16px; background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; font-size: 0.85rem; font-weight: 500; line-height: 1.45; text-align: center; direction: ltr; }
+    .g6-intl-banner svg { flex: none; opacity: 0.9; }
+    .g6-intl-banner span { min-width: 0; overflow-wrap: anywhere; }
+    .g6-intl-banner a { color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.5); }
+    .g6-intl-banner a:hover, .g6-intl-banner a:focus-visible { border-bottom-color: #fff; text-decoration: none; }
+    body > .g6-intl-banner { position: sticky; top: 0; z-index: 120; }
+    @media (max-width: 480px) { .g6-intl-banner { font-size: 0.8rem; padding: 7px 12px; } }
+  </style>
 </head>
 <body>
 
   <!-- NAVBAR -->
   <div class="navbar-wrapper">
+    <!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-banner" lang="en" dir="ltr" role="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Currently available in France only (French school system). Want Galac6 in your country? <a href="/international">Send a request&nbsp;&rarr;</a></span></div><!-- /intl-banner -->
     <nav class="navbar">
       <a href="/" class="navbar-brand">
         <img src="icons/icon.png" alt="Galac6">
@@ -187,10 +248,10 @@
       <div class="navbar-links">
         <a href="/" data-i18n="about.nav.home">Accueil</a>
         <a href="/ecole" data-i18n="nav.school">Pour les écoles</a>
-        <a href="/international" data-i18n="nav.intl">Galac6 dans votre pays</a>
+        <a href="/international" class="nav-intl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Galac6 in your country</span></a>
         <a href="/tarifs" data-i18n="nav.pricing">Tarifs</a>
         <a href="/about" data-i18n="nav.about">À propos</a>
-        <button id="lang-toggle" class="lang-toggle" onclick="toggleLanguage&&toggleLanguage()" aria-label="Switch to English">🇬🇧</button>
+        <!-- lang-menu --><details class="lang-menu"><summary aria-label="Langue : Français">FR</summary><div class="lang-menu-list"><a href="/reviser-brevet" hreflang="fr" lang="fr" aria-current="page">Français</a><a href="/en/" hreflang="en" lang="en">English</a><a href="/es/" hreflang="es" lang="es">Español</a><a href="/it/" hreflang="it" lang="it">Italiano</a><a href="/de/" hreflang="de" lang="de">Deutsch</a><a href="/he/" hreflang="he" lang="he" dir="rtl">עברית</a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
         <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600;" data-i18n="nav.signup">Inscription ou connexion</a>
       </div>
     </nav>

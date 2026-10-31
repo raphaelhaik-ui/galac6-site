@@ -14,7 +14,7 @@
       // Navbar
       'nav.features': 'For pupils',
       'nav.school': 'For schools',
-      'nav.intl': 'Galac6 in your country',
+      // 'nav.intl' : volontairement absent, le lien « Galac6 in your country » s'écrit en anglais dans toutes les langues
       'nav.faq': 'FAQ',
       'nav.pricing': 'Pricing',
       'nav.about': 'About',
@@ -160,7 +160,7 @@
       'footer.contact.school': 'Schools →',
 
       // Banner EN
-      'banner.text': '🌍 Currently available in France only (French school system). Want Galac6 in your country? <a href="mailto:hello@galac6.io" style="color:#fff;text-decoration:underline;">Send a request →</a>',
+      // 'banner.text' : volontairement absent, le bandeau du haut reste en anglais sur toutes les pages
 
       // ─── Shared across pages ───
       'about.nav.home': 'Home',
@@ -751,7 +751,11 @@
       savedLang = localStorage.getItem('galac6-lang');
     } catch (e) {}
 
-    if (savedLang === 'en') {
+    // Pages à langue fixe (attribut data-static-lang : pages avec le sélecteur de langue, versions /en/, /es/…) :
+    // on ne traduit jamais sur place, la langue se choisit en changeant d'adresse.
+    var staticLang = document.documentElement.hasAttribute('data-static-lang');
+
+    if (savedLang === 'en' && !staticLang) {
       applyLanguage('en');
     } else {
       // Français par défaut — juste masquer les éléments en-only

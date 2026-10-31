@@ -19,3 +19,24 @@
 /teaser               /teaser/index.html           200
 /blog                 /blog/index.html             200
 /demo                 /ecole?type=demo&utm_source=educatech&utm_medium=carte&utm_content=demo#devis  302
+# Pages traduites (généré par scripts/build-langs.py) : adresses sans .html
+/en/ecole                /en/ecole.html               200
+/en/about                /en/about.html               200
+/en/tarifs               /en/tarifs.html              200
+/es/ecole                /es/ecole.html               200
+/es/about                /es/about.html               200
+/es/tarifs               /es/tarifs.html              200
+/es/international        /es/international.html       200
+/it/ecole                /it/ecole.html               200
+/it/about                /it/about.html               200
+/it/tarifs               /it/tarifs.html              200
+/it/international        /it/international.html       200
+/de/ecole                /de/ecole.html               200
+/de/about                /de/about.html               200
+/de/tarifs               /de/tarifs.html              200
+/de/international        /de/international.html       200
+/he/ecole                /he/ecole.html               200
+/he/about                /he/about.html               200
+/he/tarifs               /he/tarifs.html              200
+/he/international        /he/international.html       200
+# /pages traduites

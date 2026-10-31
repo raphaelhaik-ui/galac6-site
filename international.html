@@ -7,6 +7,14 @@
   <meta name="description" content="Galac6 is built on the French national curriculum. Schools outside France can vote to have the platform adapted to their country: curriculum, language and dictations.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/international">
+  <!-- hreflang (généré par scripts/build-langs.py) -->
+  <link rel="alternate" hreflang="en" href="https://galac6.io/international">
+  <link rel="alternate" hreflang="es" href="https://galac6.io/es/international">
+  <link rel="alternate" hreflang="it" href="https://galac6.io/it/international">
+  <link rel="alternate" hreflang="de" href="https://galac6.io/de/international">
+  <link rel="alternate" hreflang="he" href="https://galac6.io/he/international">
+  <link rel="alternate" hreflang="x-default" href="https://galac6.io/international">
+  <!-- /hreflang -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Galac6">
   <meta property="og:locale" content="en_GB">
@@ -170,25 +178,87 @@
   </style>
   <!-- Meta Pixel (Facebook) - charge apres consentement -->
   <script src="meta-pixel.js"></script>
+  <style id="g6-nav-css">
+    /* Menu : marge du logo, bouton « Galac6 in your country », sélecteur de langue (généré par scripts/build-langs.py) */
+    html, body { overflow-x: clip; } /* les halos décoratifs du haut de page ne créent plus de défilement horizontal */
+    .navbar-brand { margin-inline-end: 1.5rem; flex-shrink: 0; }
+    .navbar-links a { white-space: nowrap; }
+    .navbar-links .nav-intl { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 0.4rem 0.85rem; border: 1.5px solid rgba(139,147,255,0.75); border-radius: 10px; background: rgba(99,102,241,0.1); color: #e9ebfa; font-weight: 600; text-decoration: none; }
+    .navbar-links .nav-intl:hover, .navbar-links .nav-intl:focus-visible { border-color: #a78bfa; background: rgba(99,102,241,0.22); color: #fff; text-decoration: none; }
+    .navbar-links .nav-intl svg { flex: none; }
+    .lang-menu { position: relative; }
+    .lang-menu summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; min-height: 44px; padding: 0 4px; color: var(--text-muted, #8a8aa3); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; user-select: none; }
+    .lang-menu summary::-webkit-details-marker { display: none; }
+    .lang-menu summary::after { content: ""; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid currentColor; }
+    .lang-menu summary:hover, .lang-menu[open] summary { color: var(--text, #f0f0f5); }
+    .lang-menu-list { position: absolute; top: 100%; inset-inline-end: 0; z-index: 300; min-width: 160px; display: grid; gap: 2px; padding: 6px; background: #13131f; border: 1px solid #2a2a44; border-radius: 12px; box-shadow: 0 12px 32px rgba(0,0,0,0.45); }
+    .navbar .lang-menu-list a { display: block; padding: 0.55rem 0.8rem; border-radius: 8px; color: var(--text-muted, #8a8aa3); font-size: 0.9rem; font-weight: 500; text-decoration: none; white-space: nowrap; min-height: 0; }
+    .navbar .lang-menu-list a:hover { background: rgba(124,92,252,0.14); color: var(--text, #f0f0f5); }
+    .navbar .lang-menu-list a[aria-current] { color: var(--text, #f0f0f5); font-weight: 700; }
+    /* Grand écran : menu un peu resserré pour tenir sur une ligne avec le bouton */
+    @media (min-width: 1241px) {
+      .navbar-links { gap: 1.25rem !important; }
+      .navbar-links a { font-size: 0.88rem; }
+      .navbar-brand { margin-inline-end: 1.25rem; }
+    }
+    @media (min-width: 1101px) and (max-width: 1240px) {
+      .navbar { padding-left: 2rem !important; padding-right: 2rem !important; }
+      .navbar-links { gap: 0.75rem !important; }
+      .navbar-links a { font-size: 0.8rem !important; }
+      .navbar-links .nav-intl { padding: 0.35rem 0.6rem; gap: 5px; }
+      .navbar-links a[href^="https://galac6web"] { padding: 0.45rem 0.9rem !important; }
+      .navbar-brand { margin-inline-end: 1rem; }
+      .navbar-brand span { font-size: 1.35rem; }
+      .navbar-brand img { height: 38px; }
+    }
+    /* Menu hamburger jusqu'à 1100 px (au lieu de 900) : le menu complet ne tient plus sur une ligne en dessous */
+    @media (min-width: 901px) and (max-width: 1100px) {
+      .navbar { padding: 1rem 1.5rem !important; flex-wrap: wrap; }
+      .navbar-hamburger { display: flex !important; }
+      .navbar-links { display: none !important; flex-direction: column; align-items: center; width: 100%; gap: 0.5rem !important; padding: 1rem 0 0.5rem; }
+      .navbar-links.open { display: flex !important; }
+      .navbar-links a { padding: 0.6rem 0; font-size: 1rem !important; }
+    }
+    @media (max-width: 1100px) {
+      .navbar-brand { margin-inline-end: 0; }
+      .navbar-links .nav-intl { order: -1; width: 100%; max-width: 340px; min-height: 44px; margin: 0 auto 0.25rem; padding: 0.6rem 1rem; font-size: 1rem; }
+      .lang-menu { align-self: center; }
+      .lang-menu summary { font-size: 0.95rem; }
+      .lang-menu-list { position: static; display: flex; flex-wrap: wrap; justify-content: center; min-width: 0; margin-top: 4px; }
+      .navbar .lang-menu-list a { padding: 0.6rem 0.75rem; font-size: 0.95rem !important; }
+    }
+  </style>
+  <style id="g6-banner-css">
+    /* Bandeau anglais « Currently available in France only » : toutes les pages, collé en haut avec le menu (généré par scripts/build-langs.py) */
+    .g6-intl-banner { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 8px 16px; background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; font-size: 0.85rem; font-weight: 500; line-height: 1.45; text-align: center; direction: ltr; }
+    .g6-intl-banner svg { flex: none; opacity: 0.9; }
+    .g6-intl-banner span { min-width: 0; overflow-wrap: anywhere; }
+    .g6-intl-banner a { color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.5); }
+    .g6-intl-banner a:hover, .g6-intl-banner a:focus-visible { border-bottom-color: #fff; text-decoration: none; }
+    body > .g6-intl-banner { position: sticky; top: 0; z-index: 120; }
+    @media (max-width: 480px) { .g6-intl-banner { font-size: 0.8rem; padding: 7px 12px; } }
+  </style>
 </head>
 <body>
   <!-- ═══ NAVBAR ═══ -->
   <div class="navbar-wrapper">
+    <!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-banner" lang="en" dir="ltr" role="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Currently available in France only (French school system). Want Galac6 in your country? <a href="/international">Send a request&nbsp;&rarr;</a></span></div><!-- /intl-banner -->
     <nav class="navbar">
-      <a href="/" class="navbar-brand">
+      <a href="/en/" class="navbar-brand">
         <img src="icons/icon.png" alt="Galac6">
         <span>Galac6</span>
       </a>
-      <button class="navbar-hamburger" aria-label="Menu" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+      <button class="navbar-hamburger" aria-label="Menu" data-i18n-aria="gen.menu" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
         <span></span><span></span><span></span>
       </button>
       <div class="navbar-links">
-        <a href="/#features">Features</a>
-        <a href="/ecole">Schools in France</a>
-        <a href="/international" class="active">Galac6 in your country</a>
-        <a href="/international" class="active">Outside France</a>
-        <a href="/about">About</a>
-        <a href="#vote" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Vote for your country</a>
+        <a href="/en/#features" data-i18n="nav.features">For pupils</a>
+        <a href="/en/ecole" data-i18n="nav.school">For schools</a>
+        <a href="/international" class="active nav-intl"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Galac6 in your country</span></a>
+        <a href="/en/tarifs" data-i18n="nav.pricing">Pricing</a>
+        <a href="/en/about" data-i18n="nav.about">About</a>
+        <!-- lang-menu --><details class="lang-menu"><summary aria-label="Language : English">EN</summary><div class="lang-menu-list"><a href="/" hreflang="fr" lang="fr">Français</a><a href="/international" hreflang="en" lang="en" aria-current="page">English</a><a href="/es/international" hreflang="es" lang="es">Español</a><a href="/it/international" hreflang="it" lang="it">Italiano</a><a href="/de/international" hreflang="de" lang="de">Deutsch</a><a href="/he/international" hreflang="he" lang="he" dir="rtl">עברית</a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
+        <a href="#vote" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;" data-i18n="vote.cta.vote">Vote for your country</a>
       </div>
     </nav>
   </div>
@@ -198,14 +268,14 @@
   <div class="i-hero">
     <div class="wrap">
       <div class="i-hero-inner">
-        <span class="badge">For schools outside France</span>
-        <h1>Bring Galac6 to your country: <span class="grad">vote for your school system</span></h1>
-        <p class="sub">Galac6 is an AI tutoring platform for pupils from primary school to the end of secondary school, with a dedicated space for teachers and school leaders. Today, it is built on the French national curriculum. We will adapt the platform (curriculum, language, dictations) to the countries that ask for it most.</p>
+        <span class="badge" data-i18n="vote.badge">For schools outside France</span>
+        <h1 data-i18n-html="vote.h1">Bring Galac6 to your country: <span class="grad">vote for your school system</span></h1>
+        <p class="sub" data-i18n-html="vote.sub">Galac6 is an AI tutoring platform for pupils from primary school to the end of secondary school, with a dedicated space for teachers and school leaders. Today, it is built on the French national curriculum: the app is in French, and its interface is also available in English. We will adapt the platform (curriculum, language, dictations) to the countries that ask for it most.</p>
         <div class="i-cta">
-          <a class="btn btn-primary" href="#vote">Vote for your country</a>
-          <a class="btn btn-outline" href="#how">How it works</a>
+          <a class="btn btn-primary" href="#vote" data-i18n="vote.cta.vote">Vote for your country</a>
+          <a class="btn btn-outline" href="#how" data-i18n="vote.cta.how">How it works</a>
         </div>
-        <p class="fr-note" lang="fr"><strong>En français :</strong> votre école n'est pas en France ? Galac6 suit aujourd'hui le programme français. Votez pour que nous l'adaptions à votre pays en remplissant le formulaire ci-dessous.</p>
+        <p class="fr-note" lang="fr" data-only="en"><strong>En français :</strong> votre école n'est pas en France ? Galac6 suit aujourd'hui le programme français. Votez pour que nous l'adaptions à votre pays en remplissant le formulaire ci-dessous.</p>
       </div>
     </div>
   </div>
@@ -214,27 +284,27 @@
   <section class="section" id="how">
     <div class="wrap">
       <div class="sec-head center">
-        <p class="eyebrow">How the vote works</p>
-        <h2 class="h2">Your school's request decides where Galac6 goes next</h2>
+        <p class="eyebrow" data-i18n="vote.how.eyebrow">How the vote works</p>
+        <h2 class="h2" data-i18n="vote.how.h2">Your school's request decides where Galac6 goes next</h2>
       </div>
       <div class="grid3">
         <article class="card i-card">
           <span class="i-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
-          <span class="i-step">Step 1</span>
-          <h3>You vote for your country</h3>
-          <p>Fill in the short form below: your school, your country, why you are asking and what you are looking for in Galac6. One request per school is enough.</p>
+          <span class="i-step" data-i18n="vote.step1">Step 1</span>
+          <h3 data-i18n="vote.s1.h3">You vote for your country</h3>
+          <p data-i18n="vote.s1.p">Fill in the short form below: your school, your country, why you are asking and what you are looking for in Galac6. One request per school is enough.</p>
         </article>
         <article class="card i-card">
           <span class="i-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"/></svg></span>
-          <span class="i-step">Step 2</span>
-          <h3>We count the requests, country by country</h3>
-          <p>Every request is read by our team and added to the count for its country.</p>
+          <span class="i-step" data-i18n="vote.step2">Step 2</span>
+          <h3 data-i18n="vote.s2.h3">We count the requests, country by country</h3>
+          <p data-i18n="vote.s2.p">Every request is read by our team and added to the count for its country.</p>
         </article>
         <article class="card i-card">
           <span class="i-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg></span>
-          <span class="i-step">Step 3</span>
-          <h3>We adapt Galac6 to the most requested countries</h3>
-          <p>The countries with the most requests come first. We get back to you when work starts on your country.</p>
+          <span class="i-step" data-i18n="vote.step3">Step 3</span>
+          <h3 data-i18n="vote.s3.h3">We adapt Galac6 to the most requested countries</h3>
+          <p data-i18n="vote.s3.p">The countries with the most requests come first. We get back to you when work starts on your country.</p>
         </article>
       </div>
     </div>
@@ -244,29 +314,29 @@
   <section class="section">
     <div class="wrap">
       <div class="sec-head center">
-        <p class="eyebrow">What adapting Galac6 means</p>
-        <h2 class="h2">Galac6, built for your pupils and your teachers</h2>
+        <p class="eyebrow" data-i18n="vote.adapt.eyebrow">What adapting Galac6 means</p>
+        <h2 class="h2" data-i18n="vote.adapt.h2">Galac6, built for your pupils and your teachers</h2>
       </div>
       <div class="grid3">
         <article class="card i-card">
           <span class="i-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/><path d="M9 8h7M9 12h5"/></svg></span>
-          <h3>Your national curriculum</h3>
-          <p>Subjects, year groups and topics aligned with the programme your school follows.</p>
+          <h3 data-i18n="vote.a1.h3">Your national curriculum</h3>
+          <p data-i18n="vote.a1.p">Subjects, year groups and topics aligned with the programme your school follows.</p>
         </article>
         <article class="card i-card">
           <span class="i-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 10h6M9 14h4"/></svg></span>
-          <h3>Your language of instruction</h3>
-          <p>The interface and the AI tutor in the language your pupils learn in.</p>
+          <h3 data-i18n="vote.a2.h3">Your language of instruction</h3>
+          <p data-i18n="vote.a2.p">The interface and the AI tutor in the language your pupils learn in.</p>
         </article>
         <article class="card i-card">
           <span class="i-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span>
-          <h3>Dictations and texts</h3>
-          <p>Dictations and reading extracts suited to your language and to each level.</p>
+          <h3 data-i18n="vote.a3.h3">Dictations and texts</h3>
+          <p data-i18n="vote.a3.p">Dictations and reading extracts suited to your language and to each level.</p>
         </article>
       </div>
       <div class="card note-card">
-        <h3>Your school already follows the French curriculum?</h3>
-        <p>Then Galac6 is ready for you today, wherever you are, and the whole interface is available in English for your teachers. See our <a href="/ecole">schools page</a> to request a quote or a pilot.</p>
+        <h3 data-i18n="vote.note.h3">Your school already follows the French curriculum?</h3>
+        <p data-i18n-html="vote.note.p">Then Galac6 is ready for you today, wherever you are, and the whole interface is available in English for your teachers. See our <a href="/en/ecole">schools page</a> to request a quote or a pilot.</p>
       </div>
     </div>
   </section>
@@ -275,37 +345,37 @@
   <section class="section" id="vote">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">Vote</p>
-        <h2 class="h2">Vote for your country</h2>
-        <p class="lead">Tell us who you are and where your school is. Fields marked "required" must be filled in.</p>
+        <p class="eyebrow" data-i18n="vote.form.eyebrow">Vote</p>
+        <h2 class="h2" data-i18n="vote.cta.vote">Vote for your country</h2>
+        <p class="lead" data-i18n="vote.form.lead">Tell us who you are and where your school is. Fields marked "required" must be filled in.</p>
       </div>
       <div class="form-layout">
         <form class="card" id="vote-form" novalidate>
           <div class="f-row">
-            <div class="field"><label for="v-nom">First and last name <span class="hint">(required)</span></label><input type="text" id="v-nom" autocomplete="name" maxlength="120" required></div>
-            <div class="field"><label for="v-role">Your role</label>
+            <div class="field"><label for="v-nom" data-i18n-html="vote.f.name">First and last name <span class="hint">(required)</span></label><input type="text" id="v-nom" autocomplete="name" maxlength="120" required></div>
+            <div class="field"><label for="v-role" data-i18n="vote.f.role">Your role</label>
               <select id="v-role">
-                <option value="Teacher">Teacher</option>
-                <option value="Head of school or principal">Head of school or principal</option>
-                <option value="Deputy head or coordinator">Deputy head or coordinator</option>
-                <option value="School administration">School administration</option>
-                <option value="School network or education authority">School network or education authority</option>
-                <option value="Parent">Parent</option>
-                <option value="Other">Other</option>
+                <option value="Teacher" data-i18n="vote.r1">Teacher</option>
+                <option value="Head of school or principal" data-i18n="vote.r2">Head of school or principal</option>
+                <option value="Deputy head or coordinator" data-i18n="vote.r3">Deputy head or coordinator</option>
+                <option value="School administration" data-i18n="vote.r4">School administration</option>
+                <option value="School network or education authority" data-i18n="vote.r5">School network or education authority</option>
+                <option value="Parent" data-i18n="vote.r6">Parent</option>
+                <option value="Other" data-i18n="vote.r7">Other</option>
               </select></div>
           </div>
           <div class="f-row">
-            <div class="field"><label for="v-email">Work email <span class="hint">(required)</span></label><input type="email" id="v-email" autocomplete="email" maxlength="200" required><span class="err" id="e-email" hidden>Enter a full email address, for example name@school.org.</span></div>
-            <div class="field"><label for="v-tel">Phone <span class="hint">(optional)</span></label><input type="tel" id="v-tel" autocomplete="tel" maxlength="40"></div>
+            <div class="field"><label for="v-email" data-i18n-html="vote.f.email">Work email <span class="hint">(required)</span></label><input type="email" id="v-email" autocomplete="email" maxlength="200" required><span class="err" id="e-email" hidden data-i18n="vote.err.email">Enter a full email address, for example name@school.org.</span></div>
+            <div class="field"><label for="v-tel" data-i18n-html="vote.f.tel">Phone <span class="hint">(optional)</span></label><input type="tel" id="v-tel" autocomplete="tel" maxlength="40"></div>
           </div>
           <div class="f-row">
-            <div class="field"><label for="v-ecole">School name <span class="hint">(required)</span></label><input type="text" id="v-ecole" autocomplete="organization" maxlength="150" required></div>
-            <div class="field"><label for="v-ville">City</label><input type="text" id="v-ville" autocomplete="address-level2" maxlength="100"></div>
+            <div class="field"><label for="v-ecole" data-i18n-html="vote.f.school">School name <span class="hint">(required)</span></label><input type="text" id="v-ecole" autocomplete="organization" maxlength="150" required></div>
+            <div class="field"><label for="v-ville" data-i18n="vote.f.city">City</label><input type="text" id="v-ville" autocomplete="address-level2" maxlength="100"></div>
           </div>
           <div class="f-row">
-            <div class="field"><label for="v-pays">Country <span class="hint">(required)</span></label>
+            <div class="field"><label for="v-pays" data-i18n-html="vote.f.country">Country <span class="hint">(required)</span></label>
               <select id="v-pays" required>
-                <option value="">Choose your country</option>
+                <option value="" data-i18n="vote.country.choose">Choose your country</option>
                 <option value="Afghanistan">Afghanistan</option>
                 <option value="Albania">Albania</option>
                 <option value="Algeria">Algeria</option>
@@ -505,41 +575,41 @@
                 <option value="Yemen">Yemen</option>
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>
-                <option value="Other">Other</option>
+                <option value="Other" data-i18n="vote.country.other">Other</option>
               </select></div>
-            <div class="field"><label for="v-langue">Language of instruction</label><input type="text" id="v-langue" maxlength="100" placeholder="For example: Spanish, English"></div>
+            <div class="field"><label for="v-langue" data-i18n="vote.f.lang">Language of instruction</label><input type="text" id="v-langue" maxlength="100" placeholder="For example: Spanish, English" data-i18n-ph="vote.ph.lang"></div>
           </div>
-          <div class="field"><label for="v-eleves">Number of pupils <span class="hint">(optional)</span></label>
+          <div class="field"><label for="v-eleves" data-i18n-html="vote.f.pupils">Number of pupils <span class="hint">(optional)</span></label>
             <select id="v-eleves">
-              <option value="">Not specified</option>
-              <option value="Fewer than 200">Fewer than 200</option>
-              <option value="200 to 500">200 to 500</option>
-              <option value="501 to 1,000">501 to 1,000</option>
-              <option value="More than 1,000">More than 1,000</option>
-              <option value="Several schools">Several schools</option>
+              <option value="" data-i18n="vote.p0">Not specified</option>
+              <option value="Fewer than 200" data-i18n="vote.p1">Fewer than 200</option>
+              <option value="200 to 500" data-i18n="vote.p2">200 to 500</option>
+              <option value="501 to 1,000" data-i18n="vote.p3">501 to 1,000</option>
+              <option value="More than 1,000" data-i18n="vote.p4">More than 1,000</option>
+              <option value="Several schools" data-i18n="vote.p5">Several schools</option>
             </select></div>
-          <div class="field"><label for="v-comment">Your reasons and what you are looking for in Galac6 <span class="hint">(required)</span></label><textarea id="v-comment" maxlength="4000" required placeholder="Why you are asking, what you expect from Galac6, your curriculum, the subjects and levels that matter most to you"></textarea></div>
-          <label class="consent"><input type="checkbox" id="v-consent" required><span>I agree that Galac6 may use this information to contact me about adapting Galac6 to my country. See our <a href="/privacy">privacy policy</a>.</span></label>
-          <span class="err" id="e-form" hidden>Please fill in your name, your work email, your school and your country, and tick the consent box.</span>
-          <button class="btn btn-primary btn-block" type="submit" id="v-submit">Send my vote</button>
+          <div class="field"><label for="v-comment" data-i18n-html="vote.f.comment">Your reasons and what you are looking for in Galac6 <span class="hint">(required)</span></label><textarea id="v-comment" maxlength="4000" required data-i18n-ph="vote.ph.comment" placeholder="Why you are asking, what you expect from Galac6, your curriculum, the subjects and levels that matter most to you"></textarea></div>
+          <label class="consent"><input type="checkbox" id="v-consent" required><span data-i18n-html="vote.consent">I agree that Galac6 may use this information to contact me about adapting Galac6 to my country. See our <a href="/privacy">privacy policy</a>.</span></label>
+          <span class="err" id="e-form" hidden data-i18n="vote.err.form">Please fill in your name, your work email, your school, your country and your reasons, and tick the consent box.</span>
+          <button class="btn btn-primary btn-block" type="submit" id="v-submit" data-i18n="vote.submit">Send my vote</button>
           <div class="form-msg" id="form-msg" hidden role="status"></div>
         </form>
 
         <aside class="side">
           <div class="card">
-            <h3>What happens next</h3>
+            <h3 data-i18n="vote.next.h3">What happens next</h3>
             <ol class="ticks" style="margin-top:8px">
-              <li>Your vote is added to the count for your country.</li>
-              <li>We may contact you to better understand your curriculum and your needs.</li>
-              <li>When work starts on your country, you are among the first to know.</li>
+              <li data-i18n="vote.next.li1">Your vote is added to the count for your country.</li>
+              <li data-i18n="vote.next.li2">We may contact you to better understand your curriculum and your needs.</li>
+              <li data-i18n="vote.next.li3">When work starts on your country, you are among the first to know.</li>
             </ol>
           </div>
           <div class="card">
-            <h3>Already true today</h3>
+            <h3 data-i18n="vote.true.h3">Already true today</h3>
             <ul class="ticks" style="margin-top:8px">
-              <li>A Didactic AI tutor that guides pupils without giving them the answers</li>
-              <li>The teacher stays in charge of what Galac6 offers their pupils</li>
-              <li>Data hosted in France</li>
+              <li data-i18n="vote.true.li1">A didactic AI tutor that guides pupils without giving them the answers</li>
+              <li data-i18n="vote.true.li2">The teacher stays in charge of what Galac6 offers their pupils</li>
+              <li data-i18n="vote.true.li3">Data hosted in France</li>
             </ul>
           </div>
         </aside>
@@ -550,14 +620,14 @@
 
   <!-- ═══ FOOTER ═══ -->
   <footer>
-    <div>Galac6. L'IA au service de la pédagogie</div>
+    <div data-i18n="vote.footer.tagline">Galac6. AI in the service of teaching</div>
     <div class="footer-badges">
-      <a href="/about" style="color: var(--text-muted);">About</a>
-      <a href="/privacy" style="color: var(--text-muted);">Privacy</a>
-      <a href="/mentions-legales" style="color: var(--text-muted);">Legal notice</a>
-      <a href="/international" style="color: var(--text-muted);">School outside France?</a>
-      <a href="#" data-cookie-settings style="color: var(--text-muted);">Cookie settings</a>
-      <span class="footer-badge">Made in France</span>
+      <a href="/en/about" style="color: var(--text-muted);" data-i18n="vote.footer.about">About</a>
+      <a href="/privacy" style="color: var(--text-muted);" data-i18n="vote.footer.privacy">Privacy</a>
+      <a href="/mentions-legales" style="color: var(--text-muted);" data-i18n="vote.footer.legal">Legal notice</a>
+      <a href="/international" style="color: var(--text-muted);" data-i18n="vote.footer.intl">School outside France?</a>
+      <a href="#" data-cookie-settings style="color: var(--text-muted);" data-i18n="vote.footer.cookies">Cookie settings</a>
+      <span class="footer-badge" data-i18n="vote.footer.made">Made in France</span>
     </div>
   </footer>
 
@@ -569,8 +639,12 @@
     'use strict';
     var ENDPOINT = 'https://obhzumzqullnsnnfjlbt.supabase.co/functions/v1/notify-contact';
     var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    var MSG_OK = 'Thank you, your vote has been sent. It now counts for your country, and we will get back to you at the address you gave.';
-    var MSG_FAIL = 'Your vote could not be sent. Please try again in a moment, or write to us at <a href="mailto:hello@galac6.io">hello@galac6.io</a>.';
+    // Textes du message affiché : anglais par défaut, remplacés sur les pages traduites (window.G6_DYN, voir scripts/build-langs.py)
+    var DYN = window.G6_DYN || {};
+    var PAGE_LANG = document.documentElement.lang || 'en';
+    var MSG_OK = DYN.ok || 'Thank you, your vote has been sent. It now counts for your country, and we will get back to you at the address you gave.';
+    var MSG_FAIL = DYN.fail || 'Your vote could not be sent. Please try again in a moment, or write to us at <a href="mailto:hello@galac6.io">hello@galac6.io</a>.';
+    var MSG_SENDING = DYN.sending || 'Sending…';
 
     function $(id) { return document.getElementById(id); }
     function val(id) { return $(id).value.trim(); }
@@ -590,7 +664,7 @@
       var ecole = val('v-ecole');
       // « name » devient le sujet de l'email : 200 caractères maximum côté serveur
       var subject = ('[International] Vote — ' + pays + ' — ' + ecole).slice(0, 200);
-      var message = 'Type de demande : Vote International (page /international)\n' +
+      var message = 'Type de demande : Vote International (page ' + location.pathname + ')\n' +
         'Pays : ' + pays + '\n' +
         'École : ' + ecole + '\n' +
         'Ville : ' + (val('v-ville') || 'non précisé') + '\n' +
@@ -601,7 +675,7 @@
         'Langue d\'enseignement : ' + (val('v-langue') || 'non précisé') + '\n' +
         'Nombre d\'élèves : ' + ($('v-eleves').value || 'non précisé') + '\n' +
         'Accord pour être recontacté : oui\n' +
-        'Langue de la page : en\n\n' +
+        'Langue de la page : ' + PAGE_LANG + '\n\n' +
         'Motivations et attentes :\n' + val('v-comment');
       return { name: subject, email: val('v-email'), message: message };
     }
@@ -622,7 +696,7 @@
       var btn = $('v-submit');
       var label = btn.textContent;
       btn.disabled = true;
-      btn.textContent = 'Sending…';
+      btn.textContent = MSG_SENDING;
       send(req.name, req.email, req.message).then(function (ok) {
         btn.disabled = false;
         btn.textContent = label;

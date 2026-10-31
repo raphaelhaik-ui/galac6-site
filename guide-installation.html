@@ -339,14 +339,20 @@
   </style>
   <!-- Meta Pixel (Facebook) - charge apres consentement -->
   <script src="meta-pixel.js"></script>
+  <style id="g6-banner-css">
+    /* Bandeau anglais « Currently available in France only » : toutes les pages, collé en haut avec le menu (généré par scripts/build-langs.py) */
+    .g6-intl-banner { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 8px 16px; background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; font-size: 0.85rem; font-weight: 500; line-height: 1.45; text-align: center; direction: ltr; }
+    .g6-intl-banner svg { flex: none; opacity: 0.9; }
+    .g6-intl-banner span { min-width: 0; overflow-wrap: anywhere; }
+    .g6-intl-banner a { color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.5); }
+    .g6-intl-banner a:hover, .g6-intl-banner a:focus-visible { border-bottom-color: #fff; text-decoration: none; }
+    body > .g6-intl-banner { position: sticky; top: 0; z-index: 120; }
+    @media (max-width: 480px) { .g6-intl-banner { font-size: 0.8rem; padding: 7px 12px; } }
+  </style>
 </head>
 <body>
+  <!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-banner" lang="en" dir="ltr" role="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Currently available in France only (French school system). Want Galac6 in your country? <a href="/international">Send a request&nbsp;&rarr;</a></span></div><!-- /intl-banner -->
 
-  <!-- ═══ EN BANNER (hidden by default) ═══ -->
-  <div id="en-banner" class="en-banner en-only" style="display:none;" data-i18n-html="banner.text">
-    🌍 Currently available in France only (French school system). Want Galac6 in your country? <a href="mailto:hello@galac6.io" style="color:#fff;text-decoration:underline;">Send a request →</a>
-    <button class="en-banner-close" onclick="closeBanner()" aria-label="Close">&times;</button>
-  </div>
 
   <nav style="background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 0.6rem 1.5rem; display: flex; align-items: center; justify-content: space-between;">
     <a href="index.html" style="display: inline-flex; align-items: center; gap: 0.4rem; color: var(--primary-light); text-decoration: none; font-weight: 600; font-size: 0.9rem;" data-i18n="guide.back">
@@ -384,7 +390,7 @@
       <h2 id="telechargement" data-i18n="guide.download.title">T&eacute;l&eacute;chargement</h2>
       <p data-i18n-html="guide.download.text">Galac6 est actuellement en <strong>b&ecirc;ta priv&eacute;e</strong>. Pour recevoir le lien de t&eacute;l&eacute;chargement, inscrivez-vous avec votre email :</p>
       <div style="text-align: center; margin: 1.5rem 0;">
-        <a href="index.html#contact" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; border-radius: 14px; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-size: 1rem; font-weight: 600; text-decoration: none; box-shadow: 0 4px 16px rgba(99,102,241,0.3); transition: all 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(99,102,241,0.4)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 16px rgba(99,102,241,0.3)'" data-i18n="guide.download.cta">
+        <a href="/about#contact-form" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; border-radius: 14px; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-size: 1rem; font-weight: 600; text-decoration: none; box-shadow: 0 4px 16px rgba(99,102,241,0.3); transition: all 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(99,102,241,0.4)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 16px rgba(99,102,241,0.3)'" data-i18n="guide.download.cta">
           &#x1F4E9; Demander l'acc&egrave;s &agrave; la b&ecirc;ta
         </a>
       </div>
