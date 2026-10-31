@@ -226,6 +226,8 @@
     .pc-n { flex: none; width: 1.7rem; height: 1.7rem; border-radius: 50%; display: grid; place-items: center; font-size: 0.85rem; font-weight: 800; color: var(--primary-light); background: rgba(124,92,252,0.14); }
     .pc-q strong { display: block; color: var(--text); font-size: 1rem; line-height: 1.3; margin-bottom: 0.2rem; }
     .pc-q span:not(.pc-n) { display: block; color: var(--text-muted); font-size: 0.88rem; line-height: 1.45; }
+    .pc-src { display: inline-block; margin-top: 0.35rem; font-size: 0.8rem; font-weight: 600; color: var(--primary-light); text-decoration: none; }
+    .pc-src:hover { text-decoration: underline; }
     .pc-a { border-radius: 10px; padding: 0.6rem 0.75rem; }
     .pc-g { background: rgba(48,164,108,0.07); border: 1px solid rgba(48,164,108,0.22); }
     .pc-c { background: rgba(229,72,77,0.05); border: 1px solid rgba(229,72,77,0.18); }
@@ -426,46 +428,46 @@
     <h2>En résumé : les constats de PISA 2025 et les réponses de Galac6</h2>
     <p>Ce tableau reprend les recommandations, les risques et les problèmes soulevés par l'étude, la façon dont Galac6 y répond, et ce qui se passe quand un élève utilise seul une IA généraliste comme ChatGPT.</p>
     <div class="pisa-compare">
-      <div class="pc-head" aria-hidden="true"><span>Ce que soulève PISA 2025</span><span>Galac6</span><span>Chatbot généraliste utilisé seul</span></div>
+      <div class="pc-head" aria-hidden="true"><span>Ce que soulève PISA 2025</span><span>Galac6</span><span>IA généraliste utilisée seule</span></div>
       <ol class="pc-list">
         <li class="pc-row">
-          <div class="pc-q"><span class="pc-n">1</span><div><strong>Faire à la place de l'élève</strong><span>Résumer, rédiger ou chercher avec l'IA va de pair avec de moins bons résultats en sciences.</span></div></div>
+          <div class="pc-q"><span class="pc-n">1</span><div><strong>Faire à la place de l'élève</strong><span>Résumer, rédiger ou chercher avec l'IA va de pair avec de moins bons résultats en sciences.</span><a class="pc-src" href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf#page=238" target="_blank" rel="noopener">Rapport PISA, chapitre 4, usage de l'IA, p. 236 →</a></div></div>
           <div class="pc-a pc-g"><div class="pc-h"><span class="pc-who">Galac6</span><span class="pz-score pos" aria-label="très pertinent" title="très pertinent">+++</span></div><p>Guide par questions et indices, et ne rédige jamais à la place de l'élève.</p></div>
-          <div class="pc-a pc-c"><div class="pc-h"><span class="pc-who">Chatbot seul</span><span class="pz-score neg" aria-label="contre-productif" title="contre-productif">−−−</span></div><p>Résume, rédige ou résout l'exercice dès qu'on le lui demande.</p></div>
+          <div class="pc-a pc-c"><div class="pc-h"><span class="pc-who">IA généraliste</span><span class="pz-score neg" aria-label="contre-productif" title="contre-productif">−−−</span></div><p>Résume, rédige ou résout l'exercice dès qu'on le lui demande.</p></div>
         </li>
         <li class="pc-row">
-          <div class="pc-q"><span class="pc-n">2</span><div><strong>Préserver l'effort</strong><span>L'IA doit être « un échafaudage, pas une béquille ».</span></div></div>
+          <div class="pc-q"><span class="pc-n">2</span><div><strong>Préserver l'effort</strong><span>L'IA doit être « un échafaudage, pas une béquille ».</span><a class="pc-src" href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf#page=8" target="_blank" rel="noopener">Rapport PISA, avant-propos, p. 6 →</a></div></div>
           <div class="pc-a pc-g"><div class="pc-h"><span class="pc-who">Galac6</span><span class="pz-score pos" aria-label="très pertinent" title="très pertinent">+++</span></div><p>L'aide augmente seulement si l'élève bloque. La réponse finale reste la sienne.</p></div>
-          <div class="pc-a pc-c"><div class="pc-h"><span class="pc-who">Chatbot seul</span><span class="pz-score neg" aria-label="pas pertinent" title="pas pertinent">−−</span></div><p>Donne tout de suite la réponse complète.</p></div>
+          <div class="pc-a pc-c"><div class="pc-h"><span class="pc-who">IA généraliste</span><span class="pz-score neg" aria-label="pas pertinent" title="pas pertinent">−−</span></div><p>Donne tout de suite la réponse complète.</p></div>
         </li>
         <li class="pc-row">
-          <div class="pc-q"><span class="pc-n">3</span><div><strong>Apprendre à vérifier</strong><span>47 % des élèves français l'apprennent en classe, contre 63 % dans l'OCDE.</span></div></div>
+          <div class="pc-q"><span class="pc-n">3</span><div><strong>Apprendre à vérifier</strong><span>47 % des élèves français l'apprennent en classe, contre 63 % dans l'OCDE.</span><a class="pc-src" href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf#page=242" target="_blank" rel="noopener">Rapport PISA, encadré I.4.2, p. 240 →</a></div></div>
           <div class="pc-a pc-g"><div class="pc-h"><span class="pc-who">Galac6</span><span class="pz-score pos" aria-label="pertinent" title="pertinent">++</span></div><p>Calculs contrôlés par un moteur de calcul. L'élève justifie sa réponse.</p></div>
-          <div class="pc-a pc-c"><div class="pc-h"><span class="pc-who">Chatbot seul</span><span class="pz-score neg" aria-label="pas pertinent" title="pas pertinent">−−</span></div><p>Peut se tromper avec assurance. L'élève vérifie seul.</p></div>
+          <div class="pc-a pc-c"><div class="pc-h"><span class="pc-who">IA généraliste</span><span class="pz-score neg" aria-label="pas pertinent" title="pas pertinent">−−</span></div><p>Peut se tromper avec assurance. L'élève vérifie seul.</p></div>
         </li>
         <li class="pc-row">
-          <div class="pc-q"><span class="pc-n">4</span><div><strong>Suivre ses progrès</strong><span>Repérer ses lacunes et vérifier qu'on a compris : l'autorégulation.</span></div></div>
+          <div class="pc-q"><span class="pc-n">4</span><div><strong>Suivre ses progrès</strong><span>Repérer ses lacunes et vérifier qu'on a compris : l'autorégulation.</span><a class="pc-src" href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf#page=189" target="_blank" rel="noopener">Rapport PISA, chapitre 3, autonomie, p. 187 →</a></div></div>
           <div class="pc-a pc-g"><div class="pc-h"><span class="pc-who">Galac6</span><span class="pz-score pos" aria-label="pertinent" title="pertinent">++</span></div><p>« Mes notions », « Interroge-moi sur ma leçon » et dictées sur mesure.</p></div>
-          <div class="pc-a pc-c"><div class="pc-h"><span class="pc-who">Chatbot seul</span><span class="pz-score neg" aria-label="pas pertinent" title="pas pertinent">−−</span></div><p>Aucun suivi par notion, aucun lien avec le programme.</p></div>
+          <div class="pc-a pc-c"><div class="pc-h"><span class="pc-who">IA généraliste</span><span class="pz-score neg" aria-label="pas pertinent" title="pas pertinent">−−</span></div><p>Aucun suivi par notion, aucun lien avec le programme.</p></div>
         </li>
         <li class="pc-row">
-          <div class="pc-q"><span class="pc-n">5</span><div><strong>Persévérer après une erreur</strong><span>Améliorer son travail après un retour négatif.</span></div></div>
+          <div class="pc-q"><span class="pc-n">5</span><div><strong>Persévérer après une erreur</strong><span>Améliorer son travail après un retour négatif.</span><a class="pc-src" href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf#page=183" target="_blank" rel="noopener">Rapport PISA, chapitre 3, persévérance, p. 181 →</a></div></div>
           <div class="pc-a pc-g"><div class="pc-h"><span class="pc-who">Galac6</span><span class="pz-score pos" aria-label="pertinent" title="pertinent">++</span></div><p>Seconde chance avec indice. Chaque erreur est expliquée avec sa règle.</p></div>
-          <div class="pc-a pc-c"><div class="pc-h"><span class="pc-who">Chatbot seul</span><span class="pz-score neg" aria-label="peu pertinent" title="peu pertinent">−</span></div><p>Explique l'erreur si on le demande, souvent en donnant la réponse.</p></div>
+          <div class="pc-a pc-c"><div class="pc-h"><span class="pc-who">IA généraliste</span><span class="pz-score neg" aria-label="peu pertinent" title="peu pertinent">−</span></div><p>Explique l'erreur si on le demande, souvent en donnant la réponse.</p></div>
         </li>
         <li class="pc-row">
-          <div class="pc-q"><span class="pc-n">6</span><div><strong>Le rôle du professeur</strong><span>L'accompagnement de l'enseignant reste décisif.</span></div></div>
+          <div class="pc-q"><span class="pc-n">6</span><div><strong>Le rôle du professeur</strong><span>L'accompagnement de l'enseignant reste décisif.</span><a class="pc-src" href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf#page=189" target="_blank" rel="noopener">Rapport PISA, chapitre 3, soutien des enseignants, p. 187 →</a></div></div>
           <div class="pc-a pc-g"><div class="pc-h"><span class="pc-who">Galac6</span><span class="pz-score pos" aria-label="très pertinent" title="très pertinent">+++</span></div><p>Réussite par notion de la classe, tuteur coupé pendant les évaluations.</p></div>
-          <div class="pc-a pc-c"><div class="pc-h"><span class="pc-who">Chatbot seul</span><span class="pz-score neg" aria-label="contre-productif" title="contre-productif">−−−</span></div><p>Le professeur ne voit rien et ne peut rien régler.</p></div>
+          <div class="pc-a pc-c"><div class="pc-h"><span class="pc-who">IA généraliste</span><span class="pz-score neg" aria-label="contre-productif" title="contre-productif">−−−</span></div><p>Le professeur ne voit rien et ne peut rien régler.</p></div>
         </li>
         <li class="pc-row">
-          <div class="pc-q"><span class="pc-n">7</span><div><strong>Éviter une nouvelle fracture</strong><span>L'usage critique de l'IA profite surtout aux élèves favorisés.</span></div></div>
+          <div class="pc-q"><span class="pc-n">7</span><div><strong>Éviter une nouvelle fracture</strong><span>L'usage critique de l'IA profite surtout aux élèves favorisés.</span><a class="pc-src" href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/pisa-2025-results-volume-i_5265bfb1/73451bc5-en.pdf#page=243" target="_blank" rel="noopener">Rapport PISA, chapitre 4, milieu social, p. 241 →</a></div></div>
           <div class="pc-a pc-g"><div class="pc-h"><span class="pc-who">Galac6</span><span class="pz-score pos" aria-label="pertinent" title="pertinent">++</span></div><p>En classe, chaque élève a le même outil, encadré par le professeur.</p></div>
-          <div class="pc-a pc-c"><div class="pc-h"><span class="pc-who">Chatbot seul</span><span class="pz-score neg" aria-label="pas pertinent" title="pas pertinent">−−</span></div><p>Tout dépend de la famille et de son abonnement.</p></div>
+          <div class="pc-a pc-c"><div class="pc-h"><span class="pc-who">IA généraliste</span><span class="pz-score neg" aria-label="pas pertinent" title="pas pertinent">−−</span></div><p>Tout dépend de la famille et de son abonnement.</p></div>
         </li>
       </ol>
     </div>
-    <p class="pisa-table-note">Comparaison avec l'usage par défaut d'un chatbot généraliste (ChatGPT, Gemini, Copilot…), qui n'est pas conçu pour l'école. Certains proposent un mode « étude » qui pose davantage de questions, mais l'élève peut l'activer ou le quitter librement, et le professeur n'en voit rien. Les notes (de +++ très pertinent à −−− contre-productif) sont notre appréciation de la réponse apportée à chaque constat, pas une mesure de l'OCDE. Les constats de PISA sont tirés du rapport de l'OCDE (Volume I) ; l'OCDE précise qu'ils décrivent des associations, pas des liens de cause à effet.</p>
+    <p class="pisa-table-note">Comparaison avec l'usage par défaut d'une IA généraliste (ChatGPT, Gemini, Copilot…), qui n'est pas conçu pour l'école. Certains proposent un mode « étude » qui pose davantage de questions, mais l'élève peut l'activer ou le quitter librement, et le professeur n'en voit rien. Les notes (de +++ très pertinent à −−− contre-productif) sont notre appréciation de la réponse apportée à chaque constat, pas une mesure de l'OCDE. Les constats de PISA sont tirés du rapport de l'OCDE (Volume I) ; l'OCDE précise qu'ils décrivent des associations, pas des liens de cause à effet.</p>
 
     <!-- FAQ -->
     <section class="faq">
