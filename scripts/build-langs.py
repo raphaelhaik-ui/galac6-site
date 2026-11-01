@@ -117,12 +117,25 @@ GLOBE = ('<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="cu
          '<path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 '
          '15.3 15.3 0 0 1 4-10z"/></svg>')
 
-# Styles communs du menu, insérés dans chaque page (bloc <style id="g6-nav-css">)
+# Styles communs du menu, insérés dans chaque page (bloc <style id="g6-nav-css">).
+# Barre de navigation unique (01/11/2026) : ces règles décrivent TOUTE la barre (hauteur, marges, logo, liens,
+# hamburger) et passent devant les styles propres à chaque page (sélecteurs préfixés par .navbar-wrapper).
 NAV_CSS = """
-    /* Menu : marge du logo, sélecteur de langue (généré par scripts/build-langs.py) */
+    /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
     html, body { overflow-x: clip; } /* les halos décoratifs du haut de page ne créent plus de défilement horizontal */
-    .navbar-brand { margin-inline-end: 1.5rem; flex-shrink: 0; }
-    .navbar-links a { white-space: nowrap; }
+    .navbar-wrapper { position: sticky; top: 0; z-index: 100; background: rgba(11,11,20,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border, #1e1e32); }
+    .navbar-wrapper .navbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: nowrap; gap: 0; padding: 1.25rem 2.5rem; max-width: 1200px; margin: 0 auto; line-height: 1.7; }
+    .navbar-wrapper .navbar-brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; margin-inline-end: 1.5rem; flex-shrink: 0; }
+    .navbar-wrapper .navbar-brand img { height: 44px; width: auto; }
+    .navbar-wrapper .navbar-brand span { font-size: 1.6rem; font-weight: 800; color: var(--text, #f0f0f5); letter-spacing: -0.02em; }
+    .navbar-wrapper .navbar-links { display: flex; flex-direction: row; align-items: center; gap: 2rem; width: auto; padding: 0; margin: 0; }
+    .navbar-wrapper .navbar-links > a { display: inline; min-height: 0; padding: 0; color: var(--text-muted, #8a8aa3); font-size: 0.9rem; font-weight: 500; text-decoration: none; white-space: nowrap; transition: color 0.2s; }
+    .navbar-wrapper .navbar-links > a:hover, .navbar-wrapper .navbar-links > a.active { color: var(--text, #f0f0f5); text-decoration: none; }
+    .navbar-wrapper .navbar-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; flex-direction: column; justify-content: center; align-items: center; gap: 5px; min-width: 44px; min-height: 44px; }
+    .navbar-wrapper .navbar-hamburger span { display: block; width: 24px; height: 2px; background: var(--text, #f0f0f5); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+    .navbar-wrapper .navbar-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .navbar-wrapper .navbar-hamburger.open span:nth-child(2) { opacity: 0; }
+    .navbar-wrapper .navbar-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .lang-menu { position: relative; }
     .lang-menu summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; min-height: 44px; padding: 0 4px; color: var(--text-muted, #8a8aa3); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; user-select: none; }
     .lang-menu summary::-webkit-details-marker { display: none; }
@@ -134,28 +147,43 @@ NAV_CSS = """
     .navbar .lang-menu-list a[aria-current] { color: var(--text, #f0f0f5); font-weight: 700; }
     /* Grand écran : menu un peu resserré pour tenir sur une ligne */
     @media (min-width: 1241px) {
-      .navbar-links { gap: 1.25rem !important; }
-      .navbar-links a { font-size: 0.88rem; }
-      .navbar-brand { margin-inline-end: 1.25rem; }
+      .navbar-wrapper .navbar-links { gap: 1.25rem; }
+      .navbar-wrapper .navbar-links > a { font-size: 0.88rem; }
+      .navbar-wrapper .navbar-brand { margin-inline-end: 1.25rem; }
     }
     @media (min-width: 901px) and (max-width: 1240px) {
-      .navbar { padding-left: 2rem !important; padding-right: 2rem !important; }
-      .navbar-links { gap: 0.75rem !important; }
-      .navbar-links a { font-size: 0.8rem !important; }
-      .navbar-links a[href^="https://galac6web"] { padding: 0.45rem 0.9rem !important; }
-      .navbar-brand { margin-inline-end: 1rem; }
-      .navbar-brand span { font-size: 1.35rem; }
-      .navbar-brand img { height: 38px; }
+      .navbar-wrapper .navbar { padding-left: 2rem; padding-right: 2rem; }
+      .navbar-wrapper .navbar-links { gap: 0.75rem; }
+      .navbar-wrapper .navbar-links > a { font-size: 0.8rem; }
+      .navbar-wrapper .navbar-links > a[href^="https://galac6web"] { padding: 0.45rem 0.9rem !important; }
+      .navbar-wrapper .navbar-brand { margin-inline-end: 1rem; }
+      .navbar-wrapper .navbar-brand span { font-size: 1.35rem; }
+      .navbar-wrapper .navbar-brand img { height: 38px; }
     }
-    /* Menu hamburger (900 px et moins, réglage d'origine des pages) */
+    /* Menu hamburger (900 px et moins) */
     @media (max-width: 900px) {
-      .navbar-brand { margin-inline-end: 0; }
+      .navbar-wrapper .navbar { padding: 1rem 1.5rem; flex-wrap: wrap; }
+      .navbar-wrapper .navbar-brand { margin-inline-end: 0; }
+      .navbar-wrapper .navbar-hamburger { display: flex; }
+      .navbar-wrapper .navbar-links { display: none; flex-direction: column; width: 100%; gap: 0.5rem; padding: 1rem 0 0.5rem; }
+      .navbar-wrapper .navbar-links.open { display: flex; }
+      .navbar-wrapper .navbar-links > a { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 0.6rem 0; font-size: 1rem; }
       .lang-menu { align-self: center; }
       .lang-menu summary { font-size: 0.95rem; }
       .lang-menu-list { position: static; display: flex; flex-wrap: wrap; justify-content: center; min-width: 0; margin-top: 4px; }
       .navbar .lang-menu-list a { padding: 0.6rem 0.75rem; font-size: 0.95rem !important; }
     }
 """
+
+# Barre de navigation unique (01/11/2026, demande de Raphaël) : mêmes liens, même ordre, même logo, même bouton
+# sur toutes les pages et dans toutes les langues. Référence : l'accueil français (Élèves, Écoles, FAQ, Tarif,
+# Blog, À propos, langue, inscription). Le lien de la page courante est mis en surbrillance (class="active").
+NAV_ITEMS = ('features', 'school', 'faq', 'pricing', 'blog', 'about')
+NAV_FR = {'nav.features': 'Pour les élèves', 'nav.school': 'Pour les écoles', 'nav.faq': 'FAQ', 'nav.pricing': 'Tarif',
+          'nav.blog': 'Blog', 'nav.about': 'À propos', 'nav.signup': 'Inscription ou connexion'}
+SIGNUP_URL = 'https://galac6web.netlify.app/'
+SIGNUP_STYLE = ('background: linear-gradient(135deg, var(--gradient-start, #6366f1), var(--gradient-end, #a855f7)); '
+                'color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;')
 
 # Bandeau anglais présent en haut de TOUTES les pages, jamais traduit, sans bouton de fermeture.
 # Son lien mène à la page de vote (réécrit vers /es/international, etc. sur les pages traduites).
@@ -296,6 +324,68 @@ def menu_links(group, current_path):
     return links
 
 
+def nav_href(item, lang):
+    """Adresse d'un lien du menu dans une langue (le blog n'existe qu'en français et en anglais)."""
+    home = page_path('index', lang)
+    return {'features': home + '#features', 'school': page_path('ecole', lang), 'faq': home + '#faq',
+            'pricing': page_path('tarifs', lang), 'blog': '/en/blog' if lang == 'en' else '/blog',
+            'about': page_path('about', lang)}[item]
+
+
+def nav_current(url_path):
+    """Lien du menu à mettre en surbrillance pour une adresse (None pour l'accueil et les autres pages)."""
+    p = re.sub(r'^/(?:%s)(?=/|$)' % '|'.join(LANGS), '', url_path).rstrip('/')
+    p = re.sub(r'\.html$', '', p)
+    if p == '/blog' or p.startswith('/blog/'):
+        return 'blog'
+    return {'/ecole': 'school', '/tarifs': 'pricing', '/about': 'about'}.get(p)
+
+
+def navbar_html(lang, texts, url_path, menu, signup_href=SIGNUP_URL, i18n=False, indent='    '):
+    """Barre de navigation complète (<nav class="navbar">) : la même partout, seul le texte change de langue.
+    i18n=True : garde les attributs data-i18n (pages sources, traduites ensuite par build_page)."""
+    cur = nav_current(url_path)
+    att = (lambda k: ' data-i18n="%s"' % k) if i18n else (lambda k: '')
+    i1, i2, i3 = indent, indent + '  ', indent + '    '
+    lines = ['<nav class="navbar">',
+             i2 + '<a href="%s" class="navbar-brand">' % page_path('index', lang),
+             i3 + '<img src="/icons/icon-nav.png" alt="Galac6" width="132" height="132">',
+             i3 + '<span>Galac6</span>',
+             i2 + '</a>',
+             i2 + '<button class="navbar-hamburger" aria-label="Menu" onclick="this.classList.toggle(\'open\');this.nextElementSibling.classList.toggle(\'open\')">',
+             i3 + '<span></span><span></span><span></span>',
+             i2 + '</button>',
+             i2 + '<div class="navbar-links">']
+    for item in NAV_ITEMS:
+        key = 'nav.' + item
+        extra = ' class="active" aria-current="page"' if item == cur else ''
+        if item == 'blog' and lang not in ('fr', 'en'):
+            extra += ' hreflang="fr"'
+        lines.append(i3 + '<a href="%s"%s%s>%s</a>' % (nav_href(item, lang), extra, att(key), texts[key]))
+    lines.append(i3 + menu)
+    lines.append(i3 + '<a href="%s" style="%s"%s>%s</a>' % (signup_href, SIGNUP_STYLE, att('nav.signup'), texts['nav.signup']))
+    lines.append(i2 + '</div>')
+    lines.append(i1 + '</nav>')
+    return '\n'.join(lines)
+
+
+def apply_navbar(s, lang, texts, url_path, i18n=False):
+    """Remplace la barre <nav class="navbar"> d'une page par la barre commune (sélecteur de langue conservé)."""
+    m = re.search(r'<nav class="navbar">.*?</nav>', s, re.S)
+    if not m:
+        return s
+    old = m.group(0)
+    menu = re.search(r'<!-- lang-menu -->.*?<!-- /lang-menu -->', old, re.S)
+    if not menu:
+        return s
+    # Lien d'inscription : on garde l'adresse de la page si elle porte un suivi (utm), sinon l'adresse commune
+    sign = re.search(r'<a href="(https://galac6web\.netlify\.app/[^"]*)"', old)
+    signup = sign.group(1).replace('&amp;', '&').replace('&', '&amp;') if sign else SIGNUP_URL
+    line_start = s.rfind('\n', 0, m.start()) + 1
+    indent = re.match(r'[ \t]*', s[line_start:m.start()]).group(0)
+    return s[:m.start()] + navbar_html(lang, texts, url_path, menu.group(0), signup, i18n, indent) + s[m.end():]
+
+
 def hreflang_html(group):
     lines = ['  <!-- hreflang (généré par scripts/build-langs.py) -->']
     for l in group_langs(group):
@@ -398,6 +488,35 @@ def update_banner(s):
     return s
 
 
+def set_nav_css(s):
+    css = '<style id="g6-nav-css">%s  </style>' % NAV_CSS
+    if '<style id="g6-nav-css">' in s:
+        return re.sub(r'<style id="g6-nav-css">.*?</style>', lambda m: css, s, flags=re.S)
+    return s.replace('</head>', '  ' + css + '\n</head>', 1)
+
+
+def update_handmade_en(generated):
+    """Pages anglaises faites à la main (blog anglais, écoles du Royaume-Uni…) : même barre de navigation."""
+    done = {rel for _, _, rel in generated}
+    en = load_en()
+    texts = {k: v for k, v in en.items() if k.startswith('nav.')}
+    changed = []
+    for dirpath, _, names in os.walk(os.path.join(ROOT, 'en')):
+        for name in sorted(names):
+            rel = os.path.relpath(os.path.join(dirpath, name), ROOT)
+            if not name.endswith('.html') or rel in done:
+                continue
+            s = read(rel)
+            if 'class="navbar-links"' not in s:
+                continue
+            url_path = '/' + re.sub(r'(index)?\.html$', '', rel)
+            new = set_nav_css(apply_navbar(s, 'en', texts, url_path))
+            if new != s:
+                write(rel, new)
+                changed.append(rel)
+    return changed
+
+
 def update_sources():
     changed = []
     for rel in source_pages() + ['teaser/index.html']:
@@ -434,12 +553,12 @@ def update_sources():
             new = inner[:pos] + menu + '\n        ' + inner[pos:]
             s = s.replace(inner, new, 1)
 
+        # Barre de navigation commune (liens, logo, bouton), avec les clés data-i18n pour les pages traduites
+        texts = {k: v for k, v in load_en().items() if k.startswith('nav.')} if lang == 'en' else NAV_FR
+        s = apply_navbar(s, lang, texts, url_path, i18n=True)
+
         # Styles du menu
-        css = '<style id="g6-nav-css">%s  </style>' % NAV_CSS
-        if '<style id="g6-nav-css">' in s:
-            s = re.sub(r'<style id="g6-nav-css">.*?</style>', lambda m: css, s, flags=re.S)
-        else:
-            s = s.replace('</head>', '  ' + css + '\n</head>', 1)
+        s = set_nav_css(s)
 
         # Langue fixe : i18n.js ne traduit plus sur place (le choix se fait par adresse)
         if lang == 'fr' and 'data-static-lang' not in s:
@@ -1046,6 +1165,8 @@ def main():
                     continue
                 rel = build_page(g, l, dicts[l], countries, errors)
                 generated.append((g, l, rel))
+        hand = update_handmade_en(generated)
+        print('Pages anglaises faites à la main mises à jour : %d %s' % (len(hand), ', '.join(hand)))
         update_redirects()
         update_sitemap()
         print('Pages traduites écrites : %d' % len(generated))
