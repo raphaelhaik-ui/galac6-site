@@ -4,19 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lycéens testeurs : 3 mois offerts pour préparer le bac | Galac6</title>
-  <meta name="description" content="Élève de 2nde, 1re ou Terminale ? Deviens testeur de Galac6 : 3 mois offerts, sans carte bancaire, pour travailler tes cours et préparer le bac de français et de maths. 200 places, inscriptions jusqu'au 31 janvier 2027.">
+  <meta name="description" content="Élève de 2nde, 1re ou Terminale ? Deviens testeur de Galac6 : 3 mois offerts, sans carte bancaire, pour travailler tes cours et préparer le bac de français et de maths. Offre réservée aux élèves de 2nde, 1re et Terminale, avec le code LYCEE3M.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/lycee-testeurs">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Galac6">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:title" content="Lycéens testeurs : 3 mois offerts sur Galac6">
-  <meta property="og:description" content="Pour les élèves de 2nde, 1re et Terminale : corrections de copies type bac, annales officielles, fiches de révision et un tuteur qui t'aide à comprendre. Sans carte bancaire, 200 places.">
+  <meta property="og:description" content="Pour les élèves de 2nde, 1re et Terminale : corrections de copies type bac, annales officielles, fiches de révision et un tuteur qui t'aide à comprendre. Sans carte bancaire, avec le code LYCEE3M.">
   <meta property="og:url" content="https://galac6.io/lycee-testeurs">
   <meta property="og:image" content="https://galac6.io/images/og-image-v2.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Lycéens testeurs : 3 mois offerts sur Galac6">
-  <meta name="twitter:description" content="Pour les élèves de 2nde, 1re et Terminale : prépare le bac et tes contrôles avec Galac6. Sans carte bancaire, 200 places.">
+  <meta name="twitter:description" content="Pour les élèves de 2nde, 1re et Terminale : prépare le bac et tes contrôles avec Galac6. Sans carte bancaire, avec le code LYCEE3M.">
   <meta name="twitter:image" content="https://galac6.io/images/og-image-v2.jpg">
   <link rel="icon" type="image/png" href="icons/32x32.png">
   <script type="application/ld+json">
@@ -42,10 +42,18 @@
     },
     {
       "@type": "Question",
+      "name": "Où entrer le code ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dans le champ « Code » du formulaire de création de compte, tape LYCEE3M. Ce champ est aussi proposé si tu t'inscris avec Google ou Apple."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Qui peut en profiter ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Les élèves de 2nde, de 1re et de Terminale, dans la limite de 200 places. Les inscriptions sont ouvertes jusqu'au 31 janvier 2027."
+        "text": "Cette offre est réservée aux élèves de 2nde, de 1re et de Terminale."
       }
     },
     {
@@ -217,7 +225,7 @@
     .feature-card p + p { margin-top: 0.5rem; }
     .feature-card ul { list-style: none; margin-top: 0.6rem; }
     .feature-card li { color: var(--text-muted); font-size: 0.9rem; padding: 0.2rem 0 0.2rem 1.2rem; position: relative; line-height: 1.5; }
-    .feature-card li::before { content: "✓"; position: absolute; left: 0; color: var(--primary-light); font-weight: 700; }
+    .feature-card li::before { content: "\2713"; position: absolute; left: 0; color: var(--primary-light); font-weight: 700; }
     .fi-purple { background: rgba(99,102,241,0.12); }
     .fi-pink   { background: rgba(236,72,153,0.12); }
     .fi-amber  { background: rgba(245,158,11,0.12); }
@@ -383,6 +391,13 @@
     .parent-box h3 { color: var(--text); font-size: 1.02rem; margin-bottom: 0.35rem; }
     .parent-box p + p { margin-top: 0.5rem; }
     .footer-flag { font-weight: 600; }
+    /* Encadré du code d'inscription */
+    .code-box { max-width: 420px; margin: 1.25rem auto 0; padding: 1rem 1.1rem; background: var(--bg-card); border: 1px dashed rgba(167,139,250,0.6); border-radius: 14px; text-align: center; }
+    .code-box .code-label { font-size: 0.85rem; color: var(--text-muted); margin: 0 0 0.6rem; }
+    .code-row { display: flex; align-items: center; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
+    .code-value { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 1.6rem; font-weight: 700; letter-spacing: 0.12em; color: var(--text); user-select: all; }
+    .code-box .code-copy { min-height: 44px; width: auto; padding: 0.6rem 1.1rem; }
+    .code-box .code-status { min-height: 1.3em; margin: 0.4rem 0 0; font-size: 0.85rem; color: #4ade80; }
   </style>
   <!-- Meta Pixel (Facebook) - charge apres consentement -->
   <script src="meta-pixel.js"></script>
@@ -458,9 +473,16 @@
       <div class="hero-actions">
         <a href="https://galac6web.netlify.app/?utm_source=facebook&amp;utm_medium=groupes&amp;utm_campaign=lycee-testeurs-2026" class="btn btn-primary">Je profite de mes 3 mois offerts</a>
       </div>
+      <div class="code-box">
+        <p class="code-label">Ton code à saisir à l'inscription</p>
+        <div class="code-row">
+          <span class="code-value" translate="no">LYCEE3M</span>
+          <button type="button" class="btn btn-secondary code-copy" data-code="LYCEE3M" aria-label="Copier le code LYCEE3M">Copier le code</button>
+        </div>
+        <p class="code-status" role="status" aria-live="polite"></p>
+      </div>
       <div class="hero-tags">
-        <span class="hero-tag">200 places</span>
-        <span class="hero-tag">Inscriptions jusqu'au 31 janvier 2027</span>
+        <span class="hero-tag">Offre réservée aux élèves de 2nde, 1re et Terminale</span>
         <span class="hero-tag">Sans carte bancaire</span>
         <span class="hero-tag">Données hébergées en France</span>
       </div>
@@ -476,7 +498,7 @@
       <ul class="offer-points">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>3 mois offerts</strong> pour les élèves de 2nde, de 1re et de Terminale.</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Aucune carte bancaire</strong> n'est demandée.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>200 places</strong>, inscriptions ouvertes jusqu'au 31 janvier 2027.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Pour l'activer, tape le code <strong translate="no">LYCEE3M</strong> dans le champ «&nbsp;Code&nbsp;» du formulaire d'inscription.</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Après les 3 mois, <strong>rien n'est prélevé automatiquement</strong> : tu gardes l'accès Découverte ou tu choisis un abonnement.</span></li>
       </ul>
     </div>
@@ -534,9 +556,9 @@
     <h2 class="section-title">Comment ça marche</h2>
     <p class="section-subtitle">Trois étapes, quelques minutes.</p>
     <ol class="steps-list">
-      <li><div><h3>Crée ton compte avec le lien de cette page</h3><p>Utilise le bouton «&nbsp;Je profite de mes 3 mois offerts&nbsp;» : c'est ce lien qui te donne accès à l'offre.</p></div></li>
-      <li><div><h3>Indique ta classe</h3><p>Choisis 2nde, 1re ou Terminale quand Galac6 te le demande.</p></div></li>
-      <li><div><h3>Ton accès est activé automatiquement pour 3 mois</h3><p>Tu n'as rien d'autre à faire : tu peux commencer à travailler tout de suite.</p></div></li>
+      <li><div><h3>Crée ton compte avec le bouton de cette page</h3><p>Utilise le bouton «&nbsp;Je profite de mes 3 mois offerts&nbsp;».</p></div></li>
+      <li><div><h3>Tape le code LYCEE3M</h3><p>Dans le champ «&nbsp;Code&nbsp;» du formulaire d'inscription, tape <strong translate="no">LYCEE3M</strong>.</p></div></li>
+      <li><div><h3>Tes 3 mois sont activés tout de suite</h3><p>Tu peux commencer à travailler aussitôt. Tu pourras ensuite indiquer ta classe dans Galac6.</p></div></li>
     </ol>
     <div class="note-box parent-box">
       <h3>Vous êtes parent&nbsp;?</h3>
@@ -550,9 +572,17 @@
   <!-- ═══ CTA ═══ -->
   <section class="cta-section">
     <h2>Prêt à t'y mettre&nbsp;?</h2>
-    <p>Les 200 places sont ouvertes jusqu'au 31 janvier 2027.</p>
+    <p>Offre réservée aux élèves de 2nde, 1re et Terminale.</p>
     <div class="cta-row">
       <a href="https://galac6web.netlify.app/?utm_source=facebook&amp;utm_medium=groupes&amp;utm_campaign=lycee-testeurs-2026" class="btn btn-primary">Je profite de mes 3 mois offerts</a>
+    </div>
+    <div class="code-box">
+      <p class="code-label">Ton code à saisir à l'inscription</p>
+      <div class="code-row">
+        <span class="code-value" translate="no">LYCEE3M</span>
+        <button type="button" class="btn btn-secondary code-copy" data-code="LYCEE3M" aria-label="Copier le code LYCEE3M">Copier le code</button>
+      </div>
+      <p class="code-status" role="status" aria-live="polite"></p>
     </div>
   </section>
 
@@ -579,10 +609,17 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('open');this.setAttribute('aria-expanded',this.parentElement.classList.contains('open'))">
+          <span>Où entrer le code&nbsp;?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Dans le champ «&nbsp;Code&nbsp;» du formulaire de création de compte, tape <strong translate="no">LYCEE3M</strong>. Ce champ est aussi proposé si tu t'inscris avec Google ou Apple.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('open');this.setAttribute('aria-expanded',this.parentElement.classList.contains('open'))">
           <span>Qui peut en profiter&nbsp;?</span>
           <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Les élèves de 2nde, de 1re et de Terminale, dans la limite de 200 places. Les inscriptions sont ouvertes jusqu'au 31 janvier 2027.</div></div>
+        <div class="faq-answer"><div class="faq-answer-inner">Cette offre est réservée aux élèves de 2nde, de 1re et de Terminale.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('open');this.setAttribute('aria-expanded',this.parentElement.classList.contains('open'))">
@@ -616,6 +653,30 @@
     </div>
   </footer>
 
+<script>
+  // Bouton « Copier le code » : copie LYCEE3M et affiche « Code copié »
+  document.querySelectorAll('.code-copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var code = btn.getAttribute('data-code');
+      var status = btn.closest('.code-box').querySelector('.code-status');
+      function done(ok) {
+        status.textContent = ok ? 'Code copié' : 'Copie impossible : tape LYCEE3M à la main';
+        setTimeout(function () { status.textContent = ''; }, 3000);
+      }
+      function fallback() {
+        var t = document.createElement('textarea');
+        t.value = code; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0';
+        document.body.appendChild(t); t.select();
+        var ok = false;
+        try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+        document.body.removeChild(t); done(ok);
+      }
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(code).then(function () { done(true); }, fallback);
+      } else { fallback(); }
+    });
+  });
+</script>
 <script src="cookie-consent.js"></script>
 </body>
 </html>
