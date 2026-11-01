@@ -119,7 +119,7 @@
       'faq.a10': 'To try it out, the Discovery plan (€0) gives access to every feature in limited amounts, reset every month: 5 messages to the tutor, one dictation, one quiz, one homework help with a photo and one brevet or bac-style paper. <strong>For all of Galac6, unlimited</strong>: the Student plan at €69 a year or €7.99 a month, and the Family plan, up to 4 children, at €99 a year or €11.99 a month. The Exam Pack costs €19 (€14 with a yearly subscription). For schools, pricing is on quote, with a <a href="/ecole">free 3-month pilot on 3 classes</a>, with no commitment. Full details on the <a href="/tarifs">Pricing</a> page.',
 
       'faq.q11': 'Is Galac6 available in my country?',
-      'faq.a11': 'Galac6 is currently available in <strong>France only</strong>, as it is designed around the French school curriculum (Éducation Nationale). If you\'d like Galac6 in your country, <a href="/international">vote for your country</a> — we\'re exploring international expansion and would love to hear from you!',
+      'faq.a11': 'Galac6 is built on the French national curriculum, so it already works for pupils and schools that follow it, wherever they are. The app is in French, and its interface is also available in English. If your school follows another curriculum, <a href="/international">vote for your country</a>: we will adapt Galac6 to the countries that ask for it most.',
 
       'faq.cta.text': 'Can\'t find your question here?',
       'faq.cta.button': 'Contact us →',
