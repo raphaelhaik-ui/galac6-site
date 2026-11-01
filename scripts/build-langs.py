@@ -85,7 +85,9 @@ PATH_TO_GROUP = {
     '/annales-brevet-bac': 'annales', '/annales-brevet-bac.html': 'annales',
 }
 # Pages faites à la main (hors groupes) qui ont une version anglaise : liens traduits et sélecteur de langue (31/10/2026)
+# '/blog' → '/en/blog' : index du blog anglais (01/11/2026) ; les autres langues gardent le blog français.
 PAIRES_EN = {'/ecoles-francaises-royaume-uni': '/en/french-schools-uk',
+             '/blog': '/en/blog',
              '/blog/pisa-2025-ecole-du-futur': '/en/blog/pisa-2025-school-of-the-future'}
 # Fil d'Ariane des pages françaises (les autres langues : clés nav.* ou <groupe>.crumb des dictionnaires)
 CRUMB_FR = {'ecole': 'Pour les écoles', 'about': 'À propos', 'tarifs': 'Tarifs',
@@ -286,8 +288,10 @@ def menu_links(group, current_path):
         p = page_path(group, l) if group else None
         if not p:
             p = current_path if (l == 'fr' and not group) else page_path('index', l)
-        if l == 'en' and not group and current_path in PAIRES_EN:
-            p = PAIRES_EN[current_path]
+        # blog/index.html a pour adresse '/blog/' : on cherche aussi sans la barre finale
+        paire = PAIRES_EN.get(current_path) or PAIRES_EN.get(current_path.rstrip('/'))
+        if l == 'en' and not group and paire:
+            p = paire
         links[l] = p
     return links
 

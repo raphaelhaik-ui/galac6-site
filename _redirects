@@ -22,6 +22,8 @@
 /primaire             /primaire.html               200
 /teaser               /teaser/index.html           200
 /blog                 /blog/index.html             200
+/en/blog              /en/blog/index.html          200
+/en/blog/index.html   /en/blog                     301!
 /en/blog/pisa-2025-school-of-the-future.html /en/blog/pisa-2025-school-of-the-future 301!
 /demo                 /ecole?type=demo&utm_source=educatech&utm_medium=carte&utm_content=demo#devis  302
 # Pages traduites (généré par scripts/build-langs.py) : adresses sans .html
