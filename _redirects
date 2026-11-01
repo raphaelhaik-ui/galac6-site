@@ -7,6 +7,7 @@
 /ecoles-francaises-etranger /ecoles-francaises-etranger.html 200
 /international        /international.html          200
 /profs-testeurs       /profs-testeurs.html         200
+/lycee-testeurs       /lycee-testeurs.html         200
 /guide-prof           /guide-prof.html             200
 /donnees-eleves       /donnees-eleves.html         200
 /mentions-legales     /mentions-legales.html       200
@@ -73,6 +74,7 @@
 /guide-prof.html                         /guide-prof                        301!
 /index.html                              /                                  301!
 /international.html                      /international                     301!
+/lycee-testeurs.html                     /lycee-testeurs                    301!
 /mentions-legales.html                   /mentions-legales                  301!
 /primaire.html                           /primaire                          301!
 /privacy.html                            /privacy                           301!
