@@ -23,7 +23,7 @@ Galac6 (galac6.io) is designed in France. It is designed for pupils and their pa
 - Mental maths (calcul mental).
 - Mock exams for the brevet des collèges (DNB) and the baccalauréat, with detailed marking by the AI; preparation for the French bac oral.
 - Over 400 official past papers (brevet, French bac, maths bac, Concours général, course aux nombres), including over 250 in maths and 112 papers set outside France. AI-generated practice papers are always labelled as such and are never presented as official past papers. The marking is written by the AI from the original mark scheme; it is not an official answer key.
-- For schools: quizzes and homework created with the AI and validated by the teacher, dictations and paper copies marked (paper copies are scanned, then marked), follow-up of every pupil and class. On the French-schools-abroad pages, pupils can be imported from a list exported from Pronote or École Directe, or a pasted list.
+- For schools: quizzes and homework created with the AI and validated by the teacher, dictations and paper copies marked (paper copies are scanned, then marked), follow-up of every pupil and class. Teachers and schools can import a class list exported from Pronote or École Directe (CSV, text or Excel), or a pasted list; each pupil then gets a personal code to join the class. Galac6 does not connect directly to Pronote or École Directe.
 
 ## Pricing
 
