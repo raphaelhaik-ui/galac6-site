@@ -731,6 +731,9 @@ def build_page(group, lang, D, countries, errors):
 
     # ── bandeau d'information traduit, sous le menu (es, it, de, pt, nl ; l'anglais a déjà le bandeau du haut) ──
     if lang != 'en':
+        # Un seul bandeau par page (02/11/2026) : le bandeau traduit remplace le bandeau anglais du haut
+        for tag in soup.find_all('div', id='g6-intl-banner'):
+            tag.decompose()
         notice = BeautifulSoup('<div class="lang-notice" role="note">%s</div>' % need('gen.notice'), 'html.parser').div
         anchor = soup.find('div', class_='navbar-wrapper')
         if anchor is not None:
