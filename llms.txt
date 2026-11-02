@@ -72,6 +72,18 @@ Languages of the website: French (main), English, Spanish, Italian, German, Port
 ## Blog (French)
 
 - [Blog](https://galac6.io/blog): advice for families and teachers, from CP to Terminale.
+- [Galac6 ou Eliott](https://galac6.io/blog/galac6-ou-eliott): comparison of two French AI tutors that guide pupils without giving the answer: Galac6 (CP to Terminale, dictations, mental maths, marked mock brevets) and Eliott (6e to higher education).
+- [Galac6 ou ChatGPT pour les devoirs](https://galac6.io/blog/galac6-ou-chatgpt-devoirs): the difference between ChatGPT, a general assistant with a study mode, and Galac6, a tutor built only for pupils from CP to Terminale on the French curriculum.
+- [Galac6 ou NotebookLM pour les fiches de révision](https://galac6.io/blog/galac6-ou-notebooklm-fiches): NotebookLM turns your own sources into study guides; Galac6 makes a revision sheet from a photo of the pupil's lesson, then quizzes the pupil with a mark out of 20.
+- [Alternatives à SchoolMouv, Kartable et Maxicours avec de l'IA](https://galac6.io/blog/alternatives-schoolmouv-kartable-ia): how course-and-exercise platforms (SchoolMouv, Kartable, myMaxicours, Kwyk) compare with alternatives built around an AI tutor such as Galac6.
+- [Quelle IA pour les devoirs sans donner les réponses](https://galac6.io/blog/ia-devoirs-enfant-sans-reponses): for parents: choose an AI that guides with questions and hints instead of writing the solution (ChatGPT study mode, Gemini guided learning, Khanmigo, Galac6).
+- [Galac6 pour la dictée](https://galac6.io/blog/galac6-dictee): over 2,000 dictations read aloud from CP to 3e, marked mistake by mistake with the rule explained and a mark out of 10.
+- [Galac6 pour le calcul mental](https://galac6.io/blog/galac6-calcul-mental): short mental maths series on the class curriculum, five difficulty levels, answers computed by code and never guessed by an AI.
+- [Préparer le brevet 2027 avec une IA](https://galac6.io/blog/preparer-brevet-avec-ia): timed mock brevets on 129 official papers (2019 to 2026) in the 4 written papers, marked by the AI from the mark scheme, then reworking each mistake.
+- [Galac6 pour un professeur de maths](https://galac6.io/blog/galac6-professeur-maths): quizzes and homework with checked answers, class mental maths with MuscuMath, and follow-up of each pupil topic by topic; the teacher validates every question and mark.
+- [Galac6 pour un professeur de français](https://galac6.io/blog/galac6-professeur-francais): dictations read and marked automatically, paper dictation copies marked from a photo, and French bac training; the teacher keeps control of the marking.
+- [Un tuteur IA qui suit le programme de l'Éducation nationale](https://galac6.io/blog/ia-programme-education-nationale): seven points to check before trusting an AI tutor that claims to follow the French national curriculum.
+- [Quelle IA pour les lycées français à l'étranger](https://galac6.io/blog/ia-lycees-francais-etranger): for pupils in French schools abroad: an AI that follows the French curriculum, prepares for the bac on official papers, including those set outside France, and makes the pupil think.
 - [PISA 2025 et l'école du futur](https://galac6.io/blog/pisa-2025-ecole-du-futur): France's PISA 2025 scores, what the OECD says about AI and pupil autonomy, and three questions to judge an AI for education.
 - [L'IA pour les devoirs sans tricher](https://galac6.io/blog/ia-devoirs-sans-tricher): the difference between cheating and learning with AI, and rules for home.
 - [Réviser le brevet mois par mois](https://galac6.io/blog/reviser-brevet-mois-par-mois): how the brevet is calculated and a month-by-month revision plan for 3e.
