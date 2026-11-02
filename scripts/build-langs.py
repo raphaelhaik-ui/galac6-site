@@ -422,6 +422,13 @@ def organization_ld(lang):
     return {'@type': 'Organization', '@id': SITE + '/#organization', 'name': 'Galac6', 'url': SITE + '/',
             'logo': SITE + '/icons/logo.png', 'slogan': "L'IA au service de la pédagogie",
             'description': ORG_DESC.get(lang, ORG_DESC['en']), 'email': 'hello@galac6.io',
+            # Fiche d'identité (02/11/2026) : société, fondateur et comptes officiels, à garder sur tous les accueils
+            'legalName': 'RHK CONSEIL',
+            'address': {'@type': 'PostalAddress', 'streetAddress': '19 rue de Croulebarbe', 'postalCode': '75013',
+                        'addressLocality': 'Paris', 'addressCountry': 'FR'},
+            'founder': {'@type': 'Person', 'name': 'Raphaël Haïk', 'sameAs': 'https://www.linkedin.com/in/raphaelhaik'},
+            'sameAs': ['https://www.linkedin.com/company/galac6', 'https://www.facebook.com/profile.php?id=61586374984363'],
+            'contactPoint': {'@type': 'ContactPoint', 'contactType': 'customer support', 'email': 'hello@galac6.io'},
             'areaServed': AREA_SERVED, 'knowsLanguage': ALL}
 
 
