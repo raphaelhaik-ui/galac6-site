@@ -228,6 +228,104 @@
       /* Menu : une seule ligne, plus serré sur écran moyen */
     .navbar-links a { white-space: nowrap; }
     @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
+
+    /* Chapitrage copié de blog/pisa-2025-ecole-du-futur.html */
+    /* Version facile à lire : encadré, graphiques en barres, schémas */
+    .plan { background: rgba(124,92,252,0.08); border: 1px solid rgba(124,92,252,0.3); border-radius: 14px; padding: 1.1rem 1.4rem 1rem; margin: 0 0 1.4rem; }
+    .plan h2 { margin: 0 0 0.6rem; font-size: 1.15rem; }
+    .plan ol { margin: 0 0 0.6rem 1.2rem; padding: 0; }
+    .plan li { margin-bottom: 0.45rem; line-height: 1.5; }
+    .plan li::marker { color: var(--primary-light); font-weight: 800; }
+    .plan a { color: var(--text); text-decoration: none; }
+    .plan a strong { color: var(--primary-light); }
+    .plan a:hover strong { text-decoration: underline; }
+    .plan .plan-fin { margin: 0; font-size: 0.95rem; color: var(--text-muted); }
+    .plan .plan-fin a { color: var(--primary-light); font-weight: 700; }
+    .essentiel { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--primary); border-radius: 14px; padding: 1.2rem 1.4rem 0.4rem; margin: 0 0 2rem; }
+    .essentiel h2 { margin: 0 0 0.7rem; font-size: 1.15rem; }
+    .essentiel ul { margin-left: 1.1rem; }
+      html { scroll-padding-top: 140px; }
+
+    /* Chapitrage : parties numérotées, sommaire collant, barres d'avancement */
+    .art-layout { max-width: 760px; margin: 0 auto; }
+    .art-layout > .article { max-width: 760px; }
+    .article h2.sec { display: flex; align-items: center; gap: 0.85rem; font-size: clamp(1.55rem, 3.6vw, 1.95rem); font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; color: var(--text); margin: 3.4rem 0 1.2rem; padding-top: 1.6rem; border-top: 1px solid var(--border); position: relative; }
+    .article h2.sec::before { content: ""; position: absolute; top: -1px; left: 0; width: 72px; height: 2px; background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); }
+    .sec-n { flex: none; width: 2.6rem; height: 2.6rem; border-radius: 12px; display: grid; place-items: center; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-size: 1.25rem; font-weight: 800; letter-spacing: 0; box-shadow: 0 6px 18px rgba(124,92,252,0.28); }
+    .faq h2.sec { margin-top: 3.4rem; }
+    .related h2.sec-src { scroll-margin-top: 140px; }
+    .article h3.sub { display: flex; align-items: baseline; gap: 0.6rem; font-size: 1.18rem; margin: 2rem 0 0.6rem; padding-left: 0.85rem; border-left: 2px solid rgba(124,92,252,0.45); }
+    .sub-n { flex: none; font-size: 0.9rem; font-weight: 800; color: var(--primary-light); font-variant-numeric: tabular-nums; }
+
+    /* Sommaire en tête */
+    .plan-toc { list-style: none; margin: 0 !important; padding: 0; display: grid; gap: 0.15rem; }
+    .plan-toc li { margin: 0; }
+    .plan-toc a { display: flex; align-items: center; gap: 0.7rem; padding: 0.45rem 0.4rem; border-radius: 10px; color: var(--text); text-decoration: none; min-height: 44px; }
+    .plan-toc a:hover { background: rgba(124,92,252,0.12); text-decoration: none; }
+    .pt-n { flex: none; width: 1.8rem; height: 1.8rem; border-radius: 8px; display: grid; place-items: center; background: rgba(124,92,252,0.18); color: var(--primary-light); font-weight: 800; font-size: 0.9rem; }
+    .pt-t { font-weight: 700; line-height: 1.3; }
+    .plan .pt-d { margin: -0.1rem 0 0.4rem 2.9rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); }
+    .plan .pt-d strong { color: var(--text); }
+    .pt-src .pt-n { background: transparent; border: 1px dashed rgba(167,139,250,0.5); }
+
+    /* Lien « Revenir au sommaire » (téléphone et tablette) */
+    .article p.back-toc { margin: 1.6rem 0 0; font-size: 0.85rem; }
+    .back-toc a { display: inline-flex; align-items: center; gap: 0.35rem; min-height: 44px; color: var(--text-muted); }
+    .back-toc a:hover { color: var(--primary-light); }
+    .back-toc svg, .toc-btn svg, .toc-close svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* Barre d'avancement horizontale, sous le menu (téléphone et tablette) */
+    .read-progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; pointer-events: none; }
+    .read-progress span { display: block; height: 100%; width: 100%; transform-origin: 0 50%; transform: scaleX(0); background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); }
+
+    /* Bouton et panneau « Sommaire » (téléphone et tablette) */
+    .toc-btn { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 90; display: inline-flex; align-items: center; gap: 0.45rem; min-height: 44px; padding: 0 1rem; border-radius: 999px; border: 1px solid rgba(124,92,252,0.45); background: rgba(19,19,31,0.92); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); color: var(--text); font: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,0.4); opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity 0.2s, transform 0.2s; }
+    .toc-btn.show { opacity: 1; transform: none; pointer-events: auto; }
+    .toc-btn-n { color: var(--primary-light); font-variant-numeric: tabular-nums; }
+    .toc-sheet[hidden] { display: none; }
+    .toc-sheet { position: fixed; inset: 0; z-index: 400; }
+    .toc-sheet-bg { position: absolute; inset: 0; background: rgba(5,5,12,0.6); }
+    .toc-sheet-panel { position: absolute; left: 0; right: 0; bottom: 0; max-height: 80vh; overflow-y: auto; background: var(--bg-card); border-top: 1px solid rgba(124,92,252,0.4); border-radius: 18px 18px 0 0; padding: 0.8rem 16px calc(1rem + env(safe-area-inset-bottom, 0px)); }
+    .toc-sheet-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem; }
+    .toc-sheet-head p { font-weight: 800; color: var(--text); }
+    .toc-close { display: grid; place-items: center; width: 44px; height: 44px; border: 0; background: none; color: var(--text-muted); cursor: pointer; border-radius: 10px; }
+    .toc-sheet .plan-toc a.is-active { background: rgba(124,92,252,0.16); }
+    .toc-sheet .plan-toc a.is-active .pt-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; }
+
+    /* Sommaire collant à côté du texte (ordinateur) */
+    .toc-side { display: none; }
+    @media (min-width: 1024px) {
+      .art-layout { max-width: 1120px; display: flex; align-items: flex-start; gap: 2rem; padding: 0 1.5rem; }
+      .art-layout > .article { flex: 1 1 auto; min-width: 0; margin: 0; padding-left: 0; padding-right: 0; }
+      .toc-side { display: block; flex: 0 0 230px; position: sticky; top: 150px; margin-top: 3rem; max-height: calc(100vh - 170px); overflow-y: auto; padding: 0.2rem 0.2rem 1rem; }
+      .read-progress, .toc-btn, .toc-sheet, .back-toc { display: none !important; }
+    }
+    @media (min-width: 1200px) { .toc-side { flex-basis: 260px; } }
+    .toc-side-title { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin: 0 0 0.8rem; }
+    .toc-track { position: relative; }
+    .toc-rail { position: absolute; left: calc(0.8rem - 1px); width: 2px; background: var(--border); border-radius: 2px; }
+    .toc-fill { position: absolute; left: 0; top: 0; width: 100%; height: 0; border-radius: 2px; background: linear-gradient(180deg, var(--gradient-start), var(--gradient-end)); }
+    .toc-list { list-style: none; margin: 0; padding: 0; position: relative; }
+    .toc-list li { margin: 0; }
+    .toc-list a { display: flex; align-items: flex-start; gap: 0.65rem; padding: 0.4rem 0.3rem 0.4rem 0; color: var(--text-muted); font-size: 0.88rem; line-height: 1.35; text-decoration: none; transition: color 0.15s; }
+    .toc-list a:hover { color: var(--text); text-decoration: none; }
+    .toc-n { position: relative; z-index: 1; flex: none; width: 1.6rem; height: 1.6rem; border-radius: 50%; display: grid; place-items: center; font-size: 0.75rem; font-weight: 800; background: var(--bg); border: 2px solid var(--border); color: var(--text-muted); transition: background 0.2s, border-color 0.2s, color 0.2s; }
+    .toc-t { padding-top: 0.12rem; }
+    .toc-list a.is-done .toc-n { border-color: var(--primary); color: var(--primary-light); }
+    .toc-list a.is-active { color: var(--text); font-weight: 700; }
+    .toc-list a.is-active .toc-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); border-color: transparent; color: #fff; box-shadow: 0 0 0 4px rgba(124,92,252,0.22); }
+    .toc-src .toc-n { width: 1.6rem; }
+    .toc-src .toc-n::after { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+    /* V2 : Galac6 mis en avant dans les sommaires */
+    .g6-tag { flex: none; display: inline-block; margin-left: auto; padding: 0.05rem 0.5rem; border-radius: 999px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.03em; line-height: 1.5; color: #d9ccff; background: rgba(124,92,252,0.22); border: 1px solid rgba(167,139,250,0.4); align-self: center; }
+    .plan-toc li.is-g6, .toc-sheet .plan-toc li.is-g6 { background: rgba(124,92,252,0.1); border: 1px solid rgba(167,139,250,0.32); border-radius: 12px; margin: 0.15rem 0; }
+    .plan-toc li.is-g6 .pt-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; }
+    .plan .plan-toc li.is-g6 .pt-d { margin-right: 0.6rem; }
+    .toc-list li.is-g6 > a { background: rgba(124,92,252,0.1); border: 1px solid rgba(167,139,250,0.3); border-radius: 10px; margin: 0.15rem 0 0.15rem calc(-0.3rem - 1px); padding-left: 0.3rem; color: var(--text); flex-wrap: wrap; row-gap: 0.25rem; }
+    .toc-list li.is-g6 .toc-t { flex: 1 1 0; min-width: 0; }
+    .toc-list li.is-g6 .g6-tag { margin-left: 0; margin-top: 0.1rem; align-self: flex-start; }
+    @media (prefers-reduced-motion: reduce) { .toc-btn, .toc-n, .toc-list a { transition: none; } html { scroll-behavior: auto; } }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -317,9 +415,11 @@
         <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start, #6366f1), var(--gradient-end, #a855f7)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;" data-i18n="nav.signup">Inscription ou connexion</a>
       </div>
     </nav>
+    <div class="read-progress" aria-hidden="true"><span></span></div>
   </div>
 
   <!-- ARTICLE -->
+  <div class="art-layout">
   <article class="article">
     <nav class="breadcrumb"><a href="/">Accueil</a> › <a href="/blog">Blog</a> › Quelle IA pour les devoirs ?</nav>
 
@@ -328,11 +428,40 @@
 
     <p class="lead">Pour aider votre enfant aux devoirs sans lui donner les réponses, choisissez une IA qui guide par des questions et des indices au lieu d'écrire la solution : c'est le principe du mode étude de ChatGPT, de l'apprentissage guidé de Gemini, de Khanmigo et de Galac6. Galac6 est, en plus, conçu pour le programme français, du CP à la terminale.</p>
 
-    <h2>Pourquoi une IA classique donne-t-elle souvent la réponse ?</h2>
+    <aside class="essentiel" aria-labelledby="essentiel-titre">
+      <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
+      <ul>
+        <li>Un assistant généraliste donne souvent la <strong>solution complète</strong> : le devoir est rendu, mais rien n'a été appris.</li>
+        <li>Selon le cadre d'usage publié par l'Éducation nationale en juin 2025, faire réaliser un devoir par une IA sans autorisation de l'enseignant et sans travail personnel est une <strong>fraude</strong>.</li>
+        <li>Le mode étude de ChatGPT, l'apprentissage guidé de Gemini et Khanmigo <strong>guident par des questions et des indices</strong>. Les deux premiers sont des modes à choisir ; l'offre familles de Khanmigo est réservée aux personnes qui vivent aux États-Unis.</li>
+        <li>Galac6 suit toujours une <strong>pédagogie socratique</strong>, sans mode à activer, sur les programmes français du CP à la terminale, avec des données hébergées en France.</li>
+        <li>Quel que soit l'outil : votre enfant cherche d'abord seul, demande un indice plutôt que la réponse, et doit pouvoir réexpliquer ce qu'il a fait.</li>
+      </ul>
+    </aside>
+
+    <nav class="plan" id="sommaire" aria-labelledby="plan-titre">
+      <h2 id="plan-titre">Ce que vous allez apprendre</h2>
+      <ol class="plan-toc">
+        <li><a href="#ia-classique"><span class="pt-n">1</span><span class="pt-t">Pourquoi l'IA donne la réponse</span></a></li>
+        <li><a href="#criteres"><span class="pt-n">2</span><span class="pt-t">Les critères pour choisir</span></a></li>
+        <li><a href="#chatgpt-mode-etude"><span class="pt-n">3</span><span class="pt-t">Le mode étude de ChatGPT</span></a></li>
+        <li><a href="#gemini"><span class="pt-n">4</span><span class="pt-t">L'apprentissage guidé de Gemini</span></a></li>
+        <li><a href="#khanmigo"><span class="pt-n">5</span><span class="pt-t">Khanmigo en France</span></a></li>
+        <li class="is-g6"><a href="#galac6"><span class="pt-n">6</span><span class="pt-t">Ce que propose Galac6</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#bien-utiliser"><span class="pt-n">7</span><span class="pt-t">Bien utiliser l'IA à la maison</span></a></li>
+        <li class="is-g6"><a href="#prix"><span class="pt-n">8</span><span class="pt-t">Combien coûte Galac6</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#questions-frequentes"><span class="pt-n">9</span><span class="pt-t">Questions fréquentes</span></a></li>
+        <li class="pt-src"><a href="#sources"><span class="pt-n" aria-hidden="true"></span><span class="pt-t">Sources</span></a></li>
+      </ol>
+    </nav>
+
+    <h2 id="ia-classique">Pourquoi une IA classique donne-t-elle souvent la réponse ?</h2>
     <p>Un assistant généraliste est fait pour répondre à la demande telle qu'elle est posée. Si votre enfant colle l'énoncé d'un exercice, il reçoit souvent la solution complète, rédigée proprement. Le devoir est rendu, mais rien n'a été appris, et la difficulté revient le jour du contrôle.</p>
     <p>Le cadre d'usage de l'IA en éducation publié par le ministère de l'Éducation nationale en juin 2025 est clair : faire réaliser un devoir par une IA générative sans autorisation de l'enseignant et sans travail personnel d'appropriation est considéré comme une fraude. Ce cadre prévoit un usage des IA génératives en classe à partir de la 4e, encadré par l'enseignant. Bonne nouvelle : plusieurs outils proposent désormais un mode pensé pour apprendre plutôt que pour répondre.</p>
 
-    <h2>Quels critères pour choisir une IA d'aide aux devoirs ?</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="criteres">Quels critères pour choisir une IA d'aide aux devoirs ?</h2>
     <ol class="steps">
       <li><strong>Elle guide au lieu de répondre.</strong> Elle demande à l'enfant ce qu'il a compris, découpe l'exercice en étapes et donne des indices de plus en plus précis.</li>
       <li><strong>Elle suit le programme de sa classe.</strong> Les méthodes et le vocabulaire attendus en France ne sont pas toujours ceux d'un autre pays.</li>
@@ -342,17 +471,25 @@
       <li><strong>Vous pouvez suivre les progrès.</strong> Un rapport ou un historique vous aide à voir si votre enfant apprend vraiment.</li>
     </ol>
 
-    <h2>Le mode étude de ChatGPT, est-ce suffisant ?</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="chatgpt-mode-etude">Le mode étude de ChatGPT, est-ce suffisant ?</h2>
     <p>OpenAI a lancé le mode étude (« study mode ») de ChatGPT le 29 juillet 2025. Selon OpenAI, il aide à travailler un problème étape par étape au lieu de donner simplement la réponse, avec des questions et des indices. Il s'active depuis les outils de ChatGPT, sur le web et dans les applications.</p>
     <p>C'est un vrai progrès pour un assistant généraliste. Deux points à connaître : c'est un mode que l'on choisit, donc l'élève peut revenir à une conversation classique ; et le centre d'aide d'OpenAI précise qu'il peut arriver que le mode étude donne une réponse directe. Les conditions d'utilisation d'OpenAI fixent un âge minimum de 13 ans, avec l'accord d'un parent avant 18 ans.</p>
 
-    <h2>Et l'apprentissage guidé de Gemini ?</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="gemini">Et l'apprentissage guidé de Gemini ?</h2>
     <p>Google a présenté le 6 août 2025 « Guided Learning », l'apprentissage guidé de Gemini. Selon Google, ce mode aide à comprendre un sujet plutôt qu'à obtenir une réponse rapide : il découpe les problèmes étape par étape et peut s'appuyer sur des images, des schémas, des vidéos et des questionnaires. Comme pour ChatGPT, il s'agit d'un mode à sélectionner dans un assistant généraliste.</p>
 
-    <h2>Khanmigo est-il disponible pour les familles en France ?</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="khanmigo">Khanmigo est-il disponible pour les familles en France ?</h2>
     <p>Khanmigo est le tuteur IA de Khan Academy, une organisation à but non lucratif. Son site indique qu'il pousse l'élève à réfléchir et à résoudre les problèmes sans lui donner directement les réponses, de l'école primaire à l'université. En revanche, le même site précise que l'offre pour les parents et les élèves est réservée aux personnes qui vivent aux États-Unis, avec une adresse de facturation américaine. Ses contenus suivent le système scolaire américain.</p>
 
-    <h2>Que propose Galac6 ?</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="galac6">Que propose Galac6 ?</h2>
     <p>Galac6 est un tuteur IA conçu uniquement pour les élèves, du CP à la terminale, sur les programmes de l'Éducation nationale. Il n'y a pas de mode à activer : le tuteur suit toujours une pédagogie socratique.</p>
     <ul>
       <li><strong>Une aide sur un exercice précis</strong> : votre enfant prend son exercice en photo ou le recopie. Galac6 lui demande ce qu'il a déjà compris, puis le fait avancer étape par étape avec des questions et des indices.</li>
@@ -367,15 +504,21 @@
       <a href="https://galac6web.netlify.app/" class="cta-btn">Essayer l'aide aux devoirs →</a>
     </div>
 
-    <h2>Comment bien utiliser une IA pour les devoirs à la maison ?</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="bien-utiliser">Comment bien utiliser une IA pour les devoirs à la maison ?</h2>
     <p>Quel que soit l'outil, quelques règles simples font la différence. Votre enfant cherche d'abord seul, puis demande un indice, jamais la réponse. Il doit pouvoir vous réexpliquer ce qu'il a fait avec ses mots. Il vérifie avec son cours et respecte les consignes de son professeur. Pour les plus jeunes, mieux vaut un outil conçu pour les enfants et un parent à proximité. Un bon signe : il sait refaire seul un exercice semblable, sans écran. Nous détaillons ces repères dans <a href="/blog/ia-devoirs-sans-tricher">L'IA pour faire ses devoirs sans tricher</a> et dans <a href="/blog/pisa-2025-ecole-du-futur">PISA 2025 et l'école du futur</a>.</p>
 
-    <h2>Combien coûte Galac6 ?</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="prix">Combien coûte Galac6 ?</h2>
     <p>Galac6 est un service payant, que l'on peut essayer avec la formule Découverte. La formule Découverte coûte 0 €, sans carte bancaire et sans limite de durée : elle donne accès à toutes les fonctionnalités en quantité limitée, rechargée chaque mois. L'offre Élève coûte 69 € par an ou 7,99 € par mois, et l'offre Famille, jusqu'à 4 enfants, 99 € par an ou 11,99 € par mois : elles ouvrent tout Galac6 en illimité. Chaque mois, la formule Découverte comprend 5 messages au tuteur, une dictée, un quiz, une aide aux devoirs avec photo et un sujet type brevet ou bac. Voir les <a href="/tarifs">tarifs</a>.</p>
+
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <!-- FAQ -->
     <section class="faq">
-      <h2>Questions fréquentes</h2>
+      <h2 id="questions-frequentes">Questions fréquentes</h2>
       <h3>Quelle IA utiliser pour aider mon enfant aux devoirs sans lui donner les réponses ?</h3>
       <p>Choisissez une IA qui guide par des questions et des indices au lieu d'écrire la solution. Le mode étude de ChatGPT, l'apprentissage guidé de Gemini, Khanmigo et Galac6 fonctionnent ainsi. Galac6 est en plus conçu pour les élèves du CP à la terminale, sur les programmes de l'Éducation nationale, avec des données hébergées en France.</p>
       <h3>Le mode étude de ChatGPT empêche-t-il de donner la réponse ?</h3>
@@ -390,9 +533,11 @@
       <p>La formule Découverte, à 0 €, sans carte bancaire et sans limite de durée, donne accès à toutes les fonctionnalités en quantité limitée, rechargée chaque mois. L'offre Élève coûte 69 € par an ou 7,99 € par mois ; l'offre Famille, jusqu'à 4 enfants, 99 € par an ou 11,99 € par mois.</p>
     </section>
 
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
     <!-- Sources -->
     <div class="related">
-      <h2>Sources</h2>
+      <h2 id="sources">Sources</h2>
       <ul>
         <li><a href="https://www.education.gouv.fr/cadre-d-usage-de-l-ia-en-education-450647" target="_blank" rel="noopener">Ministère de l'Éducation nationale : cadre d'usage de l'IA en éducation</a></li>
         <li><a href="https://openai.com/index/chatgpt-study-mode/" target="_blank" rel="noopener">OpenAI : présentation du mode étude de ChatGPT (en anglais)</a></li>
@@ -423,6 +568,44 @@
     </div>
   </article>
 
+    <aside class="toc-side" aria-label="Sommaire de l'article">
+      <p class="toc-side-title">Sommaire</p>
+      <div class="toc-track"><span class="toc-rail" aria-hidden="true"><span class="toc-fill"></span></span>
+      <ol class="toc-list" id="toc-side-list">
+        <li><a href="#ia-classique"><span class="toc-n">1</span><span class="toc-t">Pourquoi l'IA donne la réponse</span></a></li>
+        <li><a href="#criteres"><span class="toc-n">2</span><span class="toc-t">Les critères pour choisir</span></a></li>
+        <li><a href="#chatgpt-mode-etude"><span class="toc-n">3</span><span class="toc-t">Le mode étude de ChatGPT</span></a></li>
+        <li><a href="#gemini"><span class="toc-n">4</span><span class="toc-t">L'apprentissage guidé de Gemini</span></a></li>
+        <li><a href="#khanmigo"><span class="toc-n">5</span><span class="toc-t">Khanmigo en France</span></a></li>
+        <li class="is-g6"><a href="#galac6"><span class="toc-n">6</span><span class="toc-t">Ce que propose Galac6</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#bien-utiliser"><span class="toc-n">7</span><span class="toc-t">Bien utiliser l'IA à la maison</span></a></li>
+        <li class="is-g6"><a href="#prix"><span class="toc-n">8</span><span class="toc-t">Combien coûte Galac6</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#questions-frequentes"><span class="toc-n">9</span><span class="toc-t">Questions fréquentes</span></a></li>
+        <li class="toc-src"><a href="#sources"><span class="toc-n" aria-hidden="true"></span><span class="toc-t">Sources</span></a></li>
+      </ol></div>
+    </aside>
+  </div>
+
+  <button class="toc-btn" id="toc-btn" type="button" aria-controls="toc-sheet" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg><span>Sommaire</span><span class="toc-btn-n" id="toc-btn-n"></span></button>
+  <div class="toc-sheet" id="toc-sheet" hidden>
+    <div class="toc-sheet-bg"></div>
+    <div class="toc-sheet-panel" role="dialog" aria-modal="true" aria-label="Sommaire de l'article">
+      <div class="toc-sheet-head"><p>Sommaire</p><button class="toc-close" type="button" aria-label="Fermer le sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg></button></div>
+      <ol class="plan-toc">
+        <li><a href="#ia-classique"><span class="pt-n">1</span><span class="pt-t">Pourquoi l'IA donne la réponse</span></a></li>
+        <li><a href="#criteres"><span class="pt-n">2</span><span class="pt-t">Les critères pour choisir</span></a></li>
+        <li><a href="#chatgpt-mode-etude"><span class="pt-n">3</span><span class="pt-t">Le mode étude de ChatGPT</span></a></li>
+        <li><a href="#gemini"><span class="pt-n">4</span><span class="pt-t">L'apprentissage guidé de Gemini</span></a></li>
+        <li><a href="#khanmigo"><span class="pt-n">5</span><span class="pt-t">Khanmigo en France</span></a></li>
+        <li class="is-g6"><a href="#galac6"><span class="pt-n">6</span><span class="pt-t">Ce que propose Galac6</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#bien-utiliser"><span class="pt-n">7</span><span class="pt-t">Bien utiliser l'IA à la maison</span></a></li>
+        <li class="is-g6"><a href="#prix"><span class="pt-n">8</span><span class="pt-t">Combien coûte Galac6</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#questions-frequentes"><span class="pt-n">9</span><span class="pt-t">Questions fréquentes</span></a></li>
+        <li class="pt-src"><a href="#sources"><span class="pt-n" aria-hidden="true"></span><span class="pt-t">Sources</span></a></li>
+      </ol>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer>
     <div>Galac6. L'IA au service de la pédagogie</div>
@@ -439,6 +622,88 @@
     </div>
   </footer>
 
+  <script>
+  /* Chapitrage : partie en cours (IntersectionObserver), barres d'avancement, panneau Sommaire */
+  (function () {
+    var article = document.querySelector('.article');
+    var links = Array.prototype.slice.call(document.querySelectorAll('#toc-side-list a'));
+    var heads = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+    var sheetLinks = Array.prototype.slice.call(document.querySelectorAll('#toc-sheet a'));
+    var bar = document.querySelector('.read-progress span');
+    var rail = document.querySelector('.toc-rail'), fill = document.querySelector('.toc-fill');
+    var btn = document.getElementById('toc-btn'), btnN = document.getElementById('toc-btn-n');
+    var sheet = document.getElementById('toc-sheet'), plan = document.getElementById('sommaire');
+    if (!article || !heads.length) return;
+    var LINE = 170; /* ligne de lecture, sous le menu collant */
+    /* hauteur du menu collant, pour l'en-tête collant du tableau comparatif */
+    function navH() { var n = document.querySelector('.navbar-wrapper'); if (n) document.documentElement.style.setProperty('--nav-h', n.offsetHeight + 'px'); }
+    navH(); window.addEventListener('resize', navH);
+    var active = -1, ticking = false;
+
+    function absTop(el) { return el.getBoundingClientRect().top + window.pageYOffset; }
+    function center(i) { var n = links[i].querySelector('.toc-n'); return n.offsetTop + n.offsetHeight / 2; } /* relatif à la liste */
+
+    function findActive() {
+      var idx = -1;
+      for (var i = 0; i < heads.length; i++) { if (heads[i].getBoundingClientRect().top - LINE <= 0) idx = i; }
+      if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4) idx = heads.length - 1;
+      return idx;
+    }
+
+    function setActive(idx) {
+      if (idx === active) return;
+      active = idx;
+      links.forEach(function (a, i) {
+        a.classList.toggle('is-active', i === idx);
+        a.classList.toggle('is-done', i < idx);
+        if (i === idx) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+      });
+      sheetLinks.forEach(function (a, i) { a.classList.toggle('is-active', i === idx); });
+      if (btnN) btnN.textContent = idx >= 0 ? (links[idx].querySelector('.toc-n').textContent || '') : '';
+    }
+
+    function update() {
+      ticking = false;
+      setActive(findActive());
+      var y = window.pageYOffset, start = absTop(article), end = start + article.offsetHeight - window.innerHeight;
+      var p = Math.min(1, Math.max(0, (y - start) / Math.max(1, end - start)));
+      if (bar) bar.style.transform = 'scaleX(' + p + ')';
+      if (rail && rail.offsetParent) {
+        var c0 = center(0), cN = center(links.length - 1);
+        rail.style.top = c0 + 'px'; rail.style.height = (cN - c0) + 'px';
+        var h = 0;
+        if (active >= 0) {
+          var a = active, ca = center(a);
+          if (a < heads.length - 1) {
+            var t0 = absTop(heads[a]), t1 = absTop(heads[a + 1]);
+            var w = Math.min(1, Math.max(0, (y + LINE - t0) / Math.max(1, t1 - t0)));
+            h = ca - c0 + w * (center(a + 1) - ca);
+          } else { h = ca - c0; }
+        }
+        fill.style.height = Math.max(0, h) + 'px';
+      }
+      if (btn && plan) btn.classList.toggle('show', plan.getBoundingClientRect().bottom < 0);
+    }
+    function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } }
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function () { setActive(findActive()); }, { rootMargin: '-' + LINE + 'px 0px -55% 0px' });
+      heads.forEach(function (h) { io.observe(h); });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    update();
+
+    /* Panneau Sommaire sur téléphone */
+    function openSheet() { sheet.hidden = false; btn.setAttribute('aria-expanded', 'true'); var c = sheet.querySelector('.toc-close'); if (c) c.focus(); }
+    function closeSheet() { sheet.hidden = true; btn.setAttribute('aria-expanded', 'false'); }
+    if (btn && sheet) {
+      btn.addEventListener('click', openSheet);
+      sheet.addEventListener('click', function (e) { if (e.target.closest('.toc-sheet-bg, .toc-close, a')) closeSheet(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !sheet.hidden) { closeSheet(); btn.focus(); } });
+    }
+  })();
+  </script>
   <script src="/cookie-consent.js"></script>
 </body>
 </html>

@@ -228,6 +228,104 @@
       /* Menu : une seule ligne, plus serré sur écran moyen */
     .navbar-links a { white-space: nowrap; }
     @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
+
+    /* Chapitrage copié de blog/pisa-2025-ecole-du-futur.html */
+    /* Version facile à lire : encadré, graphiques en barres, schémas */
+    .plan { background: rgba(124,92,252,0.08); border: 1px solid rgba(124,92,252,0.3); border-radius: 14px; padding: 1.1rem 1.4rem 1rem; margin: 0 0 1.4rem; }
+    .plan h2 { margin: 0 0 0.6rem; font-size: 1.15rem; }
+    .plan ol { margin: 0 0 0.6rem 1.2rem; padding: 0; }
+    .plan li { margin-bottom: 0.45rem; line-height: 1.5; }
+    .plan li::marker { color: var(--primary-light); font-weight: 800; }
+    .plan a { color: var(--text); text-decoration: none; }
+    .plan a strong { color: var(--primary-light); }
+    .plan a:hover strong { text-decoration: underline; }
+    .plan .plan-fin { margin: 0; font-size: 0.95rem; color: var(--text-muted); }
+    .plan .plan-fin a { color: var(--primary-light); font-weight: 700; }
+    .essentiel { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--primary); border-radius: 14px; padding: 1.2rem 1.4rem 0.4rem; margin: 0 0 2rem; }
+    .essentiel h2 { margin: 0 0 0.7rem; font-size: 1.15rem; }
+    .essentiel ul { margin-left: 1.1rem; }
+      html { scroll-padding-top: 140px; }
+
+    /* Chapitrage : parties numérotées, sommaire collant, barres d'avancement */
+    .art-layout { max-width: 760px; margin: 0 auto; }
+    .art-layout > .article { max-width: 760px; }
+    .article h2.sec { display: flex; align-items: center; gap: 0.85rem; font-size: clamp(1.55rem, 3.6vw, 1.95rem); font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; color: var(--text); margin: 3.4rem 0 1.2rem; padding-top: 1.6rem; border-top: 1px solid var(--border); position: relative; }
+    .article h2.sec::before { content: ""; position: absolute; top: -1px; left: 0; width: 72px; height: 2px; background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); }
+    .sec-n { flex: none; width: 2.6rem; height: 2.6rem; border-radius: 12px; display: grid; place-items: center; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-size: 1.25rem; font-weight: 800; letter-spacing: 0; box-shadow: 0 6px 18px rgba(124,92,252,0.28); }
+    .faq h2.sec { margin-top: 3.4rem; }
+    .related h2.sec-src { scroll-margin-top: 140px; }
+    .article h3.sub { display: flex; align-items: baseline; gap: 0.6rem; font-size: 1.18rem; margin: 2rem 0 0.6rem; padding-left: 0.85rem; border-left: 2px solid rgba(124,92,252,0.45); }
+    .sub-n { flex: none; font-size: 0.9rem; font-weight: 800; color: var(--primary-light); font-variant-numeric: tabular-nums; }
+
+    /* Sommaire en tête */
+    .plan-toc { list-style: none; margin: 0 !important; padding: 0; display: grid; gap: 0.15rem; }
+    .plan-toc li { margin: 0; }
+    .plan-toc a { display: flex; align-items: center; gap: 0.7rem; padding: 0.45rem 0.4rem; border-radius: 10px; color: var(--text); text-decoration: none; min-height: 44px; }
+    .plan-toc a:hover { background: rgba(124,92,252,0.12); text-decoration: none; }
+    .pt-n { flex: none; width: 1.8rem; height: 1.8rem; border-radius: 8px; display: grid; place-items: center; background: rgba(124,92,252,0.18); color: var(--primary-light); font-weight: 800; font-size: 0.9rem; }
+    .pt-t { font-weight: 700; line-height: 1.3; }
+    .plan .pt-d { margin: -0.1rem 0 0.4rem 2.9rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); }
+    .plan .pt-d strong { color: var(--text); }
+    .pt-src .pt-n { background: transparent; border: 1px dashed rgba(167,139,250,0.5); }
+
+    /* Lien « Revenir au sommaire » (téléphone et tablette) */
+    .article p.back-toc { margin: 1.6rem 0 0; font-size: 0.85rem; }
+    .back-toc a { display: inline-flex; align-items: center; gap: 0.35rem; min-height: 44px; color: var(--text-muted); }
+    .back-toc a:hover { color: var(--primary-light); }
+    .back-toc svg, .toc-btn svg, .toc-close svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* Barre d'avancement horizontale, sous le menu (téléphone et tablette) */
+    .read-progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; pointer-events: none; }
+    .read-progress span { display: block; height: 100%; width: 100%; transform-origin: 0 50%; transform: scaleX(0); background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); }
+
+    /* Bouton et panneau « Sommaire » (téléphone et tablette) */
+    .toc-btn { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 90; display: inline-flex; align-items: center; gap: 0.45rem; min-height: 44px; padding: 0 1rem; border-radius: 999px; border: 1px solid rgba(124,92,252,0.45); background: rgba(19,19,31,0.92); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); color: var(--text); font: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,0.4); opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity 0.2s, transform 0.2s; }
+    .toc-btn.show { opacity: 1; transform: none; pointer-events: auto; }
+    .toc-btn-n { color: var(--primary-light); font-variant-numeric: tabular-nums; }
+    .toc-sheet[hidden] { display: none; }
+    .toc-sheet { position: fixed; inset: 0; z-index: 400; }
+    .toc-sheet-bg { position: absolute; inset: 0; background: rgba(5,5,12,0.6); }
+    .toc-sheet-panel { position: absolute; left: 0; right: 0; bottom: 0; max-height: 80vh; overflow-y: auto; background: var(--bg-card); border-top: 1px solid rgba(124,92,252,0.4); border-radius: 18px 18px 0 0; padding: 0.8rem 16px calc(1rem + env(safe-area-inset-bottom, 0px)); }
+    .toc-sheet-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem; }
+    .toc-sheet-head p { font-weight: 800; color: var(--text); }
+    .toc-close { display: grid; place-items: center; width: 44px; height: 44px; border: 0; background: none; color: var(--text-muted); cursor: pointer; border-radius: 10px; }
+    .toc-sheet .plan-toc a.is-active { background: rgba(124,92,252,0.16); }
+    .toc-sheet .plan-toc a.is-active .pt-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; }
+
+    /* Sommaire collant à côté du texte (ordinateur) */
+    .toc-side { display: none; }
+    @media (min-width: 1024px) {
+      .art-layout { max-width: 1120px; display: flex; align-items: flex-start; gap: 2rem; padding: 0 1.5rem; }
+      .art-layout > .article { flex: 1 1 auto; min-width: 0; margin: 0; padding-left: 0; padding-right: 0; }
+      .toc-side { display: block; flex: 0 0 230px; position: sticky; top: 150px; margin-top: 3rem; max-height: calc(100vh - 170px); overflow-y: auto; padding: 0.2rem 0.2rem 1rem; }
+      .read-progress, .toc-btn, .toc-sheet, .back-toc { display: none !important; }
+    }
+    @media (min-width: 1200px) { .toc-side { flex-basis: 260px; } }
+    .toc-side-title { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin: 0 0 0.8rem; }
+    .toc-track { position: relative; }
+    .toc-rail { position: absolute; left: calc(0.8rem - 1px); width: 2px; background: var(--border); border-radius: 2px; }
+    .toc-fill { position: absolute; left: 0; top: 0; width: 100%; height: 0; border-radius: 2px; background: linear-gradient(180deg, var(--gradient-start), var(--gradient-end)); }
+    .toc-list { list-style: none; margin: 0; padding: 0; position: relative; }
+    .toc-list li { margin: 0; }
+    .toc-list a { display: flex; align-items: flex-start; gap: 0.65rem; padding: 0.4rem 0.3rem 0.4rem 0; color: var(--text-muted); font-size: 0.88rem; line-height: 1.35; text-decoration: none; transition: color 0.15s; }
+    .toc-list a:hover { color: var(--text); text-decoration: none; }
+    .toc-n { position: relative; z-index: 1; flex: none; width: 1.6rem; height: 1.6rem; border-radius: 50%; display: grid; place-items: center; font-size: 0.75rem; font-weight: 800; background: var(--bg); border: 2px solid var(--border); color: var(--text-muted); transition: background 0.2s, border-color 0.2s, color 0.2s; }
+    .toc-t { padding-top: 0.12rem; }
+    .toc-list a.is-done .toc-n { border-color: var(--primary); color: var(--primary-light); }
+    .toc-list a.is-active { color: var(--text); font-weight: 700; }
+    .toc-list a.is-active .toc-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); border-color: transparent; color: #fff; box-shadow: 0 0 0 4px rgba(124,92,252,0.22); }
+    .toc-src .toc-n { width: 1.6rem; }
+    .toc-src .toc-n::after { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+    /* V2 : Galac6 mis en avant dans les sommaires */
+    .g6-tag { flex: none; display: inline-block; margin-left: auto; padding: 0.05rem 0.5rem; border-radius: 999px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.03em; line-height: 1.5; color: #d9ccff; background: rgba(124,92,252,0.22); border: 1px solid rgba(167,139,250,0.4); align-self: center; }
+    .plan-toc li.is-g6, .toc-sheet .plan-toc li.is-g6 { background: rgba(124,92,252,0.1); border: 1px solid rgba(167,139,250,0.32); border-radius: 12px; margin: 0.15rem 0; }
+    .plan-toc li.is-g6 .pt-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; }
+    .plan .plan-toc li.is-g6 .pt-d { margin-right: 0.6rem; }
+    .toc-list li.is-g6 > a { background: rgba(124,92,252,0.1); border: 1px solid rgba(167,139,250,0.3); border-radius: 10px; margin: 0.15rem 0 0.15rem calc(-0.3rem - 1px); padding-left: 0.3rem; color: var(--text); flex-wrap: wrap; row-gap: 0.25rem; }
+    .toc-list li.is-g6 .toc-t { flex: 1 1 0; min-width: 0; }
+    .toc-list li.is-g6 .g6-tag { margin-left: 0; margin-top: 0.1rem; align-self: flex-start; }
+    @media (prefers-reduced-motion: reduce) { .toc-btn, .toc-n, .toc-list a { transition: none; } html { scroll-behavior: auto; } }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -317,9 +415,11 @@
         <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start, #6366f1), var(--gradient-end, #a855f7)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;" data-i18n="nav.signup">Inscription ou connexion</a>
       </div>
     </nav>
+    <div class="read-progress" aria-hidden="true"><span></span></div>
   </div>
 
   <!-- ARTICLE -->
+  <div class="art-layout">
   <article class="article">
     <nav class="breadcrumb"><a href="/">Accueil</a> › <a href="/blog">Blog</a> › Préparer le brevet avec une IA</nav>
 
@@ -328,11 +428,40 @@
 
     <p class="lead">Pour préparer le brevet 2027 avec une IA, le plus efficace est de passer des brevets blancs chronométrés sur de vrais sujets, puis de retravailler chaque erreur. Galac6 propose 129 sujets officiels du brevet (sessions 2019 à 2026) dans les 4 épreuves écrites, corrigés par l'IA selon le barème, et un oral blanc.</p>
 
-    <h2>Une application d'IA peut-elle vraiment aider à préparer le brevet ?</h2>
+    <aside class="essentiel" aria-labelledby="essentiel-titre">
+      <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
+      <ul>
+        <li>Le plus efficace : passer des <strong>brevets blancs chronométrés sur de vrais sujets</strong>, puis retravailler chaque erreur.</li>
+        <li>Depuis la session 2026, les épreuves finales comptent pour <strong>60 %</strong> de la note du brevet et le contrôle continu pour <strong>40 %</strong>.</li>
+        <li>Galac6 propose <strong>129 sujets officiels</strong> (sessions 2019 à 2026) dans les 4 épreuves écrites. Les sujets créés par l'IA portent toujours la mention « Sujet d'entraînement généré par l'IA ».</li>
+        <li>La correction note chaque question selon le barème, avec mention et bilan. Ce n'est pas un corrigé officiel : elle sert à s'entraîner.</li>
+        <li>Un planning en quatre temps, de la rentrée à juin, et un <strong>oral blanc</strong> à la voix complètent la préparation.</li>
+      </ul>
+    </aside>
+
+    <nav class="plan" id="sommaire" aria-labelledby="plan-titre">
+      <h2 id="plan-titre">Ce que vous allez apprendre</h2>
+      <ol class="plan-toc">
+        <li><a href="#ia-utile"><span class="pt-n">1</span><span class="pt-t">Une IA peut-elle vraiment aider ?</span></a></li>
+        <li><a href="#brevet-blanc"><span class="pt-n">2</span><span class="pt-t">Faire un brevet blanc corrigé</span></a></li>
+        <li><a href="#correction"><span class="pt-n">3</span><span class="pt-t">La correction par l'IA</span></a></li>
+        <li><a href="#vrais-sujets"><span class="pt-n">4</span><span class="pt-t">Vrais sujets ou sujets générés</span></a></li>
+        <li><a href="#organisation"><span class="pt-n">5</span><span class="pt-t">Organiser les révisions</span></a></li>
+        <li><a href="#oral"><span class="pt-n">6</span><span class="pt-t">Préparer l'oral</span></a></li>
+        <li><a href="#travail-a-sa-place"><span class="pt-n">7</span><span class="pt-t">L'IA fait-elle le travail ?</span></a></li>
+        <li class="is-g6"><a href="#prix"><span class="pt-n">8</span><span class="pt-t">Combien coûte la préparation</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#questions-frequentes"><span class="pt-n">9</span><span class="pt-t">Questions fréquentes</span></a></li>
+        <li class="pt-src"><a href="#sources"><span class="pt-n" aria-hidden="true"></span><span class="pt-t">Sources</span></a></li>
+      </ol>
+    </nav>
+
+    <h2 id="ia-utile">Une application d'IA peut-elle vraiment aider à préparer le brevet ?</h2>
     <p>Oui, à condition de l'utiliser pour s'entraîner, pas pour faire le travail. Depuis la session 2026, d'après le ministère de l'Éducation nationale, les épreuves finales comptent pour 60 % de la note du brevet et le contrôle continu pour 40 %. Le diplôme est attribué avec une moyenne finale d'au moins 10 sur 20. Les épreuves écrites restent donc décisives, et elles se préparent comme un sport : en répétant l'effort dans les conditions du match.</p>
     <p>Une IA bien conçue apporte ce qu'il est difficile d'avoir à la maison : un sujet complet au bon format, un chronomètre et surtout <strong>une correction détaillée, disponible tout de suite</strong>. Votre enfant n'attend pas une semaine pour savoir ce qui n'allait pas. Pour les durées et coefficients exacts de la session 2027, consultez la page Eduscol sur les épreuves du DNB, citée dans les sources.</p>
 
-    <h2>Comment faire un brevet blanc en ligne corrigé ?</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="brevet-blanc">Comment faire un brevet blanc en ligne corrigé ?</h2>
     <p>Sur Galac6, un brevet blanc se passe en six étapes :</p>
     <ol class="steps">
       <li><strong>Ouvrir « Brevet blanc écrit »</strong> et choisir l'épreuve : mathématiques, français, sciences ou histoire-géographie et enseignement moral et civique.</li>
@@ -344,7 +473,9 @@
     </ol>
     <p>Chaque brevet blanc reprend la durée, les parties et le barème de l'épreuve. Sur une annale, la note suit le barème officiel de sa session. Tout est détaillé sur la page <a href="/reviser-brevet">réviser le brevet avec l'IA</a>.</p>
 
-    <h2>Que vaut la correction d'un brevet blanc par l'IA ?</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="correction">Que vaut la correction d'un brevet blanc par l'IA ?</h2>
     <p>La correction de Galac6 ne se contente pas d'une note globale. Pour chaque question, votre enfant voit :</p>
     <ul>
       <li>les points obtenus selon le barème du sujet, avec des <strong>points partiels</strong> quand la démarche est engagée ;</li>
@@ -357,11 +488,15 @@
       <p><strong>À garder en tête :</strong> la correction est rédigée par l'IA de Galac6 à partir du barème d'origine. Ce n'est pas un corrigé officiel. Elle sert à s'entraîner et à repérer ses erreurs, pas à prédire la note du jour J.</p>
     </div>
 
-    <h2>Vrais sujets ou sujets générés par l'IA : quelle différence ?</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="vrais-sujets">Vrais sujets ou sujets générés par l'IA : quelle différence ?</h2>
     <p>Galac6 propose <strong>129 sujets officiels du brevet</strong>, des sessions 2019 à 2026 : 35 en mathématiques, 31 en français, 31 en sciences et 32 en histoire-géographie et enseignement moral et civique, avec leurs questions et leurs barèmes d'origine.</p>
     <p>Quand votre enfant a fait le tour des annales d'une matière, il peut continuer sur des <strong>sujets d'entraînement générés par l'IA</strong>, au format de l'épreuve. Ils portent toujours la mention « Sujet d'entraînement généré par l'IA » et ne sont jamais rangés avec les annales. Vous savez donc toujours si votre enfant travaille sur un vrai sujet ou sur un entraînement.</p>
 
-    <h2>Comment organiser les révisions jusqu'au brevet 2027 ?</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="organisation">Comment organiser les révisions jusqu'au brevet 2027 ?</h2>
     <p>Depuis la session 2026, les moyennes de l'année de 3e comptent : le travail régulier dès la rentrée est la première des révisions. Une méthode simple, en quatre temps :</p>
     <ul>
       <li><strong>De la rentrée à décembre</strong> : consolider les bases, faire des fiches au fil des chapitres et entretenir les automatismes de calcul.</li>
@@ -374,18 +509,26 @@
       <a href="https://galac6web.netlify.app/" class="cta-btn">Commencer un brevet blanc →</a>
     </div>
 
-    <h2>Comment préparer l'oral du brevet ?</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="oral">Comment préparer l'oral du brevet ?</h2>
     <p>Dans « Brevet blanc oral », l'élève indique le titre de son projet et son parcours (enseignement pratique interdisciplinaire, Parcours Avenir, Parcours Citoyen, Parcours Santé, Parcours d'éducation artistique et culturelle ou histoire des arts) et ajoute ses documents. Il passe ensuite un oral blanc à la voix : 5 minutes d'exposé et 10 minutes d'entretien, noté sur 20. L'oral blanc à la voix fait partie du Pack Examen.</p>
 
-    <h2>L'IA risque-t-elle de faire le travail à la place de mon enfant ?</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="travail-a-sa-place">L'IA risque-t-elle de faire le travail à la place de mon enfant ?</h2>
     <p>Pendant le brevet blanc, non : votre enfant compose seul, comme le jour de l'examen. Une fois la copie rendue, la correction montre la réponse attendue et explique chaque erreur. Le reste du temps, le tuteur de Galac6 guide l'élève par des questions et des indices, sans faire le travail à sa place. Avec l'offre Famille, vous recevez des rapports de progression pour chaque enfant.</p>
 
-    <h2>Combien coûte la préparation du brevet sur Galac6 ?</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="prix">Combien coûte la préparation du brevet sur Galac6 ?</h2>
     <p>Galac6 est un service payant. La formule Découverte, à 0 €, sans carte bancaire et sans limite de durée, comprend chaque mois un sujet type brevet ou bac, en plus de 5 messages au tuteur, une dictée, un quiz et une aide aux devoirs avec photo. Les offres Élève (69 € par an ou 7,99 € par mois) et Famille (99 € par an ou 11,99 € par mois, jusqu'à 4 enfants) ouvrent tout Galac6 en illimité. Les examens blancs complets et chronométrés sur de vrais sujets font partie du <strong>Pack Examen</strong>, un achat unique valable 12 mois : 19 € par élève, ou 14 € avec un abonnement à l'année. Voir les <a href="/tarifs">tarifs</a>.</p>
+
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <!-- FAQ -->
     <section class="faq">
-      <h2>Questions fréquentes</h2>
+      <h2 id="questions-frequentes">Questions fréquentes</h2>
       <h3>Quelle application utiliser pour préparer le brevet des collèges avec de l'IA ?</h3>
       <p>Galac6 est une application web française pour préparer le brevet des collèges avec l'IA. L'élève passe des brevets blancs chronométrés dans les 4 épreuves écrites, sur 129 sujets officiels des sessions 2019 à 2026 ou sur des sujets d'entraînement générés par l'IA, puis reçoit une correction notée selon le barème, avec mention. Galac6 prépare aussi l'oral du brevet.</p>
       <h3>Comment faire un brevet blanc en ligne corrigé ?</h3>
@@ -400,9 +543,11 @@
       <p>La formule Découverte, à 0 €, comprend chaque mois un sujet type brevet ou bac. Les offres Élève (69 € par an ou 7,99 € par mois) et Famille (99 € par an ou 11,99 € par mois) ouvrent tout Galac6 en illimité. Les examens blancs complets et chronométrés sur de vrais sujets font partie du Pack Examen : 19 € par élève, ou 14 € avec un abonnement à l'année.</p>
     </section>
 
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
     <!-- Sources -->
     <div class="related">
-      <h2>Sources</h2>
+      <h2 id="sources">Sources</h2>
       <ul>
         <li><a href="https://www.education.gouv.fr/diplome-national-du-brevet-2026-le-point-sur-les-nouveautes-470615" target="_blank" rel="noopener">Ministère de l'Éducation nationale : diplôme national du brevet 2026, le point sur les nouveautés</a></li>
         <li><a href="https://eduscol.education.gouv.fr/5607/les-epreuves-du-dnb" target="_blank" rel="noopener">Eduscol : les épreuves du DNB</a></li>
@@ -434,6 +579,44 @@
     </div>
   </article>
 
+    <aside class="toc-side" aria-label="Sommaire de l'article">
+      <p class="toc-side-title">Sommaire</p>
+      <div class="toc-track"><span class="toc-rail" aria-hidden="true"><span class="toc-fill"></span></span>
+      <ol class="toc-list" id="toc-side-list">
+        <li><a href="#ia-utile"><span class="toc-n">1</span><span class="toc-t">Une IA peut-elle vraiment aider ?</span></a></li>
+        <li><a href="#brevet-blanc"><span class="toc-n">2</span><span class="toc-t">Faire un brevet blanc corrigé</span></a></li>
+        <li><a href="#correction"><span class="toc-n">3</span><span class="toc-t">La correction par l'IA</span></a></li>
+        <li><a href="#vrais-sujets"><span class="toc-n">4</span><span class="toc-t">Vrais sujets ou sujets générés</span></a></li>
+        <li><a href="#organisation"><span class="toc-n">5</span><span class="toc-t">Organiser les révisions</span></a></li>
+        <li><a href="#oral"><span class="toc-n">6</span><span class="toc-t">Préparer l'oral</span></a></li>
+        <li><a href="#travail-a-sa-place"><span class="toc-n">7</span><span class="toc-t">L'IA fait-elle le travail ?</span></a></li>
+        <li class="is-g6"><a href="#prix"><span class="toc-n">8</span><span class="toc-t">Combien coûte la préparation</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#questions-frequentes"><span class="toc-n">9</span><span class="toc-t">Questions fréquentes</span></a></li>
+        <li class="toc-src"><a href="#sources"><span class="toc-n" aria-hidden="true"></span><span class="toc-t">Sources</span></a></li>
+      </ol></div>
+    </aside>
+  </div>
+
+  <button class="toc-btn" id="toc-btn" type="button" aria-controls="toc-sheet" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg><span>Sommaire</span><span class="toc-btn-n" id="toc-btn-n"></span></button>
+  <div class="toc-sheet" id="toc-sheet" hidden>
+    <div class="toc-sheet-bg"></div>
+    <div class="toc-sheet-panel" role="dialog" aria-modal="true" aria-label="Sommaire de l'article">
+      <div class="toc-sheet-head"><p>Sommaire</p><button class="toc-close" type="button" aria-label="Fermer le sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg></button></div>
+      <ol class="plan-toc">
+        <li><a href="#ia-utile"><span class="pt-n">1</span><span class="pt-t">Une IA peut-elle vraiment aider ?</span></a></li>
+        <li><a href="#brevet-blanc"><span class="pt-n">2</span><span class="pt-t">Faire un brevet blanc corrigé</span></a></li>
+        <li><a href="#correction"><span class="pt-n">3</span><span class="pt-t">La correction par l'IA</span></a></li>
+        <li><a href="#vrais-sujets"><span class="pt-n">4</span><span class="pt-t">Vrais sujets ou sujets générés</span></a></li>
+        <li><a href="#organisation"><span class="pt-n">5</span><span class="pt-t">Organiser les révisions</span></a></li>
+        <li><a href="#oral"><span class="pt-n">6</span><span class="pt-t">Préparer l'oral</span></a></li>
+        <li><a href="#travail-a-sa-place"><span class="pt-n">7</span><span class="pt-t">L'IA fait-elle le travail ?</span></a></li>
+        <li class="is-g6"><a href="#prix"><span class="pt-n">8</span><span class="pt-t">Combien coûte la préparation</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#questions-frequentes"><span class="pt-n">9</span><span class="pt-t">Questions fréquentes</span></a></li>
+        <li class="pt-src"><a href="#sources"><span class="pt-n" aria-hidden="true"></span><span class="pt-t">Sources</span></a></li>
+      </ol>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer>
     <div>Galac6. L'IA au service de la pédagogie</div>
@@ -450,6 +633,88 @@
     </div>
   </footer>
 
+  <script>
+  /* Chapitrage : partie en cours (IntersectionObserver), barres d'avancement, panneau Sommaire */
+  (function () {
+    var article = document.querySelector('.article');
+    var links = Array.prototype.slice.call(document.querySelectorAll('#toc-side-list a'));
+    var heads = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+    var sheetLinks = Array.prototype.slice.call(document.querySelectorAll('#toc-sheet a'));
+    var bar = document.querySelector('.read-progress span');
+    var rail = document.querySelector('.toc-rail'), fill = document.querySelector('.toc-fill');
+    var btn = document.getElementById('toc-btn'), btnN = document.getElementById('toc-btn-n');
+    var sheet = document.getElementById('toc-sheet'), plan = document.getElementById('sommaire');
+    if (!article || !heads.length) return;
+    var LINE = 170; /* ligne de lecture, sous le menu collant */
+    /* hauteur du menu collant, pour l'en-tête collant du tableau comparatif */
+    function navH() { var n = document.querySelector('.navbar-wrapper'); if (n) document.documentElement.style.setProperty('--nav-h', n.offsetHeight + 'px'); }
+    navH(); window.addEventListener('resize', navH);
+    var active = -1, ticking = false;
+
+    function absTop(el) { return el.getBoundingClientRect().top + window.pageYOffset; }
+    function center(i) { var n = links[i].querySelector('.toc-n'); return n.offsetTop + n.offsetHeight / 2; } /* relatif à la liste */
+
+    function findActive() {
+      var idx = -1;
+      for (var i = 0; i < heads.length; i++) { if (heads[i].getBoundingClientRect().top - LINE <= 0) idx = i; }
+      if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4) idx = heads.length - 1;
+      return idx;
+    }
+
+    function setActive(idx) {
+      if (idx === active) return;
+      active = idx;
+      links.forEach(function (a, i) {
+        a.classList.toggle('is-active', i === idx);
+        a.classList.toggle('is-done', i < idx);
+        if (i === idx) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+      });
+      sheetLinks.forEach(function (a, i) { a.classList.toggle('is-active', i === idx); });
+      if (btnN) btnN.textContent = idx >= 0 ? (links[idx].querySelector('.toc-n').textContent || '') : '';
+    }
+
+    function update() {
+      ticking = false;
+      setActive(findActive());
+      var y = window.pageYOffset, start = absTop(article), end = start + article.offsetHeight - window.innerHeight;
+      var p = Math.min(1, Math.max(0, (y - start) / Math.max(1, end - start)));
+      if (bar) bar.style.transform = 'scaleX(' + p + ')';
+      if (rail && rail.offsetParent) {
+        var c0 = center(0), cN = center(links.length - 1);
+        rail.style.top = c0 + 'px'; rail.style.height = (cN - c0) + 'px';
+        var h = 0;
+        if (active >= 0) {
+          var a = active, ca = center(a);
+          if (a < heads.length - 1) {
+            var t0 = absTop(heads[a]), t1 = absTop(heads[a + 1]);
+            var w = Math.min(1, Math.max(0, (y + LINE - t0) / Math.max(1, t1 - t0)));
+            h = ca - c0 + w * (center(a + 1) - ca);
+          } else { h = ca - c0; }
+        }
+        fill.style.height = Math.max(0, h) + 'px';
+      }
+      if (btn && plan) btn.classList.toggle('show', plan.getBoundingClientRect().bottom < 0);
+    }
+    function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } }
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function () { setActive(findActive()); }, { rootMargin: '-' + LINE + 'px 0px -55% 0px' });
+      heads.forEach(function (h) { io.observe(h); });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    update();
+
+    /* Panneau Sommaire sur téléphone */
+    function openSheet() { sheet.hidden = false; btn.setAttribute('aria-expanded', 'true'); var c = sheet.querySelector('.toc-close'); if (c) c.focus(); }
+    function closeSheet() { sheet.hidden = true; btn.setAttribute('aria-expanded', 'false'); }
+    if (btn && sheet) {
+      btn.addEventListener('click', openSheet);
+      sheet.addEventListener('click', function (e) { if (e.target.closest('.toc-sheet-bg, .toc-close, a')) closeSheet(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !sheet.hidden) { closeSheet(); btn.focus(); } });
+    }
+  })();
+  </script>
   <script src="/cookie-consent.js"></script>
 </body>
 </html>

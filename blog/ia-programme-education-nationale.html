@@ -210,6 +210,102 @@
       /* Menu : une seule ligne, plus serré sur écran moyen */
     .navbar-links a { white-space: nowrap; }
     @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
+    /* Version facile à lire : encadré, graphiques en barres, schémas */
+    .plan { background: rgba(124,92,252,0.08); border: 1px solid rgba(124,92,252,0.3); border-radius: 14px; padding: 1.1rem 1.4rem 1rem; margin: 0 0 1.4rem; }
+    .plan h2 { margin: 0 0 0.6rem; font-size: 1.15rem; }
+    .plan ol { margin: 0 0 0.6rem 1.2rem; padding: 0; }
+    .plan li { margin-bottom: 0.45rem; line-height: 1.5; }
+    .plan li::marker { color: var(--primary-light); font-weight: 800; }
+    .plan a { color: var(--text); text-decoration: none; }
+    .plan a strong { color: var(--primary-light); }
+    .plan a:hover strong { text-decoration: underline; }
+    .plan .plan-fin { margin: 0; font-size: 0.95rem; color: var(--text-muted); }
+    .plan .plan-fin a { color: var(--primary-light); font-weight: 700; }
+    .essentiel { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--primary); border-radius: 14px; padding: 1.2rem 1.4rem 0.4rem; margin: 0 0 2rem; }
+    .essentiel h2 { margin: 0 0 0.7rem; font-size: 1.15rem; }
+    .essentiel ul { margin-left: 1.1rem; }
+      html { scroll-padding-top: 140px; }
+
+    /* Chapitrage : parties numérotées, sommaire collant, barres d'avancement */
+    .art-layout { max-width: 760px; margin: 0 auto; }
+    .art-layout > .article { max-width: 760px; }
+    .article h2.sec { display: flex; align-items: center; gap: 0.85rem; font-size: clamp(1.55rem, 3.6vw, 1.95rem); font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; color: var(--text); margin: 3.4rem 0 1.2rem; padding-top: 1.6rem; border-top: 1px solid var(--border); position: relative; }
+    .article h2.sec::before { content: ""; position: absolute; top: -1px; left: 0; width: 72px; height: 2px; background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); }
+    .sec-n { flex: none; width: 2.6rem; height: 2.6rem; border-radius: 12px; display: grid; place-items: center; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-size: 1.25rem; font-weight: 800; letter-spacing: 0; box-shadow: 0 6px 18px rgba(124,92,252,0.28); }
+    .faq h2.sec { margin-top: 3.4rem; }
+    .related h2.sec-src { scroll-margin-top: 140px; }
+    .article h3.sub { display: flex; align-items: baseline; gap: 0.6rem; font-size: 1.18rem; margin: 2rem 0 0.6rem; padding-left: 0.85rem; border-left: 2px solid rgba(124,92,252,0.45); }
+    .sub-n { flex: none; font-size: 0.9rem; font-weight: 800; color: var(--primary-light); font-variant-numeric: tabular-nums; }
+
+    /* Sommaire en tête */
+    .plan-toc { list-style: none; margin: 0 !important; padding: 0; display: grid; gap: 0.15rem; }
+    .plan-toc li { margin: 0; }
+    .plan-toc a { display: flex; align-items: center; gap: 0.7rem; padding: 0.45rem 0.4rem; border-radius: 10px; color: var(--text); text-decoration: none; min-height: 44px; }
+    .plan-toc a:hover { background: rgba(124,92,252,0.12); text-decoration: none; }
+    .pt-n { flex: none; width: 1.8rem; height: 1.8rem; border-radius: 8px; display: grid; place-items: center; background: rgba(124,92,252,0.18); color: var(--primary-light); font-weight: 800; font-size: 0.9rem; }
+    .pt-t { font-weight: 700; line-height: 1.3; }
+    .plan .pt-d { margin: -0.1rem 0 0.4rem 2.9rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); }
+    .plan .pt-d strong { color: var(--text); }
+    .pt-src .pt-n { background: transparent; border: 1px dashed rgba(167,139,250,0.5); }
+
+    /* Lien « Revenir au sommaire » (téléphone et tablette) */
+    .article p.back-toc { margin: 1.6rem 0 0; font-size: 0.85rem; }
+    .back-toc a { display: inline-flex; align-items: center; gap: 0.35rem; min-height: 44px; color: var(--text-muted); }
+    .back-toc a:hover { color: var(--primary-light); }
+    .back-toc svg, .toc-btn svg, .toc-close svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* Barre d'avancement horizontale, sous le menu (téléphone et tablette) */
+    .read-progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; pointer-events: none; }
+    .read-progress span { display: block; height: 100%; width: 100%; transform-origin: 0 50%; transform: scaleX(0); background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); }
+
+    /* Bouton et panneau « Sommaire » (téléphone et tablette) */
+    .toc-btn { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 90; display: inline-flex; align-items: center; gap: 0.45rem; min-height: 44px; padding: 0 1rem; border-radius: 999px; border: 1px solid rgba(124,92,252,0.45); background: rgba(19,19,31,0.92); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); color: var(--text); font: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,0.4); opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity 0.2s, transform 0.2s; }
+    .toc-btn.show { opacity: 1; transform: none; pointer-events: auto; }
+    .toc-btn-n { color: var(--primary-light); font-variant-numeric: tabular-nums; }
+    .toc-sheet[hidden] { display: none; }
+    .toc-sheet { position: fixed; inset: 0; z-index: 400; }
+    .toc-sheet-bg { position: absolute; inset: 0; background: rgba(5,5,12,0.6); }
+    .toc-sheet-panel { position: absolute; left: 0; right: 0; bottom: 0; max-height: 80vh; overflow-y: auto; background: var(--bg-card); border-top: 1px solid rgba(124,92,252,0.4); border-radius: 18px 18px 0 0; padding: 0.8rem 16px calc(1rem + env(safe-area-inset-bottom, 0px)); }
+    .toc-sheet-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem; }
+    .toc-sheet-head p { font-weight: 800; color: var(--text); }
+    .toc-close { display: grid; place-items: center; width: 44px; height: 44px; border: 0; background: none; color: var(--text-muted); cursor: pointer; border-radius: 10px; }
+    .toc-sheet .plan-toc a.is-active { background: rgba(124,92,252,0.16); }
+    .toc-sheet .plan-toc a.is-active .pt-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; }
+
+    /* Sommaire collant à côté du texte (ordinateur) */
+    .toc-side { display: none; }
+    @media (min-width: 1024px) {
+      .art-layout { max-width: 1120px; display: flex; align-items: flex-start; gap: 2rem; padding: 0 1.5rem; }
+      .art-layout > .article { flex: 1 1 auto; min-width: 0; margin: 0; padding-left: 0; padding-right: 0; }
+      .toc-side { display: block; flex: 0 0 230px; position: sticky; top: 150px; margin-top: 3rem; max-height: calc(100vh - 170px); overflow-y: auto; padding: 0.2rem 0.2rem 1rem; }
+      .read-progress, .toc-btn, .toc-sheet, .back-toc { display: none !important; }
+    }
+    @media (min-width: 1200px) { .toc-side { flex-basis: 260px; } }
+    .toc-side-title { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin: 0 0 0.8rem; }
+    .toc-track { position: relative; }
+    .toc-rail { position: absolute; left: calc(0.8rem - 1px); width: 2px; background: var(--border); border-radius: 2px; }
+    .toc-fill { position: absolute; left: 0; top: 0; width: 100%; height: 0; border-radius: 2px; background: linear-gradient(180deg, var(--gradient-start), var(--gradient-end)); }
+    .toc-list { list-style: none; margin: 0; padding: 0; position: relative; }
+    .toc-list li { margin: 0; }
+    .toc-list a { display: flex; align-items: flex-start; gap: 0.65rem; padding: 0.4rem 0.3rem 0.4rem 0; color: var(--text-muted); font-size: 0.88rem; line-height: 1.35; text-decoration: none; transition: color 0.15s; }
+    .toc-list a:hover { color: var(--text); text-decoration: none; }
+    .toc-n { position: relative; z-index: 1; flex: none; width: 1.6rem; height: 1.6rem; border-radius: 50%; display: grid; place-items: center; font-size: 0.75rem; font-weight: 800; background: var(--bg); border: 2px solid var(--border); color: var(--text-muted); transition: background 0.2s, border-color 0.2s, color 0.2s; }
+    .toc-t { padding-top: 0.12rem; }
+    .toc-list a.is-done .toc-n { border-color: var(--primary); color: var(--primary-light); }
+    .toc-list a.is-active { color: var(--text); font-weight: 700; }
+    .toc-list a.is-active .toc-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); border-color: transparent; color: #fff; box-shadow: 0 0 0 4px rgba(124,92,252,0.22); }
+    .toc-src .toc-n { width: 1.6rem; }
+    .toc-src .toc-n::after { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+    /* V2 : Galac6 mis en avant dans les sommaires */
+    .g6-tag { flex: none; display: inline-block; margin-left: auto; padding: 0.05rem 0.5rem; border-radius: 999px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.03em; line-height: 1.5; color: #d9ccff; background: rgba(124,92,252,0.22); border: 1px solid rgba(167,139,250,0.4); align-self: center; }
+    .plan-toc li.is-g6, .toc-sheet .plan-toc li.is-g6 { background: rgba(124,92,252,0.1); border: 1px solid rgba(167,139,250,0.32); border-radius: 12px; margin: 0.15rem 0; }
+    .plan-toc li.is-g6 .pt-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; }
+    .plan .plan-toc li.is-g6 .pt-d { margin-right: 0.6rem; }
+    .toc-list li.is-g6 > a { background: rgba(124,92,252,0.1); border: 1px solid rgba(167,139,250,0.3); border-radius: 10px; margin: 0.15rem 0 0.15rem calc(-0.3rem - 1px); padding-left: 0.3rem; color: var(--text); flex-wrap: wrap; row-gap: 0.25rem; }
+    .toc-list li.is-g6 .toc-t { flex: 1 1 0; min-width: 0; }
+    .toc-list li.is-g6 .g6-tag { margin-left: 0; margin-top: 0.1rem; align-self: flex-start; }
+    @media (prefers-reduced-motion: reduce) { .toc-btn, .toc-n, .toc-list a { transition: none; } html { scroll-behavior: auto; } }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -299,9 +395,11 @@
         <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start, #6366f1), var(--gradient-end, #a855f7)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;" data-i18n="nav.signup">Inscription ou connexion</a>
       </div>
     </nav>
+    <div class="read-progress" aria-hidden="true"><span></span></div>
   </div>
 
   <!-- ARTICLE -->
+  <div class="art-layout">
   <article class="article">
     <nav class="breadcrumb"><a href="/">Accueil</a> › <a href="/blog">Blog</a> › Tuteur IA et programme officiel</nav>
 
@@ -310,33 +408,72 @@
 
     <p class="lead">Oui, il existe des tuteurs IA construits sur le programme français : Galac6 en est un, du CP à la terminale, avec un espace professeur et un espace pour l'école. Mais « suit le programme » ne se vérifie pas sur une simple promesse : voici sept points à contrôler.</p>
 
+    <aside class="essentiel" aria-labelledby="essentiel-titre">
+      <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
+      <ul>
+        <li>« Suit le programme » ne se vérifie pas sur une simple promesse : l'article propose <strong>sept points à contrôler</strong> avant de choisir un tuteur IA.</li>
+        <li>Les premiers points : le <strong>programme suivi classe par classe</strong>, des examens préparés sur de <strong>vrais sujets</strong>, une IA qui <strong>fait réfléchir l'élève</strong>, des <strong>réponses vérifiées</strong>.</li>
+        <li>Les suivants : le <strong>professeur garde la main</strong>, les <strong>données des élèves</strong> sont protégées, et l'outil dit clairement ce qu'il n'est pas.</li>
+        <li>Galac6 est construit sur les référentiels Éduscol, du CP à la terminale, et se présente comme <strong>un complément</strong>, pas comme un remplaçant du professeur.</li>
+        <li>Le test le plus simple : choisir une classe précise et <strong>demander un exercice sur le chapitre en cours</strong>.</li>
+      </ul>
+    </aside>
+
+    <nav class="plan" id="sommaire" aria-labelledby="plan-titre">
+      <h2 id="plan-titre">Ce que vous allez apprendre</h2>
+      <ol class="plan-toc">
+        <li><a href="#programme-classe"><span class="pt-n">1</span><span class="pt-t">Le programme, classe par classe</span></a></li>
+        <li><a href="#vrais-sujets"><span class="pt-n">2</span><span class="pt-t">Les examens sur de vrais sujets</span></a></li>
+        <li><a href="#faire-reflechir"><span class="pt-n">3</span><span class="pt-t">Faire réfléchir l'élève</span></a></li>
+        <li><a href="#reponses-verifiees"><span class="pt-n">4</span><span class="pt-t">Des réponses vérifiées</span></a></li>
+        <li><a href="#professeur"><span class="pt-n">5</span><span class="pt-t">Le professeur garde la main</span></a></li>
+        <li><a href="#donnees"><span class="pt-n">6</span><span class="pt-t">Où vont les données</span></a></li>
+        <li><a href="#ce-qu-il-n-est-pas"><span class="pt-n">7</span><span class="pt-t">Ce que l'outil n'est pas</span></a></li>
+        <li class="is-g6"><a href="#essayer-galac6"><span class="pt-n">8</span><span class="pt-t">Pour une école : essayer Galac6</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#faq"><span class="pt-n">9</span><span class="pt-t">Questions fréquentes</span></a></li>
+        <li class="pt-src"><a href="#sources"><span class="pt-n" aria-hidden="true"></span><span class="pt-t">Sources</span></a></li>
+      </ol>
+    </nav>
+
     <p>Beaucoup d'outils d'intelligence artificielle répondent aux questions scolaires. Rares sont ceux qui ont été pensés pour le système éducatif français : ses programmes par cycle, ses repères annuels, ses examens et ses règles de protection des données. Que vous soyez une direction d'école, un professeur ou une famille, ces sept questions vous aideront à juger une plateforme.</p>
 
-    <h2>1. Le programme est-il suivi classe par classe ?</h2>
+    <h2 id="programme-classe">1. Le programme est-il suivi classe par classe ?</h2>
     <p>Les programmes officiels, publiés par le ministère et accompagnés des ressources d'<a href="https://eduscol.education.fr/" target="_blank" rel="noopener">Éduscol</a>, fixent ce qui est étudié à chaque niveau. Un outil sérieux doit savoir dans quelle classe est l'élève et lui proposer les notions de son année, pas celles d'un programme étranger ou d'un niveau au hasard.</p>
     <p><strong>Ce que fait Galac6 :</strong> il est construit sur les référentiels Éduscol, du CP à la terminale, et suit uniquement le programme français. En calcul mental par exemple, plus de 200 notions sont rattachées au programme officiel, et Galac6 propose celles qui sont vues en classe à ce moment de l'année.</p>
 
-    <h2>2. Les examens français sont-ils préparés sur de vrais sujets ?</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="vrais-sujets">2. Les examens français sont-ils préparés sur de vrais sujets ?</h2>
     <p>Le brevet et le baccalauréat ont leurs propres attentes. Vérifiez que l'outil propose des <strong>annales officielles</strong>, et qu'il distingue clairement un sujet officiel d'un sujet inventé.</p>
     <p><strong>Ce que fait Galac6 :</strong> 129 sujets de brevet et 75 sujets de bac de français, en examen blanc chronométré avec une correction détaillée. Un sujet d'entraînement généré par l'IA porte toujours la mention qui l'indique et n'est jamais rangé avec les annales officielles. Le corrigé est rédigé par l'IA à partir du barème d'origine : ce n'est pas un corrigé officiel.</p>
 
-    <h2>3. L'IA fait-elle réfléchir l'élève, ou fait-elle le travail ?</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="faire-reflechir">3. L'IA fait-elle réfléchir l'élève, ou fait-elle le travail ?</h2>
     <p>Un outil qui donne la réponse toute faite aide à rendre un devoir, pas à apprendre. Posez une question d'exercice et regardez ce qui se passe.</p>
     <p><strong>Ce que fait Galac6 :</strong> le tuteur est didactique. Il guide l'élève par des questions et des indices, étape par étape, sans faire le travail à sa place. Notre article <a href="/blog/ia-devoirs-sans-tricher">l'IA pour les devoirs sans tricher</a> détaille cette différence.</p>
 
-    <h2>4. Les réponses sont-elles vérifiées ?</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="reponses-verifiees">4. Les réponses sont-elles vérifiées ?</h2>
     <p>Une IA peut se tromper avec assurance, en particulier en calcul. Demandez comment l'outil évite de donner une réponse fausse à un élève.</p>
     <p><strong>Ce que fait Galac6 :</strong> pour les quiz des professeurs, il ne garde que les questions dont il a pu vérifier la bonne réponse. En calcul mental, les réponses sont produites par le code, sans intelligence artificielle. En dictée, les fautes et la note sont fixées par des règles écrites à l'avance ; l'IA sert seulement à expliquer chaque faute.</p>
 
-    <h2>5. Le professeur garde-t-il la main ?</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="professeur">5. Le professeur garde-t-il la main ?</h2>
     <p>Dans une école, l'outil doit servir l'enseignant, pas décider à sa place.</p>
     <p><strong>Ce que fait Galac6 :</strong> le professeur relit et valide chaque question avant l'envoi, choisit le barème, et valide chaque note proposée par l'IA. Il voit la réussite de sa classe notion par notion. Le <a href="/guide-prof">guide professeur</a> montre chaque étape, et nos pages pour <a href="/blog/galac6-professeur-maths">les professeurs de maths</a> et <a href="/blog/galac6-professeur-francais">les professeurs de français</a> détaillent les usages par matière.</p>
 
-    <h2>6. Où vont les données des élèves ?</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="donnees">6. Où vont les données des élèves ?</h2>
     <p>Les élèves sont mineurs et le RGPD s'applique. Demandez où sont hébergées les données, où est traitée l'IA, qui voit quoi, et combien de temps tout est conservé.</p>
     <p><strong>Ce que fait Galac6 :</strong> les données sont hébergées en France, dans une base de données à Paris, et l'intelligence artificielle est traitée en Europe. Quelques services techniques, comme l'hébergement du site internet, font appel à des prestataires situés hors de l'Union européenne, encadrés par des clauses contractuelles types. Seuls les professeurs de l'élève et la direction de son école voient son travail ; les professeurs ne voient pas les conversations avec le tuteur. En dehors du cadre scolaire, l'accord d'un parent est requis pour les moins de 15 ans. Tout est sur la page <a href="/donnees-eleves">Données des élèves</a>.</p>
 
-    <h2>7. L'outil dit-il clairement ce qu'il n'est pas ?</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="ce-qu-il-n-est-pas">7. L'outil dit-il clairement ce qu'il n'est pas ?</h2>
     <p>Un tuteur IA ne remplace ni l'école, ni le professeur, ni l'enseignement à distance officiel du CNED. Méfiez-vous d'un outil qui promet de tout couvrir, y compris le programme de n'importe quel pays.</p>
     <p><strong>Ce que fait Galac6 :</strong> il se présente comme un complément. Il ne délivre pas de diplôme et ne s'occupe pas des inscriptions aux examens. Il suit le programme français uniquement, en France comme dans les écoles françaises à l'étranger.</p>
 
@@ -344,12 +481,16 @@
       <p><strong>Le test le plus simple :</strong> créez un compte, choisissez une classe précise, et demandez un exercice sur le chapitre en cours. Vous verrez vite si l'outil connaît le programme et s'il fait réfléchir l'élève.</p>
     </div>
 
-    <h2>Pour une école : comment essayer Galac6</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="essayer-galac6">Pour une école : comment essayer Galac6</h2>
     <p>Pour un établissement qui suit le programme officiel français, Galac6 propose un <a href="/ecole">pilote gratuit de 3 mois sur 3 classes</a>, sans engagement : un échange de vingt minutes, l'ouverture de l'espace de l'école, trois mois d'utilisation avec les classes, puis un bilan et un devis. Un professeur qui veut essayer seul peut rejoindre le programme des <a href="/profs-testeurs">professeurs testeurs</a> : 3 mois offerts en échange de ses retours.</p>
+
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <!-- FAQ -->
     <section class="faq">
-      <h2>Questions fréquentes</h2>
+      <h2 id="faq">Questions fréquentes</h2>
       <h3>Existe-t-il un tuteur IA qui suit le programme de l'Éducation nationale ?</h3>
       <p>Oui. Galac6 est un tuteur IA construit sur les référentiels Éduscol du programme français, du CP à la terminale. Il propose les notions de la classe de l'élève, prépare au brevet et au bac sur des annales officielles et guide l'élève sans faire le travail à sa place.</p>
       <h3>Quelle plateforme IA pour une école qui suit le programme officiel français ?</h3>
@@ -362,9 +503,11 @@
       <p>Non. Galac6 est un complément : le tuteur aide l'élève à comprendre et à s'entraîner, et dans une école, c'est le professeur qui valide chaque question et chaque note.</p>
     </section>
 
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
     <!-- Sources officielles -->
     <div class="related">
-      <h2>Sources</h2>
+      <h2 id="sources">Sources</h2>
       <ul>
         <li><a href="https://eduscol.education.fr/" target="_blank" rel="noopener">Éduscol : ressources officielles pour les enseignants</a></li>
         <li><a href="https://www.education.gouv.fr/" target="_blank" rel="noopener">Ministère de l'Éducation nationale</a></li>
@@ -392,6 +535,44 @@
     </div>
   </article>
 
+    <aside class="toc-side" aria-label="Sommaire de l'article">
+      <p class="toc-side-title">Sommaire</p>
+      <div class="toc-track"><span class="toc-rail" aria-hidden="true"><span class="toc-fill"></span></span>
+      <ol class="toc-list" id="toc-side-list">
+        <li><a href="#programme-classe"><span class="toc-n">1</span><span class="toc-t">Le programme, classe par classe</span></a></li>
+        <li><a href="#vrais-sujets"><span class="toc-n">2</span><span class="toc-t">Les examens sur de vrais sujets</span></a></li>
+        <li><a href="#faire-reflechir"><span class="toc-n">3</span><span class="toc-t">Faire réfléchir l'élève</span></a></li>
+        <li><a href="#reponses-verifiees"><span class="toc-n">4</span><span class="toc-t">Des réponses vérifiées</span></a></li>
+        <li><a href="#professeur"><span class="toc-n">5</span><span class="toc-t">Le professeur garde la main</span></a></li>
+        <li><a href="#donnees"><span class="toc-n">6</span><span class="toc-t">Où vont les données</span></a></li>
+        <li><a href="#ce-qu-il-n-est-pas"><span class="toc-n">7</span><span class="toc-t">Ce que l'outil n'est pas</span></a></li>
+        <li class="is-g6"><a href="#essayer-galac6"><span class="toc-n">8</span><span class="toc-t">Pour une école : essayer Galac6</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#faq"><span class="toc-n">9</span><span class="toc-t">Questions fréquentes</span></a></li>
+        <li class="toc-src"><a href="#sources"><span class="toc-n" aria-hidden="true"></span><span class="toc-t">Sources</span></a></li>
+      </ol></div>
+    </aside>
+  </div>
+
+  <button class="toc-btn" id="toc-btn" type="button" aria-controls="toc-sheet" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg><span>Sommaire</span><span class="toc-btn-n" id="toc-btn-n"></span></button>
+  <div class="toc-sheet" id="toc-sheet" hidden>
+    <div class="toc-sheet-bg"></div>
+    <div class="toc-sheet-panel" role="dialog" aria-modal="true" aria-label="Sommaire de l'article">
+      <div class="toc-sheet-head"><p>Sommaire</p><button class="toc-close" type="button" aria-label="Fermer le sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg></button></div>
+      <ol class="plan-toc">
+        <li><a href="#programme-classe"><span class="pt-n">1</span><span class="pt-t">Le programme, classe par classe</span></a></li>
+        <li><a href="#vrais-sujets"><span class="pt-n">2</span><span class="pt-t">Les examens sur de vrais sujets</span></a></li>
+        <li><a href="#faire-reflechir"><span class="pt-n">3</span><span class="pt-t">Faire réfléchir l'élève</span></a></li>
+        <li><a href="#reponses-verifiees"><span class="pt-n">4</span><span class="pt-t">Des réponses vérifiées</span></a></li>
+        <li><a href="#professeur"><span class="pt-n">5</span><span class="pt-t">Le professeur garde la main</span></a></li>
+        <li><a href="#donnees"><span class="pt-n">6</span><span class="pt-t">Où vont les données</span></a></li>
+        <li><a href="#ce-qu-il-n-est-pas"><span class="pt-n">7</span><span class="pt-t">Ce que l'outil n'est pas</span></a></li>
+        <li class="is-g6"><a href="#essayer-galac6"><span class="pt-n">8</span><span class="pt-t">Pour une école : essayer Galac6</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#faq"><span class="pt-n">9</span><span class="pt-t">Questions fréquentes</span></a></li>
+        <li class="pt-src"><a href="#sources"><span class="pt-n" aria-hidden="true"></span><span class="pt-t">Sources</span></a></li>
+      </ol>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer>
     <div>Galac6. L'IA au service de la pédagogie</div>
@@ -405,6 +586,88 @@
     </div>
   </footer>
 
+  <script>
+  /* Chapitrage : partie en cours (IntersectionObserver), barres d'avancement, panneau Sommaire */
+  (function () {
+    var article = document.querySelector('.article');
+    var links = Array.prototype.slice.call(document.querySelectorAll('#toc-side-list a'));
+    var heads = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+    var sheetLinks = Array.prototype.slice.call(document.querySelectorAll('#toc-sheet a'));
+    var bar = document.querySelector('.read-progress span');
+    var rail = document.querySelector('.toc-rail'), fill = document.querySelector('.toc-fill');
+    var btn = document.getElementById('toc-btn'), btnN = document.getElementById('toc-btn-n');
+    var sheet = document.getElementById('toc-sheet'), plan = document.getElementById('sommaire');
+    if (!article || !heads.length) return;
+    var LINE = 170; /* ligne de lecture, sous le menu collant */
+    /* hauteur du menu collant, pour l'en-tête collant du tableau comparatif */
+    function navH() { var n = document.querySelector('.navbar-wrapper'); if (n) document.documentElement.style.setProperty('--nav-h', n.offsetHeight + 'px'); }
+    navH(); window.addEventListener('resize', navH);
+    var active = -1, ticking = false;
+
+    function absTop(el) { return el.getBoundingClientRect().top + window.pageYOffset; }
+    function center(i) { var n = links[i].querySelector('.toc-n'); return n.offsetTop + n.offsetHeight / 2; } /* relatif à la liste */
+
+    function findActive() {
+      var idx = -1;
+      for (var i = 0; i < heads.length; i++) { if (heads[i].getBoundingClientRect().top - LINE <= 0) idx = i; }
+      if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4) idx = heads.length - 1;
+      return idx;
+    }
+
+    function setActive(idx) {
+      if (idx === active) return;
+      active = idx;
+      links.forEach(function (a, i) {
+        a.classList.toggle('is-active', i === idx);
+        a.classList.toggle('is-done', i < idx);
+        if (i === idx) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+      });
+      sheetLinks.forEach(function (a, i) { a.classList.toggle('is-active', i === idx); });
+      if (btnN) btnN.textContent = idx >= 0 ? (links[idx].querySelector('.toc-n').textContent || '') : '';
+    }
+
+    function update() {
+      ticking = false;
+      setActive(findActive());
+      var y = window.pageYOffset, start = absTop(article), end = start + article.offsetHeight - window.innerHeight;
+      var p = Math.min(1, Math.max(0, (y - start) / Math.max(1, end - start)));
+      if (bar) bar.style.transform = 'scaleX(' + p + ')';
+      if (rail && rail.offsetParent) {
+        var c0 = center(0), cN = center(links.length - 1);
+        rail.style.top = c0 + 'px'; rail.style.height = (cN - c0) + 'px';
+        var h = 0;
+        if (active >= 0) {
+          var a = active, ca = center(a);
+          if (a < heads.length - 1) {
+            var t0 = absTop(heads[a]), t1 = absTop(heads[a + 1]);
+            var w = Math.min(1, Math.max(0, (y + LINE - t0) / Math.max(1, t1 - t0)));
+            h = ca - c0 + w * (center(a + 1) - ca);
+          } else { h = ca - c0; }
+        }
+        fill.style.height = Math.max(0, h) + 'px';
+      }
+      if (btn && plan) btn.classList.toggle('show', plan.getBoundingClientRect().bottom < 0);
+    }
+    function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } }
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function () { setActive(findActive()); }, { rootMargin: '-' + LINE + 'px 0px -55% 0px' });
+      heads.forEach(function (h) { io.observe(h); });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    update();
+
+    /* Panneau Sommaire sur téléphone */
+    function openSheet() { sheet.hidden = false; btn.setAttribute('aria-expanded', 'true'); var c = sheet.querySelector('.toc-close'); if (c) c.focus(); }
+    function closeSheet() { sheet.hidden = true; btn.setAttribute('aria-expanded', 'false'); }
+    if (btn && sheet) {
+      btn.addEventListener('click', openSheet);
+      sheet.addEventListener('click', function (e) { if (e.target.closest('.toc-sheet-bg, .toc-close, a')) closeSheet(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !sheet.hidden) { closeSheet(); btn.focus(); } });
+    }
+  })();
+  </script>
   <script src="/cookie-consent.js"></script>
 </body>
 </html>
