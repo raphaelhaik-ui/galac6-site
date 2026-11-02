@@ -5,12 +5,12 @@ Galac6 — fabrication des pages traduites du site vitrine (en, es, it, de, pt, 
 
 Pourquoi : la traduction anglaise d'i18n.js ne s'affiche qu'après un clic dans le navigateur,
 Google ne voit donc que le français. Ce script écrit de vraies pages statiques par langue :
-  /en/  /en/ecole  /en/about  /en/tarifs           (vote anglais = /international, inchangé)
-  /es/  /es/ecole  /es/about  /es/tarifs  /es/international   (idem it, de, pt, nl)
+  /en/  /en/familles  /en/ecole  /en/about  /en/tarifs           (vote anglais = /international, inchangé)
+  /es/  /es/familles  /es/ecole  /es/about  /es/tarifs  /es/international   (idem it, de, pt, nl)
   /ecoles-francaises-etranger → /en/french-schools-abroad    (français et anglais seulement)
 
 Sources des textes :
-  - français : les pages françaises elles-mêmes (index.html, ecole.html, about.html, tarifs.html) ;
+  - français : les pages françaises elles-mêmes (index.html, familles.html, ecole.html, about.html, tarifs.html) ;
   - anglais : i18n.js (+ compléments dans scripts/langs/en.json) ; page de vote : international.html ;
   - es, it, de, pt, nl (et he) : scripts/langs/<langue>.json (mêmes clés qu'i18n.js) ;
   - noms de pays de la page de vote : scripts/langs/countries.json (voir make-countries.js).
@@ -53,6 +53,7 @@ TODAY = datetime.date.today().isoformat()
 # Groupes de pages traduites : fichier source et langue de la source
 GROUPS = {
     'index': {'src': 'index.html', 'src_lang': 'fr'},
+    'familles': {'src': 'familles.html', 'src_lang': 'fr'},  # page Familles (refonte du 02/11/2026)
     'ecole': {'src': 'ecole.html', 'src_lang': 'fr'},
     'about': {'src': 'about.html', 'src_lang': 'fr'},
     'tarifs': {'src': 'tarifs.html', 'src_lang': 'fr'},
@@ -74,7 +75,7 @@ SLUGS = {
 }
 # Chemin (adresse) d'une page traduite → groupe
 PATH_TO_GROUP = {
-    '/': 'index', '/index.html': 'index', '/ecole': 'ecole', '/ecole.html': 'ecole',
+    '/': 'index', '/index.html': 'index', '/familles': 'familles', '/familles.html': 'familles', '/ecole': 'ecole', '/ecole.html': 'ecole',
     '/about': 'about', '/about.html': 'about', '/tarifs': 'tarifs', '/tarifs.html': 'tarifs',
     '/international': 'vote', '/international.html': 'vote',
     '/ecoles-francaises-etranger': 'etranger', '/ecoles-francaises-etranger.html': 'etranger',
@@ -90,13 +91,15 @@ PAIRES_EN = {'/ecoles-francaises-royaume-uni': '/en/french-schools-uk',
              '/blog': '/en/blog',
              '/blog/pisa-2025-ecole-du-futur': '/en/blog/pisa-2025-school-of-the-future'}
 # Fil d'Ariane des pages françaises (les autres langues : clés nav.* ou <groupe>.crumb des dictionnaires)
-CRUMB_FR = {'ecole': 'Pour les écoles', 'about': 'À propos', 'tarifs': 'Tarifs',
+CRUMB_FR = {'familles': 'Familles', 'ecole': 'Professeurs et écoles', 'about': 'À propos', 'tarifs': 'Tarifs',
             'etranger': "Écoles françaises à l'étranger", 'expat': "Familles françaises à l'étranger",
             'dictee': 'Dictée en ligne', 'annales': 'Annales du brevet et du bac'}
-CRUMB_KEY = {'ecole': 'nav.school', 'about': 'nav.about', 'tarifs': 'nav.pricing', 'etranger': 'etranger.crumb',
+CRUMB_KEY = {'familles': 'nav.families', 'ecole': 'nav.school', 'about': 'nav.about', 'tarifs': 'nav.pricing', 'etranger': 'etranger.crumb',
              'expat': 'expat.crumb', 'dictee': 'dictee.crumb', 'annales': 'annales.crumb'}
-# Pages françaises dont les données structurées sont écrites par ce script (les autres : à la main)
-AUTO_LD_FR = ('ecole', 'about', 'etranger', 'expat', 'dictee', 'annales')
+# Pages françaises dont les données structurées sont écrites par ce script (les autres : à la main ;
+# familles.html garde ses données faites à la main, ses versions traduites sont générées)
+# dictee-en-ligne.html (réécrite le 01/11/2026) a ses propres données structurées (SoftwareApplication, offres) : à la main
+AUTO_LD_FR = ('ecole', 'about', 'etranger', 'expat', 'annales')
 # Pays servis (données structurées) : la France et les pays d'Europe qui ont des écoles françaises.
 # Galac6 y suit toujours le programme français, sans promesse d'un programme local.
 AREA_SERVED = ['FR', 'BE', 'LU', 'CH', 'MC', 'AD', 'ES', 'PT', 'IT', 'DE', 'AT', 'NL', 'GB', 'IE',
@@ -176,10 +179,10 @@ NAV_CSS = """
 """
 
 # Barre de navigation unique (01/11/2026, demande de Raphaël) : mêmes liens, même ordre, même logo, même bouton
-# sur toutes les pages et dans toutes les langues. Référence : l'accueil français (Élèves, Écoles, FAQ, Tarif,
-# Blog, À propos, langue, inscription). Le lien de la page courante est mis en surbrillance (class="active").
-NAV_ITEMS = ('features', 'school', 'faq', 'pricing', 'blog', 'about')
-NAV_FR = {'nav.features': 'Pour les élèves', 'nav.school': 'Pour les écoles', 'nav.faq': 'FAQ', 'nav.pricing': 'Tarif',
+# sur toutes les pages et dans toutes les langues. Nouveau menu du 02/11/2026 (refonte) : Familles, Professeurs et
+# écoles, Tarifs, Blog, À propos, langue, inscription. Le lien de la page courante est mis en surbrillance (class="active").
+NAV_ITEMS = ('families', 'school', 'pricing', 'blog', 'about')
+NAV_FR = {'nav.families': 'Familles', 'nav.school': 'Professeurs et écoles', 'nav.pricing': 'Tarifs',
           'nav.blog': 'Blog', 'nav.about': 'À propos', 'nav.signup': 'Inscription ou connexion'}
 SIGNUP_URL = 'https://galac6web.netlify.app/'
 SIGNUP_STYLE = ('background: linear-gradient(135deg, var(--gradient-start, #6366f1), var(--gradient-end, #a855f7)); '
@@ -326,8 +329,7 @@ def menu_links(group, current_path):
 
 def nav_href(item, lang):
     """Adresse d'un lien du menu dans une langue (le blog n'existe qu'en français et en anglais)."""
-    home = page_path('index', lang)
-    return {'features': home + '#features', 'school': page_path('ecole', lang), 'faq': home + '#faq',
+    return {'families': page_path('familles', lang), 'school': page_path('ecole', lang),
             'pricing': page_path('tarifs', lang), 'blog': '/en/blog' if lang == 'en' else '/blog',
             'about': page_path('about', lang)}[item]
 
@@ -338,7 +340,7 @@ def nav_current(url_path):
     p = re.sub(r'\.html$', '', p)
     if p == '/blog' or p.startswith('/blog/'):
         return 'blog'
-    return {'/ecole': 'school', '/tarifs': 'pricing', '/about': 'about'}.get(p)
+    return {'/familles': 'families', '/ecole': 'school', '/tarifs': 'pricing', '/about': 'about'}.get(p)
 
 
 def navbar_html(lang, texts, url_path, menu, signup_href=SIGNUP_URL, i18n=False, indent='    '):
@@ -644,6 +646,15 @@ def set_html(el, html):
         el.append(node)
 
 
+# Textes français écrits en dur dans les pages sources (sans data-i18n) → clé du dictionnaire de chaque langue
+RAW_FR = {'Réviser le Bac de maths': 'raw.revise.bacmaths', 'Réviser les maths': 'raw.revise.maths',
+          'Fiches de révision par IA': 'fam.links.sheets', 'Cours particulier en ligne': 'raw.revise.private',
+          'Calcul mental en ligne': 'fam.links.mental', 'sem. 1': 'raw.week1', 'sem. 6': 'raw.week6',
+          'Exemple de carte de maîtrise, données fictives': 'raw.aria.mastery',
+          'Exemple de courbe de progression sur six semaines, données fictives': 'raw.aria.spark',
+          'Niveau scolaire': 'raw.aria.level', 'Élèves testeurs': 'raw.aria.testers'}
+
+
 # Textes du bandeau cookies (mêmes clés que l'objet T de cookie-consent.js)
 COOKIE_KEYS = ('texte', 'plus', 'refuser', 'perso', 'accepter', 'titrePerso', 'audienceTitre',
                'audienceTexte', 'pubTitre', 'pubTexte', 'enregistrer', 'necessaires')
@@ -737,6 +748,14 @@ def build_page(group, lang, D, countries, errors):
             el[name] = need(el[attr])
     for el in soup.select('.navbar-hamburger'):
         el['aria-label'] = need('gen.menu')
+    # Textes français sans attribut data-i18n dans les pages sources (liens du pied de page, légendes de graphiques) :
+    # traduits ici par leur texte exact, sans toucher aux pages françaises (02/11/2026)
+    for t in soup.find_all(string=True):
+        if not isinstance(t, Comment) and t.parent.name not in ('script', 'style') and norm(t) in RAW_FR:
+            t.replace_with(NavigableString(t.replace(norm(t), need(RAW_FR[norm(t)]))))
+    for el in soup.find_all(attrs={'aria-label': True}):
+        if norm(el['aria-label']) in RAW_FR:
+            el['aria-label'] = need(RAW_FR[norm(el['aria-label'])])
     for el in soup.select('.en-only'):
         el['class'] = [c for c in el['class'] if c != 'en-only']
         if el.get('style', '').replace(' ', '').startswith('display:none'):
@@ -861,6 +880,9 @@ def build_page(group, lang, D, countries, errors):
         for el in soup.find_all(attrs={attr: True}):
             del el[attr]
 
+    # Clés manquantes : la page existante est gardée telle quelle (pas de page à moitié vide en ligne)
+    if any(e.startswith('%s (%s) : clé manquante' % (path, lang)) for e in errors):
+        return None
     out = soup.decode(formatter='minimal')
     if not out.lstrip().lower().startswith('<!doctype'):
         out = '<!DOCTYPE html>\n' + out
@@ -898,7 +920,7 @@ def update_redirects():
                 lines.append('%-24s %-28s 200' % (p, '/' + out_file(p)))
     for g in GROUPS:  # pages françaises ajoutées par groupe (adresse sans .html)
         p = page_path(g, 'fr')
-        if g not in ('index', 'ecole', 'about', 'tarifs', 'etranger') and p:
+        if g not in ('index', 'familles', 'ecole', 'about', 'tarifs', 'etranger') and p:
             lines.append('%-24s %-28s 200' % (p, '/' + out_file(p)))
     lines.append('# /pages traduites')
     # Redirections 301 des adresses en .html vers les adresses propres (un seul exemplaire de chaque page pour Google).
@@ -952,11 +974,11 @@ def update_sitemap():
         if rel:
             u = re.sub(r'<lastmod>[^<]*</lastmod>', '<lastmod>%s</lastmod>' % file_date(rel), u)
         kept.append(u)
-    prio = {'index': '1.0', 'tarifs': '0.9', 'ecole': '0.9', 'about': '0.5', 'vote': '0.6', 'etranger': '0.8',
+    prio = {'index': '1.0', 'familles': '0.9', 'tarifs': '0.9', 'ecole': '0.9', 'about': '0.5', 'vote': '0.6', 'etranger': '0.8',
             'expat': '0.8', 'dictee': '0.8', 'annales': '0.8'}
     freq = {'index': 'weekly'}
     new = []
-    for g in ('index', 'tarifs', 'ecole', 'etranger', 'expat', 'dictee', 'annales', 'about', 'vote'):
+    for g in ('index', 'familles', 'tarifs', 'ecole', 'etranger', 'expat', 'dictee', 'annales', 'about', 'vote'):
         alts = ''.join('    <xhtml:link rel="alternate" hreflang="%s" href="%s%s"/>\n' % (l, SITE, page_path(g, l))
                        for l in group_langs(g))
         alts += '    <xhtml:link rel="alternate" hreflang="x-default" href="%s%s"/>\n' % (
@@ -996,7 +1018,8 @@ def visible_texts(soup):
 
 COUNTRIES = json.load(open(os.path.join(LANGDIR, 'countries.json'), encoding='utf-8'))
 ALLOW = {'Galac6', 'FAQ', 'Blog', 'Galac6 in your country', 'Menu', 'Contact', 'Email', 'Pack', 'Quiz', 'Galac6.',
-         'hello@galac6.io', 'Éduscol', 'ChatGPT'}
+         'hello@galac6.io', 'Éduscol', 'ChatGPT',
+         'Hugo', 'Inès', 'Chloé', 'Nathan', 'Manon', 'Lucas'}  # prénoms du tableau d'exemple (page Professeurs et écoles)
 
 
 def check_leftovers(generated, dicts):
@@ -1104,7 +1127,7 @@ def export_source():
             return
         src[k] = {'fr': fr, 'en': e, 'pages': [page]}
 
-    for g in ('index', 'ecole', 'about', 'tarifs'):
+    for g in ('index', 'familles', 'ecole', 'about', 'tarifs'):
         s = BeautifulSoup(read(GROUPS[g]['src']), 'html.parser')
         for el in s.select('[data-i18n]'):
             add(el['data-i18n'], norm(el.get_text()), en.get(el['data-i18n']), g)
@@ -1164,7 +1187,8 @@ def main():
                 if not p or (g == 'vote' and l == 'en'):
                     continue
                 rel = build_page(g, l, dicts[l], countries, errors)
-                generated.append((g, l, rel))
+                if rel:
+                    generated.append((g, l, rel))
         hand = update_handmade_en(generated)
         print('Pages anglaises faites à la main mises à jour : %d %s' % (len(hand), ', '.join(hand)))
         update_redirects()
