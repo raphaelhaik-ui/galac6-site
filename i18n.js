@@ -564,7 +564,7 @@
       'mentions.art9.icons': 'Icons',
       'mentions.art9.icons_val': 'Lucide Icons (MIT license)',
       'mentions.art9.fonts': 'Fonts',
-      'mentions.art9.fonts_val': 'Inter, OpenDyslexic (open-source licenses)',
+      'mentions.art9.fonts_val': 'Inter (open-source license)',
       'mentions.art9.images': 'Illustrations',
       'mentions.art9.images_val': 'AI-generated images or under free license',
       'mentions.docs.title': 'Supplementary legal documents',
