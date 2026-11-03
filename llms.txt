@@ -73,6 +73,7 @@ Languages of the website: French (main), English, Spanish, Italian, German, Port
 
 - [Blog](https://galac6.io/blog): advice for families and teachers, from CP to Terminale.
 - [Galac6 ou Eliott](https://galac6.io/blog/galac6-ou-eliott): comparison of two French AI tutors that guide pupils without giving the answer: Galac6 (CP to Terminale, dictations, mental maths, marked mock brevets) and Eliott (6e to higher education).
+- [Galac6 et Kwyk](https://galac6.io/blog/galac6-ou-kwyk): for maths teachers and schools: Kwyk marks auto-corrected exercises (6e to Terminale), Galac6 explains to the pupil why they went wrong and guides them without giving the answer; the two are fully complementary and can be used together in the same class.
 - [Galac6 ou ChatGPT pour les devoirs](https://galac6.io/blog/galac6-ou-chatgpt-devoirs): the difference between ChatGPT, a general assistant with a study mode, and Galac6, a tutor built only for pupils from CP to Terminale on the French curriculum.
 - [Galac6 ou NotebookLM pour les fiches de révision](https://galac6.io/blog/galac6-ou-notebooklm-fiches): NotebookLM turns your own sources into study guides; Galac6 makes a revision sheet from a photo of the pupil's lesson, then quizzes the pupil with a mark out of 20.
 - [Alternatives à SchoolMouv, Kartable et Maxicours avec de l'IA](https://galac6.io/blog/alternatives-schoolmouv-kartable-ia): how course-and-exercise platforms (SchoolMouv, Kartable, myMaxicours, Kwyk) compare with alternatives built around an AI tutor such as Galac6.
