@@ -149,6 +149,8 @@ NAV_CSS = """
     .navbar .lang-menu-list a { display: block; padding: 0.55rem 0.8rem; border-radius: 8px; color: var(--text-muted, #8a8aa3); font-size: 0.9rem; font-weight: 500; text-decoration: none; white-space: nowrap; min-height: 0; }
     .navbar .lang-menu-list a:hover { background: rgba(124,92,252,0.14); color: var(--text, #f0f0f5); }
     .navbar .lang-menu-list a[aria-current] { color: var(--text, #f0f0f5); font-weight: 700; }
+    .lang-menu .lang-flag { flex: none; width: 20px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(255,255,255,0.15); }
+    .navbar .lang-menu-list a { display: flex; align-items: center; gap: 8px; }
     /* Grand écran : menu un peu resserré pour tenir sur une ligne */
     @media (min-width: 1241px) {
       .navbar-wrapper .navbar-links { gap: 1.25rem; }
@@ -225,6 +227,23 @@ NOTICE_CSS = """
     .lang-notice a { color: #fff; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.5); }
 """
 
+# Drapeaux du sélecteur de langue (03/11/2026) : SVG simplifiés lisibles à 20 × 14, pas d'emojis (ne s'affichent pas sous Windows).
+# Royaume-Uni simplifié, Espagne et Portugal sans armoiries (le Portugal garde un disque jaune pour rester reconnaissable).
+FLAGS = {
+    'fr': '<rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#002654"/><rect x="13.33" width="6.67" height="14" fill="#ce1126"/>',
+    'en': ('<rect width="20" height="14" fill="#012169"/><path d="M0 0L20 14M20 0L0 14" stroke="#fff" stroke-width="3"/>'
+           '<path d="M0 0L20 14M20 0L0 14" stroke="#c8102e" stroke-width="1"/><path d="M10 0V14M0 7H20" stroke="#fff" stroke-width="4.5"/>'
+           '<path d="M10 0V14M0 7H20" stroke="#c8102e" stroke-width="2.5"/>'),
+    'es': '<rect width="20" height="14" fill="#aa151b"/><rect y="3.5" width="20" height="7" fill="#f1bf00"/>',
+    'it': '<rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#009246"/><rect x="13.33" width="6.67" height="14" fill="#ce2b37"/>',
+    'de': '<rect width="20" height="14" fill="#ffce00"/><rect width="20" height="4.67" fill="#000"/><rect y="4.67" width="20" height="4.67" fill="#dd0000"/>',
+    'pt': ('<rect width="20" height="14" fill="#da291c"/><rect width="8" height="14" fill="#046a38"/>'
+           '<circle cx="8" cy="7" r="3" fill="#ffe900"/><circle cx="8" cy="7" r="1.6" fill="#da291c"/>'),
+    'nl': '<rect width="20" height="14" fill="#fff"/><rect width="20" height="4.67" fill="#ae1c28"/><rect y="9.33" width="20" height="4.67" fill="#21468b"/>',
+    'he': '<rect width="20" height="14" fill="#fff"/><rect y="1.5" width="20" height="2" fill="#0038b8"/><rect y="10.5" width="20" height="2" fill="#0038b8"/>'
+          '<path d="M10 4.2L12.4 8.4H7.6ZM10 9.8L7.6 5.6H12.4Z" fill="none" stroke="#0038b8" stroke-width="0.7"/>',
+}
+
 LANG_MENU_JS = ("<script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]')"
                 ".forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script>")
 
@@ -300,17 +319,23 @@ def load_dicts():
 
 # ───────────────────────── sélecteur de langue ─────────────────────────
 
+def flag_svg(lang):
+    """Petit drapeau SVG (20 × 14) devant le nom de la langue, décoratif (aria-hidden)."""
+    return ('<svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false">%s</svg>'
+            % FLAGS[lang])
+
+
 def lang_menu_html(lang, links, label):
-    """links : {langue: adresse}. Texte seul, sans drapeau."""
+    """links : {langue: adresse}. Drapeau SVG + texte (drapeaux ajoutés le 03/11/2026, demande de Raphaël)."""
     items = []
     for l in ALL:
         href = links[l]
         cur = ' aria-current="page"' if l == lang else ''
         rtl = ' dir="rtl"' if l == 'he' else ''
-        items.append('<a href="%s" hreflang="%s" lang="%s"%s%s>%s</a>' % (href, l, l, rtl, cur, NAMES[l]))
-    return ('<!-- lang-menu --><details class="lang-menu"><summary aria-label="%s : %s">%s</summary>'
+        items.append('<a href="%s" hreflang="%s" lang="%s"%s%s>%s<span>%s</span></a>' % (href, l, l, rtl, cur, flag_svg(l), NAMES[l]))
+    return ('<!-- lang-menu --><details class="lang-menu"><summary aria-label="%s : %s">%s<span>%s</span></summary>'
             '<div class="lang-menu-list">%s</div></details>%s<!-- /lang-menu -->'
-            % (label, NAMES[lang], lang.upper(), ''.join(items), LANG_MENU_JS))
+            % (label, NAMES[lang], flag_svg(lang), lang.upper(), ''.join(items), LANG_MENU_JS))
 
 
 def menu_links(group, current_path):
@@ -505,6 +530,17 @@ def set_nav_css(s):
     return s.replace('</head>', '  ' + css + '\n</head>', 1)
 
 
+def refresh_lang_menu(s, lang, label):
+    """Page faite à la main : redessine le sélecteur (drapeaux compris) en gardant ses propres adresses."""
+    m = re.search(r'<!-- lang-menu -->.*?<!-- /lang-menu -->', s, re.S)
+    if not m:
+        return s
+    links = {l: h for h, l in re.findall(r'<a [^>]*?href="([^"]*)"[^>]*?hreflang="([a-z]+)"', m.group(0))}
+    if any(l not in links for l in ALL):
+        return s
+    return s[:m.start()] + lang_menu_html(lang, links, label) + s[m.end():]
+
+
 def update_handmade_en(generated):
     """Pages anglaises faites à la main (blog anglais, écoles du Royaume-Uni…) : même barre de navigation."""
     done = {rel for _, _, rel in generated}
@@ -520,7 +556,7 @@ def update_handmade_en(generated):
             if 'class="navbar-links"' not in s:
                 continue
             url_path = '/' + re.sub(r'(index)?\.html$', '', rel)
-            new = set_nav_css(apply_navbar(s, 'en', texts, url_path))
+            new = set_nav_css(apply_navbar(refresh_lang_menu(s, 'en', 'Language'), 'en', texts, url_path))
             if new != s:
                 write(rel, new)
                 changed.append(rel)
