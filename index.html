@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galac6 : tuteur IA scolaire, du CP à la Terminale</title>
-  <meta name="description" content="Soutien scolaire avec un tuteur IA didactique : quiz, dictées, calcul mental, brevet et bac blanc. Primaire, collège, lycée, sur le programme français.">
+  <title>Galac6 : l'IA pédagogique qui part de ce que sait chaque élève</title>
+  <meta name="description" content="Galac6 redéfinit l'apprentissage à l'école, à partir de ce que sait chaque élève : devoirs proposés et corrigés, suivi notion par notion, parcours adapté. Du CP à la Terminale.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/">
   <!-- hreflang (généré par scripts/build-langs.py) -->
@@ -21,12 +21,12 @@
   <meta property="og:site_name" content="Galac6">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:title" content="Galac6. L'IA au service de la pédagogie">
-  <meta property="og:description" content="Quiz, dictées, fiches, brevet et bac blanc. L'IA qui apprend aux élèves, du CP à la Terminale. Conçu en France, données hébergées en France.">
+  <meta property="og:description" content="Galac6 redéfinit l'apprentissage à l'école, à partir de ce que sait chaque élève. Du CP à la Terminale. Données hébergées en France, IA traitée en Europe.">
   <meta property="og:url" content="https://galac6.io/">
   <meta property="og:image" content="https://galac6.io/images/og-image-v2.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Galac6. L'IA au service de la pédagogie">
-  <meta name="twitter:description" content="L'IA qui apprend aux élèves, du CP à la Terminale. Conçu en France, données hébergées en France.">
+  <meta name="twitter:description" content="Galac6 redéfinit l'apprentissage à l'école, à partir de ce que sait chaque élève. Du CP à la Terminale. Données hébergées en France, IA traitée en Europe.">
   <meta name="twitter:image" content="https://galac6.io/images/og-image-v2.jpg">
   <link rel="icon" type="image/png" href="icons/32x32.png">
   <script type="application/ld+json">
@@ -40,7 +40,7 @@
       "url": "https://galac6.io/",
       "logo": "https://galac6.io/icons/logo.png",
       "slogan": "L'IA au service de la pédagogie",
-      "description": "Edtech française d'innovation pédagogique : un tuteur IA scolaire didactique pour le primaire, le collège et le lycée, du CP à la Terminale, construit sur le programme scolaire français. Données hébergées en France.",
+      "description": "Edtech française qui redéfinit l'apprentissage à l'école, à partir de ce que sait chaque élève : une IA pédagogique pour les professeurs, les élèves et les parents, du CP à la Terminale, construite sur le programme scolaire français. Données hébergées en France.",
       "areaServed": [
         "FR",
         "BE",
@@ -179,7 +179,7 @@
           "name": "À qui s'adresse Galac6 ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Galac6 s'adresse aux élèves du CP à la Terminale et à leurs parents. Que votre enfant ait besoin d'un coup de pouce sur ses devoirs du soir ou qu'il prépare un contrôle important, Galac6 l'accompagne à son rythme, dans sa matière, à son niveau."
+            "text": "Galac6 s'adresse aux élèves du CP à la Terminale, à leurs professeurs et à leurs parents. Les professeurs y donnent et corrigent les devoirs, et suivent chaque élève notion par notion. Les élèves y travaillent à leur niveau, de la leçon au contrôle. Les parents suivent leur progression."
           }
         },
         {
@@ -352,6 +352,8 @@
     .hero h1 { font-size: clamp(2.3rem, 6.4vw, 4rem); font-weight: 800; letter-spacing: -0.035em; line-height: 1.06; max-width: 14ch; }
     .grad { background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
     .hero .subtitle { font-size: clamp(1.02rem, 2vw, 1.2rem); color: var(--text-muted); max-width: 56ch; margin-top: 1.25rem; line-height: 1.65; }
+    /* Fil rouge (03/11/2026) : première phrase de l'accroche mise en avant */
+    .hero .subtitle.vision strong { display: block; color: var(--text); font-size: clamp(1.12rem, 2.4vw, 1.4rem); font-weight: 700; line-height: 1.4; letter-spacing: -0.01em; margin-bottom: 0.5rem; }
     .doors { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 2rem; max-width: 760px; }
     .door-btn { display: flex; align-items: center; gap: 14px; padding: 18px; border-radius: 14px; border: 1px solid var(--border-strong); background: var(--bg-card); text-decoration: none; color: var(--text); min-height: 76px; transition: border-color .2s, transform .2s; }
     .door-btn:hover { text-decoration: none; border-color: var(--primary); transform: translateY(-2px); }
@@ -675,16 +677,16 @@
   <!-- ═══ a. HERO ═══ -->
   <div class="hero">
     <h1 data-i18n-html="home.hero.title">L'IA au service de la <span class="grad">pédagogie.</span></h1>
-    <p class="subtitle" data-i18n="home.hero.subtitle">Galac6 est un tuteur IA qui ne fait pas les devoirs à la place de l'élève : il le guide pas à pas, par des questions, à son niveau.</p>
+    <p class="subtitle vision" data-i18n-html="home.hero.vision"><strong>Galac6 redéfinit l'apprentissage à l'école, à partir de ce que sait chaque élève.</strong> Ce qu'il réussit, ce qu'il rate, notion par notion : Galac6 le connaît et lui propose un parcours adapté à son niveau.</p>
     <div class="doors">
       <a class="door-btn pri" href="/familles"><svg class="ico" aria-hidden="true"><use href="#i-family"/></svg><span><strong data-i18n="home.door.fam">Je suis parent ou élève</strong><small data-i18n="home.door.fam.sub">Du CP à la Terminale</small></span><svg class="ico go" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      <a class="door-btn" href="/ecole"><svg class="ico" aria-hidden="true"><use href="#i-school"/></svg><span><strong data-i18n="home.door.school">Je suis professeur ou une école</strong><small data-i18n="home.door.school.sub">Devoirs, corrections, suivi de classe</small></span><svg class="ico go" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="door-btn" href="/ecole"><svg class="ico" aria-hidden="true"><use href="#i-school"/></svg><span><strong data-i18n="home.door.school">Je suis professeur ou une école</strong><small data-i18n="home.door.school.sub2">Gain de temps, suivi de classe, devoirs sur mesure</small></span><svg class="ico go" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
     <div class="hero-actions">
       <a href="https://galac6web.netlify.app/" class="btn btn-secondary" data-i18n="home.hero.signup">Inscription ou connexion</a>
       <a href="/tarifs" class="link" data-i18n="home.hero.pricing">Voir les tarifs →</a>
     </div>
-    <p class="made-fr"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="home.hero.madefr">Conçu en France, données hébergées en France.</span></p>
+    <p class="made-fr"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="home.hero.madefr2">Conçu en France, données hébergées en France, IA traitée en Europe.</span></p>
   </div>
 
   <hr class="divider">
@@ -693,14 +695,14 @@
   <section id="constat">
     <div class="h-tag" data-i18n="home.why.tag">Le constat</div>
     <h2 class="h-title" data-i18n="home.why.title">Les IA généralistes font le travail. Galac6 fait travailler.</h2>
-    <p class="h-lead" data-i18n="home.why.lead">L'IA qui préfère apprendre à l'élève plutôt que faire à sa place : n'importe quelle IA peut faire les devoirs, Galac6 apprend à les faire soi-même.</p>
+    <p class="h-lead" data-i18n="home.why.lead2">Une IA généraliste fait les devoirs à la place de l'élève et ne dit rien au professeur. Galac6 fait l'inverse : chaque exercice devient une information utile, pour que le professeur enseigne mieux et que l'élève apprenne vraiment.</p>
     <div class="versus">
       <div class="vs them">
         <h3 data-i18n="home.why.them">Une IA généraliste</h3>
         <ul>
           <li><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg><span data-i18n="home.why.them1">Donne la réponse en une seconde</span></li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg><span data-i18n="home.why.them2">Rédige le devoir à la place de l'élève</span></li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg><span data-i18n="home.why.them3">Ne sait pas ce que l'élève a compris</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg><span data-i18n="home.why.them3b">Ne dit rien au professeur de ce que l'élève a compris</span></li>
         </ul>
         <div class="chatline"><b data-i18n="home.why.them.label">Réponse type</b><span data-i18n="home.why.them.quote">« Voici la solution complète de l'exercice 3. »</span></div>
       </div>
@@ -709,7 +711,7 @@
         <ul>
           <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="home.why.us1">Pose des questions pour faire réfléchir</span></li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="home.why.us2">Part de ce que l'élève sait déjà</span></li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="home.why.us3">Repère ce qui est acquis et ce qui reste à travailler</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="home.why.us3b">Montre au professeur ce qui est acquis et ce qui reste à travailler</span></li>
         </ul>
         <div class="chatline"><b>Galac6</b><span data-i18n="home.why.us.quote">« Qu'est-ce que tu cherches à calculer ? Commence par me dire ce que l'énoncé te donne. »</span></div>
       </div>
@@ -752,7 +754,7 @@
         <li><div><strong data-i18n="home.loop.s3">Une carte de maîtrise se construit</strong><span data-i18n="home.loop.s3d">Notion par notion : acquis, en cours, à revoir.</span></div></li>
         <li><div><strong data-i18n="home.loop.s4">Galac6 propose le travail sur mesure</strong><span data-i18n="home.loop.s4d">Les notions non acquises sont retravaillées jusqu'à ce qu'elles le soient.</span></div></li>
         <li><div><strong data-i18n="home.loop.s5">Parents et prof voient où en est l'élève</strong><span data-i18n="home.loop.s5d">Un bilan clair, sans attendre le prochain contrôle.</span></div></li>
-        <li><div><strong data-i18n="home.loop.s6">Le prof décide</strong><span data-i18n="home.loop.s6d">Il donne des devoirs personnalisés à partir de ce qu'il voit.</span></div></li>
+        <li><div><strong data-i18n="home.loop.s6">Le prof décide</strong><span data-i18n="home.loop.s6d2">Il envoie à chaque élève un travail à son niveau, et relit chaque question avant l'envoi.</span></div></li>
         <li class="ret"><div><strong data-i18n="home.loop.s7">Retour à l'élève</strong><span data-i18n="home.loop.s7d">Et la boucle recommence, plus juste à chaque tour.</span></div></li>
       </ol>
     </div>
@@ -766,22 +768,22 @@
     <h2 class="h-title" data-i18n="home.who.title">Un même travail, trois bénéfices.</h2>
     <div class="trio">
       <div class="who">
+        <div class="badge"><span><svg class="ico" aria-hidden="true"><use href="#i-teacher"/></svg></span><span data-i18n="home.who.t.badge">Professeur</span></div>
+        <h3 data-i18n="home.who.t.title2">Un nouveau focus sur vos élèves</h3>
+        <p data-i18n="home.who.t.text2">Galac6 vous propose les devoirs et les corrige, copies manuscrites comprises : vous validez. Vous voyez les forces et les lacunes de la classe et de chaque élève, qui progresse et qui décroche. Vous envoyez à chacun un travail à son niveau. Moins de correction, plus de pédagogie : vous restez maître de vos choix.</p>
+        <a href="/ecole" data-i18n="home.who.t.link">Voir pour les professeurs →</a>
+      </div>
+      <div class="who">
         <div class="badge"><span><svg class="ico" aria-hidden="true"><use href="#i-student"/></svg></span><span data-i18n="home.who.s.badge">Élève</span></div>
-        <h3 data-i18n="home.who.s.title">Un tuteur qui t'apprend à travailler</h3>
-        <p data-i18n="home.who.s.text">Comme un bon tuteur, Galac6 apprend à l'élève à travailler : s'organiser, apprendre ses leçons, s'exercer. Il pose des questions au lieu de donner la réponse, et s'appuie sur ce que l'élève sait déjà. Il corrige, explique ses erreurs et fait retravailler chaque notion jusqu'à ce qu'elle soit acquise. Il encourage à chaque étape : en difficulté ou en avance, chaque enfant a le bon défi et prend confiance.</p>
+        <h3 data-i18n="home.who.s.title2">Tu apprends à apprendre</h3>
+        <p data-i18n="home.who.s.text2">Tu fais sur Galac6 les devoirs donnés par ton professeur, avec une IA qui ne te donne pas la réponse : elle te pose des questions pour que tu la trouves toi-même. De la leçon au contrôle, elle t'accompagne : un plan avant chaque contrôle, des brevets et bacs blancs, des dictées, du calcul mental et des jeux pour progresser chaque jour.</p>
         <a href="/familles" data-i18n="home.who.s.link">Voir pour les familles →</a>
       </div>
       <div class="who">
         <div class="badge"><span><svg class="ico" aria-hidden="true"><use href="#i-family"/></svg></span><span data-i18n="home.who.p.badge">Parents</span></div>
-        <h3 data-i18n="home.who.p.title">Vous savez où en est votre enfant</h3>
-        <p data-i18n="home.who.p.text">Vous savez où en est votre enfant : ce qu'il maîtrise, ce qu'il doit encore travailler, et comment il progresse.</p>
+        <h3 data-i18n="home.who.p.title2">Vous comprenez votre enfant</h3>
+        <p data-i18n="home.who.p.text2">Vous suivez sa progression, ses forces et ce qu'il lui reste à travailler, et vous savez comment l'aider.</p>
         <a href="/familles" data-i18n="home.who.p.link">Voir le suivi parent →</a>
-      </div>
-      <div class="who">
-        <div class="badge"><span><svg class="ico" aria-hidden="true"><use href="#i-teacher"/></svg></span><span data-i18n="home.who.t.badge">Professeur</span></div>
-        <h3 data-i18n="home.who.t.title">Gagnez des heures chaque semaine</h3>
-        <p data-i18n="home.who.t.text">Créez un devoir en quelques minutes, Galac6 le corrige, vous validez. Sachez ce que chaque élève a vraiment compris, notion par notion. Décidez avec des données inédites.</p>
-        <a href="/ecole" data-i18n="home.who.t.link">Voir pour les professeurs →</a>
       </div>
     </div>
   </section>
@@ -827,7 +829,7 @@
   <!-- ═══ f. APERÇU DES FONCTIONNALITÉS ═══ -->
   <section id="features">
     <div class="h-tag" data-i18n="home.feat.tag">Fonctionnalités</div>
-    <h2 class="h-title" data-i18n="home.feat.title">Tout pour apprendre, s'entraîner et réviser.</h2>
+    <h2 class="h-title" data-i18n="home.feat.title2">De la leçon au contrôle, tout pour progresser.</h2>
     <div class="feat">
       <a class="f" href="/soutien-scolaire-ia"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg><strong data-i18n="home.feat.chat">Chat tuteur</strong><span data-i18n="home.feat.chat.d">Il explique sans faire à la place de l'élève.</span></a>
       <a class="f" href="/cours-particulier-en-ligne"><svg class="ico" aria-hidden="true"><use href="#i-help"/></svg><strong data-i18n="home.feat.help">Aide aux exercices</strong><span data-i18n="home.feat.help.d">Pas à pas, depuis une photo.</span></a>
@@ -878,11 +880,11 @@
   <!-- ═══ h. CONFIANCE ═══ -->
   <section id="confiance">
     <div class="h-tag" data-i18n="home.trust.tag">Confiance</div>
-    <h2 class="h-title" data-i18n="home.trust.title">Une pédagogie sérieuse, un outil français.</h2>
+    <h2 class="h-title" data-i18n="home.trust.title2">Une pédagogie sérieuse, une IA de confiance.</h2>
     <div class="trust">
       <div class="t"><svg class="ico" aria-hidden="true"><use href="#i-flask"/></svg><div><strong data-i18n="home.trust.r">Fondée sur la recherche</strong><span data-i18n-html="home.trust.r.d">Questionnement, pratique de récupération, retour sur l'erreur. <a href="/recherche">Voir nos sources</a></span></div></div>
-      <div class="t"><svg class="ico" aria-hidden="true"><use href="#i-school"/></svg><div><strong data-i18n="home.trust.fr">Conçu en France</strong><span data-i18n="home.trust.fr.d">Aligné sur les programmes officiels, du CP à la Terminale.</span></div></div>
-      <div class="t"><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg><div><strong data-i18n="home.trust.data">Données hébergées en France</strong><span data-i18n-html="home.trust.data.d">Le détail est sur la page <a href="/donnees-eleves">Données des élèves</a>.</span></div></div>
+      <div class="t"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><div><strong data-i18n="home.trust.calc">Calcul exact, contenus vérifiés</strong><span data-i18n="home.trust.calc.d">Aligné sur les programmes officiels, du CP à la Terminale. Les calculs sont contrôlés par un moteur de calcul exact, et un sujet d'entraînement n'est jamais présenté comme une annale officielle.</span></div></div>
+      <div class="t"><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg><div><strong data-i18n="home.trust.data2">Données en France, IA en Europe</strong><span data-i18n-html="home.trust.data2.d">Accord d'un parent obligatoire pour les moins de 15 ans. Le détail est sur la page <a href="/donnees-eleves">Données des élèves</a>.</span></div></div>
     </div>
   </section>
 
@@ -933,9 +935,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner" data-i18n-html="faq.a1">
-            Galac6 s'adresse aux <strong>élèves du CP à la Terminale</strong> et à leurs parents. Que votre enfant ait besoin d'un coup de pouce sur ses devoirs du soir, ou qu'il prépare un contrôle important, Galac6 est là pour l'accompagner — à son rythme, dans sa matière, à son niveau.
-          </div>
+          <div class="faq-answer-inner" data-i18n-html="faq.a1b">Galac6 s'adresse aux <strong>élèves du CP à la Terminale</strong>, à leurs <strong>professeurs</strong> et à leurs <strong>parents</strong>. Les professeurs y donnent et corrigent les devoirs, et suivent chaque élève notion par notion. Les élèves y travaillent à leur niveau, de la leçon au contrôle. Les parents suivent leur progression.</div>
         </div>
       </div>
 

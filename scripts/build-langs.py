@@ -105,13 +105,14 @@ AUTO_LD_FR = ('ecole', 'about', 'etranger', 'expat', 'annales')
 AREA_SERVED = ['FR', 'BE', 'LU', 'CH', 'MC', 'AD', 'ES', 'PT', 'IT', 'DE', 'AT', 'NL', 'GB', 'IE',
                'DK', 'SE', 'NO', 'FI', 'PL', 'CZ', 'HU', 'RO', 'GR', 'HR', 'BG', 'SK', 'SI', 'CY', 'MT']
 ORG_DESC = {
-    'fr': "Edtech française d'innovation pédagogique : un tuteur IA scolaire didactique pour le primaire, le collège et le lycée, du CP à la Terminale, construit sur le programme scolaire français. Données hébergées en France.",
-    'en': "French edtech for the future of school: a didactic AI tutor from CP to Terminale (grades 1 to 12), built on the French national curriculum. Data hosted in France.",
-    'es': "Edtech francesa para el futuro de la escuela: un tutor con IA didáctico del CP a la Terminale, según el programa escolar francés. Datos alojados en Francia.",
-    'it': "Edtech francese per il futuro della scuola: un tutor IA didattico dalla primaria al liceo, sul programma scolastico francese. Dati ospitati in Francia.",
-    'de': "Französisches Edtech für die Schule der Zukunft: ein didaktischer KI-Tutor von der 1. bis zur 12. Klasse, nach dem französischen Lehrplan. Daten in Frankreich.",
-    'pt': "Edtech francesa de inovação pedagógica: um tutor IA didático do CP à Terminale, segundo o currículo francês. Dados alojados em França.",
-    'nl': "Franse edtech voor onderwijsinnovatie: een didactische AI-tutor van CP tot Terminale, volgens het Franse curriculum. Gegevens gehost in Frankrijk.",
+    # Nouveau positionnement (03/11/2026) : « redéfinit l'apprentissage à l'école, à partir de ce que sait chaque élève »
+    'fr': "Edtech française qui redéfinit l'apprentissage à l'école, à partir de ce que sait chaque élève : une IA pédagogique pour les professeurs, les élèves et les parents, du CP à la Terminale, construite sur le programme scolaire français. Données hébergées en France.",
+    'en': "French edtech redefining learning at school, starting from what each pupil knows: a teaching AI for teachers, pupils and parents, from CP to Terminale (grades 1 to 12), built on the French national curriculum. Data hosted in France.",
+    'es': "Edtech francesa que redefine el aprendizaje en la escuela a partir de lo que sabe cada alumno: una IA pedagógica para profesores, alumnos y padres, del CP a la Terminale, según el programa escolar francés. Datos alojados en Francia.",
+    'it': "Edtech francese che ridefinisce l'apprendimento a scuola, partendo da ciò che sa ogni alunno: un'IA didattica per insegnanti, alunni e genitori, dalla primaria al liceo, sul programma scolastico francese. Dati ospitati in Francia.",
+    'de': "Französisches Edtech, das das Lernen in der Schule neu definiert, ausgehend von dem, was jeder Schüler weiß: eine pädagogische KI für Lehrkräfte, Schüler und Eltern, von der 1. bis zur 12. Klasse, nach dem französischen Lehrplan. Daten in Frankreich.",
+    'pt': "Edtech francesa que redefine a aprendizagem na escola, a partir do que cada aluno sabe: uma IA pedagógica para professores, alunos e pais, do CP à Terminale, segundo o currículo francês. Dados alojados em França.",
+    'nl': "Franse edtech die leren op school een nieuwe vorm geeft, vertrekkend van wat elke leerling weet: een pedagogische AI voor leerkrachten, leerlingen en ouders, van CP tot Terminale, volgens het Franse curriculum. Gegevens gehost in Frankrijk.",
 }
 EMOJI = re.compile('[\U0001F000-\U0001FAFF☀-➿⭐️\U0001F1E6-\U0001F1FF]\\s?')
 
