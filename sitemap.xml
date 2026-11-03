@@ -860,7 +860,7 @@
   </url>
   <url>
     <loc>https://galac6.io/blog/calcul-mental-primaire</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -884,7 +884,13 @@
   </url>
   <url>
     <loc>https://galac6.io/blog/galac6-calcul-mental</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://galac6.io/blog/calcul-mental-personnalise</loc>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
