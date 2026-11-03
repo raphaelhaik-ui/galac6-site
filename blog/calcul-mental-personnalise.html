@@ -58,7 +58,14 @@
       "@type": "BlogPosting",
       "headline": "Le calcul mental réinventé : personnalisé, ludique et sur toutes les notions de maths",
       "description": "Une nouvelle façon d'entraîner le calcul mental : des séries adaptées à chaque élève, sur toutes les notions de maths du CP à la terminale, dans un format de jeu. Ce qui change par rapport aux fiches et aux tables, et ce que voient les professeurs.",
-      "image": "https://galac6.io/images/og-image-v2.jpg",
+      "image": [
+        "https://galac6.io/images/og-image-v2.jpg",
+        {"@type": "ImageObject", "url": "https://galac6.io/blog/img/calcul-mental-personnalise/calcul-mental-personnalise-choix-niveau-oral.webp", "contentUrl": "https://galac6.io/blog/img/calcul-mental-personnalise/calcul-mental-personnalise-choix-niveau-oral.webp", "width": 600, "height": 1139, "caption": "Écran de lancement du calcul mental personnalisé : niveau conseillé, question lue ou écoutée, réponse tapée ou dite."},
+        {"@type": "ImageObject", "url": "https://galac6.io/blog/img/calcul-mental-personnalise/calcul-mental-fin-de-serie-xp-calculs-rates.webp", "contentUrl": "https://galac6.io/blog/img/calcul-mental-personnalise/calcul-mental-fin-de-serie-xp-calculs-rates.webp", "width": 595, "height": 1385, "caption": "Fin d'une série de calcul mental : XP, record, résultats par catégorie et calculs ratés avec une astuce de méthode."},
+        {"@type": "ImageObject", "url": "https://galac6.io/blog/img/calcul-mental-personnalise/calcul-mental-question-ecrit-qcm.webp", "contentUrl": "https://galac6.io/blog/img/calcul-mental-personnalise/calcul-mental-question-ecrit-qcm.webp", "width": 600, "height": 1139, "caption": "Question de calcul mental sur les probabilités, à l'écrit, avec quatre propositions."},
+        {"@type": "ImageObject", "url": "https://galac6.io/blog/img/calcul-mental-personnalise/plumaths-jeu-de-calcul-mental.webp", "contentUrl": "https://galac6.io/blog/img/calcul-mental-personnalise/plumaths-jeu-de-calcul-mental.webp", "width": 600, "height": 1139, "caption": "Plumaths, le jeu de calcul mental de Galac6 : la plume avance vers le pied du personnage à chaque bonne réponse."},
+        {"@type": "ImageObject", "url": "https://galac6.io/blog/img/calcul-mental-personnalise/calcul-mental-a-voix-haute-reecouter.webp", "contentUrl": "https://galac6.io/blog/img/calcul-mental-personnalise/calcul-mental-a-voix-haute-reecouter.webp", "width": 600, "height": 1139, "caption": "Calcul mental à voix haute : la question est lue par Galac6, l'élève peut la réécouter et répond au micro."}
+      ],
       "datePublished": "2026-11-03",
       "dateModified": "2026-11-03",
       "inLanguage": "fr-FR",
@@ -350,6 +357,35 @@
     .toc-list li.is-g6 .toc-t { flex: 1 1 0; min-width: 0; }
     .toc-list li.is-g6 .g6-tag { margin-left: 0; margin-top: 0.1rem; align-self: flex-start; }
     @media (prefers-reduced-motion: reduce) { .toc-btn, .toc-n, .toc-list a { transition: none; } html { scroll-behavior: auto; } }
+
+    /* Visuels : captures d'écran de l'appli et schémas */
+    .fig { margin: 1.8rem 0 2rem; }
+    .fig figcaption { margin-top: 0.7rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
+    .shot img { display: block; width: 100%; height: auto; border-radius: 22px; border: 1px solid #2a2a44; box-shadow: 0 14px 34px rgba(0,0,0,0.45); background: var(--bg-card); }
+    .shot-one { max-width: 300px; margin-left: auto; margin-right: auto; }
+    .shot-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; max-width: 620px; margin: 0 auto; }
+    .shot-pair .shot-label { display: block; margin-top: 0.5rem; font-size: 0.85rem; font-weight: 600; color: var(--text); text-align: center; line-height: 1.4; }
+    @media (max-width: 600px) { .shot-pair { grid-template-columns: 1fr; max-width: 290px; gap: 1.4rem; } }
+    .diagram { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 0.9rem; }
+    @media (max-width: 600px) { .diagram { padding: 0.8rem 0.35rem; } }
+    .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+    .diagram .d-box { fill: rgba(124,92,252,0.12); stroke: rgba(167,139,250,0.5); stroke-width: 1.2; }
+    .diagram .d-box-up { fill: rgba(52,211,153,0.1); stroke: rgba(52,211,153,0.55); stroke-width: 1.2; }
+    .diagram .d-box-down { fill: rgba(251,191,36,0.08); stroke: rgba(251,191,36,0.5); stroke-width: 1.2; }
+    .diagram .d-box-opt { fill: none; stroke: rgba(167,139,250,0.6); stroke-width: 1.2; stroke-dasharray: 5 4; }
+    .diagram .d-t { fill: var(--text); font-weight: 700; font-size: 15px; }
+    .diagram .d-s { fill: var(--text-muted); font-size: 13.5px; }
+    .diagram .d-n { fill: #fff; font-weight: 800; font-size: 13px; }
+    .diagram .d-num { fill: url(#d-grad); }
+    .diagram .d-line { fill: none; stroke: var(--primary-light); stroke-width: 1.6; }
+    .diagram .d-dash { fill: none; stroke: var(--primary-light); stroke-width: 1.4; stroke-dasharray: 4 4; opacity: 0.8; }
+    .diagram .d-head { fill: var(--primary-light); }
+    .diagram .d-ico { fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diagram .d-up { fill: #6ee7b7; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-down { fill: #fcd34d; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-band-1 { fill: rgba(99,102,241,0.22); }
+    .diagram .d-band-2 { fill: rgba(124,92,252,0.3); }
+    .diagram .d-band-3 { fill: rgba(168,85,247,0.38); }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -504,18 +540,111 @@
       <li><strong>Un niveau conseillé d'après ses résultats.</strong> Cinq niveaux de difficulté existent, de Découverte à Expert. Galac6 conseille un niveau d'après les dernières séries de votre enfant : au moins 90 % de réussite, il monte d'un cran ; deux séries de suite sous 50 %, il redescend. Il travaille ainsi assez difficile pour progresser, sans se décourager.</li>
       <li><strong>Ses propres erreurs qui reviennent.</strong> Un calcul raté revient dans les séries suivantes jusqu'à deux réussites. À la fin de chaque série, votre enfant voit ses calculs ratés avec la bonne réponse et une astuce de méthode, et Galac6 lui signale son type d'erreur le plus fréquent avec un conseil.</li>
     </ol>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 500" role="img" aria-labelledby="schema-boucle-titre schema-boucle-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-boucle-titre">La boucle d'une série de calcul mental personnalisé</title>
+        <desc id="schema-boucle-desc">Les notions de la classe au bon moment de l'année donnent une série au niveau conseillé, de Découverte à Expert. Les erreurs de l'élève sont relevées, avec une astuce de méthode. Les calculs ratés reviennent dans les séries suivantes jusqu'à deux réussites. Avec au moins 90 % de réussite, le niveau monte d'un cran ; après deux séries de suite sous 50 %, il redescend. Puis la série suivante recommence.</desc>
+        <defs>
+          <linearGradient id="d-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+          <marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker>
+        </defs>
+        <rect class="d-box" x="44" y="8" width="300" height="62" rx="12"/>
+        <circle class="d-num" cx="70" cy="39" r="13"/><text class="d-n" x="70" y="44" text-anchor="middle">1</text>
+        <text class="d-t" x="94" y="34">Les notions de sa classe</text>
+        <text class="d-s" x="94" y="54">au bon moment de l'année</text>
+        <path class="d-line" d="M194 70V92" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="44" y="96" width="300" height="62" rx="12"/>
+        <circle class="d-num" cx="70" cy="127" r="13"/><text class="d-n" x="70" y="132" text-anchor="middle">2</text>
+        <text class="d-t" x="94" y="122">Une série au niveau conseillé</text>
+        <text class="d-s" x="94" y="142">5 niveaux, de Découverte à Expert</text>
+        <path class="d-line" d="M194 158V180" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="44" y="184" width="300" height="62" rx="12"/>
+        <circle class="d-num" cx="70" cy="215" r="13"/><text class="d-n" x="70" y="220" text-anchor="middle">3</text>
+        <text class="d-t" x="94" y="210">Ses erreurs</text>
+        <text class="d-s" x="94" y="230">bonne réponse et astuce de méthode</text>
+        <path class="d-line" d="M194 246V268" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="44" y="272" width="300" height="62" rx="12"/>
+        <circle class="d-num" cx="70" cy="303" r="13"/><text class="d-n" x="70" y="308" text-anchor="middle">4</text>
+        <text class="d-t" x="94" y="298">Les calculs ratés reviennent</text>
+        <text class="d-s" x="94" y="318">jusqu'à deux réussites</text>
+        <path class="d-line" d="M194 334V346H118V364" marker-end="url(#d-arr)"/>
+        <path class="d-line" d="M194 346H270V364" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="44" y="368" width="146" height="84" rx="12"/>
+        <text class="d-up" x="117" y="394" text-anchor="middle">Au moins 90 %</text>
+        <text class="d-s" x="117" y="415" text-anchor="middle">de réussite :</text>
+        <text class="d-s" x="117" y="434" text-anchor="middle">le niveau monte</text>
+        <rect class="d-box-down" x="198" y="368" width="146" height="84" rx="12"/>
+        <text class="d-down" x="271" y="394" text-anchor="middle">2 séries sous 50 %</text>
+        <text class="d-s" x="271" y="415" text-anchor="middle">de suite :</text>
+        <text class="d-s" x="271" y="434" text-anchor="middle">le niveau redescend</text>
+        <path class="d-dash" d="M117 452V476H20V127H40" marker-end="url(#d-arr)"/>
+        <path class="d-dash" d="M271 452V476H117"/>
+        <text class="d-s" x="194" y="494" text-anchor="middle">puis la série suivante</text>
+      </svg>
+      <figcaption>La boucle d'une série personnalisée : les calculs ratés reviennent, et le niveau conseillé monte ou redescend selon les résultats.</figcaption>
+    </figure>
+
     <p>La question peut être lue à l'écran ou écoutée, et la réponse tapée ou dite au micro. Des séries sans chronomètre, de 5 à 20 questions, permettent de prendre son temps. Pour le déroulement d'une partie pas à pas, voyez notre article <a href="/blog/galac6-calcul-mental">Galac6 pour le calcul mental</a>.</p>
+
+    <figure class="fig">
+      <div class="shot-pair">
+        <div class="shot">
+          <img src="/blog/img/calcul-mental-personnalise/calcul-mental-personnalise-choix-niveau-oral.webp" width="600" height="1139" loading="lazy" decoding="async" alt="Écran de lancement du calcul mental personnalisé de Galac6 : cinq niveaux de Découverte à Expert avec le niveau conseillé, choix entre lire ou écouter la question et taper ou dire la réponse, durée de la partie et temps par question.">
+          <span class="shot-label">Avant la série : niveau conseillé, écrit ou oral, durée</span>
+        </div>
+        <div class="shot">
+          <img src="/blog/img/calcul-mental-personnalise/calcul-mental-fin-de-serie-xp-calculs-rates.webp" width="595" height="1385" loading="lazy" decoding="async" alt="Écran de fin d'une série de calcul mental dans Galac6 : score, XP gagnés, record, résultats par catégorie et calcul raté avec la bonne réponse et une astuce de méthode sur les pourcentages.">
+          <span class="shot-label">Après la série : XP, record, calculs ratés et astuce</span>
+        </div>
+      </div>
+      <figcaption>Captures de l'appli Galac6 sur téléphone, au début et à la fin d'une série de calcul mental.</figcaption>
+    </figure>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="toutes-notions">Peut-on faire du calcul mental sur toutes les notions de maths ?</h2>
     <p>Oui. Le calcul mental ne se limite pas aux additions et aux tables : un élève de 4e a besoin de calculer vite une fraction, un pourcentage ou un carré ; un lycéen, une dérivée ou une probabilité. Les séries de Galac6 couvrent 59 familles de questions, rangées par classe :</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 250" role="img" aria-labelledby="schema-frise-titre schema-frise-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-frise-titre">Les notions de calcul mental du CP à la terminale</title>
+        <desc id="schema-frise-desc">59 familles de questions, du CP à la terminale. École primaire : tables, monnaie, heures et durées, conversions. Collège : fractions, pourcentages, Pythagore, équations. Lycée : suites, dérivées, exponentielle, intégrales.</desc>
+        <text class="d-t" x="180" y="20" text-anchor="middle">59 familles de questions, du CP à la terminale</text>
+        <rect class="d-band-1" x="6" y="38" width="112" height="34" rx="8"/>
+        <rect class="d-band-2" x="124" y="38" width="112" height="34" rx="8"/>
+        <rect class="d-band-3" x="242" y="38" width="112" height="34" rx="8"/>
+        <text class="d-t" x="62" y="60" text-anchor="middle">Primaire</text>
+        <text class="d-t" x="180" y="60" text-anchor="middle">Collège</text>
+        <text class="d-t" x="298" y="60" text-anchor="middle">Lycée</text>
+        <text class="d-s" x="62" y="92" text-anchor="middle">CP → CM2</text>
+        <text class="d-s" x="180" y="92" text-anchor="middle">6e → 3e</text>
+        <text class="d-s" x="298" y="92" text-anchor="middle">2de → terminale</text>
+        <path class="d-line" d="M14 108H346" marker-end="url(#d-arr2)"/>
+        <defs><marker id="d-arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="d-head" d="M0 0L10 5L0 10z"/></marker></defs>
+        <circle class="d-head" cx="62" cy="108" r="4"/><circle class="d-head" cx="180" cy="108" r="4"/><circle class="d-head" cx="298" cy="108" r="4"/>
+        <g class="d-s" text-anchor="middle">
+          <text x="62" y="138">Tables</text><text x="62" y="162">Monnaie</text><text x="62" y="186">Heures et durées</text><text x="62" y="210">Conversions</text>
+          <text x="180" y="138">Fractions</text><text x="180" y="162">Pourcentages</text><text x="180" y="186">Pythagore</text><text x="180" y="210">Équations</text>
+          <text x="298" y="138">Suites</text><text x="298" y="162">Dérivées</text><text x="298" y="186">Exponentielle</text><text x="298" y="210">Intégrales</text>
+        </g>
+        <text class="d-s" x="180" y="242" text-anchor="middle">Quelques exemples : la liste complète suit.</text>
+      </svg>
+      <figcaption>Quelques notions travaillées en calcul mental à l'école primaire, au collège et au lycée.</figcaption>
+    </figure>
     <ul>
       <li><strong>à l'école primaire</strong> : compléments, doubles et moitiés, tables, numération, monnaie, heures et durées, conversions de longueurs, de masses et de contenances, division avec reste, petits problèmes ;</li>
       <li><strong>au collège</strong> : fractions, pourcentages, nombres relatifs, puissances et racines carrées, priorités opératoires, proportionnalité, vitesses, périmètres, aires et volumes, angles, Pythagore, trigonométrie, équations, développements, probabilités, statistiques, nombres premiers et fonctions ;</li>
       <li><strong>au lycée</strong> : évolutions en pourcentage, notation scientifique, calcul littéral, droites, vecteurs, suites, second degré, dérivées, exponentielle, logarithme, primitives, intégrales, dénombrement, et pour les mathématiques expertes nombres complexes et congruences.</li>
     </ul>
     <p>Certaines questions se prêtent mal à une réponse tapée, comme « quel est l'ordre de grandeur de ce produit ? ». Votre enfant y répond alors en choisissant parmi quatre propositions. Au collège, ces automatismes servent directement le jour du brevet, dont l'épreuve de mathématiques commence par une partie d'automatismes : notre article <a href="/blog/reviser-brevet-maths">Comment réviser le brevet de maths</a> y revient.</p>
+
+    <figure class="fig">
+      <div class="shot shot-one">
+        <img src="/blog/img/calcul-mental-personnalise/calcul-mental-question-ecrit-qcm.webp" width="600" height="1139" loading="lazy" decoding="async" alt="Question de calcul mental sur les probabilités dans Galac6, à l'écrit : une urne contient 4 boules rouges et 1 boule bleue, l'élève choisit la probabilité de tirer une rouge parmi quatre propositions, avec le chronomètre de la partie.">
+      </div>
+      <figcaption>Une question de probabilités en cours de partie, à l'écrit, avec quatre propositions au choix.</figcaption>
+    </figure>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
@@ -527,6 +656,13 @@
       <li>le choix du rythme : un temps par question plus court rapporte plus d'XP, un temps plus long en rapporte moins ;</li>
       <li><strong>Plumaths</strong>, le jeu de calcul mental de Galac6 : chaque bonne réponse fait avancer une plume vers le pied d'un personnage, chaque erreur la fait reculer, et la partie est gagnée quand la plume le chatouille. Les questions sont les mêmes que celles du calcul mental, sur les notions de sa classe.</li>
     </ul>
+
+    <figure class="fig">
+      <div class="shot shot-one">
+        <img src="/blog/img/calcul-mental-personnalise/plumaths-jeu-de-calcul-mental.webp" width="600" height="1139" loading="lazy" decoding="async" alt="Plumaths, le jeu de calcul mental de Galac6 : une plume avance vers le pied d'un dragon à chaque bonne réponse, sous une question sur les fractions avec quatre propositions.">
+      </div>
+      <figcaption>Plumaths en cours de partie : à chaque bonne réponse, la plume se rapproche du pied du personnage.</figcaption>
+    </figure>
     <p>Chaque série compte aussi dans le suivi des parents : vous voyez ce que votre enfant a travaillé et où il en est. Pour installer une routine de quelques minutes par jour au primaire, lisez <a href="/blog/calcul-mental-primaire">Calcul mental au primaire : 10 minutes par jour</a>.</p>
     <div style="margin: 1.5rem 0;">
       <a href="https://galac6web.netlify.app/" class="cta-btn">Essayer le calcul mental →</a>
@@ -537,9 +673,43 @@
 
     <h2 id="voix-haute">Pourquoi faire du calcul mental à voix haute ?</h2>
     <p>C'est une innovation de Galac6 : tout peut se passer à l'oral. Galac6 lit la question, l'élève répond à voix haute, et sa réponse est corrigée aussitôt.</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 330" role="img" aria-labelledby="schema-oral-titre schema-oral-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-oral-titre">Le calcul mental à voix haute avec Galac6</title>
+        <desc id="schema-oral-desc">Galac6 lit la question, que l'élève peut réécouter. L'élève dit sa réponse à voix haute. Avec l'option « Je vérifie avant de valider », il confirme ce qu'il a dit avant que la réponse compte. Sa réponse est ensuite corrigée aussitôt.</desc>
+        <defs><marker id="d-arr3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="d-head" d="M0 0L10 5L0 10z"/></marker></defs>
+        <rect class="d-box" x="20" y="8" width="320" height="66" rx="12"/>
+        <path class="d-ico" d="M44 34h6l8-7v24l-8-7h-6z M63 33a7 7 0 0 1 0 12 M67 28a13 13 0 0 1 0 22"/>
+        <text class="d-t" x="88" y="36">Galac6 lit la question</text>
+        <text class="d-s" x="88" y="56">l'élève peut la réécouter</text>
+        <path class="d-line" d="M180 74V98" marker-end="url(#d-arr3)"/>
+        <rect class="d-box" x="20" y="102" width="320" height="66" rx="12"/>
+        <path class="d-ico" d="M50 118a6 6 0 0 1 12 0v12a6 6 0 0 1-12 0z M44 128a12 12 0 0 0 24 0 M56 140v8"/>
+        <text class="d-t" x="88" y="130">L'élève dit sa réponse</text>
+        <text class="d-s" x="88" y="150">à voix haute, au micro</text>
+        <path class="d-line" d="M180 168V186" marker-end="url(#d-arr3)"/>
+        <rect class="d-box-opt" x="40" y="190" width="280" height="50" rx="10"/>
+        <text class="d-s" x="180" y="211" text-anchor="middle">Option « Je vérifie avant de valider » :</text>
+        <text class="d-s" x="180" y="229" text-anchor="middle">il confirme ce qu'il a dit</text>
+        <path class="d-line" d="M180 240V258" marker-end="url(#d-arr3)"/>
+        <rect class="d-box-up" x="20" y="262" width="320" height="62" rx="12"/>
+        <path class="d-ico" style="stroke:#6ee7b7" d="M44 293l7 7 14-15"/>
+        <text class="d-t" x="88" y="289">Correction immédiate</text>
+        <text class="d-s" x="88" y="309">la réponse est corrigée aussitôt</text>
+      </svg>
+      <figcaption>Le calcul mental à voix haute : Galac6 lit, l'élève répond à l'oral, la correction arrive tout de suite.</figcaption>
+    </figure>
     <p>L'intérêt est simple : l'élève se concentre sur le calcul, et non sur la façon de taper sa réponse. Chercher les touches, corriger une faute de frappe, quitter la question des yeux pour regarder le clavier : tout cela détourne l'attention, surtout chez les plus jeunes. À l'oral, il ne reste que le calcul.</p>
     <p>Nous l'avons remarqué en observant les élèves : quand tout se passe à l'oral, ils sont plus concentrés et leurs résultats sont meilleurs.</p>
     <p>Chaque élève choisit : écouter ou lire la question, dire ou taper sa réponse. Il peut réécouter une question, et cocher « Je vérifie avant de valider » pour confirmer ce qu'il a dit avant que la réponse compte. Les séries MuscuMath envoyées par le professeur se font aussi à l'oral.</p>
+
+    <figure class="fig">
+      <div class="shot shot-one">
+        <img src="/blog/img/calcul-mental-personnalise/calcul-mental-a-voix-haute-reecouter.webp" width="600" height="1139" loading="lazy" decoding="async" alt="Calcul mental à voix haute dans Galac6 : la question sur un pourcentage est lue par la voix de Galac6, avec le bouton Réécouter et le micro qui attend la réponse dite par l'élève.">
+      </div>
+      <figcaption>À l'oral : la question vient d'être lue, l'élève peut la réécouter et Galac6 attend sa réponse au micro.</figcaption>
+    </figure>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
