@@ -87,8 +87,9 @@ PATH_TO_GROUP = {
 }
 # Pages faites à la main (hors groupes) qui ont une version anglaise : liens traduits et sélecteur de langue (31/10/2026)
 # '/blog' → '/en/blog' : index du blog anglais (01/11/2026) ; les autres langues gardent le blog français.
+# Blog : adresse de référence avec la barre finale (/blog/, /en/blog/), audit SEO du 03/11/2026 ; '/blog' gardé pour les anciens liens
 PAIRES_EN = {'/ecoles-francaises-royaume-uni': '/en/french-schools-uk',
-             '/blog': '/en/blog',
+             '/blog': '/en/blog/', '/blog/': '/en/blog/',
              '/blog/pisa-2025-ecole-du-futur': '/en/blog/pisa-2025-school-of-the-future'}
 # Fil d'Ariane des pages françaises (les autres langues : clés nav.* ou <groupe>.crumb des dictionnaires)
 CRUMB_FR = {'familles': 'Familles', 'ecole': 'Professeurs et écoles', 'about': 'À propos', 'tarifs': 'Tarifs',
@@ -114,6 +115,16 @@ ORG_DESC = {
     'pt': "Edtech francesa que redefine a aprendizagem na escola, a partir do que cada aluno sabe: uma IA pedagógica para professores, alunos e pais, do CP à Terminale, segundo o currículo francês. Dados alojados em França.",
     'nl': "Franse edtech die leren op school een nieuwe vorm geeft, vertrekkend van wat elke leerling weet: een pedagogische AI voor leerkrachten, leerlingen en ouders, van CP tot Terminale, volgens het Franse curriculum. Gegevens gehost in Frankrijk.",
 }
+# Slogan officiel, toujours avec son point (03/11/2026)
+SLOGAN = "L'IA au service de la pédagogie."
+PERSON_ID = SITE + '/about#raphael-haik'
+JOB_TITLE = {'fr': 'Fondateur de Galac6', 'en': 'Founder of Galac6', 'es': 'Fundador de Galac6', 'it': 'Fondatore di Galac6',
+             'de': 'Gründer von Galac6', 'pt': 'Fundador do Galac6', 'nl': 'Oprichter van Galac6'}
+# Texte alternatif de l'image de partage (og:image:alt), par langue (03/11/2026)
+OG_ALT = {'fr': "Galac6, l'IA au service de la pédagogie.", 'en': 'Galac6, AI in the service of teaching.',
+          'es': 'Galac6, la IA al servicio de la pedagogía.', 'it': "Galac6, l'IA al servizio della pedagogia.",
+          'de': 'Galac6, KI im Dienst der Pädagogik.', 'pt': 'Galac6, a IA ao serviço da pedagogia.',
+          'nl': 'Galac6, AI in dienst van de pedagogiek.', 'he': 'Galac6'}
 EMOJI = re.compile('[\U0001F000-\U0001FAFF☀-➿⭐️\U0001F1E6-\U0001F1FF]\\s?')
 
 GLOBE = ('<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
@@ -191,7 +202,8 @@ SIGNUP_URL = 'https://galac6web.netlify.app/'
 SIGNUP_STYLE = ('background: linear-gradient(135deg, var(--gradient-start, #6366f1), var(--gradient-end, #a855f7)); '
                 'color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;')
 
-# Bandeau anglais présent en haut de TOUTES les pages, jamais traduit, sans bouton de fermeture.
+# Bandeau anglais présent sur TOUTES les pages, jamais traduit, sans bouton de fermeture.
+# Depuis l'audit SEO du 03/11/2026 : placé juste au-dessus du pied de page et non collant (il passait avant le h1).
 # Son lien mène à la page de vote (réécrit vers /es/international, etc. sur les pages traduites).
 INTL_BANNER = ('<!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-banner" lang="en" dir="ltr" role="note">'
                '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
@@ -200,13 +212,13 @@ INTL_BANNER = ('<!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-bann
                '15.3 15.3 0 0 1 4-10z"/></svg><span>Galac6 follows the French national curriculum, for French schools and families in France and abroad. '
                'Want Galac6 for your country&rsquo;s curriculum? <a href="/international">Send a request&nbsp;&rarr;</a></span></div><!-- /intl-banner -->')
 BANNER_CSS = """
-    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, collé en haut avec le menu (généré par scripts/build-langs.py) */
+    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, juste au-dessus du pied de page, non collant (généré par scripts/build-langs.py) */
     .g6-intl-banner { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 8px 16px; background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; font-size: 0.85rem; font-weight: 500; line-height: 1.45; text-align: center; direction: ltr; }
     .g6-intl-banner svg { flex: none; opacity: 0.9; }
     .g6-intl-banner span { min-width: 0; overflow-wrap: anywhere; }
     .g6-intl-banner a { color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.5); }
     .g6-intl-banner a:hover, .g6-intl-banner a:focus-visible { border-bottom-color: #fff; text-decoration: none; }
-    body > .g6-intl-banner { position: sticky; top: 0; z-index: 120; }
+    .g6-intl-banner { position: static; }
     @media (max-width: 480px) { .g6-intl-banner { font-size: 0.8rem; padding: 7px 12px; } }
 """
 
@@ -356,7 +368,7 @@ def menu_links(group, current_path):
 def nav_href(item, lang):
     """Adresse d'un lien du menu dans une langue (le blog n'existe qu'en français et en anglais)."""
     return {'families': page_path('familles', lang), 'school': page_path('ecole', lang),
-            'pricing': page_path('tarifs', lang), 'blog': '/en/blog' if lang == 'en' else '/blog',
+            'pricing': page_path('tarifs', lang), 'blog': '/en/blog/' if lang == 'en' else '/blog/',
             'about': page_path('about', lang)}[item]
 
 
@@ -446,16 +458,23 @@ def faq_items(soup):
 
 def organization_ld(lang):
     return {'@type': 'Organization', '@id': SITE + '/#organization', 'name': 'Galac6', 'url': SITE + '/',
-            'logo': SITE + '/icons/logo.png', 'slogan': "L'IA au service de la pédagogie",
+            'logo': SITE + '/icons/logo.png', 'slogan': SLOGAN,
             'description': ORG_DESC.get(lang, ORG_DESC['en']), 'email': 'hello@galac6.io',
             # Fiche d'identité (02/11/2026) : société, fondateur et comptes officiels, à garder sur tous les accueils
             'legalName': 'RHK CONSEIL',
             'address': {'@type': 'PostalAddress', 'streetAddress': '19 rue de Croulebarbe', 'postalCode': '75013',
                         'addressLocality': 'Paris', 'addressCountry': 'FR'},
-            'founder': {'@type': 'Person', 'name': 'Raphaël Haïk', 'sameAs': 'https://www.linkedin.com/in/raphaelhaik'},
+            'founder': {'@id': PERSON_ID},
             'sameAs': ['https://www.linkedin.com/company/galac6', 'https://www.facebook.com/profile.php?id=61586374984363'],
             'contactPoint': {'@type': 'ContactPoint', 'contactType': 'customer support', 'email': 'hello@galac6.io'},
             'areaServed': AREA_SERVED, 'knowsLanguage': ALL}
+
+
+def person_ld(lang):
+    """Fondateur (seul fondateur) : même fiche sur la page À propos et comme auteur des articles du blog."""
+    return {'@type': 'Person', '@id': PERSON_ID, 'name': 'Raphaël Haïk', 'url': SITE + '/about',
+            'jobTitle': JOB_TITLE.get(lang, JOB_TITLE['en']), 'worksFor': {'@id': SITE + '/#organization'},
+            'sameAs': ['https://www.linkedin.com/in/raphaelhaik']}
 
 
 def page_ld(soup, group, lang, url, home_name, crumb_name):
@@ -464,22 +483,33 @@ def page_ld(soup, group, lang, url, home_name, crumb_name):
     desc_tag = soup.find('meta', attrs={'name': 'description'})
     faq = faq_items(soup)
     website_id = SITE + page_path('index', lang) + '#website'
-    page = {'@type': 'FAQPage' if faq else 'WebPage', '@id': url + '#webpage', 'url': url, 'name': title,
+    kind = 'AboutPage' if group == 'about' else ('FAQPage' if faq else 'WebPage')
+    page = {'@type': kind, '@id': url + '#webpage', 'url': url, 'name': title,
             'inLanguage': lang, 'isPartOf': {'@id': website_id}, 'publisher': {'@id': SITE + '/#organization'}}
     if desc_tag is not None:
         page['description'] = desc_tag.get('content', '')
-    if faq:
+    # Date « Mis à jour le … » affichée sur la page (<p class="updated"><time datetime="…">) → dateModified
+    updated = soup.select_one('.updated time[datetime]')
+    if updated is not None:
+        page['dateModified'] = updated['datetime']
+    if faq and kind == 'FAQPage':
         page['mainEntity'] = faq
     graph = []
+    if group == 'about':
+        page['about'] = {'@id': SITE + '/#organization'}
+        page['mainEntity'] = {'@id': SITE + '/#organization'}
+        graph += [organization_ld(lang), person_ld(lang)]
+        if faq:
+            graph.append({'@type': 'FAQPage', '@id': url + '#faq', 'mainEntity': faq})
     if group == 'index':
         graph += [organization_ld(lang),
                   {'@type': 'WebSite', '@id': website_id, 'url': url, 'name': 'Galac6', 'inLanguage': lang,
                    'publisher': {'@id': SITE + '/#organization'}}]
     else:
-        graph.append({'@type': 'BreadcrumbList', 'itemListElement': [
+        graph.insert(0, {'@type': 'BreadcrumbList', 'itemListElement': [
             {'@type': 'ListItem', 'position': 1, 'name': home_name, 'item': SITE + page_path('index', lang)},
             {'@type': 'ListItem', 'position': 2, 'name': crumb_name, 'item': url}]})
-    graph.insert(0 if group != 'index' else len(graph), page)
+    graph.insert(0 if group != 'index' else len(graph), page)  # page en tête (accueil : après l'organisation et le site)
     return {'@context': 'https://schema.org', '@graph': graph}
 
 
@@ -493,7 +523,7 @@ def ld_script(ld):
 def source_pages():
     files = []
     for name in sorted(os.listdir(ROOT)):
-        if name.endswith('.html'):
+        if name.endswith('.html') and name != '404.html':  # page d'erreur : hors traductions, sitemap et redirections
             files.append(name)
     blog = os.path.join(ROOT, 'blog')
     for name in sorted(os.listdir(blog)):
@@ -503,18 +533,25 @@ def source_pages():
 
 
 def update_banner(s):
-    """Retire l'ancien bandeau anglais caché (en-banner) et place le bandeau anglais visible en haut de page."""
+    """Retire l'ancien bandeau anglais caché (en-banner) et place le bandeau anglais visible juste au-dessus du pied de page."""
     # Pages marquées « no-intl-banner » (article PISA) : pas de bandeau « France only »
     if '<!-- no-intl-banner -->' in s:
         return re.sub(r'\n?[ \t]*<!-- intl-banner -->.*?<!-- /intl-banner -->', '', s, flags=re.S)
     s = re.sub(r'\n[ \t]*<!-- ═══ EN BANNER[^>]*-->[ \t]*', '', s)
     s = re.sub(r'\n[ \t]*<div [^>]*id="en-banner"[^>]*>.*?</div>[ \t]*(?=\n)', '', s, flags=re.S)
-    if '<!-- intl-banner -->' in s:
-        s = re.sub(r'<!-- intl-banner -->.*?<!-- /intl-banner -->', lambda m: INTL_BANNER, s, flags=re.S)
-    elif '<div class="navbar-wrapper">' in s:
-        s = s.replace('<div class="navbar-wrapper">', '<div class="navbar-wrapper">\n    ' + INTL_BANNER, 1)
+    # Ancien emplacement (en haut, dans le menu collant) ou emplacement actuel : on retire, puis on replace avant le pied de page
+    s = re.sub(r'\n?[ \t]*<!-- intl-banner -->.*?<!-- /intl-banner -->', '', s, flags=re.S)
+    pos = s.rfind('<div class="footer-wrapper">')
+    if pos < 0:
+        pos = s.rfind('<footer')
+    if pos < 0:
+        pos = s.rfind('</body>')
+    line_start = s.rfind('\n', 0, pos) + 1
+    if not s[line_start:pos].strip():  # la balise est seule sur sa ligne : bandeau sur la ligne au-dessus
+        indent = s[line_start:pos]
+        s = s[:line_start] + indent + INTL_BANNER + '\n' + s[line_start:]
     else:
-        s = re.sub(r'(<body[^>]*>)', lambda m: m.group(1) + '\n  ' + INTL_BANNER, s, count=1)
+        s = s[:pos] + INTL_BANNER + '\n' + s[pos:]
     css = '<style id="g6-banner-css">%s  </style>' % BANNER_CSS
     if '<style id="g6-banner-css">' in s:
         s = re.sub(r'<style id="g6-banner-css">.*?</style>', lambda m: css, s, flags=re.S)
@@ -556,7 +593,7 @@ def update_handmade_en(generated):
             if 'class="navbar-links"' not in s:
                 continue
             url_path = '/' + re.sub(r'(index)?\.html$', '', rel)
-            new = set_nav_css(apply_navbar(refresh_lang_menu(s, 'en', 'Language'), 'en', texts, url_path))
+            new = set_nav_css(apply_navbar(refresh_lang_menu(update_banner(s), 'en', 'Language'), 'en', texts, url_path))
             if new != s:
                 write(rel, new)
                 changed.append(rel)
@@ -753,7 +790,8 @@ def build_page(group, lang, D, countries, errors):
         tag = head.find('meta', attrs=sel)
         if tag is not None:
             tag['content'] = need('meta.%s.%s' % (group, key))
-    for sel, val in (({'property': 'og:url'}, url), ({'property': 'og:locale'}, OG_LOCALE[lang])):
+    for sel, val in (({'property': 'og:url'}, url), ({'property': 'og:locale'}, OG_LOCALE[lang]),
+                     ({'property': 'og:image:alt'}, OG_ALT[lang]), ({'name': 'twitter:image:alt'}, OG_ALT[lang])):
         tag = head.find('meta', attrs=sel)
         if tag is not None:
             tag['content'] = val
@@ -869,7 +907,9 @@ def build_page(group, lang, D, countries, errors):
 
     # ── données structurées traduites ──
     crumb = need(CRUMB_KEY[group]) if group in CRUMB_KEY else None
-    ld = None if group == 'vote' else page_ld(soup, group, lang, url, need('gen.home'), crumb)
+    if group == 'vote':  # page de vote : fil d'Ariane au nom du titre principal (audit SEO du 03/11/2026)
+        crumb = norm(soup.h1.get_text()) if soup.h1 else 'Galac6'
+    ld = page_ld(soup, group, lang, url, need('gen.home'), crumb)
     if ld:
         tag = BeautifulSoup(ld_script(ld), 'html.parser').script
         canon_last = head.find_all('link', attrs={'rel': 'alternate'})
@@ -940,12 +980,13 @@ def build_page(group, lang, D, countries, errors):
 # ─────────────── 3. _redirects et sitemap.xml ───────────────
 
 def clean_path(rel):
-    """Adresse propre d'un fichier : index.html → /, blog/index.html → /blog, en/index.html → /en/, about.html → /about."""
+    """Adresse propre d'un fichier : index.html → /, blog/index.html → /blog/, en/index.html → /en/, about.html → /about."""
     if rel == 'index.html':
         return '/'
     if rel.endswith('/index.html'):
         d = rel[:-len('index.html')]
-        return '/' + (d if d.strip('/') in LANGS else d.rstrip('/'))
+        # Barre finale gardée (/blog/, /en/blog/) : adresse de référence du blog (audit SEO du 03/11/2026)
+        return '/' + d
     return '/' + rel[:-len('.html')]
 
 
@@ -1020,10 +1061,8 @@ def update_sitemap():
         rel = resolve(loc[len(SITE):] or '/', redirects)
         if rel:
             u = re.sub(r'<lastmod>[^<]*</lastmod>', '<lastmod>%s</lastmod>' % file_date(rel), u)
+        u = re.sub(r'[ \t]*<(changefreq|priority)>[^<]*</\1>\n', '', u)  # ignorés par Google (audit du 03/11/2026)
         kept.append(u)
-    prio = {'index': '1.0', 'familles': '0.9', 'tarifs': '0.9', 'ecole': '0.9', 'about': '0.5', 'vote': '0.6', 'etranger': '0.8',
-            'expat': '0.8', 'dictee': '0.8', 'annales': '0.8'}
-    freq = {'index': 'weekly'}
     new = []
     for g in ('index', 'familles', 'tarifs', 'ecole', 'etranger', 'expat', 'dictee', 'annales', 'about', 'vote'):
         alts = ''.join('    <xhtml:link rel="alternate" hreflang="%s" href="%s%s"/>\n' % (l, SITE, page_path(g, l))
@@ -1031,13 +1070,8 @@ def update_sitemap():
         alts += '    <xhtml:link rel="alternate" hreflang="x-default" href="%s%s"/>\n' % (
             SITE, page_path(g, 'fr') or page_path(g, 'en'))
         for l in group_langs(g):
-            p = float(prio[g]) - (0 if l in ('fr', 'en') or g == 'vote' else 0.1)
-            if l != 'fr' and g != 'vote':
-                p -= 0.1
-            new.append('  <url>\n    <loc>%s%s</loc>\n%s    <lastmod>%s</lastmod>\n    <changefreq>%s</changefreq>\n'
-                       '    <priority>%.1f</priority>\n  </url>\n' % (SITE, page_path(g, l), alts,
-                                                                       file_date(out_file(page_path(g, l)) if page_path(g, l) != '/' else 'index.html'),
-                                                                       freq.get(g, 'monthly'), p))
+            new.append('  <url>\n    <loc>%s%s</loc>\n%s    <lastmod>%s</lastmod>\n  </url>\n' % (
+                SITE, page_path(g, l), alts, file_date(out_file(page_path(g, l)) if page_path(g, l) != '/' else 'index.html')))
     out = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
            + ''.join(new) + ''.join(kept) + '</urlset>\n')

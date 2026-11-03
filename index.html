@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galac6 : l'IA pédagogique qui part de ce que sait chaque élève</title>
-  <meta name="description" content="Galac6 redéfinit l'apprentissage à l'école, à partir de ce que sait chaque élève : devoirs proposés et corrigés, suivi notion par notion, parcours adapté. Du CP à la Terminale.">
+  <title>Galac6 : tuteur IA du CP à la Terminale, programme français</title>
+  <meta name="description" content="Galac6 (galac6.io), tuteur IA français du CP à la Terminale sur le programme officiel : devoirs proposés et corrigés, suivi notion par notion, parcours adapté.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/">
   <!-- hreflang (généré par scripts/build-langs.py) -->
@@ -20,14 +20,18 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Galac6">
   <meta property="og:locale" content="fr_FR">
-  <meta property="og:title" content="Galac6. L'IA au service de la pédagogie">
+  <meta property="og:title" content="Galac6. L'IA au service de la pédagogie.">
   <meta property="og:description" content="Galac6 redéfinit l'apprentissage à l'école, à partir de ce que sait chaque élève. Du CP à la Terminale. Données hébergées en France, IA traitée en Europe.">
   <meta property="og:url" content="https://galac6.io/">
   <meta property="og:image" content="https://galac6.io/images/og-image-v2.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Galac6. L'IA au service de la pédagogie">
+  <meta name="twitter:title" content="Galac6. L'IA au service de la pédagogie.">
   <meta name="twitter:description" content="Galac6 redéfinit l'apprentissage à l'école, à partir de ce que sait chaque élève. Du CP à la Terminale. Données hébergées en France, IA traitée en Europe.">
   <meta name="twitter:image" content="https://galac6.io/images/og-image-v2.jpg">
+  <meta name="twitter:image:alt" content="Galac6, l'IA au service de la pédagogie.">
   <link rel="icon" type="image/png" href="icons/32x32.png">
   <script type="application/ld+json">
 {
@@ -39,7 +43,7 @@
       "name": "Galac6",
       "url": "https://galac6.io/",
       "logo": "https://galac6.io/icons/logo.png",
-      "slogan": "L'IA au service de la pédagogie",
+      "slogan": "L'IA au service de la pédagogie.",
       "description": "Edtech française qui redéfinit l'apprentissage à l'école, à partir de ce que sait chaque élève : une IA pédagogique pour les professeurs, les élèves et les parents, du CP à la Terminale, construite sur le programme scolaire français. Données hébergées en France.",
       "areaServed": [
         "FR",
@@ -77,7 +81,9 @@
         "en",
         "es",
         "it",
-        "de"
+        "de",
+        "pt",
+        "nl"
       ],
       "email": "hello@galac6.io",
       "legalName": "RHK CONSEIL",
@@ -90,8 +96,12 @@
       },
       "founder": {
         "@type": "Person",
+        "@id": "https://galac6.io/about#raphael-haik",
         "name": "Raphaël Haïk",
-        "sameAs": "https://www.linkedin.com/in/raphaelhaik"
+        "url": "https://galac6.io/about",
+        "sameAs": [
+          "https://www.linkedin.com/in/raphaelhaik"
+        ]
       },
       "sameAs": [
         "https://www.linkedin.com/company/galac6",
@@ -116,44 +126,97 @@
     },
     {
       "@type": "SoftwareApplication",
+      "@id": "https://galac6.io/#app",
       "name": "Galac6",
-      "applicationCategory": "EducationalApplication",
-      "operatingSystem": "Web",
-      "inLanguage": "fr",
       "url": "https://galac6.io/",
-      "description": "Tuteur IA scolaire didactique : aide aux devoirs, quiz, dictées lues et corrigées, calcul mental, fiches de révision, brevet des collèges et baccalauréat blancs. Du CP à la Terminale, sur le programme français.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web (navigateur, sans application à télécharger)",
+      "inLanguage": "fr",
+      "description": "Tuteur IA scolaire du CP à la Terminale, sur le programme français : aide aux devoirs, quiz, dictées lues et corrigées, calcul mental, fiches de révision, brevet et bac blancs corrigés.",
       "offers": [
+        {
+          "@type": "Offer",
+          "name": "Découverte (quantité limitée chaque mois)",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "url": "https://galac6.io/tarifs",
+          "description": "Toutes les fonctionnalités en quantité limitée, renouvelées chaque mois, sans carte bancaire."
+        },
         {
           "@type": "Offer",
           "name": "Élève, abonnement annuel",
           "price": "69",
           "priceCurrency": "EUR",
-          "url": "https://galac6.io/tarifs"
+          "url": "https://galac6.io/tarifs",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "69",
+            "priceCurrency": "EUR",
+            "unitText": "an",
+            "referenceQuantity": {
+              "@type": "QuantitativeValue",
+              "value": 1,
+              "unitCode": "ANN"
+            }
+          }
         },
         {
           "@type": "Offer",
           "name": "Élève, abonnement mensuel",
           "price": "7.99",
           "priceCurrency": "EUR",
-          "url": "https://galac6.io/tarifs"
+          "url": "https://galac6.io/tarifs",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "7.99",
+            "priceCurrency": "EUR",
+            "unitText": "mois",
+            "referenceQuantity": {
+              "@type": "QuantitativeValue",
+              "value": 1,
+              "unitCode": "MON"
+            }
+          }
         },
         {
           "@type": "Offer",
           "name": "Famille (jusqu'à 4 enfants), abonnement annuel",
           "price": "99",
           "priceCurrency": "EUR",
-          "url": "https://galac6.io/tarifs"
+          "url": "https://galac6.io/tarifs",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "99",
+            "priceCurrency": "EUR",
+            "unitText": "an",
+            "referenceQuantity": {
+              "@type": "QuantitativeValue",
+              "value": 1,
+              "unitCode": "ANN"
+            }
+          }
         },
         {
           "@type": "Offer",
           "name": "Famille (jusqu'à 4 enfants), abonnement mensuel",
           "price": "11.99",
           "priceCurrency": "EUR",
-          "url": "https://galac6.io/tarifs"
+          "url": "https://galac6.io/tarifs",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "11.99",
+            "priceCurrency": "EUR",
+            "unitText": "mois",
+            "referenceQuantity": {
+              "@type": "QuantitativeValue",
+              "value": 1,
+              "unitCode": "MON"
+            }
+          }
         },
         {
           "@type": "Offer",
-          "name": "Pack Examen",
+          "name": "Pack Examen (achat unique, valable 12 mois)",
           "price": "19",
           "priceCurrency": "EUR",
           "url": "https://galac6.io/tarifs"
@@ -161,19 +224,38 @@
       ],
       "publisher": {
         "@id": "https://galac6.io/#organization"
-      },
-      "availableLanguage": [
-        "fr",
-        "en",
-        "es",
-        "it",
-        "de"
-      ],
-      "keywords": "soutien scolaire IA, tuteur IA, tuteur IA scolaire, aide aux devoirs, dictée en ligne, calcul mental, brevet des collèges, révision DNB, baccalauréat, bac de français, primaire, collège, lycée, programme français, edtech, innovation pédagogique, innovation scolaire, école du futur"
+      }
     },
     {
       "@type": "FAQPage",
+      "@id": "https://galac6.io/#webpage",
+      "url": "https://galac6.io/",
+      "name": "Galac6 : tuteur IA du CP à la Terminale, programme français",
+      "inLanguage": "fr",
+      "isPartOf": {
+        "@id": "https://galac6.io/#website"
+      },
+      "publisher": {
+        "@id": "https://galac6.io/#organization"
+      },
+      "dateModified": "2026-11-03",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que Galac6 (galac6.io) ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Galac6 (galac6.io) est un tuteur IA français pour les élèves du CP à la Terminale, construit sur le programme de l'Éducation nationale. Il guide l'élève par des questions et des indices, sans lui donner la réponse, et aide les professeurs à suivre chaque élève notion par notion. Galac6 propose plus de 2 000 dictées et 433 sujets d'annales officielles. Les données sont hébergées en France et l'IA est traitée en Europe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qui édite Galac6 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Galac6 est édité par RHK Conseil, 19 rue de Croulebarbe, 75013 Paris. Il a été fondé par Raphaël Haïk, ingénieur télécom de formation, seul fondateur. Plus de détails sur la page À propos."
+          }
+        },
         {
           "@type": "Question",
           "name": "À qui s'adresse Galac6 ?",
@@ -187,7 +269,7 @@
           "name": "Galac6 donne-t-il les réponses aux élèves ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Non, et c'est toute la différence. Galac6 ne fait pas les devoirs à la place de votre enfant : il l'aide à se poser les bonnes questions et à identifier ce qu'il ne sait pas encore, pour qu'il trouve lui-même les réponses."
+            "text": "Non — et c'est toute la différence. Galac6 ne fait pas les devoirs à la place de votre enfant. Il l'aide à se poser les bonnes questions, à identifier ce qu'il ne sait pas encore, pour qu'il trouve lui-même les réponses. L'objectif : construire de la vraie confiance, pas de fausses notes."
           }
         },
         {
@@ -195,7 +277,7 @@
           "name": "Galac6 remplace-t-il le prof ou les parents ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Jamais. Galac6 intervient là où ni le professeur ni les parents ne peuvent toujours être : le soir, seul devant ses devoirs. C'est un compagnon bienveillant qui prend le relais quand personne n'est disponible."
+            "text": "Jamais. Galac6 intervient là où ni le prof ni les parents ne peuvent toujours être : le soir à 21h, seul devant ses devoirs. Il est le compagnon bienveillant qui prend le relais quand personne n'est disponible. En primaire et au collège, il peut même devenir un formidable outil d'interaction entre parents et enfants."
           }
         },
         {
@@ -203,7 +285,7 @@
           "name": "Comment Galac6 utilise-t-il l'IA ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Galac6 utilise l'IA pour guider l'élève, pas pour penser à sa place. L'IA analyse le niveau, les lacunes et le rythme de l'élève, puis propose des explications adaptées, des questions de révision ciblées et des encouragements personnalisés, en français et dans le respect du programme de l'Éducation nationale."
+            "text": "Galac6 utilise l'IA pour guider l'élève, pas pour penser à sa place. L'IA analyse le niveau, les lacunes et le rythme d'apprentissage de l'élève, puis propose des explications adaptées, des questions de révision ciblées et des encouragements personnalisés — en français, dans le respect du programme de l'Éducation Nationale."
           }
         },
         {
@@ -211,7 +293,7 @@
           "name": "En quoi Galac6 est-il différent de ChatGPT ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ChatGPT donne des réponses, Galac6 donne des compétences. ChatGPT n'est pas conçu pour les enfants, ne connaît pas le programme français et n'a aucune logique pédagogique. Galac6 est pensé pour l'école française, avec une approche qui pousse l'élève à apprendre vraiment plutôt qu'à copier-coller."
+            "text": "ChatGPT donne des réponses. Galac6 donne des compétences. ChatGPT n'est pas conçu pour les enfants, ne connaît pas le programme français et n'a aucune logique pédagogique. Galac6 est spécialement pensé pour l'école française, avec une approche qui pousse l'élève à apprendre vraiment — pas à copier-coller."
           }
         },
         {
@@ -219,7 +301,7 @@
           "name": "Combien de temps par jour faut-il utiliser Galac6 ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "15 à 30 minutes suffisent pour des révisions efficaces. Galac6 n'est pas conçu pour remplacer les loisirs mais pour optimiser les moments de travail : quelques sessions ciblées par semaine font déjà une vraie différence."
+            "text": "15 à 30 minutes suffisent pour des révisions efficaces. Galac6 n'est pas conçu pour remplacer les loisirs — il est conçu pour optimiser les moments de travail. Quelques sessions ciblées par semaine font déjà une vraie différence sur les résultats."
           }
         },
         {
@@ -227,7 +309,7 @@
           "name": "Les données de mon enfant sont-elles protégées ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Oui, c'est non-négociable. Galac6 est conçu en France et les données sont hébergées en France. Seuls quelques services techniques, comme l'hébergement du site internet, font appel à des prestataires situés hors de l'Union européenne. Les données des enfants ne sont jamais revendues à des tiers ni utilisées pour entraîner des modèles d'IA."
+            "text": "Oui, et c'est non-négociable. Galac6 est conçu en France et les données sont hébergées en France. Seuls quelques services techniques, comme l'hébergement du site internet, font appel à des prestataires situés hors de l'Union européenne. Nous ne revendons jamais les données de vos enfants à des tiers. La confidentialité et la sécurité des données des mineurs sont au cœur de notre conception."
           }
         },
         {
@@ -243,7 +325,7 @@
           "name": "Quelles matières et quels niveaux sont couverts ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Galac6 couvre les principales matières du programme français — français, mathématiques, histoire-géographie, sciences, anglais et d'autres — du CP à la Terminale. Le contenu s'adapte automatiquement au niveau et à la classe de l'élève."
+            "text": "Galac6 couvre les principales matières du programme français : Français, Mathématiques, Histoire-Géographie, Sciences, Anglais et d'autres encore — du CP à la Terminale. Le contenu s'adapte automatiquement au niveau et à la classe de l'élève."
           }
         },
         {
@@ -251,7 +333,7 @@
           "name": "Les parents peuvent-ils suivre les progrès de leur enfant ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Oui. Les parents ont accès à un espace de suivi pour voir les matières travaillées, les progrès réalisés et les points à renforcer. L'outil est conçu pour renforcer le rôle actif des parents dans la scolarité."
+            "text": "Oui. Les parents ont accès à un espace de suivi pour voir les matières travaillées, les progrès réalisés et les points à renforcer. Chez Galac6, nous croyons au rôle actif des parents dans la scolarité — l'outil est conçu pour renforcer ce lien, pas pour le remplacer."
           }
         },
         {
@@ -259,21 +341,18 @@
           "name": "Combien coûte Galac6 ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Galac6 est un service payant. Pour l'essayer, l'offre Découverte, sans carte bancaire, donne accès à toutes les fonctionnalités en quantité limitée, rechargée chaque mois : 5 messages au tuteur, une dictée, un quiz, une aide aux devoirs avec photo et un sujet type brevet ou bac. Pour tout Galac6 en illimité : l'offre Élève à 69 € par an ou 7,99 € par mois, et l'offre Famille, jusqu'à 4 enfants, à 99 € par an ou 11,99 € par mois. Le Pack Examen coûte 19 € (14 € avec un abonnement à l'année). Pour les écoles, le tarif est sur devis, avec un pilote gratuit de 3 mois sur 3 classes, sans engagement."
+            "text": "Galac6 est un service payant. Pour l'essayer, l'offre Découverte, sans carte bancaire, donne accès à toutes les fonctionnalités en quantité limitée, rechargée chaque mois : 5 messages au tuteur, une dictée, un quiz, une aide aux devoirs avec photo et un sujet type brevet ou bac. Pour tout Galac6 en illimité : l'offre Élève à 69 € par an ou 7,99 € par mois, et l'offre Famille, jusqu'à 4 enfants, à 99 € par an ou 11,99 € par mois. Le Pack Examen coûte 19 € (14 € avec un abonnement à l'année). Pour les écoles, le tarif est sur devis, avec un pilote gratuit de 3 mois sur 3 classes, sans engagement. Le détail est sur la page Tarifs."
           }
         }
-      ],
-      "inLanguage": "fr",
-      "url": "https://galac6.io/",
-      "name": "Galac6 : tuteur IA scolaire, du CP à la Terminale"
+      ]
     }
   ]
 }
   </script>
   <!-- Google Analytics 4 + Consent Mode v2 (RGPD) -->
-  <script src="analytics.js"></script>
+  <script src="analytics.js" defer></script>
   <!-- Suivi des UTM (origine des visiteurs, sans cookie) -->
-  <script src="utm.js"></script>
+  <script src="utm.js" defer></script>
   <style>
     :root {
       --primary: #7c5cfc;
@@ -349,7 +428,12 @@
     .hero { max-width: 1100px; margin: 0 auto; padding: 5.5rem 2rem 4rem; position: relative; }
     .hero::after { content: ""; position: absolute; right: -60px; top: -40px; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(closest-side, rgba(124,92,252,.22), transparent); pointer-events: none; }
     .hero > * { position: relative; z-index: 1; }
-    .hero h1 { font-size: clamp(2.3rem, 6.4vw, 4rem); font-weight: 800; letter-spacing: -0.035em; line-height: 1.06; max-width: 14ch; }
+    /* h1 avec les mots-clés au-dessus, slogan officiel en grand (paragraphe stylé), audit SEO du 03/11/2026 */
+    .hero .hero-h1 { font-size: clamp(1.05rem, 2.4vw, 1.3rem); font-weight: 700; letter-spacing: 0.01em; line-height: 1.35; color: var(--primary-light); margin-bottom: 0.9rem; max-width: none; }
+    .hero .hero-slogan { font-size: clamp(2.3rem, 6.4vw, 4rem); font-weight: 800; letter-spacing: -0.035em; line-height: 1.06; max-width: 14ch; color: var(--text); text-wrap: balance; }
+    .hero .hero-answer { font-size: clamp(1rem, 1.9vw, 1.12rem); color: var(--text-muted); max-width: 60ch; margin-top: 1.25rem; line-height: 1.6; }
+    .hero .hero-answer strong { color: var(--text); }
+    .updated { color: var(--text-muted); font-size: 0.85rem; margin-top: 0.75rem; }
     .grad { background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
     .hero .subtitle { font-size: clamp(1.02rem, 2vw, 1.2rem); color: var(--text-muted); max-width: 56ch; margin-top: 1.25rem; line-height: 1.65; }
     /* Fil rouge (03/11/2026) : première phrase de l'accroche mise en avant */
@@ -555,7 +639,7 @@
     @media (max-width: 420px) { .m-row { grid-template-columns: minmax(0, 1fr) 56px 70px; gap: 8px; } }
   </style>
   <!-- Meta Pixel (Facebook) - charge apres consentement -->
-  <script src="meta-pixel.js"></script>
+  <script src="meta-pixel.js" defer></script>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
     html, body { overflow-x: clip; } /* les halos décoratifs du haut de page ne créent plus de défilement horizontal */
@@ -613,13 +697,13 @@
     }
   </style>
   <style id="g6-banner-css">
-    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, collé en haut avec le menu (généré par scripts/build-langs.py) */
+    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, juste au-dessus du pied de page, non collant (généré par scripts/build-langs.py) */
     .g6-intl-banner { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 8px 16px; background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; font-size: 0.85rem; font-weight: 500; line-height: 1.45; text-align: center; direction: ltr; }
     .g6-intl-banner svg { flex: none; opacity: 0.9; }
     .g6-intl-banner span { min-width: 0; overflow-wrap: anywhere; }
     .g6-intl-banner a { color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.5); }
     .g6-intl-banner a:hover, .g6-intl-banner a:focus-visible { border-bottom-color: #fff; text-decoration: none; }
-    body > .g6-intl-banner { position: sticky; top: 0; z-index: 120; }
+    .g6-intl-banner { position: static; }
     @media (max-width: 480px) { .g6-intl-banner { font-size: 0.8rem; padding: 7px 12px; } }
   </style>
 </head>
@@ -654,7 +738,6 @@
 
   <!-- ═══ NAVBAR ═══ -->
   <div class="navbar-wrapper">
-    <!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-banner" lang="en" dir="ltr" role="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Galac6 follows the French national curriculum, for French schools and families in France and abroad. Want Galac6 for your country&rsquo;s curriculum? <a href="/international">Send a request&nbsp;&rarr;</a></span></div><!-- /intl-banner -->
     <nav class="navbar">
       <a href="/" class="navbar-brand">
         <img src="/icons/icon-nav.png" alt="Galac6" width="132" height="132">
@@ -667,7 +750,7 @@
         <a href="/familles" data-i18n="nav.families">Familles</a>
         <a href="/ecole" data-i18n="nav.school">Professeurs et écoles</a>
         <a href="/tarifs" data-i18n="nav.pricing">Tarifs</a>
-        <a href="/blog" data-i18n="nav.blog">Blog</a>
+        <a href="/blog/" data-i18n="nav.blog">Blog</a>
         <a href="/about" data-i18n="nav.about">À propos</a>
         <!-- lang-menu --><details class="lang-menu"><summary aria-label="Langue : Français"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#002654"/><rect x="13.33" width="6.67" height="14" fill="#ce1126"/></svg><span>FR</span></summary><div class="lang-menu-list"><a href="/" hreflang="fr" lang="fr" aria-current="page"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#002654"/><rect x="13.33" width="6.67" height="14" fill="#ce1126"/></svg><span>Français</span></a><a href="/en/" hreflang="en" lang="en"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#012169"/><path d="M0 0L20 14M20 0L0 14" stroke="#fff" stroke-width="3"/><path d="M0 0L20 14M20 0L0 14" stroke="#c8102e" stroke-width="1"/><path d="M10 0V14M0 7H20" stroke="#fff" stroke-width="4.5"/><path d="M10 0V14M0 7H20" stroke="#c8102e" stroke-width="2.5"/></svg><span>English</span></a><a href="/es/" hreflang="es" lang="es"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#aa151b"/><rect y="3.5" width="20" height="7" fill="#f1bf00"/></svg><span>Español</span></a><a href="/it/" hreflang="it" lang="it"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#009246"/><rect x="13.33" width="6.67" height="14" fill="#ce2b37"/></svg><span>Italiano</span></a><a href="/de/" hreflang="de" lang="de"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#ffce00"/><rect width="20" height="4.67" fill="#000"/><rect y="4.67" width="20" height="4.67" fill="#dd0000"/></svg><span>Deutsch</span></a><a href="/pt/" hreflang="pt" lang="pt"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#da291c"/><rect width="8" height="14" fill="#046a38"/><circle cx="8" cy="7" r="3" fill="#ffe900"/><circle cx="8" cy="7" r="1.6" fill="#da291c"/></svg><span>Português</span></a><a href="/nl/" hreflang="nl" lang="nl"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="20" height="4.67" fill="#ae1c28"/><rect y="9.33" width="20" height="4.67" fill="#21468b"/></svg><span>Nederlands</span></a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
         <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start, #6366f1), var(--gradient-end, #a855f7)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;" data-i18n="nav.signup">Inscription ou connexion</a>
@@ -678,7 +761,9 @@
   <main>
   <!-- ═══ a. HERO ═══ -->
   <div class="hero">
-    <h1 data-i18n-html="home.hero.title">L'IA au service de la <span class="grad">pédagogie.</span></h1>
+    <h1 class="hero-h1" data-i18n="home.hero.h1">Galac6, le tuteur IA du CP à la Terminale</h1>
+    <p class="hero-slogan" data-i18n-html="home.hero.title">L'IA au service de la <span class="grad">pédagogie.</span></p>
+    <p class="hero-answer" data-i18n-html="home.hero.answer"><strong>Galac6 (galac6.io)</strong> est un tuteur IA français pour les élèves du CP à la Terminale, construit sur le programme de l'Éducation nationale.</p>
     <p class="subtitle vision" data-i18n-html="home.hero.vision"><strong>Galac6 redéfinit l'apprentissage à l'école, à partir de ce que sait chaque élève.</strong> Ce qu'il réussit, ce qu'il rate, notion par notion : Galac6 le connaît et lui propose un parcours adapté à son niveau.</p>
     <div class="doors">
       <a class="door-btn pri" href="/familles"><svg class="ico" aria-hidden="true"><use href="#i-family"/></svg><span><strong data-i18n="home.door.fam">Je suis parent ou élève</strong><small data-i18n="home.door.fam.sub">Du CP à la Terminale</small></span><svg class="ico go" aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -689,6 +774,7 @@
       <a href="/tarifs" class="link" data-i18n="home.hero.pricing">Voir les tarifs →</a>
     </div>
     <p class="made-fr"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="home.hero.madefr2">Conçu en France, données hébergées en France, IA traitée en Europe.</span></p>
+    <p class="updated"><time datetime="2026-11-03" data-i18n="gen.updated">Mis à jour le 3 novembre 2026</time></p>
   </div>
 
   <hr class="divider">
@@ -777,7 +863,7 @@
       </div>
       <div class="who">
         <div class="badge"><span><svg class="ico" aria-hidden="true"><use href="#i-student"/></svg></span><span data-i18n="home.who.s.badge">Élève</span></div>
-        <h3 data-i18n="home.who.s.title2">Tu apprends à apprendre</h3>
+        <h3 data-i18n="home.who.s.title2">Tu trouves la réponse toi-même</h3>
         <p data-i18n="home.who.s.text2">Tu fais sur Galac6 les devoirs donnés par ton professeur, avec une IA qui ne te donne pas la réponse : elle te pose des questions pour que tu la trouves toi-même. De la leçon au contrôle, elle t'accompagne : un plan avant chaque contrôle, des brevets et bacs blancs, des dictées, du calcul mental et des jeux pour progresser chaque jour.</p>
         <a href="/familles" data-i18n="home.who.s.link">Voir pour les familles →</a>
       </div>
@@ -930,6 +1016,26 @@
     <p class="section-subtitle" data-i18n="faq.subtitle">Tout ce que les parents et les élèves nous demandent, en toute transparence.</p>
 
     <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span data-i18n="faq.qwhat">Qu'est-ce que Galac6 (galac6.io) ?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner" data-i18n-html="faq.awhat"><strong>Galac6 (galac6.io)</strong> est un tuteur IA français pour les élèves du CP à la Terminale, construit sur le programme de l'Éducation nationale. Il guide l'élève par des questions et des indices, sans lui donner la réponse, et aide les professeurs à suivre chaque élève notion par notion. Galac6 propose plus de 2 000 dictées et 433 sujets d'annales officielles. Les données sont hébergées en France et l'IA est traitée en Europe.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span data-i18n="faq.qpublisher">Qui édite Galac6 ?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner" data-i18n-html="faq.apublisher">Galac6 est édité par <strong>RHK Conseil</strong>, 19 rue de Croulebarbe, 75013 Paris. Il a été fondé par <strong>Raphaël Haïk</strong>, ingénieur télécom de formation, seul fondateur. Plus de détails sur la page <a href="/about">À propos</a>.</div>
+        </div>
+      </div>
 
       <div class="faq-item">
         <button class="faq-question" aria-expanded="false">
@@ -1097,6 +1203,7 @@
   </main>
 
   <!-- ═══ FOOTER ═══ -->
+  <!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-banner" lang="en" dir="ltr" role="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Galac6 follows the French national curriculum, for French schools and families in France and abroad. Want Galac6 for your country&rsquo;s curriculum? <a href="/international">Send a request&nbsp;&rarr;</a></span></div><!-- /intl-banner -->
   <div class="footer-wrapper">
     <footer>
       <div class="footer-cols">
@@ -1105,7 +1212,7 @@
             <img src="icons/icon-nav.png" alt="Galac6" width="132" height="132" loading="lazy">
             Galac6
           </div>
-          <span style="font-size: 0.88rem; color: var(--text-muted);" data-i18n="footer.tagline">Galac6. L'IA au service de la pédagogie</span>
+          <span style="font-size: 0.88rem; color: var(--text-muted);" data-i18n="footer.tagline">Galac6. L'IA au service de la pédagogie.</span>
           <span style="font-size: 0.88rem; color: var(--text-muted);" data-i18n="footer.hosted">Conçu en France · Données hébergées en France</span>
           <span class="footer-copy" data-i18n="footer.copy">© 2026 Galac6. Tous droits réservés.</span>
         </div>
@@ -1135,7 +1242,7 @@
           <span class="footer-col-title" data-i18n="footer.contact.title">Contact</span>
           <a href="/familles" data-i18n="footer.families">Familles</a>
           <a href="/ecole" data-i18n="footer.contact.school">Établissements scolaires →</a>
-          <a href="/blog" data-i18n="nav.blog">Blog</a>
+          <a href="/blog/" data-i18n="nav.blog">Blog</a>
           <a href="/about" data-i18n="footer.contact.about">À propos</a>
           <a href="/recherche" data-i18n="footer.research">La pédagogie et ses sources</a>
           <a href="/donnees-eleves" data-i18n="footer.data">Données des élèves</a>

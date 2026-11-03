@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
-<title>Insegnanti e scuole: risparmiate tempo, conoscete ogni alunno | Galac6</title>
-<meta content="Galac6 propone i compiti e li corregge, copie scritte a mano comprese, voi convalidate. Monitoraggio della classe e di ogni alunno, compiti su misura. Pilota gratuito di 3 mesi, fino a 3 classi." name="description"/>
+<title>Insegnanti e scuole: conoscete ogni alunno | Galac6</title>
+<meta content="Galac6 propone i compiti e li corregge, copie a mano comprese, e voi convalidate. Monitoraggio di ogni alunno, compiti su misura, pilota gratuito di 3 mesi." name="description"/>
 <meta content="index, follow, max-image-preview:large" name="robots"/>
 <link href="https://galac6.io/it/ecole" rel="canonical"/>
 <!-- hreflang (généré par scripts/build-langs.py) -->
@@ -24,7 +24,7 @@
       "@type": "FAQPage",
       "@id": "https://galac6.io/it/ecole#webpage",
       "url": "https://galac6.io/it/ecole",
-      "name": "Insegnanti e scuole: risparmiate tempo, conoscete ogni alunno | Galac6",
+      "name": "Insegnanti e scuole: conoscete ogni alunno | Galac6",
       "inLanguage": "it",
       "isPartOf": {
         "@id": "https://galac6.io/it/#website"
@@ -32,7 +32,8 @@
       "publisher": {
         "@id": "https://galac6.io/#organization"
       },
-      "description": "Galac6 propone i compiti e li corregge, copie scritte a mano comprese, voi convalidate. Monitoraggio della classe e di ogni alunno, compiti su misura. Pilota gratuito di 3 mesi, fino a 3 classi.",
+      "description": "Galac6 propone i compiti e li corregge, copie a mano comprese, e voi convalidate. Monitoraggio di ogni alunno, compiti su misura, pilota gratuito di 3 mesi.",
+      "dateModified": "2026-11-03",
       "mainEntity": [
         {
           "@type": "Question",
@@ -85,15 +86,19 @@
 <meta content="Galac6 propone e corregge i compiti, voi convalidate. Conoscete ogni alunno, nozione per nozione. Pilota gratuito di 3 mesi, fino a 3 classi, poi tariffa su preventivo." property="og:description"/>
 <meta content="https://galac6.io/it/ecole" property="og:url"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Galac6, l'IA al servizio della pedagogia." property="og:image:alt"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Galac6 per insegnanti e scuole: meno correzioni, più didattica" name="twitter:title"/>
 <meta content="Galac6 propone e corregge i compiti, voi convalidate. Conoscete ogni alunno, nozione per nozione. Pilota gratuito di 3 mesi, fino a 3 classi, poi tariffa su preventivo." name="twitter:description"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" name="twitter:image"/>
+<meta content="Galac6, l'IA al servizio della pedagogia." name="twitter:image:alt"/>
 <link href="/icons/32x32.png" rel="icon" type="image/png"/>
 <!-- Google Analytics 4 + Consent Mode v2 (RGPD) -->
-<script src="/analytics.js"></script>
+<script defer="" src="/analytics.js"></script>
 <!-- Suivi des UTM (origine des visiteurs, sans cookie) -->
-<script src="/utm.js"></script>
+<script defer="" src="/utm.js"></script>
 <style>
     :root {
       --primary: #7c5cfc;
@@ -422,9 +427,10 @@
       /* Menu : une seule ligne, plus serré sur écran moyen */
     .navbar-links a { white-space: nowrap; }
     @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
+      .updated { color: var(--text-muted, #8a8aa3); font-size: 0.85rem; margin-top: 0.75rem; }
   </style>
 <!-- Meta Pixel (Facebook) - charge apres consentement -->
-<script src="/meta-pixel.js"></script>
+<script defer="" src="/meta-pixel.js"></script>
 <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
     html, body { overflow-x: clip; } /* les halos décoratifs du haut de page ne créent plus de défilement horizontal */
@@ -482,16 +488,16 @@
     }
   </style>
 <style id="g6-banner-css">
-    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, collé en haut avec le menu (généré par scripts/build-langs.py) */
+    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, juste au-dessus du pied de page, non collant (généré par scripts/build-langs.py) */
     .g6-intl-banner { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 8px 16px; background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; font-size: 0.85rem; font-weight: 500; line-height: 1.45; text-align: center; direction: ltr; }
     .g6-intl-banner svg { flex: none; opacity: 0.9; }
     .g6-intl-banner span { min-width: 0; overflow-wrap: anywhere; }
     .g6-intl-banner a { color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.5); }
     .g6-intl-banner a:hover, .g6-intl-banner a:focus-visible { border-bottom-color: #fff; text-decoration: none; }
-    body > .g6-intl-banner { position: sticky; top: 0; z-index: 120; }
+    .g6-intl-banner { position: static; }
     @media (max-width: 480px) { .g6-intl-banner { font-size: 0.8rem; padding: 7px 12px; } }
   </style>
-<script>window.G6_DYN = {"demo": "Richiedere una dimostrazione", "devis": "Richiedere un preventivo", "fail": "L'invio non è riuscito. Riprovate tra un istante, oppure scriveteci a <a href=\"mailto:hello@galac6.io\">hello@galac6.io</a>.", "ok": "Grazie, la vostra richiesta è stata inviata. Vi risponderemo al più presto all'indirizzo indicato.", "pilote": "Diventare scuola pilota", "quickErr": "Indicate un indirizzo email completo e il nome del vostro istituto.", "sending": "Invio in corso…", "title": "Insegnanti e scuole: risparmiate tempo, conoscete ogni alunno | Galac6"};</script>
+<script>window.G6_DYN = {"demo": "Richiedere una dimostrazione", "devis": "Richiedere un preventivo", "fail": "L'invio non è riuscito. Riprovate tra un istante, oppure scriveteci a <a href=\"mailto:hello@galac6.io\">hello@galac6.io</a>.", "ok": "Grazie, la vostra richiesta è stata inviata. Vi risponderemo al più presto all'indirizzo indicato.", "pilote": "Diventare scuola pilota", "quickErr": "Indicate un indirizzo email completo e il nome del vostro istituto.", "sending": "Invio in corso…", "title": "Insegnanti e scuole: conoscete ogni alunno | Galac6"};</script>
 <script>window.G6_COOKIE_TXT = {"texte": "Vorremmo misurare le visite a questo sito (Google Analytics) e i risultati dei nostri annunci (Google Ads, Meta). Questi servizi installano cookie e vengono caricati solo se lei acconsente. Può cambiare idea in qualsiasi momento con il link «Gestisci i cookie» in fondo a ogni pagina.", "plus": "Per saperne di più", "refuser": "Rifiuta tutto", "perso": "Personalizza", "accepter": "Accetta tutto", "titrePerso": "Scelga i suoi cookie", "audienceTitre": "Misurazione del pubblico", "audienceTexte": "Google Analytics: conta le visite e le pagine visualizzate, per migliorare il sito.", "pubTitre": "Pubblicità", "pubTexte": "Google Ads e Meta (Facebook, Instagram): misurano i risultati dei nostri annunci.", "enregistrer": "Salva le mie scelte", "necessaires": "Il sito memorizza anche la sua lingua e questa scelta sul suo dispositivo (indispensabile, senza consenso).", "lien": "/mentions-legales#cookies-en"};</script>
 <style id="g6-lang-css">
     /* Bandeau d'information des pages es/it/de/pt/nl, sous le menu (généré par scripts/build-langs.py) */
@@ -502,7 +508,6 @@
 <body>
 <!-- ═══ NAVBAR ═══ -->
 <div class="navbar-wrapper">
-<!-- intl-banner --><!-- /intl-banner -->
 <nav class="navbar">
 <a class="navbar-brand" href="/it/">
 <img alt="Galac6" height="132" src="/icons/icon-nav.png" width="132"/>
@@ -515,7 +520,7 @@
 <a href="/it/familles">Famiglie</a>
 <a aria-current="page" class="active" href="/it/ecole">Docenti e scuole</a>
 <a href="/it/tarifs">Prezzi</a>
-<a href="/blog" hreflang="fr">Blog</a>
+<a href="/blog/" hreflang="fr">Blog</a>
 <a href="/it/about">Chi siamo</a>
 <!-- lang-menu --><details class="lang-menu"><summary aria-label="Lingua : Italiano"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#fff" height="14" width="20"></rect><rect fill="#009246" height="14" width="6.67"></rect><rect fill="#ce2b37" height="14" width="6.67" x="13.33"></rect></svg><span>IT</span></summary><div class="lang-menu-list"><a href="/ecole" hreflang="fr" lang="fr"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#fff" height="14" width="20"></rect><rect fill="#002654" height="14" width="6.67"></rect><rect fill="#ce1126" height="14" width="6.67" x="13.33"></rect></svg><span>Français</span></a><a href="/en/ecole" hreflang="en" lang="en"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#012169" height="14" width="20"></rect><path d="M0 0L20 14M20 0L0 14" stroke="#fff" stroke-width="3"></path><path d="M0 0L20 14M20 0L0 14" stroke="#c8102e" stroke-width="1"></path><path d="M10 0V14M0 7H20" stroke="#fff" stroke-width="4.5"></path><path d="M10 0V14M0 7H20" stroke="#c8102e" stroke-width="2.5"></path></svg><span>English</span></a><a href="/es/ecole" hreflang="es" lang="es"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#aa151b" height="14" width="20"></rect><rect fill="#f1bf00" height="7" width="20" y="3.5"></rect></svg><span>Español</span></a><a aria-current="page" href="/it/ecole" hreflang="it" lang="it"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#fff" height="14" width="20"></rect><rect fill="#009246" height="14" width="6.67"></rect><rect fill="#ce2b37" height="14" width="6.67" x="13.33"></rect></svg><span>Italiano</span></a><a href="/de/ecole" hreflang="de" lang="de"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#ffce00" height="14" width="20"></rect><rect fill="#000" height="4.67" width="20"></rect><rect fill="#dd0000" height="4.67" width="20" y="4.67"></rect></svg><span>Deutsch</span></a><a href="/pt/ecole" hreflang="pt" lang="pt"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#da291c" height="14" width="20"></rect><rect fill="#046a38" height="14" width="8"></rect><circle cx="8" cy="7" fill="#ffe900" r="3"></circle><circle cx="8" cy="7" fill="#da291c" r="1.6"></circle></svg><span>Português</span></a><a href="/nl/ecole" hreflang="nl" lang="nl"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#fff" height="14" width="20"></rect><rect fill="#ae1c28" height="4.67" width="20"></rect><rect fill="#21468b" height="4.67" width="20" y="9.33"></rect></svg><span>Nederlands</span></a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
 <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start, #6366f1), var(--gradient-end, #a855f7)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Registrazione o accesso</a>
@@ -559,6 +564,7 @@
 <p class="eyebrow" style="margin-bottom:0">Docenti, direzione, istituti scolastici</p>
 <h1>Meno correzioni, <span class="grad">più didattica</span></h1>
 <p class="sub">Galac6 ridefinisce l'apprendimento a scuola, partendo da ciò che sa ogni alunno. Vi propone i compiti e li corregge, copie scritte a mano comprese, e voi convalidate. Conoscete ogni alunno, nozione per nozione, e restate padroni della vostra didattica.</p>
+<p class="updated"><time datetime="2026-11-03">Aggiornato il 3 novembre 2026</time></p>
 <div class="e-cta">
 <a class="btn btn-primary" data-type="devis" href="#devis">Richiedere un preventivo</a>
 <a class="btn btn-outline" href="/profs-testeurs" hreflang="fr">Prova come docente</a>
@@ -708,7 +714,7 @@
 <a class="btn btn-outline" href="/it/familles">Galac6 per le famiglie</a>
 </div>
 <ul class="fam-list">
-<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-help"></use></svg></span><div><b>Un'IA diversa dalle IA classiche</b><span>I vostri alunni fanno i vostri compiti su Galac6 e imparano a imparare: l'IA li interroga e non dà mai loro la risposta.</span></div></li>
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-help"></use></svg></span><div><b>Un'IA diversa dalle IA classiche</b><span>I vostri alunni fanno i vostri compiti su Galac6 e riflettono da soli: l'IA fa loro domande e non dà mai la risposta.</span></div></li>
 <li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-family"></use></svg></span><div><b>Genitori coinvolti</b><span>I genitori seguono i progressi del figlio, i suoi punti di forza e ciò che gli resta da lavorare.</span></div></li>
 </ul>
 </div>
@@ -931,12 +937,14 @@
 </section>
 </main>
 <!-- ═══ FOOTER ═══ -->
+<!-- intl-banner --><!-- /intl-banner -->
 <footer>
 <div>Galac6. L'IA al servizio della pedagogia</div>
 <div class="footer-badges">
 <a href="/it/about" style="color: var(--text-muted);">Chi siamo</a>
 <a href="/dictee-en-ligne" hreflang="fr" style="color: var(--text-muted);">Dettati online (in francese)</a>
 <a href="/annales-brevet-bac" hreflang="fr" style="color: var(--text-muted);">Prove d'esame di brevet e bac (in francese)</a>
+<a href="/fiches-revision-ia" hreflang="fr" style="color: var(--text-muted);">Schede di ripasso con l'IA</a>
 <a href="/it/programma-scolastico-francese" style="color: var(--text-muted);">Famiglie all'estero</a>
 <a href="/mentions-legales" hreflang="fr" style="color: var(--text-muted);">Note legali</a>
 <a href="/it/international" style="color: var(--text-muted);">Scuola fuori dalla Francia?</a>

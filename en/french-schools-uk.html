@@ -104,15 +104,19 @@
 <meta content="The French curriculum, from CP to Terminale, with AI: time saved for teachers, a tutor that makes pupils think, families informed in English, brevet and bac prepared from the UK." property="og:description"/>
 <meta content="https://galac6.io/en/french-schools-uk" property="og:url"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" property="og:image"/>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Galac6, AI in the service of teaching.">
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Galac6 for French schools in the United Kingdom" name="twitter:title"/>
 <meta content="The French curriculum, from CP to Terminale, with AI: time saved for teachers, a tutor that makes pupils think, families informed in English, brevet and bac prepared from the UK." name="twitter:description"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" name="twitter:image"/>
+<meta name="twitter:image:alt" content="Galac6, AI in the service of teaching.">
 <link href="/icons/32x32.png" rel="icon" type="image/png"/>
 <!-- Google Analytics 4 + Consent Mode v2 (RGPD) -->
-<script src="/analytics.js"></script>
+<script src="/analytics.js" defer></script>
 <!-- Suivi des UTM (origine des visiteurs, sans cookie) -->
-<script src="/utm.js"></script>
+<script src="/utm.js" defer></script>
 <style>
     :root {
       --primary: #7c5cfc;
@@ -454,15 +458,15 @@
     .offer .card.hl { border-color: var(--tint-line); background: var(--tint); }
   </style>
 <!-- Meta Pixel (Facebook) - charge apres consentement -->
-<script src="/meta-pixel.js"></script>
+<script src="/meta-pixel.js" defer></script>
 <style id="g6-banner-css">
-    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, collé en haut avec le menu (généré par scripts/build-langs.py) */
+    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, juste au-dessus du pied de page, non collant (généré par scripts/build-langs.py) */
     .g6-intl-banner { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 8px 16px; background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; font-size: 0.85rem; font-weight: 500; line-height: 1.45; text-align: center; direction: ltr; }
     .g6-intl-banner svg { flex: none; opacity: 0.9; }
     .g6-intl-banner span { min-width: 0; overflow-wrap: anywhere; }
     .g6-intl-banner a { color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.5); }
     .g6-intl-banner a:hover, .g6-intl-banner a:focus-visible { border-bottom-color: #fff; text-decoration: none; }
-    body > .g6-intl-banner { position: sticky; top: 0; z-index: 120; }
+    .g6-intl-banner { position: static; }
     @media (max-width: 480px) { .g6-intl-banner { font-size: 0.8rem; padding: 7px 12px; } }
   </style>
 <style id="g6-nav-css">
@@ -531,7 +535,6 @@
 <body>
 <!-- ═══ NAVBAR ═══ -->
 <div class="navbar-wrapper">
-<!-- intl-banner --><div class="g6-intl-banner" dir="ltr" id="g6-intl-banner" lang="en" role="note"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span>Galac6 follows the French national curriculum, for French schools and families in France and abroad. Want Galac6 for your country&rsquo;s curriculum? <a href="/international">Send a request →</a></span></div><!-- /intl-banner -->
 <nav class="navbar">
   <a href="/en/" class="navbar-brand">
     <img src="/icons/icon-nav.png" alt="Galac6" width="132" height="132">
@@ -544,7 +547,7 @@
     <a href="/en/familles">For families</a>
     <a href="/en/ecole">For teachers and schools</a>
     <a href="/en/tarifs">Pricing</a>
-    <a href="/en/blog">Blog</a>
+    <a href="/en/blog/">Blog</a>
     <a href="/en/about">About</a>
     <!-- lang-menu --><details class="lang-menu"><summary aria-label="Language : English"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#012169"/><path d="M0 0L20 14M20 0L0 14" stroke="#fff" stroke-width="3"/><path d="M0 0L20 14M20 0L0 14" stroke="#c8102e" stroke-width="1"/><path d="M10 0V14M0 7H20" stroke="#fff" stroke-width="4.5"/><path d="M10 0V14M0 7H20" stroke="#c8102e" stroke-width="2.5"/></svg><span>EN</span></summary><div class="lang-menu-list"><a href="/ecoles-francaises-royaume-uni" hreflang="fr" lang="fr"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#002654"/><rect x="13.33" width="6.67" height="14" fill="#ce1126"/></svg><span>Français</span></a><a href="/en/french-schools-uk" hreflang="en" lang="en" aria-current="page"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#012169"/><path d="M0 0L20 14M20 0L0 14" stroke="#fff" stroke-width="3"/><path d="M0 0L20 14M20 0L0 14" stroke="#c8102e" stroke-width="1"/><path d="M10 0V14M0 7H20" stroke="#fff" stroke-width="4.5"/><path d="M10 0V14M0 7H20" stroke="#c8102e" stroke-width="2.5"/></svg><span>English</span></a><a href="/es/" hreflang="es" lang="es"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#aa151b"/><rect y="3.5" width="20" height="7" fill="#f1bf00"/></svg><span>Español</span></a><a href="/it/" hreflang="it" lang="it"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#009246"/><rect x="13.33" width="6.67" height="14" fill="#ce2b37"/></svg><span>Italiano</span></a><a href="/de/" hreflang="de" lang="de"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#ffce00"/><rect width="20" height="4.67" fill="#000"/><rect y="4.67" width="20" height="4.67" fill="#dd0000"/></svg><span>Deutsch</span></a><a href="/pt/" hreflang="pt" lang="pt"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#da291c"/><rect width="8" height="14" fill="#046a38"/><circle cx="8" cy="7" r="3" fill="#ffe900"/><circle cx="8" cy="7" r="1.6" fill="#da291c"/></svg><span>Português</span></a><a href="/nl/" hreflang="nl" lang="nl"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="20" height="4.67" fill="#ae1c28"/><rect y="9.33" width="20" height="4.67" fill="#21468b"/></svg><span>Nederlands</span></a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
     <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start, #6366f1), var(--gradient-end, #a855f7)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Sign up or log in</a>
@@ -849,6 +852,7 @@
 </section>
 </main>
 <!-- ═══ FOOTER ═══ -->
+<!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-banner" lang="en" dir="ltr" role="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Galac6 follows the French national curriculum, for French schools and families in France and abroad. Want Galac6 for your country&rsquo;s curriculum? <a href="/international">Send a request&nbsp;&rarr;</a></span></div><!-- /intl-banner -->
 <footer>
 <div>Galac6. AI in the service of teaching</div>
 <div class="footer-badges">

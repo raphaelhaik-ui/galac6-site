@@ -35,6 +35,7 @@
         "@id": "https://galac6.io/#organization"
       },
       "description": "Ontdekkingsabonnement om te proberen, Leerling voor € 69 per jaar, Gezin tot 4 kinderen voor € 99 per jaar, Examenpakket € 19. Scholen: offerte.",
+      "dateModified": "2026-11-03",
       "mainEntity": [
         {
           "@type": "Question",
@@ -65,7 +66,7 @@
           "name": "Is de betaling veilig?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja. Kaartbetalingen verlopen via een beveiligde betaaldienst: Galac6 ziet uw kaartnummer nooit. In de mobiele app gebeurt de aankoop via de App Store of Google Play."
+            "text": "Ja. Kaartbetalingen verlopen via een beveiligde betaaldienst: Galac6 ziet uw kaartnummer nooit."
           }
         },
         {
@@ -139,15 +140,19 @@
 <meta content="nl_NL" property="og:locale"/>
 <meta content="https://galac6.io/nl/tarifs" property="og:url"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Galac6, AI in dienst van de pedagogiek." property="og:image:alt"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Galac6: eenvoudige en duidelijke prijzen" name="twitter:title"/>
 <meta content="Het Ontdekkingsabonnement om te proberen, Leerling voor € 69 per jaar, Gezin voor € 99 per jaar voor tot 4 kinderen. Voor scholen een offerte op maat." name="twitter:description"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" name="twitter:image"/>
+<meta content="Galac6, AI in dienst van de pedagogiek." name="twitter:image:alt"/>
 <link href="/icons/32x32.png" rel="icon" type="image/png"/>
 <!-- Google Analytics 4 + Consent Mode v2 (RGPD) -->
-<script src="/analytics.js"></script>
+<script defer="" src="/analytics.js"></script>
 <!-- Suivi des UTM (origine des visiteurs, sans cookie) -->
-<script src="/utm.js"></script>
+<script defer="" src="/utm.js"></script>
 
 <style>
     :root {
@@ -354,9 +359,11 @@
       /* Menu : une seule ligne, plus serré sur écran moyen */
     .navbar-links a { white-space: nowrap; }
     @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
+      .updated { color: var(--text-muted, #8a8aa3); font-size: 0.85rem; margin-top: 0.75rem; }
+      .g6-ico-inline { display: inline-block; vertical-align: -0.2em; }
   </style>
 <!-- Meta Pixel (Facebook) - charge apres consentement -->
-<script src="/meta-pixel.js"></script>
+<script defer="" src="/meta-pixel.js"></script>
 <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
     html, body { overflow-x: clip; } /* les halos décoratifs du haut de page ne créent plus de défilement horizontal */
@@ -414,13 +421,13 @@
     }
   </style>
 <style id="g6-banner-css">
-    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, collé en haut avec le menu (généré par scripts/build-langs.py) */
+    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, juste au-dessus du pied de page, non collant (généré par scripts/build-langs.py) */
     .g6-intl-banner { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 8px 16px; background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; font-size: 0.85rem; font-weight: 500; line-height: 1.45; text-align: center; direction: ltr; }
     .g6-intl-banner svg { flex: none; opacity: 0.9; }
     .g6-intl-banner span { min-width: 0; overflow-wrap: anywhere; }
     .g6-intl-banner a { color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.5); }
     .g6-intl-banner a:hover, .g6-intl-banner a:focus-visible { border-bottom-color: #fff; text-decoration: none; }
-    body > .g6-intl-banner { position: sticky; top: 0; z-index: 120; }
+    .g6-intl-banner { position: static; }
     @media (max-width: 480px) { .g6-intl-banner { font-size: 0.8rem; padding: 7px 12px; } }
   </style>
 <script>window.G6_DYN = {"title": "Prijzen van Galac6: Leerling, Gezin en scholen", "plansLabel": "Abonnementen", "prices": {"year": {"eleve": ["€ 69 <small>per jaar</small>", "dus € 5,75 per maand, in plaats van € 95,88 voor 12 maanden à € 7,99", "€ 26,88 besparing (ongeveer −28%)", "Automatische verlenging, die u op elk moment kunt uitschakelen in uw account. We sturen u een herinnering vóór de verlengingsdatum."], "fam": ["€ 99 <small>per jaar</small>", "dus € 8,25 per maand voor het hele gezin, in plaats van € 143,88 voor 12 maanden à € 11,99", "€ 44,88 besparing (ongeveer −31%)", "Automatische verlenging, die u op elk moment kunt uitschakelen in uw account. We sturen u een herinnering vóór de verlengingsdatum."]}, "month": {"eleve": ["€ 7,99 <small>per maand</small>", "Zonder vaste looptijd. Per jaar slechts € 69.", "", "Opzeggen met één klik."], "fam": ["€ 11,99 <small>per maand</small>", "Zonder vaste looptijd. Per jaar slechts € 99.", "", "Opzeggen met één klik."]}}};</script>
@@ -434,7 +441,6 @@
 <body>
 <!-- ═══ NAVBAR ═══ -->
 <div class="navbar-wrapper">
-<!-- intl-banner --><!-- /intl-banner -->
 <nav class="navbar">
 <a class="navbar-brand" href="/nl/">
 <img alt="Galac6" height="132" src="/icons/icon-nav.png" width="132"/>
@@ -447,7 +453,7 @@
 <a href="/nl/familles">Gezinnen</a>
 <a href="/nl/ecole">Docenten en scholen</a>
 <a aria-current="page" class="active" href="/nl/tarifs">Prijzen</a>
-<a href="/blog" hreflang="fr">Blog</a>
+<a href="/blog/" hreflang="fr">Blog</a>
 <a href="/nl/about">Over ons</a>
 <!-- lang-menu --><details class="lang-menu"><summary aria-label="Taal : Nederlands"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#fff" height="14" width="20"></rect><rect fill="#ae1c28" height="4.67" width="20"></rect><rect fill="#21468b" height="4.67" width="20" y="9.33"></rect></svg><span>NL</span></summary><div class="lang-menu-list"><a href="/tarifs" hreflang="fr" lang="fr"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#fff" height="14" width="20"></rect><rect fill="#002654" height="14" width="6.67"></rect><rect fill="#ce1126" height="14" width="6.67" x="13.33"></rect></svg><span>Français</span></a><a href="/en/tarifs" hreflang="en" lang="en"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#012169" height="14" width="20"></rect><path d="M0 0L20 14M20 0L0 14" stroke="#fff" stroke-width="3"></path><path d="M0 0L20 14M20 0L0 14" stroke="#c8102e" stroke-width="1"></path><path d="M10 0V14M0 7H20" stroke="#fff" stroke-width="4.5"></path><path d="M10 0V14M0 7H20" stroke="#c8102e" stroke-width="2.5"></path></svg><span>English</span></a><a href="/es/tarifs" hreflang="es" lang="es"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#aa151b" height="14" width="20"></rect><rect fill="#f1bf00" height="7" width="20" y="3.5"></rect></svg><span>Español</span></a><a href="/it/tarifs" hreflang="it" lang="it"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#fff" height="14" width="20"></rect><rect fill="#009246" height="14" width="6.67"></rect><rect fill="#ce2b37" height="14" width="6.67" x="13.33"></rect></svg><span>Italiano</span></a><a href="/de/tarifs" hreflang="de" lang="de"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#ffce00" height="14" width="20"></rect><rect fill="#000" height="4.67" width="20"></rect><rect fill="#dd0000" height="4.67" width="20" y="4.67"></rect></svg><span>Deutsch</span></a><a href="/pt/tarifs" hreflang="pt" lang="pt"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#da291c" height="14" width="20"></rect><rect fill="#046a38" height="14" width="8"></rect><circle cx="8" cy="7" fill="#ffe900" r="3"></circle><circle cx="8" cy="7" fill="#da291c" r="1.6"></circle></svg><span>Português</span></a><a aria-current="page" href="/nl/tarifs" hreflang="nl" lang="nl"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#fff" height="14" width="20"></rect><rect fill="#ae1c28" height="4.67" width="20"></rect><rect fill="#21468b" height="4.67" width="20" y="9.33"></rect></svg><span>Nederlands</span></a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
 <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start, #6366f1), var(--gradient-end, #a855f7)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Inloggen of registreren</a>
@@ -461,6 +467,7 @@
 <span class="badge">Abonnement van 12 maanden vanaf de betaaldatum</span>
 <h1>Prijzen <span class="grad">eenvoudig en duidelijk</span></h1>
 <p class="sub">Een Ontdekkingsabonnement om alle functies in beperkte hoeveelheid te proberen en een onbeperkt abonnement voor één kind of voor het hele gezin. Voor scholen een offerte op basis van het aantal leerlingen.</p>
+<p class="updated"><time datetime="2026-11-03">Bijgewerkt op 3 november 2026</time></p>
 <div class="actions">
 <a class="btn btn-outline" href="#familles">Gezinnen</a>
 <a class="btn btn-outline" href="#etablissements">Scholen</a>
@@ -613,12 +620,12 @@
 <table class="cmp">
 <thead><tr><th>Wat is inbegrepen</th><th>Module Leerling</th><th>Leerling + School</th><th>+ Examens en Mondeling</th></tr></thead>
 <tbody>
-<tr><td>Tutor, oefeningen, huiswerkhulp</td><td class="yes"></td><td class="yes"></td><td class="yes"></td></tr>
-<tr><td>Dictees, hoofdrekenen, quizzen, samenvattingen, spellen</td><td class="yes"></td><td class="yes"></td><td class="yes"></td></tr>
-<tr><td>Klassen, huiswerk met deadline</td><td class="no">—</td><td class="yes"></td><td class="yes"></td></tr>
-<tr><td>Huiswerk en toetsen gemaakt en nagekeken door de AI</td><td class="no">—</td><td class="yes"></td><td class="yes"></td></tr>
-<tr><td>Leerlingfiche, statistieken, individueel rapport</td><td class="no">—</td><td class="yes"></td><td class="yes"></td></tr>
-<tr><td>Proefexamens brevet en bac, proeven van mondeling examen</td><td class="no">—</td><td class="no">—</td><td class="yes"></td></tr>
+<tr><td>Tutor, oefeningen, huiswerkhulp</td><td class="yes"><svg aria-label="Inbegrepen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td><td class="yes"><svg aria-label="Inbegrepen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td><td class="yes"><svg aria-label="Inbegrepen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td></tr>
+<tr><td>Dictees, hoofdrekenen, quizzen, samenvattingen, spellen</td><td class="yes"><svg aria-label="Inbegrepen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td><td class="yes"><svg aria-label="Inbegrepen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td><td class="yes"><svg aria-label="Inbegrepen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td></tr>
+<tr><td>Klassen, huiswerk met deadline</td><td class="no">—</td><td class="yes"><svg aria-label="Inbegrepen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td><td class="yes"><svg aria-label="Inbegrepen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td></tr>
+<tr><td>Huiswerk en toetsen gemaakt en nagekeken door de AI</td><td class="no">—</td><td class="yes"><svg aria-label="Inbegrepen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td><td class="yes"><svg aria-label="Inbegrepen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td></tr>
+<tr><td>Leerlingfiche, statistieken, individueel rapport</td><td class="no">—</td><td class="yes"><svg aria-label="Inbegrepen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td><td class="yes"><svg aria-label="Inbegrepen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td></tr>
+<tr><td>Proefexamens brevet en bac, proeven van mondeling examen</td><td class="no">—</td><td class="no">—</td><td class="yes"><svg aria-label="Inbegrepen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td></tr>
 </tbody>
 </table>
 </div>
@@ -637,7 +644,7 @@
 <details><summary>Wat houdt het Ontdekkingsabonnement in?</summary><div class="ans"><p>Alle functies van Galac6, in beperkte hoeveelheid. Elke maand: 5 berichten aan de tutor, een dictee, een quiz, een keer huiswerkhulp via een foto en een examen in brevet- of bac-stijl. De hoeveelheden worden elke maand vernieuwd, zonder tijdslimiet en zonder bankkaart.</p></div></details>
 <details><summary>Wat gebeurt er als de maandlimiet is bereikt?</summary><div class="ans"><p>Galac6 laat de leerling weten dat de vragen van de maand zijn opgebruikt. De leerling kan de volgende maand terugkomen, wanneer de limiet wordt vernieuwd, of overstappen op een betaald abonnement. De abonnementen Leerling en Gezin zijn onbeperkt.</p></div></details>
 <details><summary>Kan ik mijn abonnement opzeggen?</summary><div class="ans"><p>Ja. Bij maandelijkse betaling heeft het abonnement geen vaste looptijd en zegt u het met één klik op. Bij jaarlijkse betaling wordt het abonnement automatisch verlengd op de verjaardatum. U kunt die verlenging op elk moment uitschakelen in uw account, en we sturen u vooraf een herinnering.</p></div></details>
-<details><summary>Is de betaling veilig?</summary><div class="ans"><p>Ja. Kaartbetalingen verlopen via een beveiligde betaaldienst: Galac6 ziet uw kaartnummer nooit. In de mobiele app gebeurt de aankoop via de App Store of Google Play.</p></div></details>
+<details><summary>Is de betaling veilig?</summary><div class="ans"><p>Ja. Kaartbetalingen verlopen via een beveiligde betaaldienst: Galac6 ziet uw kaartnummer nooit.</p></div></details>
 <details><summary>Waar staan de gegevens van mijn kind?</summary><div class="ans"><p>De gegevens worden in Frankrijk gehost, in een database in Parijs. Geen reclame en geen verkoop van gegevens.</p><p>De artificiële intelligentie van Galac6 wordt in Europa verwerkt; alleen enkele technische diensten, zoals de hosting van de website, maken gebruik van leveranciers buiten de Europese Unie. De lijst staat in ons privacybeleid.</p></div></details>
 <details><summary>Ik ben al geregistreerd. Wat gaat er gebeuren?</summary><div class="ans"><p>De huidige geregistreerde gebruikers worden vóór elke wijziging op de hoogte gebracht.</p></div></details>
 <details><summary>Mijn kind gebruikt Galac6 via zijn school. Moet ik betalen?</summary><div class="ans"><p>Wat de school ter beschikking stelt, wordt door de school betaald. Om thuis vrij te oefenen, kunt u kiezen voor het abonnement Leerling of Gezin.</p></div></details>
@@ -647,6 +654,7 @@
 </div>
 </main>
 <!-- ═══ FOOTER ═══ -->
+<!-- intl-banner --><!-- /intl-banner -->
 <footer>
 <div>Galac6. AI in dienst van de pedagogiek</div>
 <div class="footer-badges">
@@ -654,6 +662,7 @@
 <a href="/nl/familles" style="color: var(--text-muted);">Gezinnen</a>
 <a href="/dictee-en-ligne" hreflang="fr" style="color: var(--text-muted);">Dictees online (in het Frans)</a>
 <a href="/annales-brevet-bac" hreflang="fr" style="color: var(--text-muted);">Examens brevet en bac (in het Frans)</a>
+<a href="/fiches-revision-ia" hreflang="fr" style="color: var(--text-muted);">Samenvattingen met AI</a>
 <a href="/nl/frans-curriculum" style="color: var(--text-muted);">Gezinnen in het buitenland</a>
 <a href="/mentions-legales" hreflang="fr" style="color: var(--text-muted);">Juridische informatie</a>
 <a href="/nl/international" style="color: var(--text-muted);">Staat uw school buiten Frankrijk?</a>

@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Galac6 Voice Device — Teaser</title>
+<meta name="description" content="Galac6 Voice Device : page de présentation d'un projet de compagnon vocal pour enfants, en phase d'étude. Page non référencée.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://galac6.io/teaser/">
+<link rel="icon" type="image/png" href="/icons/32x32.png">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap');
 :root{--blue:#0A1628;--accent:#3B82F6;--green:#06D6A0;--warm:#F59E0B;--coral:#F472B6;--purple:#A78BFA;--white:#F0F4FF;--gray:#94A3B8;--gray2:#64748B}
@@ -118,22 +122,22 @@ body{background:var(--blue);color:var(--white);font-family:'Outfit',sans-serif;o
 .ftr{font-family:'Space Mono',monospace;font-size:12px;color:rgba(255,255,255,.15);letter-spacing:4px;padding-bottom:36px;text-align:center;opacity:0;animation:fu .7s ease 3.3s forwards}
 
 @keyframes fu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-</style>
+    .g6-ico-inline { display: inline-block; vertical-align: -0.2em; }
+  </style>
 <!-- Suivi des UTM (origine des visiteurs, sans cookie) -->
-<script src="/utm.js"></script>
+<script src="/utm.js" defer></script>
   <style id="g6-banner-css">
-    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, collé en haut avec le menu (généré par scripts/build-langs.py) */
+    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, juste au-dessus du pied de page, non collant (généré par scripts/build-langs.py) */
     .g6-intl-banner { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 8px 16px; background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; font-size: 0.85rem; font-weight: 500; line-height: 1.45; text-align: center; direction: ltr; }
     .g6-intl-banner svg { flex: none; opacity: 0.9; }
     .g6-intl-banner span { min-width: 0; overflow-wrap: anywhere; }
     .g6-intl-banner a { color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.5); }
     .g6-intl-banner a:hover, .g6-intl-banner a:focus-visible { border-bottom-color: #fff; text-decoration: none; }
-    body > .g6-intl-banner { position: sticky; top: 0; z-index: 120; }
+    .g6-intl-banner { position: static; }
     @media (max-width: 480px) { .g6-intl-banner { font-size: 0.8rem; padding: 7px 12px; } }
   </style>
 </head>
 <body>
-  <!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-banner" lang="en" dir="ltr" role="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Galac6 follows the French national curriculum, for French schools and families in France and abroad. Want Galac6 for your country&rsquo;s curriculum? <a href="/international">Send a request&nbsp;&rarr;</a></span></div><!-- /intl-banner -->
 <div class="bg-grid"></div>
 <div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div>
 
@@ -163,9 +167,9 @@ body{background:var(--blue);color:var(--white);font-family:'Outfit',sans-serif;o
 
 <!-- Tabs -->
 <div class="tabs" id="tabs">
-  <button class="tab on" data-i="0">📐 Fais moi réviser les identités remarquables !</button>
-  <button class="tab" data-i="1">📚 Contrôle d'anglais dans 1h !</button>
-  <button class="tab" data-i="2">🐦 Pourquoi les oiseaux volent et pas moi ?</button>
+  <button class="tab on" data-i="0">Fais moi réviser les identités remarquables !</button>
+  <button class="tab" data-i="1">Contrôle d'anglais dans 1h !</button>
+  <button class="tab" data-i="2">Pourquoi les oiseaux volent et pas moi ?</button>
 </div>
 
 <!-- Panels -->
@@ -173,9 +177,9 @@ body{background:var(--blue);color:var(--white);font-family:'Outfit',sans-serif;o
 
   <!-- UC 1 — Identités remarquables -->
   <div class="pnl on" data-i="0">
-    <div class="char-img"><img src="dongle_g6_1.png" alt="Inès utilise son Galac6 avec ses écouteurs"></div>
+    <div class="char-img"><img src="dongle_g6_1.png" alt="Inès utilise son Galac6 avec ses écouteurs" width="1536" height="1024" loading="lazy"></div>
     <div class="shdr">
-      <div class="shdr-ic ia">📐</div>
+      <div class="shdr-ic ia"><svg class="g6-ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V3l18 18z"/><path d="M7 17v-4l4 4z"/></svg></div>
       <div class="shdr-ctx"><strong>Inès, 14 ans</strong> — dans le métro en route vers le lycée. Demain, contrôle de maths. Elle met ses écouteurs Bluetooth et appuie sur le bouton.</div>
     </div>
     <div class="b bk"><div class="bl">INÈS</div>Fais-moi réviser mes identités remarquables, j'arrive pas à les retenir.</div>
@@ -190,9 +194,9 @@ body{background:var(--blue);color:var(--white);font-family:'Outfit',sans-serif;o
 
   <!-- UC 2 — Verbes irréguliers anglais -->
   <div class="pnl" data-i="1">
-    <div class="char-img"><img src="dongle_G6_3_filaire.png" alt="Lucas utilise son Galac6 avec ses écouteurs filaires"></div>
+    <div class="char-img"><img src="dongle_G6_3_filaire.png" alt="Lucas utilise son Galac6 avec ses écouteurs filaires" width="1536" height="1024" loading="lazy"></div>
     <div class="shdr">
-      <div class="shdr-ic ip">📚</div>
+      <div class="shdr-ic ip"><svg class="g6-ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></div>
       <div class="shdr-ctx"><strong>Lucas, 11 ans</strong> — dans le bus en route vers le collège, une heure avant le contrôle d'anglais. Il branche ses écouteurs et sort son Galac6 du cartable.</div>
     </div>
     <div class="b bk"><div class="bl">LUCAS</div>J'ai un contrôle dans une heure sur les verbes irréguliers en anglais. Fais-moi réviser !</div>
@@ -207,9 +211,9 @@ body{background:var(--blue);color:var(--white);font-family:'Outfit',sans-serif;o
 
   <!-- UC 3 — Pourquoi les oiseaux volent ? -->
   <div class="pnl" data-i="2">
-    <div class="char-img"><img src="dongle_G6_fille_6_ans.png" alt="Léna parle à son Galac6 dans le jardin"></div>
+    <div class="char-img"><img src="dongle_G6_fille_6_ans.png" alt="Léna parle à son Galac6 dans le jardin" width="1536" height="1024" loading="lazy"></div>
     <div class="shdr">
-      <div class="shdr-ic ig">🐦</div>
+      <div class="shdr-ic ig"><svg class="g6-ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 4.8a5.5 5.5 0 0 0-7.8 0L5 12.2V19h6.8l7.4-7.4a5.5 5.5 0 0 0 0-7.8z"/><path d="M16 8 2 22M17.5 15H9"/></svg></div>
       <div class="shdr-ctx"><strong>Léna, 7 ans</strong> — dans le jardin après le goûter. Elle regarde une mésange s'envoler d'une branche. Son Galac6 est accroché à la fermeture de son blouson.</div>
     </div>
     <div class="b bk"><div class="bl">LÉNA</div>Pourquoi les oiseaux ils peuvent voler et pas moi ?</div>
@@ -275,5 +279,6 @@ body{background:var(--blue);color:var(--white);font-family:'Outfit',sans-serif;o
   tabs.forEach(function(t,i){t.addEventListener('click',function(){show(i)})});
 })();
 </script>
+<!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-banner" lang="en" dir="ltr" role="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Galac6 follows the French national curriculum, for French schools and families in France and abroad. Want Galac6 for your country&rsquo;s curriculum? <a href="/international">Send a request&nbsp;&rarr;</a></span></div><!-- /intl-banner -->
 </body>
 </html>

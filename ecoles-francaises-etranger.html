@@ -24,6 +24,7 @@
         "@id": "https://galac6.io/#organization"
       },
       "description": "Écoles françaises à l'étranger : le programme français tel quel, brevet et bac avec 112 sujets passés hors de France. Pilote gratuit 3 mois sur 3 classes.",
+      "dateModified": "2026-11-03",
       "mainEntity": [
         {
           "@type": "Question",
@@ -100,15 +101,19 @@
   <meta property="og:description" content="Le programme français, du CP à la terminale, avec l'IA : du temps pour vos professeurs, un suivi sur mesure de chaque élève, le brevet et le bac préparés depuis l'étranger. Pilote gratuit de 3 mois sur 3 classes.">
   <meta property="og:url" content="https://galac6.io/ecoles-francaises-etranger">
   <meta property="og:image" content="https://galac6.io/images/og-image-v2.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Galac6 : la plateforme IA des écoles françaises à l'étranger">
   <meta name="twitter:description" content="Le programme français, du CP à la terminale, avec l'IA : du temps pour vos professeurs, un suivi sur mesure de chaque élève, le brevet et le bac préparés depuis l'étranger. Pilote gratuit de 3 mois sur 3 classes.">
   <meta name="twitter:image" content="https://galac6.io/images/og-image-v2.jpg">
+  <meta name="twitter:image:alt" content="Galac6, l'IA au service de la pédagogie.">
   <link rel="icon" type="image/png" href="icons/32x32.png">
   <!-- Google Analytics 4 + Consent Mode v2 (RGPD) -->
-  <script src="analytics.js"></script>
+  <script src="analytics.js" defer></script>
   <!-- Suivi des UTM (origine des visiteurs, sans cookie) -->
-  <script src="utm.js"></script>
+  <script src="utm.js" defer></script>
   <style>
     :root {
       --primary: #7c5cfc;
@@ -448,17 +453,18 @@
     @media (max-width: 760px) { .offer { grid-template-columns: minmax(0, 1fr); } }
     .offer .card h3 { font-size: 1.2rem; }
     .offer .card.hl { border-color: var(--tint-line); background: var(--tint); }
+      .updated { color: var(--text-muted, #8a8aa3); font-size: 0.85rem; margin-top: 0.75rem; }
   </style>
   <!-- Meta Pixel (Facebook) - charge apres consentement -->
-  <script src="meta-pixel.js"></script>
+  <script src="meta-pixel.js" defer></script>
   <style id="g6-banner-css">
-    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, collé en haut avec le menu (généré par scripts/build-langs.py) */
+    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, juste au-dessus du pied de page, non collant (généré par scripts/build-langs.py) */
     .g6-intl-banner { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 8px 16px; background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; font-size: 0.85rem; font-weight: 500; line-height: 1.45; text-align: center; direction: ltr; }
     .g6-intl-banner svg { flex: none; opacity: 0.9; }
     .g6-intl-banner span { min-width: 0; overflow-wrap: anywhere; }
     .g6-intl-banner a { color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.5); }
     .g6-intl-banner a:hover, .g6-intl-banner a:focus-visible { border-bottom-color: #fff; text-decoration: none; }
-    body > .g6-intl-banner { position: sticky; top: 0; z-index: 120; }
+    .g6-intl-banner { position: static; }
     @media (max-width: 480px) { .g6-intl-banner { font-size: 0.8rem; padding: 7px 12px; } }
   </style>
   <style id="g6-nav-css">
@@ -522,7 +528,6 @@
 
   <!-- ═══ NAVBAR ═══ -->
   <div class="navbar-wrapper">
-    <!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-banner" lang="en" dir="ltr" role="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Galac6 follows the French national curriculum, for French schools and families in France and abroad. Want Galac6 for your country&rsquo;s curriculum? <a href="/international">Send a request&nbsp;&rarr;</a></span></div><!-- /intl-banner -->
     <nav class="navbar">
       <a href="/" class="navbar-brand">
         <img src="/icons/icon-nav.png" alt="Galac6" width="132" height="132">
@@ -535,7 +540,7 @@
         <a href="/familles" data-i18n="nav.families">Familles</a>
         <a href="/ecole" data-i18n="nav.school">Professeurs et écoles</a>
         <a href="/tarifs" data-i18n="nav.pricing">Tarifs</a>
-        <a href="/blog" data-i18n="nav.blog">Blog</a>
+        <a href="/blog/" data-i18n="nav.blog">Blog</a>
         <a href="/about" data-i18n="nav.about">À propos</a>
         <!-- lang-menu --><details class="lang-menu"><summary aria-label="Langue : Français"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#002654"/><rect x="13.33" width="6.67" height="14" fill="#ce1126"/></svg><span>FR</span></summary><div class="lang-menu-list"><a href="/ecoles-francaises-etranger" hreflang="fr" lang="fr" aria-current="page"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#002654"/><rect x="13.33" width="6.67" height="14" fill="#ce1126"/></svg><span>Français</span></a><a href="/en/french-schools-abroad" hreflang="en" lang="en"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#012169"/><path d="M0 0L20 14M20 0L0 14" stroke="#fff" stroke-width="3"/><path d="M0 0L20 14M20 0L0 14" stroke="#c8102e" stroke-width="1"/><path d="M10 0V14M0 7H20" stroke="#fff" stroke-width="4.5"/><path d="M10 0V14M0 7H20" stroke="#c8102e" stroke-width="2.5"/></svg><span>English</span></a><a href="/es/" hreflang="es" lang="es"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#aa151b"/><rect y="3.5" width="20" height="7" fill="#f1bf00"/></svg><span>Español</span></a><a href="/it/" hreflang="it" lang="it"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#009246"/><rect x="13.33" width="6.67" height="14" fill="#ce2b37"/></svg><span>Italiano</span></a><a href="/de/" hreflang="de" lang="de"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#ffce00"/><rect width="20" height="4.67" fill="#000"/><rect y="4.67" width="20" height="4.67" fill="#dd0000"/></svg><span>Deutsch</span></a><a href="/pt/" hreflang="pt" lang="pt"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#da291c"/><rect width="8" height="14" fill="#046a38"/><circle cx="8" cy="7" r="3" fill="#ffe900"/><circle cx="8" cy="7" r="1.6" fill="#da291c"/></svg><span>Português</span></a><a href="/nl/" hreflang="nl" lang="nl"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="20" height="4.67" fill="#ae1c28"/><rect y="9.33" width="20" height="4.67" fill="#21468b"/></svg><span>Nederlands</span></a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
         <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start, #6366f1), var(--gradient-end, #a855f7)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;" data-i18n="nav.signup">Inscription ou connexion</a>
@@ -557,6 +562,7 @@
         <span class="badge" data-i18n="etranger.badge">Établissements français à l'étranger</span>
         <h1 data-i18n-html="etranger.hero.title">La plateforme IA des écoles françaises <span class="grad">à l'étranger</span></h1>
         <p class="sub" data-i18n="etranger.hero.sub">Galac6 suit le programme français, du CP à la terminale. Vos professeurs gagnent du temps, et chaque élève est suivi sur mesure, où que se trouve votre établissement.</p>
+        <p class="updated"><time datetime="2026-11-03" data-i18n="gen.updated">Mis à jour le 3 novembre 2026</time></p>
         <ul class="e-gains">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n-html="etranger.hero.g1"><strong>Même programme qu'en France :</strong> rien à adapter.</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n-html="etranger.hero.g2"><strong>Brevet et bac depuis l'étranger,</strong> avec les sujets officiels passés hors de France.</span></li>
@@ -814,13 +820,15 @@
 </main>
 
   <!-- ═══ FOOTER ═══ -->
+  <!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-banner" lang="en" dir="ltr" role="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Galac6 follows the French national curriculum, for French schools and families in France and abroad. Want Galac6 for your country&rsquo;s curriculum? <a href="/international">Send a request&nbsp;&rarr;</a></span></div><!-- /intl-banner -->
   <footer>
-    <div data-i18n="ecole.footer.desc">Galac6. L'IA au service de la pédagogie</div>
+    <div data-i18n="ecole.footer.desc">Galac6. L'IA au service de la pédagogie.</div>
     <div class="footer-badges">
       <a href="/about" style="color: var(--text-muted);" data-i18n="footer.contact.about">À propos</a>
       <a href="/familles" style="color: var(--text-muted);" data-i18n="footer.families">Familles</a>
       <a href="/dictee-en-ligne" style="color: var(--text-muted);" data-i18n="footer.dictee">Dictée en ligne</a>
       <a href="/annales-brevet-bac" style="color: var(--text-muted);" data-i18n="footer.annales">Annales du brevet et du bac</a>
+      <a href="/fiches-revision-ia" style="color: var(--text-muted);">Fiches de révision par IA</a>
       <a href="/familles-francaises-etranger" style="color: var(--text-muted);" data-i18n="footer.expat">Familles à l'étranger</a>
       <a href="/mentions-legales" style="color: var(--text-muted);" data-i18n="footer.legal.mentions">Mentions légales</a>
       <a href="/international" style="color: var(--text-muted);" data-i18n="footer.international">École hors de France ?</a>

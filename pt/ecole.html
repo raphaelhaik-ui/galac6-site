@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
-<title>Professores e escolas: poupe tempo, conheça cada aluno | Galac6</title>
-<meta content="O Galac6 propõe os trabalhos de casa e corrige-os, incluindo provas manuscritas, e você valida. Acompanhamento da turma e de cada aluno, trabalhos à medida. Piloto gratuito de 3 meses, até 3 turmas." name="description"/>
+<title>Professores e escolas: conheça cada aluno | Galac6</title>
+<meta content="O Galac6 propõe os trabalhos e corrige-os, incluindo provas manuscritas, e você valida. Acompanhamento de cada aluno e piloto gratuito de 3 meses." name="description"/>
 <meta content="index, follow, max-image-preview:large" name="robots"/>
 <link href="https://galac6.io/pt/ecole" rel="canonical"/>
 <!-- hreflang (généré par scripts/build-langs.py) -->
@@ -24,7 +24,7 @@
       "@type": "FAQPage",
       "@id": "https://galac6.io/pt/ecole#webpage",
       "url": "https://galac6.io/pt/ecole",
-      "name": "Professores e escolas: poupe tempo, conheça cada aluno | Galac6",
+      "name": "Professores e escolas: conheça cada aluno | Galac6",
       "inLanguage": "pt",
       "isPartOf": {
         "@id": "https://galac6.io/pt/#website"
@@ -32,7 +32,8 @@
       "publisher": {
         "@id": "https://galac6.io/#organization"
       },
-      "description": "O Galac6 propõe os trabalhos de casa e corrige-os, incluindo provas manuscritas, e você valida. Acompanhamento da turma e de cada aluno, trabalhos à medida. Piloto gratuito de 3 meses, até 3 turmas.",
+      "description": "O Galac6 propõe os trabalhos e corrige-os, incluindo provas manuscritas, e você valida. Acompanhamento de cada aluno e piloto gratuito de 3 meses.",
+      "dateModified": "2026-11-03",
       "mainEntity": [
         {
           "@type": "Question",
@@ -85,15 +86,19 @@
 <meta content="O Galac6 propõe e corrige os trabalhos de casa, você valida. Conhece cada aluno, conceito a conceito. Piloto gratuito de 3 meses, até 3 turmas, depois preço sob orçamento." property="og:description"/>
 <meta content="https://galac6.io/pt/ecole" property="og:url"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Galac6, a IA ao serviço da pedagogia." property="og:image:alt"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Galac6 para professores e escolas: menos correção, mais pedagogia" name="twitter:title"/>
 <meta content="O Galac6 propõe e corrige os trabalhos de casa, você valida. Conhece cada aluno, conceito a conceito. Piloto gratuito de 3 meses, até 3 turmas, depois preço sob orçamento." name="twitter:description"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" name="twitter:image"/>
+<meta content="Galac6, a IA ao serviço da pedagogia." name="twitter:image:alt"/>
 <link href="/icons/32x32.png" rel="icon" type="image/png"/>
 <!-- Google Analytics 4 + Consent Mode v2 (RGPD) -->
-<script src="/analytics.js"></script>
+<script defer="" src="/analytics.js"></script>
 <!-- Suivi des UTM (origine des visiteurs, sans cookie) -->
-<script src="/utm.js"></script>
+<script defer="" src="/utm.js"></script>
 <style>
     :root {
       --primary: #7c5cfc;
@@ -422,9 +427,10 @@
       /* Menu : une seule ligne, plus serré sur écran moyen */
     .navbar-links a { white-space: nowrap; }
     @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
+      .updated { color: var(--text-muted, #8a8aa3); font-size: 0.85rem; margin-top: 0.75rem; }
   </style>
 <!-- Meta Pixel (Facebook) - charge apres consentement -->
-<script src="/meta-pixel.js"></script>
+<script defer="" src="/meta-pixel.js"></script>
 <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
     html, body { overflow-x: clip; } /* les halos décoratifs du haut de page ne créent plus de défilement horizontal */
@@ -482,16 +488,16 @@
     }
   </style>
 <style id="g6-banner-css">
-    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, collé en haut avec le menu (généré par scripts/build-langs.py) */
+    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, juste au-dessus du pied de page, non collant (généré par scripts/build-langs.py) */
     .g6-intl-banner { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 8px 16px; background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; font-size: 0.85rem; font-weight: 500; line-height: 1.45; text-align: center; direction: ltr; }
     .g6-intl-banner svg { flex: none; opacity: 0.9; }
     .g6-intl-banner span { min-width: 0; overflow-wrap: anywhere; }
     .g6-intl-banner a { color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.5); }
     .g6-intl-banner a:hover, .g6-intl-banner a:focus-visible { border-bottom-color: #fff; text-decoration: none; }
-    body > .g6-intl-banner { position: sticky; top: 0; z-index: 120; }
+    .g6-intl-banner { position: static; }
     @media (max-width: 480px) { .g6-intl-banner { font-size: 0.8rem; padding: 7px 12px; } }
   </style>
-<script>window.G6_DYN = {"demo": "Pedir uma demonstração", "devis": "Pedir um orçamento", "fail": "Não foi possível enviar. Tente novamente dentro de momentos ou escreva-nos para <a href=\"mailto:hello@galac6.io\">hello@galac6.io</a>.", "ok": "Obrigado, o seu pedido foi enviado. Responderemos o mais depressa possível para o endereço indicado.", "pilote": "Ser escola piloto", "quickErr": "Indique um endereço de e-mail completo e o nome da sua escola.", "sending": "A enviar…", "title": "Professores e escolas: poupe tempo, conheça cada aluno | Galac6"};</script>
+<script>window.G6_DYN = {"demo": "Pedir uma demonstração", "devis": "Pedir um orçamento", "fail": "Não foi possível enviar. Tente novamente dentro de momentos ou escreva-nos para <a href=\"mailto:hello@galac6.io\">hello@galac6.io</a>.", "ok": "Obrigado, o seu pedido foi enviado. Responderemos o mais depressa possível para o endereço indicado.", "pilote": "Ser escola piloto", "quickErr": "Indique um endereço de e-mail completo e o nome da sua escola.", "sending": "A enviar…", "title": "Professores e escolas: conheça cada aluno | Galac6"};</script>
 <script>window.G6_COOKIE_TXT = {"texte": "Gostaríamos de medir as visitas a este site (Google Analytics) e os resultados dos nossos anúncios (Google Ads, Meta). Estes serviços instalam cookies e só são carregados com o seu consentimento. Pode mudar de opinião a qualquer momento com a ligação «Gerir os cookies» no rodapé de cada página.", "plus": "Saber mais", "refuser": "Recusar tudo", "perso": "Personalizar", "accepter": "Aceitar tudo", "titrePerso": "Escolha os seus cookies", "audienceTitre": "Medição de audiência", "audienceTexte": "Google Analytics: conta as visitas e as páginas vistas, para melhorar o site.", "pubTitre": "Publicidade", "pubTexte": "Google Ads e Meta (Facebook, Instagram): medem os resultados dos nossos anúncios.", "enregistrer": "Guardar as minhas escolhas", "necessaires": "O site também guarda o seu idioma e esta escolha no seu dispositivo (indispensável, sem necessidade de consentimento).", "lien": "/mentions-legales#cookies-en"};</script>
 <style id="g6-lang-css">
     /* Bandeau d'information des pages es/it/de/pt/nl, sous le menu (généré par scripts/build-langs.py) */
@@ -502,7 +508,6 @@
 <body>
 <!-- ═══ NAVBAR ═══ -->
 <div class="navbar-wrapper">
-<!-- intl-banner --><!-- /intl-banner -->
 <nav class="navbar">
 <a class="navbar-brand" href="/pt/">
 <img alt="Galac6" height="132" src="/icons/icon-nav.png" width="132"/>
@@ -515,7 +520,7 @@
 <a href="/pt/familles">Famílias</a>
 <a aria-current="page" class="active" href="/pt/ecole">Professores e escolas</a>
 <a href="/pt/tarifs">Preços</a>
-<a href="/blog" hreflang="fr">Blog</a>
+<a href="/blog/" hreflang="fr">Blog</a>
 <a href="/pt/about">Sobre</a>
 <!-- lang-menu --><details class="lang-menu"><summary aria-label="Idioma : Português"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#da291c" height="14" width="20"></rect><rect fill="#046a38" height="14" width="8"></rect><circle cx="8" cy="7" fill="#ffe900" r="3"></circle><circle cx="8" cy="7" fill="#da291c" r="1.6"></circle></svg><span>PT</span></summary><div class="lang-menu-list"><a href="/ecole" hreflang="fr" lang="fr"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#fff" height="14" width="20"></rect><rect fill="#002654" height="14" width="6.67"></rect><rect fill="#ce1126" height="14" width="6.67" x="13.33"></rect></svg><span>Français</span></a><a href="/en/ecole" hreflang="en" lang="en"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#012169" height="14" width="20"></rect><path d="M0 0L20 14M20 0L0 14" stroke="#fff" stroke-width="3"></path><path d="M0 0L20 14M20 0L0 14" stroke="#c8102e" stroke-width="1"></path><path d="M10 0V14M0 7H20" stroke="#fff" stroke-width="4.5"></path><path d="M10 0V14M0 7H20" stroke="#c8102e" stroke-width="2.5"></path></svg><span>English</span></a><a href="/es/ecole" hreflang="es" lang="es"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#aa151b" height="14" width="20"></rect><rect fill="#f1bf00" height="7" width="20" y="3.5"></rect></svg><span>Español</span></a><a href="/it/ecole" hreflang="it" lang="it"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#fff" height="14" width="20"></rect><rect fill="#009246" height="14" width="6.67"></rect><rect fill="#ce2b37" height="14" width="6.67" x="13.33"></rect></svg><span>Italiano</span></a><a href="/de/ecole" hreflang="de" lang="de"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#ffce00" height="14" width="20"></rect><rect fill="#000" height="4.67" width="20"></rect><rect fill="#dd0000" height="4.67" width="20" y="4.67"></rect></svg><span>Deutsch</span></a><a aria-current="page" href="/pt/ecole" hreflang="pt" lang="pt"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#da291c" height="14" width="20"></rect><rect fill="#046a38" height="14" width="8"></rect><circle cx="8" cy="7" fill="#ffe900" r="3"></circle><circle cx="8" cy="7" fill="#da291c" r="1.6"></circle></svg><span>Português</span></a><a href="/nl/ecole" hreflang="nl" lang="nl"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#fff" height="14" width="20"></rect><rect fill="#ae1c28" height="4.67" width="20"></rect><rect fill="#21468b" height="4.67" width="20" y="9.33"></rect></svg><span>Nederlands</span></a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
 <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start, #6366f1), var(--gradient-end, #a855f7)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Entrar ou registar-se</a>
@@ -559,6 +564,7 @@
 <p class="eyebrow" style="margin-bottom:0">Professores, direção, escolas</p>
 <h1>Menos correção, <span class="grad">mais pedagogia</span></h1>
 <p class="sub">O Galac6 redefine a aprendizagem na escola, a partir do que cada aluno sabe. Propõe-lhe os trabalhos de casa e corrige-os, incluindo provas manuscritas, e você valida. Conhece cada aluno, conceito a conceito, e continua a ser dono da sua pedagogia.</p>
+<p class="updated"><time datetime="2026-11-03">Atualizado a 3 de novembro de 2026</time></p>
 <div class="e-cta">
 <a class="btn btn-primary" data-type="devis" href="#devis">Pedir um orçamento</a>
 <a class="btn btn-outline" href="/profs-testeurs" hreflang="fr">Experimentar como professor</a>
@@ -708,7 +714,7 @@
 <a class="btn btn-outline" href="/pt/familles">O Galac6 para as famílias</a>
 </div>
 <ul class="fam-list">
-<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-help"></use></svg></span><div><b>O contrário de uma IA convencional</b><span>Os seus alunos fazem os seus trabalhos de casa no Galac6 e aprendem a aprender: a IA faz-lhes perguntas e nunca lhes dá a resposta.</span></div></li>
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-help"></use></svg></span><div><b>O contrário de uma IA convencional</b><span>Os seus alunos fazem os seus trabalhos no Galac6 e pensam por si próprios: a IA faz-lhes perguntas e nunca lhes dá a resposta.</span></div></li>
 <li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-family"></use></svg></span><div><b>Pais envolvidos</b><span>Os pais acompanham a progressão do filho, os seus pontos fortes e o que lhe falta trabalhar.</span></div></li>
 </ul>
 </div>
@@ -931,12 +937,14 @@
 </section>
 </main>
 <!-- ═══ FOOTER ═══ -->
+<!-- intl-banner --><!-- /intl-banner -->
 <footer>
 <div>Galac6. A IA ao serviço da pedagogia</div>
 <div class="footer-badges">
 <a href="/pt/about" style="color: var(--text-muted);">Sobre</a>
 <a href="/dictee-en-ligne" hreflang="fr" style="color: var(--text-muted);">Ditados online (em francês)</a>
 <a href="/annales-brevet-bac" hreflang="fr" style="color: var(--text-muted);">Provas do brevet e do bac (em francês)</a>
+<a href="/fiches-revision-ia" hreflang="fr" style="color: var(--text-muted);">Fichas de revisão com IA</a>
 <a href="/pt/curriculo-frances" style="color: var(--text-muted);">Famílias no estrangeiro</a>
 <a href="/mentions-legales" hreflang="fr" style="color: var(--text-muted);">Aviso legal</a>
 <a href="/pt/international" style="color: var(--text-muted);">A sua escola fica fora de França?</a>

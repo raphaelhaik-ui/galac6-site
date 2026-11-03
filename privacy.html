@@ -5,31 +5,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Politique de confidentialité — Galac6</title>
-  <meta name="description" content="Politique de confidentialité de Galac6 : comment nous protégeons les données des élèves, dans le respect du RGPD. Données hébergées en France, intelligence artificielle traitée en Europe.">
+  <meta name="description" content="Politique de confidentialité de Galac6 : comment nous protégeons les données des élèves, selon le RGPD. Données hébergées en France, IA traitée en Europe.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://galac6.io/privacy">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Galac6">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Politique de confidentialité — Galac6">
+  <meta property="og:description" content="Politique de confidentialité de Galac6 : comment nous protégeons les données des élèves, selon le RGPD. Données hébergées en France, IA traitée en Europe.">
+  <meta property="og:url" content="https://galac6.io/privacy">
+  <meta property="og:image" content="https://galac6.io/images/og-image-v2.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Politique de confidentialité — Galac6">
+  <meta name="twitter:description" content="Politique de confidentialité de Galac6 : comment nous protégeons les données des élèves, selon le RGPD. Données hébergées en France, IA traitée en Europe.">
+  <meta name="twitter:image" content="https://galac6.io/images/og-image-v2.jpg">
+  <meta name="twitter:image:alt" content="Galac6, l'IA au service de la pédagogie.">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": "https://galac6.io/privacy#webpage",
-  "url": "https://galac6.io/privacy",
-  "name": "Politique de confidentialité — Galac6",
-  "inLanguage": "fr",
-  "isPartOf": {
-    "@id": "https://galac6.io/#website"
-  },
-  "publisher": {
-    "@id": "https://galac6.io/#organization"
-  },
-  "description": "Politique de confidentialité de Galac6 : comment nous protégeons les données des élèves, dans le respect du RGPD. Données hébergées en France, intelligence artificielle traitée en Europe."
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://galac6.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Politique de confidentialité",
+          "item": "https://galac6.io/privacy"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://galac6.io/privacy#webpage",
+      "url": "https://galac6.io/privacy",
+      "name": "Politique de confidentialité — Galac6",
+      "inLanguage": "fr",
+      "isPartOf": {
+        "@id": "https://galac6.io/#website"
+      },
+      "publisher": {
+        "@id": "https://galac6.io/#organization"
+      },
+      "description": "Politique de confidentialité de Galac6 : comment nous protégeons les données des élèves, dans le respect du RGPD. Données hébergées en France, intelligence artificielle traitée en Europe."
+    }
+  ]
 }
   </script>
   <link rel="icon" type="image/png" href="icons/32x32.png">
   <!-- Google Analytics 4 + Consent Mode v2 (RGPD) -->
-  <script src="analytics.js"></script>
+  <script src="analytics.js" defer></script>
   <!-- Suivi des UTM (origine des visiteurs, sans cookie) -->
-  <script src="utm.js"></script>
+  <script src="utm.js" defer></script>
   <style>
     :root {
       --primary: #7c5cfc;
@@ -176,7 +212,7 @@
       padding: 3rem 2.5rem 4rem;
     }
 
-    .content h1 {
+    .content h1, .content .h1-like {
       font-size: 2rem;
       font-weight: 800;
       margin-bottom: 0.5rem;
@@ -269,7 +305,7 @@
     }
 
     @media (max-width: 640px) {
-      .content h1 { font-size: 1.5rem; }
+      .content h1, .content .h1-like { font-size: 1.5rem; }
       footer { flex-direction: column; gap: 1rem; text-align: center; }
     }
       /* Menu : une seule ligne, plus serré sur écran moyen */
@@ -277,7 +313,7 @@
     @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
   </style>
   <!-- Meta Pixel (Facebook) - charge apres consentement -->
-  <script src="meta-pixel.js"></script>
+  <script src="meta-pixel.js" defer></script>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
     html, body { overflow-x: clip; } /* les halos décoratifs du haut de page ne créent plus de défilement horizontal */
@@ -335,13 +371,13 @@
     }
   </style>
   <style id="g6-banner-css">
-    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, collé en haut avec le menu (généré par scripts/build-langs.py) */
+    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, juste au-dessus du pied de page, non collant (généré par scripts/build-langs.py) */
     .g6-intl-banner { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 8px 16px; background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; font-size: 0.85rem; font-weight: 500; line-height: 1.45; text-align: center; direction: ltr; }
     .g6-intl-banner svg { flex: none; opacity: 0.9; }
     .g6-intl-banner span { min-width: 0; overflow-wrap: anywhere; }
     .g6-intl-banner a { color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.5); }
     .g6-intl-banner a:hover, .g6-intl-banner a:focus-visible { border-bottom-color: #fff; text-decoration: none; }
-    body > .g6-intl-banner { position: sticky; top: 0; z-index: 120; }
+    .g6-intl-banner { position: static; }
     @media (max-width: 480px) { .g6-intl-banner { font-size: 0.8rem; padding: 7px 12px; } }
   </style>
 </head>
@@ -350,7 +386,6 @@
 
   <!-- ═══ NAVBAR ═══ -->
   <div class="navbar-wrapper">
-    <!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-banner" lang="en" dir="ltr" role="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Galac6 follows the French national curriculum, for French schools and families in France and abroad. Want Galac6 for your country&rsquo;s curriculum? <a href="/international">Send a request&nbsp;&rarr;</a></span></div><!-- /intl-banner -->
     <nav class="navbar">
       <a href="/" class="navbar-brand">
         <img src="/icons/icon-nav.png" alt="Galac6" width="132" height="132">
@@ -363,7 +398,7 @@
         <a href="/familles" data-i18n="nav.families">Familles</a>
         <a href="/ecole" data-i18n="nav.school">Professeurs et écoles</a>
         <a href="/tarifs" data-i18n="nav.pricing">Tarifs</a>
-        <a href="/blog" data-i18n="nav.blog">Blog</a>
+        <a href="/blog/" data-i18n="nav.blog">Blog</a>
         <a href="/about" data-i18n="nav.about">À propos</a>
         <!-- lang-menu --><details class="lang-menu"><summary aria-label="Langue : Français"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#002654"/><rect x="13.33" width="6.67" height="14" fill="#ce1126"/></svg><span>FR</span></summary><div class="lang-menu-list"><a href="/privacy" hreflang="fr" lang="fr" aria-current="page"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#002654"/><rect x="13.33" width="6.67" height="14" fill="#ce1126"/></svg><span>Français</span></a><a href="/en/" hreflang="en" lang="en"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#012169"/><path d="M0 0L20 14M20 0L0 14" stroke="#fff" stroke-width="3"/><path d="M0 0L20 14M20 0L0 14" stroke="#c8102e" stroke-width="1"/><path d="M10 0V14M0 7H20" stroke="#fff" stroke-width="4.5"/><path d="M10 0V14M0 7H20" stroke="#c8102e" stroke-width="2.5"/></svg><span>English</span></a><a href="/es/" hreflang="es" lang="es"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#aa151b"/><rect y="3.5" width="20" height="7" fill="#f1bf00"/></svg><span>Español</span></a><a href="/it/" hreflang="it" lang="it"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#009246"/><rect x="13.33" width="6.67" height="14" fill="#ce2b37"/></svg><span>Italiano</span></a><a href="/de/" hreflang="de" lang="de"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#ffce00"/><rect width="20" height="4.67" fill="#000"/><rect y="4.67" width="20" height="4.67" fill="#dd0000"/></svg><span>Deutsch</span></a><a href="/pt/" hreflang="pt" lang="pt"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#da291c"/><rect width="8" height="14" fill="#046a38"/><circle cx="8" cy="7" r="3" fill="#ffe900"/><circle cx="8" cy="7" r="1.6" fill="#da291c"/></svg><span>Português</span></a><a href="/nl/" hreflang="nl" lang="nl"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="20" height="4.67" fill="#ae1c28"/><rect y="9.33" width="20" height="4.67" fill="#21468b"/></svg><span>Nederlands</span></a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
         <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start, #6366f1), var(--gradient-end, #a855f7)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;" data-i18n="nav.signup">Inscription ou connexion</a>
@@ -505,7 +540,7 @@
       <p>Nous pouvons mettre à jour cette politique, par exemple quand un prestataire change. En cas de changement important, nous vous prévenons dans l'application ou par email. Date de la dernière mise à jour : 2 novembre 2026.</p>
     </div>
     <div class="en-only" lang="en" style="display:none;">
-      <h1>Privacy Policy</h1>
+      <h2 class="h1-like">Privacy Policy</h2>
       <p class="subtitle">Last updated: November 2, 2026</p>
       <p>This policy explains what data Galac6 uses, why, where it goes, how long it is kept and how to exercise your rights (GDPR and the French Data Protection Act). It is the same policy on the galac6.io website and in the app.</p>
       <div class="en-bref">
@@ -638,18 +673,20 @@
   </div>
 
   <!-- ═══ FOOTER ═══ -->
+  <!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-banner" lang="en" dir="ltr" role="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Galac6 follows the French national curriculum, for French schools and families in France and abroad. Want Galac6 for your country&rsquo;s curriculum? <a href="/international">Send a request&nbsp;&rarr;</a></span></div><!-- /intl-banner -->
   <footer>
-    <div data-i18n="cgv.footer.tagline">Galac6. L'IA au service de la pédagogie</div>
+    <div data-i18n="cgv.footer.tagline">Galac6. L'IA au service de la pédagogie.</div>
     <div class="footer-badges">
       <a href="/about" style="color: var(--text-muted);" data-i18n="nav.about">À propos</a>
       <a href="/familles" style="color: var(--text-muted);" data-i18n="footer.families">Familles</a>
       <a href="/dictee-en-ligne" style="color: var(--text-muted);" data-i18n="footer.dictee">Dictée en ligne</a>
       <a href="/annales-brevet-bac" style="color: var(--text-muted);" data-i18n="footer.annales">Annales du brevet et du bac</a>
+      <a href="/fiches-revision-ia" style="color: var(--text-muted);">Fiches de révision par IA</a>
       <a href="/familles-francaises-etranger" style="color: var(--text-muted);" data-i18n="footer.expat">Familles à l'étranger</a>
       <a href="/mentions-legales" style="color: var(--text-muted);" data-i18n="footer.legal.mentions">Mentions légales</a>
       <a href="/international" style="color: var(--text-muted);" data-i18n="footer.international">École hors de France ?</a>
       <a href="#" data-cookie-settings style="color: var(--text-muted);" data-i18n="footer.cookies">Gérer les cookies</a>
-      <span class="footer-badge" data-i18n="cgv.footer.france">🇫🇷 Made in France</span>
+      <span class="footer-badge" data-i18n="cgv.footer.france">Conçu en France</span>
     </div>
   </footer>
 

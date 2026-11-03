@@ -21,7 +21,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "WebPage",
+      "@type": "AboutPage",
       "@id": "https://galac6.io/it/about#webpage",
       "url": "https://galac6.io/it/about",
       "name": "Chi siamo: Galac6, l'IA al servizio della pedagogia",
@@ -32,7 +32,14 @@
       "publisher": {
         "@id": "https://galac6.io/#organization"
       },
-      "description": "Edtech francese che ridefinisce l'apprendimento a scuola, partendo da ciò che sa ogni alunno: un'IA didattica per insegnanti, alunni e genitori."
+      "description": "Edtech francese che ridefinisce l'apprendimento a scuola, partendo da ciò che sa ogni alunno: un'IA didattica per insegnanti, alunni e genitori.",
+      "dateModified": "2026-11-03",
+      "about": {
+        "@id": "https://galac6.io/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://galac6.io/#organization"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -49,6 +56,89 @@
           "name": "Chi siamo",
           "item": "https://galac6.io/it/about"
         }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://galac6.io/#organization",
+      "name": "Galac6",
+      "url": "https://galac6.io/",
+      "logo": "https://galac6.io/icons/logo.png",
+      "slogan": "L'IA au service de la pédagogie.",
+      "description": "Edtech francese che ridefinisce l'apprendimento a scuola, partendo da ciò che sa ogni alunno: un'IA didattica per insegnanti, alunni e genitori, dalla primaria al liceo, sul programma scolastico francese. Dati ospitati in Francia.",
+      "email": "hello@galac6.io",
+      "legalName": "RHK CONSEIL",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "19 rue de Croulebarbe",
+        "postalCode": "75013",
+        "addressLocality": "Paris",
+        "addressCountry": "FR"
+      },
+      "founder": {
+        "@id": "https://galac6.io/about#raphael-haik"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/galac6",
+        "https://www.facebook.com/profile.php?id=61586374984363"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "hello@galac6.io"
+      },
+      "areaServed": [
+        "FR",
+        "BE",
+        "LU",
+        "CH",
+        "MC",
+        "AD",
+        "ES",
+        "PT",
+        "IT",
+        "DE",
+        "AT",
+        "NL",
+        "GB",
+        "IE",
+        "DK",
+        "SE",
+        "NO",
+        "FI",
+        "PL",
+        "CZ",
+        "HU",
+        "RO",
+        "GR",
+        "HR",
+        "BG",
+        "SK",
+        "SI",
+        "CY",
+        "MT"
+      ],
+      "knowsLanguage": [
+        "fr",
+        "en",
+        "es",
+        "it",
+        "de",
+        "pt",
+        "nl"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://galac6.io/about#raphael-haik",
+      "name": "Raphaël Haïk",
+      "url": "https://galac6.io/about",
+      "jobTitle": "Fondatore di Galac6",
+      "worksFor": {
+        "@id": "https://galac6.io/#organization"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/raphaelhaik"
       ]
     }
   ]
@@ -74,15 +164,19 @@
 <meta content="Galac6 ridefinisce l'apprendimento a scuola, partendo da ciò che sa ogni alunno. Un'edtech francese." property="og:description"/>
 <meta content="https://galac6.io/it/about" property="og:url"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Galac6, l'IA al servizio della pedagogia." property="og:image:alt"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Chi siamo: la visione della scuola di Galac6" name="twitter:title"/>
 <meta content="Galac6 ridefinisce l'apprendimento a scuola, partendo da ciò che sa ogni alunno. Un'edtech francese." name="twitter:description"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" name="twitter:image"/>
+<meta content="Galac6, l'IA al servizio della pedagogia." name="twitter:image:alt"/>
 <link href="/icons/32x32.png" rel="icon" type="image/png"/>
 <!-- Google Analytics 4 + Consent Mode v2 (RGPD) -->
-<script src="/analytics.js"></script>
+<script defer="" src="/analytics.js"></script>
 <!-- Suivi des UTM (origine des visiteurs, sans cookie) -->
-<script src="/utm.js"></script>
+<script defer="" src="/utm.js"></script>
 <style>
     :root {
       --primary: #7c5cfc;
@@ -225,6 +319,18 @@
       margin-bottom: 1.2rem;
       font-size: 1.05rem;
     }
+
+    /* ─── Galac6 en bref, mission, chiffres ─── */
+    .updated { color: var(--text-muted); font-size: 0.85rem; margin: -0.75rem 0 1.5rem; }
+    .about-facts { margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid var(--border); }
+    .about-facts h2 { font-size: 1.45rem; font-weight: 700; margin: 2.25rem 0 0.9rem; line-height: 1.3; }
+    .about-facts h2:first-child { margin-top: 0; }
+    .about-facts p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; font-size: 1.02rem; }
+    .about-facts p a, .facts-list a { text-decoration: underline; text-underline-offset: 2px; }
+    .facts-list { list-style: none; display: grid; gap: 0.65rem; padding: 1.25rem 1.4rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; }
+    .facts-list li { color: var(--text-muted); line-height: 1.6; font-size: 1rem; overflow-wrap: anywhere; }
+    .facts-list strong { color: var(--text); }
+    @media (max-width: 480px) { .facts-list { padding: 1rem; } .about-facts h2 { font-size: 1.25rem; } }
 
     /* ─── Contact form ─── */
     .contact-section {
@@ -403,7 +509,7 @@
     @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
   </style>
 <!-- Meta Pixel (Facebook) - charge apres consentement -->
-<script src="/meta-pixel.js"></script>
+<script defer="" src="/meta-pixel.js"></script>
 <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
     html, body { overflow-x: clip; } /* les halos décoratifs du haut de page ne créent plus de défilement horizontal */
@@ -461,13 +567,13 @@
     }
   </style>
 <style id="g6-banner-css">
-    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, collé en haut avec le menu (généré par scripts/build-langs.py) */
+    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, juste au-dessus du pied de page, non collant (généré par scripts/build-langs.py) */
     .g6-intl-banner { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 8px 16px; background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; font-size: 0.85rem; font-weight: 500; line-height: 1.45; text-align: center; direction: ltr; }
     .g6-intl-banner svg { flex: none; opacity: 0.9; }
     .g6-intl-banner span { min-width: 0; overflow-wrap: anywhere; }
     .g6-intl-banner a { color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.5); }
     .g6-intl-banner a:hover, .g6-intl-banner a:focus-visible { border-bottom-color: #fff; text-decoration: none; }
-    body > .g6-intl-banner { position: sticky; top: 0; z-index: 120; }
+    .g6-intl-banner { position: static; }
     @media (max-width: 480px) { .g6-intl-banner { font-size: 0.8rem; padding: 7px 12px; } }
   </style>
 <script>window.G6_DYN = {"error": "Si è verificato un errore, riprovate.", "send": "Invia →", "sending": "Invio in corso..."};</script>
@@ -481,7 +587,6 @@
 <body>
 <!-- ═══ NAVBAR ═══ -->
 <div class="navbar-wrapper">
-<!-- intl-banner --><!-- /intl-banner -->
 <nav class="navbar">
 <a class="navbar-brand" href="/it/">
 <img alt="Galac6" height="132" src="/icons/icon-nav.png" width="132"/>
@@ -494,7 +599,7 @@
 <a href="/it/familles">Famiglie</a>
 <a href="/it/ecole">Docenti e scuole</a>
 <a href="/it/tarifs">Prezzi</a>
-<a href="/blog" hreflang="fr">Blog</a>
+<a href="/blog/" hreflang="fr">Blog</a>
 <a aria-current="page" class="active" href="/it/about">Chi siamo</a>
 <!-- lang-menu --><details class="lang-menu"><summary aria-label="Lingua : Italiano"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#fff" height="14" width="20"></rect><rect fill="#009246" height="14" width="6.67"></rect><rect fill="#ce2b37" height="14" width="6.67" x="13.33"></rect></svg><span>IT</span></summary><div class="lang-menu-list"><a href="/about" hreflang="fr" lang="fr"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#fff" height="14" width="20"></rect><rect fill="#002654" height="14" width="6.67"></rect><rect fill="#ce1126" height="14" width="6.67" x="13.33"></rect></svg><span>Français</span></a><a href="/en/about" hreflang="en" lang="en"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#012169" height="14" width="20"></rect><path d="M0 0L20 14M20 0L0 14" stroke="#fff" stroke-width="3"></path><path d="M0 0L20 14M20 0L0 14" stroke="#c8102e" stroke-width="1"></path><path d="M10 0V14M0 7H20" stroke="#fff" stroke-width="4.5"></path><path d="M10 0V14M0 7H20" stroke="#c8102e" stroke-width="2.5"></path></svg><span>English</span></a><a href="/es/about" hreflang="es" lang="es"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#aa151b" height="14" width="20"></rect><rect fill="#f1bf00" height="7" width="20" y="3.5"></rect></svg><span>Español</span></a><a aria-current="page" href="/it/about" hreflang="it" lang="it"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#fff" height="14" width="20"></rect><rect fill="#009246" height="14" width="6.67"></rect><rect fill="#ce2b37" height="14" width="6.67" x="13.33"></rect></svg><span>Italiano</span></a><a href="/de/about" hreflang="de" lang="de"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#ffce00" height="14" width="20"></rect><rect fill="#000" height="4.67" width="20"></rect><rect fill="#dd0000" height="4.67" width="20" y="4.67"></rect></svg><span>Deutsch</span></a><a href="/pt/about" hreflang="pt" lang="pt"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#da291c" height="14" width="20"></rect><rect fill="#046a38" height="14" width="8"></rect><circle cx="8" cy="7" fill="#ffe900" r="3"></circle><circle cx="8" cy="7" fill="#da291c" r="1.6"></circle></svg><span>Português</span></a><a href="/nl/about" hreflang="nl" lang="nl"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#fff" height="14" width="20"></rect><rect fill="#ae1c28" height="4.67" width="20"></rect><rect fill="#21468b" height="4.67" width="20" y="9.33"></rect></svg><span>Nederlands</span></a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
 <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start, #6366f1), var(--gradient-end, #a855f7)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Registrazione o accesso</a>
@@ -506,15 +611,42 @@
 <div class="about-intro">
 <img alt="Fondatore di Galac6" class="about-photo" height="880" src="/images/raphael.jpg" width="660"/>
 <div class="about-text">
-<h1>Chi siamo</h1>
+<h1>Chi siamo: Galac6 (galac6.io)</h1>
+<p class="updated"><time datetime="2026-11-03">Aggiornato il 3 novembre 2026</time></p>
 <p>Ingegnere, imprenditore e soprattutto padre di 3 figli, ho creato Galac6 partendo da una constatazione semplice: i compiti occupano un posto enorme nella vita di famiglia, e sono fonte di stress tanto per i figli quanto per i genitori.</p>
 <p>Come voi, ho visto la tentazione di ChatGPT: rapido, disponibile a qualsiasi ora, capace di spiegare tutto. Ma anche inadatto all'ambiente scolastico, e quasi impossibile da usare senza copiare.</p>
 <p>Ho quindi sviluppato Galac6 per offrire un'alternativa pensata per gli alunni: un'IA che aiuta a capire, a ripassare e a progredire, senza fare i compiti al posto loro. Galac6 si basa sui migliori modelli di IA del mercato (Anthropic, Google, Mistral), ciascuno usato dove dà il meglio, per garantire risposte sempre pertinenti e didattiche.</p>
-<p>Oggi Galac6 va oltre: ridefinisce l'apprendimento a scuola, partendo da ciò che sa ogni alunno. Ogni esercizio mostra ciò che l'alunno riesce a fare e ciò che deve ancora lavorare, nozione per nozione. L'insegnante risparmia tempo, conosce ciascuno dei suoi alunni e gli propone un lavoro al suo livello. L'alunno impara a imparare, e i genitori capiscono come aiutarlo.</p>
+<p>Oggi Galac6 va oltre: ridefinisce l'apprendimento a scuola, partendo da ciò che sa ogni alunno. Ogni esercizio mostra ciò che l'alunno sa fare e ciò su cui deve ancora lavorare, nozione per nozione. L'insegnante risparmia tempo, conosce ciascuno dei suoi alunni e gli propone un lavoro al suo livello. L'alunno cerca da solo la risposta, e i suoi genitori capiscono come aiutarlo.</p>
 <p>Cominciamo dalla scuola francese, in Francia e all'estero. È una prima tappa.</p>
-<p style="margin-top: 2rem; font-style: italic; color: var(--text);">Raphael Haik, Paris, France</p>
+<p style="margin-top: 2rem; font-style: italic; color: var(--text);">Raphaël Haïk, fondatore di Galac6, Parigi</p>
 </div>
 </div>
+<!-- ─── Galac6 en bref : page de référence sur l'entreprise (audit SEO / GEO du 03/11/2026) ─── -->
+<section aria-labelledby="brief-title" class="about-facts">
+<h2 id="brief-title">Galac6 in breve</h2>
+<ul class="facts-list"><li><strong>Nome:</strong> Galac6 (galac6.io), un'edtech francese.</li>
+<li><strong>Editore:</strong> RHK Conseil, SIRET 944 058 866 00012, 19 rue de Croulebarbe, 75013 Parigi (Francia).</li>
+<li><strong>Fondatore:</strong> Raphaël Haïk, ingegnere delle telecomunicazioni di formazione, unico fondatore di Galac6 (<a href="https://www.linkedin.com/in/raphaelhaik" rel="noopener" target="_blank">LinkedIn</a>).</li>
+<li><strong>Per chi:</strong> gli alunni dalla primaria al liceo, i loro genitori e i loro insegnanti, in Francia e nelle scuole francesi all'estero.</li>
+<li><strong>Programma:</strong> il programma ufficiale dell'istruzione francese, dalla primaria al liceo.</li>
+<li><strong>Dati:</strong> ospitati in Francia; l'intelligenza artificiale è elaborata in Europa.</li>
+<li><strong>Slogan:</strong> « L'IA au service de la pédagogie. » (L'IA al servizio della pedagogia.)</li>
+<li><strong>Contatti:</strong> <a href="mailto:hello@galac6.io">hello@galac6.io</a>, e su <a href="https://www.linkedin.com/company/galac6" rel="noopener" target="_blank">LinkedIn</a> e <a href="https://www.facebook.com/profile.php?id=61586374984363" rel="noopener" target="_blank">Facebook</a>.</li></ul>
+<h2>La nostra missione</h2>
+<p>Galac6 aiuta ogni alunno a progredire partendo da ciò che sa già. Per ogni nozione del programma, Galac6 sa ciò che l'alunno sa fare e ciò su cui deve ancora lavorare, e gli propone un lavoro al suo livello. L'insegnante resta padrone delle sue scelte: vede a che punto è la classe e ogni alunno. I genitori seguono i progressi del figlio, i suoi punti di forza e ciò che gli resta da lavorare.</p>
+<h2>La nostra pedagogia: guidare senza dare la risposta</h2>
+<p>Galac6 non fa i compiti al posto dell'alunno. Il tutor fa domande, dà indizi e spiega gli errori, perché l'alunno trovi la risposta da solo. È ciò che lo distingue dalle IA generaliste, che danno la soluzione già pronta.</p>
+<p>Tutti i contenuti seguono il programma francese, dalla primaria al liceo: aiuto per i compiti, dettati letti e corretti, calcolo mentale, quiz, schede di ripasso, simulazioni del brevet e del bac. Una prova di esercitazione creata dall'IA è sempre presentata come tale, mai come una prova d'esame ufficiale.</p>
+
+<h2>Galac6 in cifre</h2>
+<ul class="facts-list"><li><strong>Oltre 2 000 dettati</strong> letti ad alta voce e corretti errore per errore, dalla primaria al liceo.</li>
+<li><strong>Oltre 400 prove d'esame ufficiali degli anni passati</strong> (433 a oggi), di cui 129 del brevet e 75 del bac di francese.</li>
+<li><strong>Dodici anni scolastici</strong>, dalla primaria al liceo.</li></ul>
+<h2>Quanto costa Galac6?</h2>
+<p>Galac6 è un servizio a pagamento. L'offerta Scoperta, a 0 €, dà accesso a tutte le funzioni in quantità limitata, ogni mese. L'offerta Studente costa 69 € all'anno. Per le scuole, il prezzo è su preventivo, con un pilota gratuito di 3 mesi su 3 classi. I dettagli sono nella pagina <a href="/it/tarifs">Prezzi</a>.</p>
+<h2>Dati degli alunni</h2>
+<p>I dati sono ospitati in Francia, a Parigi, e l'intelligenza artificiale di Galac6 è elaborata in Europa. Non vengono mai venduti né usati per addestrare IA. Per gli alunni sotto i 15 anni, il consenso di un genitore viene richiesto via email. Tutto è descritto nella pagina <a href="/donnees-eleves" hreflang="fr">Dati degli alunni</a> (in francese).</p>
+</section>
 <!-- ─── Contact ─── -->
 <div class="contact-section">
 <h2>Contattami</h2>
@@ -538,6 +670,7 @@
 </div>
 </div>
 <!-- ═══ FOOTER ═══ -->
+<!-- intl-banner --><!-- /intl-banner -->
 <footer>
 <div>Galac6. L'IA al servizio della pedagogia</div>
 <div class="footer-badges">
@@ -545,6 +678,7 @@
 <a href="/it/familles" style="color: var(--text-muted);">Famiglie</a>
 <a href="/dictee-en-ligne" hreflang="fr" style="color: var(--text-muted);">Dettati online (in francese)</a>
 <a href="/annales-brevet-bac" hreflang="fr" style="color: var(--text-muted);">Prove d'esame di brevet e bac (in francese)</a>
+<a href="/fiches-revision-ia" hreflang="fr" style="color: var(--text-muted);">Schede di ripasso con l'IA</a>
 <a href="/it/programma-scolastico-francese" style="color: var(--text-muted);">Famiglie all'estero</a>
 <a href="/mentions-legales" hreflang="fr" style="color: var(--text-muted);">Note legali</a>
 <a href="/it/international" style="color: var(--text-muted);">Scuola fuori dalla Francia?</a>

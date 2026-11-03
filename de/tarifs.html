@@ -35,6 +35,7 @@
         "@id": "https://galac6.io/#organization"
       },
       "description": "Tarif Entdecken zum Ausprobieren, Schüler für 69 € pro Jahr, Familie bis 4 Kinder für 99 € pro Jahr, Prüfungspaket 19 €. Schulen auf Anfrage.",
+      "dateModified": "2026-11-03",
       "mainEntity": [
         {
           "@type": "Question",
@@ -65,7 +66,7 @@
           "name": "Ist die Zahlung sicher?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja. Die Kartenzahlung läuft über einen sicheren Zahlungsdienstleister: Galac6 sieht Ihre Kartennummer nie. In der mobilen App erfolgt der Kauf über den App Store oder Google Play."
+            "text": "Ja. Die Kartenzahlung läuft über einen sicheren Zahlungsdienstleister: Galac6 sieht Ihre Kartennummer nie."
           }
         },
         {
@@ -139,15 +140,19 @@
 <meta content="de_DE" property="og:locale"/>
 <meta content="https://galac6.io/de/tarifs" property="og:url"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Galac6, KI im Dienst der Pädagogik." property="og:image:alt"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Galac6 – Einfache, klare Preise" name="twitter:title"/>
 <meta content="Der Tarif Entdecken zum Ausprobieren, Schüler für 69 € pro Jahr, Familie für 99 € pro Jahr für bis zu 4 Kinder. Für Schulen: Preis auf Anfrage." name="twitter:description"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" name="twitter:image"/>
+<meta content="Galac6, KI im Dienst der Pädagogik." name="twitter:image:alt"/>
 <link href="/icons/32x32.png" rel="icon" type="image/png"/>
 <!-- Google Analytics 4 + Consent Mode v2 (RGPD) -->
-<script src="/analytics.js"></script>
+<script defer="" src="/analytics.js"></script>
 <!-- Suivi des UTM (origine des visiteurs, sans cookie) -->
-<script src="/utm.js"></script>
+<script defer="" src="/utm.js"></script>
 
 <style>
     :root {
@@ -354,9 +359,11 @@
       /* Menu : une seule ligne, plus serré sur écran moyen */
     .navbar-links a { white-space: nowrap; }
     @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
+      .updated { color: var(--text-muted, #8a8aa3); font-size: 0.85rem; margin-top: 0.75rem; }
+      .g6-ico-inline { display: inline-block; vertical-align: -0.2em; }
   </style>
 <!-- Meta Pixel (Facebook) - charge apres consentement -->
-<script src="/meta-pixel.js"></script>
+<script defer="" src="/meta-pixel.js"></script>
 <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
     html, body { overflow-x: clip; } /* les halos décoratifs du haut de page ne créent plus de défilement horizontal */
@@ -414,13 +421,13 @@
     }
   </style>
 <style id="g6-banner-css">
-    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, collé en haut avec le menu (généré par scripts/build-langs.py) */
+    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, juste au-dessus du pied de page, non collant (généré par scripts/build-langs.py) */
     .g6-intl-banner { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 8px 16px; background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; font-size: 0.85rem; font-weight: 500; line-height: 1.45; text-align: center; direction: ltr; }
     .g6-intl-banner svg { flex: none; opacity: 0.9; }
     .g6-intl-banner span { min-width: 0; overflow-wrap: anywhere; }
     .g6-intl-banner a { color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.5); }
     .g6-intl-banner a:hover, .g6-intl-banner a:focus-visible { border-bottom-color: #fff; text-decoration: none; }
-    body > .g6-intl-banner { position: sticky; top: 0; z-index: 120; }
+    .g6-intl-banner { position: static; }
     @media (max-width: 480px) { .g6-intl-banner { font-size: 0.8rem; padding: 7px 12px; } }
   </style>
 <script>window.G6_DYN = {"title": "Galac6 Preise: Schüler, Familie und Schulen", "plansLabel": "Tarife", "prices": {"year": {"eleve": ["69 € <small>pro Jahr</small>", "also 5,75 € pro Monat statt 95,88 € für 12 Monate zu 7,99 €", "26,88 € gespart (rund −28 %)", "Automatische Verlängerung, jederzeit in Ihrem Konto abschaltbar. Vor dem Verlängerungsdatum erhalten Sie eine Erinnerung."], "fam": ["99 € <small>pro Jahr</small>", "also 8,25 € pro Monat für die ganze Familie statt 143,88 € für 12 Monate zu 11,99 €", "44,88 € gespart (rund −31 %)", "Automatische Verlängerung, jederzeit in Ihrem Konto abschaltbar. Vor dem Verlängerungsdatum erhalten Sie eine Erinnerung."]}, "month": {"eleve": ["7,99 € <small>pro Monat</small>", "Ohne Vertragsbindung. Im Jahresabo nur 69 €.", "", "Kündigung mit einem Klick."], "fam": ["11,99 € <small>pro Monat</small>", "Ohne Vertragsbindung. Im Jahresabo nur 99 €.", "", "Kündigung mit einem Klick."]}}};</script>
@@ -434,7 +441,6 @@
 <body>
 <!-- ═══ NAVBAR ═══ -->
 <div class="navbar-wrapper">
-<!-- intl-banner --><!-- /intl-banner -->
 <nav class="navbar">
 <a class="navbar-brand" href="/de/">
 <img alt="Galac6" height="132" src="/icons/icon-nav.png" width="132"/>
@@ -447,7 +453,7 @@
 <a href="/de/familles">Familien</a>
 <a href="/de/ecole">Lehrkräfte &amp; Schulen</a>
 <a aria-current="page" class="active" href="/de/tarifs">Preise</a>
-<a href="/blog" hreflang="fr">Blog</a>
+<a href="/blog/" hreflang="fr">Blog</a>
 <a href="/de/about">Über uns</a>
 <!-- lang-menu --><details class="lang-menu"><summary aria-label="Sprache : Deutsch"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#ffce00" height="14" width="20"></rect><rect fill="#000" height="4.67" width="20"></rect><rect fill="#dd0000" height="4.67" width="20" y="4.67"></rect></svg><span>DE</span></summary><div class="lang-menu-list"><a href="/tarifs" hreflang="fr" lang="fr"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#fff" height="14" width="20"></rect><rect fill="#002654" height="14" width="6.67"></rect><rect fill="#ce1126" height="14" width="6.67" x="13.33"></rect></svg><span>Français</span></a><a href="/en/tarifs" hreflang="en" lang="en"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#012169" height="14" width="20"></rect><path d="M0 0L20 14M20 0L0 14" stroke="#fff" stroke-width="3"></path><path d="M0 0L20 14M20 0L0 14" stroke="#c8102e" stroke-width="1"></path><path d="M10 0V14M0 7H20" stroke="#fff" stroke-width="4.5"></path><path d="M10 0V14M0 7H20" stroke="#c8102e" stroke-width="2.5"></path></svg><span>English</span></a><a href="/es/tarifs" hreflang="es" lang="es"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#aa151b" height="14" width="20"></rect><rect fill="#f1bf00" height="7" width="20" y="3.5"></rect></svg><span>Español</span></a><a href="/it/tarifs" hreflang="it" lang="it"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#fff" height="14" width="20"></rect><rect fill="#009246" height="14" width="6.67"></rect><rect fill="#ce2b37" height="14" width="6.67" x="13.33"></rect></svg><span>Italiano</span></a><a aria-current="page" href="/de/tarifs" hreflang="de" lang="de"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#ffce00" height="14" width="20"></rect><rect fill="#000" height="4.67" width="20"></rect><rect fill="#dd0000" height="4.67" width="20" y="4.67"></rect></svg><span>Deutsch</span></a><a href="/pt/tarifs" hreflang="pt" lang="pt"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#da291c" height="14" width="20"></rect><rect fill="#046a38" height="14" width="8"></rect><circle cx="8" cy="7" fill="#ffe900" r="3"></circle><circle cx="8" cy="7" fill="#da291c" r="1.6"></circle></svg><span>Português</span></a><a href="/nl/tarifs" hreflang="nl" lang="nl"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#fff" height="14" width="20"></rect><rect fill="#ae1c28" height="4.67" width="20"></rect><rect fill="#21468b" height="4.67" width="20" y="9.33"></rect></svg><span>Nederlands</span></a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
 <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start, #6366f1), var(--gradient-end, #a855f7)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Anmelden</a>
@@ -461,6 +467,7 @@
 <span class="badge">12-Monats-Abo ab dem Zahlungsdatum</span>
 <h1>Einfache und <span class="grad">klare Preise</span></h1>
 <p class="sub">Ein Tarif Entdecken, um alle Funktionen in begrenztem Umfang auszuprobieren, ein unbegrenztes Abo für ein Kind oder für die ganze Familie. Für Schulen ein Angebot je nach Schülerzahl.</p>
+<p class="updated"><time datetime="2026-11-03">Aktualisiert am 3. November 2026</time></p>
 <div class="actions">
 <a class="btn btn-outline" href="#familles">Familien</a>
 <a class="btn btn-outline" href="#etablissements">Schulen</a>
@@ -613,12 +620,12 @@
 <table class="cmp">
 <thead><tr><th>Was enthalten ist</th><th>Schülermodul</th><th>Schüler + Schule</th><th>+ Prüfungen und Mündliches</th></tr></thead>
 <tbody>
-<tr><td>Tutor, Übungen, Hausaufgabenhilfe</td><td class="yes"></td><td class="yes"></td><td class="yes"></td></tr>
-<tr><td>Diktate, Kopfrechnen, Quiz, Lernzettel, Spiele</td><td class="yes"></td><td class="yes"></td><td class="yes"></td></tr>
-<tr><td>Klassen, Hausaufgaben mit Abgabefrist</td><td class="no">—</td><td class="yes"></td><td class="yes"></td></tr>
-<tr><td>Hausaufgaben und Klassenarbeiten, von der KI erstellt und korrigiert</td><td class="no">—</td><td class="yes"></td><td class="yes"></td></tr>
-<tr><td>Schülerprofil, Auswertungen, individuelle Bilanz</td><td class="no">—</td><td class="yes"></td><td class="yes"></td></tr>
-<tr><td>Probeprüfungen für Brevet und Bac, mündliche Probeprüfungen</td><td class="no">—</td><td class="no">—</td><td class="yes"></td></tr>
+<tr><td>Tutor, Übungen, Hausaufgabenhilfe</td><td class="yes"><svg aria-label="Inbegriffen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td><td class="yes"><svg aria-label="Inbegriffen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td><td class="yes"><svg aria-label="Inbegriffen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td></tr>
+<tr><td>Diktate, Kopfrechnen, Quiz, Lernzettel, Spiele</td><td class="yes"><svg aria-label="Inbegriffen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td><td class="yes"><svg aria-label="Inbegriffen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td><td class="yes"><svg aria-label="Inbegriffen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td></tr>
+<tr><td>Klassen, Hausaufgaben mit Abgabefrist</td><td class="no">—</td><td class="yes"><svg aria-label="Inbegriffen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td><td class="yes"><svg aria-label="Inbegriffen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td></tr>
+<tr><td>Hausaufgaben und Klassenarbeiten, von der KI erstellt und korrigiert</td><td class="no">—</td><td class="yes"><svg aria-label="Inbegriffen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td><td class="yes"><svg aria-label="Inbegriffen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td></tr>
+<tr><td>Schülerprofil, Auswertungen, individuelle Bilanz</td><td class="no">—</td><td class="yes"><svg aria-label="Inbegriffen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td><td class="yes"><svg aria-label="Inbegriffen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td></tr>
+<tr><td>Probeprüfungen für Brevet und Bac, mündliche Probeprüfungen</td><td class="no">—</td><td class="no">—</td><td class="yes"><svg aria-label="Inbegriffen" fill="none" height="18" role="img" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewbox="0 0 24 24" width="18"><path d="M20 6 9 17l-5-5"></path></svg></td></tr>
 </tbody>
 </table>
 </div>
@@ -637,7 +644,7 @@
 <details><summary>Was umfasst der Tarif Entdecken?</summary><div class="ans"><p>Alle Funktionen von Galac6 in begrenztem Umfang. Jeden Monat: 5 Nachrichten an den Tutor, ein Diktat, ein Quiz, eine Hausaufgabenhilfe mit Foto und eine Aufgabe im Stil von Brevet oder Bac. Das Kontingent wird jeden Monat neu aufgefüllt, ohne zeitliche Begrenzung und ohne Kreditkarte.</p></div></details>
 <details><summary>Was passiert, wenn das Monatslimit erreicht ist?</summary><div class="ans"><p>Galac6 teilt dem Schüler mit, dass er seine Fragen für diesen Monat aufgebraucht hat. Er kann im nächsten Monat wiederkommen, wenn das Kontingent neu aufgefüllt ist, oder zu einem kostenpflichtigen Tarif wechseln. Die Tarife Schüler und Familie sind unbegrenzt.</p></div></details>
 <details><summary>Kann ich mein Abo kündigen?</summary><div class="ans"><p>Ja. Das Monatsabo ist ohne Vertragsbindung und mit einem Klick kündbar. Das Jahresabo verlängert sich automatisch zu seinem Jahrestag. Sie können diese Verlängerung jederzeit in Ihrem Konto abschalten, und vorher erhalten Sie eine Erinnerung.</p></div></details>
-<details><summary>Ist die Zahlung sicher?</summary><div class="ans"><p>Ja. Die Kartenzahlung läuft über einen sicheren Zahlungsdienstleister: Galac6 sieht Ihre Kartennummer nie. In der mobilen App erfolgt der Kauf über den App Store oder Google Play.</p></div></details>
+<details><summary>Ist die Zahlung sicher?</summary><div class="ans"><p>Ja. Die Kartenzahlung läuft über einen sicheren Zahlungsdienstleister: Galac6 sieht Ihre Kartennummer nie.</p></div></details>
 <details><summary>Wo liegen die Daten meines Kindes?</summary><div class="ans"><p>Die Daten werden in Frankreich gehostet, in einer Datenbank in Paris. Keine Werbung, kein Verkauf von Daten.</p><p>Die KI von Galac6 wird in Europa verarbeitet; nur einige technische Dienste, etwa das Hosting der Website, nutzen Anbieter außerhalb der Europäischen Union. Die Liste finden Sie in unserer Datenschutzerklärung.</p></div></details>
 <details><summary>Ich bin bereits registriert. Was ändert sich für mich?</summary><div class="ans"><p>Bereits registrierte Nutzer werden vor jeder Änderung informiert.</p></div></details>
 <details><summary>Mein Kind nutzt Galac6 über seine Schule. Muss ich bezahlen?</summary><div class="ans"><p>Was die Schule bereitstellt, bezahlt die Schule. Für freies Üben zu Hause können Sie den Tarif Schüler oder Familie wählen.</p></div></details>
@@ -647,6 +654,7 @@
 </div>
 </main>
 <!-- ═══ FOOTER ═══ -->
+<!-- intl-banner --><!-- /intl-banner -->
 <footer>
 <div>Galac6. KI im Dienst der Pädagogik</div>
 <div class="footer-badges">
@@ -654,6 +662,7 @@
 <a href="/de/familles" style="color: var(--text-muted);">Familien</a>
 <a href="/dictee-en-ligne" hreflang="fr" style="color: var(--text-muted);">Online-Diktate (auf Französisch)</a>
 <a href="/annales-brevet-bac" hreflang="fr" style="color: var(--text-muted);">Brevet- und Bac-Prüfungen (auf Französisch)</a>
+<a href="/fiches-revision-ia" hreflang="fr" style="color: var(--text-muted);">Lernzettel mit KI</a>
 <a href="/de/franzoesischer-lehrplan" style="color: var(--text-muted);">Familien im Ausland</a>
 <a href="/mentions-legales" hreflang="fr" style="color: var(--text-muted);">Impressum</a>
 <a href="/de/international" style="color: var(--text-muted);">Schule außerhalb Frankreichs?</a>

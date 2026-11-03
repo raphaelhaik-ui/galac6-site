@@ -251,7 +251,7 @@
       'pricing.disc.name': 'Discovery',
       'pricing.disc.detail': 'To try it out: every feature, in limited amounts each month.',
       'pricing.disc.cta': 'Start with Discovery',
-      'pricing.badge': '⭐ All of Galac6, unlimited',
+      'pricing.badge': 'All of Galac6, unlimited',
       'pricing.eleve.name': 'Student',
       'pricing.eleve.detail': 'Or €7.99 a month, no commitment.',
       'pricing.fam.name': 'Family',
@@ -266,7 +266,7 @@
       'cta.note': 'To try it out: the Discovery plan, in limited amounts each month.',
 
       // Footer
-      'footer.tagline': 'Galac6. AI in the service of teaching',
+      'footer.tagline': 'Galac6. AI in the service of teaching.',
       'footer.hosted': 'Designed in France · Data hosted in France',
       'footer.copy': '© 2026 Galac6. All rights reserved.',
       'footer.legal.title': 'Legal',
@@ -388,7 +388,7 @@
       'tarifs.faq.q3': 'Can I cancel my subscription?',
       'tarifs.faq.a3': 'Yes. The monthly subscription has no commitment and can be cancelled in one click. The yearly subscription renews automatically on its anniversary date. You can turn off renewal at any time in your account, and we send you a reminder beforehand.',
       'tarifs.faq.q4': 'Is payment secure?',
-      'tarifs.faq.a4': 'Yes. Card payments go through a secure payment provider: Galac6 never sees your card number. In the mobile app, purchases go through the App Store or Google Play.',
+      'tarifs.faq.a4': 'Yes. Card payments go through a secure payment provider: Galac6 never sees your card number.',
       'tarifs.faq.q5': 'Where is my child\'s data?',
       'tarifs.faq.a5': 'Data is hosted in France, in a database in Paris. No ads, no resale of data.',
       'tarifs.faq.a5b': 'Galac6\'s artificial intelligence is processed in Europe; only a few technical services, such as hosting of the website, rely on providers located outside the European Union. The list is in our privacy policy.',
@@ -399,7 +399,7 @@
       'tarifs.faq.q8': 'How much does Galac6 cost for a school?',
       'tarifs.faq.a8': 'The price is set on quote, based on the number of pupils and the modules chosen. To discover Galac6, we offer a free 3-month pilot on 3 classes.',
       'tarifs.footer.desc': 'Galac6. AI in the service of teaching',
-      'tarifs.footer.france': '🇫🇷 Made in France',
+      'tarifs.footer.france': 'Made in France',
 
       // ─── About page ───
       'about.title': 'About Galac6',
@@ -552,7 +552,7 @@
       'ecole.side.pilot.title': 'Pilot schools',
       'ecole.side.pilot.desc': '3 free months on 3 classes, with no commitment.',
       'ecole.footer.desc': 'Galac6. AI in the service of teaching',
-      'ecole.footer.france': '🇫🇷 Made in France',
+      'ecole.footer.france': 'Made in France',
 
       // ─── Createur-contenu page ───
       'createur.badge': 'Freelance mission',
@@ -636,8 +636,8 @@
       'nav.home': 'Home',
 
       // ─── Shared footer (secondary pages) ───
-      'cgv.footer.tagline': 'Galac6. AI in the service of teaching',
-      'cgv.footer.france': '🇫🇷 Made in France',
+      'cgv.footer.tagline': 'Galac6. AI in the service of teaching.',
+      'cgv.footer.france': 'Made in France',
 
       // (CGV, politique de confidentialité et CGU : textes FR/EN directement dans
       //  cgv.html, privacy.html et terms.html, blocs .fr-only / .en-only)
@@ -724,7 +724,7 @@
       'guide.gatekeeper.p1': 'If macOS displays the message <strong>\u201cGalac6 is damaged and can\'t be opened\u201d</strong>, it\'s because the application is not signed with an Apple certificate (beta version).',
       'guide.gatekeeper.p2': 'To fix this, open <strong>Terminal</strong> (Applications \u2192 Utilities \u2192 Terminal) and run:',
       'guide.gatekeeper.p3': 'Then relaunch Galac6 normally. This command only needs to be run <strong>once</strong>.',
-      'guide.gatekeeper.explain': '<strong>Explanation:</strong> <code>xattr -cr</code> removes the \u201cquarantine\u201d attribute that macOS adds to downloaded files. This is a standard procedure for development applications not distributed via the App Store.',
+      'guide.gatekeeper.explain': '<strong>Explanation:</strong> <code>xattr -cr</code> removes the \u201cquarantine\u201d attribute that macOS adds to downloaded files. This is a standard procedure for applications in development.', // clé ancienne, plus utilisée par les pages
       'guide.firstlaunch.title': 'First launch',
       'guide.firstlaunch.p1': 'On first launch, macOS displays a <strong>Keychain Access</strong> window:',
       'guide.firstlaunch.prompt': '\u201cgalac6 wants to use your confidential information stored in \u201cgalac6\u201d in your keychain\u201d',
@@ -1051,7 +1051,7 @@
     // Mettre à jour le bouton toggle
     var toggleBtn = document.getElementById('lang-toggle');
     if (toggleBtn) {
-      toggleBtn.textContent = lang === 'fr' ? '🇬🇧' : '🇫🇷';
+      toggleBtn.textContent = lang === 'fr' ? 'EN' : 'FR'; // texte, pas d'emoji drapeau
       toggleBtn.setAttribute('aria-label', lang === 'fr' ? 'Switch to English' : 'Passer en français');
     }
 
