@@ -2,7 +2,7 @@
 
 Version longue de https://galac6.io/llms.txt. Galac6 (galac6.io) est un tuteur IA français du CP à la Terminale, sur le programme scolaire français, édité par RHK Conseil (19 rue de Croulebarbe, 75013 Paris), fondé par Raphaël Haïk. Slogan : « L'IA au service de la pédagogie. » Galac6 s'utilise dans le navigateur, sans application à télécharger. Données hébergées en France, IA traitée en Europe.
 
-Last updated: 2026-11-03
+Last updated: 2026-11-04
 
 
 ========================================================================
@@ -95,7 +95,7 @@ Parents et élèves · du CP à la Terminale
 L'IA au service de la pédagogie.
 Galac6 part de ce que sait votre enfant, notion par notion, pour lui proposer un parcours à son niveau. L'IA ne fait pas ses devoirs à sa place : elle le guide par des questions, de la leçon au contrôle. Et vous suivez où il en est.
 Conçu en France, données hébergées en France, IA traitée en Europe.
-Mis à jour le 3 novembre 2026
+Mis à jour le 4 novembre 2026
 Comment Galac6 accompagne
 
 ## De la leçon au contrôle, Galac6 accompagne votre enfant.
@@ -116,7 +116,7 @@ Toutes les fonctionnalités
 
 ## Tout ce dont votre enfant a besoin pour progresser, à chaque niveau.
 Par besoin : Primaire (CP au CM2) Soutien scolaire par IA Cours particulier en ligne avec l'IA Fiches de révision par IA Réviser les maths en ligne Calcul mental en ligne Dictée en ligne Réviser le brevet Réviser le bac de français Réviser le bac de maths avec l'IA Annales du brevet et du bac Familles à l'étranger
-À lire sur le blog : Dictées audio corrigées du CP à la 3e Application de calcul mental pour enfants Calcul mental personnalisé et ludique Galac6 ou NotebookLM pour les fiches de révision
+À lire sur le blog : Dictées audio corrigées du CP à la 3e Application de calcul mental pour enfants Calcul mental personnalisé et ludique Galac6 ou NotebookLM pour les fiches de révision Préparer un contrôle de maths au collège Comment faire une fiche de révision
 Ce que les parents apprécient
 
 ## Conçu pour apprendre, pas pour tricher.
@@ -434,7 +434,7 @@ Description: Soutien scolaire en ligne du CP à la terminale : un tuteur IA qui 
 ========================================================================
 
 # Soutien scolaire en ligne : un tuteur IA qui aide aux devoirs sans donner les réponses
-Mis à jour le 2 novembre 2026
+Mis à jour le 4 novembre 2026
 Galac6 est un service de soutien scolaire en ligne pour les élèves du CP à la terminale : un tuteur IA qui aide à faire ses devoirs sans donner les réponses. Il guide l'élève par des questions et des indices, dans toutes les matières, en suivant les programmes de l'Éducation nationale. Galac6 s'utilise dans le navigateur, sur téléphone, tablette ou ordinateur ; les données sont hébergées en France et l'intelligence artificielle est traitée en Europe.
 Conçu en France · Données hébergées en France · Du CP à la terminale
 
@@ -542,6 +542,7 @@ Chaque mois, la formule Découverte comprend 5 messages au tuteur, une dictée, 
 - Galac6 pour les écoles et les enseignants
 - Le programme français pour les familles à l'étranger
 - Galac6, une alternative à Eliott
+- Alternatives à Eliott : 5 tuteurs IA comparés
 - Galac6 ou NotebookLM pour les fiches de révision
 - Alternatives à SchoolMouv et Kartable avec l'IA
 
@@ -708,7 +709,7 @@ Description: Application de calcul mental en ligne pour enfants : séries chrono
 Galac6 est une application de calcul mental en ligne pour les élèves du CP à la terminale : des séries chronométrées sur le programme de sa classe, cinq niveaux de difficulté, des questions lues à l'écran ou à voix haute.
 - Le programme de sa classe, du CP à la terminale, au fil de l'année.
 - Au clavier ou à voix haute : l'enfant tape sa réponse ou la dit au micro.
-Mis à jour le 2 novembre 2026
+Mis à jour le 4 novembre 2026
 En bref
 
 ## Le calcul mental avec Galac6 en chiffres
@@ -783,6 +784,7 @@ Pour aller plus loin
 ## À lire aussi
 - Calcul mental au primaire : 10 minutes par jour
 - Galac6 pour le calcul mental
+- Tables de multiplication en ligne : les apprendre et les réviser, du CE1 au CM2
 - Dictée en ligne avec correction automatique
 - Les tarifs de Galac6
 - Le soutien scolaire au primaire, du CP au CM2
@@ -798,7 +800,7 @@ Description: Une fiche de révision créée à partir de la photo du cours de vo
 ========================================================================
 
 # Des fiches de révision générées à partir des cours de votre enfant
-Mis à jour le 2 novembre 2026
+Mis à jour le 4 novembre 2026
 Galac6 est une plateforme qui crée des fiches de révision à partir des cours de votre enfant, du CP à la terminale : l'élève prend sa leçon en photo, même écrite à la main, et Galac6 en fait une fiche claire. Ensuite, le bouton « Je suis prêt, interroge-moi ! » lui pose des questions sur sa fiche et donne un bilan sur 20. Les données sont hébergées en France et l'intelligence artificielle est traitée en Europe.
 Conçu en France · Données hébergées en France · Du CP à la terminale
 
@@ -889,6 +891,7 @@ Voir tous les tarifs.
 - Réviser le brevet et le bac de français
 - Utiliser l'IA pour les devoirs sans tricher
 - Galac6 ou NotebookLM pour les fiches de révision ?
+- Comment faire une fiche de révision : la méthode en 5 étapes
 - Les données des élèves
 
 ## Questions fréquentes des parents
@@ -900,7 +903,7 @@ Galac6 le fait pour les élèves du CP à la terminale. L'élève prend en photo
 Dans Fiches de révision, l'élève choisit « Ma vraie leçon », prend en photo les pages de son cours ou les choisit dans sa galerie, puis lance la fiche. Galac6 lit les photos et crée la fiche en quelques instants.
 
 ### Galac6 fait-il la fiche à la place de l'élève ?
-L'élève a le choix. Il peut obtenir une fiche toute prête à partir de son cours, ou suivre le « Guide pour faire mes fiches » : Galac6 lui propose un plan, lui demande ce qu'il retient de chaque partie et le guide par des questions et des indices. La fiche finale distingue ce que l'élève a trouvé seul et ce que Galac6 a complété.
+L'élève a le choix. Il peut obtenir une fiche toute prête à partir de son cours, ou suivre le « Guide pour faire mes fiches » : Galac6 lui propose un plan, lui demande ce qu'il retient de chaque partie et le guide par des questions et des indices. La fiche finale distingue ce que l'élève a trouvé seul et ce que Galac6 a complété. Pour qu'il la construise lui-même, voyez aussi notre méthode : comment faire une fiche de révision en 5 étapes.
 
 ### Quels types de fiches peut-on obtenir ?
 Une fiche détaillée, avec des exemples et des explications, ou une fiche résumée, avec les définitions, les formules et les propriétés. Les fiches peuvent être exportées en PDF. À partir d'un chapitre du programme, Galac6 peut aussi créer une carte mentale.
@@ -1391,7 +1394,7 @@ Description: Dictées en ligne lues et corrigées, calcul mental, lecture et fic
 
 # Le soutien scolaire au primaire par IA, du CP au CM2
 Galac6 accompagne les plus jeunes élèves dans les apprentissages fondamentaux — lire, écrire, compter — avec un tuteur IA patient et bienveillant. Lecture à voix haute, dictées audio, calcul mental et fiches : des outils pensés pour le primaire, alignés sur les programmes. Conçu en France, données hébergées en France.
-Mis à jour le 3 novembre 2026
+Mis à jour le 4 novembre 2026
 Conçu en France · Données hébergées en France
 
 ## Une IA vraiment pensée pour le primaire
@@ -1446,6 +1449,8 @@ Pour essayer Galac6, la formule Découverte donne accès à toutes les fonctionn
 - Dictées audio corrigées du CP à la 3e
 - Application de calcul mental pour enfants
 - Calcul mental personnalisé et ludique
+- Tables de multiplication en ligne : les apprendre et les réviser, du CE1 au CM2
+- Comment faire une fiche de révision : la méthode en 5 étapes
 
 ## Questions fréquentes
 

@@ -94,7 +94,7 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://galac6.io/pt/familles"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://galac6.io/nl/familles"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://galac6.io/familles"/>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/en/familles</loc>
@@ -614,7 +614,7 @@
   </url>
   <url>
     <loc>https://galac6.io/soutien-scolaire-ia</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/reviser-brevet</loc>
@@ -630,15 +630,15 @@
   </url>
   <url>
     <loc>https://galac6.io/reviser-maths</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/calcul-mental-en-ligne</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/fiches-revision-ia</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/cours-particulier-en-ligne</loc>
@@ -646,14 +646,14 @@
   </url>
   <url>
     <loc>https://galac6.io/primaire</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/blog/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://galac6.io/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://galac6.io/en/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://galac6.io/blog/"/>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/en/blog/</loc>
@@ -696,7 +696,7 @@
   </url>
   <url>
     <loc>https://galac6.io/blog/reviser-brevet-mois-par-mois</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/blog/bac-francais-commentaire-dissertation</loc>
@@ -704,7 +704,7 @@
   </url>
   <url>
     <loc>https://galac6.io/blog/ia-devoirs-sans-tricher</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/blog/corriger-dictees-professeurs</loc>
@@ -712,15 +712,31 @@
   </url>
   <url>
     <loc>https://galac6.io/blog/calcul-mental-primaire</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/blog/reviser-brevet-maths</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/blog/dictee-cm2-progresser-orthographe</loc>
     <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://galac6.io/blog/preparer-controle-maths-college</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://galac6.io/blog/tables-de-multiplication-en-ligne</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://galac6.io/blog/comment-faire-fiche-de-revision</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://galac6.io/blog/alternatives-eliott</loc>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/blog/galac6-dictee</loc>
@@ -728,11 +744,11 @@
   </url>
   <url>
     <loc>https://galac6.io/blog/galac6-calcul-mental</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/blog/calcul-mental-personnalise</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/blog/preparer-brevet-avec-ia</loc>
@@ -740,11 +756,11 @@
   </url>
   <url>
     <loc>https://galac6.io/blog/ia-devoirs-enfant-sans-reponses</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/blog/galac6-ou-eliott</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/blog/galac6-ou-kwyk</loc>
@@ -752,19 +768,19 @@
   </url>
   <url>
     <loc>https://galac6.io/blog/galac6-ou-chatgpt-devoirs</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/blog/galac6-ou-notebooklm-fiches</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/blog/alternatives-schoolmouv-kartable-ia</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/blog/galac6-professeur-maths</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/blog/galac6-professeur-francais</loc>
