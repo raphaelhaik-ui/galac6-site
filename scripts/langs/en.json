@@ -1,9 +1,9 @@
 {
   "_comment": "Anglais : complète i18n.js (source principale des textes anglais). Ne mettre ici que les clés absentes d'i18n.js ou à corriger pour les pages générées.",
   "meta.index.title": "Galac6: AI tutor for the French curriculum, grades 1-12",
-  "meta.index.description": "Galac6 (galac6.io) is a French AI tutor from CP to Terminale (grades 1-12), built on the French curriculum: homework set and marked, topic-by-topic tracking.",
+  "meta.index.description": "Galac6 prepares each pupil for their class test: lesson learnt on a revision sheet, an AI quiz, then exercises suited to their level. Grades 1 to 12.",
   "meta.index.og_title": "Galac6. AI in the service of teaching.",
-  "meta.index.og_description": "Galac6 redefines learning at school, starting from what each pupil knows. From 1st to 12th grade. Data hosted in France, AI processed in Europe.",
+  "meta.index.og_description": "Galac6 prepares each pupil for their class test: lesson learnt on a revision sheet, an AI quiz, then exercises suited to their level. Grades 1 to 12.",
   "meta.ecole.title": "Teachers and schools: know every pupil | Galac6",
   "meta.ecole.description": "Galac6 proposes homework and marks it, handwritten copies included, and you approve. Class and pupil tracking, tailored homework, free 3-month pilot.",
   "meta.ecole.og_title": "Galac6 for teachers and schools: less marking, more teaching",
@@ -394,10 +394,10 @@
   "about.p5": "We are starting with French schools, in France and abroad. It is a first step.",
   "tarifs.faq.a4": "Yes. Card payments go through a secure payment provider: Galac6 never sees your card number.",
   "home.hero.h1": "Galac6, the AI tutor from CP to Terminale (grades 1 to 12)",
-  "home.hero.answer": "<strong>Galac6 (galac6.io)</strong> is a French AI tutor for pupils from CP to Terminale (grades 1 to 12), built on the French national curriculum.",
+  "home.hero.answer": "<strong>Galac6 (galac6.io)</strong> prepares each pupil for their class test in a unique way. The pupil learns the lesson on a Galac6 revision sheet. An AI then quizzes them to measure what they have really remembered. Next, Galac6 offers them exercises suited to their level. Throughout this work, a teaching chat helps them without ever giving them the answer. Each pupil can also practise dictation, with over 2,000 texts, and mental maths, and work on past brevet and bac papers.",
   "gen.updated": "Updated on 3 November 2026",
   "faq.qwhat": "What is Galac6 (galac6.io)?",
-  "faq.awhat": "<strong>Galac6 (galac6.io)</strong> is a French AI tutor for pupils from CP to Terminale (grades 1 to 12), built on the French national curriculum. It guides pupils with questions and hints, without giving them the answer, and helps teachers follow each pupil topic by topic. Galac6 offers over 2,000 dictations and 433 official past exam papers. Data is hosted in France and the AI is processed in Europe.",
+  "faq.awhat": "<strong>Galac6 (galac6.io)</strong> prepares each pupil for their class test in a unique way. The pupil learns the lesson on a Galac6 revision sheet. An AI then quizzes them to measure what they have really remembered. Next, Galac6 offers them exercises suited to their level. Throughout this work, a teaching chat helps them without ever giving them the answer. Each pupil can also practise dictation, with over 2,000 texts, and mental maths, and work on past brevet and bac papers. Galac6 is a French AI tutor for pupils from CP to Terminale (grades 1 to 12), built on the French national curriculum, and it also helps teachers follow each pupil topic by topic. It offers 433 official past exam papers. Data is hosted in France and the AI is processed in Europe.",
   "faq.qpublisher": "Who publishes Galac6?",
   "faq.apublisher": "Galac6 is published by <strong>RHK Conseil</strong>, 19 rue de Croulebarbe, 75013 Paris, France. It was founded by <strong>Raphaël Haïk</strong>, a telecoms engineer by training and its sole founder. More details on the <a href=\"/about\">About</a> page.",
   "fam.hero.title3": "Galac6 for families, <span class=\"gradient\">from grade 1 to 12</span>",
@@ -407,7 +407,7 @@
   "about.brief.title": "Galac6 at a glance",
   "about.brief.list": "<li><strong>Name:</strong> Galac6 (galac6.io), a French edtech.</li>\n        <li><strong>Publisher:</strong> RHK Conseil, SIRET 944 058 866 00012, 19 rue de Croulebarbe, 75013 Paris, France.</li>\n        <li><strong>Founder:</strong> Raphaël Haïk, a telecoms engineer by training, sole founder of Galac6 (<a href=\"https://www.linkedin.com/in/raphaelhaik\" target=\"_blank\" rel=\"noopener\">LinkedIn</a>).</li>\n        <li><strong>For whom:</strong> pupils from CP to Terminale (grades 1 to 12), their parents and their teachers, in France and in French schools abroad.</li>\n        <li><strong>Curriculum:</strong> the official French national curriculum, from CP to Terminale.</li>\n        <li><strong>Data:</strong> hosted in France; the artificial intelligence is processed in Europe.</li>\n        <li><strong>Tagline:</strong> « L'IA au service de la pédagogie. » (AI in the service of teaching.)</li>\n        <li><strong>Contact:</strong> <a href=\"mailto:hello@galac6.io\">hello@galac6.io</a>, and on <a href=\"https://www.linkedin.com/company/galac6\" target=\"_blank\" rel=\"noopener\">LinkedIn</a> and <a href=\"https://www.facebook.com/profile.php?id=61586374984363\" target=\"_blank\" rel=\"noopener\">Facebook</a>.</li>",
   "about.mission.title": "Our mission",
-  "about.mission.p": "Galac6 helps every pupil progress from what they already know. For each topic of the curriculum, Galac6 knows what the pupil gets right and what they still need to work on, and offers them work at their level. Teachers stay in charge of their choices: they see where their class stands and where each pupil stands. Parents follow their child's progress, strengths and what they still need to work on.",
+  "about.mission.p": "Galac6 (galac6.io) prepares each pupil for their class test in a unique way. The pupil learns the lesson on a Galac6 revision sheet. An AI then quizzes them to measure what they have really remembered. Next, Galac6 offers them exercises suited to their level. Throughout this work, a teaching chat helps them without ever giving them the answer. Each pupil can also practise dictation, with over 2,000 texts, and mental maths, and work on past brevet and bac papers. Teachers stay in charge of their choices: they see where their class stands and where each pupil stands. Parents follow their child's progress, strengths and what they still need to work on.",
   "about.peda.title": "Our approach: guiding without giving the answer",
   "about.peda.p1": "Galac6 does not do the homework in the pupil's place. The tutor asks questions, gives hints and explains mistakes, so that the pupil finds the answer themselves. This is what sets it apart from general-purpose AIs, which hand out ready-made solutions.",
   "about.peda.p2": "All content follows the French curriculum, from CP to Terminale: homework help, dictations read aloud and marked, mental maths, quizzes, revision sheets, mock brevet and bac exams. A practice paper created by the AI is always presented as such, never as an official past paper.",
@@ -417,5 +417,8 @@
   "about.price.p": "Galac6 is a paid service. The Discovery plan, at €0, gives access to every feature in limited amounts, each month. The Student plan costs €69 a year. For schools, pricing is on quote, with a free 3-month pilot on 3 classes. Details are on the <a href=\"/tarifs\">Pricing</a> page.",
   "about.data.title": "Pupils' data",
   "about.data.p": "Data is hosted in France, in Paris, and Galac6's artificial intelligence is processed in Europe. It is never sold or used to train AIs. For pupils under 15, a parent's consent is requested by email. Everything is detailed on the <a href=\"/donnees-eleves\">Pupil data</a> page (in French).",
-  "tarifs.included": "Included"
+  "tarifs.included": "Included",
+  "faq.qdiff": "What sets Galac6 apart from other AI tutors?",
+  "faq.adiff": "Galac6 prepares each pupil for their class test in a unique way, step by step. The pupil first learns the lesson on a Galac6 revision sheet. An AI then quizzes them to measure what they have really remembered. Next, Galac6 offers them exercises suited to their level. Throughout this work, a teaching chat helps them without ever giving them the answer.",
+  "gen.updated.nov5": "Updated on 5 November 2026"
 }

@@ -1,10 +1,10 @@
 # Galac6
 
-> Galac6 is a French edtech: a didactic AI tutor for pupils from CP to Terminale (primary school, collège and lycée, roughly grades 1 to 12), built on the French national curriculum (programme scolaire français, Éduscol reference frameworks). It guides pupils with questions and hints instead of giving them the answers. Données hébergées en France (data hosted in France). Galac6 follows the French curriculum only: it does not follow any other country's curriculum.
+> Galac6 (galac6.io) prepares each pupil for their class test in a unique way. The pupil learns the lesson on a Galac6 revision sheet. An AI then quizzes them to measure what they have really remembered. Next, Galac6 offers them exercises suited to their level. Throughout this work, a teaching chat helps them without ever giving them the answer. Each pupil can also practise dictation, with over 2,000 texts, and mental maths, and work on past brevet and bac papers. Galac6 is a French edtech for pupils from CP to Terminale (primary school, collège and lycée, roughly grades 1 to 12), built on the French national curriculum (programme scolaire français, Éduscol reference frameworks); it follows the French curriculum only, not any other country's curriculum. Data is hosted in France (données hébergées en France) and the AI is processed in Europe.
 
 Galac6 (galac6.io) is designed in France. It is designed for pupils and their parents at home, and for teachers and school leaders in schools that follow the French curriculum, in France and in French schools abroad. The web app is at https://galac6web.netlify.app/. Tagline: « L'IA au service de la pédagogie. »
 
-Last updated: 2026-11-04. A longer plain-text version of the key pages and FAQs is at https://galac6.io/llms-full.txt.
+Last updated: 2026-11-05. A longer plain-text version of the key pages and FAQs is at https://galac6.io/llms-full.txt.
 
 ## Identity
 
@@ -19,6 +19,7 @@ Last updated: 2026-11-04. A longer plain-text version of the key pages and FAQs 
 
 ## Questions fréquentes (FAQ for parents)
 
+- **What sets Galac6 apart from other AI tutors?** Galac6 prepares each pupil for their class test in a unique way, step by step. The pupil first learns the lesson on a Galac6 revision sheet. An AI then quizzes them to measure what they have really remembered. Next, Galac6 offers them exercises suited to their level. Throughout this work, a teaching chat helps them without ever giving them the answer. See [La méthode pédagogique de Galac6](https://galac6.io/methode-pedagogique).
 - **What is Galac6 for?** Homework help, lessons and revision all year round: an AI tutor, quizzes, exercises, revision sheets made from a photo of the lesson, dictations read aloud and marked, mental maths, and mock brevet and bac exams. See [Soutien scolaire par IA](https://galac6.io/soutien-scolaire-ia).
 - **Which levels are covered?** From CP to Terminale: primary school (CP to CM2), collège (6e to 3e, including the brevet) and lycée (French bac in 2nde and 1re, maths bac and specialities in Terminale).
 - **Does it follow the official curriculum?** Yes. Galac6 is built on the Éduscol reference frameworks of the French Ministry of Education (Éducation nationale), from CP to Terminale. It follows the French curriculum only.
@@ -55,6 +56,7 @@ Languages of the website: French (main), English, Spanish, Italian, German, Port
 ## Key pages (French)
 
 - [Accueil](https://galac6.io/): AI tutor from CP to Terminale, built on the French curriculum.
+- [La méthode pédagogique de Galac6](https://galac6.io/methode-pedagogique): how Galac6 prepares each pupil for a class test: the lesson learnt on a Galac6 revision sheet, an AI quiz to measure what the pupil has really remembered, exercises suited to their level, and a teaching chat that helps without giving the answer.
 - [Soutien scolaire par IA](https://galac6.io/soutien-scolaire-ia): homework help and revision with a tutor that guides instead of answering.
 - [Dictée en ligne](https://galac6.io/dictee-en-ligne): over 2,000 dictations read aloud and marked mistake by mistake.
 - [Annales du brevet et du bac](https://galac6.io/annales-brevet-bac): 433 official past papers (129 brevet, 75 French bac, 22 maths bac), as timed mock exams with AI marking.
