@@ -30,6 +30,7 @@ Usage (depuis n'importe où) :
 Prérequis : Python 3.9+, BeautifulSoup 4 (pip3 install beautifulsoup4), Node.js (lecture d'i18n.js).
 """
 import datetime
+import hashlib
 import json
 import os
 import re
@@ -226,19 +227,25 @@ BANNER_CSS = """
     .g6-intl-banner a { position: relative; color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.5); }
     .g6-intl-banner a::after { content: ""; position: absolute; left: -8px; right: -8px; top: -14px; bottom: -14px; } /* zone de clic agrandie sans grossir le bandeau */
     .g6-intl-banner a:hover, .g6-intl-banner a:focus-visible { border-bottom-color: #fff; text-decoration: none; }
-    /* Décalages : la page, le menu collant et les ancres passent sous le bandeau (hauteur mesurée par le script, sinon estimée) */
-    html:has(#g6-intl-banner) { --g6-banner-h: 33px; scroll-padding-top: 0; }
-    html:has(#g6-intl-banner) body { padding-top: var(--g6-banner-h); }
-    html:has(#g6-intl-banner) .navbar-wrapper { top: var(--g6-banner-h); }
-    html:has(#g6-intl-banner) [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
-    html:has(#g6-intl-banner) .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
-    html:has(#g6-intl-banner) .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    @media (max-width: 1240px) { html:has(#g6-intl-banner) { --g6-banner-h: 51px; } }
+    /* Décalages : la page, le menu collant et les ancres passent sous le bandeau. La classe g6-banner est posée sur la balise html
+       par le script de build (pas de :has(), inconnu de Safari < 15.4 et Firefox < 121). Hauteur mesurée par le petit script ;
+       sans JavaScript, hauteurs de secours par largeur, arrondies vers le haut (mieux vaut un peu d'espace qu'un recouvrement). */
+    html.g6-banner { --g6-banner-h: 32px; scroll-padding-top: 0; }
+    html.g6-banner body { padding-top: var(--g6-banner-h); }
+    html.g6-banner .navbar-wrapper { top: var(--g6-banner-h); }
+    html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
+    html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
+    html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
+    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
+       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
+    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
     @media (max-width: 600px) {
-      .g6-intl-banner { font-size: 13px; line-height: 1.32; padding: 5px 12px; }
+      .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
-      html:has(#g6-intl-banner) { --g6-banner-h: 61px; }
+      html.g6-banner { --g6-banner-h: 43px; }
     }
+    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
 """
 
 # Corrections de mise en page pour l'hébreu (écrit de droite à gauche)
@@ -551,11 +558,34 @@ def source_pages():
     return files
 
 
+def html_banner_class(s, on):
+    """Pose (ou retire) la classe g6-banner sur la balise <html> : elle déclenche le décalage de la page sous le bandeau."""
+    m = re.search(r'<html\b[^>]*>', s)
+    if not m:
+        return s
+    tag = m.group(0)
+    cm = re.search(r'\sclass="([^"]*)"', tag)
+    classes = cm.group(1).split() if cm else []
+    if on and 'g6-banner' not in classes:
+        classes.append('g6-banner')
+    elif not on and 'g6-banner' in classes:
+        classes.remove('g6-banner')
+    else:
+        return s
+    if cm:
+        new = tag.replace(cm.group(0), (' class="%s"' % ' '.join(classes)) if classes else '', 1)
+    else:
+        new = tag[:-1] + ' class="%s">' % ' '.join(classes)
+    return s[:m.start()] + new + s[m.end():]
+
+
 def update_banner(s):
     """Retire l'ancien bandeau anglais caché (en-banner) et place le HTML du bandeau anglais juste au-dessus du pied de page (affiché en haut par CSS)."""
     # Pages marquées « no-intl-banner » (article PISA) : pas de bandeau « France only »
     if '<!-- no-intl-banner -->' in s:
+        s = html_banner_class(s, False)
         return re.sub(r'\n?[ \t]*<!-- intl-banner -->.*?<!-- /intl-banner -->', '', s, flags=re.S)
+    s = html_banner_class(s, True)
     s = re.sub(r'\n[ \t]*<!-- ═══ EN BANNER[^>]*-->[ \t]*', '', s)
     s = re.sub(r'\n[ \t]*<div [^>]*id="en-banner"[^>]*>.*?</div>[ \t]*(?=\n)', '', s, flags=re.S)
     # Ancien emplacement (en haut, dans le menu collant) ou emplacement actuel : on retire, puis on replace avant le pied de page
@@ -837,6 +867,10 @@ def build_page(group, lang, D, countries, errors):
             tag.decompose()
         for tag in soup.find_all('script', id='g6-banner-js'):  # son script de mesure ne sert plus
             tag.decompose()
+        if 'g6-banner' in (soup.html.get('class') or []):  # plus de décalage sous un bandeau absent
+            soup.html['class'] = [c for c in soup.html['class'] if c != 'g6-banner']
+            if not soup.html['class']:
+                del soup.html['class']
         notice = BeautifulSoup('<div class="lang-notice" role="note">%s</div>' % need('gen.notice'), 'html.parser').div
         anchor = soup.find('div', class_='navbar-wrapper')
         if anchor is not None:
@@ -1051,19 +1085,67 @@ def update_redirects():
     write('_redirects', s.rstrip('\n') + '\n')
 
 
+# Empreintes du contenu des pages (07/11/2026) : la date lastmod du plan du site n'avance que si le texte
+# réel de la page change, pas pour un changement de bandeau, de menu, de pied de page ou de styles.
+LASTMOD_FILE = os.path.join(ROOT, 'scripts', 'lastmod.json')
+_lastmod = None
+
+
+def content_fingerprint(html):
+    """Empreinte du contenu réel d'une page : titre, description, texte et images du corps,
+    hors bandeaux, menu, pied de page, scripts et styles."""
+    soup = BeautifulSoup(html, 'html.parser')
+    head = soup.head
+    parts = []
+    if head is not None:
+        if head.title is not None:
+            parts.append(norm(head.title.get_text()))
+        d = head.find('meta', attrs={'name': 'description'})
+        if d is not None:
+            parts.append(norm(d.get('content')))
+    body = soup.body or soup
+    for tag in body.find_all(['script', 'style', 'noscript', 'template', 'footer', 'nav']):
+        tag.decompose()
+    for sel in ('#g6-intl-banner', '.navbar-wrapper', '.footer-wrapper', '.lang-notice', '#cookie-banner', '.cookie-banner'):
+        for tag in body.select(sel):
+            tag.decompose()
+    for c in body.find_all(string=lambda t: isinstance(t, Comment)):
+        c.extract()
+    parts.append(norm(body.get_text(' ')))
+    parts += ['%s|%s' % (i.get('src', ''), norm(i.get('alt'))) for i in body.find_all('img')]
+    return hashlib.sha256('\n'.join(parts).encode('utf-8')).hexdigest()[:16]
+
+
+def load_lastmod():
+    global _lastmod
+    if _lastmod is None:
+        try:
+            _lastmod = json.load(open(LASTMOD_FILE, encoding='utf-8'))
+        except Exception:
+            _lastmod = {}
+    return _lastmod
+
+
+def save_lastmod():
+    if _lastmod is not None:
+        with open(LASTMOD_FILE, 'w', encoding='utf-8') as f:
+            json.dump(dict(sorted(_lastmod.items())), f, ensure_ascii=False, indent=1)
+            f.write('\n')
+
+
 def file_date(rel):
-    """Date réelle de dernière modification d'un fichier : aujourd'hui s'il a changé depuis le dernier commit,
-    sinon la date de son dernier commit (git)."""
+    """Date de dernière modification du CONTENU d'une page : gardée tant que l'empreinte du texte ne change pas
+    (scripts/lastmod.json), sinon aujourd'hui."""
+    store = load_lastmod()
     try:
-        dirty = subprocess.run(['git', '-C', ROOT, 'status', '--porcelain', '--', rel],
-                               capture_output=True, text=True).stdout.strip()
-        if dirty:
-            return TODAY
-        d = subprocess.run(['git', '-C', ROOT, 'log', '-1', '--format=%cs', '--', rel],
-                           capture_output=True, text=True).stdout.strip()
-        return d or TODAY
+        fp = content_fingerprint(read(rel))
     except Exception:
-        return TODAY
+        return store.get(rel, {}).get('lastmod', TODAY)
+    old = store.get(rel)
+    if old and old.get('hash') == fp:
+        return old['lastmod']
+    store[rel] = {'hash': fp, 'lastmod': TODAY}
+    return TODAY
 
 
 def update_sitemap():
@@ -1097,6 +1179,7 @@ def update_sitemap():
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
            + ''.join(new) + ''.join(kept) + '</urlset>\n')
     write('sitemap.xml', out)
+    save_lastmod()
 
 
 # ─────────────────────────── 4. contrôles ───────────────────────────

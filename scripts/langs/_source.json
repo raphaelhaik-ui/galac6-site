@@ -1922,13 +1922,6 @@
    "index"
   ]
  },
- "hero.subtitle": {
-  "fr": "Galac6, l'IA qui t'apprend à apprendre — quiz, dictées, fiches et corrections, faits pour les programmes scolaires français, du CP à la Terminale.",
-  "en": "Galac6, the AI that teaches you how to learn — quizzes, dictations, revision sheets and corrections, designed for the French school curriculum, from 1st grade to 12th grade.",
-  "pages": [
-   "index"
-  ]
- },
  "hero.tagline": {
   "fr": "Galac6. L'IA au service de la pédagogie",
   "en": "Galac6. AI in the service of teaching",
@@ -2032,7 +2025,7 @@
  },
  "meta.index.og_description": {
   "fr": null,
-  "en": "Quizzes, dictations, revision sheets, mock brevet and bac exams. The AI that teaches pupils how to learn, on the French national curriculum, from 1st to 12th grade.",
+  "en": "Galac6 prepares each pupil for their class test: lesson learnt on a revision sheet, an AI quiz, then exercises suited to their level. Grades 1 to 12.",
   "pages": [
    "index"
   ]

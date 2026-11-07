@@ -574,19 +574,25 @@
     .g6-intl-banner a { position: relative; color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.5); }
     .g6-intl-banner a::after { content: ""; position: absolute; left: -8px; right: -8px; top: -14px; bottom: -14px; } /* zone de clic agrandie sans grossir le bandeau */
     .g6-intl-banner a:hover, .g6-intl-banner a:focus-visible { border-bottom-color: #fff; text-decoration: none; }
-    /* Décalages : la page, le menu collant et les ancres passent sous le bandeau (hauteur mesurée par le script, sinon estimée) */
-    html:has(#g6-intl-banner) { --g6-banner-h: 33px; scroll-padding-top: 0; }
-    html:has(#g6-intl-banner) body { padding-top: var(--g6-banner-h); }
-    html:has(#g6-intl-banner) .navbar-wrapper { top: var(--g6-banner-h); }
-    html:has(#g6-intl-banner) [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
-    html:has(#g6-intl-banner) .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
-    html:has(#g6-intl-banner) .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    @media (max-width: 1240px) { html:has(#g6-intl-banner) { --g6-banner-h: 51px; } }
+    /* Décalages : la page, le menu collant et les ancres passent sous le bandeau. La classe g6-banner est posée sur la balise html
+       par le script de build (pas de :has(), inconnu de Safari < 15.4 et Firefox < 121). Hauteur mesurée par le petit script ;
+       sans JavaScript, hauteurs de secours par largeur, arrondies vers le haut (mieux vaut un peu d'espace qu'un recouvrement). */
+    html.g6-banner { --g6-banner-h: 32px; scroll-padding-top: 0; }
+    html.g6-banner body { padding-top: var(--g6-banner-h); }
+    html.g6-banner .navbar-wrapper { top: var(--g6-banner-h); }
+    html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
+    html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
+    html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
+    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
+       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
+    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
     @media (max-width: 600px) {
-      .g6-intl-banner { font-size: 13px; line-height: 1.32; padding: 5px 12px; }
+      .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
-      html:has(#g6-intl-banner) { --g6-banner-h: 61px; }
+      html.g6-banner { --g6-banner-h: 43px; }
     }
+    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 <script>window.G6_DYN = {"error": "Se ha producido un error, inténtelo de nuevo.", "send": "Enviar →", "sending": "Enviando..."};</script>
 <script>window.G6_COOKIE_TXT = {"texte": "Nos gustaría medir las visitas a este sitio (Google Analytics) y los resultados de nuestros anuncios (Google Ads, Meta). Estos servicios instalan cookies y solo se cargan si usted da su consentimiento. Puede cambiar de opinión en cualquier momento con el enlace «Gestionar las cookies» al pie de cada página.", "plus": "Más información", "refuser": "Rechazar todo", "perso": "Personalizar", "accepter": "Aceptar todo", "titrePerso": "Elija sus cookies", "audienceTitre": "Medición de audiencia", "audienceTexte": "Google Analytics: cuenta las visitas y las páginas vistas, para mejorar el sitio.", "pubTitre": "Publicidad", "pubTexte": "Google Ads y Meta (Facebook, Instagram): miden los resultados de nuestros anuncios.", "enregistrer": "Guardar mis opciones", "necessaires": "El sitio también guarda su idioma y esta elección en su dispositivo (imprescindible, sin necesidad de consentimiento).", "lien": "/mentions-legales#cookies-en"};</script>
