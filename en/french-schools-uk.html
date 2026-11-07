@@ -460,14 +460,26 @@
 <!-- Meta Pixel (Facebook) - charge apres consentement -->
 <script src="/meta-pixel.js" defer></script>
 <style id="g6-banner-css">
-    /* Bandeau anglais « Galac6 follows the French national curriculum » : toutes les pages, juste au-dessus du pied de page, non collant (généré par scripts/build-langs.py) */
-    .g6-intl-banner { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 8px 16px; background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; font-size: 0.85rem; font-weight: 500; line-height: 1.45; text-align: center; direction: ltr; }
+    /* Bandeau anglais « Galac6 follows the French national curriculum » : HTML juste au-dessus du pied de page (règle SEO), affiché en haut de l'écran et toujours visible (généré par scripts/build-langs.py) */
+    .g6-intl-banner { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 6px 16px; background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; font-size: 0.82rem; font-weight: 500; line-height: 1.4; text-align: center; direction: ltr; position: fixed; top: 0; left: 0; right: 0; z-index: 200; box-shadow: 0 1px 0 rgba(255,255,255,0.12); }
     .g6-intl-banner svg { flex: none; opacity: 0.9; }
     .g6-intl-banner span { min-width: 0; overflow-wrap: anywhere; }
-    .g6-intl-banner a { color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.5); }
+    .g6-intl-banner a { position: relative; color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.5); }
+    .g6-intl-banner a::after { content: ""; position: absolute; left: -8px; right: -8px; top: -14px; bottom: -14px; } /* zone de clic agrandie sans grossir le bandeau */
     .g6-intl-banner a:hover, .g6-intl-banner a:focus-visible { border-bottom-color: #fff; text-decoration: none; }
-    .g6-intl-banner { position: static; }
-    @media (max-width: 480px) { .g6-intl-banner { font-size: 0.8rem; padding: 7px 12px; } }
+    /* Décalages : la page, le menu collant et les ancres passent sous le bandeau (hauteur mesurée par le script, sinon estimée) */
+    html:has(#g6-intl-banner) { --g6-banner-h: 33px; scroll-padding-top: 0; }
+    html:has(#g6-intl-banner) body { padding-top: var(--g6-banner-h); }
+    html:has(#g6-intl-banner) .navbar-wrapper { top: var(--g6-banner-h); }
+    html:has(#g6-intl-banner) [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
+    html:has(#g6-intl-banner) .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
+    html:has(#g6-intl-banner) .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
+    @media (max-width: 1240px) { html:has(#g6-intl-banner) { --g6-banner-h: 51px; } }
+    @media (max-width: 600px) {
+      .g6-intl-banner { font-size: 13px; line-height: 1.32; padding: 5px 12px; }
+      .g6-intl-banner svg { display: none; }
+      html:has(#g6-intl-banner) { --g6-banner-h: 61px; }
+    }
   </style>
 <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -852,7 +864,7 @@
 </section>
 </main>
 <!-- ═══ FOOTER ═══ -->
-<!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-banner" lang="en" dir="ltr" role="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Galac6 follows the French national curriculum, for French schools and families in France and abroad. Want Galac6 for your country&rsquo;s curriculum? <a href="/international">Send a request&nbsp;&rarr;</a></span></div><!-- /intl-banner -->
+<!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-banner" lang="en" dir="ltr" role="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Galac6 follows the French national curriculum, for French schools and families in France and abroad. Want Galac6 for your country&rsquo;s curriculum? <a href="/international">Send a request&nbsp;&rarr;</a></span></div><script id="g6-banner-js">(function(){var b=document.getElementById('g6-intl-banner');if(!b)return;var r=document.documentElement;function h(){r.style.setProperty('--g6-banner-h',b.offsetHeight+'px');}h();if(window.ResizeObserver)new ResizeObserver(h).observe(b);else window.addEventListener('resize',h);})();</script><!-- /intl-banner -->
 <footer>
 <div>Galac6. AI in the service of teaching</div>
 <div class="footer-badges">
