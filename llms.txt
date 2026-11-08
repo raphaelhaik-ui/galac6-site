@@ -46,7 +46,8 @@ Prices for France, in euros, all taxes included (always check [Tarifs](https://g
 - Discovery plan (Découverte): every feature in limited amounts, refilled each month, no bank card.
 - Student plan (Élève, one child): €69 a year or €7.99 a month.
 - Family plan (Famille, up to 4 children): €99 a year or €11.99 a month.
-- Exam Pack (brevet, bac, Concours général): €19 per pupil, €14 with a yearly plan.
+- The Student and Family plans include all official brevet and bac past papers, in full and in exam conditions (whole paper, timer).
+- Exam Pack (one-off purchase, valid 12 months): second marking of papers, spoken mock orals (brevet oral, French bac oral) with their review, Concours général. €19 per pupil, €14 with a yearly plan.
 - Schools: pricing on quote, with a free 3-month pilot on 3 classes.
 - Pupil testers (CP to Terminale): 3 months offered with the code ELEVE3M; nothing is charged afterwards, the pupil keeps Discovery access.
 - Teacher testers: 3 months offered in exchange for feedback.

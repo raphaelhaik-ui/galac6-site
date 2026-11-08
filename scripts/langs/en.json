@@ -13,7 +13,7 @@
   "meta.about.og_title": "About Galac6: our vision of school",
   "meta.about.og_description": "Galac6 redefines learning at school, starting from what each pupil knows. A French edtech.",
   "meta.tarifs.title": "Galac6 pricing: Student, Family and schools",
-  "meta.tarifs.description": "Discovery plan to try it, Student plan at €69 a year, Family plan for up to 4 children at €99 a year, Exam Pack at €19. Schools: pricing on quote.",
+  "meta.tarifs.description": "Discovery plan to try it, Student plan at €69 a year, Family plan for up to 4 children at €99 a year, brevet and bac past papers included, Exam Pack at €19. Schools: pricing on quote.",
   "meta.tarifs.og_title": "Galac6 — Simple, clear pricing",
   "meta.tarifs.og_description": "The Discovery plan to try it, Student at €69 a year, Family at €99 a year for up to 4 children. For schools, pricing on quote.",
   "gen.notice": "Galac6 follows the French national curriculum today. The app is in French, and its interface is also available in English. Would you like Galac6 adapted to your country? <a href=\"/international\">Vote for your country</a>: we will adapt it to the countries that ask for it most.",
@@ -336,7 +336,7 @@
   "annales.faq.q4": "Which subjects for the brevet?",
   "annales.faq.a4": "The four written exams: maths, French, science and history-geography-civics. Pupils can sit the whole exam or just one part.",
   "annales.faq.q5": "How much does it cost?",
-  "annales.faq.a5": "The Discovery plan includes one brevet or bac style paper each month to try it. The Exam Pack (€19, or €14 with an annual subscription) adds full mock exams. The Student and Family plans open all of Galac6 without limits.",
+  "annales.faq.a5": "The Discovery plan includes one brevet or bac style paper each month to try it. The Student and Family plans open all of Galac6 without limits, including all official past papers in full and in exam conditions. The Exam Pack (€19, or €14 with an annual subscription) adds second marking of papers, spoken mock orals and the Concours général.",
   "annales.final.title": "Ready for a first mock exam?",
   "annales.final.sub": "Create an account and sit an official paper today.",
   "meta.familles.title": "Galac6 for families: AI tutor from grade 1 to 12",
@@ -419,5 +419,6 @@
   "tarifs.included": "Included",
   "faq.qdiff": "What sets Galac6 apart from other AI tutors?",
   "faq.adiff": "Galac6 prepares each pupil for their class test in a unique way, step by step. The pupil first learns the lesson on a Galac6 revision sheet. An AI then quizzes them to measure what they have really remembered. Next, Galac6 offers them exercises suited to their level. Throughout this work, a teaching chat helps them without ever giving them the answer.",
-  "gen.updated.nov5": "Updated on 5 November 2026"
+  "gen.updated.nov5": "Updated on 5 November 2026",
+  "gen.updated.nov8": "Updated on 8 November 2026"
 }

@@ -1,4 +1,18 @@
 {
+ "about.brief.list": {
+  "fr": "<li><strong>Nom :</strong> Galac6 (galac6.io), une edtech française.</li> <li><strong>Éditeur :</strong> RHK Conseil, SIRET 944 058 866 00012, 19 rue de Croulebarbe, 75013 Paris.</li> <li><strong>Fondateur :</strong> Raphaël Haïk, ingénieur télécom de formation, seul fondateur de Galac6 (<a href=\"https://www.linkedin.com/in/raphaelhaik\" rel=\"noopener\" target=\"_blank\">LinkedIn</a>).</li> <li><strong>Pour qui :</strong> les élèves du CP à la Terminale, leurs parents et leurs professeurs, en France et dans les écoles françaises à l'étranger.</li> <li><strong>Programme :</strong> le programme officiel de l'Éducation nationale, du CP à la Terminale.</li> <li><strong>Données :</strong> hébergées en France ; l'intelligence artificielle est traitée en Europe.</li> <li><strong>Slogan :</strong> « L'IA au service de la pédagogie. »</li> <li><strong>Contact :</strong> <a href=\"mailto:hello@galac6.io\">hello@galac6.io</a>, et sur <a href=\"https://www.linkedin.com/company/galac6\" rel=\"noopener\" target=\"_blank\">LinkedIn</a> et <a href=\"https://www.facebook.com/profile.php?id=61586374984363\" rel=\"noopener\" target=\"_blank\">Facebook</a>.</li>",
+  "en": "<li><strong>Name:</strong> Galac6 (galac6.io), a French edtech.</li>\n        <li><strong>Publisher:</strong> RHK Conseil, SIRET 944 058 866 00012, 19 rue de Croulebarbe, 75013 Paris, France.</li>\n        <li><strong>Founder:</strong> Raphaël Haïk, a telecoms engineer by training, sole founder of Galac6 (<a href=\"https://www.linkedin.com/in/raphaelhaik\" target=\"_blank\" rel=\"noopener\">LinkedIn</a>).</li>\n        <li><strong>For whom:</strong> pupils from CP to Terminale (grades 1 to 12), their parents and their teachers, in France and in French schools abroad.</li>\n        <li><strong>Curriculum:</strong> the official French national curriculum, from CP to Terminale.</li>\n        <li><strong>Data:</strong> hosted in France; the artificial intelligence is processed in Europe.</li>\n        <li><strong>Tagline:</strong> « L'IA au service de la pédagogie. » (AI in the service of teaching.)</li>\n        <li><strong>Contact:</strong> <a href=\"mailto:hello@galac6.io\">hello@galac6.io</a>, and on <a href=\"https://www.linkedin.com/company/galac6\" target=\"_blank\" rel=\"noopener\">LinkedIn</a> and <a href=\"https://www.facebook.com/profile.php?id=61586374984363\" target=\"_blank\" rel=\"noopener\">Facebook</a>.</li>",
+  "pages": [
+   "about"
+  ]
+ },
+ "about.brief.title": {
+  "fr": "Galac6 en bref",
+  "en": "Galac6 at a glance",
+  "pages": [
+   "about"
+  ]
+ },
  "about.contact.email": {
   "fr": "Votre email",
   "en": "Your email",
@@ -48,16 +62,58 @@
    "about"
   ]
  },
+ "about.data.p": {
+  "fr": "Les données sont hébergées en France, à Paris, et l'intelligence artificielle de Galac6 est traitée en Europe. Elles ne sont jamais revendues ni utilisées pour entraîner des IA. Pour les élèves de moins de 15 ans, l'accord d'un parent est demandé par email. Tout est détaillé sur la page <a href=\"/donnees-eleves\">Données des élèves</a>.",
+  "en": "Data is hosted in France, in Paris, and Galac6's artificial intelligence is processed in Europe. It is never sold or used to train AIs. For pupils under 15, a parent's consent is requested by email. Everything is detailed on the <a href=\"/donnees-eleves\">Pupil data</a> page (in French).",
+  "pages": [
+   "about"
+  ]
+ },
+ "about.data.title": {
+  "fr": "Données des élèves",
+  "en": "Pupils' data",
+  "pages": [
+   "about"
+  ]
+ },
+ "about.facts.list": {
+  "fr": "<li><strong>Plus de 2 000 dictées</strong> lues à voix haute et corrigées faute par faute, du CP au lycée.</li> <li><strong>Plus de 400 sujets d'annales officielles</strong> (433 à ce jour), dont 129 sujets de brevet et 75 de bac de français.</li> <li><strong>Douze niveaux</strong>, du CP à la Terminale.</li>",
+  "en": "<li><strong>Over 2,000 dictations</strong> read aloud and marked mistake by mistake, from CP to lycée.</li>\n        <li><strong>Over 400 official past exam papers</strong> (433 to date), including 129 brevet papers and 75 French bac papers.</li>\n        <li><strong>Twelve school years</strong>, from CP to Terminale.</li>",
+  "pages": [
+   "about"
+  ]
+ },
+ "about.facts.title": {
+  "fr": "Galac6 en chiffres",
+  "en": "Galac6 in figures",
+  "pages": [
+   "about"
+  ]
+ },
  "about.footer.desc": {
-  "fr": "Galac6. L'IA au service de la pédagogie",
+  "fr": "Galac6. L'IA au service de la pédagogie.",
   "en": "Galac6. AI in the service of teaching",
   "pages": [
    "about"
   ]
  },
  "about.footer.france": {
-  "fr": "🇫🇷 Made in France",
+  "fr": "Conçu en France",
   "en": "🇫🇷 Made in France",
+  "pages": [
+   "about"
+  ]
+ },
+ "about.mission.p": {
+  "fr": "Galac6 (galac6.io) prépare chaque élève à son contrôle d'une façon unique. L'élève apprend sa leçon sur une fiche de révision Galac6. Une IA l'interroge ensuite pour mesurer ce qu'il a vraiment retenu. Puis Galac6 lui propose des exercices adaptés à son niveau. Pendant tout ce travail, un chat pédagogique l'aide sans jamais lui donner la réponse. Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac. Le professeur garde la main sur ses choix : il voit où en est sa classe et où en est chaque élève. Les parents suivent la progression de leur enfant, ses forces et ce qu'il lui reste à travailler.",
+  "en": "Galac6 (galac6.io) prepares each pupil for their class test in a unique way. The pupil learns the lesson on a Galac6 revision sheet. An AI then quizzes them to measure what they have really remembered. Next, Galac6 offers them exercises suited to their level. Throughout this work, a teaching chat helps them without ever giving them the answer. Each pupil can also practise dictation, with over 2,000 texts, and mental maths, and work on past brevet and bac papers. Teachers stay in charge of their choices: they see where their class stands and where each pupil stands. Parents follow their child's progress, strengths and what they still need to work on.",
+  "pages": [
+   "about"
+  ]
+ },
+ "about.mission.title": {
+  "fr": "Notre mission",
+  "en": "Our mission",
   "pages": [
    "about"
   ]
@@ -90,6 +146,41 @@
    "about"
   ]
  },
+ "about.p4": {
+  "fr": "Aujourd'hui, Galac6 va plus loin : il redéfinit l'apprentissage à l'école, à partir de ce que sait chaque élève. Chaque exercice montre ce que l'élève réussit et ce qu'il doit encore travailler, notion par notion. Le professeur gagne du temps, connaît chacun de ses élèves et lui propose un travail à son niveau. L'élève cherche lui-même la réponse, et ses parents comprennent comment l'aider.",
+  "en": "Today, Galac6 goes further: it redefines learning at school, starting from what each pupil knows. Every exercise shows what the pupil gets right and what they still need to work on, topic by topic. Teachers save time, know each of their pupils and offer them work at their level. Pupils look for the answer themselves, and their parents understand how to help.",
+  "pages": [
+   "about"
+  ]
+ },
+ "about.p5": {
+  "fr": "Nous commençons par l'école française, en France et à l'étranger. C'est une première étape.",
+  "en": "We are starting with French schools, in France and abroad. It is a first step.",
+  "pages": [
+   "about"
+  ]
+ },
+ "about.peda.p1": {
+  "fr": "Galac6 ne fait pas les devoirs à la place de l'élève. Le tuteur pose des questions, donne des indices et explique les erreurs, pour que l'élève trouve la réponse lui-même. C'est ce qui le distingue des IA généralistes, qui donnent la solution toute faite.",
+  "en": "Galac6 does not do the homework in the pupil's place. The tutor asks questions, gives hints and explains mistakes, so that the pupil finds the answer themselves. This is what sets it apart from general-purpose AIs, which hand out ready-made solutions.",
+  "pages": [
+   "about"
+  ]
+ },
+ "about.peda.p2": {
+  "fr": "Tous les contenus suivent le programme français, du CP à la Terminale : aide aux devoirs, dictées lues et corrigées, calcul mental, quiz, fiches de révision, brevet et bac blancs. Un sujet d'entraînement créé par l'IA est toujours présenté comme tel, jamais comme une annale officielle.",
+  "en": "All content follows the French curriculum, from CP to Terminale: homework help, dictations read aloud and marked, mental maths, quizzes, revision sheets, mock brevet and bac exams. A practice paper created by the AI is always presented as such, never as an official past paper.",
+  "pages": [
+   "about"
+  ]
+ },
+ "about.peda.title": {
+  "fr": "Notre pédagogie : guider sans donner la réponse",
+  "en": "Our approach: guiding without giving the answer",
+  "pages": [
+   "about"
+  ]
+ },
  "about.ph.email": {
   "fr": "vous@exemple.fr",
   "en": "you@example.com",
@@ -118,9 +209,30 @@
    "about"
   ]
  },
+ "about.price.p": {
+  "fr": "Galac6 est un service payant. L'offre Découverte, à 0 €, donne accès à toutes les fonctionnalités en quantité limitée, chaque mois. L'offre Élève coûte 69 € par an. Pour les écoles, le prix est établi sur devis, avec un pilote gratuit de 3 mois sur 3 classes. Le détail est sur la page <a href=\"/tarifs\">Tarifs</a>.",
+  "en": "Galac6 is a paid service. The Discovery plan, at €0, gives access to every feature in limited amounts, each month. The Student plan costs €69 a year. For schools, pricing is on quote, with a free 3-month pilot on 3 classes. Details are on the <a href=\"/tarifs\">Pricing</a> page.",
+  "pages": [
+   "about"
+  ]
+ },
+ "about.price.title": {
+  "fr": "Combien coûte Galac6 ?",
+  "en": "How much does Galac6 cost?",
+  "pages": [
+   "about"
+  ]
+ },
  "about.signature": {
   "fr": "Raphael Haik, Paris, France",
   "en": "Raphael Haik, Paris, France",
+  "pages": [
+   "about"
+  ]
+ },
+ "about.signature2": {
+  "fr": "Raphaël Haïk, fondateur de Galac6, Paris",
+  "en": "Raphaël Haïk, founder of Galac6, Paris",
   "pages": [
    "about"
   ]
@@ -132,23 +244,16 @@
    "about"
   ]
  },
- "cta.button": {
-  "fr": "Créer un compte →",
-  "en": "Create an account →",
+ "about.title2": {
+  "fr": "À propos de Galac6 (galac6.io)",
+  "en": "About Galac6 (galac6.io)",
   "pages": [
-   "index"
+   "about"
   ]
  },
  "cta.note": {
   "fr": "Pour essayer : formule Découverte, en quantité limitée chaque mois.",
   "en": "To try it out: the Discovery plan, in limited amounts each month.",
-  "pages": [
-   "index"
-  ]
- },
- "cta.title": {
-  "fr": "Prêt à progresser ?",
-  "en": "Ready to make progress?",
   "pages": [
    "index"
   ]
@@ -225,7 +330,7 @@
  },
  "dyn.ecole.title": {
   "fr": "Galac6 pour les écoles : un gain de temps immense pour vos professeurs, un suivi sur mesure de chaque élève",
-  "en": "Galac6 for schools: huge time savings for your teachers, tailored follow-up of every pupil",
+  "en": "Teachers and schools: save time, know every pupil | Galac6",
   "pages": [
    "ecole"
   ]
@@ -347,6 +452,13 @@
   "en": "Sending…",
   "pages": [
    "vote"
+  ]
+ },
+ "ecole.annales.link": {
+  "fr": "Les annales du brevet et du bac disponibles",
+  "en": "The brevet and bac past papers available",
+  "pages": [
+   "ecole"
   ]
  },
  "ecole.aria.quick": {
@@ -478,6 +590,13 @@
  "ecole.devis.type.pilote": {
   "fr": "Devenir école pilote",
   "en": "Become a pilot school",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "ecole.dictee.link": {
+  "fr": "La dictée en ligne, lue et corrigée par Galac6",
+  "en": "Online French dictation, read aloud and marked by Galac6",
   "pages": [
    "ecole"
   ]
@@ -735,7 +854,7 @@
   ]
  },
  "ecole.footer.desc": {
-  "fr": "Galac6. L'IA au service de la pédagogie",
+  "fr": "Galac6. L'IA au service de la pédagogie.",
   "en": "Galac6. AI in the service of teaching",
   "pages": [
    "ecole"
@@ -743,7 +862,7 @@
  },
  "ecole.footer.france": {
   "fr": "🇫🇷 Made in France",
-  "en": "🇫🇷 Made in France",
+  "en": "Made in France",
   "pages": [
    "ecole"
   ]
@@ -1056,6 +1175,13 @@
    "ecole"
   ]
  },
+ "ecole.prom.p4.desc2": {
+  "fr": "Vos élèves font vos devoirs sur Galac6 et réfléchissent par eux-mêmes : l'IA les questionne et ne leur donne jamais la réponse.",
+  "en": "Your pupils do your homework on Galac6 and think for themselves: the AI asks them questions and never gives them the answer.",
+  "pages": [
+   "ecole"
+  ]
+ },
  "ecole.prom.p4.title": {
   "fr": "Une IA anti-IA classique",
   "en": "The opposite of ordinary AI",
@@ -1066,6 +1192,13 @@
  "ecole.prom.p5.desc": {
   "fr": "Les familles suivent le travail et les devoirs de leur enfant.",
   "en": "Families follow their child's work and homework.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "ecole.prom.p5.desc2": {
+  "fr": "Les parents suivent la progression de leur enfant, ses forces et ce qu'il lui reste à travailler.",
+  "en": "Parents follow their child's progress, strengths and what they still need to work on.",
   "pages": [
    "ecole"
   ]
@@ -1329,6 +1462,1000 @@
    "ecole"
   ]
  },
+ "fam.cta.button": {
+  "fr": "Créer un compte →",
+  "en": "Create an account →",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.cta.note": {
+  "fr": "Pour essayer : formule Découverte, en quantité limitée chaque mois.",
+  "en": "To try it out: the Discovery plan, in limited amounts each month.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.cta.pricing": {
+  "fr": "Voir les tarifs",
+  "en": "See pricing",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.cta.text": {
+  "fr": "Créez son compte en quelques minutes, du CP à la Terminale.",
+  "en": "Create their account in a few minutes, from 1st to 12th grade.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.cta.title": {
+  "fr": "Prêt à faire progresser votre enfant ?",
+  "en": "Ready to help your child make progress?",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.annales.d": {
+  "fr": "De vrais sujets tombés au bac, jamais mélangés avec les sujets d'entraînement.",
+  "en": "Real bac papers, never mixed with practice papers.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.annales.t": {
+  "fr": "Annales du bac",
+  "en": "Past bac papers",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.bacfr.d": {
+  "fr": "Des bacs blancs sur des sujets officiels, écrit et oral, notés sur 20.",
+  "en": "Mock bac exams on official papers, written and oral, marked out of 20.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.bacfr.t": {
+  "fr": "Bac de français",
+  "en": "French bac",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.bacmaths.d": {
+  "fr": "Des épreuves blanches sur des sujets officiels, notées sur 20.",
+  "en": "Mock exams on official papers, marked out of 20.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.bacmaths.t": {
+  "fr": "Bac de maths",
+  "en": "Maths bac",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.brevet.d": {
+  "fr": "« Plus de 400 sujets officiels et des examens blancs corrigés. »",
+  "en": "\"Over 400 official papers and marked mock exams.\"",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.brevet.t": {
+  "fr": "Brevet et annales",
+  "en": "Brevet and past papers",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.calc.d": {
+  "fr": "Un peu de calcul mental chaque jour.",
+  "en": "A little mental maths every day.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.calc.t": {
+  "fr": "Calcul mental",
+  "en": "Mental maths",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.chat.d": {
+  "fr": "« Explique-moi, mais ne fais pas à ma place. »",
+  "en": "\"Explain it to me, but don't do it for me.\"",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.chat.t": {
+  "fr": "Chat didactique",
+  "en": "Didactic chat",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.corr.d": {
+  "fr": "« Tu as eu une mauvaise note. Comprends pourquoi. »",
+  "en": "\"Got a bad grade. Understand why.\"",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.corr.t": {
+  "fr": "Correction de contrôle",
+  "en": "Test corrections",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.daily.d": {
+  "fr": "Un QCM, une dictée et du calcul chaque jour.",
+  "en": "A multiple-choice quiz, a dictation and some maths every day.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.daily.t": {
+  "fr": "Défi quotidien",
+  "en": "Daily challenge",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.dict.d": {
+  "fr": "Des dictées lues à voix haute et corrigées.",
+  "en": "Dictations read aloud and marked.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.dict.t": {
+  "fr": "Dictées lues",
+  "en": "Read-aloud dictations",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.dictcalc.d": {
+  "fr": "« Des dictées lues à voix haute et corrigées, et du calcul mental chaque jour. »",
+  "en": "\"Dictations read aloud and marked, and mental maths every day.\"",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.dictcalc.t": {
+  "fr": "Dictées lues et calcul mental",
+  "en": "Read-aloud dictations and mental maths",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.expat.d": {
+  "fr": "Suivre le programme français où que vous soyez.",
+  "en": "Follow the French curriculum wherever you are.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.expat.t": {
+  "fr": "Familles à l'étranger",
+  "en": "Families abroad",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.quiz.d": {
+  "fr": "« Dans toutes les matières, sur tes points faibles. Prends ta leçon en photo, reçois un quiz. »",
+  "en": "\"In every subject, on your weak points. Take a photo of your lesson, get a quiz.\"",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.quiz.t": {
+  "fr": "Quiz, exercices et QCM",
+  "en": "Quizzes, exercises and multiple choice",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.read.d": {
+  "fr": "Des livres choisis pour chaque classe.",
+  "en": "Books chosen for each grade.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.read.t": {
+  "fr": "Lecture",
+  "en": "Reading",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.rev.d": {
+  "fr": "« Ta fiche en quelques secondes, puis Galac6 t'interroge jusqu'à ce que tu sois prêt. »",
+  "en": "\"Your sheet in seconds, then Galac6 quizzes you until you are ready.\"",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.rev.d2": {
+  "fr": "« Ta fiche, puis Galac6 t'interroge jusqu'à ce que tu sois prêt. »",
+  "en": "\"Your sheet, then Galac6 quizzes you until you are ready.\"",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.rev.t": {
+  "fr": "Fiches de révision et interrogation",
+  "en": "Revision sheets and quizzing",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.support.d": {
+  "fr": "Un accompagnement à la maison, à son rythme.",
+  "en": "Support at home, at their own pace.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.f.support.t": {
+  "fr": "Soutien scolaire",
+  "en": "Homework support",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.a1": {
+  "fr": "Galac6 s'adresse aux <strong>élèves du CP à la Terminale</strong> et à leurs parents. Que votre enfant ait besoin d'un coup de pouce sur ses devoirs du soir, ou qu'il prépare un contrôle important, Galac6 est là pour l'accompagner — à son rythme, dans sa matière, à son niveau.",
+  "en": "Galac6 is for <strong>students from 1st to 12th grade</strong> and their parents. Whether your child needs a helping hand with homework, or is preparing for an important test, Galac6 is here to support them — at their own pace, in their subject, at their level.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.a10": {
+  "fr": "Galac6 est un service payant. Pour l'essayer, l'offre Découverte, sans carte bancaire, donne accès à toutes les fonctionnalités en quantité limitée, rechargée chaque mois : 5 messages au tuteur, une dictée, un quiz, une aide aux devoirs avec photo et un sujet type brevet ou bac. <strong>Pour tout Galac6 en illimité</strong> : l'offre Élève à 69 € par an ou 7,99 € par mois, et l'offre Famille, jusqu'à 4 enfants, à 99 € par an ou 11,99 € par mois. Ces deux offres comprennent toutes les annales officielles du brevet et du bac, en entier et en conditions d'examen. Le Pack Examen, à 19 € (14 € avec un abonnement à l'année), ajoute la seconde correction des copies, les oraux blancs à la voix et le Concours général. Le détail est sur la page <a href=\"/tarifs\">Tarifs</a>.",
+  "en": "Galac6 is a paid service. To try it, the Discovery plan, with no bank card, gives access to every feature in limited amounts, reset every month: 5 messages to the tutor, one dictation, one quiz, one homework help with a photo and one brevet or bac-style paper. <strong>For all of Galac6, unlimited</strong>: the Student plan at €69 a year or €7.99 a month, and the Family plan, up to 4 children, at €99 a year or €11.99 a month. Both plans include all official brevet and bac past papers, in full and in exam conditions. The Exam Pack, at €19 (€14 with a yearly subscription), adds second marking of papers, spoken mock orals and the Concours général. Full details on the <a href=\"/tarifs\">Pricing</a> page.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.a2": {
+  "fr": "<strong>Non — et c'est toute la différence.</strong> Galac6 ne fait pas les devoirs à la place de votre enfant. Il l'aide à <strong>se poser les bonnes questions</strong>, à identifier ce qu'il ne sait pas encore, pour qu'il trouve lui-même les réponses. L'objectif : construire de la vraie confiance, pas de fausses notes.",
+  "en": "<strong>No — and that's the whole point.</strong> Galac6 doesn't do homework for your child. It helps them <strong>ask the right questions</strong>, identify what they don't know yet, so they can find the answers themselves. The goal: build real confidence, not fake grades.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.a3": {
+  "fr": "Jamais. Galac6 intervient là où ni le prof ni les parents ne peuvent toujours être : <strong>le soir à 21h, seul devant ses devoirs</strong>. Il est le compagnon bienveillant qui prend le relais quand personne n'est disponible. En primaire et au collège, il peut même devenir un formidable outil d'interaction entre parents et enfants.",
+  "en": "Never. Galac6 steps in where neither the teacher nor the parents can always be: <strong>at 9 PM, alone with homework</strong>. It's the caring companion that takes over when no one is available. For younger students, it can even become a great tool for parent-child interaction.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.a4": {
+  "fr": "Galac6 utilise l'IA pour <strong>guider l'élève, pas pour penser à sa place</strong>. L'IA analyse le niveau, les lacunes et le rythme d'apprentissage de l'élève, puis propose des explications adaptées, des questions de révision ciblées et des encouragements personnalisés — en français, dans le respect du programme de l'Éducation Nationale.",
+  "en": "Galac6 uses AI to <strong>guide the student, not to think for them</strong>. The AI analyzes the student's level, gaps and learning pace, then offers tailored explanations, targeted review questions and personalized encouragement — in French, following the French National Education curriculum.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.a5": {
+  "fr": "<strong>ChatGPT donne des réponses. Galac6 donne des compétences.</strong> ChatGPT n'est pas conçu pour les enfants, ne connaît pas le programme français et n'a aucune logique pédagogique. Galac6 est spécialement pensé pour l'école française, avec une approche qui pousse l'élève à apprendre vraiment — pas à copier-coller.",
+  "en": "<strong>ChatGPT gives answers. Galac6 gives skills.</strong> ChatGPT isn't designed for children, doesn't know the French curriculum and has no educational logic. Galac6 is specifically designed for the French school system, with an approach that pushes students to truly learn — not to copy-paste.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.a6": {
+  "fr": "<strong>15 à 30 minutes suffisent</strong> pour des révisions efficaces. Galac6 n'est pas conçu pour remplacer les loisirs — il est conçu pour optimiser les moments de travail. Quelques sessions ciblées par semaine font déjà une vraie différence sur les résultats.",
+  "en": "<strong>15 to 30 minutes is enough</strong> for effective revision. Galac6 isn't designed to replace leisure — it's designed to optimize study time. A few targeted sessions per week already make a real difference in results.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.a7": {
+  "fr": "Oui, et c'est non-négociable. Galac6 est <strong>conçu en France</strong>, dans le respect du RGPD. Les données sont hébergées en France et l'intelligence artificielle de Galac6 est traitée en Europe ; seuls quelques services techniques, comme l'hébergement du site internet, font appel à des prestataires situés hors de l'Union européenne. Nous ne revendons jamais les données de vos enfants à des tiers. La confidentialité et la sécurité des données des mineurs sont au cœur de notre conception. Le détail est sur la page <a href=\"/donnees-eleves\">Données des élèves</a>.",
+  "en": "Yes, and it's non-negotiable. Galac6 is <strong>designed in France</strong>, in line with the GDPR. Data is hosted in France and Galac6's artificial intelligence is processed in Europe; only a few technical services, such as hosting of the website, rely on providers located outside the European Union. We never sell your children's data to third parties. The privacy and security of minors' data are at the core of our design. Full details on the <a href=\"/donnees-eleves\">Student data</a> page.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.a8": {
+  "fr": "Galac6 couvre les principales matières du programme français : <strong>Français, Mathématiques, Histoire-Géographie, Sciences, Anglais</strong> et d'autres encore — <strong>du CP à la Terminale</strong>. Le contenu s'adapte automatiquement au niveau et à la classe de l'élève.",
+  "en": "Galac6 covers the main subjects of the French curriculum: <strong>French, Mathematics, History-Geography, Sciences, English</strong> and more — <strong>from 1st to 12th grade</strong>. Content automatically adapts to the student's level and grade.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.a9": {
+  "fr": "Oui. Les parents ont accès à un espace de suivi pour voir les matières travaillées, les progrès réalisés et les points à renforcer. Chez Galac6, nous croyons au <strong>rôle actif des parents</strong> dans la scolarité — l'outil est conçu pour renforcer ce lien, pas pour le remplacer.",
+  "en": "Yes. Parents have access to a tracking dashboard to see subjects studied, progress made and areas to improve. At Galac6, we believe in the <strong>active role of parents</strong> in education — the tool is designed to strengthen that bond, not replace it.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.cta.button": {
+  "fr": "Contactez-nous →",
+  "en": "Contact us →",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.cta.text": {
+  "fr": "Une question que vous ne trouvez pas ici ?",
+  "en": "Can't find your question here?",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.q1": {
+  "fr": "À qui s'adresse Galac6 ?",
+  "en": "Who is Galac6 for?",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.q10": {
+  "fr": "Combien coûte Galac6 ?",
+  "en": "How much does Galac6 cost?",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.q2": {
+  "fr": "Galac6 donne-t-il les réponses aux élèves ?",
+  "en": "Does Galac6 give students the answers?",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.q3": {
+  "fr": "Galac6 remplace-t-il le prof ou les parents ?",
+  "en": "Does Galac6 replace teachers or parents?",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.q4": {
+  "fr": "Comment Galac6 utilise-t-il l'IA ?",
+  "en": "How does Galac6 use AI?",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.q5": {
+  "fr": "En quoi Galac6 est-il différent de ChatGPT ?",
+  "en": "How is Galac6 different from ChatGPT?",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.q6": {
+  "fr": "Combien de temps par jour faut-il utiliser Galac6 ?",
+  "en": "How much time per day should I use Galac6?",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.q7": {
+  "fr": "Les données de mon enfant sont-elles protégées ?",
+  "en": "Is my child's data protected?",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.q8": {
+  "fr": "Quelles matières et quels niveaux sont couverts ?",
+  "en": "What subjects and grade levels are covered?",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.q9": {
+  "fr": "Les parents peuvent-ils suivre les progrès de leur enfant ?",
+  "en": "Can parents track their child's progress?",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.subtitle": {
+  "fr": "Tout ce que les parents et les élèves nous demandent, en toute transparence.",
+  "en": "Everything parents and students ask us, in full transparency.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.tag": {
+  "fr": "Questions fréquentes",
+  "en": "Frequently asked questions",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.faq.title": {
+  "fr": "Avant de vous lancer",
+  "en": "Before you start",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.features.tag": {
+  "fr": "Toutes les fonctionnalités",
+  "en": "All features",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.features.title": {
+  "fr": "Tout ce dont votre enfant a besoin pour progresser, à chaque niveau.",
+  "en": "Everything your child needs to make progress, at every level.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.footer.hosted": {
+  "fr": "Conçu en France · Données hébergées en France",
+  "en": "Designed in France · Data hosted in France",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.hero.cta": {
+  "fr": "Créer un compte →",
+  "en": "Create an account →",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.hero.cta2": {
+  "fr": "Voir les formules",
+  "en": "See the plans",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.hero.reassurance2": {
+  "fr": "Conçu en France, données hébergées en France, IA traitée en Europe.",
+  "en": "Designed in France, data hosted in France, AI processed in Europe.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.hero.slogan": {
+  "fr": "L'IA au service de la pédagogie.",
+  "en": "AI in the service of teaching.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.hero.subtitle2": {
+  "fr": "Galac6 part de ce que sait votre enfant, notion par notion, pour lui proposer un parcours à son niveau. L'IA ne fait pas ses devoirs à sa place : elle le guide par des questions, de la leçon au contrôle. Et vous suivez où il en est.",
+  "en": "Galac6 starts from what your child knows, topic by topic, to offer a path at their level. The AI does not do their homework for them: it guides them with questions, from the lesson to the test. And you see where they stand.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.hero.tag": {
+  "fr": "Parents et élèves · du CP à la Terminale",
+  "en": "Parents and pupils · from 1st to 12th grade",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.hero.title3": {
+  "fr": "Galac6 pour les familles, <span class=\"gradient\">du CP à la Terminale</span>",
+  "en": "Galac6 for families, <span class=\"gradient\">from grade 1 to 12</span>",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.learn.c1.d": {
+  "fr": "L'IA guide et questionne. Elle ne donne jamais la réponse directement. L'élève doit réfléchir.",
+  "en": "The AI guides and asks questions. It never gives the answer directly. The student has to think.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.learn.c1.t": {
+  "fr": "Pédagogie d'abord",
+  "en": "Pedagogy first",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.learn.c2.d": {
+  "fr": "Calé sur les référentiels Éduscol de l'Éducation nationale, du CP à la Terminale.",
+  "en": "Aligned with the French National Education curriculum standards, from 1st to 12th grade.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.learn.c2.t": {
+  "fr": "Programmes officiels",
+  "en": "Official curriculum",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.learn.c3.d": {
+  "fr": "Tableau de bord dédié : matières travaillées, temps d'écran, progression par semaine.",
+  "en": "Dedicated dashboard: subjects studied, screen time, weekly progress.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.learn.c3.t": {
+  "fr": "Suivi parent",
+  "en": "Parent dashboard",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.learn.quote": {
+  "fr": "Tu peux demander à <strong>toutes les IA</strong> de faire tes devoirs. Ou tu peux demander à <strong>Galac6</strong> de t'apprendre à les faire toi-même. Ton choix.",
+  "en": "You can ask <strong>any AI</strong> to do your homework. Or you can ask <strong>Galac6</strong> to teach you how to do it yourself. Your call.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.learn.tag": {
+  "fr": "Ce que les parents apprécient",
+  "en": "What parents appreciate",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.learn.title": {
+  "fr": "Conçu pour apprendre, pas pour tricher.",
+  "en": "Designed for learning, not for cheating.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.links.ai": {
+  "fr": "Soutien scolaire par IA",
+  "en": "AI homework support",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.links.annales": {
+  "fr": "Annales du brevet et du bac",
+  "en": "Past brevet and bac papers",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.links.bacfr": {
+  "fr": "Réviser le bac de français",
+  "en": "Revise for the French bac",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.links.bacmaths": {
+  "fr": "Réviser le bac de maths avec l'IA",
+  "en": "Revise for the maths bac with AI",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.links.brevet": {
+  "fr": "Réviser le brevet",
+  "en": "Revise for the brevet",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.links.dictation": {
+  "fr": "Dictée en ligne",
+  "en": "Online dictation",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.links.expat": {
+  "fr": "Familles à l'étranger",
+  "en": "Families abroad",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.links.label": {
+  "fr": "Par besoin :",
+  "en": "By need:",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.links.maths": {
+  "fr": "Réviser les maths en ligne",
+  "en": "Revise maths online",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.links.mental": {
+  "fr": "Calcul mental en ligne",
+  "en": "Mental maths online",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.links.primary": {
+  "fr": "Primaire (CP au CM2)",
+  "en": "Primary (1st to 5th grade)",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.links.private": {
+  "fr": "Cours particulier en ligne avec l'IA",
+  "en": "Online private lessons with AI",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.links.sheets": {
+  "fr": "Fiches de révision par IA",
+  "en": "AI revision sheets",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.more": {
+  "fr": "En savoir plus →",
+  "en": "Learn more →",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.pricing.badge": {
+  "fr": "Tout Galac6 en illimité",
+  "en": "All of Galac6, unlimited",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.pricing.disc.cta": {
+  "fr": "Commencer avec Découverte",
+  "en": "Start with Discovery",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.pricing.disc.detail": {
+  "fr": "Pour essayer : toutes les fonctionnalités, en quantité limitée chaque mois. Sans carte bancaire.",
+  "en": "To try it out: every feature, in limited amounts each month. No bank card.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.pricing.disc.name": {
+  "fr": "Découverte",
+  "en": "Discovery",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.pricing.eleve.detail": {
+  "fr": "Pour un enfant. Ou 7,99 € par mois, sans engagement.",
+  "en": "For one child. Or €7.99 a month, no commitment.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.pricing.eleve.name": {
+  "fr": "Élève",
+  "en": "Student",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.pricing.fam.detail": {
+  "fr": "Jusqu'à 4 enfants. Ou 11,99 € par mois, sans engagement.",
+  "en": "Up to 4 children. Or €11.99 a month, no commitment.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.pricing.fam.name": {
+  "fr": "Famille",
+  "en": "Family",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.pricing.lead": {
+  "fr": "Pour essayer : la formule Découverte, en quantité limitée chaque mois. Pour tout Galac6 en illimité : les offres Élève et Famille.",
+  "en": "To try it out: the Discovery plan, in limited amounts each month. For all of Galac6, unlimited: the Student and Family plans.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.pricing.note": {
+  "fr": "Les annales officielles du brevet et du bac sont comprises dans Élève et Famille. Pack Examen (seconde correction, oraux blancs, Concours général) : 19 €, ou 14 € avec un abonnement à l'année. Toutes les formules : <a href=\"/tarifs\">voir les tarifs →</a>",
+  "en": "Official brevet and bac past papers are included in the Student and Family plans. Exam Pack (second marking, mock orals, Concours général): €19, or €14 with a yearly subscription. All plans: <a href=\"/tarifs\">see pricing →</a>",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.pricing.per.year": {
+  "fr": "/an",
+  "en": "/year",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.pricing.see": {
+  "fr": "Voir le détail →",
+  "en": "See details →",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.pricing.tag": {
+  "fr": "Tarifs",
+  "en": "Pricing",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.pricing.title": {
+  "fr": "Nos formules",
+  "en": "Our plans",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.report.card.example": {
+  "fr": "Exemple · données fictives",
+  "en": "Example · fictional data",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.report.card.low": {
+  "fr": "À retravailler",
+  "en": "To work on again",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.report.card.low.d": {
+  "fr": "Imparfait ou passé simple",
+  "en": "Imperfect or simple past",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.report.card.mid": {
+  "fr": "En progrès",
+  "en": "In progress",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.report.card.mid.d": {
+  "fr": "Priorités de calcul",
+  "en": "Order of operations",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.report.card.ok": {
+  "fr": "Maîtrisé",
+  "en": "Mastered",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.report.card.ok.d": {
+  "fr": "Fractions égales, accord sujet-verbe",
+  "en": "Equivalent fractions, subject-verb agreement",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.report.card.sub": {
+  "fr": "Ce que vous voyez dans votre espace parent",
+  "en": "What you see in your parent area",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.report.card.title": {
+  "fr": "Bilan de la semaine · Hugo, 5e",
+  "en": "Weekly report · Hugo, Year 8",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.report.l1": {
+  "fr": "Les notions maîtrisées, en cours et à retravailler.",
+  "en": "Topics mastered, in progress and to work on again.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.report.l2": {
+  "fr": "Les matières travaillées et la progression semaine après semaine.",
+  "en": "Subjects studied and progress week after week.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.report.l3": {
+  "fr": "Avec la formule Famille, un suivi pour chaque enfant.",
+  "en": "With the Family plan, tracking for each child.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.report.lead2": {
+  "fr": "Sa progression, ses forces, ce qu'il lui reste à travailler, et comment l'aider.",
+  "en": "Their progress, their strengths, what they still need to work on, and how to help.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.report.tag": {
+  "fr": "Ce que voit le parent",
+  "en": "What parents see",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.report.title2": {
+  "fr": "Vous comprenez votre enfant.",
+  "en": "You understand your child.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.steps.s1.d": {
+  "fr": "Un plan de travail jusqu'au prochain contrôle.",
+  "en": "A work plan up to the next test.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.steps.s1.t": {
+  "fr": "S'organiser",
+  "en": "Getting organised",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.steps.s2.d": {
+  "fr": "Une fiche de révision, puis Galac6 l'interroge jusqu'à ce qu'il soit prêt.",
+  "en": "A revision sheet, then Galac6 quizzes them until they are ready.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.steps.s2.t": {
+  "fr": "Apprendre ses leçons",
+  "en": "Learning lessons",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.steps.s3.d": {
+  "fr": "Des exercices à son niveau, guidés par des questions plutôt que par la réponse.",
+  "en": "Exercises at their level, guided by questions rather than by the answer.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.steps.s3.t": {
+  "fr": "S'exercer",
+  "en": "Practising",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.steps.s4.d": {
+  "fr": "Chaque erreur est expliquée, et la notion revient jusqu'à ce qu'elle soit acquise.",
+  "en": "Every mistake is explained, and the topic comes back until it is mastered.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.steps.s4.t": {
+  "fr": "Corriger et retravailler",
+  "en": "Correcting and going over it again",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.steps.s5.d": {
+  "fr": "Le bon défi pour chacun, en difficulté ou en avance, pour prendre confiance.",
+  "en": "The right challenge for everyone, struggling or ahead, to build confidence.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.steps.s5.t": {
+  "fr": "Encourager",
+  "en": "Encouraging",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.steps.tag": {
+  "fr": "Comment Galac6 accompagne",
+  "en": "How Galac6 helps",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.steps.text2": {
+  "fr": "Galac6 part de ce que votre enfant sait déjà. Il pose des questions au lieu de donner la réponse, corrige, explique les erreurs et fait retravailler chaque notion jusqu'à ce qu'elle soit acquise. Quand son professeur utilise Galac6, votre enfant y fait aussi les devoirs donnés en classe. En difficulté ou en avance, chaque enfant a le bon défi et prend confiance.",
+  "en": "Galac6 starts from what your child already knows. It asks questions instead of giving the answer, marks, explains mistakes and brings each topic back until it is mastered. When their teacher uses Galac6, your child also does the homework set in class there. Struggling or ahead, every child gets the right challenge and gains confidence.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.steps.title2": {
+  "fr": "De la leçon au contrôle, Galac6 accompagne votre enfant.",
+  "en": "From the lesson to the test, Galac6 is by your child's side.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.tab.col": {
+  "fr": "Collège",
+  "en": "Middle school",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.tab.lyc": {
+  "fr": "Lycée",
+  "en": "High school",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.tab.prim": {
+  "fr": "Primaire",
+  "en": "Primary",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.tester.cta": {
+  "fr": "Découvrir l'offre →",
+  "en": "See the offer →",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.tester.text": {
+  "fr": "Une offre de 3 mois offerts pour les élèves du CP à la Terminale, sans carte bancaire.",
+  "en": "An offer of 3 months included for pupils from 1st to 12th grade, with no bank card.",
+  "pages": [
+   "familles"
+  ]
+ },
+ "fam.tester.title": {
+  "fr": "Votre enfant peut devenir élève testeur",
+  "en": "Your child can become a pupil tester",
+  "pages": [
+   "familles"
+  ]
+ },
  "faq.a1": {
   "fr": "Galac6 s'adresse aux <strong>élèves du CP à la Terminale</strong> et à leurs parents. Que votre enfant ait besoin d'un coup de pouce sur ses devoirs du soir, ou qu'il prépare un contrôle important, Galac6 est là pour l'accompagner — à son rythme, dans sa matière, à son niveau.",
   "en": "Galac6 is for <strong>students from 1st to 12th grade</strong> and their parents. Whether your child needs a helping hand with homework, or is preparing for an important test, Galac6 is here to support them — at their own pace, in their subject, at their level.",
@@ -1337,15 +2464,22 @@
   ]
  },
  "faq.a10": {
-  "fr": "Galac6 est un service payant. Pour l'essayer, l'offre Découverte, sans carte bancaire, donne accès à toutes les fonctionnalités en quantité limitée, rechargée chaque mois : 5 messages au tuteur, une dictée, un quiz, une aide aux devoirs avec photo et un sujet type brevet ou bac. <strong>Pour tout Galac6 en illimité</strong> : l'offre Élève à 69 € par an ou 7,99 € par mois, et l'offre Famille, jusqu'à 4 enfants, à 99 € par an ou 11,99 € par mois. Le Pack Examen coûte 19 € (14 € avec un abonnement à l'année). Pour les écoles, le tarif est sur devis, avec un <a href=\"/ecole\">pilote gratuit de 3 mois sur 3 classes</a>, sans engagement. Le détail est sur la page <a href=\"/tarifs\">Tarifs</a>.",
-  "en": "Galac6 is a paid service. To try it, the Discovery plan, with no bank card, gives access to every feature in limited amounts, reset every month: 5 messages to the tutor, one dictation, one quiz, one homework help with a photo and one brevet or bac-style paper. <strong>For all of Galac6, unlimited</strong>: the Student plan at €69 a year or €7.99 a month, and the Family plan, up to 4 children, at €99 a year or €11.99 a month. The Exam Pack costs €19 (€14 with a yearly subscription). For schools, pricing is on quote, with a <a href=\"/ecole\">free 3-month pilot on 3 classes</a>, with no commitment. Full details on the <a href=\"/tarifs\">Pricing</a> page.",
+  "fr": "Galac6 est un service payant. Pour l'essayer, l'offre Découverte, sans carte bancaire, donne accès à toutes les fonctionnalités en quantité limitée, rechargée chaque mois : 5 messages au tuteur, une dictée, un quiz, une aide aux devoirs avec photo et un sujet type brevet ou bac. <strong>Pour tout Galac6 en illimité</strong> : l'offre Élève à 69 € par an ou 7,99 € par mois, et l'offre Famille, jusqu'à 4 enfants, à 99 € par an ou 11,99 € par mois. Ces deux offres comprennent toutes les annales officielles du brevet et du bac, en entier et en conditions d'examen. Le Pack Examen, à 19 € (14 € avec un abonnement à l'année), ajoute la seconde correction des copies, les oraux blancs à la voix et le Concours général. Pour les écoles, le tarif est sur devis, avec un <a href=\"/ecole\">pilote gratuit de 3 mois sur 3 classes</a>, sans engagement. Le détail est sur la page <a href=\"/tarifs\">Tarifs</a>.",
+  "en": "Galac6 is a paid service. To try it, the Discovery plan, with no bank card, gives access to every feature in limited amounts, reset every month: 5 messages to the tutor, one dictation, one quiz, one homework help with a photo and one brevet or bac-style paper. <strong>For all of Galac6, unlimited</strong>: the Student plan at €69 a year or €7.99 a month, and the Family plan, up to 4 children, at €99 a year or €11.99 a month. Both plans include all official brevet and bac past papers, in full and in exam conditions. The Exam Pack, at €19 (€14 with a yearly subscription), adds second marking of papers, spoken mock orals and the Concours général. For schools, pricing is on quote, with a <a href=\"/ecole\">free 3-month pilot on 3 classes</a>, with no commitment. Full details on the <a href=\"/tarifs\">Pricing</a> page.",
   "pages": [
    "index"
   ]
  },
  "faq.a11": {
-  "fr": "Galac6 is currently available in <strong>France only</strong>, as it is designed around the French school curriculum (Éducation Nationale). If you'd like Galac6 in your country, <a href=\"/international\">vote for your country</a> — we're exploring international expansion and would love to hear from you!",
+  "fr": "Galac6 is built on the French national curriculum, so it already works for pupils and schools that follow it, wherever they are. The app is in French, and its interface is also available in English. If your school follows another curriculum, <a href=\"/international\">vote for your country</a>: we will adapt Galac6 to the countries that ask for it most.",
   "en": "Galac6 is built on the French national curriculum, so it already works for pupils and schools that follow it, wherever they are. The app is in French, and its interface is also available in English. If your school follows another curriculum, <a href=\"/international\">vote for your country</a>: we will adapt Galac6 to the countries that ask for it most.",
+  "pages": [
+   "index"
+  ]
+ },
+ "faq.a1b": {
+  "fr": "Galac6 s'adresse aux <strong>élèves du CP à la Terminale</strong>, à leurs <strong>professeurs</strong> et à leurs <strong>parents</strong>. Les professeurs y donnent et corrigent les devoirs, et suivent chaque élève notion par notion. Les élèves y travaillent à leur niveau, de la leçon au contrôle. Les parents suivent leur progression.",
+  "en": "Galac6 is for <strong>pupils from 1st to 12th grade</strong>, their <strong>teachers</strong> and their <strong>parents</strong>. Teachers set and mark homework on it and follow each pupil topic by topic. Pupils work at their own level, from the lesson to the test. Parents follow their progress.",
   "pages": [
    "index"
   ]
@@ -1372,8 +2506,8 @@
   ]
  },
  "faq.a5": {
-  "fr": "<strong>ChatGPT donne des réponses. Galac6 donne des compétences.</strong> ChatGPT n'est pas conçu pour les enfants, ne connaît pas le programme français et n'a aucune logique pédagogique. Galac6 est spécialement pensé pour l'école française 🇫🇷, avec une approche qui pousse l'élève à apprendre vraiment — pas à copier-coller.",
-  "en": "<strong>ChatGPT gives answers. Galac6 gives skills.</strong> ChatGPT isn't designed for children, doesn't know the French curriculum and has no educational logic. Galac6 is specifically designed for the French school system 🇫🇷, with an approach that pushes students to truly learn — not to copy-paste.",
+  "fr": "<strong>ChatGPT donne des réponses. Galac6 donne des compétences.</strong> ChatGPT n'est pas conçu pour les enfants, ne connaît pas le programme français et n'a aucune logique pédagogique. Galac6 est spécialement pensé pour l'école française, avec une approche qui pousse l'élève à apprendre vraiment — pas à copier-coller.",
+  "en": "<strong>ChatGPT gives answers. Galac6 gives skills.</strong> ChatGPT isn't designed for children, doesn't know the French curriculum and has no educational logic. Galac6 is specifically designed for the French school system, with an approach that pushes students to truly learn — not to copy-paste.",
   "pages": [
    "index"
   ]
@@ -1386,8 +2520,8 @@
   ]
  },
  "faq.a7": {
-  "fr": "Oui, et c'est non-négociable. Galac6 est <strong>conçu en France</strong>, dans le respect du RGPD. Les données sont hébergées en France et l'intelligence artificielle de Galac6 est traitée en Europe ; seuls quelques services techniques, comme l'hébergement du site internet, font appel à des prestataires situés hors de l'Union européenne. Nous ne revendons jamais les données de vos enfants à des tiers. La confidentialité et la sécurité des données des mineurs sont au cœur de notre conception.",
-  "en": "Yes, and it's non-negotiable. Galac6 is <strong>designed in France</strong>, in line with the GDPR. Data is hosted in France and Galac6's artificial intelligence is processed in Europe; only a few technical services, such as hosting of the website, rely on providers located outside the European Union. We never sell your children's data to third parties. The privacy and security of minors' data are at the core of our design.",
+  "fr": "Oui, et c'est non-négociable. Galac6 est <strong>conçu en France</strong> et les <strong>données sont hébergées en France</strong>. Seuls quelques services techniques, comme l'hébergement du site internet, font appel à des prestataires situés hors de l'Union européenne. Nous ne revendons jamais les données de vos enfants à des tiers. La confidentialité et la sécurité des données des mineurs sont au cœur de notre conception.",
+  "en": "Yes, and it's non-negotiable. Galac6 is <strong>designed in France</strong> and <strong>data is hosted in France</strong>. Only a few technical services, such as hosting of the website, rely on providers located outside the European Union. We never sell your children's data to third parties. The privacy and security of minors' data are at the core of our design.",
   "pages": [
    "index"
   ]
@@ -1406,9 +2540,30 @@
    "index"
   ]
  },
+ "faq.adiff": {
+  "fr": "Galac6 prépare chaque élève à son contrôle d'une façon unique, étape par étape. L'élève apprend d'abord sa leçon sur une fiche de révision Galac6. Une IA l'interroge ensuite pour mesurer ce qu'il a vraiment retenu. Puis Galac6 lui propose des exercices adaptés à son niveau. Pendant tout ce travail, un chat pédagogique l'aide sans jamais lui donner la réponse. La méthode est détaillée sur la page <a href=\"/methode-pedagogique\">La méthode pédagogique de Galac6</a>.",
+  "en": "Galac6 prepares each pupil for their class test in a unique way, step by step. The pupil first learns the lesson on a Galac6 revision sheet. An AI then quizzes them to measure what they have really remembered. Next, Galac6 offers them exercises suited to their level. Throughout this work, a teaching chat helps them without ever giving them the answer.",
+  "pages": [
+   "index"
+  ]
+ },
+ "faq.apublisher": {
+  "fr": "Galac6 est édité par <strong>RHK Conseil</strong>, 19 rue de Croulebarbe, 75013 Paris. Il a été fondé par <strong>Raphaël Haïk</strong>, ingénieur télécom de formation, seul fondateur. Plus de détails sur la page <a href=\"/about\">À propos</a>.",
+  "en": "Galac6 is published by <strong>RHK Conseil</strong>, 19 rue de Croulebarbe, 75013 Paris, France. It was founded by <strong>Raphaël Haïk</strong>, a telecoms engineer by training and its sole founder. More details on the <a href=\"/about\">About</a> page.",
+  "pages": [
+   "index"
+  ]
+ },
  "faq.asecu": {
-  "fr": "Oui, c'est une priorité. Les <strong>données sont hébergées en France</strong>, à Paris, et l'intelligence artificielle principale de Galac6 est traitée en Europe. Chaque compte ne voit que ce qu'il a le droit de voir : côté école, seuls les professeurs de l'élève et la direction de son école accèdent à son travail. Les comptes d'administration de la plateforme Galac6 sont protégés par une double authentification, et les mots de passe connus pour avoir fuité sont refusés. Les données ne sont jamais revendues ni utilisées pour entraîner des IA, et un compte supprimé est effacé sous 30 jours. Quelques services restent hors de l'Union européenne, comme l'hébergement du site internet : tout est détaillé sur la page <a href=\"/donnees-eleves\">Données des élèves</a>.",
-  "en": "Yes, it is a priority. <strong>Data is hosted in France</strong>, in Paris, and Galac6's main artificial intelligence is processed in Europe. Each account only sees what it is allowed to see: at school, only the student's teachers and school leadership can access their work. Galac6 platform administration accounts are protected by two-factor authentication, and passwords known to have leaked are refused. Data is never sold or used to train AIs, and a deleted account is erased within 30 days. A few services remain outside the European Union, such as hosting of the website: everything is detailed on the <a href=\"/donnees-eleves\">Student data</a> page.",
+  "fr": "Oui, c'est une priorité. Les <strong>données sont hébergées en France</strong>, à Paris. Chaque compte ne voit que ce qu'il a le droit de voir : côté école, seuls les professeurs de l'élève et la direction de son école accèdent à son travail. Les comptes d'administration de la plateforme Galac6 sont protégés par une double authentification, et les mots de passe connus pour avoir fuité sont refusés. Les données ne sont jamais revendues ni utilisées pour entraîner des IA, et un compte supprimé est effacé sous 30 jours. Quelques services restent hors de l'Union européenne, comme l'hébergement du site internet : tout est détaillé sur la page <a href=\"/donnees-eleves\">Données des élèves</a>.",
+  "en": "Yes, it is a priority. <strong>Data is hosted in France</strong>, in Paris. Each account only sees what it is allowed to see: at school, only the student's teachers and school leadership can access their work. Galac6 platform administration accounts are protected by two-factor authentication, and passwords known to have leaked are refused. Data is never sold or used to train AIs, and a deleted account is erased within 30 days. A few services remain outside the European Union, such as hosting of the website: everything is detailed on the <a href=\"/donnees-eleves\">Student data</a> page.",
+  "pages": [
+   "index"
+  ]
+ },
+ "faq.awhat": {
+  "fr": "<strong>Galac6 (galac6.io)</strong> prépare chaque élève à son contrôle d'une façon unique. L'élève apprend sa leçon sur une fiche de révision Galac6. Une IA l'interroge ensuite pour mesurer ce qu'il a vraiment retenu. Puis Galac6 lui propose des exercices adaptés à son niveau. Pendant tout ce travail, un chat pédagogique l'aide sans jamais lui donner la réponse. Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac. Galac6 est un tuteur IA français pour les élèves du CP à la Terminale, construit sur le programme de l'Éducation nationale, qui aide aussi les professeurs à suivre chaque élève notion par notion. Il compte 433 sujets d'annales officielles. Les données sont hébergées en France et l'IA est traitée en Europe.",
+  "en": "<strong>Galac6 (galac6.io)</strong> prepares each pupil for their class test in a unique way. The pupil learns the lesson on a Galac6 revision sheet. An AI then quizzes them to measure what they have really remembered. Next, Galac6 offers them exercises suited to their level. Throughout this work, a teaching chat helps them without ever giving them the answer. Each pupil can also practise dictation, with over 2,000 texts, and mental maths, and work on past brevet and bac papers. Galac6 is a French AI tutor for pupils from CP to Terminale (grades 1 to 12), built on the French national curriculum, and it also helps teachers follow each pupil topic by topic. It offers 433 official past exam papers. Data is hosted in France and the AI is processed in Europe.",
   "pages": [
    "index"
   ]
@@ -1504,9 +2659,30 @@
    "index"
   ]
  },
+ "faq.qdiff": {
+  "fr": "Qu'est-ce qui distingue Galac6 des autres tuteurs IA ?",
+  "en": "What sets Galac6 apart from other AI tutors?",
+  "pages": [
+   "index"
+  ]
+ },
+ "faq.qpublisher": {
+  "fr": "Qui édite Galac6 ?",
+  "en": "Who publishes Galac6?",
+  "pages": [
+   "index"
+  ]
+ },
  "faq.qsecu": {
   "fr": "Les données des élèves sont-elles en sécurité ?",
   "en": "Is students' data secure?",
+  "pages": [
+   "index"
+  ]
+ },
+ "faq.qwhat": {
+  "fr": "Qu'est-ce que Galac6 (galac6.io) ?",
+  "en": "What is Galac6 (galac6.io)?",
   "pages": [
    "index"
   ]
@@ -1616,12 +2792,25 @@
    "index"
   ]
  },
+ "footer.annales": {
+  "fr": "Annales du brevet et du bac",
+  "en": "Brevet and bac past papers",
+  "pages": [
+   "about",
+   "ecole",
+   "familles",
+   "index",
+   "tarifs",
+   "vote"
+  ]
+ },
  "footer.contact.about": {
   "fr": "À propos",
   "en": "About",
   "pages": [
    "about",
    "ecole",
+   "familles",
    "index",
    "tarifs"
   ]
@@ -1630,6 +2819,7 @@
   "fr": "Établissements scolaires →",
   "en": "Schools →",
   "pages": [
+   "familles",
    "index"
   ]
  },
@@ -1637,6 +2827,7 @@
   "fr": "Contact",
   "en": "Contact",
   "pages": [
+   "familles",
    "index"
   ]
  },
@@ -1646,6 +2837,7 @@
   "pages": [
    "about",
    "ecole",
+   "familles",
    "index",
    "tarifs"
   ]
@@ -1654,12 +2846,61 @@
   "fr": "© 2026 Galac6. Tous droits réservés.",
   "en": "© 2026 Galac6. All rights reserved.",
   "pages": [
+   "familles",
    "index"
   ]
  },
+ "footer.data": {
+  "fr": "Données des élèves",
+  "en": "Student data",
+  "pages": [
+   "index"
+  ]
+ },
+ "footer.dictee": {
+  "fr": "Dictée en ligne",
+  "en": "French dictation online",
+  "pages": [
+   "about",
+   "ecole",
+   "familles",
+   "index",
+   "tarifs",
+   "vote"
+  ]
+ },
+ "footer.etranger": {
+  "fr": "Écoles françaises à l'étranger",
+  "en": "French schools abroad",
+  "pages": [
+   "familles",
+   "index"
+  ]
+ },
+ "footer.expat": {
+  "fr": "Familles à l'étranger",
+  "en": "Families abroad",
+  "pages": [
+   "about",
+   "ecole",
+   "familles",
+   "index",
+   "tarifs",
+   "vote"
+  ]
+ },
+ "footer.families": {
+  "fr": "Familles",
+  "en": "Families",
+  "pages": [
+   "about",
+   "index",
+   "tarifs"
+  ]
+ },
  "footer.hosted": {
-  "fr": "🇫🇷 Conçu en France · Données hébergées en France",
-  "en": "🇫🇷 Designed in France · Data hosted in France",
+  "fr": "Conçu en France · Données hébergées en France",
+  "en": "Designed in France · Data hosted in France",
   "pages": [
    "index"
   ]
@@ -1670,6 +2911,7 @@
   "pages": [
    "about",
    "ecole",
+   "familles",
    "index",
    "tarifs"
   ]
@@ -1678,6 +2920,7 @@
   "fr": "CGU",
   "en": "Terms of use",
   "pages": [
+   "familles",
    "index"
   ]
  },
@@ -1685,6 +2928,7 @@
   "fr": "CGV",
   "en": "Terms of sale",
   "pages": [
+   "familles",
    "index"
   ]
  },
@@ -1694,6 +2938,7 @@
   "pages": [
    "about",
    "ecole",
+   "familles",
    "index",
    "tarifs"
   ]
@@ -1702,12 +2947,21 @@
   "fr": "Politique de confidentialité",
   "en": "Privacy policy",
   "pages": [
+   "familles",
    "index"
   ]
  },
  "footer.legal.title": {
   "fr": "Légal",
   "en": "Legal",
+  "pages": [
+   "familles",
+   "index"
+  ]
+ },
+ "footer.research": {
+  "fr": "La pédagogie et ses sources",
+  "en": "Our teaching approach and its sources",
   "pages": [
    "index"
   ]
@@ -1716,6 +2970,7 @@
   "fr": "Soutien scolaire par IA",
   "en": "AI tutoring",
   "pages": [
+   "familles",
    "index"
   ]
  },
@@ -1723,6 +2978,7 @@
   "fr": "Réviser le Bac de Français",
   "en": "Revise for the French bac",
   "pages": [
+   "familles",
    "index"
   ]
  },
@@ -1730,6 +2986,7 @@
   "fr": "Réviser le Brevet",
   "en": "Revise for the brevet",
   "pages": [
+   "familles",
    "index"
   ]
  },
@@ -1737,6 +2994,7 @@
   "fr": "Primaire (CP au CM2)",
   "en": "Primary school (1st to 5th grade)",
   "pages": [
+   "familles",
    "index"
   ]
  },
@@ -1744,13 +3002,15 @@
   "fr": "Réviser",
   "en": "Revise",
   "pages": [
+   "familles",
    "index"
   ]
  },
  "footer.tagline": {
-  "fr": "Galac6. L'IA au service de la pédagogie",
-  "en": "Galac6. AI in the service of teaching",
+  "fr": "Galac6. L'IA au service de la pédagogie.",
+  "en": "Galac6. AI in the service of teaching.",
   "pages": [
+   "familles",
    "index"
   ]
  },
@@ -1866,72 +3126,984 @@
    "all"
   ]
  },
- "hero.cta": {
-  "fr": "Essayer Galac6 →",
-  "en": "Try Galac6 →",
+ "gen.updated": {
+  "fr": "Mis à jour le 3 novembre 2026",
+  "en": "Updated on 3 November 2026",
+  "pages": [
+   "ecole",
+   "familles"
+  ]
+ },
+ "gen.updated.nov5": {
+  "fr": "Mis à jour le 5 novembre 2026",
+  "en": "Updated on 5 November 2026",
+  "pages": [
+   "about",
+   "index"
+  ]
+ },
+ "gen.updated.nov8": {
+  "fr": "Mis à jour le 8 novembre 2026",
+  "en": "Updated on 8 November 2026",
+  "pages": [
+   "tarifs"
+  ]
+ },
+ "home.data.fr": {
+  "fr": "Données hébergées en France",
+  "en": "Data hosted in France",
   "pages": [
    "index"
   ]
  },
- "hero.offer.headline": {
-  "fr": "Découvrez nos <span class=\"gradient\">formules</span>",
-  "en": "Discover our <span class=\"gradient\">plans</span>",
+ "home.data.lead": {
+  "fr": "Chaque exercice laisse une trace utile. Galac6 en tire une carte de maîtrise, notion par notion, qui guide la suite du travail.",
+  "en": "Every exercise leaves a useful trace. Galac6 turns it into a mastery map, topic by topic, that guides what comes next.",
   "pages": [
    "index"
   ]
  },
- "hero.offer.link": {
+ "home.data.p1": {
+  "fr": "<strong>Par notion,</strong> pas seulement une moyenne générale.",
+  "en": "<strong>By topic,</strong> not just an overall average.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.data.p2": {
+  "fr": "<strong>Mise à jour à chaque exercice,</strong> sans attendre le contrôle.",
+  "en": "<strong>Updated with every exercise,</strong> without waiting for the test.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.data.p3": {
+  "fr": "<strong>La même carte</strong> sert à l'élève, aux parents et au professeur.",
+  "en": "<strong>The same map</strong> serves the student, the parents and the teacher.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.data.tag": {
+  "fr": "Les données",
+  "en": "Data",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.data.title": {
+  "fr": "Les données au service de l'apprentissage.",
+  "en": "Data in the service of learning.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.door.fam": {
+  "fr": "Je suis parent ou élève",
+  "en": "I am a parent or a student",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.door.fam.sub": {
+  "fr": "Du CP à la Terminale",
+  "en": "From 1st to 12th grade",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.door.school": {
+  "fr": "Je suis professeur ou une école",
+  "en": "I am a teacher or a school",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.door.school.sub2": {
+  "fr": "Gain de temps, suivi de classe, devoirs sur mesure",
+  "en": "Time saved, class tracking, tailored homework",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.all": {
+  "fr": "Tout voir →",
+  "en": "See everything →",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.allprof": {
+  "fr": "Voir tout pour les professeurs →",
+  "en": "See everything for teachers →",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.byneed": {
+  "fr": "Par besoin :",
+  "en": "By need:",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.calc": {
+  "fr": "Calcul mental",
+  "en": "Mental maths",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.calc.d": {
+  "fr": "Un peu chaque jour.",
+  "en": "A little every day.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.chat": {
+  "fr": "Chat tuteur",
+  "en": "Tutor chat",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.chat.d": {
+  "fr": "Il explique sans faire à la place de l'élève.",
+  "en": "It explains without doing the work for the student.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.defi": {
+  "fr": "Défi quotidien",
+  "en": "Daily challenge",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.defi.d": {
+  "fr": "Un rendez-vous chaque jour.",
+  "en": "A daily appointment.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.dictee": {
+  "fr": "Dictée",
+  "en": "Dictation",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.dictee.d": {
+  "fr": "Lue à voix haute, corrigée.",
+  "en": "Read aloud, then marked.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.exam": {
+  "fr": "Brevet et bac blancs",
+  "en": "Mock brevet and bac",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.exam.d": {
+  "fr": "Corrigés, sur sujets officiels.",
+  "en": "Marked, on official papers.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.fiches": {
+  "fr": "Fiches de révision",
+  "en": "Revision sheets",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.fiches.d": {
+  "fr": "Puis Galac6 interroge l'élève.",
+  "en": "Then Galac6 quizzes the student.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.help": {
+  "fr": "Aide aux exercices",
+  "en": "Homework help",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.help.d": {
+  "fr": "Pas à pas, depuis une photo.",
+  "en": "Step by step, from a photo.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.quiz": {
+  "fr": "Quiz",
+  "en": "Quizzes",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.quiz.d": {
+  "fr": "Sur les points faibles de l'élève.",
+  "en": "On the student's weak points.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.read": {
+  "fr": "Lecture",
+  "en": "Reading",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.read.d": {
+  "fr": "Des livres pour chaque niveau.",
+  "en": "Books for every level.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.ready": {
+  "fr": "Prêt pour mon contrôle",
+  "en": "Ready for my test",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.ready.d": {
+  "fr": "Un plan jusqu'au jour J.",
+  "en": "A plan up to the big day.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.tag": {
+  "fr": "Fonctionnalités",
+  "en": "Features",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.feat.title2": {
+  "fr": "De la leçon au contrôle, tout pour progresser.",
+  "en": "From the lesson to the test, everything to make progress.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.final.fam.sub": {
+  "fr": "Découvrir et s'inscrire",
+  "en": "Discover and sign up",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.final.lead": {
+  "fr": "Choisissez votre porte : chaque page explique ce que Galac6 fait pour vous.",
+  "en": "Choose your door: each page explains what Galac6 does for you.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.final.note": {
+  "fr": "Déjà inscrit ?",
+  "en": "Already registered?",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.final.school.sub": {
+  "fr": "Pilote ou devis",
+  "en": "Pilot or quote",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.final.title": {
+  "fr": "Par où commencer ?",
+  "en": "Where to start?",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.hero.answer": {
+  "fr": "<strong>Galac6 (galac6.io)</strong> prépare chaque élève à son contrôle d'une façon unique. L'élève apprend sa leçon sur une fiche de révision Galac6. Une IA l'interroge ensuite pour mesurer ce qu'il a vraiment retenu. Puis Galac6 lui propose des exercices adaptés à son niveau. Pendant tout ce travail, un chat pédagogique l'aide sans jamais lui donner la réponse. Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac.",
+  "en": "<strong>Galac6 (galac6.io)</strong> prepares each pupil for their class test in a unique way. The pupil learns the lesson on a Galac6 revision sheet. An AI then quizzes them to measure what they have really remembered. Next, Galac6 offers them exercises suited to their level. Throughout this work, a teaching chat helps them without ever giving them the answer. Each pupil can also practise dictation, with over 2,000 texts, and mental maths, and work on past brevet and bac papers.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.hero.h1": {
+  "fr": "Galac6, le tuteur IA du CP à la Terminale",
+  "en": "Galac6, the AI tutor from CP to Terminale (grades 1 to 12)",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.hero.madefr2": {
+  "fr": "Conçu en France, données hébergées en France, IA traitée en Europe.",
+  "en": "Designed in France, data hosted in France, AI processed in Europe.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.hero.pricing": {
   "fr": "Voir les tarifs →",
   "en": "See pricing →",
   "pages": [
    "index"
   ]
  },
- "hero.offer.sub": {
-  "fr": "Pour essayer : la formule Découverte, en quantité limitée chaque mois. Pour tout Galac6 en illimité : les offres Élève et Famille.",
-  "en": "To try it out: the Discovery plan, in limited amounts each month. For all of Galac6, unlimited: the Student and Family plans.",
+ "home.hero.signup": {
+  "fr": "Inscription ou connexion",
+  "en": "Sign up or log in",
   "pages": [
    "index"
   ]
  },
- "hero.reassurance": {
-  "fr": "🇫🇷 Conçu en France, données hébergées en France.",
-  "en": "🇫🇷 Designed in France, data hosted in France.",
+ "home.hero.title": {
+  "fr": "L'IA au service de la <span class=\"grad\">pédagogie.</span>",
+  "en": "AI in the service of <span class=\"grad\">teaching.</span>",
   "pages": [
    "index"
   ]
  },
- "hero.school.long": {
-  "fr": "Vous êtes une école ? Un gain de temps immense pour vos professeurs",
-  "en": "Are you a school? Huge time savings for your teachers",
+ "home.hero.vision": {
+  "fr": "<strong>Galac6 redéfinit l'apprentissage à l'école, à partir de ce que sait chaque élève.</strong> Ce qu'il réussit, ce qu'il rate, notion par notion : Galac6 le connaît et lui propose un parcours adapté à son niveau.",
+  "en": "<strong>Galac6 redefines learning at school, starting from what each pupil knows.</strong> What they get right and what they get wrong, topic by topic: Galac6 gets to know each pupil and offers a path suited to their level.",
   "pages": [
    "index"
   ]
  },
- "hero.school.short": {
-  "fr": "Vous êtes une école ? Découvrez Galac6",
-  "en": "Are you a school? Discover Galac6",
+ "home.link.bacmaths": {
+  "fr": "Réviser le bac de maths",
+  "en": "Revise for the maths bac",
   "pages": [
    "index"
   ]
  },
- "hero.school.tag": {
-  "fr": "Écoles",
-  "en": "Schools",
+ "home.link.maths": {
+  "fr": "Réviser les maths",
+  "en": "Revise maths",
   "pages": [
    "index"
   ]
  },
- "hero.tagline": {
-  "fr": "Galac6. L'IA au service de la pédagogie",
-  "en": "Galac6. AI in the service of teaching",
+ "home.loop.aria": {
+  "fr": "Boucle en six étapes : l'élève travaille, chaque réponse est analysée, une carte de maîtrise se construit, Galac6 propose un travail sur mesure, parents et professeur voient où en est l'élève, le professeur donne des devoirs personnalisés, puis retour à l'élève.",
+  "en": "Six-step loop: the student works, every answer is analysed, a mastery map is built, Galac6 offers tailored work, parents and teacher see where the student stands, the teacher sets personalised homework, then back to the student.",
   "pages": [
    "index"
   ]
  },
- "hero.title": {
-  "fr": "Un contrôle à préparer ?<br/>Une leçon à comprendre ?<br/><span class=\"gradient\">Galac6 est là.</span>",
-  "en": "Got a test to prepare?<br>A lesson to understand?<br><span class=\"gradient\">Galac6 is here.</span>",
+ "home.loop.g1": {
+  "fr": "L'élève travaille",
+  "en": "The student works",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.g1d": {
+  "fr": "exercices, dictées, quiz",
+  "en": "exercises, dictations, quizzes",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.g2": {
+  "fr": "Chaque réponse",
+  "en": "Every answer",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.g2d": {
+  "fr": "est analysée, erreurs comprises",
+  "en": "is analysed, mistakes included",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.g3": {
+  "fr": "Carte de maîtrise",
+  "en": "Mastery map",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.g3d": {
+  "fr": "notion par notion",
+  "en": "topic by topic",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.g4": {
+  "fr": "Travail sur mesure",
+  "en": "Tailored work",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.g4d": {
+  "fr": "jusqu'à ce que ce soit acquis",
+  "en": "until it is mastered",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.g5": {
+  "fr": "Parents et prof voient",
+  "en": "Parents and teacher see",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.g5d": {
+  "fr": "où en est l'élève",
+  "en": "where the student stands",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.g6": {
+  "fr": "Le prof décide",
+  "en": "The teacher decides",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.g6d": {
+  "fr": "devoirs personnalisés",
+  "en": "personalised homework",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.gret": {
+  "fr": "retour à l'élève",
+  "en": "back to the student",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.gsub": {
+  "fr": "une boucle continue",
+  "en": "a continuous loop",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.s1": {
+  "fr": "L'élève travaille",
+  "en": "The student works",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.s1d": {
+  "fr": "Il fait ses exercices, ses dictées, ses quiz, il apprend ses leçons.",
+  "en": "They do their exercises, dictations and quizzes, and learn their lessons.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.s2": {
+  "fr": "Chaque réponse est analysée",
+  "en": "Every answer is analysed",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.s2d": {
+  "fr": "Galac6 regarde le raisonnement, pas seulement le résultat.",
+  "en": "Galac6 looks at the reasoning, not just the result.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.s3": {
+  "fr": "Une carte de maîtrise se construit",
+  "en": "A mastery map is built",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.s3d": {
+  "fr": "Notion par notion : acquis, en cours, à revoir.",
+  "en": "Topic by topic: mastered, in progress, to review.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.s4": {
+  "fr": "Galac6 propose le travail sur mesure",
+  "en": "Galac6 offers tailored work",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.s4d": {
+  "fr": "Les notions non acquises sont retravaillées jusqu'à ce qu'elles le soient.",
+  "en": "Topics not yet mastered are worked on again until they are.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.s5": {
+  "fr": "Parents et prof voient où en est l'élève",
+  "en": "Parents and teacher see where the student stands",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.s5d": {
+  "fr": "Un bilan clair, sans attendre le prochain contrôle.",
+  "en": "A clear report, without waiting for the next test.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.s6": {
+  "fr": "Le prof décide",
+  "en": "The teacher decides",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.s6d2": {
+  "fr": "Il envoie à chaque élève un travail à son niveau, et relit chaque question avant l'envoi.",
+  "en": "They send each pupil work at their level, and review every question before it goes out.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.s7": {
+  "fr": "Retour à l'élève",
+  "en": "Back to the student",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.s7d": {
+  "fr": "Et la boucle recommence, plus juste à chaque tour.",
+  "en": "And the loop starts again, more accurate with every round.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.tag": {
+  "fr": "Comment ça marche",
+  "en": "How it works",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.loop.title": {
+  "fr": "Chaque réponse fait progresser l'élève, et éclaire ceux qui l'accompagnent.",
+  "en": "Every answer helps the student progress, and informs those who support them.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.m.a": {
+  "fr": "Acquis",
+  "en": "Mastered",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.m.c": {
+  "fr": "En cours",
+  "en": "In progress",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.m.example": {
+  "fr": "Exemple · données fictives",
+  "en": "Example · fictional data",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.m.fr": {
+  "fr": "Français",
+  "en": "French",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.m.legend.r": {
+  "fr": "À revoir, proposé en priorité",
+  "en": "To review, offered first",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.m.maths": {
+  "fr": "Mathématiques",
+  "en": "Maths",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.m.r": {
+  "fr": "À revoir",
+  "en": "To review",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.m.r1": {
+  "fr": "Calcul avec les nombres relatifs",
+  "en": "Calculating with negative numbers",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.m.r2": {
+  "fr": "Opérations sur les fractions",
+  "en": "Operations on fractions",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.m.r3": {
+  "fr": "Théorème de Pythagore",
+  "en": "Pythagorean theorem",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.m.r4": {
+  "fr": "Calcul littéral : développer",
+  "en": "Algebra: expanding",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.m.r5": {
+  "fr": "Proportionnalité",
+  "en": "Proportionality",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.m.r6": {
+  "fr": "Accord du participe passé",
+  "en": "Past participle agreement",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.m.r7": {
+  "fr": "Homophones grammaticaux",
+  "en": "Grammatical homophones",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.m.r8": {
+  "fr": "Passé simple de l'indicatif",
+  "en": "Simple past tense (passé simple)",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.m.sub": {
+  "fr": "Mathématiques et français",
+  "en": "Maths and French",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.m.title": {
+  "fr": "Carte de maîtrise · Léa, 4e",
+  "en": "Mastery map · Léa, 8th grade",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.trust.calc": {
+  "fr": "Contenus vérifiés",
+  "en": "Verified content",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.trust.calc.d": {
+  "fr": "Aligné sur les programmes officiels, du CP à la Terminale. Un sujet d'entraînement n'est jamais présenté comme une annale officielle.",
+  "en": "Aligned with the official curriculum, from 1st to 12th grade. A practice paper is never presented as an official past paper.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.trust.data2": {
+  "fr": "Données en France, IA en Europe",
+  "en": "Data in France, AI in Europe",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.trust.data2.d": {
+  "fr": "Accord d'un parent obligatoire pour les moins de 15 ans. Le détail est sur la page <a href=\"/donnees-eleves\">Données des élèves</a>.",
+  "en": "Parental consent required for children under 15. Full details on the <a href=\"/donnees-eleves\">Student data</a> page.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.trust.r": {
+  "fr": "Fondée sur la recherche",
+  "en": "Grounded in research",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.trust.r.d": {
+  "fr": "Questionnement, pratique de récupération, retour sur l'erreur. <a href=\"/recherche\">Voir nos sources</a>",
+  "en": "Questioning, retrieval practice, learning from mistakes. <a href=\"/recherche\">See our sources</a>",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.trust.tag": {
+  "fr": "Confiance",
+  "en": "Trust",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.trust.title2": {
+  "fr": "Une pédagogie sérieuse, une IA de confiance.",
+  "en": "Serious teaching, an AI you can trust.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.video.aria": {
+  "fr": "Lancer la vidéo de présentation",
+  "en": "Play the presentation video",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.video.note": {
+  "fr": "La vidéo est hébergée par YouTube : elle ne se charge que si vous cliquez.",
+  "en": "The video is hosted by YouTube: it only loads if you click.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.video.play": {
+  "fr": "Lancer la vidéo",
+  "en": "Play the video",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.video.title": {
+  "fr": "Découvrez Galac6 en vidéo",
+  "en": "Discover Galac6 on video",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.who.p.badge": {
+  "fr": "Parents",
+  "en": "Parents",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.who.p.link": {
+  "fr": "Voir le suivi parent →",
+  "en": "See parent follow-up →",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.who.p.text2": {
+  "fr": "Vous suivez sa progression, ses forces et ce qu'il lui reste à travailler, et vous savez comment l'aider.",
+  "en": "You follow their progress, their strengths and what they still need to work on, and you know how to help.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.who.p.title2": {
+  "fr": "Vous comprenez votre enfant",
+  "en": "You understand your child",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.who.s.badge": {
+  "fr": "Élève",
+  "en": "Student",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.who.s.link": {
+  "fr": "Voir pour les familles →",
+  "en": "See for families →",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.who.s.text2": {
+  "fr": "Tu fais sur Galac6 les devoirs donnés par ton professeur, avec une IA qui ne te donne pas la réponse : elle te pose des questions pour que tu la trouves toi-même. De la leçon au contrôle, elle t'accompagne : un plan avant chaque contrôle, des brevets et bacs blancs, des dictées, du calcul mental et des jeux pour progresser chaque jour.",
+  "en": "You do the homework your teacher sets on Galac6, with an AI that does not give you the answer: it asks you questions so you find it yourself. From the lesson to the test, it is with you: a plan before each test, mock brevet and bac exams, dictations, mental maths and games to improve every day.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.who.s.title2": {
+  "fr": "Tu trouves la réponse toi-même",
+  "en": "You find the answer yourself",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.who.t.badge": {
+  "fr": "Professeur",
+  "en": "Teacher",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.who.t.link": {
+  "fr": "Voir pour les professeurs →",
+  "en": "See for teachers →",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.who.t.text2": {
+  "fr": "Galac6 vous propose les devoirs et les corrige, copies manuscrites comprises : vous validez. Vous voyez les forces et les lacunes de la classe et de chaque élève, qui progresse et qui décroche. Vous envoyez à chacun un travail à son niveau. Moins de correction, plus de pédagogie : vous restez maître de vos choix.",
+  "en": "Galac6 proposes the homework and marks it, handwritten copies included: you approve. You see the strengths and gaps of the class and of each pupil, who is progressing and who is falling behind. You send each pupil work at their level. Less marking, more teaching: you stay in charge of your choices.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.who.t.title2": {
+  "fr": "Un nouveau focus sur vos élèves",
+  "en": "A new focus on your pupils",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.who.tag": {
+  "fr": "Pour qui",
+  "en": "Who it is for",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.who.title": {
+  "fr": "Un même travail, trois bénéfices.",
+  "en": "The same work, three benefits.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.why.lead2": {
+  "fr": "Une IA généraliste fait les devoirs à la place de l'élève et ne dit rien au professeur. Galac6 fait l'inverse : chaque exercice devient une information utile, pour que le professeur enseigne mieux et que l'élève apprenne vraiment.",
+  "en": "A general-purpose AI does the homework for the pupil and tells the teacher nothing. Galac6 does the opposite: every exercise becomes useful information, so the teacher teaches better and the pupil really learns.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.why.tag": {
+  "fr": "Le constat",
+  "en": "The problem",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.why.them": {
+  "fr": "Une IA généraliste",
+  "en": "A general-purpose AI",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.why.them.label": {
+  "fr": "Réponse type",
+  "en": "Typical answer",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.why.them.quote": {
+  "fr": "« Voici la solution complète de l'exercice 3. »",
+  "en": "“Here is the full solution to exercise 3.”",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.why.them1": {
+  "fr": "Donne la réponse en une seconde",
+  "en": "Gives the answer in a second",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.why.them2": {
+  "fr": "Rédige le devoir à la place de l'élève",
+  "en": "Writes the homework for the student",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.why.them3b": {
+  "fr": "Ne dit rien au professeur de ce que l'élève a compris",
+  "en": "Tells the teacher nothing about what the pupil has understood",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.why.title": {
+  "fr": "Les IA généralistes font le travail. Galac6 fait travailler.",
+  "en": "General-purpose AIs do the work. Galac6 makes students work.",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.why.us.quote": {
+  "fr": "« Qu'est-ce que tu cherches à calculer ? Commence par me dire ce que l'énoncé te donne. »",
+  "en": "“What are you trying to calculate? Start by telling me what the problem gives you.”",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.why.us1": {
+  "fr": "Pose des questions pour faire réfléchir",
+  "en": "Asks questions to make them think",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.why.us2": {
+  "fr": "Part de ce que l'élève sait déjà",
+  "en": "Starts from what the student already knows",
+  "pages": [
+   "index"
+  ]
+ },
+ "home.why.us3b": {
+  "fr": "Montre au professeur ce qui est acquis et ce qui reste à travailler",
+  "en": "Shows the teacher what is mastered and what still needs work",
   "pages": [
    "index"
   ]
@@ -1940,85 +4112,82 @@
   "fr": "Voter pour mon pays",
   "en": "Vote for my country",
   "pages": [
-   "ecole",
-   "index"
+   "ecole"
   ]
  },
  "intl.banner.sub": {
   "fr": "Votez pour que Galac6 s'adapte au programme et à la langue de votre pays.",
   "en": "Vote for Galac6 to be adapted to your country's curriculum and language.",
   "pages": [
-   "ecole",
-   "index"
+   "ecole"
   ]
  },
  "intl.banner.title": {
   "fr": "Votre école est hors de France ?",
   "en": "Is your school outside France?",
   "pages": [
-   "ecole",
-   "index"
+   "ecole"
   ]
  },
  "meta.about.description": {
   "fr": null,
-  "en": "Galac6's mission: make AI tutoring accessible to everyone, with a didactic approach that makes pupils think. A French EdTech, from 1st to 12th grade.",
+  "en": "A French edtech redefining learning at school, starting from what each pupil knows: a teaching AI for teachers, pupils and parents.",
   "pages": [
    "about"
   ]
  },
  "meta.about.og_description": {
   "fr": null,
-  "en": "Making AI tutoring accessible to everyone, with a didactic approach. A French EdTech.",
+  "en": "Galac6 redefines learning at school, starting from what each pupil knows. A French edtech.",
   "pages": [
    "about"
   ]
  },
  "meta.about.og_title": {
   "fr": null,
-  "en": "About Galac6 — Our educational mission",
+  "en": "About Galac6: our vision of school",
   "pages": [
    "about"
   ]
  },
  "meta.about.title": {
   "fr": null,
-  "en": "About Galac6 — Our educational mission",
+  "en": "About Galac6: AI in the service of teaching",
   "pages": [
    "about"
   ]
  },
  "meta.ecole.description": {
   "fr": null,
-  "en": "Galac6 for primary and secondary schools: homework and corrections prepared by AI, follow-up of every class and every pupil, didactic AI, parents involved, data hosted in France. Free 3-month pilot on 3 classes, pricing on quote.",
+  "en": "Galac6 proposes homework and marks it, handwritten copies included, and you approve. Class and pupil tracking, tailored homework, free 3-month pilot.",
   "pages": [
    "ecole"
   ]
  },
  "meta.ecole.og_description": {
   "fr": null,
-  "en": "Galac6 takes care of the repetitive work so your teachers can focus on what matters. Free 3-month pilot on 3 classes, pricing on quote.",
+  "en": "Galac6 proposes and marks homework, you approve. You know each pupil, topic by topic. Free 3-month pilot, up to 3 classes, then pricing on quote.",
   "pages": [
    "ecole"
   ]
  },
  "meta.ecole.og_title": {
   "fr": null,
-  "en": "Galac6: the AI that saves time for your whole school",
+  "en": "Galac6 for teachers and schools: less marking, more teaching",
   "pages": [
    "ecole"
   ]
  },
  "meta.ecole.title": {
   "fr": null,
-  "en": "Galac6 for schools: huge time savings for your teachers, tailored follow-up of every pupil",
+  "en": "Teachers and schools: know every pupil | Galac6",
   "pages": [
    "ecole"
   ]
  },
  "meta.index.description": {
   "fr": null,
-  "en": "Galac6 is an AI learning assistant built on the French national curriculum: quizzes, dictations, revision sheets, mock brevet and bac exams. Designed in France, data hosted in France. From 1st to 12th grade.",
+  "en": "Galac6 prepares each pupil for their class test: lesson learnt on a revision sheet, an AI quiz, then exercises suited to their level. Grades 1 to 12.",
   "pages": [
    "index"
   ]
@@ -2032,21 +4201,21 @@
  },
  "meta.index.og_title": {
   "fr": null,
-  "en": "Galac6. AI in the service of teaching",
+  "en": "Galac6. AI in the service of teaching.",
   "pages": [
    "index"
   ]
  },
  "meta.index.title": {
   "fr": null,
-  "en": "Galac6 — AI in the service of teaching · Tutoring from 1st to 12th grade",
+  "en": "Galac6: AI tutor for the French curriculum, grades 1-12",
   "pages": [
    "index"
   ]
  },
  "meta.tarifs.description": {
   "fr": null,
-  "en": "Galac6 pricing: the Discovery plan to try it in limited amounts, the Student plan at €69 a year or €7.99 a month, the Family plan for up to 4 children at €99 a year or €11.99 a month, the Exam Pack at €19. For schools: pricing on quote and a free 3-month pilot.",
+  "en": "Discovery plan to try it, Student plan at €69 a year, Family plan for up to 4 children at €99 a year, brevet and bac past papers included, Exam Pack at €19. Schools: pricing on quote.",
   "pages": [
    "tarifs"
   ]
@@ -2067,14 +4236,14 @@
  },
  "meta.tarifs.title": {
   "fr": null,
-  "en": "Galac6 — Pricing: Discovery, Student, Family and schools on quote",
+  "en": "Galac6 pricing: Student, Family and schools",
   "pages": [
    "tarifs"
   ]
  },
  "meta.vote.description": {
   "fr": null,
-  "en": "Galac6 is built on the French national curriculum. Schools outside France can vote to have the platform adapted to their country: curriculum, language and dictations.",
+  "en": "Galac6 follows the French national curriculum. Schools outside France can vote to have it adapted to their country: curriculum, language, dictations.",
   "pages": [
    "vote"
   ]
@@ -2106,6 +4275,7 @@
   "pages": [
    "about",
    "ecole",
+   "familles",
    "index",
    "tarifs",
    "vote"
@@ -2115,7 +4285,24 @@
   "fr": "Blog",
   "en": "Blog",
   "pages": [
-   "index"
+   "about",
+   "ecole",
+   "familles",
+   "index",
+   "tarifs",
+   "vote"
+  ]
+ },
+ "nav.families": {
+  "fr": "Familles",
+  "en": "For families",
+  "pages": [
+   "about",
+   "ecole",
+   "familles",
+   "index",
+   "tarifs",
+   "vote"
   ]
  },
  "nav.faq": {
@@ -2136,22 +4323,24 @@
   ]
  },
  "nav.pricing": {
-  "fr": "Tarif",
+  "fr": "Tarifs",
   "en": "Pricing",
   "pages": [
    "about",
    "ecole",
+   "familles",
    "index",
    "tarifs",
    "vote"
   ]
  },
  "nav.school": {
-  "fr": "Pour les écoles",
-  "en": "For schools",
+  "fr": "Professeurs et écoles",
+  "en": "For teachers and schools",
   "pages": [
    "about",
    "ecole",
+   "familles",
    "index",
    "tarifs",
    "vote"
@@ -2163,8 +4352,10 @@
   "pages": [
    "about",
    "ecole",
+   "familles",
    "index",
-   "tarifs"
+   "tarifs",
+   "vote"
   ]
  },
  "parents.curriculum.desc": {
@@ -2251,16 +4442,14 @@
   "fr": "Intelligence artificielle traitée en Europe",
   "en": "AI processed in Europe",
   "pages": [
-   "ecole",
-   "index"
+   "ecole"
   ]
  },
  "pledge.p3": {
   "fr": "Dans le respect du RGPD",
   "en": "In line with the GDPR",
   "pages": [
-   "ecole",
-   "index"
+   "ecole"
   ]
  },
  "pledge.p4": {
@@ -2310,23 +4499,9 @@
    "index"
   ]
  },
- "positioning.text": {
-  "fr": "Tu peux demander à <strong>toutes les IA</strong> de faire tes devoirs. Ou tu peux demander à <strong>Galac6</strong> de t'apprendre à les faire toi-même.<br/>Ton choix.",
-  "en": "You can ask <strong>any AI</strong> to do your homework. Or you can ask <strong>Galac6</strong> to teach you how to do it yourself.<br>Your call.",
-  "pages": [
-   "index"
-  ]
- },
- "positioning.title": {
-  "fr": "L'IA qui préfère t'apprendre que faire à ta place.",
-  "en": "The AI that would rather teach you than do it for you.",
-  "pages": [
-   "index"
-  ]
- },
  "pricing.badge": {
   "fr": "⭐ Tout Galac6 en illimité",
-  "en": "⭐ All of Galac6, unlimited",
+  "en": "All of Galac6, unlimited",
   "pages": [
    "index"
   ]
@@ -2420,6 +4595,552 @@
   "en": "Our plans",
   "pages": [
    "index"
+  ]
+ },
+ "sch.aria.heat": {
+  "fr": "Tableau de bord d'exemple, à faire défiler",
+  "en": "Example dashboard, scrollable",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.cta.try": {
+  "fr": "Essayer en tant que professeur",
+  "en": "Try it as a teacher",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.fam.cta": {
+  "fr": "Galac6 pour les familles",
+  "en": "Galac6 for families",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.fam.eyebrow": {
+  "fr": "Pour vos élèves et leurs familles",
+  "en": "For your pupils and their families",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.fam.title": {
+  "fr": "Les élèves réfléchissent, les parents suivent",
+  "en": "Pupils think things through, parents follow along",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.feat.eyebrow": {
+  "fr": "Fonctionnalités pour les professeurs",
+  "en": "Features for teachers",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.feat.f1.d": {
+  "fr": "Prêts en quelques minutes à partir de vos consignes ou de votre feuille collée. Vous relisez et validez chaque question.",
+  "en": "Ready in a few minutes from your instructions or your pasted worksheet. You review and approve every question.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.feat.f1.t": {
+  "fr": "Quiz et devoirs du professeur",
+  "en": "Teacher quizzes and assignments",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.feat.f2.d": {
+  "fr": "Plus de 2 000 dictées lues et corrigées par Galac6, dont des extraits de grands auteurs, en ligne ou sur copies papier photographiées. Et des dictées sur mesure, construites sur les erreurs de chaque élève.",
+  "en": "Over 2,000 dictations read aloud and marked by Galac6, including extracts from great authors, online or on photographed paper copies. And tailored dictations, built on each pupil's own mistakes.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.feat.f2.t": {
+  "fr": "Dictées, y compris sur copies papier",
+  "en": "Dictations, including on paper",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.feat.f3.d": {
+  "fr": "Copies rendues en ligne corrigées instantanément, copies papier scannées : Galac6 propose la correction et la note, vous gardez le dernier mot.",
+  "en": "Work handed in online is marked instantly, paper copies are scanned: Galac6 suggests the correction and the mark, you have the final say.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.feat.f3.t": {
+  "fr": "Corrections IA à valider",
+  "en": "AI marking for you to approve",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.feat.f4.d2": {
+  "fr": "Avec MuscuMath, vous choisissez la série de la classe, ou une série sur mesure pour chaque élève.",
+  "en": "With MuscuMath, you choose the series for the class, or a tailored series for each pupil.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.feat.f4.t": {
+  "fr": "Calcul mental piloté par le professeur",
+  "en": "Mental maths led by the teacher",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.feat.f5.d": {
+  "fr": "Plus de 400 sujets d'annales officielles : brevet, bac de français, bac de maths, Concours général, dont plus de 250 sujets de maths.",
+  "en": "Over 400 official past papers: brevet, French bac, maths bac, Concours général, including over 250 maths papers.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.feat.f5.t": {
+  "fr": "Annales officielles",
+  "en": "Official past papers",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.feat.f6.d": {
+  "fr": "Les moyennes de chaque élève et de chaque classe, toujours à jour, pour situer un élève d'un regard.",
+  "en": "The averages of every pupil and every class, always up to date, to place a pupil at a glance.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.feat.f6.t": {
+  "fr": "Chaque note face à la classe",
+  "en": "Every mark compared with the class",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.feat.f7.d": {
+  "fr": "Un email chaque jour : retards, décrochages, progrès.",
+  "en": "An email every day: late work, pupils dropping off, progress.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.feat.f7.t": {
+  "fr": "Récap quotidien",
+  "en": "Daily summary",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.feat.f8.d": {
+  "fr": "Ceux qui avancent, pour les encourager au bon moment.",
+  "en": "Those moving forward, so you can encourage them at the right moment.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.feat.f8.t": {
+  "fr": "Élèves en progrès",
+  "en": "Pupils making progress",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.feat.f9.d": {
+  "fr": "Toutes les classes de l'établissement en un regard.",
+  "en": "All the classes in the school at a glance.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.feat.f9.t": {
+  "fr": "Vue direction",
+  "en": "School leadership view",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.feat.guide": {
+  "fr": "Lire le guide professeur",
+  "en": "Read the teacher guide",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.feat.title": {
+  "fr": "Ce que vous pouvez faire avec Galac6",
+  "en": "What you can do with Galac6",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.footer.france": {
+  "fr": "Made in France",
+  "en": "Made in France",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.a": {
+  "fr": "Acquis",
+  "en": "Mastered",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.c": {
+  "fr": "En cours",
+  "en": "In progress",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.caption": {
+  "fr": "Exemple fictif : niveau de maîtrise de huit élèves sur six notions de mathématiques",
+  "en": "Fictitious example: mastery level of eight pupils across six maths topics",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.example": {
+  "fr": "Exemple · données fictives",
+  "en": "Example · fictitious data",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.eyebrow": {
+  "fr": "Le tableau de bord de la classe",
+  "en": "The class dashboard",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.h2": {
+  "fr": "Toute la classe, notion par notion",
+  "en": "The whole class, topic by topic",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.hint": {
+  "fr": "Faites glisser le tableau pour voir toutes les notions.",
+  "en": "Swipe the table to see all the topics.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.i1.d": {
+  "fr": "Calcul littéral : six élèves sur huit sont encore « à revoir ».",
+  "en": "Algebra: six pupils out of eight are still \"to review\".",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.i1.t": {
+  "fr": "Notion à reprendre en classe",
+  "en": "Topic to go over again in class",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.i2.d": {
+  "fr": "Deux élèves ont trois notions ou plus à revoir.",
+  "en": "Two pupils have three or more topics to review.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.i2.t": {
+  "fr": "Élèves à accompagner",
+  "en": "Pupils to support",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.i3.d": {
+  "fr": "Le calcul littéral, avant le contrôle du chapitre suivant.",
+  "en": "Algebra, before the test on the next chapter.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.i3.t": {
+  "fr": "Où intervenir en priorité",
+  "en": "Where to step in first",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.n1": {
+  "fr": "Nombres relatifs",
+  "en": "Negative numbers",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.n2": {
+  "fr": "Fractions",
+  "en": "Fractions",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.n3": {
+  "fr": "Pythagore",
+  "en": "Pythagoras",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.n4": {
+  "fr": "Calcul littéral",
+  "en": "Algebra",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.n5": {
+  "fr": "Proportionnalité",
+  "en": "Proportionality",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.n6": {
+  "fr": "Équations",
+  "en": "Equations",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.pupil": {
+  "fr": "Élève",
+  "en": "Pupil",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.r": {
+  "fr": "À revoir",
+  "en": "To review",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.sub": {
+  "fr": "Maîtrise par notion et par élève",
+  "en": "Mastery by topic and by pupil",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.title": {
+  "fr": "Tableau de bord · 4e B · Mathématiques",
+  "en": "Dashboard · Year 9 B · Maths",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.heat.total": {
+  "fr": "Acquis",
+  "en": "Mastered",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.hero.eyebrow": {
+  "fr": "Professeurs, direction, établissements",
+  "en": "Teachers, school leaders, schools",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.hero.sub2": {
+  "fr": "Galac6 redéfinit l'apprentissage à l'école, à partir de ce que sait chaque élève. Il vous propose les devoirs et les corrige, copies manuscrites comprises, et vous validez. Vous connaissez chaque élève, notion par notion, et vous restez maître de votre pédagogie.",
+  "en": "Galac6 redefines learning at school, starting from what each pupil knows. It proposes the homework and marks it, handwritten copies included, and you approve. You know each pupil, topic by topic, and you stay in charge of your teaching.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.hero.title2": {
+  "fr": "Moins de correction, <span class=\"grad\">plus de pédagogie</span>",
+  "en": "Less marking, <span class=\"grad\">more teaching</span>",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.muscu.link": {
+  "fr": "MuscuMath : le calcul mental piloté par le professeur",
+  "en": "MuscuMath: mental maths led by the teacher",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.pilot.offer": {
+  "fr": "<strong>Écoles : pilote gratuit de 3 mois, jusqu'à 3 classes, sans engagement.</strong> Ensuite, tarif sur devis. <a href=\"#pilote-etapes\">Comment se passe le pilote</a>",
+  "en": "<strong>Schools: free 3-month pilot, up to 3 classes, no commitment.</strong> Then, pricing on quote. <a href=\"#pilote-etapes\">How the pilot works</a>",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.prom.eyebrow": {
+  "fr": "Trois promesses",
+  "en": "Three promises",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.prom.lead": {
+  "fr": "Le temps gagné revient à vos élèves : un nouveau focus pédagogique, et vous gardez la main sur chaque décision.",
+  "en": "The time you save goes back to your pupils: a new teaching focus, and you keep the final say on every decision.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.prom.p1.desc2": {
+  "fr": "Galac6 vous propose les devoirs et les corrige : quiz, dictées et copies manuscrites photographiées. Vous n'avez plus qu'à valider.",
+  "en": "Galac6 proposes the homework and marks it: quizzes, dictations and photographed handwritten copies. All you have to do is approve.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.prom.p1.title": {
+  "fr": "Gagnez des heures chaque semaine.",
+  "en": "Save hours every week.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.prom.p2.desc2": {
+  "fr": "Les forces et les lacunes de la classe et de chaque élève, toujours à jour : qui progresse, qui décroche, quelle notion reprendre en classe.",
+  "en": "The strengths and gaps of the class and of each pupil, always up to date: who is progressing, who is falling behind, which topic to go over again in class.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.prom.p2.title2": {
+  "fr": "Connaissez chaque élève, notion par notion.",
+  "en": "Know each pupil, topic by topic.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.prom.p3.desc2": {
+  "fr": "Chaque élève reçoit un travail à son niveau, pour combler ses lacunes ou renforcer ses forces, et vous relisez chaque question avant l'envoi. Exercices sur mesure dans toutes les matières, dictées et calcul mental sur mesure : tout est disponible.",
+  "en": "Each pupil gets work at their level, to fill gaps or build on strengths, and you review every question before it goes out. Tailored exercises in every subject, tailored dictations and mental maths: all available now.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.prom.p3.title2": {
+  "fr": "Un devoir sur mesure pour chaque élève.",
+  "en": "Tailored homework for each pupil.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.prom.title": {
+  "fr": "Ce que Galac6 change pour vous",
+  "en": "What Galac6 changes for you",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.res.abroad.d": {
+  "fr": "Notre page dédiée aux établissements français hors de France.",
+  "en": "Our page dedicated to French schools outside France.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.res.abroad.t": {
+  "fr": "Écoles françaises à l'étranger",
+  "en": "French schools abroad",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.res.eyebrow": {
+  "fr": "Pour aller plus loin",
+  "en": "Going further",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.res.guide.d": {
+  "fr": "Votre premier quiz Galac6 en dix minutes.",
+  "en": "Your first Galac6 quiz in ten minutes.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.res.guide.t": {
+  "fr": "Guide professeur",
+  "en": "Teacher guide",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.res.title": {
+  "fr": "Ressources pour les professeurs et les écoles",
+  "en": "Resources for teachers and schools",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.res.uk.d": {
+  "fr": "Galac6 pour les établissements français du Royaume-Uni.",
+  "en": "Galac6 for French schools in the United Kingdom.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.res.uk.t": {
+  "fr": "Écoles françaises au Royaume-Uni",
+  "en": "French schools in the United Kingdom",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.side.pilot.desc": {
+  "fr": "Pilote gratuit de 3 mois, jusqu'à 3 classes, sans engagement.",
+  "en": "Free 3-month pilot, up to 3 classes, no commitment.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.steps.lead": {
+  "fr": "Pour essayer Galac6 dans votre établissement avant de vous décider. Voici comment il se déroule.",
+  "en": "To try Galac6 in your school before you decide. Here is how it works.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.steps.s2.desc": {
+  "fr": "Nous ouvrons l'espace de votre école et jusqu'à 3 classes, la direction invite les professeurs.",
+  "en": "We open your school's space and up to 3 classes; school leaders invite the teachers.",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.steps.s2.title": {
+  "fr": "Votre école et jusqu'à 3 classes",
+  "en": "Your school and up to 3 classes",
+  "pages": [
+   "ecole"
+  ]
+ },
+ "sch.steps.title": {
+  "fr": "Un pilote gratuit de 3 mois, jusqu'à 3 classes",
+  "en": "A free 3-month pilot, up to 3 classes",
+  "pages": [
+   "ecole"
   ]
  },
  "tarifs.aria.billing": {
@@ -2675,8 +5396,8 @@
   ]
  },
  "tarifs.eleve.t3": {
-  "fr": "Sujets type brevet et bac pour s'entraîner",
-  "en": "Brevet and bac-style papers for practice",
+  "fr": "Toutes les annales officielles du brevet et du bac, en entier et en conditions d'examen",
+  "en": "All official brevet and bac past papers, in full and in exam conditions",
   "pages": [
    "tarifs"
   ]
@@ -2758,6 +5479,13 @@
    "tarifs"
   ]
  },
+ "tarifs.fam.t5": {
+  "fr": "Toutes les annales officielles du brevet et du bac, en entier et en conditions d'examen",
+  "en": "All official brevet and bac past papers, in full and in exam conditions",
+  "pages": [
+   "tarifs"
+  ]
+ },
  "tarifs.fam.title": {
   "fr": "Choisissez votre formule",
   "en": "Choose your plan",
@@ -2787,8 +5515,8 @@
   ]
  },
  "tarifs.faq.a4": {
-  "fr": "Oui. Le paiement par carte passe par un prestataire de paiement sécurisé : Galac6 ne voit jamais votre numéro de carte. Sur l'application mobile, l'achat passe par l'App Store ou Google Play.",
-  "en": "Yes. Card payments go through a secure payment provider: Galac6 never sees your card number. In the mobile app, purchases go through the App Store or Google Play.",
+  "fr": "Oui. Le paiement par carte passe par un prestataire de paiement sécurisé : Galac6 ne voit jamais votre numéro de carte.",
+  "en": "Yes. Card payments go through a secure payment provider: Galac6 never sees your card number.",
   "pages": [
    "tarifs"
   ]
@@ -2824,6 +5552,13 @@
  "tarifs.faq.a8": {
   "fr": "Le prix est établi sur devis, selon le nombre d'élèves et les modules choisis. Pour découvrir Galac6, nous proposons un pilote gratuit de 3 mois sur 3 classes.",
   "en": "The price is set on quote, based on the number of pupils and the modules chosen. To discover Galac6, we offer a free 3-month pilot on 3 classes.",
+  "pages": [
+   "tarifs"
+  ]
+ },
+ "tarifs.faq.a9": {
+  "fr": "Oui. Les offres Élève et Famille comprennent toutes les annales officielles du brevet et du bac, en entier et en conditions d'examen : le sujet complet, avec le chronomètre. Le Pack Examen ajoute la seconde correction des copies, les oraux blancs à la voix avec leur bilan et le Concours général.",
+  "en": "Yes. The Student and Family plans include all official brevet and bac past papers, in full and in exam conditions: the whole paper, with the timer. The Exam Pack adds second marking of papers, spoken mock orals with their review, and the Concours général.",
   "pages": [
    "tarifs"
   ]
@@ -2891,6 +5626,13 @@
    "tarifs"
   ]
  },
+ "tarifs.faq.q9": {
+  "fr": "Les annales du brevet et du bac sont-elles comprises dans l'abonnement ?",
+  "en": "Are brevet and bac past papers included in the subscription?",
+  "pages": [
+   "tarifs"
+  ]
+ },
  "tarifs.faq.title": {
   "fr": "Avant de vous abonner",
   "en": "Before you subscribe",
@@ -2906,15 +5648,22 @@
   ]
  },
  "tarifs.footer.desc": {
-  "fr": "Galac6. L'IA au service de la pédagogie",
+  "fr": "Galac6. L'IA au service de la pédagogie.",
   "en": "Galac6. AI in the service of teaching",
   "pages": [
    "tarifs"
   ]
  },
  "tarifs.footer.france": {
-  "fr": "🇫🇷 Made in France",
-  "en": "🇫🇷 Made in France",
+  "fr": "Conçu en France",
+  "en": "Made in France",
+  "pages": [
+   "tarifs"
+  ]
+ },
+ "tarifs.included": {
+  "fr": "Inclus",
+  "en": "Included",
   "pages": [
    "tarifs"
   ]
@@ -2962,41 +5711,34 @@
   ]
  },
  "tarifs.pack.sub": {
-  "fr": "Pour s'entraîner en conditions réelles, en 3e, en 1re ou en Terminale.",
-  "en": "To practise in real exam conditions, in 3e, 1re or Terminale.",
+  "fr": "Pour aller plus loin en 3e, en 1re ou en Terminale. Les annales officielles complètes et chronométrées sont déjà comprises dans les offres Élève et Famille.",
+  "en": "To go further in 3e, 1re or Terminale. Full, timed official past papers are already included in the Student and Family plans.",
   "pages": [
    "tarifs"
   ]
  },
  "tarifs.pack.t1": {
-  "fr": "Examens blancs complets et chronométrés, sur de vrais sujets",
-  "en": "Full, timed mock exams on real papers",
+  "fr": "Seconde correction : chaque copie est corrigée une deuxième fois, pour une note sur 20 plus sûre",
+  "en": "Second marking: each paper is marked a second time, for a more reliable mark out of 20",
   "pages": [
    "tarifs"
   ]
  },
  "tarifs.pack.t2": {
-  "fr": "Copie corrigée deux fois, avec une note sur 20",
-  "en": "Each paper marked twice, with a mark out of 20",
-  "pages": [
-   "tarifs"
-  ]
- },
- "tarifs.pack.t3": {
   "fr": "Oraux blancs à la voix : oral du brevet, oral du bac de français",
   "en": "Spoken mock orals: brevet oral, French bac oral",
   "pages": [
    "tarifs"
   ]
  },
- "tarifs.pack.t4": {
-  "fr": "Bilan détaillé des points à retravailler",
-  "en": "Detailed review of the points to work on",
+ "tarifs.pack.t3": {
+  "fr": "Bilan de chaque oral blanc, avec les points à retravailler",
+  "en": "A review of each mock oral, with the points to work on",
   "pages": [
    "tarifs"
   ]
  },
- "tarifs.pack.t5": {
+ "tarifs.pack.t4": {
   "fr": "Concours général de maths (Terminale) : sujets officiels, aide question par question",
   "en": "Concours général in maths (Terminale): official papers, help question by question",
   "pages": [
@@ -3004,8 +5746,8 @@
   ]
  },
  "tarifs.pack.title": {
-  "fr": "Pack Examen : brevet, bac et Concours général",
-  "en": "Exam Pack: brevet, bac and Concours général",
+  "fr": "Pack Examen : seconde correction, oraux blancs et Concours général",
+  "en": "Exam Pack: second marking, mock orals and Concours général",
   "pages": [
    "tarifs"
   ]
@@ -3516,7 +6258,7 @@
  },
  "vote.note.p": {
   "fr": null,
-  "en": "Then Galac6 is ready for you today, wherever you are, and the whole interface is available in English for your teachers. See our <a href=\"/en/ecole\">schools page</a> to request a quote or a pilot.",
+  "en": "Then Galac6 is ready for you today, wherever you are, and the whole interface is available in English for your teachers. See our <a href=\"/en/french-schools-abroad\">page for French schools abroad</a> to request a quote or a pilot.",
   "pages": [
    "vote"
   ]

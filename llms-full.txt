@@ -143,7 +143,7 @@ Pour essayer : la formule Découverte, en quantité limitée chaque mois. Pour t
 Pour essayer : toutes les fonctionnalités, en quantité limitée chaque mois. Sans carte bancaire.
 Pour un enfant. Ou 7,99 € par mois, sans engagement.
 Jusqu'à 4 enfants. Ou 11,99 € par mois, sans engagement.
-Pack Examen (brevet, bac et Concours général) : 19 €, ou 14 € avec un abonnement à l'année. Toutes les formules : voir les tarifs →
+Les annales officielles du brevet et du bac sont comprises dans Élève et Famille. Pack Examen (seconde correction, oraux blancs, Concours général) : 19 €, ou 14 € avec un abonnement à l'année. Toutes les formules : voir les tarifs →
 Questions fréquentes
 
 ## Avant de vous lancer
@@ -407,13 +407,13 @@ Pilote gratuit de 3 mois, jusqu'à 3 classes, sans engagement.
 ========================================================================
 URL: https://galac6.io/tarifs
 Title: Tarifs Galac6 : offres Élève, Famille et écoles
-Description: Formule Découverte pour essayer, offre Élève à 69 € par an, Famille jusqu'à 4 enfants à 99 € par an, Pack Examen à 19 €. Écoles : sur devis.
+Description: Formule Découverte pour essayer, offre Élève à 69 € par an, Famille jusqu'à 4 enfants à 99 € par an, annales du brevet et du bac comprises, Pack Examen à 19 €. Écoles : sur devis.
 
 ========================================================================
 
 # Des tarifs simples et clairs
 Une formule Découverte pour essayer toutes les fonctionnalités en quantité limitée, un abonnement illimité pour un enfant ou pour toute la famille. Pour les écoles, un devis selon le nombre d'élèves.
-Mis à jour le 3 novembre 2026
+Mis à jour le 8 novembre 2026
 Familles · prix toutes taxes comprises
 
 ## Choisissez votre formule
@@ -437,7 +437,7 @@ Un enfant
 soit 5,75 € par mois, au lieu de 95,88 € pour 12 mois à 7,99 €
 - Tout Galac6 en illimité
 - Rapport personnel sur ses performances
-- Sujets type brevet et bac pour s'entraîner
+- Toutes les annales officielles du brevet et du bac, en entier et en conditions d'examen
 Renouvellement automatique, désactivable à tout moment dans votre espace. Un rappel vous est envoyé avant la date anniversaire.
 Famille
 Jusqu'à 4 enfants
@@ -447,14 +447,14 @@ soit 8,25 € par mois pour toute la famille, au lieu de 143,88 € pour 12 mois
 - Tout Galac6 en illimité pour chaque enfant
 - Du CP à la Terminale
 - Réglage du temps d'écran par enfant
+- Toutes les annales officielles du brevet et du bac, en entier et en conditions d'examen
 Option · achat unique, valable 12 mois
 
-### Pack Examen : brevet, bac et Concours général
-Pour s'entraîner en conditions réelles, en 3e, en 1re ou en Terminale.
-- Examens blancs complets et chronométrés, sur de vrais sujets
-- Copie corrigée deux fois, avec une note sur 20
+### Pack Examen : seconde correction, oraux blancs et Concours général
+Pour aller plus loin en 3e, en 1re ou en Terminale. Les annales officielles complètes et chronométrées sont déjà comprises dans les offres Élève et Famille.
+- Seconde correction : chaque copie est corrigée une deuxième fois, pour une note sur 20 plus sûre
 - Oraux blancs à la voix : oral du brevet, oral du bac de français
-- Bilan détaillé des points à retravailler
+- Bilan de chaque oral blanc, avec les points à retravailler
 - Concours général de maths (Terminale) : sujets officiels, aide question par question
 
 ### Parrainage
@@ -503,6 +503,9 @@ Questions fréquentes
 
 ### Que comprend la formule Découverte ?
 Toutes les fonctionnalités de Galac6, en quantité limitée. Chaque mois : 5 messages au tuteur, une dictée, un quiz, une aide aux devoirs avec photo et un sujet type brevet ou bac. Les quantités se rechargent chaque mois, sans limite de durée et sans carte bancaire.
+
+### Les annales du brevet et du bac sont-elles comprises dans l'abonnement ?
+Oui. Les offres Élève et Famille comprennent toutes les annales officielles du brevet et du bac, en entier et en conditions d'examen : le sujet complet, avec le chronomètre. Le Pack Examen ajoute la seconde correction des copies, les oraux blancs à la voix avec leur bilan et le Concours général.
 
 ### Que se passe-t-il quand la limite du mois est atteinte ?
 Galac6 prévient l'élève qu'il a utilisé ses questions du mois. Il peut revenir le mois suivant, quand la limite se recharge, ou passer à une offre payante. Les offres Élève et Famille sont illimitées.
@@ -1102,7 +1105,7 @@ Oui : 112 sujets officiels du brevet, du bac de français et du bac de maths pas
 Les quatre épreuves écrites : mathématiques, français, sciences et histoire-géographie-EMC. On peut passer l'épreuve entière ou seulement une partie.
 
 ### Combien ça coûte ?
-La formule Découverte comprend chaque mois un sujet type brevet ou bac pour essayer. Le Pack Examen (19 €, ou 14 € avec un abonnement à l'année) ajoute les examens blancs complets. Les offres Élève et Famille ouvrent tout Galac6 en illimité.
+La formule Découverte comprend chaque mois un sujet type brevet ou bac pour essayer. Les offres Élève et Famille ouvrent tout Galac6 en illimité, dont toutes les annales officielles en entier et en conditions d'examen. Le Pack Examen (19 €, ou 14 € avec un abonnement à l'année) ajoute la seconde correction des copies, les oraux blancs à la voix et le Concours général.
 
 ## Prêt pour un premier examen blanc ?
 Créez un compte et passez un sujet officiel dès aujourd'hui.
@@ -1197,7 +1200,7 @@ Pour soigner l'orthographe, utile pour l'épreuve de français.
 L'offre Famille comprend des rapports de progression pour les parents, pour chaque enfant. Dans une école équipée de Galac6, le professeur voit les résultats de ses classes et la fiche de chaque élève, mais pas les conversations des élèves avec le tuteur. Les établissements peuvent ajouter l'option Examens et Oral pour organiser des brevets blancs corrigés en double correction. Galac6 pour les écoles
 
 ## Prix et données
-Galac6 est un service payant. La formule Découverte, à 0 €, sans carte bancaire et sans limite de durée, donne accès à toutes les fonctionnalités en quantité limitée : chaque mois, 5 messages au tuteur, une dictée, un quiz, une aide aux devoirs avec photo et un sujet type brevet ou bac. L'offre Élève coûte 69 € par an ou 7,99 € par mois, et l'offre Famille, jusqu'à 4 enfants, 99 € par an ou 11,99 € par mois : elles ouvrent tout Galac6 en illimité. Les examens blancs complets et chronométrés sur de vrais sujets font partie du Pack Examen, un achat unique valable 12 mois : 19 € par élève, ou 14 € avec un abonnement à l'année. Pour les écoles, le prix est établi sur devis. Voir les tarifs.
+Galac6 est un service payant. La formule Découverte, à 0 €, sans carte bancaire et sans limite de durée, donne accès à toutes les fonctionnalités en quantité limitée : chaque mois, 5 messages au tuteur, une dictée, un quiz, une aide aux devoirs avec photo et un sujet type brevet ou bac. L'offre Élève coûte 69 € par an ou 7,99 € par mois, et l'offre Famille, jusqu'à 4 enfants, 99 € par an ou 11,99 € par mois : elles ouvrent tout Galac6 en illimité. Elles comprennent toutes les annales officielles du brevet et du bac, en entier et en conditions d'examen, avec chronomètre. Le Pack Examen, un achat unique valable 12 mois, ajoute la seconde correction des copies, les oraux blancs à la voix avec leur bilan et le Concours général : 19 € par élève, ou 14 € avec un abonnement à l'année. Pour les écoles, le prix est établi sur devis. Voir les tarifs.
 Les comptes et les données sont hébergés en France, dans une base de données à Paris. L'intelligence artificielle de Galac6 est traitée en Europe. Il n'y a aucune publicité, les données des élèves ne sont jamais vendues et elles ne servent pas à entraîner des modèles d'intelligence artificielle. En dehors du cadre scolaire, l'accord d'un parent est obligatoire pour les moins de 15 ans.
 
 ## Questions fréquentes
@@ -1316,7 +1319,7 @@ Pour soigner l'orthographe, qui compte dans le critère « maîtrise de la langu
 L'offre Famille comprend des rapports de progression pour les parents, pour chaque enfant. Dans un lycée équipé de Galac6, le professeur voit les résultats de ses classes et la fiche de chaque élève, mais pas les conversations des élèves avec le tuteur. Les établissements peuvent ajouter l'option Examens et Oral pour organiser des bacs blancs corrigés en double correction. Galac6 pour les écoles
 
 ## Prix et données
-Galac6 est un service payant. La formule Découverte, à 0 €, sans carte bancaire et sans limite de durée, donne accès à toutes les fonctionnalités en quantité limitée : chaque mois, 5 messages au tuteur, une dictée, un quiz, une aide aux devoirs avec photo et un sujet type brevet ou bac. L'offre Élève coûte 69 € par an ou 7,99 € par mois, et l'offre Famille, jusqu'à 4 enfants, 99 € par an ou 11,99 € par mois : elles ouvrent tout Galac6 en illimité. Les examens blancs complets et chronométrés sur de vrais sujets font partie du Pack Examen, un achat unique valable 12 mois : 19 € par élève, ou 14 € avec un abonnement à l'année. Pour les écoles, le prix est établi sur devis. Voir les tarifs.
+Galac6 est un service payant. La formule Découverte, à 0 €, sans carte bancaire et sans limite de durée, donne accès à toutes les fonctionnalités en quantité limitée : chaque mois, 5 messages au tuteur, une dictée, un quiz, une aide aux devoirs avec photo et un sujet type brevet ou bac. L'offre Élève coûte 69 € par an ou 7,99 € par mois, et l'offre Famille, jusqu'à 4 enfants, 99 € par an ou 11,99 € par mois : elles ouvrent tout Galac6 en illimité. Elles comprennent toutes les annales officielles du brevet et du bac, en entier et en conditions d'examen, avec chronomètre. Le Pack Examen, un achat unique valable 12 mois, ajoute la seconde correction des copies, les oraux blancs à la voix avec leur bilan et le Concours général : 19 € par élève, ou 14 € avec un abonnement à l'année. Pour les écoles, le prix est établi sur devis. Voir les tarifs.
 Les comptes et les données sont hébergés en France, dans une base de données à Paris. L'intelligence artificielle de Galac6 est traitée en Europe. Il n'y a aucune publicité, les données des élèves ne sont jamais vendues et elles ne servent pas à entraîner des modèles d'intelligence artificielle. En dehors du cadre scolaire, l'accord d'un parent est obligatoire pour les moins de 15 ans.
 
 ## Questions fréquentes
@@ -1440,7 +1443,7 @@ Une fiche claire créée à partir d'une photo de la leçon.
 L'offre Famille comprend des rapports de progression pour les parents, pour chaque enfant. Dans un lycée équipé de Galac6, le professeur voit les résultats de ses classes et la fiche de chaque élève, mais pas les conversations des élèves avec le tuteur. Les établissements peuvent ajouter l'option Examens et Oral pour organiser des bacs blancs corrigés en double correction. Galac6 pour les écoles
 
 ## Prix et données
-Galac6 est un service payant. La formule Découverte, à 0 €, sans carte bancaire et sans limite de durée, donne accès à toutes les fonctionnalités en quantité limitée : chaque mois, 5 messages au tuteur, une dictée, un quiz, une aide aux devoirs avec photo et un sujet type brevet ou bac. L'offre Élève coûte 69 € par an ou 7,99 € par mois, et l'offre Famille, jusqu'à 4 enfants, 99 € par an ou 11,99 € par mois : elles ouvrent tout Galac6 en illimité. Les examens blancs complets et chronométrés sur de vrais sujets font partie du Pack Examen, un achat unique valable 12 mois : 19 € par élève, ou 14 € avec un abonnement à l'année. Pour les écoles, le prix est établi sur devis. Voir les tarifs.
+Galac6 est un service payant. La formule Découverte, à 0 €, sans carte bancaire et sans limite de durée, donne accès à toutes les fonctionnalités en quantité limitée : chaque mois, 5 messages au tuteur, une dictée, un quiz, une aide aux devoirs avec photo et un sujet type brevet ou bac. L'offre Élève coûte 69 € par an ou 7,99 € par mois, et l'offre Famille, jusqu'à 4 enfants, 99 € par an ou 11,99 € par mois : elles ouvrent tout Galac6 en illimité. Elles comprennent toutes les annales officielles du brevet et du bac, en entier et en conditions d'examen, avec chronomètre. Le Pack Examen, un achat unique valable 12 mois, ajoute la seconde correction des copies, les oraux blancs à la voix avec leur bilan et le Concours général : 19 € par élève, ou 14 € avec un abonnement à l'année. Pour les écoles, le prix est établi sur devis. Voir les tarifs.
 Les comptes et les données sont hébergés en France, dans une base de données à Paris. L'intelligence artificielle de Galac6 est traitée en Europe. Il n'y a aucune publicité, les données des élèves ne sont jamais vendues et elles ne servent pas à entraîner des modèles d'intelligence artificielle. En dehors du cadre scolaire, l'accord d'un parent est obligatoire pour les moins de 15 ans.
 
 ## Questions fréquentes
