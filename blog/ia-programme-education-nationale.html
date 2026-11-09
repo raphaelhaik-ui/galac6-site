@@ -18,7 +18,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
   <meta property="article:published_time" content="2026-11-03">
-  <meta property="article:modified_time" content="2026-11-03">
+  <meta property="article:modified_time" content="2026-11-09">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Un tuteur IA qui suit le programme de l&#x27;Éducation nationale : ce qu&#x27;il faut vérifier">
   <meta name="twitter:description" content="Existe-t-il un tuteur IA qui suit le programme officiel français ? Sept points à vérifier avant de choisir une plateforme IA pour une école ou une famille, et la façon dont Galac6 y répond.">
@@ -70,7 +70,7 @@
         "caption": "Galac6, l'IA au service de la pédagogie."
       },
       "datePublished": "2026-11-03",
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-09",
       "inLanguage": "fr-FR",
       "mainEntityOfPage": "https://galac6.io/blog/ia-programme-education-nationale",
       "keywords": "tuteur IA programme Éducation nationale, plateforme IA école, programme officiel français, Éduscol, IA éducation, RGPD, annales officielles",
@@ -316,6 +316,30 @@
     .toc-list li.is-g6 .toc-t { flex: 1 1 0; min-width: 0; }
     .toc-list li.is-g6 .g6-tag { margin-left: 0; margin-top: 0.1rem; align-self: flex-start; }
     @media (prefers-reduced-motion: reduce) { .toc-btn, .toc-n, .toc-list a { transition: none; } html { scroll-behavior: auto; } }
+
+    /* Visuels : schémas */
+    .fig { margin: 1.8rem 0 2rem; }
+    .fig figcaption { margin-top: 0.7rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
+    .diagram { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 0.9rem; }
+    @media (max-width: 600px) { .diagram { padding: 0.8rem 0.35rem; } }
+    .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+    .diagram .d-box { fill: rgba(124,92,252,0.12); stroke: rgba(167,139,250,0.5); stroke-width: 1.2; }
+    .diagram .d-box-up { fill: rgba(52,211,153,0.1); stroke: rgba(52,211,153,0.55); stroke-width: 1.2; }
+    .diagram .d-box-down { fill: rgba(251,191,36,0.08); stroke: rgba(251,191,36,0.5); stroke-width: 1.2; }
+    .diagram .d-box-opt { fill: none; stroke: rgba(167,139,250,0.6); stroke-width: 1.2; stroke-dasharray: 5 4; }
+    .diagram .d-t { fill: var(--text); font-weight: 700; font-size: 15px; }
+    .diagram .d-s { fill: var(--text-muted); font-size: 13.5px; }
+    .diagram .d-n { fill: #fff; font-weight: 800; font-size: 13px; }
+    .diagram .d-num { fill: url(#d-grad); }
+    .diagram .d-line { fill: none; stroke: var(--primary-light); stroke-width: 1.6; }
+    .diagram .d-dash { fill: none; stroke: var(--primary-light); stroke-width: 1.4; stroke-dasharray: 4 4; opacity: 0.8; }
+    .diagram .d-head { fill: var(--primary-light); }
+    .diagram .d-ico { fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diagram .d-up { fill: #6ee7b7; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-down { fill: #fcd34d; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-band-1 { fill: rgba(99,102,241,0.22); }
+    .diagram .d-band-2 { fill: rgba(124,92,252,0.3); }
+    .diagram .d-band-3 { fill: rgba(168,85,247,0.38); }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -390,16 +414,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -435,7 +460,7 @@
     <h1>Un tuteur IA qui suit le <span class="grad">programme de l'Éducation nationale</span> : ce qu'il faut vérifier</h1>
     <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 3 novembre 2026 · 6 min de lecture</div>
 
-    <p class="lead">Oui, il existe des tuteurs IA construits sur le programme français : Galac6 en est un, du CP à la terminale, avec un espace professeur et un espace pour l'école. Mais « suit le programme » ne se vérifie pas sur une simple promesse : voici sept points à contrôler.</p>
+    <p class="lead">Oui, il existe des tuteurs IA construits sur le programme français : Galac6 (galac6.io) en est un, du CP à la terminale, avec un espace professeur et un espace pour l'école. Mais « suit le programme » ne se vérifie pas sur une simple promesse : voici sept points à contrôler.</p>
 
     <aside class="essentiel" aria-labelledby="essentiel-titre">
       <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
@@ -443,7 +468,7 @@
         <li>« Suit le programme » ne se vérifie pas sur une simple promesse : l'article propose <strong>sept points à contrôler</strong> avant de choisir un tuteur IA.</li>
         <li>Les premiers points : le <strong>programme suivi classe par classe</strong>, des examens préparés sur de <strong>vrais sujets</strong>, une IA qui <strong>fait réfléchir l'élève</strong>, des <strong>réponses vérifiées</strong>.</li>
         <li>Les suivants : le <strong>professeur garde la main</strong>, les <strong>données des élèves</strong> sont protégées, et l'outil dit clairement ce qu'il n'est pas.</li>
-        <li>Galac6 est construit sur les référentiels Éduscol, du CP à la terminale, et se présente comme <strong>un complément</strong>, pas comme un remplaçant du professeur.</li>
+        <li>Galac6 (galac6.io) est construit sur les référentiels Éduscol, du CP à la terminale, et se présente comme <strong>un complément</strong>, pas comme un remplaçant du professeur.</li>
         <li>Le test le plus simple : choisir une classe précise et <strong>demander un exercice sur le chapitre en cours</strong>.</li>
       </ul>
     </aside>
@@ -466,44 +491,127 @@
 
     <p>Beaucoup d'outils d'intelligence artificielle répondent aux questions scolaires. Rares sont ceux qui ont été pensés pour le système éducatif français : ses programmes par cycle, ses repères annuels, ses examens et ses règles de protection des données. Que vous soyez une direction d'école, un professeur ou une famille, ces sept questions vous aideront à juger une plateforme.</p>
 
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 392" role="img" aria-labelledby="schema-sept-points-titre schema-sept-points-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-sept-points-titre">Sept points à vérifier avant de choisir un tuteur IA</title>
+        <desc id="schema-sept-points-desc">1. Le programme, classe par classe. 2. Les examens sur de vrais sujets. 3. Faire réfléchir l'élève. 4. Des réponses vérifiées. 5. Le professeur garde la main. 6. Où vont les données. 7. Ce que l'outil n'est pas.</desc>
+        <defs>
+          <linearGradient id="d-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+          <marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker>
+        </defs>
+        <rect class="d-box" x="8" y="8" width="344" height="46" rx="12"/>
+        <circle class="d-num" cx="34" cy="31" r="13"/>
+        <text class="d-n" x="34" y="36" text-anchor="middle">1</text>
+        <text class="d-t" x="58" y="36">Le programme, classe par classe</text>
+        <rect class="d-box" x="8" y="62" width="344" height="46" rx="12"/>
+        <circle class="d-num" cx="34" cy="85" r="13"/>
+        <text class="d-n" x="34" y="90" text-anchor="middle">2</text>
+        <text class="d-t" x="58" y="90">Les examens sur de vrais sujets</text>
+        <rect class="d-box" x="8" y="116" width="344" height="46" rx="12"/>
+        <circle class="d-num" cx="34" cy="139" r="13"/>
+        <text class="d-n" x="34" y="144" text-anchor="middle">3</text>
+        <text class="d-t" x="58" y="144">Faire réfléchir l'élève</text>
+        <rect class="d-box" x="8" y="170" width="344" height="46" rx="12"/>
+        <circle class="d-num" cx="34" cy="193" r="13"/>
+        <text class="d-n" x="34" y="198" text-anchor="middle">4</text>
+        <text class="d-t" x="58" y="198">Des réponses vérifiées</text>
+        <rect class="d-box" x="8" y="224" width="344" height="46" rx="12"/>
+        <circle class="d-num" cx="34" cy="247" r="13"/>
+        <text class="d-n" x="34" y="252" text-anchor="middle">5</text>
+        <text class="d-t" x="58" y="252">Le professeur garde la main</text>
+        <rect class="d-box" x="8" y="278" width="344" height="46" rx="12"/>
+        <circle class="d-num" cx="34" cy="301" r="13"/>
+        <text class="d-n" x="34" y="306" text-anchor="middle">6</text>
+        <text class="d-t" x="58" y="306">Où vont les données</text>
+        <rect class="d-box" x="8" y="332" width="344" height="46" rx="12"/>
+        <circle class="d-num" cx="34" cy="355" r="13"/>
+        <text class="d-n" x="34" y="360" text-anchor="middle">7</text>
+        <text class="d-t" x="58" y="360">Ce que l'outil n'est pas</text>
+      </svg>
+      <figcaption>Les sept points à vérifier, repris un par un ci-dessous.</figcaption>
+    </figure>
+
     <h2 id="programme-classe">1. Le programme est-il suivi classe par classe ?</h2>
-    <p>Les programmes officiels, publiés par le ministère et accompagnés des ressources d'<a href="https://eduscol.education.fr/" target="_blank" rel="noopener">Éduscol</a>, fixent ce qui est étudié à chaque niveau. Un outil sérieux doit savoir dans quelle classe est l'élève et lui proposer les notions de son année, pas celles d'un programme étranger ou d'un niveau au hasard.</p>
+    <p>Il doit l'être : un outil sérieux sait dans quelle classe est l'élève et lui propose les notions de son année, pas celles d'un programme étranger ou d'un niveau au hasard. Les programmes officiels, publiés par le ministère et accompagnés des ressources d'<a href="https://eduscol.education.fr/" target="_blank" rel="noopener">Éduscol</a>, fixent ce qui est étudié à chaque niveau.</p>
     <p><strong>Ce que fait Galac6 :</strong> il est construit sur les référentiels Éduscol, du CP à la terminale, et suit uniquement le programme français. En calcul mental par exemple, plus de 200 notions sont rattachées au programme officiel, et Galac6 propose celles qui sont vues en classe à ce moment de l'année.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="vrais-sujets">2. Les examens français sont-ils préparés sur de vrais sujets ?</h2>
-    <p>Le brevet et le baccalauréat ont leurs propres attentes. Vérifiez que l'outil propose des <strong>annales officielles</strong>, et qu'il distingue clairement un sujet officiel d'un sujet inventé.</p>
+    <p>Ils doivent l'être, car le brevet et le baccalauréat ont leurs propres attentes. Vérifiez que l'outil propose des <strong>annales officielles</strong>, et qu'il distingue clairement un sujet officiel d'un sujet inventé.</p>
     <p><strong>Ce que fait Galac6 :</strong> 129 sujets de brevet et 75 sujets de bac de français, en examen blanc chronométré avec une correction détaillée. Un sujet d'entraînement généré par l'IA porte toujours la mention qui l'indique et n'est jamais rangé avec les annales officielles. Le corrigé est rédigé par l'IA à partir du barème d'origine : ce n'est pas un corrigé officiel.</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 208" role="img" aria-labelledby="schema-sujets-titre schema-sujets-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-sujets-titre">Annale officielle ou sujet généré par l'IA</title>
+        <desc id="schema-sujets-desc">Une annale officielle est un vrai sujet de brevet ou de bac, rangée avec les annales officielles. Un sujet d'entraînement généré par l'IA porte toujours la mention qui l'indique et n'est jamais rangé avec les annales officielles.</desc>
+        <rect class="d-box-up" x="8" y="8" width="344" height="92" rx="12"/>
+        <text class="d-t" x="22" y="33">Une annale officielle</text>
+        <path class="d-ico" d="M22 53l4 4 7-8"/>
+        <text class="d-s" x="42" y="58">129 sujets de brevet, 75 de bac de français</text>
+        <path class="d-ico" d="M22 77l4 4 7-8"/>
+        <text class="d-s" x="42" y="82">en examen blanc chronométré</text>
+        <rect class="d-box-down" x="8" y="110" width="344" height="92" rx="12"/>
+        <text class="d-t" x="22" y="135">Un sujet généré par l'IA</text>
+        <path class="d-ico" d="M22 155l4 4 7-8"/>
+        <text class="d-s" x="42" y="160">porte toujours la mention qui l'indique</text>
+        <path class="d-ico" d="M22 179l4 4 7-8"/>
+        <text class="d-s" x="42" y="184">n'est jamais rangé avec les annales</text>
+      </svg>
+      <figcaption>Comment Galac6 sépare une annale officielle d'un sujet d'entraînement généré par l'IA.</figcaption>
+    </figure>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="faire-reflechir">3. L'IA fait-elle réfléchir l'élève, ou fait-elle le travail ?</h2>
-    <p>Un outil qui donne la réponse toute faite aide à rendre un devoir, pas à apprendre. Posez une question d'exercice et regardez ce qui se passe.</p>
+    <p>Un bon tuteur fait réfléchir l'élève : un outil qui donne la réponse toute faite aide à rendre un devoir, pas à apprendre. Posez une question d'exercice et regardez ce qui se passe.</p>
     <p><strong>Ce que fait Galac6 :</strong> le tuteur est didactique. Il guide l'élève par des questions et des indices, étape par étape, sans faire le travail à sa place. Notre article <a href="/blog/ia-devoirs-sans-tricher">l'IA pour les devoirs sans tricher</a> détaille cette différence.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="reponses-verifiees">4. Les réponses sont-elles vérifiées ?</h2>
-    <p>Une IA peut se tromper avec assurance, en particulier en calcul. Demandez comment l'outil évite de donner une réponse fausse à un élève.</p>
+    <p>Pas toujours : une IA peut se tromper avec assurance, en particulier en calcul. Demandez comment l'outil évite de donner une réponse fausse à un élève.</p>
     <p><strong>Ce que fait Galac6 :</strong> pour les quiz des professeurs, il ne garde que les questions dont il a pu vérifier la bonne réponse. En calcul mental, chaque réponse est vérifiée. En dictée, la note suit le barème et chaque faute est expliquée.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="professeur">5. Le professeur garde-t-il la main ?</h2>
-    <p>Dans une école, l'outil doit servir l'enseignant, pas décider à sa place.</p>
+    <p>Il doit la garder : dans une école, l'outil doit servir l'enseignant, pas décider à sa place.</p>
     <p><strong>Ce que fait Galac6 :</strong> le professeur relit et valide chaque question avant l'envoi, choisit le barème, et valide chaque note proposée par l'IA. Il voit la réussite de sa classe notion par notion. Le <a href="/guide-prof">guide professeur</a> montre chaque étape, et nos pages pour <a href="/blog/galac6-professeur-maths">les professeurs de maths</a> et <a href="/blog/galac6-professeur-francais">les professeurs de français</a> détaillent les usages par matière.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="donnees">6. Où vont les données des élèves ?</h2>
-    <p>Les élèves sont mineurs et le RGPD s'applique. Demandez où sont hébergées les données, où est traitée l'IA, qui voit quoi, et combien de temps tout est conservé.</p>
+    <p>Un outil sérieux répond précisément à cette question, car les élèves sont mineurs et le RGPD s'applique. Demandez où sont hébergées les données, où est traitée l'IA, qui voit quoi, et combien de temps tout est conservé.</p>
     <p><strong>Ce que fait Galac6 :</strong> les données sont hébergées en France, dans une base de données à Paris, et l'intelligence artificielle est traitée en Europe. Quelques services techniques, comme l'hébergement du site internet, font appel à des prestataires situés hors de l'Union européenne, encadrés par des clauses contractuelles types. Seuls les professeurs de l'élève et la direction de son école voient son travail ; les professeurs ne voient pas les conversations avec le tuteur. En dehors du cadre scolaire, l'accord d'un parent est requis pour les moins de 15 ans. Tout est sur la page <a href="/donnees-eleves">Données des élèves</a>.</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 216" role="img" aria-labelledby="schema-donnees-titre schema-donnees-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-donnees-titre">Où vont les données des élèves avec Galac6</title>
+        <desc id="schema-donnees-desc">Les comptes et les données sont hébergés en France, dans une base de données à Paris. L'intelligence artificielle est traitée en Europe. Quelques services techniques, comme l'hébergement du site internet, font appel à des prestataires hors de l'Union européenne, encadrés par des clauses contractuelles types.</desc>
+        <rect class="d-box" x="8" y="8" width="344" height="62" rx="12"/>
+        <rect class="d-band-1" x="8" y="8" width="88" height="62" rx="12"/>
+        <text class="d-t" x="52.0" y="44" text-anchor="middle" style="font-size:13.5px">France</text>
+        <text class="d-t" x="108" y="34" style="font-size:14px">Les données</text>
+        <text class="d-s" x="108" y="54">base de données à Paris</text>
+        <rect class="d-box" x="8" y="78" width="344" height="62" rx="12"/>
+        <rect class="d-band-2" x="8" y="78" width="88" height="62" rx="12"/>
+        <text class="d-t" x="52.0" y="114" text-anchor="middle" style="font-size:13.5px">Europe</text>
+        <text class="d-t" x="108" y="104" style="font-size:14px">L'intelligence artificielle</text>
+        <text class="d-s" x="108" y="124">traitée en Europe</text>
+        <rect class="d-box" x="8" y="148" width="344" height="62" rx="12"/>
+        <rect class="d-band-3" x="8" y="148" width="88" height="62" rx="12"/>
+        <text class="d-t" x="52.0" y="184" text-anchor="middle" style="font-size:13.5px">Hors UE</text>
+        <text class="d-t" x="108" y="174" style="font-size:14px">Quelques services techniques</text>
+        <text class="d-s" x="108" y="194">clauses contractuelles types</text>
+      </svg>
+      <figcaption>Où sont hébergées les données et où est traitée l'IA. Hors de l'Union européenne, il s'agit de services techniques comme l'hébergement du site internet.</figcaption>
+    </figure>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="ce-qu-il-n-est-pas">7. L'outil dit-il clairement ce qu'il n'est pas ?</h2>
-    <p>Un tuteur IA ne remplace ni l'école, ni le professeur, ni l'enseignement à distance officiel du CNED. Méfiez-vous d'un outil qui promet de tout couvrir, y compris le programme de n'importe quel pays.</p>
+    <p>Il le doit : un tuteur IA ne remplace ni l'école, ni le professeur, ni l'enseignement à distance officiel du CNED. Méfiez-vous d'un outil qui promet de tout couvrir, y compris le programme de n'importe quel pays.</p>
     <p><strong>Ce que fait Galac6 :</strong> il se présente comme un complément. Il ne délivre pas de diplôme et ne s'occupe pas des inscriptions aux examens. Il suit le programme français uniquement, en France comme dans les écoles françaises à l'étranger.</p>
 
     <div class="callout">
@@ -512,8 +620,36 @@
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="essayer-galac6">Pour une école : comment essayer Galac6</h2>
+    <h2 id="essayer-galac6">Comment une école peut-elle essayer Galac6 ?</h2>
     <p>Pour un établissement qui suit le programme officiel français, Galac6 propose un <a href="/ecole">pilote gratuit de 3 mois sur 3 classes</a>, sans engagement : un échange de vingt minutes, l'ouverture de l'espace de l'école, trois mois d'utilisation avec les classes, puis un bilan et un devis. Un professeur qui veut essayer seul peut rejoindre le programme des <a href="/profs-testeurs">professeurs testeurs</a> : 3 mois offerts en échange de ses retours.</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 288" role="img" aria-labelledby="schema-pilote-titre schema-pilote-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-pilote-titre">Le pilote de Galac6 pour une école</title>
+        <desc id="schema-pilote-desc">Un échange de vingt minutes, l'ouverture de l'espace de l'école, trois mois d'utilisation avec les classes, puis un bilan et un devis.</desc>
+        <rect class="d-box" x="8" y="8" width="344" height="46" rx="12"/>
+        <circle class="d-num" cx="34" cy="31" r="13"/>
+        <text class="d-n" x="34" y="36" text-anchor="middle">1</text>
+        <text class="d-t" x="58" y="36">Un échange de vingt minutes</text>
+        <path class="d-line" d="M180 54V72" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="76" width="344" height="46" rx="12"/>
+        <circle class="d-num" cx="34" cy="99" r="13"/>
+        <text class="d-n" x="34" y="104" text-anchor="middle">2</text>
+        <text class="d-t" x="58" y="104">L'ouverture de l'espace de l'école</text>
+        <path class="d-line" d="M180 122V140" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="144" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="175" r="13"/>
+        <text class="d-n" x="34" y="180" text-anchor="middle">3</text>
+        <text class="d-t" x="58" y="170">Trois mois d'utilisation</text>
+        <text class="d-s" x="58" y="190">avec 3 classes</text>
+        <path class="d-line" d="M180 206V224" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="8" y="228" width="344" height="46" rx="12"/>
+        <circle class="d-num" cx="34" cy="251" r="13"/>
+        <text class="d-n" x="34" y="256" text-anchor="middle">4</text>
+        <text class="d-t" x="58" y="256">Un bilan et un devis</text>
+      </svg>
+      <figcaption>Les quatre étapes du pilote gratuit de 3 mois sur 3 classes, sans engagement.</figcaption>
+    </figure>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
@@ -550,6 +686,7 @@
         <li><a href="/blog/pisa-2025-ecole-du-futur">PISA 2025 et l'école du futur : trois questions pour juger une IA éducative</a></li>
         <li><a href="/blog/ia-devoirs-sans-tricher">L'IA pour les devoirs, sans tricher</a></li>
         <li><a href="/blog/ia-lycees-francais-etranger">Quelle IA pour les élèves des lycées français à l'étranger ?</a></li>
+        <li><a href="/blog/programme-francais-etranger">Programme français à l'étranger : le guide des familles expatriées</a></li>
         <li><a href="/ecole">Galac6 pour les écoles</a></li>
         <li><a href="/donnees-eleves">Données des élèves : le détail</a></li>
       </ul>

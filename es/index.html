@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Galac6: tutor IA del programa escolar francés</title>
+<title>Galac6: tutor con IA del programa escolar francés en línea</title>
 <meta content="Galac6 prepara a cada alumno para su examen: lección aprendida con una ficha, preguntas de una IA y ejercicios adaptados a su nivel. Del CP a la Terminale." name="description"/>
 <meta content="index, follow, max-image-preview:large" name="robots"/>
 <link href="https://galac6.io/es/" rel="canonical"/>
@@ -30,6 +30,20 @@
       "description": "Galac6 (galac6.io) prepara a cada alumno para su examen de una forma única. El alumno aprende su lección con una ficha de repaso de Galac6. Después, una IA le hace preguntas para medir lo que realmente ha retenido. Luego, Galac6 le propone ejercicios adaptados a su nivel. Durante todo este trabajo, un chat pedagógico le ayuda sin darle nunca la respuesta. Cada alumno también puede practicar el dictado, con más de 2 000 textos, y el cálculo mental, y hacer exámenes de años anteriores del brevet y del bac. Del CP a la Terminale, según el programa escolar francés. Datos alojados en Francia, IA procesada en Europa.",
       "email": "hello@galac6.io",
       "legalName": "RHK CONSEIL",
+      "foundingDate": "2026",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "RHK Conseil",
+        "legalName": "RHK CONSEIL",
+        "foundingDate": "2023",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "19 rue de Croulebarbe",
+          "postalCode": "75013",
+          "addressLocality": "Paris",
+          "addressCountry": "FR"
+        }
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "19 rue de Croulebarbe",
@@ -104,7 +118,7 @@
       "@type": "FAQPage",
       "@id": "https://galac6.io/es/#webpage",
       "url": "https://galac6.io/es/",
-      "name": "Galac6: tutor IA del programa escolar francés",
+      "name": "Galac6: tutor con IA del programa escolar francés en línea",
       "inLanguage": "es",
       "isPartOf": {
         "@id": "https://galac6.io/es/#website"
@@ -633,16 +647,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 <script>window.G6_COOKIE_TXT = {"texte": "Nos gustaría medir las visitas a este sitio (Google Analytics) y los resultados de nuestros anuncios (Google Ads, Meta). Estos servicios instalan cookies y solo se cargan si usted da su consentimiento. Puede cambiar de opinión en cualquier momento con el enlace «Gestionar las cookies» al pie de cada página.", "plus": "Más información", "refuser": "Rechazar todo", "perso": "Personalizar", "accepter": "Aceptar todo", "titrePerso": "Elija sus cookies", "audienceTitre": "Medición de audiencia", "audienceTexte": "Google Analytics: cuenta las visitas y las páginas vistas, para mejorar el sitio.", "pubTitre": "Publicidad", "pubTexte": "Google Ads y Meta (Facebook, Instagram): miden los resultados de nuestros anuncios.", "enregistrer": "Guardar mis opciones", "necessaires": "El sitio también guarda su idioma y esta elección en su dispositivo (imprescindible, sin necesidad de consentimiento).", "lien": "/mentions-legales#cookies-en"};</script>
 <style id="g6-lang-css">
@@ -712,7 +727,7 @@
 </div>
 <div class="hero-actions">
 <a class="btn btn-secondary" href="https://galac6web.netlify.app/">Registrarse o entrar</a>
-
+<a class="link" href="/es/metodo-pedagogico">Nuestro método pedagógico →</a>
 <a class="link" href="/es/tarifs">Ver las tarifas →</a>
 </div>
 <p class="made-fr"><svg aria-hidden="true" class="ico"><use href="#i-pin"></use></svg><span>Diseñado en Francia, datos alojados en Francia, IA procesada en Europa.</span></p>
@@ -754,6 +769,8 @@
 <!-- Schéma (masqué sous 560 px : la liste numérotée prend le relais) -->
 <div class="loop-graphic">
 <svg aria-label="Ciclo en seis etapas: el alumno trabaja, cada respuesta se analiza, se construye un mapa de dominio, Galac6 propone un trabajo a medida, los padres y el profesor ven en qué punto está el alumno, el profesor pone deberes personalizados y vuelta al alumno." role="img" viewbox="0 0 640 600">
+<title>El ciclo de Galac6 en seis etapas</title>
+<desc>Ciclo en seis etapas: el alumno trabaja, cada respuesta se analiza, se construye un mapa de dominio, Galac6 propone un trabajo a medida, los padres y el profesor ven en qué punto está el alumno, el profesor pone deberes personalizados y vuelta al alumno.</desc>
 <defs><lineargradient id="cgrad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#6366f1"></stop><stop offset="1" stop-color="#a855f7"></stop></lineargradient></defs>
 <circle class="loop-track" cx="320" cy="300" r="210"></circle>
 <path class="loop-arrow" d="M-6,-7 L7,0 L-6,7 Z" transform="translate(425 118.1) rotate(30)"></path>
@@ -1120,7 +1137,7 @@
 <div class="footer-col">
 <span class="footer-col-title">Repasar</span>
 <a href="/soutien-scolaire-ia" hreflang="fr">Apoyo escolar con IA</a>
-
+<a href="/es/metodo-pedagogico">El método pedagógico</a>
 <a href="/reviser-brevet" hreflang="fr">Preparar el brevet</a>
 <a href="/reviser-bac-francais" hreflang="fr">Preparar el bac de francés</a>
 <a href="/reviser-bac-maths" hreflang="fr">Preparar el bac de matemáticas</a>

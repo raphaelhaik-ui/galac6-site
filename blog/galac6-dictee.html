@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dictées audio corrigées du CP à la 3e — Galac6</title>
+  <title>Dictées en ligne audio et corrigées, du CP à la 3e | Galac6</title>
   <meta name="description" content="Quelle application pour des dictées en ligne corrigées ? Galac6 lit plus de 2 000 dictées à voix haute, du CP à la 3e, et explique chaque faute avec sa règle.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/blog/galac6-dictee">
@@ -18,7 +18,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
   <meta property="article:published_time" content="2026-11-03">
-  <meta property="article:modified_time" content="2026-11-03">
+  <meta property="article:modified_time" content="2026-11-09">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Galac6 pour la dictée : dictées audio corrigées du CP à la 3e">
   <meta name="twitter:description" content="Quelle application pour faire des dictées en ligne avec correction automatique ? Galac6 lit plus de 2 000 dictées à voix haute, du CP à la 3e, et corrige chaque faute avec la règle expliquée, au clavier ou sur papier.">
@@ -70,7 +70,7 @@
         "caption": "Galac6, l'IA au service de la pédagogie."
       },
       "datePublished": "2026-11-03",
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-09",
       "inLanguage": "fr-FR",
       "mainEntityOfPage": "https://galac6.io/blog/galac6-dictee",
       "keywords": "dictée en ligne, dictée audio, correction automatique, dictée CP, dictée CE1, dictée CM2, dictée 6e, dictée 3e, orthographe, brevet",
@@ -336,6 +336,30 @@
     .toc-list li.is-g6 .toc-t { flex: 1 1 0; min-width: 0; }
     .toc-list li.is-g6 .g6-tag { margin-left: 0; margin-top: 0.1rem; align-self: flex-start; }
     @media (prefers-reduced-motion: reduce) { .toc-btn, .toc-n, .toc-list a { transition: none; } html { scroll-behavior: auto; } }
+
+    /* Schémas : mêmes styles que les articles récents */
+    .fig { margin: 1.8rem 0 2rem; }
+    .fig figcaption { margin-top: 0.7rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
+    .diagram { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 0.9rem; }
+    @media (max-width: 600px) { .diagram { padding: 0.8rem 0.35rem; } }
+    .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+    .diagram .d-box { fill: rgba(124,92,252,0.12); stroke: rgba(167,139,250,0.5); stroke-width: 1.2; }
+    .diagram .d-box-up { fill: rgba(52,211,153,0.1); stroke: rgba(52,211,153,0.55); stroke-width: 1.2; }
+    .diagram .d-box-down { fill: rgba(251,191,36,0.08); stroke: rgba(251,191,36,0.5); stroke-width: 1.2; }
+    .diagram .d-box-opt { fill: none; stroke: rgba(167,139,250,0.6); stroke-width: 1.2; stroke-dasharray: 5 4; }
+    .diagram .d-t { fill: var(--text); font-weight: 700; font-size: 15px; }
+    .diagram .d-s { fill: var(--text-muted); font-size: 13.5px; }
+    .diagram .d-n { fill: #fff; font-weight: 800; font-size: 13px; }
+    .diagram .d-num { fill: url(#d-grad); }
+    .diagram .d-line { fill: none; stroke: var(--primary-light); stroke-width: 1.6; }
+    .diagram .d-dash { fill: none; stroke: var(--primary-light); stroke-width: 1.4; stroke-dasharray: 4 4; opacity: 0.8; }
+    .diagram .d-head { fill: var(--primary-light); }
+    .diagram .d-ico { fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diagram .d-up { fill: #6ee7b7; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-down { fill: #fcd34d; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-band-1 { fill: rgba(99,102,241,0.22); }
+    .diagram .d-band-2 { fill: rgba(124,92,252,0.3); }
+    .diagram .d-band-3 { fill: rgba(168,85,247,0.38); }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -410,16 +434,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -453,9 +478,9 @@
     <nav class="breadcrumb"><a href="/">Accueil</a> › <a href="/blog/">Blog</a> › Galac6 pour la dictée</nav>
 
     <h1>Galac6 pour la <span class="grad">dictée</span> : dictées audio corrigées du CP à la 3e</h1>
-    <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 3 novembre 2026 · 6 min de lecture</div>
+    <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 3 novembre 2026 · Mis à jour le 9 novembre 2026 · 6 min de lecture</div>
 
-    <p class="lead">Galac6 est une application de dictée en ligne qui lit plus de 2 000 dictées à voix haute, du CP à la 3e, puis corrige la copie faute par faute, avec la règle expliquée et une note sur 10. Votre enfant écrit au clavier ou sur papier, dans le navigateur, sur ordinateur, tablette ou téléphone.</p>
+    <p class="lead">Galac6 (galac6.io) est une application de dictée en ligne qui lit plus de 2 000 dictées à voix haute, du CP à la 3e, puis corrige la copie faute par faute, avec la règle expliquée et une note sur 10. Votre enfant écrit au clavier ou sur papier, dans le navigateur, sur ordinateur, tablette ou téléphone.</p>
 
     <aside class="essentiel" aria-labelledby="essentiel-titre">
       <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
@@ -490,6 +515,39 @@
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="deroulement">Comment se passe une dictée sur Galac6 ?</h2>
+    <p>Une dictée sur Galac6 se passe en quatre temps : le choix du texte, l'écoute, l'écriture, puis la correction.</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 328" role="img" aria-labelledby="schema-deroulement-titre schema-deroulement-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-deroulement-titre">Les 4 temps d'une dictée sur Galac6</title>
+        <desc id="schema-deroulement-desc">Étape 1 : Le choix du texte, texte, niveau et longueur. Étape 2 : L'écoute, phrase par phrase, la vitesse se règle. Étape 3 : L'écriture, au clavier, ou sur sa feuille. Étape 4 : La correction, mot attendu, règle expliquée, note sur 10.</desc>
+        <defs>
+          <linearGradient id="d-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+          <marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker>
+        </defs>
+        <rect class="d-box" x="8" y="8" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="39" r="13"/><text class="d-n" x="34" y="44" text-anchor="middle">1</text>
+        <text class="d-t" x="58" y="34">Le choix du texte</text>
+        <text class="d-s" x="58" y="54">texte, niveau et longueur</text>
+        <path class="d-line" d="M180 70V88" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="92" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="123" r="13"/><text class="d-n" x="34" y="128" text-anchor="middle">2</text>
+        <text class="d-t" x="58" y="118">L'écoute</text>
+        <text class="d-s" x="58" y="138">phrase par phrase, la vitesse se règle</text>
+        <path class="d-line" d="M180 154V172" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="176" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="207" r="13"/><text class="d-n" x="34" y="212" text-anchor="middle">3</text>
+        <text class="d-t" x="58" y="202">L'écriture</text>
+        <text class="d-s" x="58" y="222">au clavier, ou sur sa feuille</text>
+        <path class="d-line" d="M180 238V256" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="8" y="260" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="291" r="13"/><text class="d-n" x="34" y="296" text-anchor="middle">4</text>
+        <text class="d-t" x="58" y="286">La correction</text>
+        <text class="d-s" x="58" y="306">mot attendu, règle expliquée, note sur 10</text>
+      </svg>
+      <figcaption>Du choix du texte à la correction, votre enfant avance seul.</figcaption>
+    </figure>
+
     <ol class="steps">
       <li><strong>Le choix du texte.</strong> Votre enfant choisit son texte, son niveau (facile, moyen, difficile ou expert) et la longueur de la dictée.</li>
       <li><strong>L'écoute.</strong> Galac6 lit le texte phrase par phrase avec une voix de synthèse. La vitesse se règle et chaque phrase peut être réécoutée.</li>
@@ -504,15 +562,54 @@
     <p>Oui. Avant de commencer, l'élève choisit d'écrire au clavier ou sur papier. Sur papier, il écrit sur sa feuille pendant que Galac6 lit. À la fin, il envoie sa copie en photo, en PDF ou en fichier Word, ou avec le bouton <strong>« Scanner depuis mon téléphone »</strong>. Si la photo est floue ou trop petite, Galac6 le prévient et propose de la reprendre.</p>
     <p>Galac6 lit ensuite la copie, puis l'élève corrige les mots mal lus avant la note : c'est sa feuille qui compte. La correction est la même que pour une dictée faite au clavier. Écrire à la main reste important à l'école primaire et au collège : votre enfant n'a pas à choisir entre l'écran et le cahier.</p>
 
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 328" role="img" aria-labelledby="schema-papier-titre schema-papier-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-papier-titre">Faire sa dictée sur papier avec Galac6</title>
+        <desc id="schema-papier-desc">Étape 1 : Écrire sur sa feuille, pendant que Galac6 lit. Étape 2 : Envoyer sa copie, en photo, en PDF ou en fichier Word. Étape 3 : Corriger les mots mal lus, c'est sa feuille qui compte. Étape 4 : La correction, la même que pour une dictée au clavier.</desc>
+        <rect class="d-box" x="8" y="8" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="39" r="13"/><text class="d-n" x="34" y="44" text-anchor="middle">1</text>
+        <text class="d-t" x="58" y="34">Écrire sur sa feuille</text>
+        <text class="d-s" x="58" y="54">pendant que Galac6 lit</text>
+        <path class="d-line" d="M180 70V88" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="92" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="123" r="13"/><text class="d-n" x="34" y="128" text-anchor="middle">2</text>
+        <text class="d-t" x="58" y="118">Envoyer sa copie</text>
+        <text class="d-s" x="58" y="138">en photo, en PDF ou en fichier Word</text>
+        <path class="d-line" d="M180 154V172" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="176" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="207" r="13"/><text class="d-n" x="34" y="212" text-anchor="middle">3</text>
+        <text class="d-t" x="58" y="202">Corriger les mots mal lus</text>
+        <text class="d-s" x="58" y="222">c'est sa feuille qui compte</text>
+        <path class="d-line" d="M180 238V256" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="8" y="260" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="291" r="13"/><text class="d-n" x="34" y="296" text-anchor="middle">4</text>
+        <text class="d-t" x="58" y="286">La correction</text>
+        <text class="d-s" x="58" y="306">la même que pour une dictée au clavier</text>
+      </svg>
+      <figcaption>Le parcours d'une dictée écrite à la main, de la feuille à la note.</figcaption>
+    </figure>
+
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="correction-fiable">La correction automatique est-elle fiable ?</h2>
-    <p>Galac6 compare la copie au texte de la dictée, mot à mot. Chaque faute est relevée et la note suit <strong>le barème</strong> : une même copie reçoit toujours la même note. Il y a trois types de fautes :</p>
+    <p>Oui : Galac6 compare la copie au texte de la dictée, mot à mot. Chaque faute est relevée et la note suit <strong>le barème</strong> : une même copie reçoit toujours la même note. Il y a trois types de fautes :</p>
     <ul>
       <li><strong>une faute de grammaire</strong> (accord, conjugaison, homophone comme a ou à, ce ou se) retire 0,75 point ;</li>
       <li><strong>une faute d'orthographe</strong> sur un mot retire 0,5 point ;</li>
       <li><strong>une faute mineure</strong> (accent, majuscule, ponctuation) retire 0,25 point.</li>
     </ul>
+    <p>Par exemple, une copie avec 1 faute de grammaire, 2 fautes d'orthographe et 1 faute mineure perd 0,75 + 1 + 0,25 = 2 points : elle obtient 8 sur 10.</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 312" role="img" aria-labelledby="schema-bareme-titre schema-bareme-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-bareme-titre">Le barème de la dictée et un exemple de note</title>
+        <desc id="schema-bareme-desc">−0,75 : Faute de grammaire, accord, conjugaison, homophone. −0,5 : Faute d'orthographe, sur un mot. −0,25 : Faute mineure, accent, majuscule, ponctuation. Exemple : 8 sur 10 : 1 faute de grammaire, 2 fautes d'orthographe,, 1 faute mineure : 2 points retirés.</desc>
+        <g transform="translate(0,0)"><rect class="d-box" x="8" y="6" width="344" height="60" rx="12"/><rect class="d-band-2" x="18" y="18" width="62" height="36" rx="8"/><text class="d-t" x="49" y="41" text-anchor="middle">−0,75</text><text class="d-t" x="92" y="32">Faute de grammaire</text><text class="d-s" x="92" y="52">accord, conjugaison, homophone</text><rect class="d-box" x="8" y="74" width="344" height="60" rx="12"/><rect class="d-band-2" x="18" y="86" width="62" height="36" rx="8"/><text class="d-t" x="49" y="109" text-anchor="middle">−0,5</text><text class="d-t" x="92" y="100">Faute d'orthographe</text><text class="d-s" x="92" y="120">sur un mot</text><rect class="d-box" x="8" y="142" width="344" height="60" rx="12"/><rect class="d-band-2" x="18" y="154" width="62" height="36" rx="8"/><text class="d-t" x="49" y="177" text-anchor="middle">−0,25</text><text class="d-t" x="92" y="168">Faute mineure</text><text class="d-s" x="92" y="188">accent, majuscule, ponctuation</text></g>
+        <g transform="translate(0,212)"><rect class="d-box-up" x="8" y="6" width="344" height="88" rx="12"/><text class="d-t" x="24" y="34">Exemple : 8 sur 10</text><text class="d-s" x="24" y="57">1 faute de grammaire, 2 fautes d'orthographe,</text><text class="d-s" x="24" y="78">1 faute mineure : 2 points retirés</text></g>
+      </svg>
+      <figcaption>Les points retirés selon le type de faute, et un exemple de calcul de la note sur 10.</figcaption>
+    </figure>
+
     <p>Les formes admises par les rectifications orthographiques de 1990 sont acceptées. Galac6 <strong>explique chaque faute</strong> avec des mots simples.</p>
 
     <div class="callout">
@@ -522,6 +619,7 @@
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="dictees-proposees">Quelles dictées mon enfant peut-il faire ?</h2>
+    <p>Votre enfant peut faire une dictée de sa classe, un extrait de grand auteur, une dictée du brevet, celle donnée par son enseignant ou une dictée préparée sur mesure.</p>
     <ul>
       <li><strong>Une dictée pour chaque classe</strong>, du CP à la 3e, en suivant le programme français.</li>
       <li><strong>Des extraits de grands auteurs</strong> du domaine public, du CM1 à la terminale, pour s'entraîner sur des textes littéraires.</li>
@@ -578,6 +676,7 @@
         <li><a href="/dictee-en-ligne">La dictée en ligne avec correction automatique</a></li>
         <li><a href="/blog/dictee-cm2-progresser-orthographe">Dictée en CM2 : comment progresser en orthographe</a></li>
         <li><a href="/blog/corriger-dictees-professeurs">Corriger les dictées plus vite : le guide des professeurs</a></li>
+        <li><a href="/blog/galac6-professeur-francais">Galac6 pour un professeur de français</a></li>
         <li><a href="/reviser-brevet">Réviser le brevet avec l'IA, dictée comprise</a></li>
         <li><a href="/soutien-scolaire-ia">Le soutien scolaire par IA, du CP à la terminale</a></li>
         <li><a href="/tarifs">Les tarifs de Galac6</a></li>

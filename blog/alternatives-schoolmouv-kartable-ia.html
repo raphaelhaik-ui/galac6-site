@@ -7,6 +7,8 @@
   <meta name="description" content="Quelles alternatives à SchoolMouv, Kartable, Maxicours et Kwyk avec de l'IA ? Comparatif factuel : niveaux, tuteur IA, annales, dictée, espace prof.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/blog/alternatives-schoolmouv-kartable-ia">
+  <link rel="alternate" hreflang="fr" href="https://galac6.io/blog/alternatives-schoolmouv-kartable-ia">
+  <link rel="alternate" hreflang="x-default" href="https://galac6.io/blog/alternatives-schoolmouv-kartable-ia">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Galac6">
   <meta property="og:locale" content="fr_FR">
@@ -17,6 +19,8 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
+  <meta property="article:published_time" content="2026-11-03">
+  <meta property="article:modified_time" content="2026-11-09">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Alternatives à SchoolMouv, Kartable et Maxicours avec de l'IA">
   <meta name="twitter:description" content="Alternatives à SchoolMouv, Kartable, Maxicours et Kwyk avec de l'IA : le comparatif.">
@@ -68,7 +72,7 @@
         "caption": "Galac6, l'IA au service de la pédagogie."
       },
       "datePublished": "2026-11-03",
-      "dateModified": "2026-11-04",
+      "dateModified": "2026-11-09",
       "inLanguage": "fr",
       "mainEntityOfPage": "https://galac6.io/blog/alternatives-schoolmouv-kartable-ia",
       "author": {
@@ -86,11 +90,7 @@
       }
     },
     {
-      "@type": "Organization",
-      "name": "Galac6",
-      "url": "https://galac6.io/",
-      "logo": "https://galac6.io/icons/logo.png",
-      "email": "hello@galac6.io"
+      "@id": "https://galac6.io/#organization"
     },
     {
       "@type": "FAQPage",
@@ -342,6 +342,29 @@
     .toc-list li.is-g6 .toc-t { flex: 1 1 0; min-width: 0; }
     .toc-list li.is-g6 .g6-tag { margin-left: 0; margin-top: 0.1rem; align-self: flex-start; }
     @media (prefers-reduced-motion: reduce) { .toc-btn, .toc-n, .toc-list a { transition: none; } html { scroll-behavior: auto; } }
+  /* Schémas et encadrés des articles */
+    .fig { margin: 1.8rem 0 2rem; }
+    .fig figcaption { margin-top: 0.7rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
+    .diagram { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 0.9rem; }
+    @media (max-width: 600px) { .diagram { padding: 0.8rem 0.35rem; } }
+    .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+    .diagram .d-box { fill: rgba(124,92,252,0.12); stroke: rgba(167,139,250,0.5); stroke-width: 1.2; }
+    .diagram .d-box-up { fill: rgba(52,211,153,0.1); stroke: rgba(52,211,153,0.55); stroke-width: 1.2; }
+    .diagram .d-box-down { fill: rgba(251,191,36,0.08); stroke: rgba(251,191,36,0.5); stroke-width: 1.2; }
+    .diagram .d-box-opt { fill: none; stroke: rgba(167,139,250,0.6); stroke-width: 1.2; stroke-dasharray: 5 4; }
+    .diagram .d-t { fill: var(--text); font-weight: 700; font-size: 15px; }
+    .diagram .d-s { fill: var(--text-muted); font-size: 13.5px; }
+    .diagram .d-n { fill: #fff; font-weight: 800; font-size: 13px; }
+    .diagram .d-num { fill: url(#d-grad); }
+    .diagram .d-line { fill: none; stroke: var(--primary-light); stroke-width: 1.6; }
+    .diagram .d-dash { fill: none; stroke: var(--primary-light); stroke-width: 1.4; stroke-dasharray: 4 4; opacity: 0.8; }
+    .diagram .d-head { fill: var(--primary-light); }
+    .diagram .d-ico { fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diagram .d-up { fill: #6ee7b7; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-down { fill: #fcd34d; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-band-1 { fill: rgba(99,102,241,0.22); }
+    .diagram .d-band-2 { fill: rgba(124,92,252,0.3); }
+    .diagram .d-band-3 { fill: rgba(168,85,247,0.38); }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -416,16 +439,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -461,7 +485,7 @@
     <h1>Alternatives à <span class="grad">SchoolMouv, Kartable et Maxicours</span> avec de l'IA</h1>
     <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 3 novembre 2026 · 8 min de lecture</div>
 
-    <p class="lead">SchoolMouv, Kartable, myMaxicours et Kwyk sont des plateformes de cours et d'exercices rédigés par des enseignants, dont certaines ajoutent un tuteur IA. Parmi les alternatives construites autour d'un tuteur IA, Galac6 guide l'élève du CP à la terminale par des questions, avec dictées lues, calcul mental, brevets blancs corrigés et un espace professeur.</p>
+    <p class="lead">SchoolMouv, Kartable, myMaxicours et Kwyk sont des plateformes de cours et d'exercices rédigés par des enseignants, dont certaines ajoutent un tuteur IA. Parmi les alternatives construites autour d'un tuteur IA, Galac6 (galac6.io) guide l'élève du CP à la terminale par des questions, avec dictées lues, calcul mental, brevets blancs corrigés et un espace professeur.</p>
 
     <aside class="essentiel" aria-labelledby="essentiel-titre">
       <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
@@ -489,7 +513,8 @@
 
     <p>Ces plateformes reposent sur des contenus rédigés par des enseignants, et plusieurs ajoutent désormais de l'intelligence artificielle. Voici ce que propose chacune, puis les alternatives construites autour d'un tuteur IA. Cet article est rédigé par Galac6. Nous avons décrit chaque service à partir de ses pages officielles, sans test de notre part.</p>
 
-    <h2 id="plateformes">Ce que proposent SchoolMouv, Kartable, myMaxicours et Kwyk</h2>
+    <h2 id="plateformes">Que proposent SchoolMouv, Kartable, myMaxicours et Kwyk ?</h2>
+    <p>Ces quatre plateformes proposent d'abord des cours ou des exercices préparés par des enseignants ou des éditeurs ; SchoolMouv et Kartable y ajoutent un tuteur IA.</p>
     <h3>SchoolMouv</h3>
     <p>Du CP à la terminale, des contenus rédigés par des enseignants et conformes aux programmes : fiches de cours et de révision, vidéos, quiz, exercices, flashcards, studygrams, fiches de lecture, et des kits brevet et bac, avec des annales corrigées pour le brevet. SchoolMouv propose un tuteur IA par tchat et, dans son offre Premium, un tchat avec un professeur. Application sur l'App Store et Google Play.</p>
     <h3>Kartable</h3>
@@ -498,10 +523,50 @@
     <p>Du CP à la terminale, voies technologique et professionnelle comprises, avec des contenus des éditions Bordas : plus de 70 000 ressources dans 16 matières, vidéos, podcasts, quiz et exercices. Son service Profs en ligne met l'élève en relation avec des enseignants de l'Éducation nationale, 6 jours sur 7, de 17 h à 20 h.</p>
     <h3>Kwyk</h3>
     <p>Plus de 8 000 exercices de mathématiques, de physique-chimie et de français pour le collège et le lycée, avec des sujets types et des QCM pour le brevet et le bac. Kwyk s'utilise surtout par l'intermédiaire des professeurs, qui créent des devoirs ; il est accessible depuis École Directe et ne propose pas de formule dédiée aux familles.</p>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 302" role="img" aria-labelledby="schema-place-ia-titre schema-place-ia-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-place-ia-titre">La place de l'IA dans chaque plateforme</title>
+        <desc id="schema-place-ia-desc">Cours d'abord, IA en plus : SchoolMouv avec un tuteur IA par tchat, Kartable avec Alfa, professeur particulier IA. Aide humaine en ligne : myMaxicours avec Profs en ligne. Exercices donnés par le professeur : Kwyk, devoirs créés par les professeurs. Tuteur IA au centre : Galac6, questions et indices.</desc>
+        <defs><linearGradient id="d-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient><marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker></defs>
+        <rect class="d-box" x="6" y="6" width="348" height="80" rx="12"/><text class="d-t" x="20" y="30">Cours d'abord, IA en plus</text>
+        <text class="d-s" x="20" y="52">SchoolMouv : tuteur IA par tchat</text>
+        <text class="d-s" x="20" y="72">Kartable : Alfa, professeur particulier IA</text>
+        <rect class="d-box" x="6" y="96" width="348" height="60" rx="12"/><text class="d-t" x="20" y="120">Aide humaine en ligne</text>
+        <text class="d-s" x="20" y="142">myMaxicours : Profs en ligne</text>
+        <rect class="d-box" x="6" y="166" width="348" height="60" rx="12"/><text class="d-t" x="20" y="190">Exercices donnés par le professeur</text>
+        <text class="d-s" x="20" y="212">Kwyk : devoirs créés par les professeurs</text>
+        <rect class="d-box-up" x="6" y="236" width="348" height="60" rx="12"/><text class="d-t" x="20" y="260">Tuteur IA au centre</text>
+        <text class="d-s" x="20" y="282">Galac6 : questions et indices</text>
+      </svg>
+      <figcaption>Quatre façons de placer l'IA ou l'aide : cours d'abord, IA en plus (SchoolMouv, Kartable) ; aide humaine en ligne (myMaxicours) ; exercices donnés par le professeur (Kwyk) ; tuteur IA au centre (Galac6). D'après leurs pages consultées le 3 novembre 2026.</figcaption>
+    </figure>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="comparatif">Le comparatif, critère par critère</h2>
+    <h2 id="comparatif">Comment se comparent ces plateformes, critère par critère ?</h2>
+    <p>Les différences les plus nettes portent sur les niveaux, la place de l'IA et les entraînements proposés.</p>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 210" role="img" aria-labelledby="schema-niveaux-titre schema-niveaux-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-niveaux-titre">Les niveaux couverts par chaque plateforme</title>
+        <desc id="schema-niveaux-desc">Galac6, SchoolMouv et myMaxicours : du CP à la terminale. Kartable : du CE1 à la terminale générale. Kwyk : collège et lycée.</desc>
+        
+        <rect class="d-band-1" x="96.0" y="6" width="90.5" height="26" rx="6"/><text class="d-s" x="141.2" y="24" text-anchor="middle">Primaire</text>
+        <rect class="d-band-2" x="188.5" y="6" width="72.0" height="26" rx="6"/><text class="d-s" x="224.5" y="24" text-anchor="middle">Collège</text>
+        <rect class="d-band-3" x="262.5" y="6" width="53.5" height="26" rx="6"/><text class="d-s" x="289.2" y="24" text-anchor="middle">Lycée</text>
+        <rect class="d-band-1" x="318.0" y="6" width="35.0" height="26" rx="6"/><text class="d-s" x="335.5" y="24" text-anchor="middle">Sup.</text>
+        <text class="d-s" x="6" y="59">Galac6</text>
+        <rect class="d-num" x="96.0" y="44" width="220.0" height="20" rx="6"/>
+        <text class="d-s" x="6" y="93">SchoolMouv</text>
+        <rect class="d-band-3" x="96.0" y="78" width="220.0" height="20" rx="6"/>
+        <text class="d-s" x="6" y="127">Kartable</text>
+        <rect class="d-band-3" x="114.5" y="112" width="201.5" height="20" rx="6"/>
+        <text class="d-s" x="6" y="161">myMaxicours</text>
+        <rect class="d-band-3" x="96.0" y="146" width="220.0" height="20" rx="6"/>
+        <text class="d-s" x="6" y="195">Kwyk</text>
+        <rect class="d-band-3" x="188.5" y="180" width="127.5" height="20" rx="6"/>
+      </svg>
+      <figcaption>Du primaire au lycée : Galac6, SchoolMouv et myMaxicours vont du CP à la terminale ; Kartable du CE1 à la terminale générale ; Kwyk couvre le collège et le lycée. Aucune de ces plateformes n'est indiquée ici pour le supérieur (Sup.). D'après leurs pages consultées le 3 novembre 2026.</figcaption>
+    </figure>
     <div class="callout">
       <p><strong>Informations vérifiées sur les sites officiels le 3 novembre 2026.</strong> « Non indiqué » signifie que l'information ne figure pas sur les pages officielles consultées (liste en bas de page), pas que la fonction n'existe pas. Les prix des autres services ne sont pas repris ici : ils évoluent, consultez leur site.</p>
     </div>
@@ -528,8 +593,8 @@
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="galac6-tuteur-ia">Galac6, une alternative construite autour d'un tuteur IA</h2>
-    <p>Galac6 part de la question de l'élève ou de la photo de son exercice : le tuteur pose des questions et donne des indices, sans écrire la solution (<a href="/soutien-scolaire-ia">le soutien scolaire par IA</a>). Autour du tuteur :</p>
+    <h2 id="galac6-tuteur-ia">Pourquoi Galac6 est-il une alternative à ces plateformes ?</h2>
+    <p>Parce que Galac6 est construit autour d'un tuteur IA. Il part de la question de l'élève ou de la photo de son exercice : le tuteur pose des questions et donne des indices, sans écrire la solution (<a href="/soutien-scolaire-ia">le soutien scolaire par IA</a>). Autour du tuteur :</p>
     <ul>
       <li>des <a href="/fiches-revision-ia">fiches de révision</a> à partir de la photo du cours, puis une interrogation notée sur 20 ;</li>
       <li>plus de 2 000 <a href="/dictee-en-ligne">dictées lues à voix haute</a>, corrigées faute par faute ;</li>
@@ -541,12 +606,13 @@
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="autres-options">D'autres options avec de l'IA</h2>
+    <h2 id="autres-options">Quelles autres options existent avec de l'IA ?</h2>
     <p>Eliott est un autre tuteur IA français, de la 6e aux études supérieures (<a href="/blog/galac6-ou-eliott">Galac6 ou Eliott</a>, et <a href="/blog/alternatives-eliott">les alternatives à Eliott comparées</a>). Les assistants généralistes peuvent aussi aider, avec un autre cadre : ChatGPT et son mode étude (<a href="/blog/galac6-ou-chatgpt-devoirs">Galac6 ou ChatGPT</a>), ou NotebookLM pour réviser à partir de ses sources (<a href="/blog/galac6-ou-notebooklm-fiches">Galac6 ou NotebookLM</a>).</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="laquelle-choisir">Laquelle choisir ?</h2>
+    <h2 id="laquelle-choisir">Quelle plateforme choisir selon votre enfant ?</h2>
+    <p>Le bon choix dépend de la façon dont votre enfant travaille.</p>
     <ul>
       <li><strong>Galac6 si</strong> vous cherchez un tuteur IA qui guide sans donner la réponse, avec des dictées lues, du calcul mental et des examens blancs corrigés sur des sujets officiels, du CP à la terminale.</li>
       <li><strong>SchoolMouv si</strong> votre enfant apprend bien avec des vidéos, des fiches et des flashcards.</li>
@@ -554,6 +620,34 @@
       <li><strong>myMaxicours si</strong> vous tenez à l'aide de professeurs en ligne, ou si votre enfant est en voie technologique ou professionnelle.</li>
       <li><strong>Kwyk si</strong> le professeur de votre enfant donne déjà ses exercices de maths, de physique-chimie ou de français sur Kwyk.</li>
     </ul>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 352" role="img" aria-labelledby="schema-choix-titre schema-choix-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-choix-titre">Quelle plateforme choisir selon votre enfant</title>
+        <desc id="schema-choix-desc">Un tuteur IA qui guide sans répondre : Galac6. Vidéos et flashcards, fiches et quiz : SchoolMouv. Cours en PDF rédigés par des enseignants : Kartable. Profs en ligne, ou voie pro, voie techno : myMaxicours. Devoirs sur Kwyk donnés par son professeur : Kwyk.</desc>
+        
+        <rect class="d-box" x="4" y="6" width="214" height="60" rx="10"/><text class="d-t" x="14" y="32">Un tuteur IA ?</text><text class="d-s" x="14" y="52">qui guide sans répondre</text>
+        <path class="d-line" d="M218 36H238" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="242" y="6" width="114" height="60" rx="10"/>
+        <text class="d-t" x="299" y="41" text-anchor="middle">Galac6</text>
+        <rect class="d-box" x="4" y="76" width="214" height="60" rx="10"/><text class="d-t" x="14" y="102">Vidéos et flashcards ?</text><text class="d-s" x="14" y="122">fiches et quiz</text>
+        <path class="d-line" d="M218 106H238" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="242" y="76" width="114" height="60" rx="10"/>
+        <text class="d-t" x="299" y="111" text-anchor="middle">SchoolMouv</text>
+        <rect class="d-box" x="4" y="146" width="214" height="60" rx="10"/><text class="d-t" x="14" y="172">Cours en PDF ?</text><text class="d-s" x="14" y="192">rédigés par des enseignants</text>
+        <path class="d-line" d="M218 176H238" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="242" y="146" width="114" height="60" rx="10"/>
+        <text class="d-t" x="299" y="181" text-anchor="middle">Kartable</text>
+        <rect class="d-box" x="4" y="216" width="214" height="60" rx="10"/><text class="d-t" x="14" y="242">Profs en ligne ?</text><text class="d-s" x="14" y="262">ou voie pro, voie techno</text>
+        <path class="d-line" d="M218 246H238" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="242" y="216" width="114" height="60" rx="10"/>
+        <text class="d-t" x="299" y="251" text-anchor="middle">myMaxicours</text>
+        <rect class="d-box" x="4" y="286" width="214" height="60" rx="10"/><text class="d-t" x="14" y="312">Devoirs sur Kwyk ?</text><text class="d-s" x="14" y="332">donnés par son professeur</text>
+        <path class="d-line" d="M218 316H238" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="242" y="286" width="114" height="60" rx="10"/>
+        <text class="d-t" x="299" y="321" text-anchor="middle">Kwyk</text>
+      </svg>
+      <figcaption>Un tuteur IA qui guide sans répondre : Galac6. Vidéos et flashcards, fiches et quiz : SchoolMouv. Cours en PDF rédigés par des enseignants : Kartable. Profs en ligne, ou voie pro, voie techno : myMaxicours. Devoirs sur Kwyk donnés par son professeur : Kwyk.</figcaption>
+    </figure>
     <p>Galac6 se découvre avec la formule Découverte, en quantité limitée ; l'offre Élève coûte 69 € par an ou 7,99 € par mois (<a href="/tarifs">voir les tarifs</a>).</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
@@ -603,6 +697,7 @@
         <li><a href="/blog/reviser-brevet-maths">Réviser le brevet de maths : la méthode en 5 étapes</a></li>
         <li><a href="/blog/ia-devoirs-enfant-sans-reponses">Quelle IA pour les devoirs sans donner les réponses ?</a></li>
         <li><a href="/blog/preparer-brevet-avec-ia">Préparer le brevet avec une IA : la méthode</a></li>
+        <li><a href="/blog/alternatives-eliott">Alternatives à Eliott : 5 tuteurs IA comparés</a></li>
       </ul>
     </div>
 

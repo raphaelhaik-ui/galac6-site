@@ -87,6 +87,20 @@
       ],
       "email": "hello@galac6.io",
       "legalName": "RHK CONSEIL",
+      "foundingDate": "2026",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "RHK Conseil",
+        "legalName": "RHK CONSEIL",
+        "foundingDate": "2023",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "19 rue de Croulebarbe",
+          "postalCode": "75013",
+          "addressLocality": "Paris",
+          "addressCountry": "FR"
+        }
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "19 rue de Croulebarbe",
@@ -726,16 +740,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -802,7 +817,7 @@
     </div>
     <div class="hero-actions">
       <a href="https://galac6web.netlify.app/" class="btn btn-secondary" data-i18n="home.hero.signup">Inscription ou connexion</a>
-      <a href="/methode-pedagogique" class="link fr-only">Notre méthode pédagogique →</a>
+      <a href="/methode-pedagogique" class="link" data-i18n="home.hero.method">Notre méthode pédagogique →</a>
       <a href="/tarifs" class="link" data-i18n="home.hero.pricing">Voir les tarifs →</a>
     </div>
     <p class="made-fr"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="home.hero.madefr2">Conçu en France, données hébergées en France, IA traitée en Europe.</span></p>
@@ -848,6 +863,8 @@
       <!-- Schéma (masqué sous 560 px : la liste numérotée prend le relais) -->
       <div class="loop-graphic">
         <svg viewBox="0 0 640 600" role="img" data-i18n-aria="home.loop.aria" aria-label="Boucle en six étapes : l'élève travaille, chaque réponse est analysée, une carte de maîtrise se construit, Galac6 propose un travail sur mesure, parents et professeur voient où en est l'élève, le professeur donne des devoirs personnalisés, puis retour à l'élève.">
+          <title data-i18n="home.loop.svgtitle">La boucle Galac6 en six étapes</title>
+          <desc data-i18n="home.loop.aria">Boucle en six étapes : l'élève travaille, chaque réponse est analysée, une carte de maîtrise se construit, Galac6 propose un travail sur mesure, parents et professeur voient où en est l'élève, le professeur donne des devoirs personnalisés, puis retour à l'élève.</desc>
           <defs><linearGradient id="cgrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs>
           <circle class="loop-track" cx="320" cy="300" r="210"/>
           <path class="loop-arrow" d="M-6,-7 L7,0 L-6,7 Z" transform="translate(425 118.1) rotate(30)"/>
@@ -1269,7 +1286,7 @@
         <div class="footer-col">
           <span class="footer-col-title" data-i18n="footer.revise.title">Réviser</span>
           <a href="/soutien-scolaire-ia" data-i18n="footer.revise.ai">Soutien scolaire par IA</a>
-          <a href="/methode-pedagogique" class="fr-only">La méthode pédagogique</a>
+          <a href="/methode-pedagogique" data-i18n="footer.method">La méthode pédagogique</a>
           <a href="/reviser-brevet" data-i18n="footer.revise.brevet">Réviser le Brevet</a>
           <a href="/reviser-bac-francais" data-i18n="footer.revise.bac">Réviser le Bac de Français</a>
           <a href="/reviser-bac-maths">Réviser le Bac de maths</a>

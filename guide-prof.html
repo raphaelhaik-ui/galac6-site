@@ -47,6 +47,7 @@
     {
       "@type": "HowTo",
       "name": "Créer et donner un premier quiz avec Galac6",
+      "dateModified": "2026-11-09",
       "totalTime": "PT10M",
       "step": [
         {
@@ -464,16 +465,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -506,6 +508,7 @@
       <div class="hero-badge"><svg class="g6-ico g6-ico-inline" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Environ dix minutes</div>
       <h1>Votre premier quiz Galac6, <span class="gradient">étape par étape</span></h1>
       <p class="subtitle">De la création de votre compte jusqu'à la lecture des résultats de votre classe. Les noms des boutons sont écrits en gras, tels que vous les verrez dans Galac6.</p>
+      <p class="subtitle" style="font-size:0.9rem;margin-top:0.5rem">Mis à jour le <time datetime="2026-11-09">9 novembre 2026</time></p>
       <div class="hero-actions">
         <a href="https://galac6web.netlify.app/?utm_source=linkedin&amp;utm_medium=prospection&amp;utm_campaign=profs-testeurs-2026&amp;inscription=prof" class="btn btn-primary">Créer mon compte professeur</a>
         <a href="/profs-testeurs" class="btn btn-secondary">Le programme professeurs testeurs</a>

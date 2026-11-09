@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quelle IA pour aider son enfant aux devoirs sans lui donner les réponses ? — Galac6</title>
+  <title>Quelle IA pour les devoirs sans donner les réponses ?</title>
   <meta name="description" content="Quelle IA pour aider votre enfant aux devoirs sans lui donner les réponses ? Les critères à vérifier, puis ChatGPT, Gemini, Khanmigo et Galac6 comparés.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/blog/ia-devoirs-enfant-sans-reponses">
+  <link rel="alternate" hreflang="fr" href="https://galac6.io/blog/ia-devoirs-enfant-sans-reponses">
+  <link rel="alternate" hreflang="x-default" href="https://galac6.io/blog/ia-devoirs-enfant-sans-reponses">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Galac6">
   <meta property="og:locale" content="fr_FR">
@@ -18,7 +20,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
   <meta property="article:published_time" content="2026-11-03">
-  <meta property="article:modified_time" content="2026-11-04">
+  <meta property="article:modified_time" content="2026-11-09">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Quelle IA pour aider son enfant aux devoirs sans lui donner les réponses ?">
   <meta name="twitter:description" content="Quelle IA choisir pour aider votre enfant aux devoirs sans lui donner les réponses ? Les critères à vérifier, puis le mode étude de ChatGPT, l&#x27;apprentissage guidé de Gemini, Khanmigo et Galac6 présentés objectivement.">
@@ -70,7 +72,7 @@
         "caption": "Galac6, l'IA au service de la pédagogie."
       },
       "datePublished": "2026-11-03",
-      "dateModified": "2026-11-04",
+      "dateModified": "2026-11-09",
       "inLanguage": "fr-FR",
       "mainEntityOfPage": "https://galac6.io/blog/ia-devoirs-enfant-sans-reponses",
       "keywords": "IA devoirs, IA aide aux devoirs, IA qui ne donne pas les réponses, ChatGPT mode étude, Gemini apprentissage guidé, Khanmigo, Galac6, tuteur IA, parents",
@@ -336,6 +338,29 @@
     .toc-list li.is-g6 .toc-t { flex: 1 1 0; min-width: 0; }
     .toc-list li.is-g6 .g6-tag { margin-left: 0; margin-top: 0.1rem; align-self: flex-start; }
     @media (prefers-reduced-motion: reduce) { .toc-btn, .toc-n, .toc-list a { transition: none; } html { scroll-behavior: auto; } }
+  /* Schémas et encadrés des articles */
+    .fig { margin: 1.8rem 0 2rem; }
+    .fig figcaption { margin-top: 0.7rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
+    .diagram { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 0.9rem; }
+    @media (max-width: 600px) { .diagram { padding: 0.8rem 0.35rem; } }
+    .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+    .diagram .d-box { fill: rgba(124,92,252,0.12); stroke: rgba(167,139,250,0.5); stroke-width: 1.2; }
+    .diagram .d-box-up { fill: rgba(52,211,153,0.1); stroke: rgba(52,211,153,0.55); stroke-width: 1.2; }
+    .diagram .d-box-down { fill: rgba(251,191,36,0.08); stroke: rgba(251,191,36,0.5); stroke-width: 1.2; }
+    .diagram .d-box-opt { fill: none; stroke: rgba(167,139,250,0.6); stroke-width: 1.2; stroke-dasharray: 5 4; }
+    .diagram .d-t { fill: var(--text); font-weight: 700; font-size: 15px; }
+    .diagram .d-s { fill: var(--text-muted); font-size: 13.5px; }
+    .diagram .d-n { fill: #fff; font-weight: 800; font-size: 13px; }
+    .diagram .d-num { fill: url(#d-grad); }
+    .diagram .d-line { fill: none; stroke: var(--primary-light); stroke-width: 1.6; }
+    .diagram .d-dash { fill: none; stroke: var(--primary-light); stroke-width: 1.4; stroke-dasharray: 4 4; opacity: 0.8; }
+    .diagram .d-head { fill: var(--primary-light); }
+    .diagram .d-ico { fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diagram .d-up { fill: #6ee7b7; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-down { fill: #fcd34d; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-band-1 { fill: rgba(99,102,241,0.22); }
+    .diagram .d-band-2 { fill: rgba(124,92,252,0.3); }
+    .diagram .d-band-3 { fill: rgba(168,85,247,0.38); }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -410,16 +435,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -455,7 +481,7 @@
     <h1>Quelle <span class="grad">IA</span> pour aider son enfant aux devoirs sans lui donner les réponses ?</h1>
     <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 3 novembre 2026 · 7 min de lecture</div>
 
-    <p class="lead">Pour aider votre enfant aux devoirs sans lui donner les réponses, choisissez une IA qui guide par des questions et des indices au lieu d'écrire la solution : c'est le principe du mode étude de ChatGPT, de l'apprentissage guidé de Gemini, de Khanmigo et de Galac6. Galac6 est, en plus, conçu pour le programme français, du CP à la terminale.</p>
+    <p class="lead">Pour aider votre enfant aux devoirs sans lui donner les réponses, choisissez une IA qui guide par des questions et des indices au lieu d'écrire la solution : c'est le principe du mode étude de ChatGPT, de l'apprentissage guidé de Gemini, de Khanmigo et de Galac6. Galac6 (galac6.io) est, en plus, conçu pour le programme français, du CP à la terminale.</p>
 
     <aside class="essentiel" aria-labelledby="essentiel-titre">
       <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
@@ -486,11 +512,38 @@
 
     <h2 id="ia-classique">Pourquoi une IA classique donne-t-elle souvent la réponse ?</h2>
     <p>Un assistant généraliste est fait pour répondre à la demande telle qu'elle est posée. Si votre enfant colle l'énoncé d'un exercice, il reçoit souvent la solution complète, rédigée proprement. Le devoir est rendu, mais rien n'a été appris, et la difficulté revient le jour du contrôle.</p>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 254" role="img" aria-labelledby="schema-reponse-titre schema-reponse-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-reponse-titre">Ce qui se passe avec un assistant classique et avec une IA qui guide</title>
+        <desc id="schema-reponse-desc">Avec un assistant classique : énoncé collé, solution complète rédigée proprement, devoir rendu, rien n'est appris. Avec une IA qui guide : énoncé, questions et indices de plus en plus précis, l'enfant trouve et peut réexpliquer.</desc>
+        <defs><linearGradient id="d-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient><marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker></defs>
+        <text class="d-t" x="92" y="20" text-anchor="middle">Assistant classique</text>
+        <text class="d-t" x="268" y="20" text-anchor="middle">IA qui guide</text>
+        <rect class="d-box" x="6" y="32" width="172" height="58" rx="10"/>
+        <text class="d-s" x="92" y="66" text-anchor="middle">Énoncé collé</text>
+        <path class="d-line" d="M92 90V106" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="6" y="110" width="172" height="58" rx="10"/>
+        <text class="d-s" x="92" y="135" text-anchor="middle">Solution complète</text><text class="d-s" x="92" y="154" text-anchor="middle">rédigée proprement</text>
+        <path class="d-line" d="M92 168V184" marker-end="url(#d-arr)"/>
+        <rect class="d-box-down" x="6" y="188" width="172" height="58" rx="10"/>
+        <text class="d-s" x="92" y="213" text-anchor="middle">Devoir rendu,</text><text class="d-s" x="92" y="232" text-anchor="middle">rien n'est appris</text>
+        <rect class="d-box" x="182" y="32" width="172" height="58" rx="10"/>
+        <text class="d-s" x="268" y="66" text-anchor="middle">Énoncé</text>
+        <path class="d-line" d="M268 90V106" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="182" y="110" width="172" height="58" rx="10"/>
+        <text class="d-s" x="268" y="135" text-anchor="middle">Questions et indices</text><text class="d-s" x="268" y="154" text-anchor="middle">de plus en plus précis</text>
+        <path class="d-line" d="M268 168V184" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="182" y="188" width="172" height="58" rx="10"/>
+        <text class="d-s" x="268" y="213" text-anchor="middle">L'enfant trouve</text><text class="d-s" x="268" y="232" text-anchor="middle">et peut réexpliquer</text>
+      </svg>
+      <figcaption>Avec un assistant classique, l'énoncé collé donne une solution complète : le devoir est rendu mais rien n'est appris. Avec une IA qui guide, des questions et des indices de plus en plus précis aident l'enfant : il trouve et peut réexpliquer.</figcaption>
+    </figure>
     <p>Le cadre d'usage de l'IA en éducation publié par le ministère de l'Éducation nationale en juin 2025 est clair : faire réaliser un devoir par une IA générative sans autorisation de l'enseignant et sans travail personnel d'appropriation est considéré comme une fraude. Ce cadre prévoit un usage des IA génératives en classe à partir de la 4e, encadré par l'enseignant. Bonne nouvelle : plusieurs outils proposent désormais un mode pensé pour apprendre plutôt que pour répondre.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="criteres">Quels critères pour choisir une IA d'aide aux devoirs ?</h2>
+    <p>Une bonne IA d'aide aux devoirs remplit six critères : elle guide, suit le programme, vérifie les calculs, convient à l'âge de l'enfant, respecte ses données et permet de suivre ses progrès.</p>
     <ol class="steps">
       <li><strong>Elle guide au lieu de répondre.</strong> Elle demande à l'enfant ce qu'il a compris, découpe l'exercice en étapes et donne des indices de plus en plus précis.</li>
       <li><strong>Elle suit le programme de sa classe.</strong> Les méthodes et le vocabulaire attendus en France ne sont pas toujours ceux d'un autre pays.</li>
@@ -499,22 +552,36 @@
       <li><strong>Vous savez où vont les données.</strong> Vérifiez où elles sont hébergées et si elles servent à entraîner des modèles.</li>
       <li><strong>Vous pouvez suivre les progrès.</strong> Un rapport ou un historique vous aide à voir si votre enfant apprend vraiment.</li>
     </ol>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 246" role="img" aria-labelledby="schema-criteres-titre schema-criteres-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-criteres-titre">Six critères pour choisir une IA d'aide aux devoirs</title>
+        <desc id="schema-criteres-desc">Un : elle guide au lieu de répondre. Deux : elle suit le programme de sa classe. Trois : les résultats des calculs sont vérifiés. Quatre : l'âge, selon les conditions de chaque service. Cinq : les données, leur hébergement et leur usage. Six : les progrès, grâce à un rapport ou un historique.</desc>
+        
+        <rect class="d-box" x="6" y="6" width="170" height="70" rx="12"/><circle class="d-num" cx="26" cy="30" r="12"/><text class="d-n" x="26" y="35" text-anchor="middle">1</text><text class="d-t" x="44" y="35">Elle guide</text><text class="d-s" x="18" y="60">au lieu de répondre</text>
+        <rect class="d-box" x="184" y="6" width="170" height="70" rx="12"/><circle class="d-num" cx="204" cy="30" r="12"/><text class="d-n" x="204" y="35" text-anchor="middle">2</text><text class="d-t" x="222" y="35">Programme</text><text class="d-s" x="196" y="60">de sa classe</text>
+        <rect class="d-box" x="6" y="86" width="170" height="70" rx="12"/><circle class="d-num" cx="26" cy="110" r="12"/><text class="d-n" x="26" y="115" text-anchor="middle">3</text><text class="d-t" x="44" y="115">Calculs</text><text class="d-s" x="18" y="140">résultats vérifiés</text>
+        <rect class="d-box" x="184" y="86" width="170" height="70" rx="12"/><circle class="d-num" cx="204" cy="110" r="12"/><text class="d-n" x="204" y="115" text-anchor="middle">4</text><text class="d-t" x="222" y="115">Âge</text><text class="d-s" x="196" y="140">conditions du service</text>
+        <rect class="d-box" x="6" y="166" width="170" height="70" rx="12"/><circle class="d-num" cx="26" cy="190" r="12"/><text class="d-n" x="26" y="195" text-anchor="middle">5</text><text class="d-t" x="44" y="195">Données</text><text class="d-s" x="18" y="220">hébergement, usage</text>
+        <rect class="d-box" x="184" y="166" width="170" height="70" rx="12"/><circle class="d-num" cx="204" cy="190" r="12"/><text class="d-n" x="204" y="195" text-anchor="middle">6</text><text class="d-t" x="222" y="195">Progrès</text><text class="d-s" x="196" y="220">rapport, historique</text>
+      </svg>
+      <figcaption>Les six critères : elle guide au lieu de répondre, suit le programme de sa classe, a des résultats de calculs vérifiés, respecte les conditions de chaque service sur l'âge, indique l'hébergement et l'usage des données, propose un rapport ou un historique des progrès.</figcaption>
+    </figure>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="chatgpt-mode-etude">Le mode étude de ChatGPT, est-ce suffisant ?</h2>
-    <p>OpenAI a lancé le mode étude (« study mode ») de ChatGPT le 29 juillet 2025. Selon OpenAI, il aide à travailler un problème étape par étape au lieu de donner simplement la réponse, avec des questions et des indices. Il s'active depuis les outils de ChatGPT, sur le web et dans les applications.</p>
+    <p>Le mode étude peut suffire à un adolescent autonome, à condition qu'il le choisisse et le garde actif. OpenAI a lancé le mode étude (« study mode ») de ChatGPT le 29 juillet 2025. Selon OpenAI, il aide à travailler un problème étape par étape au lieu de donner simplement la réponse, avec des questions et des indices. Il s'active depuis les outils de ChatGPT, sur le web et dans les applications.</p>
     <p>C'est un vrai progrès pour un assistant généraliste. Deux points à connaître : c'est un mode que l'on choisit, donc l'élève peut revenir à une conversation classique ; et le centre d'aide d'OpenAI précise qu'il peut arriver que le mode étude donne une réponse directe. Les conditions d'utilisation d'OpenAI fixent un âge minimum de 13 ans, avec l'accord d'un parent avant 18 ans.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="gemini">Et l'apprentissage guidé de Gemini ?</h2>
-    <p>Google a présenté le 6 août 2025 « Guided Learning », l'apprentissage guidé de Gemini. Selon Google, ce mode aide à comprendre un sujet plutôt qu'à obtenir une réponse rapide : il découpe les problèmes étape par étape et peut s'appuyer sur des images, des schémas, des vidéos et des questionnaires. Comme pour ChatGPT, il s'agit d'un mode à sélectionner dans un assistant généraliste.</p>
+    <p>L'apprentissage guidé de Gemini suit la même logique : c'est un mode à sélectionner dans un assistant généraliste. Google a présenté le 6 août 2025 « Guided Learning », l'apprentissage guidé de Gemini. Selon Google, ce mode aide à comprendre un sujet plutôt qu'à obtenir une réponse rapide : il découpe les problèmes étape par étape et peut s'appuyer sur des images, des schémas, des vidéos et des questionnaires.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="khanmigo">Khanmigo est-il disponible pour les familles en France ?</h2>
-    <p>Khanmigo est le tuteur IA de Khan Academy, une organisation à but non lucratif. Son site indique qu'il pousse l'élève à réfléchir et à résoudre les problèmes sans lui donner directement les réponses, de l'école primaire à l'université. En revanche, le même site précise que l'offre pour les parents et les élèves est réservée aux personnes qui vivent aux États-Unis, avec une adresse de facturation américaine. Ses contenus suivent le système scolaire américain.</p>
+    <p>Non : d'après son site, l'offre de Khanmigo pour les parents et les élèves est réservée aux personnes qui vivent aux États-Unis. Khanmigo est le tuteur IA de Khan Academy, une organisation à but non lucratif. Son site indique qu'il pousse l'élève à réfléchir et à résoudre les problèmes sans lui donner directement les réponses, de l'école primaire à l'université. Le même site demande une adresse de facturation américaine pour cette offre. Ses contenus suivent le système scolaire américain.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
@@ -529,6 +596,22 @@
       <li><strong>Les données</strong> : elles sont hébergées en France, dans une base de données à Paris, et l'IA est traitée en Europe. Elles ne sont jamais vendues et ne servent pas à entraîner des modèles. Pour les moins de 15 ans, l'accord d'un parent est obligatoire en dehors du cadre scolaire.</li>
     </ul>
     <p>Galac6 couvre toutes les matières, dont les spécialités du lycée, et propose aussi des entraînements ciblés : <a href="/dictee-en-ligne">dictée en ligne</a>, <a href="/calcul-mental-en-ligne">calcul mental</a> et <a href="/reviser-brevet">brevets blancs</a>. Comme toute IA, il peut se tromper : votre enfant garde son cours et son esprit critique. Le détail est sur la page <a href="/soutien-scolaire-ia">soutien scolaire par IA</a>.</p>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 282" role="img" aria-labelledby="schema-outils-titre schema-outils-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-outils-titre">Quatre IA qui guident au lieu de répondre</title>
+        <desc id="schema-outils-desc">Mode étude de ChatGPT : mode à choisir, à partir de 13 ans. Apprentissage guidé de Gemini : mode à sélectionner. Khanmigo : offre familles réservée aux États-Unis. Galac6 : guidage permanent, sur les programmes français.</desc>
+        
+        <rect class="d-box" x="6" y="6" width="348" height="60" rx="12"/><text class="d-t" x="20" y="30">Mode étude de ChatGPT</text>
+        <text class="d-s" x="20" y="52">mode à choisir, à partir de 13 ans</text>
+        <rect class="d-box" x="6" y="76" width="348" height="60" rx="12"/><text class="d-t" x="20" y="100">Apprentissage guidé de Gemini</text>
+        <text class="d-s" x="20" y="122">mode à sélectionner</text>
+        <rect class="d-box" x="6" y="146" width="348" height="60" rx="12"/><text class="d-t" x="20" y="170">Khanmigo</text>
+        <text class="d-s" x="20" y="192">offre familles réservée aux États-Unis</text>
+        <rect class="d-box-up" x="6" y="216" width="348" height="60" rx="12"/><text class="d-t" x="20" y="240">Galac6</text>
+        <text class="d-s" x="20" y="262">guidage permanent, programmes français</text>
+      </svg>
+      <figcaption>Quatre IA qui guident au lieu de répondre, d'après leurs pages officielles citées en sources. Galac6 assure un guidage permanent, sur les programmes français ; le mode étude de ChatGPT, à partir de 13 ans, et l'apprentissage guidé de Gemini sont à sélectionner ; l'offre familles de Khanmigo est réservée aux États-Unis.</figcaption>
+    </figure>
     <div style="margin: 1.5rem 0;">
       <a href="https://galac6web.netlify.app/" class="cta-btn">Essayer l'aide aux devoirs →</a>
     </div>
@@ -536,7 +619,7 @@
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="bien-utiliser">Comment bien utiliser une IA pour les devoirs à la maison ?</h2>
-    <p>Quel que soit l'outil, quelques règles simples font la différence. Votre enfant cherche d'abord seul, puis demande un indice, jamais la réponse. Il doit pouvoir vous réexpliquer ce qu'il a fait avec ses mots. Il vérifie avec son cours et respecte les consignes de son professeur. Pour les plus jeunes, mieux vaut un outil conçu pour les enfants et un parent à proximité. Un bon signe : il sait refaire seul un exercice semblable, sans écran. Nous détaillons ces repères dans <a href="/blog/ia-devoirs-sans-tricher">L'IA pour faire ses devoirs sans tricher</a> et dans <a href="/blog/pisa-2025-ecole-du-futur">PISA 2025 et l'école du futur</a>.</p>
+    <p>Quel que soit l'outil, votre enfant cherche d'abord seul, puis demande un indice, jamais la réponse. Il doit pouvoir vous réexpliquer ce qu'il a fait avec ses mots. Il vérifie avec son cours et respecte les consignes de son professeur. Pour les plus jeunes, mieux vaut un outil conçu pour les enfants et un parent à proximité. Un bon signe : il sait refaire seul un exercice semblable, sans écran. Nous détaillons ces repères dans <a href="/blog/ia-devoirs-sans-tricher">L'IA pour faire ses devoirs sans tricher</a> et dans <a href="/blog/pisa-2025-ecole-du-futur">PISA 2025 et l'école du futur</a>.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
@@ -590,6 +673,8 @@
         <li><a href="/blog/alternatives-schoolmouv-kartable-ia">Alternatives à SchoolMouv et Kartable avec l'IA</a></li>
         <li><a href="/blog/preparer-brevet-avec-ia">Préparer le brevet avec une IA : la méthode</a></li>
         <li><a href="/blog/preparer-controle-maths-college">Comment préparer un contrôle de maths au collège, de la 6e à la 3e</a></li>
+        <li><a href="/blog/galac6-ou-chatgpt-devoirs">Galac6 ou ChatGPT pour les devoirs : quelle différence ?</a></li>
+        <li><a href="/blog/galac6-ou-notebooklm-fiches">Galac6 ou NotebookLM pour les fiches de révision ?</a></li>
       </ul>
     </div>
 

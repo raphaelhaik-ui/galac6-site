@@ -428,16 +428,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -547,6 +548,8 @@
           <div class="bc r"><b data-i18n="fam.report.card.low">À retravailler</b><span data-i18n="fam.report.card.low.d">Imparfait ou passé simple</span></div>
         </div>
         <svg class="spark" viewBox="0 0 300 80" role="img" aria-label="Exemple de courbe de progression sur six semaines, données fictives">
+          <title>Exemple de courbe de progression sur six semaines, données fictives</title>
+          <desc data-i18n="fam.spark.desc">Une courbe qui monte de la semaine 1 à la semaine 6. Ce n'est qu'un exemple, pas de vrais résultats.</desc>
           <line class="gd" x1="0" y1="10" x2="300" y2="10"/><line class="gd" x1="0" y1="36" x2="300" y2="36"/><line class="gd" x1="0" y1="62" x2="300" y2="62"/>
           <path class="ar" d="M8 56 L64 50 L120 47 L176 37 L232 32 L290 20 L290 62 L8 62 Z"/>
           <path class="ln" d="M8 56 L64 50 L120 47 L176 37 L232 32 L290 20"/>
@@ -628,7 +631,7 @@
     <section class="center" aria-labelledby="learn-title">
       <p class="eyebrow" data-i18n="fam.learn.tag">Ce que les parents apprécient</p>
       <h2 class="section-title" id="learn-title" data-i18n="fam.learn.title">Conçu pour apprendre, pas pour tricher.</h2>
-      <p class="learn-quote" data-i18n-html="fam.learn.quote">Tu peux demander à <strong>toutes les IA</strong> de faire tes devoirs. Ou tu peux demander à <strong>Galac6</strong> de t'apprendre à les faire toi-même. Ton choix.</p>
+      <p class="learn-quote" data-i18n-html="fam.learn.quote">Votre enfant peut demander à <strong>toutes les IA</strong> de faire ses devoirs. Ou il peut demander à <strong>Galac6</strong> de lui apprendre à les faire lui-même. Son choix.</p>
       <div class="learn-grid">
         <div class="learn-card">
           <span class="lv-icon"><svg class="ico" aria-hidden="true"><use href="#i-cap"/></svg></span>
@@ -789,7 +792,7 @@
         <div class="footer-col">
           <span class="footer-col-title" data-i18n="footer.revise.title">Réviser</span>
           <a href="/soutien-scolaire-ia" data-i18n="footer.revise.ai">Soutien scolaire par IA</a>
-          <a href="/methode-pedagogique" class="fr-only">La méthode pédagogique</a>
+          <a href="/methode-pedagogique" data-i18n="footer.method">La méthode pédagogique</a>
           <a href="/reviser-brevet" data-i18n="footer.revise.brevet">Réviser le Brevet</a>
           <a href="/reviser-bac-francais" data-i18n="footer.revise.bac">Réviser le Bac de Français</a>
           <a href="/reviser-bac-maths">Réviser le Bac de maths</a>

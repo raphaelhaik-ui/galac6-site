@@ -492,16 +492,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -718,7 +719,7 @@
         <div class="fam-text">
           <p class="eyebrow" data-i18n="sch.fam.eyebrow">Pour vos élèves et leurs familles</p>
           <h2 class="h2" data-i18n="sch.fam.title">Les élèves réfléchissent, les parents suivent</h2>
-          <p class="fr-only" style="color: var(--text-muted);">Pour voir comment vos élèves préparent un contrôle, de la leçon aux exercices adaptés à leur niveau, consultez <a href="/methode-pedagogique">la méthode pédagogique de Galac6</a>.</p><a class="btn btn-outline" href="/familles" data-i18n="sch.fam.cta">Galac6 pour les familles</a>
+          <p style="color: var(--text-muted);" data-i18n-html="ecole.method.link">Pour voir comment vos élèves préparent un contrôle, de la leçon aux exercices adaptés à leur niveau, consultez <a href="/methode-pedagogique">la méthode pédagogique de Galac6</a>.</p><a class="btn btn-outline" href="/familles" data-i18n="sch.fam.cta">Galac6 pour les familles</a>
         </div>
         <ul class="fam-list">
           <li><span class="pi"><svg class="ico" aria-hidden="true"><use href="#i-help"/></svg></span><div><b data-i18n="ecole.prom.p4.title">Une IA anti-IA classique</b><span data-i18n="ecole.prom.p4.desc2">Vos élèves font vos devoirs sur Galac6 et réfléchissent par eux-mêmes : l'IA les questionne et ne leur donne jamais la réponse.</span></div></li>
@@ -846,8 +847,8 @@
         <a href="/dictee-en-ligne" data-i18n="ecole.dictee.link">La dictée en ligne, lue et corrigée par Galac6</a>
         <a href="/calcul-mental-en-ligne#professeurs" data-i18n="sch.muscu.link">MuscuMath : le calcul mental piloté par le professeur</a>
         <a href="/annales-brevet-bac" data-i18n="ecole.annales.link">Les annales du brevet et du bac disponibles</a>
-        <a href="/blog/galac6-professeur-maths">Galac6 pour un professeur de maths</a>
-        <a href="/blog/galac6-professeur-francais">Galac6 pour un professeur de français</a>
+        <a href="/blog/galac6-professeur-maths" class="fr-only">Galac6 pour un professeur de maths</a>
+        <a href="/blog/galac6-professeur-francais" class="fr-only">Galac6 pour un professeur de français</a>
       </div>
     </div>
   </section>
@@ -960,7 +961,7 @@
       <a href="/about" style="color: var(--text-muted);" data-i18n="footer.contact.about">À propos</a>
       <a href="/dictee-en-ligne" style="color: var(--text-muted);" data-i18n="footer.dictee">Dictée en ligne</a>
       <a href="/annales-brevet-bac" style="color: var(--text-muted);" data-i18n="footer.annales">Annales du brevet et du bac</a>
-      <a href="/fiches-revision-ia" style="color: var(--text-muted);">Fiches de révision par IA</a><a href="/methode-pedagogique" style="color: var(--text-muted);" class="fr-only">La méthode pédagogique</a>
+      <a href="/fiches-revision-ia" style="color: var(--text-muted);">Fiches de révision par IA</a><a href="/methode-pedagogique" style="color: var(--text-muted);" data-i18n="footer.method">La méthode pédagogique</a>
       <a href="/familles-francaises-etranger" style="color: var(--text-muted);" data-i18n="footer.expat">Familles à l'étranger</a>
       <a href="/mentions-legales" style="color: var(--text-muted);" data-i18n="footer.legal.mentions">Mentions légales</a>
       <a href="/international" style="color: var(--text-muted);" data-i18n="footer.international">École hors de France ?</a>

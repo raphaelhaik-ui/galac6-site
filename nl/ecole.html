@@ -504,16 +504,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 <script>window.G6_DYN = {"demo": "Een demonstratie aanvragen", "devis": "Een offerte aanvragen", "fail": "Verzenden is niet gelukt. Probeer het zo meteen opnieuw of schrijf ons op <a href=\"mailto:hello@galac6.io\">hello@galac6.io</a>.", "ok": "Dank u, uw aanvraag is verzonden. We antwoorden zo snel mogelijk op het opgegeven adres.", "pilote": "Pilotschool worden", "quickErr": "Vul een volledig e-mailadres en de naam van uw school in.", "sending": "Bezig met verzenden…", "title": "Leerkrachten en scholen: ken elke leerling | Galac6"};</script>
 <script>window.G6_COOKIE_TXT = {"texte": "We willen graag de bezoeken aan deze website meten (Google Analytics) en de resultaten van onze advertenties (Google Ads, Meta). Deze diensten plaatsen cookies en worden alleen geladen als u toestemming geeft. U kunt op elk moment van gedachten veranderen via de link «Cookies beheren» onderaan elke pagina.", "plus": "Meer weten", "refuser": "Alles weigeren", "perso": "Aanpassen", "accepter": "Alles accepteren", "titrePerso": "Kies uw cookies", "audienceTitre": "Bezoekersstatistieken", "audienceTexte": "Google Analytics: telt de bezoeken en bekeken pagina's, om de website te verbeteren.", "pubTitre": "Reclame", "pubTexte": "Google Ads en Meta (Facebook, Instagram): meten de resultaten van onze advertenties.", "enregistrer": "Mijn keuzes opslaan", "necessaires": "De website bewaart ook uw taal en deze keuze op uw apparaat (noodzakelijk, geen toestemming nodig).", "lien": "/mentions-legales#cookies-en"};</script>
@@ -729,7 +730,7 @@
 <div class="fam-text">
 <p class="eyebrow">Voor uw leerlingen en hun gezinnen</p>
 <h2 class="h2">Leerlingen denken na, ouders volgen mee</h2>
-<a class="btn btn-outline" href="/nl/familles">Galac6 voor gezinnen</a>
+<p style="color: var(--text-muted);">Wilt u zien hoe uw leerlingen een toets voorbereiden, van de les tot oefeningen op hun niveau? Lees dan <a href="/nl/onderwijsmethode">de onderwijsmethode van Galac6</a>.</p><a class="btn btn-outline" href="/nl/familles">Galac6 voor gezinnen</a>
 </div>
 <ul class="fam-list">
 <li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-help"></use></svg></span><div><b>Het tegenovergestelde van een gewone AI</b><span>Uw leerlingen maken uw huiswerk op Galac6 en denken zelf na: de AI stelt hun vragen en geeft hun nooit het antwoord.</span></div></li>
@@ -852,8 +853,8 @@
 <a href="/dictee-en-ligne" hreflang="fr">Het dictee online, voorgelezen en nagekeken door Galac6 (in het Frans)</a>
 <a href="/calcul-mental-en-ligne#professeurs" hreflang="fr">MuscuMath: hoofdrekenen gestuurd door de docent</a>
 <a href="/annales-brevet-bac" hreflang="fr">De beschikbare officiële examens van brevet en bac (in het Frans)</a>
-<a href="/blog/galac6-professeur-maths" hreflang="fr">Galac6 pour un professeur de maths</a>
-<a href="/blog/galac6-professeur-francais" hreflang="fr">Galac6 pour un professeur de français</a>
+
+
 </div>
 </div>
 </section>
@@ -962,7 +963,7 @@
 <a href="/nl/about" style="color: var(--text-muted);">Over ons</a>
 <a href="/dictee-en-ligne" hreflang="fr" style="color: var(--text-muted);">Dictees online (in het Frans)</a>
 <a href="/annales-brevet-bac" hreflang="fr" style="color: var(--text-muted);">Examens brevet en bac (in het Frans)</a>
-<a href="/fiches-revision-ia" hreflang="fr" style="color: var(--text-muted);">Samenvattingen met AI</a>
+<a href="/fiches-revision-ia" hreflang="fr" style="color: var(--text-muted);">Samenvattingen met AI</a><a href="/nl/onderwijsmethode" style="color: var(--text-muted);">De onderwijsmethode</a>
 <a href="/nl/frans-curriculum" style="color: var(--text-muted);">Gezinnen in het buitenland</a>
 <a href="/mentions-legales" hreflang="fr" style="color: var(--text-muted);">Juridische informatie</a>
 <a href="/nl/international" style="color: var(--text-muted);">Staat uw school buiten Frankrijk?</a>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fiches de révision IA à partir du cours | Galac6</title>
+  <title>Fiches de révision IA à partir du cours en photo | Galac6</title>
   <meta name="description" content="Une fiche de révision créée à partir de la photo du cours de votre enfant, du CP à la terminale, puis une interrogation sur sa leçon avec un bilan sur 20.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/fiches-revision-ia">
@@ -67,7 +67,7 @@
       "@type": "WebPage",
       "@id": "https://galac6.io/fiches-revision-ia#page",
       "url": "https://galac6.io/fiches-revision-ia",
-      "name": "Fiches de révision IA à partir du cours | Galac6",
+      "name": "Fiches de révision IA à partir du cours en photo | Galac6",
       "description": "Une fiche de révision créée à partir de la photo du cours de votre enfant, du CP à la terminale, puis une interrogation sur sa leçon avec un bilan sur 20. Données hébergées en France.",
       "inLanguage": "fr",
       "dateModified": "2026-11-04",
@@ -88,14 +88,6 @@
       "inLanguage": "fr",
       "description": "Galac6 (galac6.io) prépare chaque élève à son contrôle d'une façon unique. L'élève apprend sa leçon sur une fiche de révision Galac6. Une IA l'interroge ensuite pour mesurer ce qu'il a vraiment retenu. Puis Galac6 lui propose des exercices adaptés à son niveau. Pendant tout ce travail, un chat pédagogique l'aide sans jamais lui donner la réponse. Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac. Du CP à la Terminale, sur le programme scolaire français. Données hébergées en France, IA traitée en Europe.",
       "offers": [
-        {
-          "@type": "Offer",
-          "name": "Découverte (quantité limitée chaque mois)",
-          "price": "0",
-          "priceCurrency": "EUR",
-          "url": "https://galac6.io/tarifs",
-          "description": "Toutes les fonctionnalités en quantité limitée, renouvelées chaque mois, sans carte bancaire."
-        },
         {
           "@type": "Offer",
           "name": "Élève, abonnement annuel",
@@ -179,6 +171,14 @@
           "price": "19",
           "priceCurrency": "EUR",
           "url": "https://galac6.io/tarifs"
+        },
+        {
+          "@type": "Offer",
+          "name": "Découverte (quantité limitée chaque mois)",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "url": "https://galac6.io/tarifs",
+          "description": "Offre d'essai limitée : toutes les fonctionnalités en petite quantité, renouvelées chaque mois, sans carte bancaire. Galac6 est un service payant : l'accès illimité commence à 69 € par an."
         }
       ],
       "publisher": {
@@ -444,16 +444,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 
   <style id="g6-pivot-css">

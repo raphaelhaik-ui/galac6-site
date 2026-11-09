@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galac6 pour les professeurs de maths — Galac6</title>
+  <title>Galac6 pour les professeurs de maths : quiz et suivi</title>
   <meta name="description" content="Quiz et devoirs aux réponses vérifiées, calcul mental piloté avec MuscuMath, suivi de la classe notion par notion : ce que Galac6 apporte à un prof de maths.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/blog/galac6-professeur-maths">
@@ -18,7 +18,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
   <meta property="article:published_time" content="2026-11-03">
-  <meta property="article:modified_time" content="2026-11-04">
+  <meta property="article:modified_time" content="2026-11-09">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Galac6 pour un professeur de maths : quiz, calcul mental et suivi de la classe">
   <meta name="twitter:description" content="Quiz et devoirs aux réponses vérifiées, calcul mental piloté avec MuscuMath, suivi de la classe notion par notion : ce que Galac6 apporte à un professeur de mathématiques.">
@@ -70,7 +70,7 @@
         "caption": "Galac6, l'IA au service de la pédagogie."
       },
       "datePublished": "2026-11-03",
-      "dateModified": "2026-11-04",
+      "dateModified": "2026-11-09",
       "inLanguage": "fr-FR",
       "mainEntityOfPage": "https://galac6.io/blog/galac6-professeur-maths",
       "keywords": "professeur de mathématiques, quiz maths, devoirs en ligne, calcul mental, MuscuMath, suivi de classe, IA éducation, programme français",
@@ -316,6 +316,30 @@
     .toc-list li.is-g6 .toc-t { flex: 1 1 0; min-width: 0; }
     .toc-list li.is-g6 .g6-tag { margin-left: 0; margin-top: 0.1rem; align-self: flex-start; }
     @media (prefers-reduced-motion: reduce) { .toc-btn, .toc-n, .toc-list a { transition: none; } html { scroll-behavior: auto; } }
+
+    /* Visuels : schémas */
+    .fig { margin: 1.8rem 0 2rem; }
+    .fig figcaption { margin-top: 0.7rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
+    .diagram { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 0.9rem; }
+    @media (max-width: 600px) { .diagram { padding: 0.8rem 0.35rem; } }
+    .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+    .diagram .d-box { fill: rgba(124,92,252,0.12); stroke: rgba(167,139,250,0.5); stroke-width: 1.2; }
+    .diagram .d-box-up { fill: rgba(52,211,153,0.1); stroke: rgba(52,211,153,0.55); stroke-width: 1.2; }
+    .diagram .d-box-down { fill: rgba(251,191,36,0.08); stroke: rgba(251,191,36,0.5); stroke-width: 1.2; }
+    .diagram .d-box-opt { fill: none; stroke: rgba(167,139,250,0.6); stroke-width: 1.2; stroke-dasharray: 5 4; }
+    .diagram .d-t { fill: var(--text); font-weight: 700; font-size: 15px; }
+    .diagram .d-s { fill: var(--text-muted); font-size: 13.5px; }
+    .diagram .d-n { fill: #fff; font-weight: 800; font-size: 13px; }
+    .diagram .d-num { fill: url(#d-grad); }
+    .diagram .d-line { fill: none; stroke: var(--primary-light); stroke-width: 1.6; }
+    .diagram .d-dash { fill: none; stroke: var(--primary-light); stroke-width: 1.4; stroke-dasharray: 4 4; opacity: 0.8; }
+    .diagram .d-head { fill: var(--primary-light); }
+    .diagram .d-ico { fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diagram .d-up { fill: #6ee7b7; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-down { fill: #fcd34d; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-band-1 { fill: rgba(99,102,241,0.22); }
+    .diagram .d-band-2 { fill: rgba(124,92,252,0.3); }
+    .diagram .d-band-3 { fill: rgba(168,85,247,0.38); }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -390,16 +414,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -435,12 +460,12 @@
     <h1>Galac6 pour un <span class="grad">professeur de maths</span></h1>
     <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 3 novembre 2026 · 6 min de lecture</div>
 
-    <p class="lead">Galac6 aide un professeur de mathématiques à créer des quiz et des devoirs aux réponses vérifiées, à piloter le calcul mental de sa classe avec MuscuMath et à suivre chaque élève notion par notion. Vous validez chaque question et chaque note.</p>
+    <p class="lead">Galac6 (galac6.io) aide un professeur de mathématiques à créer des quiz et des devoirs aux réponses vérifiées, à piloter le calcul mental de sa classe avec MuscuMath et à suivre chaque élève notion par notion. Vous validez chaque question et chaque note.</p>
 
     <aside class="essentiel" aria-labelledby="essentiel-titre">
       <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
       <ul>
-        <li>Vous créez des <strong>quiz et des devoirs en quelques minutes</strong> ; Galac6 ne garde que les questions dont il a pu vérifier la bonne réponse.</li>
+        <li>Avec Galac6 (galac6.io), vous créez des <strong>quiz et des devoirs en quelques minutes</strong> ; seules restent les questions dont la bonne réponse a pu être vérifiée.</li>
         <li>Avec <strong>MuscuMath</strong>, vous pilotez le calcul mental de la classe : plus de 200 notions ou vos propres calculs.</li>
         <li>Vous <strong>suivez la classe notion par notion</strong> : qui a fait le travail, qui est en retard, les questions les plus ratées.</li>
         <li><strong>Vous gardez le dernier mot</strong> : vous validez chaque question et chaque note.</li>
@@ -451,7 +476,7 @@
     <nav class="plan" id="sommaire" aria-labelledby="plan-titre">
       <h2 id="plan-titre">Ce que vous allez apprendre</h2>
       <ol class="plan-toc">
-        <li><a href="#en-bref"><span class="pt-n">1</span><span class="pt-t">En bref</span></a></li>
+        <li><a href="#en-bref"><span class="pt-n">1</span><span class="pt-t">Ce que vous pouvez faire</span></a></li>
         <li><a href="#quiz-devoirs"><span class="pt-n">2</span><span class="pt-t">Des quiz et des devoirs</span></a></li>
         <li><a href="#reponses-verifiees"><span class="pt-n">3</span><span class="pt-t">Des réponses vérifiées</span></a></li>
         <li><a href="#muscumath"><span class="pt-n">4</span><span class="pt-t">MuscuMath, le calcul mental</span></a></li>
@@ -463,9 +488,10 @@
       </ol>
     </nav>
 
-    <p>Galac6 est un tuteur IA qui suit le programme français, du CP à la terminale, avec un espace professeur et un espace pour l'école. Cette page décrit ce que vous pouvez y faire aujourd'hui en tant que professeur de mathématiques, au collège, au lycée ou en primaire.</p>
+    <p>Galac6 est un tuteur IA qui suit le programme français, du CP à la terminale, avec un espace professeur et un espace pour l'école. Cette page décrit ce que vous pouvez y faire aujourd'hui en tant que professeur de mathématiques, au collège, au lycée ou en primaire. Vous enseignez le français ? Voyez <a href="/blog/galac6-professeur-francais">Galac6 pour un professeur de français</a>.</p>
 
-    <h2 id="en-bref">En bref</h2>
+    <h2 id="en-bref">Que peut faire un professeur de maths avec Galac6 ?</h2>
+    <p>Un professeur de maths peut y créer des quiz et des devoirs, piloter le calcul mental de sa classe et suivre chaque élève notion par notion.</p>
     <ul>
       <li><strong>Des quiz et des devoirs prêts en quelques minutes</strong>, à partir de vos consignes ou de votre feuille collée.</li>
       <li><strong>Des réponses vérifiées</strong> : Galac6 ne garde que les questions dont il a pu vérifier la bonne réponse.</li>
@@ -476,7 +502,7 @@
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="quiz-devoirs">Des quiz et des devoirs prêts en quelques minutes</h2>
+    <h2 id="quiz-devoirs">Comment créer un quiz de maths en quelques minutes ?</h2>
     <p>Dans votre classe, l'onglet <strong>Devoirs</strong> vous permet de créer une évaluation en quatre étapes : contenu, questions, correction et envoi. Vous choisissez le type (quiz, interrogation, contrôle ou devoir à la maison), puis le chapitre ou le thème.</p>
     <p>Pour les questions, trois possibilités :</p>
     <ul>
@@ -484,22 +510,81 @@
       <li><strong>Assistant</strong> : vous écrivez ce que vous voulez, par exemple « 3 questions avec un piège » ou « plus difficile ».</li>
       <li><strong>Écrire</strong> : vous rédigez vos propres questions.</li>
     </ul>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 336" role="img" aria-labelledby="schema-devoir-titre schema-devoir-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-devoir-titre">Créer une évaluation en quatre étapes</title>
+        <desc id="schema-devoir-desc">Contenu : le type d'évaluation, puis le chapitre ou le thème. Questions : Propositions, Assistant ou Écrire. Correction : vous relisez, modifiez et validez chaque question. Envoi : à la maison avant une date limite, ou en classe avec une durée.</desc>
+        <defs>
+          <linearGradient id="d-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+          <marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker>
+        </defs>
+        <rect class="d-box" x="8" y="8" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="39" r="13"/>
+        <text class="d-n" x="34" y="44" text-anchor="middle">1</text>
+        <text class="d-t" x="58" y="34">Contenu</text>
+        <text class="d-s" x="58" y="54">le type, puis le chapitre ou le thème</text>
+        <path class="d-line" d="M180 70V88" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="92" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="123" r="13"/>
+        <text class="d-n" x="34" y="128" text-anchor="middle">2</text>
+        <text class="d-t" x="58" y="118">Questions</text>
+        <text class="d-s" x="58" y="138">Propositions, Assistant ou Écrire</text>
+        <path class="d-line" d="M180 154V172" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="176" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="207" r="13"/>
+        <text class="d-n" x="34" y="212" text-anchor="middle">3</text>
+        <text class="d-t" x="58" y="202">Correction</text>
+        <text class="d-s" x="58" y="222">vous relisez, modifiez et validez</text>
+        <path class="d-line" d="M180 238V256" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="8" y="260" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="291" r="13"/>
+        <text class="d-n" x="34" y="296" text-anchor="middle">4</text>
+        <text class="d-t" x="58" y="286">Envoi</text>
+        <text class="d-s" x="58" y="306">à la maison ou en classe</text>
+      </svg>
+      <figcaption>Les quatre étapes de création d'une évaluation dans l'onglet Devoirs : contenu, questions, correction et envoi.</figcaption>
+    </figure>
+
     <p>Vous relisez, modifiez et validez chaque question avant l'envoi. Le devoir se fait à la maison avant une date limite, ou en classe avec une durée que vous lancez au début du cours. Pendant une épreuve en classe, le tuteur de Galac6 est coupé pour l'élève jusqu'à ce qu'il rende sa copie. Le pas-à-pas complet est dans le <a href="/guide-prof">guide professeur</a> : comptez une dizaine de minutes pour un premier quiz.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="reponses-verifiees">Des réponses vérifiées</h2>
-    <p>En mathématiques, une seule réponse fausse dans un corrigé suffit à semer le doute chez les élèves. Galac6 a été conçu avec cette exigence :</p>
+    <h2 id="reponses-verifiees">Les réponses des quiz de maths sont-elles vérifiées ?</h2>
+    <p>Oui : Galac6 ne garde que les questions dont il a pu vérifier la bonne réponse. En mathématiques, une seule réponse fausse dans un corrigé suffit à semer le doute chez les élèves. Galac6 a été conçu avec cette exigence :</p>
     <ul>
       <li>pour vos quiz, Galac6 <strong>ne garde que les questions dont il a pu vérifier la bonne réponse</strong>, et vous signale un doute éventuel ;</li>
       <li>pour le calcul mental, <strong>chaque réponse est vérifiée</strong>, et dans MuscuMath un calcul non confirmé n'est jamais donné à l'élève ;</li>
       <li>pour une évaluation notée, Galac6 <strong>propose</strong> une note pour chaque copie, et c'est vous qui la validez. Tant que vous n'avez pas validé, l'élève la voit comme provisoire.</li>
     </ul>
 
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 256" role="img" aria-labelledby="schema-validation-titre schema-validation-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-validation-titre">Ce que Galac6 propose et ce que vous validez</title>
+        <desc id="schema-validation-desc">Pour un quiz, Galac6 propose des questions dont il a vérifié la bonne réponse et vous signale un doute éventuel ; vous relisez et validez chaque question. Pour une évaluation notée, Galac6 propose une note, l'élève la voit comme provisoire, et vous la validez.</desc>
+        <rect class="d-box" x="8" y="8" width="344" height="116" rx="12"/>
+        <text class="d-t" x="22" y="33">Une question de quiz</text>
+        <path class="d-ico" d="M22 53l4 4 7-8"/>
+        <text class="d-s" x="42" y="58">Galac6 propose, bonne réponse vérifiée</text>
+        <path class="d-ico" d="M22 77l4 4 7-8"/>
+        <text class="d-s" x="42" y="82">il vous signale un doute éventuel</text>
+        <path class="d-ico" d="M22 101l4 4 7-8"/>
+        <text class="d-s" x="42" y="106">vous relisez et validez avant l'envoi</text>
+        <rect class="d-box-up" x="8" y="134" width="344" height="116" rx="12"/>
+        <text class="d-t" x="22" y="159">Une copie notée</text>
+        <path class="d-ico" d="M22 179l4 4 7-8"/>
+        <text class="d-s" x="42" y="184">Galac6 propose une note</text>
+        <path class="d-ico" d="M22 203l4 4 7-8"/>
+        <text class="d-s" x="42" y="208">l'élève la voit comme provisoire</text>
+        <path class="d-ico" d="M22 227l4 4 7-8"/>
+        <text class="d-s" x="42" y="232">vous la validez</text>
+      </svg>
+      <figcaption>Galac6 propose, vous validez : pour chaque question de quiz comme pour chaque note.</figcaption>
+    </figure>
+
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="muscumath">MuscuMath : le calcul mental piloté par le professeur</h2>
-    <p>MuscuMath s'adresse aux professeurs de mathématiques et aux professeurs des écoles. Vous préparez une série, vous l'envoyez à la classe, et chaque élève s'entraîne sur son écran, au clavier ou à voix haute :</p>
+    <h2 id="muscumath">Comment piloter le calcul mental de la classe avec MuscuMath ?</h2>
+    <p>Avec MuscuMath, vous préparez une série, vous l'envoyez à la classe, et chaque élève s'entraîne sur son écran, au clavier ou à voix haute. MuscuMath s'adresse aux professeurs de mathématiques et aux professeurs des écoles :</p>
     <ul>
       <li><strong>un catalogue de plus de 200 notions</strong> du CP à la terminale, chacune rattachée au programme officiel ;</li>
       <li><strong>vos propres calculs</strong>, tapés, collés ou photographiés : Galac6 calcule chaque réponse ;</li>
@@ -509,8 +594,8 @@
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="suivi-classe">Suivre la classe notion par notion</h2>
-    <p>Pour chaque devoir envoyé, vous voyez :</p>
+    <h2 id="suivi-classe">Comment suivre sa classe notion par notion ?</h2>
+    <p>Galac6 vous montre, pour chaque devoir envoyé, qui l'a fait et où la classe bloque :</p>
     <ul>
       <li>le nombre d'élèves qui l'ont fait, et ceux qui sont en retard ;</li>
       <li>les questions les plus ratées par la classe ;</li>
@@ -523,9 +608,31 @@
       <p><strong>Ce que vous ne voyez pas :</strong> les conversations de vos élèves avec le tuteur. Vous voyez leurs résultats aux devoirs et à l'entraînement, pas leurs échanges personnels.</p>
     </div>
 
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 232" role="img" aria-labelledby="schema-voit-titre schema-voit-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-voit-titre">Ce que le professeur voit et ne voit pas</title>
+        <desc id="schema-voit-desc">Vous voyez qui a fait le devoir et qui est en retard, les questions les plus ratées, la réussite par notion et la copie de chaque élève. Vous ne voyez pas les conversations de vos élèves avec le tuteur.</desc>
+        <rect class="d-box-up" x="8" y="8" width="344" height="140" rx="12"/>
+        <text class="d-t" x="22" y="33">Vous voyez</text>
+        <path class="d-ico" d="M22 53l4 4 7-8"/>
+        <text class="d-s" x="42" y="58">qui a fait le devoir, qui est en retard</text>
+        <path class="d-ico" d="M22 77l4 4 7-8"/>
+        <text class="d-s" x="42" y="82">les questions les plus ratées</text>
+        <path class="d-ico" d="M22 101l4 4 7-8"/>
+        <text class="d-s" x="42" y="106">la réussite par notion</text>
+        <path class="d-ico" d="M22 125l4 4 7-8"/>
+        <text class="d-s" x="42" y="130">la copie de chaque élève</text>
+        <rect class="d-box-down" x="8" y="158" width="344" height="68" rx="12"/>
+        <text class="d-t" x="22" y="183">Vous ne voyez pas</text>
+        <path class="d-ico" d="M23 198l8 8M31 198l-8 8"/>
+        <text class="d-s" x="42" y="208">les conversations avec le tuteur</text>
+      </svg>
+      <figcaption>Ce que vous voyez pour chaque devoir, et ce qui reste privé entre l'élève et le tuteur.</figcaption>
+    </figure>
+
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="entre-deux-cours">Entre deux cours : ce que font vos élèves</h2>
+    <h2 id="entre-deux-cours">Que font vos élèves entre deux cours ?</h2>
     <p>En dehors de vos devoirs, vos élèves travaillent seuls avec le tuteur. Il est didactique : l'élève pose sa question ou envoie la photo de son exercice, et le tuteur le guide par des questions et des indices, étape par étape, sans faire le travail à sa place. Les élèves disposent aussi :</p>
     <ul>
       <li>d'exercices de maths corrigés, adaptés à leur niveau et en nombre illimité ;</li>
@@ -536,12 +643,13 @@
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="donnees">Les données de vos élèves</h2>
+    <h2 id="donnees">Où sont hébergées les données de vos élèves ?</h2>
     <p>Les comptes et les données sont hébergés en France, dans une base de données à Paris, et l'intelligence artificielle de Galac6 est traitée en Europe. Quelques services techniques, comme l'hébergement du site internet, font appel à des prestataires situés hors de l'Union européenne. Seuls les professeurs de l'élève et la direction de son école voient son travail. Le détail, à transmettre à votre direction, est sur la page <a href="/donnees-eleves">Données des élèves</a>.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="commencer">Comment commencer</h2>
+    <h2 id="commencer">Comment commencer avec Galac6 ?</h2>
+    <p>Un professeur commence par le programme des professeurs testeurs, un établissement par le pilote.</p>
     <ul>
       <li><strong>Vous êtes professeur</strong> : rejoignez le programme des <a href="/profs-testeurs">professeurs testeurs</a>. Vous avez accès à tout Galac6 pendant 3 mois, offerts en échange de vos retours. Vous pouvez commencer avec une classe de démonstration, sans élèves réels.</li>
       <li><strong>Vous parlez au nom d'un établissement</strong> : Galac6 propose un <a href="/ecole">pilote gratuit de 3 mois sur 3 classes</a>, sans engagement. Ensuite, le tarif est sur devis.</li>
@@ -577,8 +685,10 @@
         <li><a href="/blog/preparer-controle-maths-college">Comment préparer un contrôle de maths au collège, de la 6e à la 3e</a></li>
         <li><a href="/blog/ia-programme-education-nationale">Un tuteur IA qui suit le programme de l'Éducation nationale : ce qu'il faut vérifier</a></li>
         <li><a href="/ecole">Galac6 pour les écoles</a></li>
-        <li><a href="/blog/galac6-calcul-mental">Application de calcul mental pour enfants</a></li>
-        <li><a href="/blog/calcul-mental-personnalise">Calcul mental personnalisé et ludique</a></li>
+        <li><a href="/blog/galac6-calcul-mental">Application de calcul mental en ligne : Galac6, du CP à la terminale</a></li>
+        <li><a href="/blog/calcul-mental-personnalise">Calcul mental personnalisé : chaque élève retravaille ses erreurs</a></li>
+        <li><a href="/blog/galac6-professeur-francais">Galac6 pour un professeur de français</a></li>
+        <li><a href="/blog/galac6-ou-kwyk">Galac6 et Kwyk : différences et complémentarité pour la classe de maths</a></li>
       </ul>
     </div>
 
@@ -595,7 +705,7 @@
       <p class="toc-side-title">Sommaire</p>
       <div class="toc-track"><span class="toc-rail" aria-hidden="true"><span class="toc-fill"></span></span>
       <ol class="toc-list" id="toc-side-list">
-        <li><a href="#en-bref"><span class="toc-n">1</span><span class="toc-t">En bref</span></a></li>
+        <li><a href="#en-bref"><span class="toc-n">1</span><span class="toc-t">Ce que vous pouvez faire</span></a></li>
         <li><a href="#quiz-devoirs"><span class="toc-n">2</span><span class="toc-t">Des quiz et des devoirs</span></a></li>
         <li><a href="#reponses-verifiees"><span class="toc-n">3</span><span class="toc-t">Des réponses vérifiées</span></a></li>
         <li><a href="#muscumath"><span class="toc-n">4</span><span class="toc-t">MuscuMath, le calcul mental</span></a></li>
@@ -614,7 +724,7 @@
     <div class="toc-sheet-panel" role="dialog" aria-modal="true" aria-label="Sommaire de l'article">
       <div class="toc-sheet-head"><p>Sommaire</p><button class="toc-close" type="button" aria-label="Fermer le sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg></button></div>
       <ol class="plan-toc">
-        <li><a href="#en-bref"><span class="pt-n">1</span><span class="pt-t">En bref</span></a></li>
+        <li><a href="#en-bref"><span class="pt-n">1</span><span class="pt-t">Ce que vous pouvez faire</span></a></li>
         <li><a href="#quiz-devoirs"><span class="pt-n">2</span><span class="pt-t">Des quiz et des devoirs</span></a></li>
         <li><a href="#reponses-verifiees"><span class="pt-n">3</span><span class="pt-t">Des réponses vérifiées</span></a></li>
         <li><a href="#muscumath"><span class="pt-n">4</span><span class="pt-t">MuscuMath, le calcul mental</span></a></li>

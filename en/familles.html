@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Galac6 for families: AI tutor from grade 1 to 12</title>
+<title>Galac6 for families: AI homework tutor from grade 1 to 12</title>
 <meta content="Galac6 starts from what your child knows and supports them from the lesson to the test, with an AI that does not give the answer. You follow their progress." name="description"/>
 <meta content="index, follow, max-image-preview:large" name="robots"/>
 <link href="https://galac6.io/en/familles" rel="canonical"/>
@@ -24,7 +24,7 @@
       "@type": "FAQPage",
       "@id": "https://galac6.io/en/familles#webpage",
       "url": "https://galac6.io/en/familles",
-      "name": "Galac6 for families: AI tutor from grade 1 to 12",
+      "name": "Galac6 for families: AI homework tutor from grade 1 to 12",
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://galac6.io/en/#website"
@@ -447,16 +447,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 <script>window.G6_COOKIE_TXT = {"texte": "We would like to measure visits to this site (Google Analytics) and the results of our ads (Google Ads, Meta). These services set cookies and are only loaded if you agree. You can change your mind at any time with the “Manage cookies” link at the bottom of each page.", "plus": "Learn more", "refuser": "Refuse all", "perso": "Customise", "accepter": "Accept all", "titrePerso": "Choose your cookies", "audienceTitre": "Audience measurement", "audienceTexte": "Google Analytics: counts visits and the pages viewed, to improve the site.", "pubTitre": "Advertising", "pubTexte": "Google Ads and Meta (Facebook, Instagram): measure the results of our ads.", "enregistrer": "Save my choices", "necessaires": "The site also remembers your language and this choice on your device (required, no consent needed).", "lien": "/mentions-legales#cookies-en"};</script>
 <style id="g6-lang-css">
@@ -564,6 +565,8 @@
 <div class="bc r"><b>To work on again</b><span>Imperfect or simple past</span></div>
 </div>
 <svg aria-label="Example of a progress curve over six weeks, fictitious data" class="spark" role="img" viewbox="0 0 300 80">
+<title>Example of a progress curve over six weeks, fictitious data</title>
+<desc>A curve rising from week 1 to week 6. Example only, not real results.</desc>
 <line class="gd" x1="0" x2="300" y1="10" y2="10"></line><line class="gd" x1="0" x2="300" y1="36" y2="36"></line><line class="gd" x1="0" x2="300" y1="62" y2="62"></line>
 <path class="ar" d="M8 56 L64 50 L120 47 L176 37 L232 32 L290 20 L290 62 L8 62 Z"></path>
 <path class="ln" d="M8 56 L64 50 L120 47 L176 37 L232 32 L290 20"></path>
@@ -590,11 +593,11 @@
 <a class="lv-card" href="/primaire" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-chat"></use></svg></span><strong>Didactic chat</strong><span class="q">"Explain it to me, but don't do it for me."</span><span class="more">Learn more →</span></a>
 <a class="lv-card" href="/primaire" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-book"></use></svg></span><strong>Reading</strong><span class="q">Books chosen for each grade.</span><span class="more">Learn more →</span></a>
 <a class="lv-card" href="/primaire" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-flame"></use></svg></span><strong>Daily challenge</strong><span class="q">A multiple-choice quiz, a dictation and some maths every day.</span><span class="more">Learn more →</span></a>
-<a class="lv-card" href="/soutien-scolaire-ia" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-heart"></use></svg></span><strong>Homework support</strong><span class="q">Support at home, at their own pace.</span><span class="more">Learn more →</span></a>
+<a class="lv-card" href="/en/ai-tutoring"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-heart"></use></svg></span><strong>Homework support</strong><span class="q">Support at home, at their own pace.</span><span class="more">Learn more →</span></a>
 </div>
 <!-- Collège -->
 <div aria-labelledby="tab-col" class="lv" id="lv-col" role="tabpanel">
-<a class="lv-card" href="/soutien-scolaire-ia" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-chat"></use></svg></span><strong>Didactic chat</strong><span class="q">"Explain it to me, but don't do it for me."</span><span class="more">Learn more →</span></a>
+<a class="lv-card" href="/en/ai-tutoring"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-chat"></use></svg></span><strong>Didactic chat</strong><span class="q">"Explain it to me, but don't do it for me."</span><span class="more">Learn more →</span></a>
 <a class="lv-card" href="/fiches-revision-ia" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-card"></use></svg></span><strong>Revision sheets and quizzing</strong><span class="q">"Your sheet in seconds, then Galac6 quizzes you until you are ready."</span><span class="more">Learn more →</span></a>
 <a class="lv-card" href="/reviser-maths" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-quiz"></use></svg></span><strong>Quizzes, exercises and multiple choice</strong><span class="q">"In every subject, on your weak points. Take a photo of your lesson, get a quiz."</span><span class="more">Learn more →</span></a>
 <a class="lv-card" href="/en/french-dictation-online"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-audio"></use></svg></span><strong>Read-aloud dictations and mental maths</strong><span class="q">"Dictations read aloud and marked, and mental maths every day."</span><span class="more">Learn more →</span></a>
@@ -603,7 +606,7 @@
 </div>
 <!-- Lycée -->
 <div aria-labelledby="tab-lyc" class="lv" hidden="" id="lv-lyc" role="tabpanel">
-<a class="lv-card" href="/soutien-scolaire-ia" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-chat"></use></svg></span><strong>Didactic chat</strong><span class="q">"Explain it to me, but don't do it for me."</span><span class="more">Learn more →</span></a>
+<a class="lv-card" href="/en/ai-tutoring"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-chat"></use></svg></span><strong>Didactic chat</strong><span class="q">"Explain it to me, but don't do it for me."</span><span class="more">Learn more →</span></a>
 <a class="lv-card" href="/fiches-revision-ia" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-card"></use></svg></span><strong>Revision sheets and quizzing</strong><span class="q">"Your sheet, then Galac6 quizzes you until you are ready."</span><span class="more">Learn more →</span></a>
 <a class="lv-card" href="/reviser-bac-francais" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-exam"></use></svg></span><strong>French bac</strong><span class="q">Mock bac exams on official papers, written and oral, marked out of 20.</span><span class="more">Learn more →</span></a>
 <a class="lv-card" href="/reviser-bac-maths" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-calc"></use></svg></span><strong>Maths bac</strong><span class="q">Mock exams on official papers, marked out of 20.</span><span class="more">Learn more →</span></a>
@@ -612,7 +615,7 @@
 </div>
 <p class="more-links"><span>By need:</span>
 <a href="/primaire" hreflang="fr">Primary (1st to 5th grade)</a>
-<a href="/soutien-scolaire-ia" hreflang="fr">AI homework support</a>
+<a href="/en/ai-tutoring">AI homework support</a>
 <a href="/cours-particulier-en-ligne" hreflang="fr">Online private lessons with AI</a>
 <a href="/fiches-revision-ia" hreflang="fr">AI revision sheets</a>
 <a href="/reviser-maths" hreflang="fr">Revise maths online</a>
@@ -631,7 +634,7 @@
 <section aria-labelledby="learn-title" class="center">
 <p class="eyebrow">What parents appreciate</p>
 <h2 class="section-title" id="learn-title">Designed for learning, not for cheating.</h2>
-<p class="learn-quote">You can ask <strong>any AI</strong> to do your homework. Or you can ask <strong>Galac6</strong> to teach you how to do it yourself. Your call.</p>
+<p class="learn-quote">Your child can ask <strong>any AI</strong> to do their homework. Or they can ask <strong>Galac6</strong> to teach them how to do it themselves. Their call.</p>
 <div class="learn-grid">
 <div class="learn-card">
 <span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-cap"></use></svg></span>
@@ -781,8 +784,8 @@
 </div>
 <div class="footer-col">
 <span class="footer-col-title">Revise</span>
-<a href="/soutien-scolaire-ia" hreflang="fr">AI tutoring</a>
-
+<a href="/en/ai-tutoring">AI tutoring</a>
+<a href="/en/teaching-method">Teaching method</a>
 <a href="/reviser-brevet" hreflang="fr">Revise for the brevet</a>
 <a href="/reviser-bac-francais" hreflang="fr">Revise for the French bac</a>
 <a href="/reviser-bac-maths" hreflang="fr">Revise for the maths bac</a>

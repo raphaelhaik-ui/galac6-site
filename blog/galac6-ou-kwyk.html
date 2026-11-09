@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galac6 et Kwyk pour la classe de maths — Galac6</title>
+  <title>Galac6 et Kwyk : différences pour la classe de maths</title>
   <meta name="description" content="Galac6 et Kwyk : différences et complémentarité pour les professeurs de maths. Exercices auto-corrigés, aide quand l'élève se trompe, espace prof, données.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/blog/galac6-ou-kwyk">
+  <link rel="alternate" hreflang="fr" href="https://galac6.io/blog/galac6-ou-kwyk">
+  <link rel="alternate" hreflang="x-default" href="https://galac6.io/blog/galac6-ou-kwyk">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Galac6">
   <meta property="og:locale" content="fr_FR">
@@ -17,6 +19,8 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
+  <meta property="article:published_time" content="2026-11-03">
+  <meta property="article:modified_time" content="2026-11-09">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Galac6 et Kwyk : différences et complémentarité pour la classe de maths">
   <meta name="twitter:description" content="Kwyk pour s'entraîner, Galac6 pour comprendre : le comparatif critère par critère.">
@@ -68,7 +72,7 @@
         "caption": "Galac6, l'IA au service de la pédagogie."
       },
       "datePublished": "2026-11-03",
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-09",
       "inLanguage": "fr",
       "mainEntityOfPage": "https://galac6.io/blog/galac6-ou-kwyk",
       "author": {
@@ -86,11 +90,7 @@
       }
     },
     {
-      "@type": "Organization",
-      "name": "Galac6",
-      "url": "https://galac6.io/",
-      "logo": "https://galac6.io/icons/logo.png",
-      "email": "hello@galac6.io"
+      "@id": "https://galac6.io/#organization"
     },
     {
       "@type": "FAQPage",
@@ -344,6 +344,29 @@
     .toc-list li.is-g6 .toc-t { flex: 1 1 0; min-width: 0; }
     .toc-list li.is-g6 .g6-tag { margin-left: 0; margin-top: 0.1rem; align-self: flex-start; }
     @media (prefers-reduced-motion: reduce) { .toc-btn, .toc-n, .toc-list a { transition: none; } html { scroll-behavior: auto; } }
+  /* Schémas et encadrés des articles */
+    .fig { margin: 1.8rem 0 2rem; }
+    .fig figcaption { margin-top: 0.7rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
+    .diagram { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 0.9rem; }
+    @media (max-width: 600px) { .diagram { padding: 0.8rem 0.35rem; } }
+    .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+    .diagram .d-box { fill: rgba(124,92,252,0.12); stroke: rgba(167,139,250,0.5); stroke-width: 1.2; }
+    .diagram .d-box-up { fill: rgba(52,211,153,0.1); stroke: rgba(52,211,153,0.55); stroke-width: 1.2; }
+    .diagram .d-box-down { fill: rgba(251,191,36,0.08); stroke: rgba(251,191,36,0.5); stroke-width: 1.2; }
+    .diagram .d-box-opt { fill: none; stroke: rgba(167,139,250,0.6); stroke-width: 1.2; stroke-dasharray: 5 4; }
+    .diagram .d-t { fill: var(--text); font-weight: 700; font-size: 15px; }
+    .diagram .d-s { fill: var(--text-muted); font-size: 13.5px; }
+    .diagram .d-n { fill: #fff; font-weight: 800; font-size: 13px; }
+    .diagram .d-num { fill: url(#d-grad); }
+    .diagram .d-line { fill: none; stroke: var(--primary-light); stroke-width: 1.6; }
+    .diagram .d-dash { fill: none; stroke: var(--primary-light); stroke-width: 1.4; stroke-dasharray: 4 4; opacity: 0.8; }
+    .diagram .d-head { fill: var(--primary-light); }
+    .diagram .d-ico { fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diagram .d-up { fill: #6ee7b7; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-down { fill: #fcd34d; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-band-1 { fill: rgba(99,102,241,0.22); }
+    .diagram .d-band-2 { fill: rgba(124,92,252,0.3); }
+    .diagram .d-band-3 { fill: rgba(168,85,247,0.38); }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -418,16 +441,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -463,7 +487,7 @@
     <h1>Galac6 et <span class="grad">Kwyk</span> : différences et complémentarité pour la classe de maths</h1>
     <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 3 novembre 2026 · 6 min de lecture</div>
 
-    <p class="lead">Kwyk et Galac6 ne répondent pas au même besoin. Kwyk propose des exercices de maths qu'il corrige et note automatiquement. Galac6 est un tuteur IA qui explique à l'élève pourquoi il s'est trompé et le guide jusqu'à la bonne réponse, sans la lui donner. Ces deux outils ne sont pas rivaux : ils peuvent être tout à fait complémentaires dans la même classe, Kwyk pour s'entraîner et être noté, Galac6 pour comprendre ses erreurs.</p>
+    <p class="lead">Kwyk et Galac6 (galac6.io) ne répondent pas au même besoin. Kwyk propose des exercices de maths qu'il corrige et note automatiquement. Galac6 est un tuteur IA qui explique à l'élève pourquoi il s'est trompé et le guide jusqu'à la bonne réponse, sans la lui donner. Ces deux outils ne sont pas rivaux : ils peuvent être tout à fait complémentaires dans la même classe, Kwyk pour s'entraîner et être noté, Galac6 pour comprendre ses erreurs.</p>
 
     <aside class="essentiel" aria-labelledby="essentiel-titre">
       <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
@@ -491,7 +515,8 @@
 
     <p>Beaucoup de professeurs de maths utilisent déjà Kwyk pour donner des exercices en ligne. La question n'est donc pas de le remplacer, mais de voir comment un tuteur IA peut le compléter. Cet article est rédigé par Galac6. Nous avons décrit Kwyk à partir des informations publiques de son site, sans test de notre part.</p>
 
-    <h2 id="comparatif">Le comparatif, critère par critère</h2>
+    <h2 id="comparatif">Comment se comparent Galac6 et Kwyk, critère par critère ?</h2>
+    <p>Kwyk corrige et note des exercices, surtout en maths ; Galac6 explique l'erreur et guide l'élève, dans toutes les matières.</p>
     <div class="callout">
       <p><strong>Comparaison établie à partir des informations publiques de kwyk.fr au 3 novembre 2026.</strong> « Non indiqué » signifie que l'information ne figure pas sur les pages consultées, pas que la fonction n'existera jamais. Les offres évoluent : consultez le site de chaque service.</p>
     </div>
@@ -511,15 +536,15 @@
           <tr><th scope="row">Accès ENT et GAR</th><td class="g6">Pas aujourd'hui : l'élève rejoint la classe avec un code d'invitation</td><td>Connexion depuis École Directe, Mon Lycée.net et Paris Classe Numérique ; présent sur le GAR</td></tr>
           <tr><th scope="row">Appli mobile</th><td class="g6">Application web dans le navigateur (téléphone, tablette, ordinateur), sans installation</td><td>Site web utilisable sur smartphone</td></tr>
           <tr><th scope="row">Hébergement des données</th><td class="g6">Données hébergées en France ; intelligence artificielle utilisée en Europe</td><td>AWS à Dublin, dans l'Union européenne</td></tr>
-          <tr><th scope="row">Prix</th><td class="g6">Écoles : pilote gratuit de 3 mois jusqu'à 3 classes, puis sur devis</td><td>Établissement : 11 à 12 € par élève et par an pour une matière, jusqu'à 15,50 € pour trois ; comptes professeurs gratuits. Parent ou professeur particulier : 8 € par mois et par matière. Essai gratuit d'un mois</td></tr>
+          <tr><th scope="row">Prix</th><td class="g6">Écoles : pilote gratuit de 3 mois jusqu'à 3 classes, puis sur devis</td><td>Établissement : 11 à 12 € par élève et par an pour une matière, jusqu'à 15,50 € pour trois ; comptes professeurs gratuits. Parent inscrit comme professeur particulier : 8 € par mois et par élève pour une matière (vérifié le 9 novembre 2026). Essai gratuit d'un mois</td></tr>
         </tbody>
       </table>
     </div>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="forces-kwyk">Ce que fait bien Kwyk</h2>
-    <p>Kwyk existe depuis 2011 et il est rattaché à Hachette Éducation. Au 3 novembre 2026, il revendique plus de 169 000 élèves et 48 millions d'exercices faits (bilan 2025). C'est un outil installé, que beaucoup de professeurs de maths connaissent déjà.</p>
+    <h2 id="forces-kwyk">Que fait bien Kwyk ?</h2>
+    <p>Kwyk fait très bien les exercices auto-corrigés et notés, avec une bonne intégration aux établissements. Il existe depuis 2011 et il est rattaché à Hachette Éducation. Au 3 novembre 2026, il revendique plus de 169 000 élèves et 48 millions d'exercices faits (bilan 2025). C'est un outil installé, que beaucoup de professeurs de maths connaissent déjà.</p>
     <ul>
       <li><strong>Une grande banque d'exercices.</strong> Plus de 7 000 exercices de maths de la 6e à la terminale, issus d'un travail éditorial, auxquels s'ajoutent la physique-chimie, le français en 6e, l'algorithmique et Python.</li>
       <li><strong>Des valeurs aléatoires.</strong> Chaque exercice change de nombres d'un élève à l'autre et d'une tentative à l'autre. L'élève peut refaire l'exercice autant que nécessaire, et c'est la meilleure note qui compte.</li>
@@ -530,8 +555,34 @@
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="apport-galac6">Ce que Galac6 ajoute</h2>
-    <p>Une note dit à l'élève qu'il s'est trompé. Elle ne lui dit pas toujours pourquoi. C'est là que Galac6 intervient : son tuteur IA reprend l'exercice avec l'élève, lui demande comment il a raisonné, repère l'étape où il s'est trompé et lui donne des indices de plus en plus précis. Il ne donne jamais la réponse toute faite : c'est l'élève qui la trouve.</p>
+    <h2 id="apport-galac6">Qu'ajoute Galac6 à côté de Kwyk ?</h2>
+    <p>Galac6 ajoute ce qu'une note ne donne pas : l'explication de l'erreur et un guidage pas à pas. Une note dit à l'élève qu'il s'est trompé. Elle ne lui dit pas toujours pourquoi. C'est là que Galac6 intervient : son tuteur IA reprend l'exercice avec l'élève, lui demande comment il a raisonné, repère l'étape où il s'est trompé et lui donne des indices de plus en plus précis. Il ne donne jamais la réponse toute faite : c'est l'élève qui la trouve.</p>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 254" role="img" aria-labelledby="schema-erreur-titre schema-erreur-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-erreur-titre">Ce qui se passe quand l'élève se trompe, avec Kwyk et avec Galac6</title>
+        <desc id="schema-erreur-desc">Avec Kwyk : correction et note automatiques, l'élève peut refaire l'exercice, la meilleure note est gardée. Avec Galac6 : le tuteur cherche l'origine de l'erreur, il guide étape par étape, l'élève trouve la réponse lui-même.</desc>
+        <defs><linearGradient id="d-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient><marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker></defs>
+        <text class="d-t" x="92" y="20" text-anchor="middle">Avec Kwyk</text>
+        <text class="d-t" x="268" y="20" text-anchor="middle">Avec Galac6</text>
+        <rect class="d-box" x="6" y="32" width="172" height="58" rx="10"/>
+        <text class="d-s" x="92" y="57" text-anchor="middle">Correction et note</text><text class="d-s" x="92" y="76" text-anchor="middle">automatiques</text>
+        <path class="d-line" d="M92 90V106" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="6" y="110" width="172" height="58" rx="10"/>
+        <text class="d-s" x="92" y="135" text-anchor="middle">L'élève peut refaire</text><text class="d-s" x="92" y="154" text-anchor="middle">l'exercice</text>
+        <path class="d-line" d="M92 168V184" marker-end="url(#d-arr)"/>
+        <rect class="d-box-down" x="6" y="188" width="172" height="58" rx="10"/>
+        <text class="d-s" x="92" y="213" text-anchor="middle">La meilleure note</text><text class="d-s" x="92" y="232" text-anchor="middle">est gardée</text>
+        <rect class="d-box" x="182" y="32" width="172" height="58" rx="10"/>
+        <text class="d-s" x="268" y="57" text-anchor="middle">Le tuteur cherche</text><text class="d-s" x="268" y="76" text-anchor="middle">l'origine de l'erreur</text>
+        <path class="d-line" d="M268 90V106" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="182" y="110" width="172" height="58" rx="10"/>
+        <text class="d-s" x="268" y="135" text-anchor="middle">Il guide étape</text><text class="d-s" x="268" y="154" text-anchor="middle">par étape</text>
+        <path class="d-line" d="M268 168V184" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="182" y="188" width="172" height="58" rx="10"/>
+        <text class="d-s" x="268" y="213" text-anchor="middle">L'élève trouve</text><text class="d-s" x="268" y="232" text-anchor="middle">la réponse lui-même</text>
+      </svg>
+      <figcaption>Quand l'élève se trompe : avec Kwyk, correction et note automatiques, puis l'élève peut refaire l'exercice et la meilleure note est gardée ; avec Galac6, le tuteur cherche l'origine de l'erreur et guide étape par étape, et l'élève trouve la réponse lui-même.</figcaption>
+    </figure>
     <ul>
       <li><strong>Une aide quand l'élève bloque.</strong> L'élève tape son exercice ou le prend en photo, et le tuteur le guide pas à pas. Il peut aussi parler au lieu d'écrire, et Galac6 peut lui lire ses réponses à voix haute. Voir <a href="/blog/galac6-professeur-maths">Galac6 pour les professeurs de maths</a>.</li>
       <li><strong>Toutes les matières, du CP à la terminale.</strong> Une même école peut équiper le primaire, le collège et le lycée, en maths comme en français ou en histoire.</li>
@@ -544,8 +595,8 @@
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="ensemble">Les utiliser ensemble : Kwyk pour s'entraîner, Galac6 pour comprendre</h2>
-    <p>Kwyk et Galac6 peuvent être tout à fait complémentaires. Le professeur n'a pas à choisir : chaque outil garde le rôle qu'il remplit le mieux. Voici un exemple de semaine dans une classe de 4e qui travaille le théorème de Pythagore :</p>
+    <h2 id="ensemble">Comment utiliser Kwyk et Galac6 ensemble ?</h2>
+    <p>Utilisez Kwyk pour s'entraîner et être noté, et Galac6 pour comprendre ses erreurs. Kwyk et Galac6 peuvent être tout à fait complémentaires. Le professeur n'a pas à choisir : chaque outil garde le rôle qu'il remplit le mieux. Voici un exemple de semaine dans une classe de 4e qui travaille le théorème de Pythagore :</p>
     <ol class="steps">
       <li><strong>Lundi, en classe.</strong> Le professeur fait sa leçon, puis donne sur Kwyk une série d'exercices à rendre pour jeudi. Kwyk corrige et note chaque exercice, avec des valeurs différentes pour chaque élève.</li>
       <li><strong>Mardi soir, à la maison.</strong> Un élève obtient une mauvaise note sur un exercice et ne comprend pas pourquoi. Il ouvre Galac6, tape l'exercice ou le prend en photo, et explique ce qu'il a fait. Le tuteur l'aide à trouver son erreur, par exemple une confusion entre l'hypoténuse et un autre côté, sans lui donner la réponse.</li>
@@ -554,15 +605,31 @@
       <li><strong>Le reste de la semaine.</strong> Galac6 sert aussi en dehors des maths : français, dictées lues à voix haute, interrogation sur la leçon et révisions du brevet, avec des brevets blancs corrigés par l'IA.</li>
     </ol>
     <p>Le professeur garde ainsi ses habitudes et ses devoirs sur Kwyk, et l'élève dispose d'une aide quand il est seul devant un exercice, le soir à la maison.</p>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 330" role="img" aria-labelledby="schema-semaine-titre schema-semaine-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-semaine-titre">Une semaine avec Kwyk et Galac6 en classe de 4e</title>
+        <desc id="schema-semaine-desc">Lundi en classe : série d'exercices sur Kwyk. Mardi soir à la maison : Galac6 aide à trouver l'erreur. Mercredi : refaire sur Kwyk, avec de nouvelles valeurs. Jeudi : résultats sur Kwyk, quiz sur Galac6.</desc>
+        
+        <rect class="d-box" x="8" y="8" width="344" height="62" rx="12"/><circle class="d-num" cx="34" cy="39" r="13"/><text class="d-n" x="34" y="44" text-anchor="middle">1</text><text class="d-t" x="58" y="34">Lundi en classe</text><text class="d-s" x="58" y="54">série d'exercices sur Kwyk</text>
+        <path class="d-line" d="M180 70V88" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="92" width="344" height="62" rx="12"/><circle class="d-num" cx="34" cy="123" r="13"/><text class="d-n" x="34" y="128" text-anchor="middle">2</text><text class="d-t" x="58" y="118">Mardi soir à la maison</text><text class="d-s" x="58" y="138">Galac6 aide à trouver l'erreur</text>
+        <path class="d-line" d="M180 154V172" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="176" width="344" height="62" rx="12"/><circle class="d-num" cx="34" cy="207" r="13"/><text class="d-n" x="34" y="212" text-anchor="middle">3</text><text class="d-t" x="58" y="202">Mercredi</text><text class="d-s" x="58" y="222">refaire sur Kwyk, nouvelles valeurs</text>
+        <path class="d-line" d="M180 238V256" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="8" y="260" width="344" height="62" rx="12"/><circle class="d-num" cx="34" cy="291" r="13"/><text class="d-n" x="34" y="296" text-anchor="middle">4</text><text class="d-t" x="58" y="286">Jeudi</text><text class="d-s" x="58" y="306">résultats sur Kwyk, quiz sur Galac6</text>
+      </svg>
+      <figcaption>L'exemple de semaine résumé : lundi en classe, série d'exercices sur Kwyk ; mardi soir à la maison, Galac6 aide à trouver l'erreur ; mercredi, refaire sur Kwyk avec de nouvelles valeurs ; jeudi, résultats sur Kwyk et quiz sur Galac6.</figcaption>
+    </figure>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="pour-qui">Pour qui ?</h2>
+    <h2 id="pour-qui">À qui s'adressent Galac6 et Kwyk ?</h2>
+    <p>Kwyk s'adresse surtout aux professeurs et aux établissements ; Galac6, aux élèves du CP à la terminale, à leurs parents et à leurs professeurs.</p>
     <ul>
       <li><strong>Vous êtes professeur de maths</strong> et vos élèves utilisent déjà Kwyk : gardez-le pour l'entraînement noté, et ajoutez Galac6 pour les élèves qui ont besoin qu'on leur explique leur erreur.</li>
-      <li><strong>Vous dirigez un établissement privé</strong> : Kwyk s'intègre à vos ENT et au GAR en maths, en physique-chimie et en français ; Galac6 couvre du CP à la terminale et toutes les matières, avec une vue direction. Un pilote gratuit de 3 mois, jusqu'à 3 classes, permet de juger sur place.</li>
+      <li><strong>Vous dirigez un établissement</strong> : Kwyk s'intègre à vos ENT et au GAR en maths, en physique-chimie et en français ; Galac6 couvre du CP à la terminale et toutes les matières, avec une vue direction. Un pilote gratuit de 3 mois, jusqu'à 3 classes, permet de juger sur place.</li>
       <li><strong>Vous dirigez une école française à l'étranger</strong> : Galac6 suit les programmes français, avec des données hébergées en France. Voir <a href="/ecoles-francaises-etranger">Galac6 pour les écoles françaises à l'étranger</a>.</li>
-      <li><strong>Vous êtes parent</strong> : Kwyk propose une offre parent par matière pour s'entraîner ; Galac6 aide votre enfant à comprendre ses exercices dans toutes les matières (<a href="/tarifs">voir les tarifs</a>).</li>
+      <li><strong>Vous êtes parent</strong> : Kwyk ne propose pas de formule dédiée aux familles, mais vous pouvez vous y inscrire comme professeur particulier et y inscrire votre enfant ; Galac6 aide votre enfant à comprendre ses exercices dans toutes les matières (<a href="/tarifs">voir les tarifs</a>).</li>
     </ul>
     <p><strong>En conclusion</strong>, il ne s'agit pas forcément de choisir entre Kwyk et Galac6. Kwyk fait très bien ce qu'il fait : des exercices auto-corrigés et notés, bien intégrés à l'établissement. Galac6 ajoute ce qu'une note ne donne pas : une explication de l'erreur, un guidage pas à pas et un accompagnement dans les autres matières. Utilisés ensemble, ils permettent à l'élève de s'entraîner et de comprendre.</p>
 
@@ -588,6 +655,7 @@
     <div class="sources">
       <ul>
         <li><a href="https://www.kwyk.fr/" rel="nofollow noopener" target="_blank">Kwyk, site officiel (présentation, offres et tarifs)</a> : https://www.kwyk.fr/</li>
+        <li><a href="https://www.kwyk.fr/questions/" rel="nofollow noopener" target="_blank">Kwyk, FAQ et tarifs (consultée le 9 novembre 2026 pour l'offre destinée aux parents)</a> : https://www.kwyk.fr/questions/</li>
         <li><a href="https://galac6.io/ecole" rel="nofollow noopener" target="_blank">Galac6, professeurs et écoles</a> : https://galac6.io/ecole</li>
         <li><a href="https://galac6.io/donnees-eleves" rel="nofollow noopener" target="_blank">Galac6, données des élèves</a> : https://galac6.io/donnees-eleves</li>
       </ul>
@@ -601,6 +669,7 @@
         <li><a href="/blog/alternatives-schoolmouv-kartable-ia">Alternatives à SchoolMouv, Kartable et Maxicours avec de l'IA</a></li>
         <li><a href="/blog/galac6-ou-eliott">Galac6 ou Eliott : quelle IA pour réviser du CP à la terminale ?</a></li>
         <li><a href="/blog/ia-lycees-francais-etranger">Quelle IA pour les élèves des lycées français à l'étranger ?</a></li>
+        <li><a href="/blog/galac6-ou-chatgpt-devoirs">Galac6 ou ChatGPT pour les devoirs : quelle différence ?</a></li>
       </ul>
     </div>
 

@@ -447,16 +447,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 <script>window.G6_COOKIE_TXT = {"texte": "Wir möchten die Besuche dieser Website (Google Analytics) und die Ergebnisse unserer Werbung (Google Ads, Meta) messen. Diese Dienste setzen Cookies und werden nur geladen, wenn Sie zustimmen. Sie können Ihre Entscheidung jederzeit über den Link „Cookie-Einstellungen“ unten auf jeder Seite ändern.", "plus": "Mehr erfahren", "refuser": "Alle ablehnen", "perso": "Anpassen", "accepter": "Alle akzeptieren", "titrePerso": "Cookies auswählen", "audienceTitre": "Reichweitenmessung", "audienceTexte": "Google Analytics: zählt die Besuche und die aufgerufenen Seiten, um die Website zu verbessern.", "pubTitre": "Werbung", "pubTexte": "Google Ads und Meta (Facebook, Instagram): messen die Ergebnisse unserer Werbung.", "enregistrer": "Auswahl speichern", "necessaires": "Die Website speichert außerdem Ihre Sprache und diese Auswahl auf Ihrem Gerät (notwendig, ohne Einwilligung).", "lien": "/mentions-legales#cookies-en"};</script>
 <style id="g6-lang-css">
@@ -564,6 +565,8 @@
 <div class="bc r"><b>Nacharbeiten</b><span>Imparfait oder Passé simple</span></div>
 </div>
 <svg aria-label="Beispiel einer Fortschrittskurve über sechs Wochen, fiktive Daten" class="spark" role="img" viewbox="0 0 300 80">
+<title>Beispiel einer Fortschrittskurve über sechs Wochen, fiktive Daten</title>
+<desc>Eine Kurve, die von Woche 1 bis Woche 6 ansteigt. Nur ein Beispiel, keine echten Ergebnisse.</desc>
 <line class="gd" x1="0" x2="300" y1="10" y2="10"></line><line class="gd" x1="0" x2="300" y1="36" y2="36"></line><line class="gd" x1="0" x2="300" y1="62" y2="62"></line>
 <path class="ar" d="M8 56 L64 50 L120 47 L176 37 L232 32 L290 20 L290 62 L8 62 Z"></path>
 <path class="ln" d="M8 56 L64 50 L120 47 L176 37 L232 32 L290 20"></path>
@@ -631,7 +634,7 @@
 <section aria-labelledby="learn-title" class="center">
 <p class="eyebrow">Was Eltern schätzen</p>
 <h2 class="section-title" id="learn-title">Gemacht zum Lernen, nicht zum Schummeln.</h2>
-<p class="learn-quote">Du kannst <strong>jede KI</strong> bitten, deine Hausaufgaben zu machen. Oder du kannst <strong>Galac6</strong> bitten, dir beizubringen, sie selbst zu machen. Du hast die Wahl.</p>
+<p class="learn-quote">Ihr Kind kann <strong>jede KI</strong> bitten, seine Hausaufgaben zu machen. Oder es kann <strong>Galac6</strong> bitten, ihm beizubringen, sie selbst zu machen. Es hat die Wahl.</p>
 <div class="learn-grid">
 <div class="learn-card">
 <span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-cap"></use></svg></span>
@@ -782,7 +785,7 @@
 <div class="footer-col">
 <span class="footer-col-title">Lernen</span>
 <a href="/soutien-scolaire-ia" hreflang="fr">Nachhilfe mit KI</a>
-
+<a href="/de/lernmethode">Die Lernmethode</a>
 <a href="/reviser-brevet" hreflang="fr">Für das Brevet lernen</a>
 <a href="/reviser-bac-francais" hreflang="fr">Bac in Französisch wiederholen</a>
 <a href="/reviser-bac-maths" hreflang="fr">Mathe-Bac wiederholen</a>

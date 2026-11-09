@@ -30,6 +30,20 @@
       "description": "Galac6 (galac6.io) prepares each pupil for their class test in a unique way. The pupil learns the lesson on a Galac6 revision sheet. An AI then quizzes them to measure what they have really remembered. Next, Galac6 offers them exercises suited to their level. Throughout this work, a teaching chat helps them without ever giving them the answer. Each pupil can also practise dictation, with over 2,000 texts, and mental maths, and work on past brevet and bac papers. From CP to Terminale (grades 1 to 12), on the French national curriculum. Data hosted in France, AI processed in Europe.",
       "email": "hello@galac6.io",
       "legalName": "RHK CONSEIL",
+      "foundingDate": "2026",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "RHK Conseil",
+        "legalName": "RHK CONSEIL",
+        "foundingDate": "2023",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "19 rue de Croulebarbe",
+          "postalCode": "75013",
+          "addressLocality": "Paris",
+          "addressCountry": "FR"
+        }
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "19 rue de Croulebarbe",
@@ -633,16 +647,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 <script>window.G6_COOKIE_TXT = {"texte": "We would like to measure visits to this site (Google Analytics) and the results of our ads (Google Ads, Meta). These services set cookies and are only loaded if you agree. You can change your mind at any time with the “Manage cookies” link at the bottom of each page.", "plus": "Learn more", "refuser": "Refuse all", "perso": "Customise", "accepter": "Accept all", "titrePerso": "Choose your cookies", "audienceTitre": "Audience measurement", "audienceTexte": "Google Analytics: counts visits and the pages viewed, to improve the site.", "pubTitre": "Advertising", "pubTexte": "Google Ads and Meta (Facebook, Instagram): measure the results of our ads.", "enregistrer": "Save my choices", "necessaires": "The site also remembers your language and this choice on your device (required, no consent needed).", "lien": "/mentions-legales#cookies-en"};</script>
 <style id="g6-lang-css">
@@ -712,7 +727,7 @@
 </div>
 <div class="hero-actions">
 <a class="btn btn-secondary" href="https://galac6web.netlify.app/">Sign up or log in</a>
-
+<a class="link" href="/en/teaching-method">Our teaching method →</a>
 <a class="link" href="/en/tarifs">See pricing →</a>
 </div>
 <p class="made-fr"><svg aria-hidden="true" class="ico"><use href="#i-pin"></use></svg><span>Designed in France, data hosted in France, AI processed in Europe.</span></p>
@@ -754,6 +769,8 @@
 <!-- Schéma (masqué sous 560 px : la liste numérotée prend le relais) -->
 <div class="loop-graphic">
 <svg aria-label="Six-step loop: the student works, every answer is analysed, a mastery map is built, Galac6 offers tailored work, parents and teacher see where the student stands, the teacher sets personalised homework, then back to the student." role="img" viewbox="0 0 640 600">
+<title>The Galac6 loop in six steps</title>
+<desc>Six-step loop: the student works, every answer is analysed, a mastery map is built, Galac6 offers tailored work, parents and teacher see where the student stands, the teacher sets personalised homework, then back to the student.</desc>
 <defs><lineargradient id="cgrad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#6366f1"></stop><stop offset="1" stop-color="#a855f7"></stop></lineargradient></defs>
 <circle class="loop-track" cx="320" cy="300" r="210"></circle>
 <path class="loop-arrow" d="M-6,-7 L7,0 L-6,7 Z" transform="translate(425 118.1) rotate(30)"></path>
@@ -851,7 +868,7 @@
 <div class="h-tag">Features</div>
 <h2 class="h-title">From the lesson to the test, everything to make progress.</h2>
 <div class="feat">
-<a class="f" href="/soutien-scolaire-ia" hreflang="fr"><svg aria-hidden="true" class="ico"><use href="#i-chat"></use></svg><strong>Tutor chat</strong><span>It explains without doing the work for the student.</span></a>
+<a class="f" href="/en/ai-tutoring"><svg aria-hidden="true" class="ico"><use href="#i-chat"></use></svg><strong>Tutor chat</strong><span>It explains without doing the work for the student.</span></a>
 <a class="f" href="/cours-particulier-en-ligne" hreflang="fr"><svg aria-hidden="true" class="ico"><use href="#i-help"></use></svg><strong>Homework help</strong><span>Step by step, from a photo.</span></a>
 <a class="f" href="/en/familles"><svg aria-hidden="true" class="ico"><use href="#i-quiz"></use></svg><strong>Quizzes</strong><span>On the student's weak points.</span></a>
 <a class="f" href="/en/french-dictation-online"><svg aria-hidden="true" class="ico"><use href="#i-pen"></use></svg><strong>Dictation</strong><span>Read aloud, then marked.</span></a>
@@ -1119,8 +1136,8 @@
 </div>
 <div class="footer-col">
 <span class="footer-col-title">Revise</span>
-<a href="/soutien-scolaire-ia" hreflang="fr">AI tutoring</a>
-
+<a href="/en/ai-tutoring">AI tutoring</a>
+<a href="/en/teaching-method">Teaching method</a>
 <a href="/reviser-brevet" hreflang="fr">Revise for the brevet</a>
 <a href="/reviser-bac-francais" hreflang="fr">Revise for the French bac</a>
 <a href="/reviser-bac-maths" hreflang="fr">Revise for the maths bac</a>

@@ -18,6 +18,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
   <meta property="article:published_time" content="2026-10-31">
+  <meta property="article:modified_time" content="2026-11-09">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Calcul mental à l&#x27;école primaire : 10 minutes par jour qui changent tout">
   <meta name="twitter:description" content="Pourquoi le calcul mental quotidien compte tant à l&#x27;école primaire, une routine de 10 minutes prête à l&#x27;emploi et des idées par niveau, du CP au CM2.">
@@ -69,7 +70,7 @@
         "caption": "Galac6, l'IA au service de la pédagogie."
       },
       "datePublished": "2026-10-31",
-      "dateModified": "2026-11-04",
+      "dateModified": "2026-11-09",
       "inLanguage": "fr-FR",
       "mainEntityOfPage": "https://galac6.io/blog/calcul-mental-primaire",
       "keywords": "calcul mental, école primaire, CP, CE1, CE2, CM1, CM2, tables de multiplication, automatismes",
@@ -190,6 +191,7 @@
     .related { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem 1.6rem; margin: 2.5rem 0; }
     .related h2 { margin-top: 0; font-size: 1.2rem; }
     .related ul { margin-bottom: 0; }
+    .faq h3 { color: var(--text); }
 
     .final-cta { text-align: center; background: linear-gradient(160deg, rgba(124,92,252,0.14), rgba(124,92,252,0.04)); border: 1px solid rgba(124,92,252,0.35); border-radius: 20px; padding: 2.5rem 1.5rem; margin-top: 3rem; }
     .final-cta h2 { margin-top: 0; }
@@ -211,6 +213,128 @@
       /* Menu : une seule ligne, plus serré sur écran moyen */
     .navbar-links a { white-space: nowrap; }
     @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
+
+    /* Chapitrage copié de blog/pisa-2025-ecole-du-futur.html */
+    /* Version facile à lire : encadré, graphiques en barres, schémas */
+    .plan { background: rgba(124,92,252,0.08); border: 1px solid rgba(124,92,252,0.3); border-radius: 14px; padding: 1.1rem 1.4rem 1rem; margin: 0 0 1.4rem; }
+    .plan h2 { margin: 0 0 0.6rem; font-size: 1.15rem; }
+    .plan ol { margin: 0 0 0.6rem 1.2rem; padding: 0; }
+    .plan li { margin-bottom: 0.45rem; line-height: 1.5; }
+    .plan li::marker { color: var(--primary-light); font-weight: 800; }
+    .plan a { color: var(--text); text-decoration: none; }
+    .plan a strong { color: var(--primary-light); }
+    .plan a:hover strong { text-decoration: underline; }
+    .plan .plan-fin { margin: 0; font-size: 0.95rem; color: var(--text-muted); }
+    .plan .plan-fin a { color: var(--primary-light); font-weight: 700; }
+    .essentiel { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--primary); border-radius: 14px; padding: 1.2rem 1.4rem 0.4rem; margin: 0 0 2rem; }
+    .essentiel h2 { margin: 0 0 0.7rem; font-size: 1.15rem; }
+    .essentiel ul { margin-left: 1.1rem; }
+      html { scroll-padding-top: 140px; }
+
+    /* Chapitrage : parties numérotées, sommaire collant, barres d'avancement */
+    .art-layout { max-width: 760px; margin: 0 auto; }
+    .art-layout > .article { max-width: 760px; }
+    .article h2.sec { display: flex; align-items: center; gap: 0.85rem; font-size: clamp(1.55rem, 3.6vw, 1.95rem); font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; color: var(--text); margin: 3.4rem 0 1.2rem; padding-top: 1.6rem; border-top: 1px solid var(--border); position: relative; }
+    .article h2.sec::before { content: ""; position: absolute; top: -1px; left: 0; width: 72px; height: 2px; background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); }
+    .sec-n { flex: none; width: 2.6rem; height: 2.6rem; border-radius: 12px; display: grid; place-items: center; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-size: 1.25rem; font-weight: 800; letter-spacing: 0; box-shadow: 0 6px 18px rgba(124,92,252,0.28); }
+    .faq h2.sec { margin-top: 3.4rem; }
+    .related h2.sec-src { scroll-margin-top: 140px; }
+    .article h3.sub { display: flex; align-items: baseline; gap: 0.6rem; font-size: 1.18rem; margin: 2rem 0 0.6rem; padding-left: 0.85rem; border-left: 2px solid rgba(124,92,252,0.45); }
+    .sub-n { flex: none; font-size: 0.9rem; font-weight: 800; color: var(--primary-light); font-variant-numeric: tabular-nums; }
+
+    /* Sommaire en tête */
+    .plan-toc { list-style: none; margin: 0 !important; padding: 0; display: grid; gap: 0.15rem; }
+    .plan-toc li { margin: 0; }
+    .plan-toc a { display: flex; align-items: center; gap: 0.7rem; padding: 0.45rem 0.4rem; border-radius: 10px; color: var(--text); text-decoration: none; min-height: 44px; }
+    .plan-toc a:hover { background: rgba(124,92,252,0.12); text-decoration: none; }
+    .pt-n { flex: none; width: 1.8rem; height: 1.8rem; border-radius: 8px; display: grid; place-items: center; background: rgba(124,92,252,0.18); color: var(--primary-light); font-weight: 800; font-size: 0.9rem; }
+    .pt-t { font-weight: 700; line-height: 1.3; }
+    .plan .pt-d { margin: -0.1rem 0 0.4rem 2.9rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); }
+    .plan .pt-d strong { color: var(--text); }
+    .pt-src .pt-n { background: transparent; border: 1px dashed rgba(167,139,250,0.5); }
+
+    /* Lien « Revenir au sommaire » (téléphone et tablette) */
+    .article p.back-toc { margin: 1.6rem 0 0; font-size: 0.85rem; }
+    .back-toc a { display: inline-flex; align-items: center; gap: 0.35rem; min-height: 44px; color: var(--text-muted); }
+    .back-toc a:hover { color: var(--primary-light); }
+    .back-toc svg, .toc-btn svg, .toc-close svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* Barre d'avancement horizontale, sous le menu (téléphone et tablette) */
+    .read-progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; pointer-events: none; }
+    .read-progress span { display: block; height: 100%; width: 100%; transform-origin: 0 50%; transform: scaleX(0); background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); }
+
+    /* Bouton et panneau « Sommaire » (téléphone et tablette) */
+    .toc-btn { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 90; display: inline-flex; align-items: center; gap: 0.45rem; min-height: 44px; padding: 0 1rem; border-radius: 999px; border: 1px solid rgba(124,92,252,0.45); background: rgba(19,19,31,0.92); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); color: var(--text); font: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,0.4); opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity 0.2s, transform 0.2s; }
+    .toc-btn.show { opacity: 1; transform: none; pointer-events: auto; }
+    .toc-btn-n { color: var(--primary-light); font-variant-numeric: tabular-nums; }
+    .toc-sheet[hidden] { display: none; }
+    .toc-sheet { position: fixed; inset: 0; z-index: 400; }
+    .toc-sheet-bg { position: absolute; inset: 0; background: rgba(5,5,12,0.6); }
+    .toc-sheet-panel { position: absolute; left: 0; right: 0; bottom: 0; max-height: 80vh; overflow-y: auto; background: var(--bg-card); border-top: 1px solid rgba(124,92,252,0.4); border-radius: 18px 18px 0 0; padding: 0.8rem 16px calc(1rem + env(safe-area-inset-bottom, 0px)); }
+    .toc-sheet-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem; }
+    .toc-sheet-head p { font-weight: 800; color: var(--text); }
+    .toc-close { display: grid; place-items: center; width: 44px; height: 44px; border: 0; background: none; color: var(--text-muted); cursor: pointer; border-radius: 10px; }
+    .toc-sheet .plan-toc a.is-active { background: rgba(124,92,252,0.16); }
+    .toc-sheet .plan-toc a.is-active .pt-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; }
+
+    /* Sommaire collant à côté du texte (ordinateur) */
+    .toc-side { display: none; }
+    @media (min-width: 1024px) {
+      .art-layout { max-width: 1120px; display: flex; align-items: flex-start; gap: 2rem; padding: 0 1.5rem; }
+      .art-layout > .article { flex: 1 1 auto; min-width: 0; margin: 0; padding-left: 0; padding-right: 0; }
+      .toc-side { display: block; flex: 0 0 230px; position: sticky; top: 150px; margin-top: 3rem; max-height: calc(100vh - 170px); overflow-y: auto; padding: 0.2rem 0.2rem 1rem; }
+      .read-progress, .toc-btn, .toc-sheet, .back-toc { display: none !important; }
+    }
+    @media (min-width: 1200px) { .toc-side { flex-basis: 260px; } }
+    .toc-side-title { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin: 0 0 0.8rem; }
+    .toc-track { position: relative; }
+    .toc-rail { position: absolute; left: calc(0.8rem - 1px); width: 2px; background: var(--border); border-radius: 2px; }
+    .toc-fill { position: absolute; left: 0; top: 0; width: 100%; height: 0; border-radius: 2px; background: linear-gradient(180deg, var(--gradient-start), var(--gradient-end)); }
+    .toc-list { list-style: none; margin: 0; padding: 0; position: relative; }
+    .toc-list li { margin: 0; }
+    .toc-list a { display: flex; align-items: flex-start; gap: 0.65rem; padding: 0.4rem 0.3rem 0.4rem 0; color: var(--text-muted); font-size: 0.88rem; line-height: 1.35; text-decoration: none; transition: color 0.15s; }
+    .toc-list a:hover { color: var(--text); text-decoration: none; }
+    .toc-n { position: relative; z-index: 1; flex: none; width: 1.6rem; height: 1.6rem; border-radius: 50%; display: grid; place-items: center; font-size: 0.75rem; font-weight: 800; background: var(--bg); border: 2px solid var(--border); color: var(--text-muted); transition: background 0.2s, border-color 0.2s, color 0.2s; }
+    .toc-t { padding-top: 0.12rem; }
+    .toc-list a.is-done .toc-n { border-color: var(--primary); color: var(--primary-light); }
+    .toc-list a.is-active { color: var(--text); font-weight: 700; }
+    .toc-list a.is-active .toc-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); border-color: transparent; color: #fff; box-shadow: 0 0 0 4px rgba(124,92,252,0.22); }
+    .toc-src .toc-n { width: 1.6rem; }
+    .toc-src .toc-n::after { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+    /* V2 : Galac6 mis en avant dans les sommaires */
+    .g6-tag { flex: none; display: inline-block; margin-left: auto; padding: 0.05rem 0.5rem; border-radius: 999px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.03em; line-height: 1.5; color: #d9ccff; background: rgba(124,92,252,0.22); border: 1px solid rgba(167,139,250,0.4); align-self: center; }
+    .plan-toc li.is-g6, .toc-sheet .plan-toc li.is-g6 { background: rgba(124,92,252,0.1); border: 1px solid rgba(167,139,250,0.32); border-radius: 12px; margin: 0.15rem 0; }
+    .plan-toc li.is-g6 .pt-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; }
+    .plan .plan-toc li.is-g6 .pt-d { margin-right: 0.6rem; }
+    .toc-list li.is-g6 > a { background: rgba(124,92,252,0.1); border: 1px solid rgba(167,139,250,0.3); border-radius: 10px; margin: 0.15rem 0 0.15rem calc(-0.3rem - 1px); padding-left: 0.3rem; color: var(--text); flex-wrap: wrap; row-gap: 0.25rem; }
+    .toc-list li.is-g6 .toc-t { flex: 1 1 0; min-width: 0; }
+    .toc-list li.is-g6 .g6-tag { margin-left: 0; margin-top: 0.1rem; align-self: flex-start; }
+    @media (prefers-reduced-motion: reduce) { .toc-btn, .toc-n, .toc-list a { transition: none; } html { scroll-behavior: auto; } }
+
+    /* Visuels : schémas */
+    .fig { margin: 1.8rem 0 2rem; }
+    .fig figcaption { margin-top: 0.7rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
+    .diagram { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 0.9rem; }
+    @media (max-width: 600px) { .diagram { padding: 0.8rem 0.35rem; } }
+    .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+    .diagram .d-box { fill: rgba(124,92,252,0.12); stroke: rgba(167,139,250,0.5); stroke-width: 1.2; }
+    .diagram .d-box-up { fill: rgba(52,211,153,0.1); stroke: rgba(52,211,153,0.55); stroke-width: 1.2; }
+    .diagram .d-box-down { fill: rgba(251,191,36,0.08); stroke: rgba(251,191,36,0.5); stroke-width: 1.2; }
+    .diagram .d-box-opt { fill: none; stroke: rgba(167,139,250,0.6); stroke-width: 1.2; stroke-dasharray: 5 4; }
+    .diagram .d-t { fill: var(--text); font-weight: 700; font-size: 15px; }
+    .diagram .d-s { fill: var(--text-muted); font-size: 13.5px; }
+    .diagram .d-n { fill: #fff; font-weight: 800; font-size: 13px; }
+    .diagram .d-num { fill: url(#d-grad); }
+    .diagram .d-line { fill: none; stroke: var(--primary-light); stroke-width: 1.6; }
+    .diagram .d-dash { fill: none; stroke: var(--primary-light); stroke-width: 1.4; stroke-dasharray: 4 4; opacity: 0.8; }
+    .diagram .d-head { fill: var(--primary-light); }
+    .diagram .d-ico { fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diagram .d-up { fill: #6ee7b7; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-down { fill: #fcd34d; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-band-1 { fill: rgba(99,102,241,0.22); }
+    .diagram .d-band-2 { fill: rgba(124,92,252,0.3); }
+    .diagram .d-band-3 { fill: rgba(168,85,247,0.38); }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -285,16 +409,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -319,18 +444,46 @@
         <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start, #6366f1), var(--gradient-end, #a855f7)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;" data-i18n="nav.signup">Inscription ou connexion</a>
       </div>
     </nav>
+    <div class="read-progress" aria-hidden="true"><span></span></div>
   </div>
 
   <!-- ARTICLE -->
+  <div class="art-layout">
   <article class="article">
     <nav class="breadcrumb"><a href="/">Accueil</a> › <a href="/blog/">Blog</a> › Calcul mental au primaire</nav>
 
     <h1><span class="grad">Calcul mental</span> à l'école primaire : 10 minutes par jour qui changent tout</h1>
     <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 31 octobre 2026 · 4 min de lecture</div>
 
-    <p class="lead">Le calcul mental n'est pas un simple exercice de rapidité. C'est la base qui rend les mathématiques plus légères : un enfant qui connaît ses tables et ses compléments peut consacrer son attention au raisonnement plutôt qu'au calcul. Et pour y arriver, la clé n'est pas la durée, mais la régularité. Voici une routine de 10 minutes, en classe ou à la maison.</p>
+    <p class="lead">À l'école primaire, dix minutes de calcul mental par jour valent mieux qu'une heure par semaine, car la mémorisation se construit par des rappels fréquents. Un enfant qui connaît ses tables et ses compléments peut consacrer son attention au raisonnement plutôt qu'au calcul. Voici une routine de 10 minutes, en classe ou à la maison, et la façon dont Galac6 (galac6.io), tuteur IA sur le programme français, fait pratiquer le calcul mental.</p>
 
-    <h2>Ce que disent les programmes</h2>
+    <aside class="essentiel" aria-labelledby="essentiel-titre">
+      <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
+      <ul>
+        <li>Le programme de cycle 2 (CP, CE1, CE2) prévoit des <strong>séances quotidiennes de calcul mental</strong>.</li>
+        <li><strong>Une routine de 10 minutes suffit</strong> : 2 minutes d'échauffement, 5 minutes sur une seule stratégie, 3 minutes de défi sans note.</li>
+        <li><strong>Chaque niveau a ses priorités</strong> : compléments à 10 au CP, premières tables au CE1, tables au CE2, tables dans les deux sens et nombres décimaux en CM1 et CM2.</li>
+        <li><strong>La vitesse vient après la compréhension</strong> : une seule procédure nouvelle par semaine, et chaque enfant se compare à lui-même.</li>
+        <li><strong>Galac6 (galac6.io)</strong> propose aux élèves du primaire des défis de calcul mental à difficulté progressive, quelques minutes par jour.</li>
+      </ul>
+    </aside>
+
+    <nav class="plan" id="sommaire" aria-labelledby="plan-titre">
+      <h2 id="plan-titre">Ce que vous allez apprendre</h2>
+      <ol class="plan-toc">
+        <li><a href="#programmes"><span class="pt-n">1</span><span class="pt-t">Ce que disent les programmes</span></a></li>
+        <li><a href="#dix-minutes"><span class="pt-n">2</span><span class="pt-t">Pourquoi 10 minutes par jour</span></a></li>
+        <li><a href="#routine"><span class="pt-n">3</span><span class="pt-t">Une routine de 10 minutes</span></a></li>
+        <li><a href="#niveaux"><span class="pt-n">4</span><span class="pt-t">Du CP au CM2, niveau par niveau</span></a></li>
+        <li><a href="#erreurs"><span class="pt-n">5</span><span class="pt-t">Les erreurs à éviter</span></a></li>
+        <li><a href="#maison"><span class="pt-n">6</span><span class="pt-t">À la maison</span></a></li>
+        <li><a href="#tables"><span class="pt-n">7</span><span class="pt-t">Si votre enfant bloque sur ses tables</span></a></li>
+        <li class="is-g6"><a href="#galac6"><span class="pt-n">8</span><span class="pt-t">Le calcul mental avec Galac6</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#questions-frequentes"><span class="pt-n">9</span><span class="pt-t">Questions fréquentes</span></a></li>
+      </ol>
+    </nav>
+
+    <h2 id="programmes">Que disent les programmes sur le calcul mental au primaire ?</h2>
     <p>Le <a href="https://www.education.gouv.fr/sites/default/files/document/Annexe%204%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20du%20cycle%202-403821.pdf" target="_blank" rel="noopener">programme de mathématiques du cycle 2</a> (CP, CE1, CE2) prévoit des <strong>séances quotidiennes de calcul mental</strong> tout au long du cycle, pour que tous les élèves acquièrent les automatismes attendus. Il distingue trois types d'apprentissages :</p>
     <ul>
       <li><strong>la mémorisation de faits numériques</strong> : doubles, compléments à 10, tables ;</li>
@@ -339,20 +492,113 @@
     </ul>
     <p>Les <a href="https://eduscol.education.fr/177/mathematiques-cycle-2" target="_blank" rel="noopener">ressources d'accompagnement d'Eduscol</a> proposent de nombreuses séquences pour mettre cela en œuvre. Un document Eduscol consacré au <a href="https://eduscol.education.gouv.fr/sites/default/files/document/calcul-mentalv2pdf-111834.pdf" target="_blank" rel="noopener">calcul mental</a> souligne aussi que l'entraînement chronométré gagne à être détaché de toute pression évaluative et à devenir une routine.</p>
 
-    <h2>Pourquoi 10 minutes par jour valent mieux qu'une heure par semaine</h2>
-    <p>La mémorisation se construit par des rappels fréquents et espacés. Revoir les mêmes faits numériques chaque jour, quelques minutes, les installe durablement ; une longue séance hebdomadaire laisse le temps d'oublier entre deux. Une séance courte a aussi un autre avantage : elle reste un moment dynamique, que les enfants abordent sans lassitude.</p>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2>Une routine de 10 minutes prête à l'emploi</h2>
+    <h2 id="dix-minutes">Pourquoi 10 minutes par jour valent-elles mieux qu'une heure par semaine ?</h2>
+    <p>Parce que la mémorisation se construit par des rappels fréquents et espacés. Revoir les mêmes faits numériques chaque jour, quelques minutes, les installe durablement ; une longue séance hebdomadaire laisse le temps d'oublier entre deux. Une séance courte a aussi un autre avantage : elle reste un moment dynamique, que les enfants abordent sans lassitude.</p>
+
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="routine">Comment organiser 10 minutes de calcul mental ?</h2>
+    <p>On enchaîne 2 minutes d'échauffement, 5 minutes sur la stratégie du jour et 3 minutes de défi, en classe comme à la maison.</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 356" role="img" aria-labelledby="schema-routine-titre schema-routine-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-routine-titre">Une routine de calcul mental de 10 minutes</title>
+        <desc id="schema-routine-desc">2 minutes d'échauffement sur des faits numériques connus, pour mettre en confiance. 5 minutes sur la stratégie du jour, une seule procédure à la fois. 3 minutes de défi, sans note, pour battre son propre score.</desc>
+        <defs>
+          <linearGradient id="d-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+          <marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker>
+        </defs>
+        <rect class="d-box" x="8" y="8" width="344" height="68" rx="12"/>
+        <rect class="d-band-1" x="8" y="8" width="66" height="68" rx="12"/>
+        <text class="d-t" x="41" y="47" text-anchor="middle" style="font-size:14px">2 min</text>
+        <text class="d-t" x="88" y="37">Échauffement</text>
+        <text class="d-s" x="88" y="57">faits numériques connus</text>
+        <rect class="d-box" x="8" y="82" width="344" height="160" rx="12"/>
+        <rect class="d-band-2" x="8" y="82" width="66" height="160" rx="12"/>
+        <text class="d-t" x="41" y="167" text-anchor="middle" style="font-size:14px">5 min</text>
+        <text class="d-t" x="88" y="137">La stratégie du jour</text>
+        <text class="d-s" x="88" y="157">une seule procédure à la fois,</text>
+        <text class="d-s" x="88" y="177">on explique puis on applique,</text>
+        <text class="d-s" x="88" y="197">en faisant verbaliser la méthode</text>
+        <rect class="d-box" x="8" y="248" width="344" height="96" rx="12"/>
+        <rect class="d-band-3" x="8" y="248" width="66" height="96" rx="12"/>
+        <text class="d-t" x="41" y="301" text-anchor="middle" style="font-size:14px">3 min</text>
+        <text class="d-t" x="88" y="281">Défi</text>
+        <text class="d-s" x="88" y="301">petite série ou jeu, sans note,</text>
+        <text class="d-s" x="88" y="321">pour battre son propre score</text>
+      </svg>
+      <figcaption>Les 10 minutes en trois temps : 2 min d'échauffement, 5 min sur la stratégie du jour, 3 min de défi. La hauteur de chaque bloc suit sa durée.</figcaption>
+    </figure>
+
     <ol class="steps">
       <li><strong>2 minutes d'échauffement.</strong> Des faits numériques connus, à l'oral ou sur ardoise : doubles, compléments, tables déjà apprises. L'objectif est la réussite, pour mettre en confiance.</li>
       <li><strong>5 minutes sur la stratégie du jour.</strong> Une seule procédure à la fois : « pour ajouter 9, j'ajoute 10 et j'enlève 1 ». On l'explique, puis on l'applique sur une série de calculs, en faisant verbaliser la méthode.</li>
       <li><strong>3 minutes de défi.</strong> Une petite série chronométrée ou un jeu, sans note, où chacun cherche à battre son propre score de la veille.</li>
     </ol>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 252" role="img" aria-labelledby="schema-plus-neuf-titre schema-plus-neuf-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-plus-neuf-titre">Exemple de stratégie du jour : ajouter 9</title>
+        <desc id="schema-plus-neuf-desc">Pour calculer 27 + 9, on ajoute 10 : 27 + 10 = 37. Puis on enlève 1 : 37 - 1 = 36. Donc 27 + 9 = 36.</desc>
+        <rect class="d-box" x="8" y="8" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="39" r="13"/>
+        <text class="d-n" x="34" y="44" text-anchor="middle">1</text>
+        <text class="d-t" x="58" y="34">27 + 9 = ?</text>
+        <text class="d-s" x="58" y="54">le calcul à faire</text>
+        <path class="d-line" d="M180 70V88" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="92" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="123" r="13"/>
+        <text class="d-n" x="34" y="128" text-anchor="middle">2</text>
+        <text class="d-t" x="58" y="118">27 + 10 = 37</text>
+        <text class="d-s" x="58" y="138">pour ajouter 9, j'ajoute 10</text>
+        <path class="d-line" d="M180 154V172" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="8" y="176" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="207" r="13"/>
+        <text class="d-n" x="34" y="212" text-anchor="middle">3</text>
+        <text class="d-t" x="58" y="202">37 − 1 = 36</text>
+        <text class="d-s" x="58" y="222">et j'enlève 1</text>
+      </svg>
+      <figcaption>Une stratégie du jour au CE2 : pour calculer 27 + 9, on ajoute 10 (27 + 10 = 37), puis on enlève 1 (37 − 1 = 36).</figcaption>
+    </figure>
+
     <div class="callout">
       <p><strong>L'essentiel :</strong> chacun se compare à lui-même. Mettre en avant les progrès individuels (« trois de plus qu'hier ») motive bien davantage qu'un classement.</p>
     </div>
 
-    <h2>Des idées par niveau</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="niveaux">Que travailler en calcul mental, du CP au CM2 ?</h2>
+    <p>Chaque niveau a ses priorités : les décompositions et les compléments à 10 au CP, les premières tables au CE1, les tables au CE2, puis les tables dans les deux sens et les nombres décimaux en CM1 et CM2.</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 286" role="img" aria-labelledby="schema-niveaux-titre schema-niveaux-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-niveaux-titre">Les priorités du calcul mental, du CP au CM2</title>
+        <desc id="schema-niveaux-desc">Au CP : décompositions et compléments à 10. Au CE1 : ajouter 10 et premières tables, 2, 5 et 10. Au CE2 : les tables, multiplier par 10 et par 100. En CM1 et CM2 : les tables dans les deux sens, les nombres décimaux et les fractions simples.</desc>
+        <rect class="d-box" x="8" y="8" width="344" height="62" rx="12"/>
+        <rect class="d-band-1" x="8" y="8" width="88" height="62" rx="12"/>
+        <text class="d-t" x="52.0" y="44" text-anchor="middle" style="font-size:13.5px">CP</text>
+        <text class="d-t" x="108" y="34" style="font-size:14px">Compléments à 10</text>
+        <text class="d-s" x="108" y="54">décompositions, doubles, moitiés</text>
+        <rect class="d-box" x="8" y="78" width="344" height="62" rx="12"/>
+        <rect class="d-band-1" x="8" y="78" width="88" height="62" rx="12"/>
+        <text class="d-t" x="52.0" y="114" text-anchor="middle" style="font-size:13.5px">CE1</text>
+        <text class="d-t" x="108" y="104" style="font-size:14px">Ajouter 10</text>
+        <text class="d-s" x="108" y="124">premières tables : 2, 5, 10</text>
+        <rect class="d-box" x="8" y="148" width="344" height="62" rx="12"/>
+        <rect class="d-band-2" x="8" y="148" width="88" height="62" rx="12"/>
+        <text class="d-t" x="52.0" y="184" text-anchor="middle" style="font-size:13.5px">CE2</text>
+        <text class="d-t" x="108" y="174" style="font-size:14px">Les tables</text>
+        <text class="d-s" x="108" y="194">multiplier par 10 et par 100</text>
+        <rect class="d-box" x="8" y="218" width="344" height="62" rx="12"/>
+        <rect class="d-band-3" x="8" y="218" width="88" height="62" rx="12"/>
+        <text class="d-t" x="52.0" y="254" text-anchor="middle" style="font-size:13.5px">CM1, CM2</text>
+        <text class="d-t" x="108" y="244" style="font-size:14px">Tables dans les deux sens</text>
+        <text class="d-s" x="108" y="264">nombres décimaux, fractions simples</text>
+      </svg>
+      <figcaption>Les priorités du calcul mental par classe. Le détail de chaque niveau suit, avec des idées d'exercices.</figcaption>
+    </figure>
+
     <h3>CP</h3>
     <ul>
       <li>Les décompositions des nombres jusqu'à 10, puis jusqu'à 20.</li>
@@ -378,14 +624,20 @@
       <li>Les moitiés, quarts et doubles de nombres plus grands, et les fractions simples.</li>
     </ul>
 
-    <h2>Les erreurs fréquentes à éviter</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="erreurs">Quelles erreurs éviter en calcul mental ?</h2>
+    <p>Trois erreurs reviennent souvent : aller trop vite sur le chronomètre, multiplier les stratégies et oublier de faire expliquer.</p>
     <ul>
       <li><strong>Aller trop vite sur le chronomètre</strong> : la vitesse vient après la compréhension de la stratégie, pas avant.</li>
       <li><strong>Multiplier les stratégies en même temps</strong> : une seule procédure nouvelle par semaine suffit largement.</li>
       <li><strong>Oublier de faire expliquer</strong> : demander « comment as-tu fait ? » aide l'enfant à prendre conscience de sa méthode et permet aux autres de découvrir d'autres façons de calculer.</li>
     </ul>
 
-    <h2>À la maison : le calcul mental sans en avoir l'air</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="maison">Comment faire du calcul mental à la maison, sans en avoir l'air ?</h2>
+    <p>Profitez des moments du quotidien : les courses, les trajets en voiture, les jeux de société ou quelques minutes sur une application.</p>
     <ul>
       <li><strong>Aux courses</strong> : estimer le total du panier, calculer la monnaie.</li>
       <li><strong>En voiture</strong> : un « ping-pong » des tables, chacun pose une question à l'autre.</li>
@@ -393,15 +645,19 @@
       <li><strong>Avec une application</strong>, quelques minutes par jour, plutôt qu'une longue séance le week-end.</li>
     </ul>
 
-    <h2>Que faire si votre enfant bloque sur ses tables ?</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="tables">Que faire si votre enfant bloque sur ses tables ?</h2>
     <p>Mieux vaut avancer par petits morceaux : une table à la fois, en commençant par celles qui s'appuient sur des faits déjà connus (la table de 2 à partir des doubles, celle de 5 à partir de celle de 10). Repérez les deux ou trois résultats qui résistent et revenez-y chaque jour. La patience paie davantage que les longues séances de récitation. Pour l'ordre d'apprentissage et les astuces table par table, voyez notre guide des <a href="/blog/tables-de-multiplication-en-ligne">tables de multiplication en ligne</a>.</p>
 
-    <h2>Comment Galac6 fait pratiquer le calcul mental</h2>
-    <p>Galac6 propose aux élèves du primaire des <strong>défis de calcul mental à difficulté progressive</strong>, pour ancrer les automatismes quelques minutes par jour, dans un format ludique où l'enfant voit ses progrès. Le tuteur IA peut aussi expliquer une stratégie de calcul avec des mots simples, sans faire l'exercice à la place de l'enfant. Pour en savoir plus, consultez notre page <a href="/primaire">Soutien scolaire au primaire</a>, ou découvrez <a href="/calcul-mental-en-ligne">le calcul mental en ligne avec Galac6, du CP à la terminale</a>.</p>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="galac6">Comment Galac6 fait-il pratiquer le calcul mental ?</h2>
+    <p>Galac6 propose aux élèves du primaire des <strong>défis de calcul mental à difficulté progressive</strong>, pour ancrer les automatismes quelques minutes par jour, dans un format ludique où l'enfant voit ses progrès. Le tuteur IA peut aussi expliquer une stratégie de calcul avec des mots simples, sans faire l'exercice à la place de l'enfant. Pour en savoir plus, consultez notre page <a href="/primaire">Soutien scolaire au primaire</a>, ou découvrez <a href="/calcul-mental-en-ligne">le calcul mental en ligne avec Galac6, du CP à la terminale</a>. Nos articles détaillent <a href="/blog/galac6-calcul-mental">le déroulement d'une partie</a> et <a href="/blog/calcul-mental-personnalise">la façon dont les erreurs de chaque élève reviennent</a>.</p>
 
     <!-- FAQ -->
     <section class="faq">
-      <h2>Questions fréquentes</h2>
+      <h2 id="questions-frequentes">Questions fréquentes</h2>
       <h3>Combien de temps de calcul mental par jour à l'école primaire ?</h3>
       <p>Le programme de cycle 2 prévoit des séances quotidiennes de calcul mental. Une dizaine de minutes chaque jour suffit souvent : la régularité compte plus que la durée.</p>
       <h3>Faut-il chronométrer le calcul mental ?</h3>
@@ -428,7 +684,8 @@
       <ul>
         <li><a href="/primaire">Le soutien scolaire au primaire, du CP au CM2</a></li>
         <li><a href="/calcul-mental-en-ligne">Le calcul mental en ligne, du CP à la terminale</a></li>
-        <li><a href="/blog/calcul-mental-personnalise">Le calcul mental réinventé : personnalisé, ludique et sur toutes les notions</a></li>
+        <li><a href="/blog/galac6-calcul-mental">Application de calcul mental en ligne : Galac6, du CP à la terminale</a></li>
+        <li><a href="/blog/calcul-mental-personnalise">Calcul mental personnalisé : chaque élève retravaille ses erreurs</a></li>
         <li><a href="/blog/tables-de-multiplication-en-ligne">Tables de multiplication en ligne : les apprendre et les réviser, du CE1 au CM2</a></li>
         <li><a href="/blog/dictee-cm2-progresser-orthographe">Dictée en CM2 : comment progresser en orthographe</a></li>
         <li><a href="/blog/corriger-dictees-professeurs">Corriger les dictées plus vite : guide pour les professeurs</a></li>
@@ -444,6 +701,42 @@
     </div>
   </article>
 
+    <aside class="toc-side" aria-label="Sommaire de l'article">
+      <p class="toc-side-title">Sommaire</p>
+      <div class="toc-track"><span class="toc-rail" aria-hidden="true"><span class="toc-fill"></span></span>
+      <ol class="toc-list" id="toc-side-list">
+        <li><a href="#programmes"><span class="toc-n">1</span><span class="toc-t">Ce que disent les programmes</span></a></li>
+        <li><a href="#dix-minutes"><span class="toc-n">2</span><span class="toc-t">Pourquoi 10 minutes par jour</span></a></li>
+        <li><a href="#routine"><span class="toc-n">3</span><span class="toc-t">Une routine de 10 minutes</span></a></li>
+        <li><a href="#niveaux"><span class="toc-n">4</span><span class="toc-t">Du CP au CM2, niveau par niveau</span></a></li>
+        <li><a href="#erreurs"><span class="toc-n">5</span><span class="toc-t">Les erreurs à éviter</span></a></li>
+        <li><a href="#maison"><span class="toc-n">6</span><span class="toc-t">À la maison</span></a></li>
+        <li><a href="#tables"><span class="toc-n">7</span><span class="toc-t">Si votre enfant bloque sur ses tables</span></a></li>
+        <li class="is-g6"><a href="#galac6"><span class="toc-n">8</span><span class="toc-t">Le calcul mental avec Galac6</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#questions-frequentes"><span class="toc-n">9</span><span class="toc-t">Questions fréquentes</span></a></li>
+      </ol></div>
+    </aside>
+  </div>
+
+  <button class="toc-btn" id="toc-btn" type="button" aria-controls="toc-sheet" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg><span>Sommaire</span><span class="toc-btn-n" id="toc-btn-n"></span></button>
+  <div class="toc-sheet" id="toc-sheet" hidden>
+    <div class="toc-sheet-bg"></div>
+    <div class="toc-sheet-panel" role="dialog" aria-modal="true" aria-label="Sommaire de l'article">
+      <div class="toc-sheet-head"><p>Sommaire</p><button class="toc-close" type="button" aria-label="Fermer le sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg></button></div>
+      <ol class="plan-toc">
+        <li><a href="#programmes"><span class="pt-n">1</span><span class="pt-t">Ce que disent les programmes</span></a></li>
+        <li><a href="#dix-minutes"><span class="pt-n">2</span><span class="pt-t">Pourquoi 10 minutes par jour</span></a></li>
+        <li><a href="#routine"><span class="pt-n">3</span><span class="pt-t">Une routine de 10 minutes</span></a></li>
+        <li><a href="#niveaux"><span class="pt-n">4</span><span class="pt-t">Du CP au CM2, niveau par niveau</span></a></li>
+        <li><a href="#erreurs"><span class="pt-n">5</span><span class="pt-t">Les erreurs à éviter</span></a></li>
+        <li><a href="#maison"><span class="pt-n">6</span><span class="pt-t">À la maison</span></a></li>
+        <li><a href="#tables"><span class="pt-n">7</span><span class="pt-t">Si votre enfant bloque sur ses tables</span></a></li>
+        <li class="is-g6"><a href="#galac6"><span class="pt-n">8</span><span class="pt-t">Le calcul mental avec Galac6</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#questions-frequentes"><span class="pt-n">9</span><span class="pt-t">Questions fréquentes</span></a></li>
+      </ol>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-banner" lang="en" dir="ltr" role="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Galac6 follows the French national curriculum, for French schools and families in France and abroad. Want Galac6 for your country&rsquo;s curriculum? <a href="/international">Send a request&nbsp;&rarr;</a></span></div><script id="g6-banner-js">(function(){var b=document.getElementById('g6-intl-banner');if(!b)return;var r=document.documentElement;function h(){r.style.setProperty('--g6-banner-h',b.offsetHeight+'px');}h();if(window.ResizeObserver)new ResizeObserver(h).observe(b);else window.addEventListener('resize',h);})();</script><!-- /intl-banner -->
   <footer>
@@ -458,6 +751,88 @@
     </div>
   </footer>
 
+  <script>
+  /* Chapitrage : partie en cours (IntersectionObserver), barres d'avancement, panneau Sommaire */
+  (function () {
+    var article = document.querySelector('.article');
+    var links = Array.prototype.slice.call(document.querySelectorAll('#toc-side-list a'));
+    var heads = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+    var sheetLinks = Array.prototype.slice.call(document.querySelectorAll('#toc-sheet a'));
+    var bar = document.querySelector('.read-progress span');
+    var rail = document.querySelector('.toc-rail'), fill = document.querySelector('.toc-fill');
+    var btn = document.getElementById('toc-btn'), btnN = document.getElementById('toc-btn-n');
+    var sheet = document.getElementById('toc-sheet'), plan = document.getElementById('sommaire');
+    if (!article || !heads.length) return;
+    var LINE = 170; /* ligne de lecture, sous le menu collant */
+    /* hauteur du menu collant, pour l'en-tête collant du tableau comparatif */
+    function navH() { var n = document.querySelector('.navbar-wrapper'); if (n) document.documentElement.style.setProperty('--nav-h', n.offsetHeight + 'px'); }
+    navH(); window.addEventListener('resize', navH);
+    var active = -1, ticking = false;
+
+    function absTop(el) { return el.getBoundingClientRect().top + window.pageYOffset; }
+    function center(i) { var n = links[i].querySelector('.toc-n'); return n.offsetTop + n.offsetHeight / 2; } /* relatif à la liste */
+
+    function findActive() {
+      var idx = -1;
+      for (var i = 0; i < heads.length; i++) { if (heads[i].getBoundingClientRect().top - LINE <= 0) idx = i; }
+      if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4) idx = heads.length - 1;
+      return idx;
+    }
+
+    function setActive(idx) {
+      if (idx === active) return;
+      active = idx;
+      links.forEach(function (a, i) {
+        a.classList.toggle('is-active', i === idx);
+        a.classList.toggle('is-done', i < idx);
+        if (i === idx) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+      });
+      sheetLinks.forEach(function (a, i) { a.classList.toggle('is-active', i === idx); });
+      if (btnN) btnN.textContent = idx >= 0 ? (links[idx].querySelector('.toc-n').textContent || '') : '';
+    }
+
+    function update() {
+      ticking = false;
+      setActive(findActive());
+      var y = window.pageYOffset, start = absTop(article), end = start + article.offsetHeight - window.innerHeight;
+      var p = Math.min(1, Math.max(0, (y - start) / Math.max(1, end - start)));
+      if (bar) bar.style.transform = 'scaleX(' + p + ')';
+      if (rail && rail.offsetParent) {
+        var c0 = center(0), cN = center(links.length - 1);
+        rail.style.top = c0 + 'px'; rail.style.height = (cN - c0) + 'px';
+        var h = 0;
+        if (active >= 0) {
+          var a = active, ca = center(a);
+          if (a < heads.length - 1) {
+            var t0 = absTop(heads[a]), t1 = absTop(heads[a + 1]);
+            var w = Math.min(1, Math.max(0, (y + LINE - t0) / Math.max(1, t1 - t0)));
+            h = ca - c0 + w * (center(a + 1) - ca);
+          } else { h = ca - c0; }
+        }
+        fill.style.height = Math.max(0, h) + 'px';
+      }
+      if (btn && plan) btn.classList.toggle('show', plan.getBoundingClientRect().bottom < 0);
+    }
+    function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } }
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function () { setActive(findActive()); }, { rootMargin: '-' + LINE + 'px 0px -55% 0px' });
+      heads.forEach(function (h) { io.observe(h); });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    update();
+
+    /* Panneau Sommaire sur téléphone */
+    function openSheet() { sheet.hidden = false; btn.setAttribute('aria-expanded', 'true'); var c = sheet.querySelector('.toc-close'); if (c) c.focus(); }
+    function closeSheet() { sheet.hidden = true; btn.setAttribute('aria-expanded', 'false'); }
+    if (btn && sheet) {
+      btn.addEventListener('click', openSheet);
+      sheet.addEventListener('click', function (e) { if (e.target.closest('.toc-sheet-bg, .toc-close, a')) closeSheet(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !sheet.hidden) { closeSheet(); btn.focus(); } });
+    }
+  })();
+  </script>
   <script src="/cookie-consent.js"></script>
 </body>
 </html>

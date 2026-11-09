@@ -18,7 +18,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
   <meta property="article:published_time" content="2026-11-04">
-  <meta property="article:modified_time" content="2026-11-04">
+  <meta property="article:modified_time" content="2026-11-09">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Tables de multiplication en ligne : les apprendre et les réviser, du CE1 au CM2">
   <meta name="twitter:description" content="Dans quel ordre apprendre les tables, quelles astuces, réviser à l'oral ou à l'écrit, et ce que Galac6 propose aux familles et aux professeurs.">
@@ -63,7 +63,14 @@
       "headline": "Tables de multiplication en ligne : les apprendre et les réviser, du CE1 au CM2",
       "description": "Apprendre et réviser les tables de multiplication en ligne, du CE1 au CM2 : dans quel ordre, quelles astuces, à l'oral ou à l'écrit, et ce que propose Galac6.",
       "image": [
-        "https://galac6.io/images/og-image-v2.jpg",
+        {
+          "@type": "ImageObject",
+          "url": "https://galac6.io/images/og-image-v2.jpg",
+          "contentUrl": "https://galac6.io/images/og-image-v2.jpg",
+          "width": 1200,
+          "height": 630,
+          "caption": "Galac6, l'IA au service de la pédagogie."
+        },
         {
           "@type": "ImageObject",
           "url": "https://galac6.io/blog/img/calcul-mental-personnalise/calcul-mental-personnalise-choix-niveau-oral.webp",
@@ -82,7 +89,7 @@
         }
       ],
       "datePublished": "2026-11-04",
-      "dateModified": "2026-11-04",
+      "dateModified": "2026-11-09",
       "inLanguage": "fr-FR",
       "mainEntityOfPage": "https://galac6.io/blog/tables-de-multiplication-en-ligne",
       "keywords": "tables de multiplication en ligne, apprendre les tables de multiplication, réviser les tables de multiplication, tables de multiplication CE1, tables de multiplication CE2, tables de multiplication CM1, tables de multiplication CM2, astuces tables de multiplication, MuscuMath",
@@ -467,16 +474,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 <body>
 
@@ -519,7 +527,7 @@
         <li><strong>Un ordre simple</strong> : les premières tables au CE1 (2, 5, 10, puis 3 et 4), toutes les tables jusqu'à 9 au CE2, puis les tables dans les deux sens au CM1 et au CM2.</li>
         <li><strong>Moins à retenir qu'il n'y paraît</strong> : comme 7 × 8 = 8 × 7, les 64 résultats des tables de 2 à 9 se réduisent à 36, et à 15 une fois les tables de 2, 5 et 9 maîtrisées.</li>
         <li><strong>Peu, mais souvent</strong> : quelques minutes chaque jour valent mieux qu'une longue séance par semaine.</li>
-        <li><strong>Avec Galac6</strong> : des séries de calcul mental sur les tables, à l'écrit ou à l'oral, une astuce de méthode pour chaque calcul raté, et les erreurs qui reviennent jusqu'à deux réussites.</li>
+        <li><strong>Avec Galac6 (galac6.io)</strong> : des séries de calcul mental sur les tables, à l'écrit ou à l'oral, une astuce de méthode pour chaque calcul raté, et les erreurs qui reviennent jusqu'à deux réussites.</li>
         <li>Pour les professeurs : <strong>MuscuMath</strong> permet d'envoyer à la classe une série sur les tables choisies, par exemple les tables de 7 et de 8, corrigée automatiquement.</li>
       </ul>
     </aside>
@@ -567,7 +575,7 @@
         <text class="d-up" x="24" y="325">Collège : les tables servent partout</text>
         <text class="d-s" x="24" y="347">fractions, nombres décimaux, divisibilité</text>
       </svg>
-      <figcaption>L'ordre habituel : des premières tables au CE1 jusqu'aux tables utilisées dans les deux sens au CM1 et au CM2.</figcaption>
+      <figcaption>L'ordre habituel : au CE1, les premières tables (2, 5 et 10, puis 3 et 4) ; au CE2, toutes les tables jusqu'à 9, et multiplier par 10 et par 100 ; au CM1 et au CM2, les tables dans les deux sens (« 56, c'est 7 fois combien ? », la division). Au collège, les tables servent partout : fractions, nombres décimaux, divisibilité.</figcaption>
     </figure>
     <ul>
       <li><strong>CE1</strong> : les premières tables, celles de 2, 5 et 10, puis celles de 3 et 4. La table de 2 s'appuie sur les doubles, celle de 5 sur la moitié de celle de 10.</li>
@@ -601,7 +609,7 @@
         <text class="d-t" x="130" y="242">à vraiment retenir</text>
         <text class="d-s" x="130" y="264">avec 3, 4, 6, 7 et 8</text>
       </svg>
-      <figcaption>Avec l'ordre des facteurs et les tables faciles, il reste 15 résultats à apprendre vraiment par cœur.</figcaption>
+      <figcaption>64 résultats dans les tables de 2 à 9, sans compter × 1 et × 10, immédiats. Il en reste 36 car 7 × 8 = 8 × 7 : l'ordre ne change pas le résultat. Avec les tables faciles, il reste 15 résultats à vraiment retenir, avec 3, 4, 6, 7 et 8.</figcaption>
     </figure>
     <ol class="steps">
       <li><strong>L'ordre ne compte pas.</strong> 7 × 8 et 8 × 7 donnent le même résultat. Les 64 résultats des tables de 2 à 9 se réduisent ainsi à 36.</li>
@@ -667,9 +675,9 @@
         <text class="d-s" x="72" y="340">le calcul sort des révisions</text>
         <text class="d-s" x="180" y="388" text-anchor="middle">Exemple : 7 × 8, l'un des 15 résultats à retenir</text>
       </svg>
-      <figcaption>Un calcul raté revient dans les séries suivantes jusqu'à deux réussites.</figcaption>
+      <figcaption>Exemple : 7 × 8, l'un des 15 résultats à retenir. L'élève se trompe pendant la série (7 × 8 = 54). Bonne réponse : 56, et une astuce de méthode, en fin de série. 7 × 8 revient dans les séries suivantes. Après deux réussites, le calcul sort des révisions.</figcaption>
     </figure>
-    <p>Chaque série rapporte de l'expérience (XP), et Plumaths, le jeu de calcul mental de Galac6, reprend les mêmes questions sur les notions de sa classe, dont les tables du CE1 au CM1. Pour le détail du calcul mental personnalisé, voyez <a href="/blog/calcul-mental-personnalise">Le calcul mental réinventé</a>, et pour le déroulement d'une partie, <a href="/blog/galac6-calcul-mental">Galac6 pour le calcul mental</a>.</p>
+    <p>Chaque série rapporte de l'expérience (XP), et Plumaths, le jeu de calcul mental de Galac6, reprend les mêmes questions sur les notions de sa classe, dont les tables du CE1 au CM1. Pour le détail du calcul mental personnalisé, voyez <a href="/blog/calcul-mental-personnalise">Calcul mental personnalisé</a>, et pour le déroulement d'une partie, <a href="/blog/galac6-calcul-mental">Galac6 pour le calcul mental</a>.</p>
     <div style="margin: 1.5rem 0;">
       <a href="https://galac6web.netlify.app/" class="cta-btn">Réviser les tables avec Galac6 →</a>
     </div>
@@ -716,7 +724,7 @@
         <text class="d-s" x="24" y="206">un premier pas vers la division</text>
         <text class="d-s" x="180" y="244" text-anchor="middle">Les deux dernières formes préparent la division.</text>
       </svg>
-      <figcaption>Dans une série MuscuMath sur les tables, les questions changent de forme selon la difficulté.</figcaption>
+      <figcaption>Dans une série MuscuMath sur les tables, les questions changent de forme selon la difficulté : le produit (7 × 8 = ?, la table dans l'ordre habituel), le facteur manquant (7 × ? = 56, la table dans l'autre sens), puis combien de fois 7 dans 56, un premier pas vers la division. Les deux dernières formes préparent la division.</figcaption>
     </figure>
 
     <figure class="fig">
@@ -765,7 +773,7 @@
       <h2>À lire aussi</h2>
       <ul>
         <li><a href="/blog/calcul-mental-primaire">Calcul mental au primaire : 10 minutes par jour</a></li>
-        <li><a href="/blog/calcul-mental-personnalise">Le calcul mental réinventé : personnalisé, ludique et sur toutes les notions de maths</a></li>
+        <li><a href="/blog/calcul-mental-personnalise">Calcul mental personnalisé : chaque élève retravaille ses erreurs</a></li>
         <li><a href="/blog/galac6-calcul-mental">Galac6 pour le calcul mental : le déroulement d'une partie</a></li>
         <li><a href="/calcul-mental-en-ligne">Le calcul mental en ligne, du CP à la terminale</a></li>
         <li><a href="/primaire">Le soutien scolaire au primaire, du CP au CM2</a></li>

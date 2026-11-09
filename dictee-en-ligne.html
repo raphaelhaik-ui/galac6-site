@@ -91,7 +91,7 @@
           "name": "Combien coûte la dictée en ligne ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "La formule Découverte coûte 0 €, sans carte bancaire : elle comprend une dictée par mois pour essayer. Les offres Élève (69 € par an ou 7,99 € par mois) et Famille (99 € par an ou 11,99 € par mois, jusqu'à 4 enfants) donnent des dictées en illimité. Pour les écoles, le tarif est sur devis."
+            "text": "Galac6 est un service payant. L'offre Découverte, à 0 € et limitée, comprend une dictée par mois pour essayer, sans carte bancaire. Les offres Élève (69 € par an ou 7,99 € par mois) et Famille (99 € par an ou 11,99 € par mois, jusqu'à 4 enfants) donnent des dictées en illimité. Pour les écoles, le tarif est sur devis."
           }
         },
         {
@@ -131,14 +131,6 @@
       "inLanguage": "fr",
       "description": "Galac6 (galac6.io) prépare chaque élève à son contrôle d'une façon unique. L'élève apprend sa leçon sur une fiche de révision Galac6. Une IA l'interroge ensuite pour mesurer ce qu'il a vraiment retenu. Puis Galac6 lui propose des exercices adaptés à son niveau. Pendant tout ce travail, un chat pédagogique l'aide sans jamais lui donner la réponse. Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac. Du CP à la Terminale, sur le programme scolaire français. Données hébergées en France, IA traitée en Europe.",
       "offers": [
-        {
-          "@type": "Offer",
-          "name": "Découverte (quantité limitée chaque mois)",
-          "price": "0",
-          "priceCurrency": "EUR",
-          "url": "https://galac6.io/tarifs",
-          "description": "Toutes les fonctionnalités en quantité limitée, renouvelées chaque mois, sans carte bancaire."
-        },
         {
           "@type": "Offer",
           "name": "Élève, abonnement annuel",
@@ -222,6 +214,14 @@
           "price": "19",
           "priceCurrency": "EUR",
           "url": "https://galac6.io/tarifs"
+        },
+        {
+          "@type": "Offer",
+          "name": "Découverte (quantité limitée chaque mois)",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "url": "https://galac6.io/tarifs",
+          "description": "Offre d'essai limitée : toutes les fonctionnalités en petite quantité, renouvelées chaque mois, sans carte bancaire. Galac6 est un service payant : l'accès illimité commence à 69 € par an."
         }
       ],
       "publisher": {
@@ -629,16 +629,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -743,7 +744,8 @@
           <a class="btn btn-primary" href="https://galac6web.netlify.app/" data-i18n="dictee.cta.try">Essayer une dictée</a>
           <a class="btn btn-outline" href="/tarifs" data-i18n="dictee.cta.pricing">Voir les tarifs</a>
         </div>
-        <p class="updated"><time datetime="2026-11-02" data-i18n="dictee2.updated">Mis à jour le 2 novembre 2026</time></p>
+        <p style="margin-top:0.75rem;font-size:0.9rem;color:var(--text-muted,#8a8aa3);" data-i18n="dictee.price.note">Offre Découverte à 0 €, limitée. Offre Élève à 69 € par an.</p>
+        <p class="updated"><time datetime="2026-11-09" data-i18n="dictee2.updated">Mis à jour le 9 novembre 2026</time></p>
       </div>
       <div class="e-art" aria-hidden="true">
         <svg viewBox="0 0 400 400" fill="none" stroke="url(#gx)" stroke-linecap="round" stroke-linejoin="round">
@@ -860,7 +862,7 @@
         <details><summary data-i18n="dictee2.faq.q5">Pour quels niveaux sont les dictées ?</summary><div class="ans"><p data-i18n="dictee2.faq.a5">Du CP à la 3e, avec des dictées écrites pour chaque classe, et jusqu'à la terminale avec des extraits de grands auteurs du domaine public. En 3e, les dictées des sujets du brevet des années précédentes sont aussi proposées.</p></div></details>
         <details><summary data-i18n="dictee2.faq.q6">Peut-on faire corriger la dictée donnée par la maîtresse ou le professeur ?</summary><div class="ans"><p data-i18n="dictee2.faq.a6">Oui. L'enfant prend en photo le texte de la dictée, ou le colle, ou ajoute une image, un PDF ou un fichier Word. Galac6 lui lit ce texte puis corrige sa copie.</p></div></details>
         <details><summary data-i18n="dictee.faq.q4">Les professeurs peuvent-ils donner une dictée à leur classe ?</summary><div class="ans"><p data-i18n="dictee2.faq.a7">Oui. Le professeur crée sa dictée en collant un texte ou en prenant une feuille en photo, l'envoie à la classe avec une date limite et choisit son barème. Chaque élève fait la dictée seul sur son écran, et les copies papier peuvent être déposées en photo puis corrigées.</p></div></details>
-        <details><summary data-i18n="dictee.faq.q5">Combien coûte la dictée en ligne ?</summary><div class="ans"><p data-i18n="dictee2.faq.a8">La formule Découverte coûte 0 €, sans carte bancaire : elle comprend une dictée par mois pour essayer. Les offres Élève (69 € par an ou 7,99 € par mois) et Famille (99 € par an ou 11,99 € par mois, jusqu'à 4 enfants) donnent des dictées en illimité. Pour les écoles, le tarif est sur devis.</p></div></details>
+        <details><summary data-i18n="dictee.faq.q5">Combien coûte la dictée en ligne ?</summary><div class="ans"><p data-i18n="dictee2.faq.a8">Galac6 est un service payant. L'offre Découverte, à 0 € et limitée, comprend une dictée par mois pour essayer, sans carte bancaire. Les offres Élève (69 € par an ou 7,99 € par mois) et Famille (99 € par an ou 11,99 € par mois, jusqu'à 4 enfants) donnent des dictées en illimité. Pour les écoles, le tarif est sur devis.</p></div></details>
         <details><summary data-i18n="dictee2.faq.q9">Où sont les données de mon enfant ?</summary><div class="ans"><p data-i18n="dictee2.faq.a9">Les données sont hébergées en France, dans une base de données à Paris. Galac6 n'affiche aucune publicité et ne revend aucune donnée. L'intelligence artificielle de Galac6 est traitée en Europe.</p></div></details>
       </div>
       <p class="intl-link"><a href="/donnees-eleves" data-i18n="dictee2.more.donnees">Comment Galac6 protège les données des élèves</a></p>
@@ -873,7 +875,7 @@
       <ul class="more-links">
         <li><a href="/calcul-mental-en-ligne" data-i18n="dictee2.more.calcul">Calcul mental en ligne, du CP à la terminale</a></li>
         <li><a href="/blog/dictee-cm2-progresser-orthographe" data-i18n="dictee.more.blog">Dictée en CM2 : comment progresser en orthographe</a></li>
-        <li><a href="/blog/galac6-dictee">Galac6 pour la dictée : dictées audio corrigées du CP à la 3e</a></li>
+        <li class="fr-only"><a href="/blog/galac6-dictee">Galac6 pour la dictée : dictées audio corrigées du CP à la 3e</a></li>
         <li><a href="/blog/corriger-dictees-professeurs" data-i18n="dictee2.more.blogprof">Corriger les dictées plus vite : le guide des professeurs</a></li>
         <li><a href="/tarifs" data-i18n="dictee2.more.tarifs">Les tarifs de Galac6</a></li>
         <li><a href="/primaire" data-i18n="dictee.more.primaire">Le soutien scolaire au primaire, du CP au CM2</a></li>

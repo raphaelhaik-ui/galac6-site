@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galac6 pour les professeurs de français — Galac6</title>
+  <title>Professeur de français : dictées, copies et bac | Galac6</title>
   <meta name="description" content="Dictées de classe lues et corrigées, copies papier corrigées sur photo, entraînement au bac de français : ce que Galac6 apporte à un professeur de français.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/blog/galac6-professeur-francais">
@@ -18,7 +18,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
   <meta property="article:published_time" content="2026-11-03">
-  <meta property="article:modified_time" content="2026-11-03">
+  <meta property="article:modified_time" content="2026-11-09">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Galac6 pour un professeur de français : dictées, copies papier et bac de français">
   <meta name="twitter:description" content="Dictées de classe lues et corrigées, copies de dictée papier corrigées à partir d&#x27;une photo, entraînement au bac de français, suivi par notion : ce que Galac6 apporte à un professeur de français.">
@@ -70,7 +70,7 @@
         "caption": "Galac6, l'IA au service de la pédagogie."
       },
       "datePublished": "2026-11-03",
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-09",
       "inLanguage": "fr-FR",
       "mainEntityOfPage": "https://galac6.io/blog/galac6-professeur-francais",
       "keywords": "professeur de français, dictée de classe, correction dictée papier, bac de français, orthographe, suivi de classe, IA éducation",
@@ -316,6 +316,30 @@
     .toc-list li.is-g6 .toc-t { flex: 1 1 0; min-width: 0; }
     .toc-list li.is-g6 .g6-tag { margin-left: 0; margin-top: 0.1rem; align-self: flex-start; }
     @media (prefers-reduced-motion: reduce) { .toc-btn, .toc-n, .toc-list a { transition: none; } html { scroll-behavior: auto; } }
+
+    /* Schémas : mêmes styles que les articles récents */
+    .fig { margin: 1.8rem 0 2rem; }
+    .fig figcaption { margin-top: 0.7rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
+    .diagram { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 0.9rem; }
+    @media (max-width: 600px) { .diagram { padding: 0.8rem 0.35rem; } }
+    .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+    .diagram .d-box { fill: rgba(124,92,252,0.12); stroke: rgba(167,139,250,0.5); stroke-width: 1.2; }
+    .diagram .d-box-up { fill: rgba(52,211,153,0.1); stroke: rgba(52,211,153,0.55); stroke-width: 1.2; }
+    .diagram .d-box-down { fill: rgba(251,191,36,0.08); stroke: rgba(251,191,36,0.5); stroke-width: 1.2; }
+    .diagram .d-box-opt { fill: none; stroke: rgba(167,139,250,0.6); stroke-width: 1.2; stroke-dasharray: 5 4; }
+    .diagram .d-t { fill: var(--text); font-weight: 700; font-size: 15px; }
+    .diagram .d-s { fill: var(--text-muted); font-size: 13.5px; }
+    .diagram .d-n { fill: #fff; font-weight: 800; font-size: 13px; }
+    .diagram .d-num { fill: url(#d-grad); }
+    .diagram .d-line { fill: none; stroke: var(--primary-light); stroke-width: 1.6; }
+    .diagram .d-dash { fill: none; stroke: var(--primary-light); stroke-width: 1.4; stroke-dasharray: 4 4; opacity: 0.8; }
+    .diagram .d-head { fill: var(--primary-light); }
+    .diagram .d-ico { fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diagram .d-up { fill: #6ee7b7; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-down { fill: #fcd34d; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-band-1 { fill: rgba(99,102,241,0.22); }
+    .diagram .d-band-2 { fill: rgba(124,92,252,0.3); }
+    .diagram .d-band-3 { fill: rgba(168,85,247,0.38); }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -390,16 +414,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -433,9 +458,9 @@
     <nav class="breadcrumb"><a href="/">Accueil</a> › <a href="/blog/">Blog</a> › Galac6 pour un professeur de français</nav>
 
     <h1>Galac6 pour un <span class="grad">professeur de français</span></h1>
-    <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 3 novembre 2026 · 6 min de lecture</div>
+    <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 3 novembre 2026 · Mis à jour le 9 novembre 2026 · 6 min de lecture</div>
 
-    <p class="lead">Galac6 aide un professeur de français à donner des dictées lues et corrigées automatiquement, à faire corriger ses copies de dictée papier à partir d'une photo et à entraîner ses élèves au bac de français. Vous gardez la main sur le barème et sur chaque note.</p>
+    <p class="lead">Galac6 (galac6.io) aide un professeur de français à donner des dictées lues et corrigées automatiquement, à faire corriger ses copies de dictée papier à partir d'une photo et à entraîner ses élèves au bac de français. Vous gardez la main sur le barème et sur chaque note.</p>
 
     <aside class="essentiel" aria-labelledby="essentiel-titre">
       <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
@@ -451,7 +476,7 @@
     <nav class="plan" id="sommaire" aria-labelledby="plan-titre">
       <h2 id="plan-titre">Ce que vous allez apprendre</h2>
       <ol class="plan-toc">
-        <li><a href="#en-bref"><span class="pt-n">1</span><span class="pt-t">En bref</span></a></li>
+        <li><a href="#en-bref"><span class="pt-n">1</span><span class="pt-t">Ce que vous pouvez faire</span></a></li>
         <li><a href="#dictees-classe"><span class="pt-n">2</span><span class="pt-t">Des dictées de classe</span></a></li>
         <li><a href="#correction-bareme"><span class="pt-n">3</span><span class="pt-t">Une correction avec votre barème</span></a></li>
         <li><a href="#copies-papier"><span class="pt-n">4</span><span class="pt-t">Les copies de dictée papier</span></a></li>
@@ -467,7 +492,8 @@
 
     <p>Galac6 est un tuteur IA qui suit le programme français, du CP à la terminale, avec un espace professeur et un espace pour l'école. Voici ce qu'un professeur de français, ou un professeur des écoles, peut y faire aujourd'hui.</p>
 
-    <h2 id="en-bref">En bref</h2>
+    <h2 id="en-bref">Que peut faire un professeur de français avec Galac6 ?</h2>
+    <p>Un professeur de français peut y donner des dictées lues et corrigées, faire corriger ses copies papier et entraîner ses élèves au bac :</p>
     <ul>
       <li><strong>Des dictées de classe</strong> lues à voix haute par Galac6 et corrigées faute par faute.</li>
       <li><strong>Les copies de dictée papier</strong> photographiées, lues puis corrigées par Galac6, que vous vérifiez.</li>
@@ -475,60 +501,129 @@
       <li><strong>Des quiz et des interrogations</strong> prêts en quelques minutes, que vous validez.</li>
       <li><strong>L'entraînement au bac de français</strong> sur 75 sujets officiels de l'écrit, et au brevet sur 129 sujets.</li>
     </ul>
+    <p>Le partage des rôles est simple. Galac6 lit la dictée, relève chaque faute, lit les copies papier et propose des questions et des notes. Vous choisissez le texte et le barème, vous vérifiez les copies papier et vous validez chaque question et chaque note.</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 263" role="img" aria-labelledby="schema-roles-titre schema-roles-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-roles-titre">Ce que fait Galac6, ce que vous gardez</title>
+        <desc id="schema-roles-desc">Galac6 : lit la dictée, relève chaque faute, lit les copies papier, propose des questions et des notes. Vous : choisissez le texte et le barème, vérifiez les copies papier, validez chaque question et chaque note.</desc>
+        <defs>
+          <linearGradient id="d-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+          <marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker>
+        </defs>
+        <rect class="d-box" x="8" y="6" width="344" height="130" rx="12"/>
+        <text class="d-t" x="24" y="34">Galac6</text>
+        <text class="d-s" x="24" y="57">lit la dictée</text>
+        <text class="d-s" x="24" y="78">relève chaque faute</text>
+        <text class="d-s" x="24" y="99">lit les copies papier</text>
+        <text class="d-s" x="24" y="120">propose des questions et des notes</text>
+        <rect class="d-box-up" x="8" y="148" width="344" height="109" rx="12"/>
+        <text class="d-t" x="24" y="176">Vous</text>
+        <text class="d-s" x="24" y="199">choisissez le texte et le barème</text>
+        <text class="d-s" x="24" y="220">vérifiez les copies papier</text>
+        <text class="d-s" x="24" y="241">validez chaque question et chaque note</text>
+      </svg>
+      <figcaption>Galac6 prend en charge la lecture et le relevé des fautes ; la décision reste au professeur.</figcaption>
+    </figure>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="dictees-classe">Des dictées de classe, sans avoir à les dicter</h2>
+    <h2 id="dictees-classe">Comment donner une dictée à toute la classe sans la dicter ?</h2>
     <p>Vous créez une dictée en collant un texte ou en prenant une feuille en photo, puis vous l'envoyez à la classe avec une date limite. Vous pouvez aussi puiser dans la banque de Galac6 : <strong>plus de 2 000 dictées</strong>, avec des textes écrits pour chaque classe du CP à la 3e, des extraits de grands auteurs du domaine public du CM1 à la terminale, et les dictées des sujets du brevet des années précédentes.</p>
     <p>Chaque élève fait la dictée seul sur son écran : Galac6 la lit phrase par phrase, la vitesse se règle et chaque phrase peut être réécoutée. L'élève écrit au clavier, ou sur papier puis envoie sa copie en photo. Vos dictées restent dans votre bibliothèque et se réutilisent avec d'autres classes, les années suivantes.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="correction-bareme">Une correction fiable, avec votre barème</h2>
-    <p>Galac6 compare la copie au texte, mot à mot. Chaque faute est relevée et la note suit le barème : une même copie reçoit toujours la même note. Chaque faute est expliquée avec des mots simples.</p>
+    <h2 id="correction-bareme">La correction de Galac6 respecte-t-elle votre barème ?</h2>
+    <p>Oui : vous réglez le barème pour la classe et la note le suit, si bien qu'une même copie reçoit toujours la même note. Galac6 compare la copie au texte, mot à mot, et relève chaque faute. Chaque faute est expliquée avec des mots simples.</p>
     <p>Par défaut, la note est sur 10 et les fautes sont classées en trois types : grammaire (accords, conjugaison, homophones), orthographe d'un mot, fautes mineures (accent, majuscule, ponctuation). Les formes admises par les rectifications orthographiques de 1990 sont acceptées. Pour votre classe, vous réglez le barème : points retirés par type de faute, note maximale, majuscules et ponctuation comptées ou non.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="copies-papier">Les copies de dictée papier, corrigées à partir d'une photo</h2>
-    <p>Vous préférez garder la dictée sur cahier ou sur copie ? Dans l'onglet Devoirs de la classe, le bouton <strong>Corriger des copies papier</strong> vous permet de déposer les photos des copies. Galac6 lit chaque copie et propose la correction, faute par faute, que vous vérifiez avant de la valider. Si une photo est floue ou trop petite, Galac6 le signale pour qu'elle soit reprise.</p>
+    <h2 id="copies-papier">Peut-on faire corriger des copies de dictée papier ?</h2>
+    <p>Oui, à partir d'une simple photo. Vous préférez garder la dictée sur cahier ou sur copie ? Dans l'onglet Devoirs de la classe, le bouton <strong>Corriger des copies papier</strong> vous permet de déposer les photos des copies. Galac6 lit chaque copie et propose la correction, faute par faute, que vous vérifiez avant de la valider. Si une photo est floue ou trop petite, Galac6 le signale pour qu'elle soit reprise.</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 328" role="img" aria-labelledby="schema-copies-titre schema-copies-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-copies-titre">Corriger des copies de dictée papier</title>
+        <desc id="schema-copies-desc">Étape 1 : Déposer les photos des copies, onglet Devoirs de la classe. Étape 2 : Galac6 lit chaque copie, Galac6 signale une photo floue. Étape 3 : Galac6 propose la correction, faute par faute. Étape 4 : Vous vérifiez et validez, la note reste votre décision.</desc>
+        <rect class="d-box" x="8" y="8" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="39" r="13"/><text class="d-n" x="34" y="44" text-anchor="middle">1</text>
+        <text class="d-t" x="58" y="34">Déposer les photos des copies</text>
+        <text class="d-s" x="58" y="54">onglet Devoirs de la classe</text>
+        <path class="d-line" d="M180 70V88" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="92" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="123" r="13"/><text class="d-n" x="34" y="128" text-anchor="middle">2</text>
+        <text class="d-t" x="58" y="118">Galac6 lit chaque copie</text>
+        <text class="d-s" x="58" y="138">Galac6 signale une photo floue</text>
+        <path class="d-line" d="M180 154V172" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="176" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="207" r="13"/><text class="d-n" x="34" y="212" text-anchor="middle">3</text>
+        <text class="d-t" x="58" y="202">Galac6 propose la correction</text>
+        <text class="d-s" x="58" y="222">faute par faute</text>
+        <path class="d-line" d="M180 238V256" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="8" y="260" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="291" r="13"/><text class="d-n" x="34" y="296" text-anchor="middle">4</text>
+        <text class="d-t" x="58" y="286">Vous vérifiez et validez</text>
+        <text class="d-s" x="58" y="306">la note reste votre décision</text>
+      </svg>
+      <figcaption>Les 4 étapes de la correction des copies papier. Rien n'est validé sans vous.</figcaption>
+    </figure>
+
     <p>Les photos des dictées sur papier déposées par les professeurs sont effacées à la fin de chaque année scolaire. Pour des conseils de méthode sur la correction elle-même (codes de correction, dictées négociées, autocorrection), lisez notre guide <a href="/blog/corriger-dictees-professeurs">corriger les dictées plus vite</a>.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="dictees-sur-mesure">Des dictées sur mesure</h2>
-    <p>Après quelques dictées corrigées, Galac6 peut préparer un texte par élève, qui reprend les notions qu'il doit encore travailler. Vous ciblez ainsi les besoins de chacun sans écrire vingt-cinq textes différents.</p>
+    <h2 id="dictees-sur-mesure">Peut-on donner une dictée différente à chaque élève ?</h2>
+    <p>Oui. Après quelques dictées corrigées, Galac6 peut préparer un texte par élève, qui reprend les notions qu'il doit encore travailler. Vous ciblez ainsi les besoins de chacun sans écrire vingt-cinq textes différents.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="quiz-interrogations">Des quiz et des interrogations en quelques minutes</h2>
+    <h2 id="quiz-interrogations">Comment créer un quiz ou une interrogation en quelques minutes ?</h2>
     <p>Grammaire, conjugaison, vocabulaire, lecture d'une œuvre : dans l'onglet <strong>Devoirs</strong>, vous créez un quiz, une interrogation, un contrôle ou un devoir à la maison. Galac6 propose des questions dont il a vérifié la bonne réponse, l'assistant en ajoute à votre demande, ou vous écrivez les vôtres. Vous relisez et validez chaque question. Pour une évaluation notée, Galac6 propose une note pour chaque copie et c'est vous qui la validez. Le pas-à-pas est dans le <a href="/guide-prof">guide professeur</a>.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="bac-francais">Le bac de français : vos élèves s'entraînent</h2>
-    <p>En première, vos élèves peuvent passer des bacs blancs de français en ligne :</p>
+    <h2 id="bac-francais">Comment vos élèves s'entraînent-ils au bac de français ?</h2>
+    <p>En première, vos élèves s'entraînent en passant des bacs blancs de français en ligne :</p>
     <ul>
       <li><strong>75 sujets officiels de l'écrit</strong> (sessions 2021 à 2026) : 42 pour la voie générale, 33 pour la voie technologique ;</li>
       <li>le commentaire ou la dissertation, la contraction de texte et l'essai, avec un chronomètre de 4 heures en mode « Conditions d'examen » ;</li>
       <li>une note sur 20 détaillée critère par critère, selon la grille officielle, avec des conseils ;</li>
       <li>un oral blanc à la voix sur les textes étudiés en classe : explication linéaire, question de grammaire, entretien.</li>
     </ul>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 114" role="img" aria-labelledby="schema-sujets-bac-titre schema-sujets-bac-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-sujets-bac-titre">Les 75 sujets officiels de l'écrit du bac de français</title>
+        <desc id="schema-sujets-bac-desc">Voie générale : 42. Voie technologique : 33.</desc>
+        <text class="d-t" x="8" y="22">Voie générale</text>
+        <text class="d-t" x="352" y="22" text-anchor="end">42</text>
+        <rect class="d-box" x="8" y="32" width="344" height="14" rx="7"/>
+        <rect class="d-band-3" x="8" y="32" width="344.0" height="14" rx="7"/>
+        <text class="d-t" x="8" y="78">Voie technologique</text>
+        <text class="d-t" x="352" y="78" text-anchor="end">33</text>
+        <rect class="d-box" x="8" y="88" width="344" height="14" rx="7"/>
+        <rect class="d-band-2" x="8" y="88" width="270.3" height="14" rx="7"/>
+      </svg>
+      <figcaption>Répartition des 75 sujets officiels de l'écrit, sessions 2021 à 2026.</figcaption>
+    </figure>
     <p>Les sujets d'entraînement générés par l'IA sont toujours signalés comme tels et ne sont jamais mélangés avec les annales officielles. La note de l'IA est une aide à l'entraînement : elle ne remplace pas votre évaluation. Pour un établissement, les bacs blancs en double correction et les oraux blancs font partie de l'option Examens et Oral. Voir aussi <a href="/reviser-bac-francais">réviser le bac de français</a> et notre article <a href="/blog/bac-francais-commentaire-dissertation">commentaire et dissertation</a>.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="suivi-classe">Suivre la classe</h2>
+    <h2 id="suivi-classe">Que voyez-vous du travail de la classe ?</h2>
     <p>Pour chaque devoir, vous voyez qui l'a fait, qui est en retard, les questions les plus ratées et la réussite par notion, avec les élèves en difficulté. Un email quotidien récapitule les retards, les décrochages et les progrès. Vous ne voyez pas les conversations de vos élèves avec le tuteur, seulement leurs résultats.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="donnees">Les données de vos élèves</h2>
+    <h2 id="donnees">Où sont hébergées les données de vos élèves ?</h2>
     <p>Les comptes et les données sont hébergés en France, à Paris, et l'intelligence artificielle de Galac6 est traitée en Europe ; quelques services techniques, comme l'hébergement du site, font appel à des prestataires situés hors de l'Union européenne. Tout est détaillé sur la page <a href="/donnees-eleves">Données des élèves</a>.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="commencer">Comment commencer</h2>
+    <h2 id="commencer">Comment commencer avec Galac6 ?</h2>
+    <p>Le plus simple est de devenir professeur testeur ; pour un établissement, de demander un pilote :</p>
     <ul>
       <li><strong>Vous êtes professeur</strong> : devenez <a href="/profs-testeurs">professeur testeur</a> et accédez à tout Galac6 pendant 3 mois, offerts en échange de vos retours.</li>
       <li><strong>Pour votre établissement</strong> : un <a href="/ecole">pilote gratuit de 3 mois sur 3 classes</a>, sans engagement, puis un tarif sur devis.</li>
@@ -562,6 +657,7 @@
         <li><a href="/blog/dictee-cm2-progresser-orthographe">Dictée en CM2 : comment progresser en orthographe</a></li>
         <li><a href="/blog/bac-francais-commentaire-dissertation">Bac de français : commentaire et dissertation</a></li>
         <li><a href="/blog/galac6-professeur-maths">Galac6 pour un professeur de maths</a></li>
+        <li><a href="/blog/ia-programme-education-nationale">Tuteur IA et programme de l'Éducation nationale</a></li>
         <li><a href="/guide-prof">Guide professeur : votre premier quiz Galac6</a></li>
         <li><a href="/blog/galac6-dictee">Dictées audio corrigées du CP à la 3e</a></li>
       </ul>
@@ -580,7 +676,7 @@
       <p class="toc-side-title">Sommaire</p>
       <div class="toc-track"><span class="toc-rail" aria-hidden="true"><span class="toc-fill"></span></span>
       <ol class="toc-list" id="toc-side-list">
-        <li><a href="#en-bref"><span class="toc-n">1</span><span class="toc-t">En bref</span></a></li>
+        <li><a href="#en-bref"><span class="toc-n">1</span><span class="toc-t">Ce que vous pouvez faire</span></a></li>
         <li><a href="#dictees-classe"><span class="toc-n">2</span><span class="toc-t">Des dictées de classe</span></a></li>
         <li><a href="#correction-bareme"><span class="toc-n">3</span><span class="toc-t">Une correction avec votre barème</span></a></li>
         <li><a href="#copies-papier"><span class="toc-n">4</span><span class="toc-t">Les copies de dictée papier</span></a></li>
@@ -601,7 +697,7 @@
     <div class="toc-sheet-panel" role="dialog" aria-modal="true" aria-label="Sommaire de l'article">
       <div class="toc-sheet-head"><p>Sommaire</p><button class="toc-close" type="button" aria-label="Fermer le sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg></button></div>
       <ol class="plan-toc">
-        <li><a href="#en-bref"><span class="pt-n">1</span><span class="pt-t">En bref</span></a></li>
+        <li><a href="#en-bref"><span class="pt-n">1</span><span class="pt-t">Ce que vous pouvez faire</span></a></li>
         <li><a href="#dictees-classe"><span class="pt-n">2</span><span class="pt-t">Des dictées de classe</span></a></li>
         <li><a href="#correction-bareme"><span class="pt-n">3</span><span class="pt-t">Une correction avec votre barème</span></a></li>
         <li><a href="#copies-papier"><span class="pt-n">4</span><span class="pt-t">Les copies de dictée papier</span></a></li>

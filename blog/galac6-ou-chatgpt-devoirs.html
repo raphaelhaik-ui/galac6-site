@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galac6 ou ChatGPT pour les devoirs ? — Galac6</title>
+  <title>Galac6 ou ChatGPT pour les devoirs : quelle différence ?</title>
   <meta name="description" content="Galac6 ou ChatGPT et son mode étude pour les devoirs ? Comparatif factuel : programme français, guidage, annales, dictée, cadre parental, données.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/blog/galac6-ou-chatgpt-devoirs">
+  <link rel="alternate" hreflang="fr" href="https://galac6.io/blog/galac6-ou-chatgpt-devoirs">
+  <link rel="alternate" hreflang="x-default" href="https://galac6.io/blog/galac6-ou-chatgpt-devoirs">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Galac6">
   <meta property="og:locale" content="fr_FR">
@@ -17,6 +19,8 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
+  <meta property="article:published_time" content="2026-11-03">
+  <meta property="article:modified_time" content="2026-11-09">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Galac6 ou ChatGPT pour les devoirs : quelle différence ?">
   <meta name="twitter:description" content="Galac6 ou ChatGPT pour les devoirs : la différence, critère par critère.">
@@ -68,7 +72,7 @@
         "caption": "Galac6, l'IA au service de la pédagogie."
       },
       "datePublished": "2026-11-03",
-      "dateModified": "2026-11-04",
+      "dateModified": "2026-11-09",
       "inLanguage": "fr",
       "mainEntityOfPage": "https://galac6.io/blog/galac6-ou-chatgpt-devoirs",
       "author": {
@@ -86,11 +90,7 @@
       }
     },
     {
-      "@type": "Organization",
-      "name": "Galac6",
-      "url": "https://galac6.io/",
-      "logo": "https://galac6.io/icons/logo.png",
-      "email": "hello@galac6.io"
+      "@id": "https://galac6.io/#organization"
     },
     {
       "@type": "FAQPage",
@@ -344,6 +344,29 @@
     .toc-list li.is-g6 .toc-t { flex: 1 1 0; min-width: 0; }
     .toc-list li.is-g6 .g6-tag { margin-left: 0; margin-top: 0.1rem; align-self: flex-start; }
     @media (prefers-reduced-motion: reduce) { .toc-btn, .toc-n, .toc-list a { transition: none; } html { scroll-behavior: auto; } }
+  /* Schémas et encadrés des articles */
+    .fig { margin: 1.8rem 0 2rem; }
+    .fig figcaption { margin-top: 0.7rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
+    .diagram { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 0.9rem; }
+    @media (max-width: 600px) { .diagram { padding: 0.8rem 0.35rem; } }
+    .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+    .diagram .d-box { fill: rgba(124,92,252,0.12); stroke: rgba(167,139,250,0.5); stroke-width: 1.2; }
+    .diagram .d-box-up { fill: rgba(52,211,153,0.1); stroke: rgba(52,211,153,0.55); stroke-width: 1.2; }
+    .diagram .d-box-down { fill: rgba(251,191,36,0.08); stroke: rgba(251,191,36,0.5); stroke-width: 1.2; }
+    .diagram .d-box-opt { fill: none; stroke: rgba(167,139,250,0.6); stroke-width: 1.2; stroke-dasharray: 5 4; }
+    .diagram .d-t { fill: var(--text); font-weight: 700; font-size: 15px; }
+    .diagram .d-s { fill: var(--text-muted); font-size: 13.5px; }
+    .diagram .d-n { fill: #fff; font-weight: 800; font-size: 13px; }
+    .diagram .d-num { fill: url(#d-grad); }
+    .diagram .d-line { fill: none; stroke: var(--primary-light); stroke-width: 1.6; }
+    .diagram .d-dash { fill: none; stroke: var(--primary-light); stroke-width: 1.4; stroke-dasharray: 4 4; opacity: 0.8; }
+    .diagram .d-head { fill: var(--primary-light); }
+    .diagram .d-ico { fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diagram .d-up { fill: #6ee7b7; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-down { fill: #fcd34d; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-band-1 { fill: rgba(99,102,241,0.22); }
+    .diagram .d-band-2 { fill: rgba(124,92,252,0.3); }
+    .diagram .d-band-3 { fill: rgba(168,85,247,0.38); }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -418,16 +441,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -463,7 +487,7 @@
     <h1>Galac6 ou <span class="grad">ChatGPT</span> pour les devoirs : quelle différence ?</h1>
     <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 3 novembre 2026 · 7 min de lecture</div>
 
-    <p class="lead">ChatGPT est un assistant généraliste qui, avec son mode étude, peut guider l'élève par des questions. Galac6 est un tuteur conçu uniquement pour les élèves du CP à la terminale, sur les programmes français, avec dictées, calcul mental, brevets blancs corrigés et suivi par les parents et les professeurs.</p>
+    <p class="lead">ChatGPT est un assistant généraliste qui, avec son mode étude, peut guider l'élève par des questions. Galac6 (galac6.io) est un tuteur conçu uniquement pour les élèves du CP à la terminale, sur les programmes français, avec dictées, calcul mental, brevets blancs corrigés et suivi par les parents et les professeurs.</p>
 
     <aside class="essentiel" aria-labelledby="essentiel-titre">
       <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
@@ -492,8 +516,8 @@
 
     <p>Beaucoup d'élèves utilisent déjà ChatGPT pour leurs devoirs. La question n'est donc pas de savoir si l'IA peut aider, mais quel outil correspond à un enfant qui doit apprendre. Cet article est rédigé par Galac6. Nous avons décrit chaque service à partir de ses pages officielles, sans test de notre part.</p>
 
-    <h2 id="chatgpt-mode-etude">ChatGPT et son mode étude</h2>
-    <p>ChatGPT est un assistant d'OpenAI pour tous les publics et tous les sujets. Son <strong>mode étude</strong> change sa façon de répondre : au lieu de donner directement la réponse finale, il peut poser des questions, expliquer étape par étape et vérifier la compréhension, selon une approche socratique. D'après l'aide d'OpenAI :</p>
+    <h2 id="chatgpt-mode-etude">Que fait le mode étude de ChatGPT ?</h2>
+    <p>Le <strong>mode étude</strong> change la façon de répondre de ChatGPT, l'assistant d'OpenAI pour tous les publics et tous les sujets : au lieu de donner directement la réponse finale, il peut poser des questions, expliquer étape par étape et vérifier la compréhension, selon une approche socratique. D'après l'aide d'OpenAI :</p>
     <ul>
       <li>le mode étude est disponible avec <strong>tous les forfaits</strong>, sur le web, iOS et Android ;</li>
       <li>l'élève peut importer des notes de cours, des PDF ou la photo d'un problème ;</li>
@@ -506,13 +530,46 @@
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="galac6-autrement">Ce que Galac6 fait autrement</h2>
-    <p>Galac6 part d'un autre besoin : celui d'un élève qui suit le programme français. Le guidage n'est pas une option à activer, c'est le fonctionnement normal du tuteur. Il demande à l'élève ce qu'il a déjà compris, découpe l'exercice en étapes et donne des indices, sans écrire la solution. Quand l'élève propose un résultat de calcul, Galac6 peut le vérifier avec un outil de calcul avant de lui dire s'il a raison.</p>
+    <h2 id="galac6-autrement">Que fait Galac6 de différent pour les devoirs ?</h2>
+    <p>Galac6 guide l'élève à chaque conversation : ce n'est pas une option à activer, c'est le fonctionnement normal du tuteur. Il part du besoin d'un élève qui suit le programme français. Il demande à l'élève ce qu'il a déjà compris, découpe l'exercice en étapes et donne des indices, sans écrire la solution. Quand l'élève propose un résultat de calcul, Galac6 peut le vérifier avec un outil de calcul avant de lui dire s'il a raison.</p>
     <p>Autour du tuteur, Galac6 propose des entraînements prêts à l'emploi : <a href="/dictee-en-ligne">dictées lues à voix haute</a>, <a href="/calcul-mental-en-ligne">calcul mental</a>, <a href="/fiches-revision-ia">fiches de révision à partir d'une photo du cours</a>, interrogation sur la leçon avec un bilan sur 20, et <a href="/reviser-brevet">brevets blancs</a> sur 129 sujets officiels.</p>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 332" role="img" aria-labelledby="schema-guidage-titre schema-guidage-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-guidage-titre">Le guidage dans ChatGPT et dans Galac6</title>
+        <desc id="schema-guidage-desc">Dans ChatGPT : ouvrir une conversation, activer le mode étude dans la zone de saisie, questions et explications étape par étape ; le mode étude peut parfois donner une réponse directe. Dans Galac6 : poser sa question, le tuteur demande ce qui est compris, l'exercice est découpé en étapes avec des indices, le guidage est sans option à activer et sans solution écrite.</desc>
+        <defs><linearGradient id="d-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient><marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker></defs>
+        <text class="d-t" x="92" y="20" text-anchor="middle">ChatGPT</text>
+        <text class="d-t" x="268" y="20" text-anchor="middle">Galac6</text>
+        <rect class="d-box" x="6" y="32" width="172" height="58" rx="10"/>
+        <text class="d-s" x="92" y="66" text-anchor="middle">Ouvrir une conversation</text>
+        <path class="d-line" d="M92 90V106" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="6" y="110" width="172" height="58" rx="10"/>
+        <text class="d-s" x="92" y="135" text-anchor="middle">Activer le mode étude</text><text class="d-s" x="92" y="154" text-anchor="middle">dans la zone de saisie</text>
+        <path class="d-line" d="M92 168V184" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="6" y="188" width="172" height="58" rx="10"/>
+        <text class="d-s" x="92" y="213" text-anchor="middle">Questions, explications</text><text class="d-s" x="92" y="232" text-anchor="middle">étape par étape</text>
+        <path class="d-line" d="M92 246V262" marker-end="url(#d-arr)"/>
+        <rect class="d-box-down" x="6" y="266" width="172" height="58" rx="10"/>
+        <text class="d-s" x="92" y="291" text-anchor="middle">Peut parfois donner</text><text class="d-s" x="92" y="310" text-anchor="middle">une réponse directe</text>
+        <rect class="d-box" x="182" y="32" width="172" height="58" rx="10"/>
+        <text class="d-s" x="268" y="66" text-anchor="middle">Poser sa question</text>
+        <path class="d-line" d="M268 90V106" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="182" y="110" width="172" height="58" rx="10"/>
+        <text class="d-s" x="268" y="135" text-anchor="middle">Le tuteur demande</text><text class="d-s" x="268" y="154" text-anchor="middle">ce qui est compris</text>
+        <path class="d-line" d="M268 168V184" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="182" y="188" width="172" height="58" rx="10"/>
+        <text class="d-s" x="268" y="213" text-anchor="middle">Exercice découpé</text><text class="d-s" x="268" y="232" text-anchor="middle">en étapes, avec indices</text>
+        <path class="d-line" d="M268 246V262" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="182" y="266" width="172" height="58" rx="10"/>
+        <text class="d-s" x="268" y="291" text-anchor="middle">Guidage sans option</text><text class="d-s" x="268" y="310" text-anchor="middle">à activer, sans solution</text>
+      </svg>
+      <figcaption>ChatGPT : ouvrir une conversation, activer le mode étude dans la zone de saisie, questions et explications étape par étape. Galac6 : poser sa question, le tuteur demande ce qui est compris, puis un exercice découpé en étapes, avec indices, sans option à activer et sans solution écrite. D'après l'aide d'OpenAI consultée le 3 novembre 2026.</figcaption>
+    </figure>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="comparatif">Le comparatif, critère par critère</h2>
+    <h2 id="comparatif">Comment se comparent Galac6 et ChatGPT, critère par critère ?</h2>
+    <p>ChatGPT est polyvalent et Galac6 est spécialisé dans la scolarité française : le tableau détaille leurs différences.</p>
     <div class="callout">
       <p><strong>Informations vérifiées sur les sites officiels le 3 novembre 2026.</strong> « Non indiqué » signifie que l'information ne figure pas sur les pages officielles consultées (liste en bas de page), pas que la fonction n'existe pas. Les prix des autres services ne sont pas repris ici : ils évoluent, consultez leur site.</p>
     </div>
@@ -537,21 +594,57 @@
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="cadre">Le cadre pour les parents et les professeurs</h2>
+    <h2 id="cadre">Quel cadre pour les parents et les professeurs ?</h2>
     <p>Avec ChatGPT, un parent peut associer son compte à celui de son adolescent et régler des horaires d'étude. Avec Galac6, le compte de l'élève est créé avec sa classe ; en dehors du cadre scolaire, l'accord d'un parent est demandé pour les moins de 15 ans. L'offre Famille comprend des rapports de progression et le réglage du temps d'écran pour chaque enfant. Quand l'élève utilise Galac6 avec son école, ses professeurs voient ses résultats, mais pas ses conversations avec le tuteur.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="donnees">Les données des élèves</h2>
+    <h2 id="donnees">Où vont les données des élèves ?</h2>
     <p>Chez Galac6, les comptes et les données sont hébergés en France, dans une base de données à Paris, et l'intelligence artificielle est traitée en Europe ; les données des élèves ne servent pas à entraîner des modèles d'intelligence artificielle (<a href="/donnees-eleves">le détail</a>). Pour ChatGPT, OpenAI propose une résidence des données en Europe pour ChatGPT Enterprise, ChatGPT Edu et son API. Les conditions d'utilisation pour l'Europe indiquent qu'un utilisateur peut refuser, dans ses paramètres, que ses contenus servent à entraîner les modèles.</p>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 202" role="img" aria-labelledby="schema-donnees-titre schema-donnees-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-donnees-titre">Où vont les données avec Galac6 et avec ChatGPT</title>
+        <desc id="schema-donnees-desc">Galac6 : comptes et données en France, à Paris ; IA traitée en Europe ; données non utilisées pour entraîner des modèles. ChatGPT : résidence en Europe pour Enterprise, Edu et API ; refus de l'entraînement possible dans les paramètres.</desc>
+        
+        <rect class="d-box-up" x="6" y="6" width="348" height="100" rx="12"/><text class="d-t" x="20" y="30">Galac6</text>
+        <text class="d-s" x="20" y="52">comptes et données en France, à Paris</text>
+        <text class="d-s" x="20" y="72">IA traitée en Europe</text>
+        <text class="d-s" x="20" y="92">données non utilisées pour entraîner des modèles</text>
+        <rect class="d-box" x="6" y="116" width="348" height="80" rx="12"/><text class="d-t" x="20" y="140">ChatGPT</text>
+        <text class="d-s" x="20" y="162">résidence en Europe : Enterprise, Edu et API</text>
+        <text class="d-s" x="20" y="182">refus possible de l'entraînement : paramètres</text>
+      </svg>
+      <figcaption>Galac6 : comptes et données en France, à Paris, IA traitée en Europe, données non utilisées pour entraîner des modèles. ChatGPT : résidence en Europe pour Enterprise, Edu et l'API, refus de l'entraînement possible dans les paramètres.</figcaption>
+    </figure>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="lequel-choisir">Galac6 ou ChatGPT : lequel choisir ?</h2>
+    <p>Galac6 convient à un enfant qui suit le programme français et a besoin d'un cadre ; ChatGPT, à un adolescent autonome.</p>
     <ul>
       <li><strong>Galac6 si</strong> votre enfant a moins de 13 ans, si vous voulez un tuteur qui guide à chaque conversation sans réglage à faire, des entraînements alignés sur sa classe (dictée, calcul mental, brevet, bac de français) et un suivi par ses parents et ses professeurs.</li>
       <li><strong>ChatGPT si</strong> votre enfant est un adolescent autonome qui a besoin d'un assistant polyvalent, au-delà de l'école, et qui saura activer le mode étude quand il travaille.</li>
     </ul>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 212" role="img" aria-labelledby="schema-choix-titre schema-choix-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-choix-titre">Galac6 ou ChatGPT selon votre enfant</title>
+        <desc id="schema-choix-desc">Moins de 13 ans : Galac6, car ChatGPT demande 13 ans. Dictée, calcul, brevet, entraînements de sa classe : Galac6. Adolescent autonome, besoins au-delà de l'école : ChatGPT en mode étude.</desc>
+        
+        <rect class="d-box" x="4" y="6" width="214" height="60" rx="10"/><text class="d-t" x="14" y="32">Moins de 13 ans ?</text><text class="d-s" x="14" y="52">ChatGPT demande 13 ans</text>
+        <path class="d-line" d="M218 36H238" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="242" y="6" width="114" height="60" rx="10"/>
+        <text class="d-t" x="299" y="41" text-anchor="middle">Galac6</text>
+        <rect class="d-box" x="4" y="76" width="214" height="60" rx="10"/><text class="d-t" x="14" y="102">Dictée, calcul, brevet ?</text><text class="d-s" x="14" y="122">entraînements de sa classe</text>
+        <path class="d-line" d="M218 106H238" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="242" y="76" width="114" height="60" rx="10"/>
+        <text class="d-t" x="299" y="111" text-anchor="middle">Galac6</text>
+        <rect class="d-box" x="4" y="146" width="214" height="60" rx="10"/><text class="d-t" x="14" y="172">Adolescent autonome ?</text><text class="d-s" x="14" y="192">besoins au-delà de l'école</text>
+        <path class="d-line" d="M218 176H238" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="242" y="146" width="114" height="60" rx="10"/>
+        <text class="d-t" x="299" y="173" text-anchor="middle">ChatGPT</text><text class="d-s" x="299" y="192" text-anchor="middle">en mode étude</text>
+      </svg>
+      <figcaption>Moins de 13 ans, ou besoin de dictée, de calcul et de brevet : Galac6, avec les entraînements de sa classe. Adolescent autonome, besoins au-delà de l'école : ChatGPT en mode étude.</figcaption>
+    </figure>
     <p>Pour fixer des règles claires à la maison, lisez notre article <a href="/blog/ia-devoirs-sans-tricher">utiliser l'IA pour les devoirs sans tricher</a>.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
@@ -593,6 +686,9 @@
         <li><a href="/blog/galac6-ou-eliott">Galac6 ou Eliott : quelle IA pour réviser ?</a></li>
         <li><a href="/blog/alternatives-eliott">Alternatives à Eliott : 5 tuteurs IA comparés</a></li>
         <li><a href="/soutien-scolaire-ia">Le soutien scolaire par IA, du CP à la terminale</a></li>
+        <li><a href="/blog/ia-devoirs-enfant-sans-reponses">Quelle IA pour les devoirs sans donner les réponses ?</a></li>
+        <li><a href="/blog/galac6-ou-notebooklm-fiches">Galac6 ou NotebookLM pour les fiches de révision ?</a></li>
+        <li><a href="/blog/galac6-ou-kwyk">Galac6 et Kwyk : différences et complémentarité pour la classe de maths</a></li>
       </ul>
     </div>
 

@@ -7,6 +7,16 @@
   <meta name="description" content="Galac6 prépare chaque élève à son contrôle : leçon sur une fiche, interrogation par une IA, exercices adaptés, chat qui aide sans donner la réponse.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/methode-pedagogique">
+  <!-- hreflang (généré par scripts/build-langs.py) -->
+  <link rel="alternate" hreflang="fr" href="https://galac6.io/methode-pedagogique">
+  <link rel="alternate" hreflang="en" href="https://galac6.io/en/teaching-method">
+  <link rel="alternate" hreflang="es" href="https://galac6.io/es/metodo-pedagogico">
+  <link rel="alternate" hreflang="it" href="https://galac6.io/it/metodo-didattico">
+  <link rel="alternate" hreflang="de" href="https://galac6.io/de/lernmethode">
+  <link rel="alternate" hreflang="pt" href="https://galac6.io/pt/metodo-pedagogico">
+  <link rel="alternate" hreflang="nl" href="https://galac6.io/nl/onderwijsmethode">
+  <link rel="alternate" hreflang="x-default" href="https://galac6.io/methode-pedagogique">
+  <!-- /hreflang -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Galac6">
   <meta property="og:locale" content="fr_FR">
@@ -325,16 +335,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 
   <style id="g6-pivot-css">
@@ -400,7 +411,7 @@
         <a href="/tarifs" data-i18n="nav.pricing">Tarifs</a>
         <a href="/blog/" data-i18n="nav.blog">Blog</a>
         <a href="/about" data-i18n="nav.about">À propos</a>
-        <!-- lang-menu --><details class="lang-menu"><summary aria-label="Langue : Français"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#002654"/><rect x="13.33" width="6.67" height="14" fill="#ce1126"/></svg><span>FR</span></summary><div class="lang-menu-list"><a href="/methode-pedagogique" hreflang="fr" lang="fr" aria-current="page"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#002654"/><rect x="13.33" width="6.67" height="14" fill="#ce1126"/></svg><span>Français</span></a><a href="/en/" hreflang="en" lang="en"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#012169"/><path d="M0 0L20 14M20 0L0 14" stroke="#fff" stroke-width="3"/><path d="M0 0L20 14M20 0L0 14" stroke="#c8102e" stroke-width="1"/><path d="M10 0V14M0 7H20" stroke="#fff" stroke-width="4.5"/><path d="M10 0V14M0 7H20" stroke="#c8102e" stroke-width="2.5"/></svg><span>English</span></a><a href="/es/" hreflang="es" lang="es"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#aa151b"/><rect y="3.5" width="20" height="7" fill="#f1bf00"/></svg><span>Español</span></a><a href="/it/" hreflang="it" lang="it"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#009246"/><rect x="13.33" width="6.67" height="14" fill="#ce2b37"/></svg><span>Italiano</span></a><a href="/de/" hreflang="de" lang="de"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#ffce00"/><rect width="20" height="4.67" fill="#000"/><rect y="4.67" width="20" height="4.67" fill="#dd0000"/></svg><span>Deutsch</span></a><a href="/pt/" hreflang="pt" lang="pt"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#da291c"/><rect width="8" height="14" fill="#046a38"/><circle cx="8" cy="7" r="3" fill="#ffe900"/><circle cx="8" cy="7" r="1.6" fill="#da291c"/></svg><span>Português</span></a><a href="/nl/" hreflang="nl" lang="nl"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="20" height="4.67" fill="#ae1c28"/><rect y="9.33" width="20" height="4.67" fill="#21468b"/></svg><span>Nederlands</span></a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
+        <!-- lang-menu --><details class="lang-menu"><summary aria-label="Langue : Français"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#002654"/><rect x="13.33" width="6.67" height="14" fill="#ce1126"/></svg><span>FR</span></summary><div class="lang-menu-list"><a href="/methode-pedagogique" hreflang="fr" lang="fr" aria-current="page"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#002654"/><rect x="13.33" width="6.67" height="14" fill="#ce1126"/></svg><span>Français</span></a><a href="/en/teaching-method" hreflang="en" lang="en"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#012169"/><path d="M0 0L20 14M20 0L0 14" stroke="#fff" stroke-width="3"/><path d="M0 0L20 14M20 0L0 14" stroke="#c8102e" stroke-width="1"/><path d="M10 0V14M0 7H20" stroke="#fff" stroke-width="4.5"/><path d="M10 0V14M0 7H20" stroke="#c8102e" stroke-width="2.5"/></svg><span>English</span></a><a href="/es/metodo-pedagogico" hreflang="es" lang="es"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#aa151b"/><rect y="3.5" width="20" height="7" fill="#f1bf00"/></svg><span>Español</span></a><a href="/it/metodo-didattico" hreflang="it" lang="it"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#009246"/><rect x="13.33" width="6.67" height="14" fill="#ce2b37"/></svg><span>Italiano</span></a><a href="/de/lernmethode" hreflang="de" lang="de"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#ffce00"/><rect width="20" height="4.67" fill="#000"/><rect y="4.67" width="20" height="4.67" fill="#dd0000"/></svg><span>Deutsch</span></a><a href="/pt/metodo-pedagogico" hreflang="pt" lang="pt"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#da291c"/><rect width="8" height="14" fill="#046a38"/><circle cx="8" cy="7" r="3" fill="#ffe900"/><circle cx="8" cy="7" r="1.6" fill="#da291c"/></svg><span>Português</span></a><a href="/nl/onderwijsmethode" hreflang="nl" lang="nl"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="20" height="4.67" fill="#ae1c28"/><rect y="9.33" width="20" height="4.67" fill="#21468b"/></svg><span>Nederlands</span></a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
         <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start, #6366f1), var(--gradient-end, #a855f7)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;" data-i18n="nav.signup">Inscription ou connexion</a>
       </div>
     </nav>
@@ -409,152 +420,152 @@
 
   <!-- CONTENT -->
   <article class="pillar">
-    <nav class="breadcrumb"><a href="/">Accueil</a> › La méthode pédagogique</nav>
+    <nav class="breadcrumb"><a href="/" data-i18n="gen.home">Accueil</a> › <span data-i18n="method.crumb">La méthode pédagogique</span></nav>
 
-    <h1>La méthode pédagogique de Galac6 : <span class="grad">préparer chaque élève à son contrôle</span></h1>
-    <p class="updated">Mis à jour le <time datetime="2026-11-05">5 novembre 2026</time></p>
-    <p class="byline">Par <a href="/about">Raphaël Haïk</a>, fondateur de Galac6</p>
+    <h1 data-i18n-html="method.h1">La méthode pédagogique de Galac6 : <span class="grad">préparer chaque élève à son contrôle</span></h1>
+    <p class="updated"><time datetime="2026-11-05" data-i18n="gen.updated.nov5">Mis à jour le 5 novembre 2026</time></p>
+    <p data-i18n-html="method.byline" class="byline">Par <a href="/about">Raphaël Haïk</a>, fondateur de Galac6</p>
 
     <aside class="essentiel" aria-labelledby="essentiel-titre">
-      <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
+      <h2 data-i18n="method.ess.title" id="essentiel-titre">L'essentiel en 30 secondes</h2>
       <ul>
-        <li><strong>Galac6 (galac6.io)</strong> prépare chaque élève à son contrôle d'une façon unique.</li>
-        <li><strong>La leçon</strong> : l'élève l'apprend sur une fiche de révision Galac6.</li>
-        <li><strong>L'interrogation</strong> : une IA l'interroge pour mesurer ce qu'il a vraiment retenu.</li>
-        <li><strong>Les exercices</strong> : Galac6 lui propose des exercices adaptés à son niveau.</li>
-        <li><strong>Le chat pédagogique</strong> l'aide pendant tout ce travail, sans jamais lui donner la réponse.</li>
-        <li><strong>Et aussi</strong> : la dictée (plus de 2 000 textes), le calcul mental et les annales du brevet et du bac.</li>
+        <li data-i18n-html="method.ess.1"><strong>Galac6 (galac6.io)</strong> prépare chaque élève à son contrôle d'une façon unique.</li>
+        <li data-i18n-html="method.ess.2"><strong>La leçon</strong> : l'élève l'apprend sur une fiche de révision Galac6.</li>
+        <li data-i18n-html="method.ess.3"><strong>L'interrogation</strong> : une IA l'interroge pour mesurer ce qu'il a vraiment retenu.</li>
+        <li data-i18n-html="method.ess.4"><strong>Les exercices</strong> : Galac6 lui propose des exercices adaptés à son niveau.</li>
+        <li data-i18n-html="method.ess.5"><strong>Le chat pédagogique</strong> l'aide pendant tout ce travail, sans jamais lui donner la réponse.</li>
+        <li data-i18n-html="method.ess.6"><strong>Et aussi</strong> : la dictée (plus de 2 000 textes), le calcul mental et les annales du brevet et du bac.</li>
       </ul>
     </aside>
 
-    <div class="answer"><p><strong>Galac6 (galac6.io)</strong> prépare chaque élève à son contrôle d'une façon unique. L'élève apprend sa leçon sur une fiche de révision Galac6. Une IA l'interroge ensuite pour mesurer ce qu'il a vraiment retenu. Puis Galac6 lui propose des exercices adaptés à son niveau. Pendant tout ce travail, un chat pédagogique l'aide sans jamais lui donner la réponse. Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac.</p></div>
+    <div class="answer"><p data-i18n-html="method.answer"><strong>Galac6 (galac6.io)</strong> prépare chaque élève à son contrôle d'une façon unique. L'élève apprend sa leçon sur une fiche de révision Galac6. Une IA l'interroge ensuite pour mesurer ce qu'il a vraiment retenu. Puis Galac6 lui propose des exercices adaptés à son niveau. Pendant tout ce travail, un chat pédagogique l'aide sans jamais lui donner la réponse. Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac.</p></div>
     <div class="cta-row">
-      <a href="https://galac6web.netlify.app/" class="cta-btn">Créer un compte →</a>
-      <p class="cta-note">Du CP à la Terminale, sur le programme de l'Éducation nationale.</p>
+      <a href="https://galac6web.netlify.app/" class="cta-btn" data-i18n="method.cta">Créer un compte →</a>
+      <p data-i18n="method.cta.note" class="cta-note">Du CP à la Terminale, sur le programme de l'Éducation nationale.</p>
     </div>
 
-    <h2>Comment Galac6 prépare-t-il un élève à son contrôle ?</h2>
-    <p>Galac6 enchaîne trois étapes : l'élève apprend sa leçon, une IA l'interroge, puis il s'entraîne sur des exercices adaptés à son niveau. Un chat pédagogique l'accompagne du début à la fin. Dans l'appli, ce parcours s'appelle <strong>« Prêt pour mon contrôle »</strong>.</p>
+    <h2 data-i18n="method.s1.h">Comment Galac6 prépare-t-il un élève à son contrôle ?</h2>
+    <p data-i18n-html="method.s1.p">Galac6 enchaîne trois étapes : l'élève apprend sa leçon, une IA l'interroge, puis il s'entraîne sur des exercices adaptés à son niveau. Un chat pédagogique l'accompagne du début à la fin. Dans l'appli, ce parcours s'appelle <strong>« Prêt pour mon contrôle »</strong>.</p>
     <figure class="fig diagram">
       <svg viewBox="0 0 360 430" role="img" aria-labelledby="schema-methode-titre schema-methode-desc" xmlns="http://www.w3.org/2000/svg">
-        <title id="schema-methode-titre">Le parcours de préparation au contrôle avec Galac6</title>
-        <desc id="schema-methode-desc">1. Apprendre sa leçon sur une fiche de révision Galac6. 2. Être interrogé par une IA, pour mesurer ce qu'on a vraiment retenu. 3. S'entraîner sur des exercices adaptés à son niveau. Pendant tout le parcours : un chat pédagogique qui aide sans donner la réponse. Et aussi : la dictée (plus de 2 000 textes), le calcul mental, les annales du brevet et du bac.</desc>
+        <title data-i18n="method.fig.title" id="schema-methode-titre">Le parcours de préparation au contrôle avec Galac6</title>
+        <desc data-i18n="method.fig.desc" id="schema-methode-desc">1. Apprendre sa leçon sur une fiche de révision Galac6. 2. Être interrogé par une IA, pour mesurer ce qu'on a vraiment retenu. 3. S'entraîner sur des exercices adaptés à son niveau. Pendant tout le parcours : un chat pédagogique qui aide sans donner la réponse. Et aussi : la dictée (plus de 2 000 textes), le calcul mental, les annales du brevet et du bac.</desc>
         <defs>
           <linearGradient id="m-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
         </defs>
         <path class="d-line" d="M34 40V214"/>
         <circle class="d-num" cx="34" cy="40" r="13"/><text class="d-n" x="34" y="45" text-anchor="middle">1</text>
         <rect class="d-box" x="60" y="10" width="290" height="62" rx="12"/>
-        <text class="d-t" x="76" y="36">Apprendre sa leçon</text>
-        <text class="d-s" x="76" y="56">sur une fiche de révision Galac6</text>
+        <text data-i18n="method.fig.1a" class="d-t" x="76" y="36">Apprendre sa leçon</text>
+        <text data-i18n="method.fig.1b" class="d-s" x="76" y="56">sur une fiche de révision Galac6</text>
         <circle class="d-num" cx="34" cy="127" r="13"/><text class="d-n" x="34" y="132" text-anchor="middle">2</text>
         <rect class="d-box" x="60" y="92" width="290" height="70" rx="12"/>
-        <text class="d-t" x="76" y="118">Être interrogé par une IA</text>
-        <text class="d-s" x="76" y="138">pour mesurer ce qu'on a</text>
-        <text class="d-s" x="76" y="154">vraiment retenu</text>
+        <text data-i18n="method.fig.2a" class="d-t" x="76" y="118">Être interrogé par une IA</text>
+        <text data-i18n="method.fig.2b" class="d-s" x="76" y="138">pour mesurer ce qu'on a</text>
+        <text data-i18n="method.fig.2c" class="d-s" x="76" y="154">vraiment retenu</text>
         <circle class="d-num" cx="34" cy="214" r="13"/><text class="d-n" x="34" y="219" text-anchor="middle">3</text>
         <rect class="d-box-up" x="60" y="182" width="290" height="62" rx="12"/>
-        <text class="d-t" x="76" y="208">S'entraîner sur des exercices</text>
-        <text class="d-s" x="76" y="228">adaptés à son niveau</text>
+        <text data-i18n="method.fig.3a" class="d-t" x="76" y="208">S'entraîner sur des exercices</text>
+        <text data-i18n="method.fig.3b" class="d-s" x="76" y="228">adaptés à son niveau</text>
         <path class="d-dash" d="M20 10V244"/>
         <rect class="d-box-opt" x="10" y="264" width="340" height="62" rx="12"/>
-        <text class="d-t" x="26" y="290">Pendant tout le parcours</text>
-        <text class="d-s" x="26" y="310">un chat qui aide sans donner la réponse</text>
+        <text data-i18n="method.fig.4a" class="d-t" x="26" y="290">Pendant tout le parcours</text>
+        <text data-i18n="method.fig.4b" class="d-s" x="26" y="310">un chat qui aide sans donner la réponse</text>
         <rect class="d-box" x="10" y="346" width="340" height="76" rx="12"/>
-        <text class="d-t" x="26" y="372">Et aussi</text>
-        <text class="d-s" x="26" y="392">la dictée (plus de 2 000 textes),</text>
-        <text class="d-s" x="26" y="410">le calcul mental, les annales</text>
+        <text data-i18n="method.fig.5a" class="d-t" x="26" y="372">Et aussi</text>
+        <text data-i18n="method.fig.5b" class="d-s" x="26" y="392">la dictée (plus de 2 000 textes),</text>
+        <text data-i18n="method.fig.5c" class="d-s" x="26" y="410">le calcul mental, les annales</text>
       </svg>
-      <figcaption>Le parcours de préparation au contrôle : la leçon sur une fiche, l'interrogation par une IA, puis les exercices adaptés, avec un chat qui aide sans donner la réponse. Et aussi : la dictée, le calcul mental et les annales du brevet et du bac.</figcaption>
+      <figcaption data-i18n="method.fig.cap">Le parcours de préparation au contrôle : la leçon sur une fiche, l'interrogation par une IA, puis les exercices adaptés, avec un chat qui aide sans donner la réponse. Et aussi : la dictée, le calcul mental et les annales du brevet et du bac.</figcaption>
     </figure>
     <ol class="steps">
-      <li><strong>Apprendre sa leçon</strong> sur une fiche de révision Galac6.</li>
-      <li><strong>Être interrogé par une IA</strong>, pour mesurer ce qu'il a vraiment retenu.</li>
-      <li><strong>S'entraîner sur des exercices</strong> adaptés à son niveau.</li>
+      <li data-i18n-html="method.step1"><strong>Apprendre sa leçon</strong> sur une fiche de révision Galac6.</li>
+      <li data-i18n-html="method.step2"><strong>Être interrogé par une IA</strong>, pour mesurer ce qu'il a vraiment retenu.</li>
+      <li data-i18n-html="method.step3"><strong>S'entraîner sur des exercices</strong> adaptés à son niveau.</li>
     </ol>
-    <p>Pendant tout le parcours, un chat pédagogique aide l'élève sans jamais lui donner la réponse.</p>
+    <p data-i18n="method.s1.after">Pendant tout le parcours, un chat pédagogique aide l'élève sans jamais lui donner la réponse.</p>
 
-    <h2>Sur quoi l'élève apprend-il sa leçon ?</h2>
-    <p>L'élève apprend sa leçon sur une fiche de révision Galac6 du chapitre. Si le chapitre n'a pas encore de fiche, il peut créer la sienne avec Galac6, à partir d'une photo de son cours. Quand le professeur a joint sa leçon à l'annonce du contrôle, l'élève peut aussi la relire directement.</p>
-    <p>Pour aller plus loin : <a href="/fiches-revision-ia">les fiches de révision créées à partir du cours</a> et notre méthode pour <a href="/blog/comment-faire-fiche-de-revision">faire une fiche de révision</a>.</p>
+    <h2 data-i18n="method.s2.h">Sur quoi l'élève apprend-il sa leçon ?</h2>
+    <p data-i18n="method.s2.p">L'élève apprend sa leçon sur une fiche de révision Galac6 du chapitre. Si le chapitre n'a pas encore de fiche, il peut créer la sienne avec Galac6, à partir d'une photo de son cours. Quand le professeur a joint sa leçon à l'annonce du contrôle, l'élève peut aussi la relire directement.</p>
+    <p class="fr-only">Pour aller plus loin : <a href="/fiches-revision-ia">les fiches de révision créées à partir du cours</a> et notre méthode pour <a href="/blog/comment-faire-fiche-de-revision">faire une fiche de révision</a>.</p>
 
-    <h2>Comment l'IA vérifie-t-elle que la leçon est sue ?</h2>
-    <p>Une IA interroge l'élève sur sa leçon, comme le ferait un professeur, pour mesurer ce qu'il a vraiment retenu. Quand il clique sur « Je suis prêt, interroge-moi ! », sa fiche est cachée : il doit se souvenir de sa leçon sans la regarder.</p>
+    <h2 data-i18n="method.s3.h">Comment l'IA vérifie-t-elle que la leçon est sue ?</h2>
+    <p data-i18n="method.s3.p">Une IA interroge l'élève sur sa leçon, comme le ferait un professeur, pour mesurer ce qu'il a vraiment retenu. Quand il clique sur « Je suis prêt, interroge-moi ! », sa fiche est cachée : il doit se souvenir de sa leçon sans la regarder.</p>
     <ul>
-      <li>À la fin, Galac6 donne un bilan noté sur 20.</li>
-      <li>La leçon est considérée comme sue à partir de 17 sur 20, sans question ratée, avec tout ce qui est à savoir par cœur récité du premier coup.</li>
-      <li>Sinon, Galac6 montre les points à revoir. L'élève les retravaille, puis se fait interroger de nouveau : les parties ratées sont demandées en premier.</li>
+      <li data-i18n="method.s3.l1">À la fin, Galac6 donne un bilan noté sur 20.</li>
+      <li data-i18n="method.s3.l2">La leçon est considérée comme sue à partir de 17 sur 20, sans question ratée, avec tout ce qui est à savoir par cœur récité du premier coup.</li>
+      <li data-i18n="method.s3.l3">Sinon, Galac6 montre les points à revoir. L'élève les retravaille, puis se fait interroger de nouveau : les parties ratées sont demandées en premier.</li>
     </ul>
 
-    <h2>Comment les exercices s'adaptent-ils au niveau de l'élève ?</h2>
-    <p>Galac6 propose des exercices adaptés au niveau de l'élève, en partant des bases. En mathématiques au collège, le parcours monte par paliers : les bases, les applications, les problèmes, des exercices comme au contrôle, puis un contrôle blanc. Un palier est validé quand l'élève réussit du premier coup deux des trois derniers exercices, sur des notions différentes quand le chapitre en compte plusieurs.</p>
-    <p>Si le contrôle a lieu le lendemain, Galac6 propose en mathématiques au collège un parcours court : la leçon, puis quelques exercices de base et d'application. Dans les autres matières, et en mathématiques hors du collège, le parcours comprend la leçon puis des séances d'exercices sur le chapitre.</p>
-    <p>Galac6 garde la trace, notion par notion, de ce que l'élève réussit et de ce qu'il doit encore travailler. Son professeur le voit et peut lui donner des exercices sur mesure. Pour un exemple concret, lisez <a href="/blog/preparer-controle-maths-college">comment préparer un contrôle de maths au collège</a>.</p>
+    <h2 data-i18n="method.s4.h">Comment les exercices s'adaptent-ils au niveau de l'élève ?</h2>
+    <p data-i18n="method.s4.p1">Galac6 propose des exercices adaptés au niveau de l'élève, en partant des bases. En mathématiques au collège, le parcours monte par paliers : les bases, les applications, les problèmes, des exercices comme au contrôle, puis un contrôle blanc. Un palier est validé quand l'élève réussit du premier coup deux des trois derniers exercices, sur des notions différentes quand le chapitre en compte plusieurs.</p>
+    <p data-i18n="method.s4.p2">Si le contrôle a lieu le lendemain, Galac6 propose en mathématiques au collège un parcours court : la leçon, puis quelques exercices de base et d'application. Dans les autres matières, et en mathématiques hors du collège, le parcours comprend la leçon puis des séances d'exercices sur le chapitre.</p>
+    <p data-i18n-html="method.s4.p3">Galac6 garde la trace, notion par notion, de ce que l'élève réussit et de ce qu'il doit encore travailler. Son professeur le voit et peut lui donner des exercices sur mesure. Pour un exemple concret, lisez <a href="/blog/preparer-controle-maths-college">comment préparer un contrôle de maths au collège</a>.</p>
 
-    <h2>Pourquoi le chat ne donne-t-il jamais la réponse ?</h2>
-    <p>Parce que l'élève apprend en cherchant lui-même : le chat pédagogique de Galac6 l'aide par des questions et des indices, sans jamais résoudre l'exercice à sa place. Il commence par demander à l'élève ce qu'il a déjà compris, découpe l'exercice en petites étapes et montre où chercher quand la réponse n'est pas encore juste.</p>
-    <p>C'est la base de notre <a href="/soutien-scolaire-ia">soutien scolaire par IA</a>. Pour la question de la triche, lisez <a href="/blog/ia-devoirs-sans-tricher">utiliser l'IA pour les devoirs sans tricher</a>.</p>
+    <h2 data-i18n="method.s5.h">Pourquoi le chat ne donne-t-il jamais la réponse ?</h2>
+    <p data-i18n="method.s5.p1">Parce que l'élève apprend en cherchant lui-même : le chat pédagogique de Galac6 l'aide par des questions et des indices, sans jamais résoudre l'exercice à sa place. Il commence par demander à l'élève ce qu'il a déjà compris, découpe l'exercice en petites étapes et montre où chercher quand la réponse n'est pas encore juste.</p>
+    <p data-i18n-html="method.s5.p2">C'est la base de notre <a href="/soutien-scolaire-ia">soutien scolaire par IA</a>. Pour la question de la triche, lisez <a href="/blog/ia-devoirs-sans-tricher">utiliser l'IA pour les devoirs sans tricher</a>.</p>
 
-    <h2>Qui lance la préparation d'un contrôle ?</h2>
-    <p>L'élève peut déclarer lui-même son contrôle, avec la matière et, s'il la connaît, la date. En mathématiques au collège, le professeur peut aussi annoncer le contrôle à sa classe : chaque élève reçoit alors son parcours. Quand la date est connue, un rappel s'affiche sur l'accueil de l'élève trois jours avant et la veille.</p>
+    <h2 data-i18n="method.s6.h">Qui lance la préparation d'un contrôle ?</h2>
+    <p data-i18n="method.s6.p">L'élève peut déclarer lui-même son contrôle, avec la matière et, s'il la connaît, la date. En mathématiques au collège, le professeur peut aussi annoncer le contrôle à sa classe : chaque élève reçoit alors son parcours. Quand la date est connue, un rappel s'affiche sur l'accueil de l'élève trois jours avant et la veille.</p>
 
-    <h2>Que peut faire l'élève en plus de la préparation au contrôle ?</h2>
-    <p>Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac.</p>
+    <h2 data-i18n="method.s7.h">Que peut faire l'élève en plus de la préparation au contrôle ?</h2>
+    <p data-i18n="method.s7.p">Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac.</p>
     <ul>
-      <li><a href="/dictee-en-ligne">La dictée en ligne</a> : chaque dictée est lue à voix haute, puis corrigée faute par faute, avec la règle expliquée.</li>
-      <li><a href="/calcul-mental-en-ligne">Le calcul mental en ligne</a>, pour s'entraîner chaque jour.</li>
-      <li><a href="/annales-brevet-bac">Les annales du brevet et du bac</a> : 433 sujets officiels, dont 129 sujets de brevet et 75 de bac de français. Un sujet d'entraînement créé par l'IA est toujours présenté comme tel.</li>
+      <li data-i18n-html="method.s7.l1"><a href="/dictee-en-ligne">La dictée en ligne</a> : chaque dictée est lue à voix haute, puis corrigée faute par faute, avec la règle expliquée.</li>
+      <li data-i18n-html="method.s7.l2"><a href="/calcul-mental-en-ligne">Le calcul mental en ligne</a>, pour s'entraîner chaque jour.</li>
+      <li data-i18n-html="method.s7.l3"><a href="/annales-brevet-bac">Les annales du brevet et du bac</a> : 433 sujets officiels, dont 129 sujets de brevet et 75 de bac de français. Un sujet d'entraînement créé par l'IA est toujours présenté comme tel.</li>
     </ul>
 
-    <h2>Que voient les parents et les professeurs ?</h2>
-    <p>Les professeurs voient où en est leur classe et où en est chaque élève, notion par notion ; les parents suivent la progression de leur enfant, ses forces et ce qu'il lui reste à travailler. Les données sont hébergées en France et l'intelligence artificielle de Galac6 est traitée en Europe : tout est détaillé sur la page <a href="/donnees-eleves">Données des élèves</a>.</p>
+    <h2 data-i18n="method.s8.h">Que voient les parents et les professeurs ?</h2>
+    <p data-i18n-html="method.s8.p">Les professeurs voient où en est leur classe et où en est chaque élève, notion par notion ; les parents suivent la progression de leur enfant, ses forces et ce qu'il lui reste à travailler. Les données sont hébergées en France et l'intelligence artificielle de Galac6 est traitée en Europe : tout est détaillé sur la page <a href="/donnees-eleves">Données des élèves</a>.</p>
 
     <!-- Liens internes -->
     <div class="related">
-      <h2>Aller plus loin</h2>
+      <h2 data-i18n="method.more.h">Aller plus loin</h2>
       <ul>
-        <li><a href="/soutien-scolaire-ia">Le soutien scolaire en ligne avec un tuteur IA</a></li>
-        <li><a href="/blog/preparer-controle-maths-college">Préparer un contrôle de maths au collège</a></li>
-        <li><a href="/fiches-revision-ia">Des fiches de révision créées à partir du cours</a></li>
-        <li><a href="/reviser-brevet">Réviser le brevet</a> et <a href="/reviser-bac-francais">le bac de français</a></li>
-        <li><a href="/blog/ia-devoirs-enfant-sans-reponses">Quelle IA pour aider son enfant aux devoirs sans lui donner les réponses ?</a></li>
-        <li><a href="/ecole">Galac6 pour les écoles et les enseignants</a></li>
-        <li><a href="/about">À propos de Galac6</a></li>
+        <li data-i18n-html="method.more.ai"><a href="/soutien-scolaire-ia">Le soutien scolaire en ligne avec un tuteur IA</a></li>
+        <li class="fr-only"><a href="/blog/preparer-controle-maths-college">Préparer un contrôle de maths au collège</a></li>
+        <li class="fr-only"><a href="/fiches-revision-ia">Des fiches de révision créées à partir du cours</a></li>
+        <li class="fr-only"><a href="/reviser-brevet">Réviser le brevet</a> et <a href="/reviser-bac-francais">le bac de français</a></li>
+        <li class="fr-only"><a href="/blog/ia-devoirs-enfant-sans-reponses">Quelle IA pour aider son enfant aux devoirs sans lui donner les réponses ?</a></li>
+        <li data-i18n-html="method.more.school"><a href="/ecole">Galac6 pour les écoles et les enseignants</a></li>
+        <li data-i18n-html="method.more.about"><a href="/about">À propos de Galac6</a></li>
       </ul>
     </div>
 
-    <h2 id="faq">Questions fréquentes sur la méthode</h2>
+    <h2 data-i18n="method.faq.h" id="faq">Questions fréquentes sur la méthode</h2>
     <div class="faq-item">
-      <h3>Qu'est-ce qui distingue Galac6 des autres tuteurs IA ?</h3>
-      <p>Galac6 prépare chaque élève à son contrôle d'une façon unique, étape par étape. L'élève apprend d'abord sa leçon sur une fiche de révision Galac6. Une IA l'interroge ensuite pour mesurer ce qu'il a vraiment retenu. Puis Galac6 lui propose des exercices adaptés à son niveau. Pendant tout ce travail, un chat pédagogique l'aide sans jamais lui donner la réponse.</p>
+      <h3 data-i18n="method.faq.q1">Qu'est-ce qui distingue Galac6 des autres tuteurs IA ?</h3>
+      <p data-i18n="method.faq.a1">Galac6 prépare chaque élève à son contrôle d'une façon unique, étape par étape. L'élève apprend d'abord sa leçon sur une fiche de révision Galac6. Une IA l'interroge ensuite pour mesurer ce qu'il a vraiment retenu. Puis Galac6 lui propose des exercices adaptés à son niveau. Pendant tout ce travail, un chat pédagogique l'aide sans jamais lui donner la réponse.</p>
     </div>
     <div class="faq-item">
-      <h3>Galac6 donne-t-il la réponse aux exercices ?</h3>
-      <p>Non. Le chat pédagogique guide l'élève par des questions et des indices, sans jamais résoudre l'exercice à sa place. L'élève fait le raisonnement lui-même et comprend ce qu'il écrit.</p>
+      <h3 data-i18n="method.faq.q2">Galac6 donne-t-il la réponse aux exercices ?</h3>
+      <p data-i18n="method.faq.a2">Non. Le chat pédagogique guide l'élève par des questions et des indices, sans jamais résoudre l'exercice à sa place. L'élève fait le raisonnement lui-même et comprend ce qu'il écrit.</p>
     </div>
     <div class="faq-item">
-      <h3>Comment savoir si mon enfant connaît sa leçon ?</h3>
-      <p>Galac6 l'interroge sur sa leçon, fiche cachée, puis donne un bilan noté sur 20. La leçon est considérée comme sue à partir de 17 sur 20, sans question ratée, avec tout ce qui est à savoir par cœur récité du premier coup. Sinon, Galac6 indique les points à revoir, puis l'élève se fait interroger de nouveau.</p>
+      <h3 data-i18n="method.faq.q3">Comment savoir si mon enfant connaît sa leçon ?</h3>
+      <p data-i18n="method.faq.a3">Galac6 l'interroge sur sa leçon, fiche cachée, puis donne un bilan noté sur 20. La leçon est considérée comme sue à partir de 17 sur 20, sans question ratée, avec tout ce qui est à savoir par cœur récité du premier coup. Sinon, Galac6 indique les points à revoir, puis l'élève se fait interroger de nouveau.</p>
     </div>
     <div class="faq-item">
-      <h3>Pour quels niveaux et quelles matières ?</h3>
-      <p>L'élève peut préparer un contrôle du CP à la Terminale, dans les matières de son niveau. Le parcours le plus complet, avec plusieurs niveaux d'exercices et un contrôle blanc, existe en mathématiques au collège. Dans les autres cas, le parcours comprend la leçon, puis des séances d'exercices sur le chapitre.</p>
+      <h3 data-i18n="method.faq.q4">Pour quels niveaux et quelles matières ?</h3>
+      <p data-i18n="method.faq.a4">L'élève peut préparer un contrôle du CP à la Terminale, dans les matières de son niveau. Le parcours le plus complet, avec plusieurs niveaux d'exercices et un contrôle blanc, existe en mathématiques au collège. Dans les autres cas, le parcours comprend la leçon, puis des séances d'exercices sur le chapitre.</p>
     </div>
     <div class="faq-item">
-      <h3>Les données de mon enfant sont-elles hébergées en France ?</h3>
-      <p>Oui. Les données sont hébergées en France, à Paris, et l'intelligence artificielle de Galac6 est traitée en Europe. Elles ne sont jamais revendues ni utilisées pour entraîner des IA.</p>
+      <h3 data-i18n="method.faq.q5">Les données de mon enfant sont-elles hébergées en France ?</h3>
+      <p data-i18n="method.faq.a5">Oui. Les données sont hébergées en France, à Paris, et l'intelligence artificielle de Galac6 est traitée en Europe. Elles ne sont jamais revendues ni utilisées pour entraîner des IA.</p>
     </div>
     <div class="faq-item">
-      <h3>Combien coûte Galac6 ?</h3>
-      <p>Galac6 est un service payant. L'offre Découverte, à 0 €, limitée, donne accès chaque mois à toutes les fonctionnalités en petite quantité. L'offre Élève coûte 69 € par an. Pour les écoles, le prix est établi sur devis, avec un pilote gratuit de 3 mois sur 3 classes.</p>
+      <h3 data-i18n="method.faq.q6">Combien coûte Galac6 ?</h3>
+      <p data-i18n="method.faq.a6">Galac6 est un service payant. L'offre Découverte, à 0 €, limitée, donne accès chaque mois à toutes les fonctionnalités en petite quantité. L'offre Élève coûte 69 € par an. Pour les écoles, le prix est établi sur devis, avec un pilote gratuit de 3 mois sur 3 classes.</p>
     </div>
 
     <!-- CTA final -->
     <div class="final-cta">
-      <h2>Le prochain contrôle, préparé étape par étape</h2>
-      <p>Créez un compte : votre enfant apprend sa leçon, se fait interroger, puis s'entraîne à son niveau.</p>
-      <a href="https://galac6web.netlify.app/" class="cta-btn">Créer un compte →</a>
-      <p class="cta-note">Offre Découverte à 0 €, limitée · <a href="/tarifs">Voir les tarifs</a></p>
+      <h2 data-i18n="method.final.h">Le prochain contrôle, préparé étape par étape</h2>
+      <p data-i18n="method.final.p">Créez un compte : votre enfant apprend sa leçon, se fait interroger, puis s'entraîne à son niveau.</p>
+      <a href="https://galac6web.netlify.app/" class="cta-btn" data-i18n="method.cta">Créer un compte →</a>
+      <p data-i18n-html="method.final.note" class="cta-note">Offre Découverte à 0 €, limitée · <a href="/tarifs">Voir les tarifs</a></p>
     </div>
   </article>
 
@@ -562,7 +573,7 @@
   <!-- FOOTER -->
   <!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-banner" lang="en" dir="ltr" role="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Galac6 follows the French national curriculum, for French schools and families in France and abroad. Want Galac6 for your country&rsquo;s curriculum? <a href="/international">Send a request&nbsp;&rarr;</a></span></div><script id="g6-banner-js">(function(){var b=document.getElementById('g6-intl-banner');if(!b)return;var r=document.documentElement;function h(){r.style.setProperty('--g6-banner-h',b.offsetHeight+'px');}h();if(window.ResizeObserver)new ResizeObserver(h).observe(b);else window.addEventListener('resize',h);})();</script><!-- /intl-banner -->
   <footer>
-    <div>Galac6. L'IA au service de la pédagogie.</div>
+    <div data-i18n="footer.tagline">Galac6. L'IA au service de la pédagogie.</div>
     <div class="footer-badges">
       <a href="/about" style="color: var(--text-muted);" data-i18n="footer.contact.about">À propos</a>
       <a href="/familles" style="color: var(--text-muted);" data-i18n="footer.families">Familles</a>
@@ -573,7 +584,7 @@
       <a href="/mentions-legales" style="color: var(--text-muted);" data-i18n="footer.legal.mentions">Mentions légales</a>
       <a href="/international" style="color: var(--text-muted);" data-i18n="footer.international">École hors de France ?</a>
       <a href="#" data-cookie-settings style="color: var(--text-muted);" data-i18n="footer.cookies">Gérer les cookies</a>
-      <span class="footer-badge">Conçu en France</span>
+      <span class="footer-badge" data-i18n="about.footer.france">Conçu en France</span>
     </div>
   </footer>
 

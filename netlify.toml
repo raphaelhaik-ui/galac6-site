@@ -17,6 +17,49 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
+# Dossiers et fichiers de travail : jamais en ligne (réponse 404). À garder AVANT la règle générale ci-dessous.
+[[redirects]]
+  from = "/scripts/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/brief-site-vitrine-galac6.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/brevet-blanc-site-vitrine.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/mentions-legales-site-vitrine.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/mise-a-jour-site-vitrine-galac6.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/offre-ecole-landing-page.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/specs-page-web-publique.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
 # Limitation de débit anti-abus (règle "code-based" Netlify, offre gratuite).
 # Réécriture d'un chemin vers lui-même : sans "force", les fichiers existants sont
 # servis normalement ; la règle sert uniquement de support à la limite.

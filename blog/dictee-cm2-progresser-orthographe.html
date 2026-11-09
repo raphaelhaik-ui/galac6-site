@@ -68,8 +68,8 @@
         "caption": "Galac6, l'IA au service de la pédagogie."
       },
       "datePublished": "2026-06-24",
-      "dateModified": "2026-06-24",
-      "inLanguage": "fr",
+      "dateModified": "2026-11-09",
+      "inLanguage": "fr-FR",
       "mainEntityOfPage": "https://galac6.io/blog/dictee-cm2-progresser-orthographe",
       "author": {
         "@type": "Person",
@@ -84,6 +84,51 @@
       "publisher": {
         "@id": "https://galac6.io/#organization"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Combien de dictées faire par semaine en CM2 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trois dictées courtes par semaine suffisent, de 3 à 5 lignes chacune. La régularité compte plus que la quantité."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelles sont les fautes les plus fréquentes en CM2 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les fautes les plus fréquentes portent sur les homophones (a et à, et et est, son et sont), l'accord du verbe avec le sujet, l'accord dans le groupe nominal, les terminaisons en -é, -er ou -ais et le pluriel de certains noms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment corriger une dictée sans décourager son enfant ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Faites d'abord relire votre enfant en cherchant une seule chose à la fois, rappelez la règle pour chaque faute et mettez en avant les progrès plutôt que le nombre d'erreurs. Une dictée est un entraînement, pas un contrôle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Galac6 peut-il lire et corriger une dictée de CM2 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Galac6 lit la dictée à voix haute, phrase par phrase, puis reprend chaque faute une par une, avec le mot attendu, la règle expliquée et une note sur 10."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte la dictée sur Galac6 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La formule Découverte coûte 0 € et comprend une dictée par mois. Les offres Élève (69 € par an) et Famille (99 € par an, jusqu'à 4 enfants) donnent des dictées en illimité."
+          }
+        }
+      ]
     }
   ]
 }
@@ -173,6 +218,56 @@
     .navbar-links a { white-space: nowrap; }
     @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
       .g6-ico-inline { display: inline-block; vertical-align: -0.2em; }
+
+    /* Encadré, sommaire et schémas : mêmes styles que les articles récents */
+    .plan { background: rgba(124,92,252,0.08); border: 1px solid rgba(124,92,252,0.3); border-radius: 14px; padding: 1.1rem 1.4rem 1rem; margin: 0 0 1.4rem; }
+    .plan h2 { margin: 0 0 0.6rem; font-size: 1.15rem; }
+    .plan ol { margin: 0 0 0.6rem 1.2rem; padding: 0; }
+    .plan li { margin-bottom: 0.45rem; line-height: 1.5; }
+    .plan li::marker { color: var(--primary-light); font-weight: 800; }
+    .plan a { color: var(--text); text-decoration: none; }
+    .plan a strong { color: var(--primary-light); }
+    .plan a:hover strong { text-decoration: underline; }
+    .plan .plan-fin { margin: 0; font-size: 0.95rem; color: var(--text-muted); }
+    .plan .plan-fin a { color: var(--primary-light); font-weight: 700; }
+    .essentiel { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--primary); border-radius: 14px; padding: 1.2rem 1.4rem 0.4rem; margin: 0 0 2rem; }
+    .essentiel h2 { margin: 0 0 0.7rem; font-size: 1.15rem; }
+    .essentiel ul { margin-left: 1.1rem; }
+    .plan-toc { list-style: none; margin: 0 !important; padding: 0; display: grid; gap: 0.15rem; }
+    .plan-toc li { margin: 0; }
+    .plan-toc a { display: flex; align-items: center; gap: 0.7rem; padding: 0.45rem 0.4rem; border-radius: 10px; color: var(--text); text-decoration: none; min-height: 44px; }
+    .plan-toc a:hover { background: rgba(124,92,252,0.12); text-decoration: none; }
+    .pt-n { flex: none; width: 1.8rem; height: 1.8rem; border-radius: 8px; display: grid; place-items: center; background: rgba(124,92,252,0.18); color: var(--primary-light); font-weight: 800; font-size: 0.9rem; }
+    .pt-t { font-weight: 700; line-height: 1.3; }
+    .plan .pt-d { margin: -0.1rem 0 0.4rem 2.9rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); }
+    .plan .pt-d strong { color: var(--text); }
+    .pt-src .pt-n { background: transparent; border: 1px dashed rgba(167,139,250,0.5); }
+    .g6-tag { flex: none; display: inline-block; margin-left: auto; padding: 0.05rem 0.5rem; border-radius: 999px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.03em; line-height: 1.5; color: #d9ccff; background: rgba(124,92,252,0.22); border: 1px solid rgba(167,139,250,0.4); align-self: center; }
+    .plan-toc li.is-g6, .toc-sheet .plan-toc li.is-g6 { background: rgba(124,92,252,0.1); border: 1px solid rgba(167,139,250,0.32); border-radius: 12px; margin: 0.15rem 0; }
+    .plan-toc li.is-g6 .pt-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; }
+    .plan .plan-toc li.is-g6 .pt-d { margin-right: 0.6rem; }
+    .fig { margin: 1.8rem 0 2rem; }
+    .fig figcaption { margin-top: 0.7rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
+    .diagram { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 0.9rem; }
+    @media (max-width: 600px) { .diagram { padding: 0.8rem 0.35rem; } }
+    .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+    .diagram .d-box { fill: rgba(124,92,252,0.12); stroke: rgba(167,139,250,0.5); stroke-width: 1.2; }
+    .diagram .d-box-up { fill: rgba(52,211,153,0.1); stroke: rgba(52,211,153,0.55); stroke-width: 1.2; }
+    .diagram .d-box-down { fill: rgba(251,191,36,0.08); stroke: rgba(251,191,36,0.5); stroke-width: 1.2; }
+    .diagram .d-box-opt { fill: none; stroke: rgba(167,139,250,0.6); stroke-width: 1.2; stroke-dasharray: 5 4; }
+    .diagram .d-t { fill: var(--text); font-weight: 700; font-size: 15px; }
+    .diagram .d-s { fill: var(--text-muted); font-size: 13.5px; }
+    .diagram .d-n { fill: #fff; font-weight: 800; font-size: 13px; }
+    .diagram .d-num { fill: url(#d-grad); }
+    .diagram .d-line { fill: none; stroke: var(--primary-light); stroke-width: 1.6; }
+    .diagram .d-dash { fill: none; stroke: var(--primary-light); stroke-width: 1.4; stroke-dasharray: 4 4; opacity: 0.8; }
+    .diagram .d-head { fill: var(--primary-light); }
+    .diagram .d-ico { fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diagram .d-up { fill: #6ee7b7; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-down { fill: #fcd34d; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-band-1 { fill: rgba(99,102,241,0.22); }
+    .diagram .d-band-2 { fill: rgba(124,92,252,0.3); }
+    .diagram .d-band-3 { fill: rgba(168,85,247,0.38); }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -247,16 +342,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -288,15 +384,37 @@
     <nav class="breadcrumb"><a href="/">Accueil</a> › <a href="/blog/">Blog</a> › Dictée en CM2</nav>
 
     <h1>Dictée en <span class="grad">CM2</span> : comment progresser en orthographe</h1>
-    <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 24 juin 2026 · 5 min de lecture</div>
+    <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 24 juin 2026 · Mis à jour le 9 novembre 2026 · 5 min de lecture</div>
 
-    <p class="lead">En CM2, l'orthographe se joue sur des règles désormais bien identifiées : accords, homophones, terminaisons de verbes. La dictée reste l'exercice le plus efficace pour les ancrer — à condition de la pratiquer régulièrement et sans en faire un moment de tension. Voici comment s'y prendre à la maison.</p>
+    <p class="lead">En CM2, l'orthographe se joue sur des règles désormais bien identifiées : accords, homophones, terminaisons de verbes. La dictée reste l'exercice le plus efficace pour les ancrer — à condition de la pratiquer régulièrement et sans en faire un moment de tension. Galac6 (galac6.io) lit à voix haute plus de 2 000 dictées, du CP à la 3e, et explique chaque faute avec sa règle. Voici comment s'y prendre à la maison.</p>
 
-    <h2>Pourquoi la dictée reste l'exercice n°1</h2>
-    <p>La dictée a un avantage qu'aucun autre exercice n'égale : elle oblige l'enfant à <strong>mobiliser toutes ses connaissances en même temps</strong>. Pour écrire une seule phrase correctement, il doit penser au sens, aux accords, à la conjugaison et à l'orthographe des mots. C'est ce travail global qui fait progresser.</p>
+    <aside class="essentiel" aria-labelledby="essentiel-titre">
+      <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
+      <ul>
+        <li><strong>La dictée reste l'exercice le plus complet en CM2</strong>, car elle oblige l'enfant à penser en même temps au sens, aux accords, à la conjugaison et à l'orthographe des mots.</li>
+        <li><strong>Les fautes les plus fréquentes</strong> portent sur les homophones, les accords, les terminaisons en -é, -er ou -ais et le pluriel de certains noms.</li>
+        <li><strong>Une routine suffit</strong> : trois dictées courtes par semaine, de 3 à 5 lignes, avec une relecture guidée, une correction expliquée et un carnet de fautes.</li>
+        <li><strong>Galac6</strong> lit la dictée à voix haute, reprend chaque faute avec sa règle et donne une note sur 10. La formule Découverte, à 0 €, comprend une dictée par mois.</li>
+      </ul>
+    </aside>
+
+    <nav class="plan" id="sommaire" aria-labelledby="plan-titre">
+      <h2 id="plan-titre">Ce que vous allez apprendre</h2>
+      <ol class="plan-toc">
+        <li><a href="#pourquoi-dictee"><span class="pt-n">1</span><span class="pt-t">Pourquoi la dictée est si efficace</span></a></li>
+        <li><a href="#fautes-frequentes"><span class="pt-n">2</span><span class="pt-t">Les fautes les plus fréquentes</span></a></li>
+        <li><a href="#routine"><span class="pt-n">3</span><span class="pt-t">La routine à la maison</span></a></li>
+        <li class="is-g6"><a href="#avec-galac6"><span class="pt-n">4</span><span class="pt-t">S'entraîner avec Galac6</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#questions-frequentes"><span class="pt-n">5</span><span class="pt-t">Questions fréquentes</span></a></li>
+      </ol>
+    </nav>
+
+    <h2 id="pourquoi-dictee">Pourquoi la dictée reste-t-elle l'exercice n°1 en CM2 ?</h2>
+    <p>La dictée reste l'exercice n°1 parce qu'elle oblige l'enfant à <strong>mobiliser toutes ses connaissances en même temps</strong>. Pour écrire une seule phrase correctement, il doit penser au sens, aux accords, à la conjugaison et à l'orthographe des mots. C'est ce travail global qui fait progresser.</p>
     <p>Surtout, la dictée <strong>révèle les erreurs précises</strong> de chaque enfant. Plutôt que de réviser « l'orthographe » en bloc, on voit exactement ce qui coince : les accords du participe passé, le pluriel des noms composés, ou la confusion entre « a » et « à ».</p>
 
-    <h2>Les points qui coûtent le plus de fautes en CM2</h2>
+    <h2 id="fautes-frequentes">Quelles fautes reviennent le plus souvent en CM2 ?</h2>
+    <p>Ce sont surtout les homophones, les accords et les terminaisons de verbes :</p>
     <ul>
       <li><strong>Les homophones</strong> : a/à, et/est, son/sont, ces/ses, on/ont.</li>
       <li><strong>L'accord du verbe avec le sujet</strong>, surtout quand le sujet est éloigné du verbe.</li>
@@ -304,8 +422,93 @@
       <li><strong>Les terminaisons en -é / -er / -ais</strong> à la fin des verbes.</li>
       <li><strong>Le pluriel des noms</strong> particuliers (en -ou, -al, -eau).</li>
     </ul>
+    <p>Pour les homophones, un test suffit : on remplace le mot. Si l'on peut dire « avait », on écrit a, sinon à. Si l'on peut dire « était », on écrit est, sinon et. Si l'on peut dire « étaient », on écrit sont, sinon son. Si l'on peut dire « avaient », on écrit ont, sinon on. Si l'on peut dire « les siens » ou « les siennes », on écrit ses ; si l'on peut dire « ceux-là » ou « celles-là », on écrit ces.</p>
 
-    <h2>Une routine simple, 3 fois par semaine</h2>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 346" role="img" aria-labelledby="schema-homophones-titre schema-homophones-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-homophones-titre">Le test pour ne plus confondre les homophones</title>
+        <desc id="schema-homophones-desc">a / à : Remplacer par « avait », si l'on peut : a, sinon à. et / est : Remplacer par « était », si l'on peut : est, sinon et. son / sont : Remplacer par « étaient », si l'on peut : sont, sinon son. on / ont : Remplacer par « avaient », si l'on peut : ont, sinon on. ces / ses : Remplacer par « les siens », si l'on peut : ses ; « ceux-là » : ces.</desc>
+        <defs>
+          <linearGradient id="d-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+          <marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker>
+        </defs>
+        <rect class="d-box" x="8" y="6" width="344" height="60" rx="12"/>
+        <rect class="d-band-2" x="18" y="18" width="86" height="36" rx="8"/>
+        <text class="d-t" x="61" y="41" text-anchor="middle">a / à</text>
+        <text class="d-t" x="116" y="32">Remplacer par « avait »</text>
+        <text class="d-s" x="116" y="52">si l'on peut : a, sinon à</text>
+        <rect class="d-box" x="8" y="74" width="344" height="60" rx="12"/>
+        <rect class="d-band-2" x="18" y="86" width="86" height="36" rx="8"/>
+        <text class="d-t" x="61" y="109" text-anchor="middle">et / est</text>
+        <text class="d-t" x="116" y="100">Remplacer par « était »</text>
+        <text class="d-s" x="116" y="120">si l'on peut : est, sinon et</text>
+        <rect class="d-box" x="8" y="142" width="344" height="60" rx="12"/>
+        <rect class="d-band-2" x="18" y="154" width="86" height="36" rx="8"/>
+        <text class="d-t" x="61" y="177" text-anchor="middle">son / sont</text>
+        <text class="d-t" x="116" y="168">Remplacer par « étaient »</text>
+        <text class="d-s" x="116" y="188">si l'on peut : sont, sinon son</text>
+        <rect class="d-box" x="8" y="210" width="344" height="60" rx="12"/>
+        <rect class="d-band-2" x="18" y="222" width="86" height="36" rx="8"/>
+        <text class="d-t" x="61" y="245" text-anchor="middle">on / ont</text>
+        <text class="d-t" x="116" y="236">Remplacer par « avaient »</text>
+        <text class="d-s" x="116" y="256">si l'on peut : ont, sinon on</text>
+        <rect class="d-box" x="8" y="278" width="344" height="60" rx="12"/>
+        <rect class="d-band-2" x="18" y="290" width="86" height="36" rx="8"/>
+        <text class="d-t" x="61" y="313" text-anchor="middle">ces / ses</text>
+        <text class="d-t" x="116" y="304">Remplacer par « les siens »</text>
+        <text class="d-s" x="116" y="324">si l'on peut : ses ; « ceux-là » : ces</text>
+      </svg>
+      <figcaption>Remplacer le mot par un autre permet à votre enfant de trouver seul la bonne écriture.</figcaption>
+    </figure>
+
+    <p>L'accord du verbe piège surtout quand un autre nom se glisse entre le sujet et le verbe. Dans « Les enfants de ma voisine jouent », le verbe s'accorde avec « enfants », au pluriel, et non avec « voisine », qui est tout près.</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 96" role="img" aria-labelledby="schema-accord-titre schema-accord-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-accord-titre">Le verbe s'accorde avec son sujet, même éloigné</title>
+        <desc id="schema-accord-desc">Dans la phrase Les enfants de ma voisine jouent, le verbe jouent s'accorde avec enfants, au pluriel, et non avec voisine.</desc>
+        <text class="d-t" x="10" y="78">Les enfants</text>
+        <text class="d-s" x="110" y="78">de ma voisine</text>
+        <text class="d-t" x="218" y="78">jouent.</text>
+        <path class="d-line" d="M246 60C246 22 66 22 66 58" marker-end="url(#d-arr)"/>
+        <text class="d-up" x="156" y="20" text-anchor="middle">le sujet est « enfants », au pluriel</text>
+      </svg>
+      <figcaption>Pour trouver le sujet, on demande : qui est-ce qui joue ? Ce sont les enfants.</figcaption>
+    </figure>
+
+
+    <h2 id="routine">Comment faire progresser votre enfant en orthographe à la maison ?</h2>
+    <p>Une routine simple en quatre étapes, 3 fois par semaine, suffit à faire progresser votre enfant : on recommence ensuite à la dictée suivante.</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 358" role="img" aria-labelledby="schema-routine-titre schema-routine-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-routine-titre">La routine de dictée à la maison</title>
+        <desc id="schema-routine-desc">Étape 1 : Une dictée courte, 3 à 5 lignes. Étape 2 : La relecture guidée, une seule chose à la fois. Étape 3 : La correction expliquée, on rappelle la règle. Étape 4 : Le carnet de fautes, les erreurs récurrentes. Puis on recommence, 3 fois par semaine.</desc>
+        <rect class="d-box" x="30" y="8" width="314" height="62" rx="12"/>
+        <circle class="d-num" cx="56" cy="39" r="13"/><text class="d-n" x="56" y="44" text-anchor="middle">1</text>
+        <text class="d-t" x="80" y="34">Une dictée courte</text>
+        <text class="d-s" x="80" y="54">3 à 5 lignes</text>
+        <path class="d-line" d="M187 70V88" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="30" y="92" width="314" height="62" rx="12"/>
+        <circle class="d-num" cx="56" cy="123" r="13"/><text class="d-n" x="56" y="128" text-anchor="middle">2</text>
+        <text class="d-t" x="80" y="118">La relecture guidée</text>
+        <text class="d-s" x="80" y="138">une seule chose à la fois</text>
+        <path class="d-line" d="M187 154V172" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="30" y="176" width="314" height="62" rx="12"/>
+        <circle class="d-num" cx="56" cy="207" r="13"/><text class="d-n" x="56" y="212" text-anchor="middle">3</text>
+        <text class="d-t" x="80" y="202">La correction expliquée</text>
+        <text class="d-s" x="80" y="222">on rappelle la règle</text>
+        <path class="d-line" d="M187 238V256" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="30" y="260" width="314" height="62" rx="12"/>
+        <circle class="d-num" cx="56" cy="291" r="13"/><text class="d-n" x="56" y="296" text-anchor="middle">4</text>
+        <text class="d-t" x="80" y="286">Le carnet de fautes</text>
+        <text class="d-s" x="80" y="306">les erreurs récurrentes</text>
+        <path class="d-dash" d="M30 291H14V39H26" marker-end="url(#d-arr)"/>
+        <text class="d-s" x="187" y="346" text-anchor="middle">on recommence, 3 fois par semaine</text>
+      </svg>
+      <figcaption>Les 4 étapes de la routine. La flèche en pointillé rappelle que la régularité compte plus que la quantité.</figcaption>
+    </figure>
+
     <ol class="steps">
       <li><strong>Une dictée courte (3 à 5 lignes).</strong> Mieux vaut une petite dictée régulière qu'une longue de temps en temps. La régularité compte plus que la quantité.</li>
       <li><strong>La relecture guidée.</strong> Avant de corriger, demandez à l'enfant de se relire en cherchant une seule chose à la fois : « vérifie tous les accords », puis « vérifie tous les verbes ». Il trouvera lui-même une partie de ses erreurs.</li>
@@ -317,10 +520,10 @@
       <p><svg class="g6-ico g6-ico-inline" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V17h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/></svg> <strong>Le piège à éviter :</strong> transformer la dictée en moment stressant. Une dictée n'est pas un contrôle, c'est un entraînement. Mettre en avant les progrès (« deux fautes de moins que la dernière fois ! ») motive bien plus que compter les erreurs.</p>
     </div>
 
-    <h2>Comment Galac6 aide votre enfant à progresser en orthographe</h2>
+    <h2 id="avec-galac6">Comment Galac6 aide-t-il votre enfant à progresser en orthographe ?</h2>
     <p>Faire la dictée à son enfant tous les soirs n'est pas toujours possible. Galac6 reprend exactement la routine décrite plus haut et permet à votre enfant de s'entraîner seul, à son rythme. Concrètement, voici comment l'utiliser :</p>
     <ul>
-      <li><strong>Une dictée adaptée à la demande</strong> — Galac6 génère une <strong>dictée au niveau CM2</strong> (ou ajustée si votre enfant est en avance ou en difficulté) et la <strong>lit à voix haute</strong>, comme le ferait un parent. Pas besoin de chercher un texte ni de dicter soi-même. Tout est détaillé sur la page <a href="/dictee-en-ligne">dictée en ligne</a>.</li>
+      <li><strong>Une dictée adaptée à la demande</strong> — Galac6 propose des <strong>dictées pour le CM2</strong>, avec quatre niveaux (facile, moyen, difficile ou expert) si votre enfant est en avance ou en difficulté, et les <strong>lit à voix haute</strong>, comme le ferait un parent. Pas besoin de chercher un texte ni de dicter soi-même. Tout est détaillé sur la page <a href="/dictee-en-ligne">dictée en ligne</a>.</li>
       <li><strong>Une correction qui explique, pas qui sanctionne</strong> — à la fin, chaque faute est reprise une par une avec <strong>la règle associée</strong> (« ‑ent ici car le sujet est pluriel »). Votre enfant comprend <em>pourquoi</em> c'est une erreur, ce qui évite de la refaire.</li>
       <li><strong>Cibler les fautes qui reviennent</strong> — en s'entraînant régulièrement, votre enfant retravaille surtout ses points faibles (homophones, accords du participe passé…) plutôt que de tout recommencer à chaque fois.</li>
       <li><strong>Apprendre sans pression</strong> — il refait des dictées autant de fois qu'il veut et voit ses progrès (« deux fautes de moins que la dernière fois »), ce qui le motive bien plus que de compter les erreurs.</li>
@@ -329,6 +532,21 @@
     <div style="margin: 1.5rem 0;">
       <a href="https://galac6web.netlify.app/" class="cta-btn">Essayer une dictée →</a>
     </div>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <h2 id="questions-frequentes">Questions fréquentes</h2>
+      <h3>Combien de dictées faire par semaine en CM2 ?</h3>
+      <p>Trois dictées courtes par semaine suffisent, de 3 à 5 lignes chacune. La régularité compte plus que la quantité.</p>
+      <h3>Quelles sont les fautes les plus fréquentes en CM2 ?</h3>
+      <p>Les fautes les plus fréquentes portent sur les homophones (a et à, et et est, son et sont), l'accord du verbe avec le sujet, l'accord dans le groupe nominal, les terminaisons en -é, -er ou -ais et le pluriel de certains noms.</p>
+      <h3>Comment corriger une dictée sans décourager son enfant ?</h3>
+      <p>Faites d'abord relire votre enfant en cherchant une seule chose à la fois, rappelez la règle pour chaque faute et mettez en avant les progrès plutôt que le nombre d'erreurs. Une dictée est un entraînement, pas un contrôle.</p>
+      <h3>Galac6 peut-il lire et corriger une dictée de CM2 ?</h3>
+      <p>Oui. Galac6 lit la dictée à voix haute, phrase par phrase, puis reprend chaque faute une par une, avec le mot attendu, la règle expliquée et une note sur 10.</p>
+      <h3>Combien coûte la dictée sur Galac6 ?</h3>
+      <p>La formule Découverte coûte 0 € et comprend une dictée par mois. Les offres Élève (69 € par an) et Famille (99 € par an, jusqu'à 4 enfants) donnent des dictées en illimité.</p>
+    </section>
 
     <!-- Liens internes -->
     <div class="related">
@@ -339,6 +557,8 @@
         <li><a href="/blog/reviser-brevet-maths">Comment réviser le brevet de maths : la méthode en 5 étapes</a></li>
         <li><a href="/soutien-scolaire-ia">Le soutien scolaire par IA, du CP à la Terminale</a></li>
         <li><a href="/blog/galac6-dictee">Dictées audio corrigées du CP à la 3e</a></li>
+        <li><a href="/blog/corriger-dictees-professeurs">Corriger les dictées plus vite : le guide des professeurs</a></li>
+        <li><a href="/blog/comment-faire-fiche-de-revision">Comment faire une fiche de révision : la méthode en 5 étapes</a></li>
         <li><a href="/fiches-revision-ia">Fiches de révision par IA à partir du cours</a></li>
       </ul>
     </div>

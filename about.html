@@ -24,7 +24,7 @@
         "@id": "https://galac6.io/#organization"
       },
       "description": "Galac6 (galac6.io), édité par RHK Conseil à Paris et fondé par Raphaël Haïk : un tuteur IA du CP à la Terminale, construit sur le programme français.",
-      "dateModified": "2026-11-05",
+      "dateModified": "2026-11-09",
       "about": {
         "@id": "https://galac6.io/#organization"
       },
@@ -59,6 +59,20 @@
       "description": "Galac6 (galac6.io) prépare chaque élève à son contrôle d'une façon unique. L'élève apprend sa leçon sur une fiche de révision Galac6. Une IA l'interroge ensuite pour mesurer ce qu'il a vraiment retenu. Puis Galac6 lui propose des exercices adaptés à son niveau. Pendant tout ce travail, un chat pédagogique l'aide sans jamais lui donner la réponse. Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac. Du CP à la Terminale, sur le programme scolaire français. Données hébergées en France, IA traitée en Europe.",
       "email": "hello@galac6.io",
       "legalName": "RHK CONSEIL",
+      "foundingDate": "2026",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "RHK Conseil",
+        "legalName": "RHK CONSEIL",
+        "foundingDate": "2023",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "19 rue de Croulebarbe",
+          "postalCode": "75013",
+          "addressLocality": "Paris",
+          "addressCountry": "FR"
+        }
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "19 rue de Croulebarbe",
@@ -571,16 +585,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -611,11 +626,11 @@
   <!-- ═══ CONTENT ═══ -->
   <div class="about-page">
     <div class="about-intro">
-      <img src="/images/raphael.jpg" width="660" height="880" alt="Raphaël Haïk, fondateur de Galac6" data-i18n-alt="about.photo.alt"
+      <img src="/images/raphael-haik-fondateur-galac6.webp" width="660" height="880" alt="Raphaël Haïk, fondateur de Galac6" data-i18n-alt="about.photo.alt"
            class="about-photo">
       <div class="about-text">
         <h1 data-i18n="about.title2">À propos de Galac6 (galac6.io)</h1>
-        <p class="updated"><time datetime="2026-11-05" data-i18n="gen.updated.nov5">Mis à jour le 5 novembre 2026</time></p>
+        <p class="updated"><time datetime="2026-11-09" data-i18n="gen.updated.nov9">Mis à jour le 9 novembre 2026</time></p>
         <p data-i18n="about.p1">Ingénieur, entrepreneur et surtout père de 3 enfants, j'ai créé Galac6 à partir d'un constat simple : les devoirs occupent une place immense dans la vie de famille — et ils sont source de stress, autant pour les enfants que pour les parents.</p>
         <p data-i18n="about.p2">J'ai vu comme vous la tentation du ChatGPT : rapide, disponible à toute heure, capable de tout expliquer. Mais aussi inadapté au milieu scolaire, et presque impossible à utiliser sans tricher.</p>
         <p data-i18n="about.p3">J'ai donc développé Galac6 pour offrir une alternative pensée pour les élèves : une IA qui aide à comprendre, à réviser et à progresser — sans faire les devoirs à leur place. Galac6 s'appuie sur les meilleurs modèles d'IA du marché (Anthropic, Google, Mistral), utilisés là où chacun excelle, pour garantir des réponses toujours pertinentes et pédagogiques.</p>
@@ -630,6 +645,7 @@
       <ul class="facts-list" data-i18n-html="about.brief.list">
         <li><strong>Nom :</strong> Galac6 (galac6.io), une edtech française.</li>
         <li><strong>Éditeur :</strong> RHK Conseil, SIRET 944 058 866 00012, 19 rue de Croulebarbe, 75013 Paris.</li>
+        <li><strong>Création :</strong> Galac6 (galac6.io) est une marque créée en 2026 par RHK Conseil, société fondée en 2023.</li>
         <li><strong>Fondateur :</strong> Raphaël Haïk, ingénieur télécom de formation, seul fondateur de Galac6 (<a href="https://www.linkedin.com/in/raphaelhaik" target="_blank" rel="noopener">LinkedIn</a>).</li>
         <li><strong>Pour qui :</strong> les élèves du CP à la Terminale, leurs parents et leurs professeurs, en France et dans les écoles françaises à l'étranger.</li>
         <li><strong>Programme :</strong> le programme officiel de l'Éducation nationale, du CP à la Terminale.</li>
@@ -644,7 +660,7 @@
       <h2 data-i18n="about.peda.title">Notre pédagogie : guider sans donner la réponse</h2>
       <p data-i18n="about.peda.p1">Galac6 ne fait pas les devoirs à la place de l'élève. Le tuteur pose des questions, donne des indices et explique les erreurs, pour que l'élève trouve la réponse lui-même. C'est ce qui le distingue des IA généralistes, qui donnent la solution toute faite.</p>
       <p data-i18n="about.peda.p2">Tous les contenus suivent le programme français, du CP à la Terminale : aide aux devoirs, dictées lues et corrigées, calcul mental, quiz, fiches de révision, brevet et bac blancs. Un sujet d'entraînement créé par l'IA est toujours présenté comme tel, jamais comme une annale officielle.</p>
-      <p class="fr-only">Chaque étape est détaillée sur la page <a href="/methode-pedagogique">La méthode pédagogique de Galac6</a>.</p>
+      <p data-i18n-html="about.peda.method">Chaque étape est détaillée sur la page <a href="/methode-pedagogique">La méthode pédagogique de Galac6</a>.</p>
       <p class="fr-only">Vous comparez les tuteurs IA ? Lisez notre comparatif sur Galac6, une <a href="/blog/galac6-ou-eliott">alternative à Eliott</a>, et notre <a href="/recherche">état de la recherche</a> sur l'IA et l'apprentissage.</p>
 
       <h2 data-i18n="about.facts.title">Galac6 en chiffres</h2>
@@ -695,7 +711,7 @@
       <a href="/familles" style="color: var(--text-muted);" data-i18n="footer.families">Familles</a>
       <a href="/dictee-en-ligne" style="color: var(--text-muted);" data-i18n="footer.dictee">Dictée en ligne</a>
       <a href="/annales-brevet-bac" style="color: var(--text-muted);" data-i18n="footer.annales">Annales du brevet et du bac</a>
-      <a href="/fiches-revision-ia" style="color: var(--text-muted);">Fiches de révision par IA</a><a href="/methode-pedagogique" style="color: var(--text-muted);" class="fr-only">La méthode pédagogique</a>
+      <a href="/fiches-revision-ia" style="color: var(--text-muted);">Fiches de révision par IA</a><a href="/methode-pedagogique" style="color: var(--text-muted);" data-i18n="footer.method">La méthode pédagogique</a>
       <a href="/familles-francaises-etranger" style="color: var(--text-muted);" data-i18n="footer.expat">Familles à l'étranger</a>
       <a href="/mentions-legales" style="color: var(--text-muted);" data-i18n="footer.legal.mentions">Mentions légales</a>
       <a href="/international" style="color: var(--text-muted);" data-i18n="footer.international">École hors de France ?</a>

@@ -7,6 +7,8 @@
   <meta name="description" content="Votre enfant utilise l&#x27;IA pour ses devoirs ? Ce que dit l&#x27;Éducation nationale, la différence entre tricher et apprendre, et des règles pour la maison.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/blog/ia-devoirs-sans-tricher">
+  <link rel="alternate" hreflang="fr" href="https://galac6.io/blog/ia-devoirs-sans-tricher">
+  <link rel="alternate" hreflang="x-default" href="https://galac6.io/blog/ia-devoirs-sans-tricher">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Galac6">
   <meta property="og:locale" content="fr_FR">
@@ -18,6 +20,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
   <meta property="article:published_time" content="2026-10-31">
+  <meta property="article:modified_time" content="2026-11-09">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="L&#x27;IA pour faire ses devoirs : comment l&#x27;utiliser sans tricher">
   <meta name="twitter:description" content="Votre enfant utilise l&#x27;IA pour ses devoirs ? Ce que dit l&#x27;Éducation nationale, la différence entre tricher et apprendre, et des règles pour la maison.">
@@ -69,7 +72,7 @@
         "caption": "Galac6, l'IA au service de la pédagogie."
       },
       "datePublished": "2026-10-31",
-      "dateModified": "2026-11-04",
+      "dateModified": "2026-11-09",
       "inLanguage": "fr-FR",
       "mainEntityOfPage": "https://galac6.io/blog/ia-devoirs-sans-tricher",
       "keywords": "IA devoirs, intelligence artificielle école, tuteur IA, triche, parents, collège, lycée, innovation pédagogique",
@@ -211,6 +214,54 @@
       /* Menu : une seule ligne, plus serré sur écran moyen */
     .navbar-links a { white-space: nowrap; }
     @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
+  /* Schémas et encadrés des articles */
+    .plan { background: rgba(124,92,252,0.08); border: 1px solid rgba(124,92,252,0.3); border-radius: 14px; padding: 1.1rem 1.4rem 1rem; margin: 0 0 1.4rem; }
+    .plan h2 { margin: 0 0 0.6rem; font-size: 1.15rem; }
+    .plan ol { margin: 0 0 0.6rem 1.2rem; padding: 0; }
+    .plan li { margin-bottom: 0.45rem; line-height: 1.5; }
+    .plan li::marker { color: var(--primary-light); font-weight: 800; }
+    .plan a { color: var(--text); text-decoration: none; }
+    .plan a strong { color: var(--primary-light); }
+    .plan a:hover strong { text-decoration: underline; }
+    .plan .plan-fin { margin: 0; font-size: 0.95rem; color: var(--text-muted); }
+    .plan .plan-fin a { color: var(--primary-light); font-weight: 700; }
+    .essentiel { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--primary); border-radius: 14px; padding: 1.2rem 1.4rem 0.4rem; margin: 0 0 2rem; }
+    .essentiel h2 { margin: 0 0 0.7rem; font-size: 1.15rem; }
+    .essentiel ul { margin-left: 1.1rem; }
+    .plan-toc { list-style: none; margin: 0 !important; padding: 0; display: grid; gap: 0.15rem; }
+    .plan-toc li { margin: 0; }
+    .plan-toc a { display: flex; align-items: center; gap: 0.7rem; padding: 0.45rem 0.4rem; border-radius: 10px; color: var(--text); text-decoration: none; min-height: 44px; }
+    .plan-toc a:hover { background: rgba(124,92,252,0.12); text-decoration: none; }
+    .pt-n { flex: none; width: 1.8rem; height: 1.8rem; border-radius: 8px; display: grid; place-items: center; background: rgba(124,92,252,0.18); color: var(--primary-light); font-weight: 800; font-size: 0.9rem; }
+    .pt-t { font-weight: 700; line-height: 1.3; }
+    .plan .pt-d { margin: -0.1rem 0 0.4rem 2.9rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); }
+    .plan .pt-d strong { color: var(--text); }
+    .pt-src .pt-n { background: transparent; border: 1px dashed rgba(167,139,250,0.5); }
+    .g6-tag { flex: none; display: inline-block; margin-left: auto; padding: 0.05rem 0.5rem; border-radius: 999px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.03em; line-height: 1.5; color: #d9ccff; background: rgba(124,92,252,0.22); border: 1px solid rgba(167,139,250,0.4); align-self: center; }
+    .plan-toc li.is-g6 .pt-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; }
+    .plan .plan-toc li.is-g6 .pt-d { margin-right: 0.6rem; }
+    .fig { margin: 1.8rem 0 2rem; }
+    .fig figcaption { margin-top: 0.7rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
+    .diagram { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 0.9rem; }
+    @media (max-width: 600px) { .diagram { padding: 0.8rem 0.35rem; } }
+    .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+    .diagram .d-box { fill: rgba(124,92,252,0.12); stroke: rgba(167,139,250,0.5); stroke-width: 1.2; }
+    .diagram .d-box-up { fill: rgba(52,211,153,0.1); stroke: rgba(52,211,153,0.55); stroke-width: 1.2; }
+    .diagram .d-box-down { fill: rgba(251,191,36,0.08); stroke: rgba(251,191,36,0.5); stroke-width: 1.2; }
+    .diagram .d-box-opt { fill: none; stroke: rgba(167,139,250,0.6); stroke-width: 1.2; stroke-dasharray: 5 4; }
+    .diagram .d-t { fill: var(--text); font-weight: 700; font-size: 15px; }
+    .diagram .d-s { fill: var(--text-muted); font-size: 13.5px; }
+    .diagram .d-n { fill: #fff; font-weight: 800; font-size: 13px; }
+    .diagram .d-num { fill: url(#d-grad); }
+    .diagram .d-line { fill: none; stroke: var(--primary-light); stroke-width: 1.6; }
+    .diagram .d-dash { fill: none; stroke: var(--primary-light); stroke-width: 1.4; stroke-dasharray: 4 4; opacity: 0.8; }
+    .diagram .d-head { fill: var(--primary-light); }
+    .diagram .d-ico { fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diagram .d-up { fill: #6ee7b7; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-down { fill: #fcd34d; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-band-1 { fill: rgba(99,102,241,0.22); }
+    .diagram .d-band-2 { fill: rgba(124,92,252,0.3); }
+    .diagram .d-band-3 { fill: rgba(168,85,247,0.38); }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -285,16 +336,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -328,19 +380,89 @@
     <h1>L'IA pour faire ses devoirs : comment l'utiliser <span class="grad">sans tricher</span></h1>
     <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 31 octobre 2026 · 4 min de lecture</div>
 
-    <p class="lead">Les outils d'intelligence artificielle sont entrés dans les chambres des collégiens et des lycéens. Beaucoup de parents se demandent s'il faut les interdire, les tolérer ou les encourager. La bonne question est ailleurs : votre enfant se sert-il de l'IA pour <strong>apprendre</strong>, ou pour <strong>éviter d'apprendre</strong> ? Voici des repères pour faire la différence.</p>
+    <p class="lead">Les outils d'intelligence artificielle sont entrés dans les chambres des collégiens et des lycéens. Beaucoup de parents se demandent s'il faut les interdire, les tolérer ou les encourager. La bonne question est ailleurs : votre enfant se sert-il de l'IA pour <strong>apprendre</strong>, ou pour <strong>éviter d'apprendre</strong> ? Voici des repères pour faire la différence. Galac6 (galac6.io), tuteur IA scolaire du CP à la terminale, a été pensé pour que l'élève fasse le travail : il guide par des questions et des indices, sans donner la réponse.</p>
 
-    <h2>Ce que dit l'Éducation nationale</h2>
-    <p>En juin 2025, le ministère de l'Éducation nationale a publié un <a href="https://www.education.gouv.fr/cadre-d-usage-de-l-ia-en-education-450647" target="_blank" rel="noopener">cadre d'usage de l'IA en éducation</a>. Quelques points concernent directement les familles :</p>
+    <aside class="essentiel" aria-labelledby="essentiel-titre">
+      <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
+      <ul>
+        <li><strong>L'IA n'est pas interdite par principe</strong> : selon le cadre d'usage publié par l'Éducation nationale en juin 2025, le travail rendu doit rester celui de l'élève, et les consignes du professeur priment.</li>
+        <li>Faire réaliser un devoir par une IA sans autorisation de l'enseignant et sans travail personnel est une <strong>fraude</strong>.</li>
+        <li>L'usage par les élèves est prévu en classe <strong>à partir de la 4e</strong>, encadré par l'enseignant.</li>
+        <li>L'IA aide à apprendre quand elle <strong>explique, interroge ou donne un indice</strong> ; elle empêche d'apprendre quand elle fait le devoir à la place de l'élève.</li>
+        <li>À la maison, cinq règles suffisent : chercher seul d'abord, demander des indices, savoir réexpliquer, vérifier, respecter les consignes du professeur.</li>
+        <li>Galac6 guide l'élève par des questions et des indices, du CP à la terminale, sans donner la réponse.</li>
+      </ul>
+    </aside>
+
+    <nav class="plan" id="sommaire" aria-labelledby="plan-titre">
+      <h2 id="plan-titre">Ce que vous allez apprendre</h2>
+      <ol class="plan-toc">
+        <li><a href="#education-nationale"><span class="pt-n">1</span><span class="pt-t">Ce que dit l'Éducation nationale</span></a></li>
+        <li><a href="#usages"><span class="pt-n">2</span><span class="pt-t">Aider à apprendre ou faire à la place</span></a></li>
+        <li><a href="#regles"><span class="pt-n">3</span><span class="pt-t">Cinq règles pour la maison</span></a></li>
+        <li><a href="#apprend-vraiment"><span class="pt-n">4</span><span class="pt-t">Savoir si votre enfant apprend</span></a></li>
+        <li class="is-g6"><a href="#galac6"><span class="pt-n">5</span><span class="pt-t">Ce que propose Galac6</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#questions-frequentes"><span class="pt-n">6</span><span class="pt-t">Questions fréquentes</span></a></li>
+      </ol>
+    </nav>
+
+    <h2 id="education-nationale">Que dit l'Éducation nationale sur l'IA et les devoirs ?</h2>
+    <p>L'Éducation nationale n'interdit pas l'IA par principe : le travail rendu doit rester celui de l'élève, et les consignes du professeur priment. En juin 2025, le ministère de l'Éducation nationale a publié un <a href="https://www.education.gouv.fr/cadre-d-usage-de-l-ia-en-education-450647" target="_blank" rel="noopener">cadre d'usage de l'IA en éducation</a>. Quelques points concernent directement les familles :</p>
     <ul>
       <li>L'usage des IA génératives par les élèves en classe est prévu <strong>à partir de la 4e</strong>, de façon encadrée et accompagnée par l'enseignant ; au lycée, l'usage peut être plus autonome, dans un cadre défini par le professeur.</li>
       <li>Faire réaliser un devoir par une IA générative <strong>sans autorisation explicite de l'enseignant</strong> et sans travail personnel d'appropriation est considéré comme une <strong>fraude</strong>.</li>
       <li>Le cadre déconseille les outils de détection de textes générés par IA, jugés peu fiables.</li>
     </ul>
-    <p>Autrement dit : l'IA n'est pas interdite par principe, mais le travail rendu doit rester celui de l'élève, et les consignes du professeur priment. Eduscol propose aussi des ressources sur <a href="https://eduscol.education.gouv.fr/6702/les-intelligences-artificielles-et-leurs-usages-en-education" target="_blank" rel="noopener">les intelligences artificielles et leurs usages en éducation</a>.</p>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 212" role="img" aria-labelledby="schema-niveaux-titre schema-niveaux-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-niveaux-titre">Ce que prévoit le cadre d'usage de l'IA selon le niveau</title>
+        <desc id="schema-niveaux-desc">Avant la 4e : à la maison, avec un parent, sur un outil adapté. À partir de la 4e : en classe, usage encadré par l'enseignant. Au lycée : usage plus autonome, dans un cadre fixé par le professeur.</desc>
+        <defs><linearGradient id="d-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient><marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker></defs>
+        <rect class="d-box" x="6" y="6" width="348" height="60" rx="12"/><text class="d-t" x="20" y="30">Avant la 4e</text>
+        <text class="d-s" x="20" y="52">à la maison : avec un parent, sur un outil adapté</text>
+        <rect class="d-box" x="6" y="76" width="348" height="60" rx="12"/><text class="d-t" x="20" y="100">À partir de la 4e</text>
+        <text class="d-s" x="20" y="122">en classe : usage encadré par l'enseignant</text>
+        <rect class="d-box-up" x="6" y="146" width="348" height="60" rx="12"/><text class="d-t" x="20" y="170">Au lycée</text>
+        <text class="d-s" x="20" y="192">usage plus autonome, cadre fixé par le professeur</text>
+      </svg>
+      <figcaption>Le cadre d'usage de l'IA selon le niveau : avant la 4e, à la maison avec un parent sur un outil adapté ; à partir de la 4e, en classe, un usage encadré par l'enseignant ; au lycée, un usage plus autonome, dans un cadre fixé par le professeur.</figcaption>
+    </figure>
+    <p>Eduscol propose aussi des ressources sur <a href="https://eduscol.education.gouv.fr/6702/les-intelligences-artificielles-et-leurs-usages-en-education" target="_blank" rel="noopener">les intelligences artificielles et leurs usages en éducation</a>.</p>
 
-    <h2>L'IA qui fait à la place, l'IA qui fait faire</h2>
-    <p>Tous les usages ne se valent pas. On peut les ranger en deux familles.</p>
+    <h2 id="usages">Quand l'IA aide-t-elle à apprendre, et quand fait-elle à la place de l'élève ?</h2>
+    <p>L'IA aide à apprendre quand c'est l'élève qui fait le travail, et elle fait à sa place quand elle produit le devoir. On peut ranger les usages en deux familles.</p>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 332" role="img" aria-labelledby="schema-usages-titre schema-usages-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-usages-titre">Deux façons d'utiliser l'IA pour les devoirs</title>
+        <desc id="schema-usages-desc">À gauche, l'IA qui fait à la place : recopier la solution, faire rédiger la rédaction, demander un résumé au lieu de lire. L'IA travaille. À droite, l'IA qui fait faire : expliquer une notion, se faire interroger sur sa leçon, demander un indice. L'élève travaille.</desc>
+        
+        <text class="d-t" x="92" y="20" text-anchor="middle">L'IA fait à la place</text>
+        <text class="d-t" x="268" y="20" text-anchor="middle">L'IA fait faire</text>
+        <rect class="d-box" x="6" y="32" width="172" height="58" rx="10"/>
+        <text class="d-s" x="92" y="66" text-anchor="middle">Recopier la solution</text>
+        <path class="d-line" d="M92 90V106" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="6" y="110" width="172" height="58" rx="10"/>
+        <text class="d-s" x="92" y="135" text-anchor="middle">Faire rédiger</text><text class="d-s" x="92" y="154" text-anchor="middle">la rédaction</text>
+        <path class="d-line" d="M92 168V184" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="6" y="188" width="172" height="58" rx="10"/>
+        <text class="d-s" x="92" y="222" text-anchor="middle">Résumé au lieu de lire</text>
+        <path class="d-line" d="M92 246V262" marker-end="url(#d-arr)"/>
+        <rect class="d-box-down" x="6" y="266" width="172" height="58" rx="10"/>
+        <text class="d-s" x="92" y="300" text-anchor="middle">L'IA travaille</text>
+        <rect class="d-box" x="182" y="32" width="172" height="58" rx="10"/>
+        <text class="d-s" x="268" y="66" text-anchor="middle">Expliquer une notion</text>
+        <path class="d-line" d="M268 90V106" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="182" y="110" width="172" height="58" rx="10"/>
+        <text class="d-s" x="268" y="135" text-anchor="middle">Se faire interroger</text><text class="d-s" x="268" y="154" text-anchor="middle">sur sa leçon</text>
+        <path class="d-line" d="M268 168V184" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="182" y="188" width="172" height="58" rx="10"/>
+        <text class="d-s" x="268" y="222" text-anchor="middle">Demander un indice</text>
+        <path class="d-line" d="M268 246V262" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="182" y="266" width="172" height="58" rx="10"/>
+        <text class="d-s" x="268" y="300" text-anchor="middle">L'élève travaille</text>
+      </svg>
+      <figcaption>À gauche, l'IA qui fait à la place : recopier la solution, faire rédiger la rédaction, un résumé au lieu de lire. À droite, l'IA qui fait faire : expliquer une notion, se faire interroger sur sa leçon, demander un indice.</figcaption>
+    </figure>
     <h3>Les usages qui empêchent d'apprendre</h3>
     <ul>
       <li>Coller l'énoncé d'un exercice et recopier la solution.</li>
@@ -357,7 +479,25 @@
     </ul>
     <p>Dans le premier cas, l'IA travaille. Dans le second, c'est l'élève qui travaille, et l'IA joue le rôle d'un tuteur.</p>
 
-    <h2>Cinq règles simples pour la maison</h2>
+    <h2 id="regles">Quelles règles fixer à la maison pour l'IA ?</h2>
+    <p>Cinq règles simples suffisent, et votre enfant peut les appliquer avec n'importe quel outil.</p>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 414" role="img" aria-labelledby="schema-regles-titre schema-regles-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-regles-titre">Cinq règles pour utiliser l'IA à la maison</title>
+        <desc id="schema-regles-desc">Un : chercher seul, l'IA vient après un vrai essai. Deux : demander des indices, jamais la réponse. Trois : réexpliquer avec ses mots ce qui a été rendu. Quatre : vérifier avec le cours et garder l'esprit critique. Cinq : respecter les consignes du professeur et protéger ses données.</desc>
+        
+        <rect class="d-box" x="8" y="8" width="344" height="62" rx="12"/><circle class="d-num" cx="34" cy="39" r="13"/><text class="d-n" x="34" y="44" text-anchor="middle">1</text><text class="d-t" x="58" y="34">Chercher seul</text><text class="d-s" x="58" y="54">l'IA vient après un vrai essai</text>
+        <path class="d-line" d="M180 70V88" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="92" width="344" height="62" rx="12"/><circle class="d-num" cx="34" cy="123" r="13"/><text class="d-n" x="34" y="128" text-anchor="middle">2</text><text class="d-t" x="58" y="118">Demander des indices</text><text class="d-s" x="58" y="138">jamais la réponse</text>
+        <path class="d-line" d="M180 154V172" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="176" width="344" height="62" rx="12"/><circle class="d-num" cx="34" cy="207" r="13"/><text class="d-n" x="34" y="212" text-anchor="middle">3</text><text class="d-t" x="58" y="202">Réexpliquer avec ses mots</text><text class="d-s" x="58" y="222">ce qui a été rendu</text>
+        <path class="d-line" d="M180 238V256" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="260" width="344" height="62" rx="12"/><circle class="d-num" cx="34" cy="291" r="13"/><text class="d-n" x="34" y="296" text-anchor="middle">4</text><text class="d-t" x="58" y="286">Vérifier</text><text class="d-s" x="58" y="306">avec le cours, garder un esprit critique</text>
+        <path class="d-line" d="M180 322V340" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="8" y="344" width="344" height="62" rx="12"/><circle class="d-num" cx="34" cy="375" r="13"/><text class="d-n" x="34" y="380" text-anchor="middle">5</text><text class="d-t" x="58" y="370">Respecter les consignes</text><text class="d-s" x="58" y="390">du professeur, et protéger ses données</text>
+      </svg>
+      <figcaption>Les cinq règles dans l'ordre : chercher seul, l'IA vient après un vrai essai ; demander des indices ; réexpliquer ce qui a été rendu ; vérifier avec le cours ; respecter les consignes du professeur.</figcaption>
+    </figure>
     <ol class="steps">
       <li><strong>D'abord chercher seul.</strong> L'IA n'intervient qu'après un vrai essai. C'est l'effort de recherche qui fait apprendre.</li>
       <li><strong>Demander des indices, jamais la réponse.</strong> Une bonne demande ressemble à « je bloque à cette étape, aide-moi à comprendre », pas à « fais l'exercice ».</li>
@@ -370,8 +510,8 @@
       <p><strong>Pour les plus jeunes :</strong> avant la 4e, l'usage d'un outil d'IA à la maison se fait idéalement avec un parent à proximité, sur un outil conçu pour les enfants et adapté à leur âge.</p>
     </div>
 
-    <h2>Comment savoir si votre enfant apprend vraiment ?</h2>
-    <p>Quelques signes ne trompent pas :</p>
+    <h2 id="apprend-vraiment">Comment savoir si votre enfant apprend vraiment ?</h2>
+    <p>Votre enfant apprend vraiment s'il sait refaire seul un exercice semblable, sans écran. D'autres signes ne trompent pas :</p>
     <ul>
       <li>il sait refaire seul un exercice semblable, sans écran ;</li>
       <li>ses notes en contrôle, sans aide, suivent celles des devoirs à la maison ;</li>
@@ -380,8 +520,8 @@
     </ul>
     <p>À l'inverse, des devoirs parfaits et des contrôles ratés doivent vous alerter.</p>
 
-    <h2>Galac6 : un tuteur IA conçu pour faire réfléchir</h2>
-    <p>Galac6 a été pensé dès le départ pour le second usage. C'est un tuteur IA scolaire aligné sur le programme français, du CP à la Terminale :</p>
+    <h2 id="galac6">Galac6 aide-t-il sans faire à la place de l'élève ?</h2>
+    <p>Oui : Galac6 a été pensé dès le départ pour le second usage. C'est un tuteur IA scolaire aligné sur le programme français, du CP à la Terminale :</p>
     <ul>
       <li><strong>Une aide aux devoirs didactique</strong> : votre enfant envoie sa question ou la photo de son exercice, et le tuteur le guide par des questions et des indices progressifs. Il ne donne pas la réponse et refuse de rédiger un commentaire ou une dissertation à la place de l'élève.</li>
       <li><strong>« Interroge-moi sur ma leçon »</strong> : à partir d'une fiche de révision, Galac6 pose des questions pour vérifier que la leçon est sue.</li>
@@ -392,7 +532,7 @@
 
     <!-- FAQ -->
     <section class="faq">
-      <h2>Questions fréquentes</h2>
+      <h2 id="questions-frequentes">Questions fréquentes</h2>
       <h3>Utiliser l'IA pour ses devoirs, est-ce de la triche ?</h3>
       <p>Pas forcément. Selon le cadre d'usage de l'IA publié par l'Éducation nationale en juin 2025, faire réaliser un devoir par une IA sans autorisation de l'enseignant et sans travail personnel d'appropriation est une fraude. Se faire expliquer une notion ou demander un indice, puis faire le travail soi-même, est un usage d'apprentissage.</p>
       <h3>À partir de quel âge un enfant peut-il utiliser l'IA ?</h3>
@@ -422,6 +562,8 @@
         <li><a href="/blog/galac6-ou-notebooklm-fiches">Galac6 ou NotebookLM pour les fiches de révision</a></li>
         <li><a href="/blog/comment-faire-fiche-de-revision">Comment faire une fiche de révision : la méthode en 5 étapes</a></li>
         <li><a href="/blog/ia-devoirs-enfant-sans-reponses">Quelle IA pour les devoirs sans donner les réponses ?</a></li>
+        <li><a href="/blog/galac6-ou-chatgpt-devoirs">Galac6 ou ChatGPT pour les devoirs : quelle différence ?</a></li>
+        <li><a href="/blog/alternatives-eliott">Alternatives à Eliott : 5 tuteurs IA comparés</a></li>
       </ul>
     </div>
 

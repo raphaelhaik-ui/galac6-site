@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programme français à l'étranger — Galac6</title>
+  <title>Programme français à l'étranger : guide familles | Galac6</title>
   <meta name="description" content="Établissement homologué, CNED, brevet et bac depuis l&#x27;étranger, niveau de français : le guide des familles expatriées qui suivent le programme français.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/blog/programme-francais-etranger">
@@ -18,6 +18,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
   <meta property="article:published_time" content="2026-10-31">
+  <meta property="article:modified_time" content="2026-11-09">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Suivre le programme français à l&#x27;étranger : le guide des familles expatriées">
   <meta name="twitter:description" content="Établissement homologué, CNED, brevet et bac depuis l&#x27;étranger, niveau de français : le guide des familles expatriées qui suivent le programme français.">
@@ -69,7 +70,7 @@
         "caption": "Galac6, l'IA au service de la pédagogie."
       },
       "datePublished": "2026-10-31",
-      "dateModified": "2026-10-31",
+      "dateModified": "2026-11-09",
       "inLanguage": "fr-FR",
       "mainEntityOfPage": "https://galac6.io/blog/programme-francais-etranger",
       "keywords": "programme français à l'étranger, famille expatriée, CNED, AEFE, Mission laïque française, brevet à l'étranger, bac à l'étranger",
@@ -190,6 +191,7 @@
     .related { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem 1.6rem; margin: 2.5rem 0; }
     .related h2 { margin-top: 0; font-size: 1.2rem; }
     .related ul { margin-bottom: 0; }
+    .faq h3 { color: var(--text); }
 
     .final-cta { text-align: center; background: linear-gradient(160deg, rgba(124,92,252,0.14), rgba(124,92,252,0.04)); border: 1px solid rgba(124,92,252,0.35); border-radius: 20px; padding: 2.5rem 1.5rem; margin-top: 3rem; }
     .final-cta h2 { margin-top: 0; }
@@ -211,6 +213,128 @@
       /* Menu : une seule ligne, plus serré sur écran moyen */
     .navbar-links a { white-space: nowrap; }
     @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
+
+    /* Chapitrage copié de blog/pisa-2025-ecole-du-futur.html */
+    /* Version facile à lire : encadré, graphiques en barres, schémas */
+    .plan { background: rgba(124,92,252,0.08); border: 1px solid rgba(124,92,252,0.3); border-radius: 14px; padding: 1.1rem 1.4rem 1rem; margin: 0 0 1.4rem; }
+    .plan h2 { margin: 0 0 0.6rem; font-size: 1.15rem; }
+    .plan ol { margin: 0 0 0.6rem 1.2rem; padding: 0; }
+    .plan li { margin-bottom: 0.45rem; line-height: 1.5; }
+    .plan li::marker { color: var(--primary-light); font-weight: 800; }
+    .plan a { color: var(--text); text-decoration: none; }
+    .plan a strong { color: var(--primary-light); }
+    .plan a:hover strong { text-decoration: underline; }
+    .plan .plan-fin { margin: 0; font-size: 0.95rem; color: var(--text-muted); }
+    .plan .plan-fin a { color: var(--primary-light); font-weight: 700; }
+    .essentiel { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--primary); border-radius: 14px; padding: 1.2rem 1.4rem 0.4rem; margin: 0 0 2rem; }
+    .essentiel h2 { margin: 0 0 0.7rem; font-size: 1.15rem; }
+    .essentiel ul { margin-left: 1.1rem; }
+      html { scroll-padding-top: 140px; }
+
+    /* Chapitrage : parties numérotées, sommaire collant, barres d'avancement */
+    .art-layout { max-width: 760px; margin: 0 auto; }
+    .art-layout > .article { max-width: 760px; }
+    .article h2.sec { display: flex; align-items: center; gap: 0.85rem; font-size: clamp(1.55rem, 3.6vw, 1.95rem); font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; color: var(--text); margin: 3.4rem 0 1.2rem; padding-top: 1.6rem; border-top: 1px solid var(--border); position: relative; }
+    .article h2.sec::before { content: ""; position: absolute; top: -1px; left: 0; width: 72px; height: 2px; background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); }
+    .sec-n { flex: none; width: 2.6rem; height: 2.6rem; border-radius: 12px; display: grid; place-items: center; background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; font-size: 1.25rem; font-weight: 800; letter-spacing: 0; box-shadow: 0 6px 18px rgba(124,92,252,0.28); }
+    .faq h2.sec { margin-top: 3.4rem; }
+    .related h2.sec-src { scroll-margin-top: 140px; }
+    .article h3.sub { display: flex; align-items: baseline; gap: 0.6rem; font-size: 1.18rem; margin: 2rem 0 0.6rem; padding-left: 0.85rem; border-left: 2px solid rgba(124,92,252,0.45); }
+    .sub-n { flex: none; font-size: 0.9rem; font-weight: 800; color: var(--primary-light); font-variant-numeric: tabular-nums; }
+
+    /* Sommaire en tête */
+    .plan-toc { list-style: none; margin: 0 !important; padding: 0; display: grid; gap: 0.15rem; }
+    .plan-toc li { margin: 0; }
+    .plan-toc a { display: flex; align-items: center; gap: 0.7rem; padding: 0.45rem 0.4rem; border-radius: 10px; color: var(--text); text-decoration: none; min-height: 44px; }
+    .plan-toc a:hover { background: rgba(124,92,252,0.12); text-decoration: none; }
+    .pt-n { flex: none; width: 1.8rem; height: 1.8rem; border-radius: 8px; display: grid; place-items: center; background: rgba(124,92,252,0.18); color: var(--primary-light); font-weight: 800; font-size: 0.9rem; }
+    .pt-t { font-weight: 700; line-height: 1.3; }
+    .plan .pt-d { margin: -0.1rem 0 0.4rem 2.9rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); }
+    .plan .pt-d strong { color: var(--text); }
+    .pt-src .pt-n { background: transparent; border: 1px dashed rgba(167,139,250,0.5); }
+
+    /* Lien « Revenir au sommaire » (téléphone et tablette) */
+    .article p.back-toc { margin: 1.6rem 0 0; font-size: 0.85rem; }
+    .back-toc a { display: inline-flex; align-items: center; gap: 0.35rem; min-height: 44px; color: var(--text-muted); }
+    .back-toc a:hover { color: var(--primary-light); }
+    .back-toc svg, .toc-btn svg, .toc-close svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* Barre d'avancement horizontale, sous le menu (téléphone et tablette) */
+    .read-progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; pointer-events: none; }
+    .read-progress span { display: block; height: 100%; width: 100%; transform-origin: 0 50%; transform: scaleX(0); background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); }
+
+    /* Bouton et panneau « Sommaire » (téléphone et tablette) */
+    .toc-btn { position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 90; display: inline-flex; align-items: center; gap: 0.45rem; min-height: 44px; padding: 0 1rem; border-radius: 999px; border: 1px solid rgba(124,92,252,0.45); background: rgba(19,19,31,0.92); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); color: var(--text); font: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,0.4); opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity 0.2s, transform 0.2s; }
+    .toc-btn.show { opacity: 1; transform: none; pointer-events: auto; }
+    .toc-btn-n { color: var(--primary-light); font-variant-numeric: tabular-nums; }
+    .toc-sheet[hidden] { display: none; }
+    .toc-sheet { position: fixed; inset: 0; z-index: 400; }
+    .toc-sheet-bg { position: absolute; inset: 0; background: rgba(5,5,12,0.6); }
+    .toc-sheet-panel { position: absolute; left: 0; right: 0; bottom: 0; max-height: 80vh; overflow-y: auto; background: var(--bg-card); border-top: 1px solid rgba(124,92,252,0.4); border-radius: 18px 18px 0 0; padding: 0.8rem 16px calc(1rem + env(safe-area-inset-bottom, 0px)); }
+    .toc-sheet-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem; }
+    .toc-sheet-head p { font-weight: 800; color: var(--text); }
+    .toc-close { display: grid; place-items: center; width: 44px; height: 44px; border: 0; background: none; color: var(--text-muted); cursor: pointer; border-radius: 10px; }
+    .toc-sheet .plan-toc a.is-active { background: rgba(124,92,252,0.16); }
+    .toc-sheet .plan-toc a.is-active .pt-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; }
+
+    /* Sommaire collant à côté du texte (ordinateur) */
+    .toc-side { display: none; }
+    @media (min-width: 1024px) {
+      .art-layout { max-width: 1120px; display: flex; align-items: flex-start; gap: 2rem; padding: 0 1.5rem; }
+      .art-layout > .article { flex: 1 1 auto; min-width: 0; margin: 0; padding-left: 0; padding-right: 0; }
+      .toc-side { display: block; flex: 0 0 230px; position: sticky; top: 150px; margin-top: 3rem; max-height: calc(100vh - 170px); overflow-y: auto; padding: 0.2rem 0.2rem 1rem; }
+      .read-progress, .toc-btn, .toc-sheet, .back-toc { display: none !important; }
+    }
+    @media (min-width: 1200px) { .toc-side { flex-basis: 260px; } }
+    .toc-side-title { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin: 0 0 0.8rem; }
+    .toc-track { position: relative; }
+    .toc-rail { position: absolute; left: calc(0.8rem - 1px); width: 2px; background: var(--border); border-radius: 2px; }
+    .toc-fill { position: absolute; left: 0; top: 0; width: 100%; height: 0; border-radius: 2px; background: linear-gradient(180deg, var(--gradient-start), var(--gradient-end)); }
+    .toc-list { list-style: none; margin: 0; padding: 0; position: relative; }
+    .toc-list li { margin: 0; }
+    .toc-list a { display: flex; align-items: flex-start; gap: 0.65rem; padding: 0.4rem 0.3rem 0.4rem 0; color: var(--text-muted); font-size: 0.88rem; line-height: 1.35; text-decoration: none; transition: color 0.15s; }
+    .toc-list a:hover { color: var(--text); text-decoration: none; }
+    .toc-n { position: relative; z-index: 1; flex: none; width: 1.6rem; height: 1.6rem; border-radius: 50%; display: grid; place-items: center; font-size: 0.75rem; font-weight: 800; background: var(--bg); border: 2px solid var(--border); color: var(--text-muted); transition: background 0.2s, border-color 0.2s, color 0.2s; }
+    .toc-t { padding-top: 0.12rem; }
+    .toc-list a.is-done .toc-n { border-color: var(--primary); color: var(--primary-light); }
+    .toc-list a.is-active { color: var(--text); font-weight: 700; }
+    .toc-list a.is-active .toc-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); border-color: transparent; color: #fff; box-shadow: 0 0 0 4px rgba(124,92,252,0.22); }
+    .toc-src .toc-n { width: 1.6rem; }
+    .toc-src .toc-n::after { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+    /* V2 : Galac6 mis en avant dans les sommaires */
+    .g6-tag { flex: none; display: inline-block; margin-left: auto; padding: 0.05rem 0.5rem; border-radius: 999px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.03em; line-height: 1.5; color: #d9ccff; background: rgba(124,92,252,0.22); border: 1px solid rgba(167,139,250,0.4); align-self: center; }
+    .plan-toc li.is-g6, .toc-sheet .plan-toc li.is-g6 { background: rgba(124,92,252,0.1); border: 1px solid rgba(167,139,250,0.32); border-radius: 12px; margin: 0.15rem 0; }
+    .plan-toc li.is-g6 .pt-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; }
+    .plan .plan-toc li.is-g6 .pt-d { margin-right: 0.6rem; }
+    .toc-list li.is-g6 > a { background: rgba(124,92,252,0.1); border: 1px solid rgba(167,139,250,0.3); border-radius: 10px; margin: 0.15rem 0 0.15rem calc(-0.3rem - 1px); padding-left: 0.3rem; color: var(--text); flex-wrap: wrap; row-gap: 0.25rem; }
+    .toc-list li.is-g6 .toc-t { flex: 1 1 0; min-width: 0; }
+    .toc-list li.is-g6 .g6-tag { margin-left: 0; margin-top: 0.1rem; align-self: flex-start; }
+    @media (prefers-reduced-motion: reduce) { .toc-btn, .toc-n, .toc-list a { transition: none; } html { scroll-behavior: auto; } }
+
+    /* Visuels : schémas */
+    .fig { margin: 1.8rem 0 2rem; }
+    .fig figcaption { margin-top: 0.7rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
+    .diagram { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 0.9rem; }
+    @media (max-width: 600px) { .diagram { padding: 0.8rem 0.35rem; } }
+    .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+    .diagram .d-box { fill: rgba(124,92,252,0.12); stroke: rgba(167,139,250,0.5); stroke-width: 1.2; }
+    .diagram .d-box-up { fill: rgba(52,211,153,0.1); stroke: rgba(52,211,153,0.55); stroke-width: 1.2; }
+    .diagram .d-box-down { fill: rgba(251,191,36,0.08); stroke: rgba(251,191,36,0.5); stroke-width: 1.2; }
+    .diagram .d-box-opt { fill: none; stroke: rgba(167,139,250,0.6); stroke-width: 1.2; stroke-dasharray: 5 4; }
+    .diagram .d-t { fill: var(--text); font-weight: 700; font-size: 15px; }
+    .diagram .d-s { fill: var(--text-muted); font-size: 13.5px; }
+    .diagram .d-n { fill: #fff; font-weight: 800; font-size: 13px; }
+    .diagram .d-num { fill: url(#d-grad); }
+    .diagram .d-line { fill: none; stroke: var(--primary-light); stroke-width: 1.6; }
+    .diagram .d-dash { fill: none; stroke: var(--primary-light); stroke-width: 1.4; stroke-dasharray: 4 4; opacity: 0.8; }
+    .diagram .d-head { fill: var(--primary-light); }
+    .diagram .d-ico { fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diagram .d-up { fill: #6ee7b7; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-down { fill: #fcd34d; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-band-1 { fill: rgba(99,102,241,0.22); }
+    .diagram .d-band-2 { fill: rgba(124,92,252,0.3); }
+    .diagram .d-band-3 { fill: rgba(168,85,247,0.38); }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -285,16 +409,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -319,19 +444,74 @@
         <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start, #6366f1), var(--gradient-end, #a855f7)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;" data-i18n="nav.signup">Inscription ou connexion</a>
       </div>
     </nav>
+    <div class="read-progress" aria-hidden="true"><span></span></div>
   </div>
 
   <!-- ARTICLE -->
+  <div class="art-layout">
   <article class="article">
     <nav class="breadcrumb"><a href="/">Accueil</a> › <a href="/blog/">Blog</a> › Programme français à l'étranger</nav>
 
     <h1>Suivre le <span class="grad">programme français</span> à l'étranger : le guide des familles expatriées</h1>
     <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 31 octobre 2026 · 5 min de lecture</div>
 
-    <p class="lead">Partir vivre à l'étranger ne veut pas dire renoncer à l'école française. Établissement homologué, CNED, école locale complétée à la maison : plusieurs chemins existent, avec des conséquences différentes pour le brevet, le bac et le retour en France. Voici un tour d'horizon clair, avec les sources officielles à consulter.</p>
+    <p class="lead">Pour suivre le programme français à l'étranger, une famille a trois chemins : un établissement homologué, le CNED, ou une école locale complétée à la maison. Ces choix ont des conséquences différentes pour le brevet, le bac et le retour en France. Voici un tour d'horizon clair, avec les sources officielles à consulter, et ce que Galac6 (galac6.io), tuteur IA sur le programme français, peut apporter en complément.</p>
 
-    <h2>Trois façons de suivre le programme français depuis l'étranger</h2>
-    <p>Avant d'entrer dans le détail, voici les trois grandes options qui s'offrent à vous :</p>
+    <aside class="essentiel" aria-labelledby="essentiel-titre">
+      <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
+      <ul>
+        <li><strong>Trois chemins</strong> : un établissement français homologué, le CNED à distance, ou une école locale complétée par un travail en français à la maison.</li>
+        <li><strong>L'homologation se vérifie niveau par niveau</strong>, sur la liste officielle publiée chaque année au Journal officiel.</li>
+        <li><strong>Au CNED, le statut compte</strong> : l'inscription réglementée garde l'élève dans le système français, l'inscription libre ne donne ni décision de passage ni certificat de scolarité. Le choix est définitif une fois l'inscription validée.</li>
+        <li><strong>Le brevet et le bac se passent aussi à l'étranger</strong>, dans des centres d'examen rattachés à une académie. Renseignez-vous dès la rentrée.</li>
+        <li><strong>Galac6 (galac6.io)</strong> est un tuteur IA aligné sur le programme français, du CP à la terminale : il guide l'élève sans donner la réponse et ne remplace ni l'établissement ni le CNED.</li>
+      </ul>
+    </aside>
+
+    <nav class="plan" id="sommaire" aria-labelledby="plan-titre">
+      <h2 id="plan-titre">Ce que vous allez apprendre</h2>
+      <ol class="plan-toc">
+        <li><a href="#trois-facons"><span class="pt-n">1</span><span class="pt-t">Les trois façons de suivre le programme</span></a></li>
+        <li><a href="#homologues"><span class="pt-n">2</span><span class="pt-t">Les établissements homologués</span></a></li>
+        <li><a href="#cned"><span class="pt-n">3</span><span class="pt-t">Le CNED : réglementé ou libre</span></a></li>
+        <li><a href="#examens"><span class="pt-n">4</span><span class="pt-t">Le brevet et le bac depuis l'étranger</span></a></li>
+        <li><a href="#niveau-francais"><span class="pt-n">5</span><span class="pt-t">Garder un bon niveau de français</span></a></li>
+        <li class="is-g6"><a href="#galac6"><span class="pt-n">6</span><span class="pt-t">Ce que Galac6 peut apporter</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#questions-frequentes"><span class="pt-n">7</span><span class="pt-t">Questions fréquentes</span></a></li>
+      </ol>
+    </nav>
+
+    <h2 id="trois-facons">Quelles sont les trois façons de suivre le programme français à l'étranger ?</h2>
+    <p>Vous pouvez choisir un établissement français homologué, le CNED ou une école locale complétée à la maison.</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 224" role="img" aria-labelledby="schema-trois-facons-titre schema-trois-facons-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-trois-facons-titre">Trois façons de suivre le programme français à l'étranger</title>
+        <desc id="schema-trois-facons-desc">Un établissement français homologué : l'enfant va à l'école, avec des cours qui suivent les programmes français. Le CNED : la scolarité se fait à distance, à la maison, en classe complète ou pour quelques matières. Une école locale, complétée par un travail régulier en français à la maison.</desc>
+        <defs>
+          <linearGradient id="d-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+          <marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker>
+        </defs>
+        <rect class="d-box" x="8" y="8" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="39" r="13"/>
+        <text class="d-n" x="34" y="44" text-anchor="middle">1</text>
+        <text class="d-t" x="58" y="34">Établissement homologué</text>
+        <text class="d-s" x="58" y="54">cours qui suivent les programmes français</text>
+        <rect class="d-box" x="8" y="78" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="109" r="13"/>
+        <text class="d-n" x="34" y="114" text-anchor="middle">2</text>
+        <text class="d-t" x="58" y="104">CNED</text>
+        <text class="d-s" x="58" y="124">à distance, à la maison</text>
+        <rect class="d-box" x="8" y="148" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="179" r="13"/>
+        <text class="d-n" x="34" y="184" text-anchor="middle">3</text>
+        <text class="d-t" x="58" y="174">École locale</text>
+        <text class="d-s" x="58" y="194">et un travail régulier en français à la maison</text>
+      </svg>
+      <figcaption>Les trois façons de suivre le programme français depuis l'étranger, détaillées ci-dessous.</figcaption>
+    </figure>
+
+    <p>Voici ce que recouvre chaque option :</p>
     <ul>
       <li><strong>Un établissement d'enseignement français homologué</strong> dans votre pays de résidence : votre enfant va à l'école, au collège ou au lycée, avec des cours qui suivent les programmes français.</li>
       <li><strong>Le CNED</strong> (Centre national d'enseignement à distance) : la scolarité se fait à distance, à la maison, en classe complète ou pour quelques matières.</li>
@@ -339,7 +519,9 @@
     </ul>
     <p>Le bon choix dépend de l'offre disponible dans votre ville, de votre budget, de la durée de l'expatriation et de vos projets de retour.</p>
 
-    <h2>Les établissements homologués : AEFE et Mission laïque française</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="homologues">Qu'est-ce qu'un établissement homologué (AEFE, Mission laïque française) ?</h2>
     <p>Un établissement homologué est reconnu par le ministère de l'Éducation nationale comme dispensant un enseignement conforme aux programmes et aux objectifs du système éducatif français. D'après le <a href="https://www.education.gouv.fr/les-etablissements-d-enseignement-francais-l-etranger-8312" target="_blank" rel="noopener">ministère de l'Éducation nationale</a>, le réseau compte plus de 600 établissements homologués dans plus de 130 pays. <strong>La liste officielle est publiée chaque année au Journal officiel</strong> : c'est la référence à vérifier avant d'inscrire votre enfant.</p>
     <h3>Le réseau de l'AEFE</h3>
     <p>L'<a href="https://www.aefe.fr/" target="_blank" rel="noopener">Agence pour l'enseignement français à l'étranger (AEFE)</a> anime ce réseau. Les établissements n'ont pas tous le même statut : certains sont gérés directement par l'agence, d'autres sont conventionnés avec elle, d'autres encore sont partenaires. Pour votre enfant, l'essentiel est l'homologation, niveau par niveau (une école peut être homologuée pour le primaire et pas pour le lycée, par exemple).</p>
@@ -349,27 +531,82 @@
       <p><strong>Bon à savoir :</strong> les frais de scolarité de ces établissements peuvent être élevés. Les familles françaises peuvent, sous conditions de ressources, demander une bourse scolaire auprès du consulat. Les modalités sont présentées sur <a href="https://www.diplomatie.gouv.fr/fr/services-aux-francais/preparer-son-expatriation/scolarite-en-francais/article/agence-pour-l-enseignement-francais-a-l-etranger-aefe" target="_blank" rel="noopener">le site du ministère de l'Europe et des Affaires étrangères</a>.</p>
     </div>
 
-    <h2>Le CNED : réglementé ou libre, un choix qui compte</h2>
-    <p>Le CNED propose deux statuts d'inscription, et la différence est importante. Elle est détaillée dans <a href="https://www.cned.fr/l-actualite-de-la-formation/ecole-primaire-college-et-lycee-a-l-international-au-cned-le-mode-d-emploi" target="_blank" rel="noopener">le mode d'emploi du CNED pour l'international</a> :</p>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="cned">CNED : faut-il choisir l'inscription réglementée ou libre ?</h2>
+    <p>L'inscription réglementée est celle qui garde votre enfant dans le système français ; l'inscription libre ne donne lieu à aucune décision de passage ni à un certificat de scolarité. Le CNED propose deux statuts d'inscription, et la différence est importante. Elle est détaillée dans <a href="https://www.cned.fr/l-actualite-de-la-formation/ecole-primaire-college-et-lycee-a-l-international-au-cned-le-mode-d-emploi" target="_blank" rel="noopener">le mode d'emploi du CNED pour l'international</a> :</p>
     <ul>
       <li><strong>L'inscription réglementée</strong> donne droit à un certificat de scolarité, à des relevés de notes et à un avis d'orientation en fin d'année. Votre enfant reste dans le système français. Pour une classe complète depuis l'étranger, elle demande un <strong>avis favorable du conseiller culturel de l'ambassade de France</strong> de votre pays de résidence.</li>
       <li><strong>L'inscription libre</strong> ne demande aucune autorisation, mais les résultats ne donnent lieu à aucune décision de passage ou d'orientation, ni à un certificat de scolarité.</li>
     </ul>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 280" role="img" aria-labelledby="schema-cned-titre schema-cned-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-cned-titre">CNED : inscription réglementée ou inscription libre</title>
+        <desc id="schema-cned-desc">L'inscription réglementée donne droit à un certificat de scolarité, à des relevés de notes et à un avis d'orientation ; pour une classe complète depuis l'étranger, elle demande un avis favorable du conseiller culturel de l'ambassade. L'inscription libre ne demande aucune autorisation, mais ne donne ni décision de passage ou d'orientation ni certificat de scolarité.</desc>
+        <rect class="d-box-up" x="8" y="8" width="344" height="140" rx="12"/>
+        <text class="d-t" x="22" y="33">Inscription réglementée</text>
+        <path class="d-ico" d="M22 53l4 4 7-8"/>
+        <text class="d-s" x="42" y="58">certificat de scolarité</text>
+        <path class="d-ico" d="M22 77l4 4 7-8"/>
+        <text class="d-s" x="42" y="82">relevés de notes</text>
+        <path class="d-ico" d="M22 101l4 4 7-8"/>
+        <text class="d-s" x="42" y="106">avis d'orientation en fin d'année</text>
+        <path class="d-ico" d="M22 125l4 4 7-8"/>
+        <text class="d-s" x="42" y="130">classe complète : avis du conseiller culturel</text>
+        <rect class="d-box" x="8" y="158" width="344" height="116" rx="12"/>
+        <text class="d-t" x="22" y="183">Inscription libre</text>
+        <path class="d-ico" d="M22 203l4 4 7-8"/>
+        <text class="d-s" x="42" y="208">aucune autorisation</text>
+        <path class="d-ico" d="M23 222l8 8M31 222l-8 8"/>
+        <text class="d-s" x="42" y="232">pas de décision de passage ou d'orientation</text>
+        <path class="d-ico" d="M23 246l8 8M31 246l-8 8"/>
+        <text class="d-s" x="42" y="256">pas de certificat de scolarité</text>
+      </svg>
+      <figcaption>Les deux statuts d'inscription au CNED. Le choix est définitif une fois l'inscription validée.</figcaption>
+    </figure>
+
     <p>Le CNED précise que <strong>le choix du statut est définitif</strong> une fois l'inscription validée : prenez le temps de bien choisir. Les conditions évoluent d'une année sur l'autre ; consultez aussi <a href="https://www.cned.fr/l-actualite-de-la-formation/linscription-en-classe-complete-reglementee-a-linternational-les-nouveautes" target="_blank" rel="noopener">les nouveautés de l'inscription réglementée à l'international</a>.</p>
     <h3>Si votre enfant va à l'école locale</h3>
     <p>Le CNED propose une <strong>scolarité complémentaire internationale</strong>, à suivre en parallèle du système local, sur trois matières. C'est une façon de garder un pied dans le programme français, au collège comme au lycée, sans quitter l'école du pays.</p>
 
-    <h2>Passer le brevet et le bac depuis l'étranger</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="examens">Comment passer le brevet et le bac depuis l'étranger ?</h2>
     <p>Le brevet des collèges (DNB) et le baccalauréat se passent aussi hors de France, dans des <strong>centres d'examen ouverts à l'étranger</strong>, rattachés à une académie et organisés avec les ambassades.</p>
     <ul>
       <li><strong>Élève d'un établissement homologué</strong> : renseignez-vous auprès de l'établissement, qui vous indiquera les démarches d'inscription aux examens.</li>
       <li><strong>Élève inscrit au CNED en réglementé</strong> : il peut se présenter comme candidat scolaire.</li>
       <li><strong>Élève inscrit au CNED en libre, ou hors système français</strong> : il se présente comme candidat individuel (dit « candidat libre »). Pour le bac, <a href="https://eduscol.education.gouv.fr/5694/candidats-individuels-au-baccalaureat-general-et-au-baccalaureat-technologique" target="_blank" rel="noopener">Eduscol</a> indique que les candidats résidant à l'étranger peuvent se renseigner auprès du conseiller culturel de l'ambassade ou du consulat le plus proche.</li>
     </ul>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 216" role="img" aria-labelledby="schema-examens-titre schema-examens-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-examens-titre">Passer le brevet et le bac depuis l'étranger : selon la situation de l'élève</title>
+        <desc id="schema-examens-desc">Élève d'un établissement homologué : démarches indiquées par l'établissement. Élève inscrit au CNED en réglementé : candidat scolaire. Élève inscrit au CNED en libre, ou hors système français : candidat individuel, dit candidat libre.</desc>
+        <rect class="d-box" x="8" y="8" width="344" height="62" rx="12"/>
+        <rect class="d-band-1" x="8" y="8" width="96" height="62" rx="12"/>
+        <text class="d-t" x="56.0" y="44" text-anchor="middle" style="font-size:13.5px">Homologué</text>
+        <text class="d-t" x="116" y="34" style="font-size:14px">Voir avec l'établissement</text>
+        <text class="d-s" x="116" y="54">qui indique les démarches</text>
+        <rect class="d-box" x="8" y="78" width="344" height="62" rx="12"/>
+        <rect class="d-band-2" x="8" y="78" width="96" height="62" rx="12"/>
+        <text class="d-t" x="56.0" y="114" text-anchor="middle" style="font-size:13.5px">Réglementé</text>
+        <text class="d-t" x="116" y="104" style="font-size:14px">Candidat scolaire</text>
+        <text class="d-s" x="116" y="124">inscrit au CNED en réglementé</text>
+        <rect class="d-box" x="8" y="148" width="344" height="62" rx="12"/>
+        <rect class="d-band-3" x="8" y="148" width="96" height="62" rx="12"/>
+        <text class="d-t" x="56.0" y="184" text-anchor="middle" style="font-size:13.5px">Libre</text>
+        <text class="d-t" x="116" y="174" style="font-size:14px">Candidat individuel</text>
+        <text class="d-s" x="116" y="194">CNED en libre, ou hors système</text>
+      </svg>
+      <figcaption>Le statut de l'élève au moment de l'inscription à l'examen : établissement homologué, candidat scolaire au CNED ou candidat individuel.</figcaption>
+    </figure>
+
     <p>Les inscriptions aux examens se font tôt dans l'année scolaire et leur calendrier varie selon l'académie de rattachement : renseignez-vous dès la rentrée, sans attendre le printemps.</p>
 
-    <h2>Garder un bon niveau de français au quotidien</h2>
-    <p>Quand le français n'est plus la langue de la rue, de la cour de récréation ou des amis, le niveau peut baisser sans qu'on s'en aperçoive, en particulier à l'écrit. Quelques habitudes simples font la différence :</p>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="niveau-francais">Comment garder un bon niveau de français au quotidien ?</h2>
+    <p>En lisant, en écrivant et en parlant français un peu chaque jour. Quand le français n'est plus la langue de la rue, de la cour de récréation ou des amis, le niveau peut baisser sans qu'on s'en aperçoive, en particulier à l'écrit. Quelques habitudes simples font la différence :</p>
     <ol class="steps">
       <li><strong>Lire en français tous les jours</strong>, même un peu : romans, bandes dessinées, presse jeunesse. La lecture régulière nourrit le vocabulaire et l'orthographe.</li>
       <li><strong>Écrire régulièrement</strong> : un petit texte, un journal, un message à la famille. L'écrit est souvent la compétence qui s'érode en premier.</li>
@@ -378,7 +615,9 @@
       <li><strong>S'entraîner sur les vrais sujets</strong> à l'approche du brevet ou du bac, pour se familiariser avec les attentes françaises.</li>
     </ol>
 
-    <h2>Comment Galac6 peut accompagner votre enfant</h2>
+    <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
+
+    <h2 id="galac6">Comment Galac6 peut-il accompagner votre enfant ?</h2>
     <p>Galac6 est un tuteur IA scolaire aligné sur le programme français, du CP à la Terminale. Il ne remplace ni l'établissement ni le CNED, mais il aide votre enfant à travailler seul, où que vous soyez :</p>
     <ul>
       <li><strong>Une aide aux devoirs didactique</strong> : votre enfant pose sa question ou envoie la photo de son exercice, et le tuteur le guide pas à pas, sans lui donner la réponse.</li>
@@ -386,11 +625,11 @@
       <li><strong>Plus de 400 sujets d'annales officielles</strong> du brevet et du bac, dont <strong>112 sujets officiels passés hors de France</strong>, pour s'entraîner dans les conditions de l'examen.</li>
       <li><strong>Des données hébergées en France.</strong></li>
     </ul>
-    <p>Vous dirigez ou enseignez dans un établissement français à l'étranger ? Découvrez <a href="/ecoles-francaises-etranger">Galac6 pour les écoles françaises de l'étranger</a>, avec un pilote offert de 3 mois sur 3 classes.</p>
+    <p>Vous dirigez ou enseignez dans un établissement français à l'étranger ? Découvrez <a href="/ecoles-francaises-etranger">Galac6 pour les écoles françaises de l'étranger</a>, avec un pilote offert de 3 mois sur 3 classes. Pour choisir un outil, lisez aussi <a href="/blog/ia-lycees-francais-etranger">quelle IA pour les élèves des lycées français à l'étranger</a> et <a href="/blog/ia-programme-education-nationale">les sept points à vérifier sur un tuteur IA qui suit le programme</a>.</p>
 
     <!-- FAQ -->
     <section class="faq">
-      <h2>Questions fréquentes</h2>
+      <h2 id="questions-frequentes">Questions fréquentes</h2>
       <h3>Comment savoir si une école française à l'étranger est homologuée ?</h3>
       <p>La liste officielle des établissements homologués est publiée chaque année au Journal officiel. Vérifiez que l'homologation couvre bien le niveau visé (primaire, collège ou lycée), car elle est accordée niveau par niveau.</p>
       <h3>Une inscription au CNED permet-elle de passer le brevet et le bac ?</h3>
@@ -419,6 +658,8 @@
       <h2>À lire aussi</h2>
       <ul>
         <li><a href="/ecoles-francaises-etranger">Galac6 pour les écoles françaises de l'étranger</a></li>
+        <li><a href="/blog/ia-lycees-francais-etranger">Quelle IA pour les élèves des lycées français à l'étranger ?</a></li>
+        <li><a href="/blog/ia-programme-education-nationale">Un tuteur IA qui suit le programme de l'Éducation nationale : ce qu'il faut vérifier</a></li>
         <li><a href="/blog/reviser-brevet-mois-par-mois">Réussir son année de 3e : les révisions du brevet mois par mois</a></li>
         <li><a href="/blog/bac-francais-commentaire-dissertation">Réviser le bac de français : commentaire et dissertation</a></li>
         <li><a href="/soutien-scolaire-ia">Le soutien scolaire par IA, du CP à la Terminale</a></li>
@@ -434,6 +675,38 @@
     </div>
   </article>
 
+    <aside class="toc-side" aria-label="Sommaire de l'article">
+      <p class="toc-side-title">Sommaire</p>
+      <div class="toc-track"><span class="toc-rail" aria-hidden="true"><span class="toc-fill"></span></span>
+      <ol class="toc-list" id="toc-side-list">
+        <li><a href="#trois-facons"><span class="toc-n">1</span><span class="toc-t">Les trois façons de suivre le programme</span></a></li>
+        <li><a href="#homologues"><span class="toc-n">2</span><span class="toc-t">Les établissements homologués</span></a></li>
+        <li><a href="#cned"><span class="toc-n">3</span><span class="toc-t">Le CNED : réglementé ou libre</span></a></li>
+        <li><a href="#examens"><span class="toc-n">4</span><span class="toc-t">Le brevet et le bac depuis l'étranger</span></a></li>
+        <li><a href="#niveau-francais"><span class="toc-n">5</span><span class="toc-t">Garder un bon niveau de français</span></a></li>
+        <li class="is-g6"><a href="#galac6"><span class="toc-n">6</span><span class="toc-t">Ce que Galac6 peut apporter</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#questions-frequentes"><span class="toc-n">7</span><span class="toc-t">Questions fréquentes</span></a></li>
+      </ol></div>
+    </aside>
+  </div>
+
+  <button class="toc-btn" id="toc-btn" type="button" aria-controls="toc-sheet" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg><span>Sommaire</span><span class="toc-btn-n" id="toc-btn-n"></span></button>
+  <div class="toc-sheet" id="toc-sheet" hidden>
+    <div class="toc-sheet-bg"></div>
+    <div class="toc-sheet-panel" role="dialog" aria-modal="true" aria-label="Sommaire de l'article">
+      <div class="toc-sheet-head"><p>Sommaire</p><button class="toc-close" type="button" aria-label="Fermer le sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg></button></div>
+      <ol class="plan-toc">
+        <li><a href="#trois-facons"><span class="pt-n">1</span><span class="pt-t">Les trois façons de suivre le programme</span></a></li>
+        <li><a href="#homologues"><span class="pt-n">2</span><span class="pt-t">Les établissements homologués</span></a></li>
+        <li><a href="#cned"><span class="pt-n">3</span><span class="pt-t">Le CNED : réglementé ou libre</span></a></li>
+        <li><a href="#examens"><span class="pt-n">4</span><span class="pt-t">Le brevet et le bac depuis l'étranger</span></a></li>
+        <li><a href="#niveau-francais"><span class="pt-n">5</span><span class="pt-t">Garder un bon niveau de français</span></a></li>
+        <li class="is-g6"><a href="#galac6"><span class="pt-n">6</span><span class="pt-t">Ce que Galac6 peut apporter</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#questions-frequentes"><span class="pt-n">7</span><span class="pt-t">Questions fréquentes</span></a></li>
+      </ol>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-banner" lang="en" dir="ltr" role="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Galac6 follows the French national curriculum, for French schools and families in France and abroad. Want Galac6 for your country&rsquo;s curriculum? <a href="/international">Send a request&nbsp;&rarr;</a></span></div><script id="g6-banner-js">(function(){var b=document.getElementById('g6-intl-banner');if(!b)return;var r=document.documentElement;function h(){r.style.setProperty('--g6-banner-h',b.offsetHeight+'px');}h();if(window.ResizeObserver)new ResizeObserver(h).observe(b);else window.addEventListener('resize',h);})();</script><!-- /intl-banner -->
   <footer>
@@ -448,6 +721,88 @@
     </div>
   </footer>
 
+  <script>
+  /* Chapitrage : partie en cours (IntersectionObserver), barres d'avancement, panneau Sommaire */
+  (function () {
+    var article = document.querySelector('.article');
+    var links = Array.prototype.slice.call(document.querySelectorAll('#toc-side-list a'));
+    var heads = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+    var sheetLinks = Array.prototype.slice.call(document.querySelectorAll('#toc-sheet a'));
+    var bar = document.querySelector('.read-progress span');
+    var rail = document.querySelector('.toc-rail'), fill = document.querySelector('.toc-fill');
+    var btn = document.getElementById('toc-btn'), btnN = document.getElementById('toc-btn-n');
+    var sheet = document.getElementById('toc-sheet'), plan = document.getElementById('sommaire');
+    if (!article || !heads.length) return;
+    var LINE = 170; /* ligne de lecture, sous le menu collant */
+    /* hauteur du menu collant, pour l'en-tête collant du tableau comparatif */
+    function navH() { var n = document.querySelector('.navbar-wrapper'); if (n) document.documentElement.style.setProperty('--nav-h', n.offsetHeight + 'px'); }
+    navH(); window.addEventListener('resize', navH);
+    var active = -1, ticking = false;
+
+    function absTop(el) { return el.getBoundingClientRect().top + window.pageYOffset; }
+    function center(i) { var n = links[i].querySelector('.toc-n'); return n.offsetTop + n.offsetHeight / 2; } /* relatif à la liste */
+
+    function findActive() {
+      var idx = -1;
+      for (var i = 0; i < heads.length; i++) { if (heads[i].getBoundingClientRect().top - LINE <= 0) idx = i; }
+      if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4) idx = heads.length - 1;
+      return idx;
+    }
+
+    function setActive(idx) {
+      if (idx === active) return;
+      active = idx;
+      links.forEach(function (a, i) {
+        a.classList.toggle('is-active', i === idx);
+        a.classList.toggle('is-done', i < idx);
+        if (i === idx) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+      });
+      sheetLinks.forEach(function (a, i) { a.classList.toggle('is-active', i === idx); });
+      if (btnN) btnN.textContent = idx >= 0 ? (links[idx].querySelector('.toc-n').textContent || '') : '';
+    }
+
+    function update() {
+      ticking = false;
+      setActive(findActive());
+      var y = window.pageYOffset, start = absTop(article), end = start + article.offsetHeight - window.innerHeight;
+      var p = Math.min(1, Math.max(0, (y - start) / Math.max(1, end - start)));
+      if (bar) bar.style.transform = 'scaleX(' + p + ')';
+      if (rail && rail.offsetParent) {
+        var c0 = center(0), cN = center(links.length - 1);
+        rail.style.top = c0 + 'px'; rail.style.height = (cN - c0) + 'px';
+        var h = 0;
+        if (active >= 0) {
+          var a = active, ca = center(a);
+          if (a < heads.length - 1) {
+            var t0 = absTop(heads[a]), t1 = absTop(heads[a + 1]);
+            var w = Math.min(1, Math.max(0, (y + LINE - t0) / Math.max(1, t1 - t0)));
+            h = ca - c0 + w * (center(a + 1) - ca);
+          } else { h = ca - c0; }
+        }
+        fill.style.height = Math.max(0, h) + 'px';
+      }
+      if (btn && plan) btn.classList.toggle('show', plan.getBoundingClientRect().bottom < 0);
+    }
+    function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } }
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function () { setActive(findActive()); }, { rootMargin: '-' + LINE + 'px 0px -55% 0px' });
+      heads.forEach(function (h) { io.observe(h); });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    update();
+
+    /* Panneau Sommaire sur téléphone */
+    function openSheet() { sheet.hidden = false; btn.setAttribute('aria-expanded', 'true'); var c = sheet.querySelector('.toc-close'); if (c) c.focus(); }
+    function closeSheet() { sheet.hidden = true; btn.setAttribute('aria-expanded', 'false'); }
+    if (btn && sheet) {
+      btn.addEventListener('click', openSheet);
+      sheet.addEventListener('click', function (e) { if (e.target.closest('.toc-sheet-bg, .toc-close, a')) closeSheet(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !sheet.hidden) { closeSheet(); btn.focus(); } });
+    }
+  })();
+  </script>
   <script src="/cookie-consent.js"></script>
 </body>
 </html>

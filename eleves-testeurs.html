@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Élèves testeurs : 3 mois offerts | Galac6</title>
+  <title>Élèves testeurs : 3 mois offerts, CP à Terminale | Galac6</title>
   <meta name="description" content="Votre enfant est du CP à la Terminale ? Il peut devenir testeur de Galac6 : 3 mois offerts, sans carte bancaire, avec le code ELEVE3M. Dictées, devoirs, brevet.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/eleves-testeurs">
@@ -60,7 +60,7 @@
           "name": "Que se passe-t-il après les 3 mois ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Votre enfant garde l'accès Découverte : toutes les fonctionnalités en quantité limitée, rechargée chaque mois. Pour continuer sans limite, vous pouvez choisir un abonnement. Rien n'est prélevé automatiquement."
+            "text": "Votre enfant garde l'accès Découverte : toutes les fonctionnalités en quantité limitée, rechargée chaque mois. Pour continuer sans limite, vous pouvez choisir un abonnement, présenté sur la page Tarifs. Rien n'est prélevé automatiquement."
           }
         },
         {
@@ -100,7 +100,7 @@
           "name": "Où sont stockées les données ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Les comptes et les données sont hébergés en France, dans une base de données à Paris. L'intelligence artificielle de Galac6 est traitée en Europe ; seuls quelques services techniques, comme l'hébergement du site internet, font appel à des prestataires situés hors de l'Union européenne."
+            "text": "Les comptes et les données sont hébergés en France, dans une base de données à Paris. L'intelligence artificielle de Galac6 est traitée en Europe ; seuls quelques services techniques, comme l'hébergement du site internet, font appel à des prestataires situés hors de l'Union européenne. Tout est expliqué sur notre page « Vos données et celles de vos élèves »."
           }
         }
       ],
@@ -515,16 +515,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>

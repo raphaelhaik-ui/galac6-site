@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galac6 ou Eliott : quelle IA pour réviser du CP à la terminale ? — Galac6</title>
+  <title>Galac6 ou Eliott : quelle IA choisir pour réviser ?</title>
   <meta name="description" content="Galac6 ou Eliott ? Comparatif factuel de deux tuteurs IA français : niveaux, guidage sans donner la réponse, annales, dictée, calcul mental, espace prof.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/blog/galac6-ou-eliott">
+  <link rel="alternate" hreflang="fr" href="https://galac6.io/blog/galac6-ou-eliott">
+  <link rel="alternate" hreflang="x-default" href="https://galac6.io/blog/galac6-ou-eliott">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Galac6">
   <meta property="og:locale" content="fr_FR">
@@ -17,6 +19,8 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
+  <meta property="article:published_time" content="2026-11-03">
+  <meta property="article:modified_time" content="2026-11-09">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Galac6 ou Eliott : quelle IA pour réviser du CP à la terminale ?">
   <meta name="twitter:description" content="Galac6 ou Eliott : deux tuteurs IA français comparés critère par critère.">
@@ -68,7 +72,7 @@
         "caption": "Galac6, l'IA au service de la pédagogie."
       },
       "datePublished": "2026-11-03",
-      "dateModified": "2026-11-04",
+      "dateModified": "2026-11-09",
       "inLanguage": "fr",
       "mainEntityOfPage": "https://galac6.io/blog/galac6-ou-eliott",
       "author": {
@@ -86,11 +90,7 @@
       }
     },
     {
-      "@type": "Organization",
-      "name": "Galac6",
-      "url": "https://galac6.io/",
-      "logo": "https://galac6.io/icons/logo.png",
-      "email": "hello@galac6.io"
+      "@id": "https://galac6.io/#organization"
     },
     {
       "@type": "FAQPage",
@@ -352,6 +352,29 @@
     .toc-list li.is-g6 .toc-t { flex: 1 1 0; min-width: 0; }
     .toc-list li.is-g6 .g6-tag { margin-left: 0; margin-top: 0.1rem; align-self: flex-start; }
     @media (prefers-reduced-motion: reduce) { .toc-btn, .toc-n, .toc-list a { transition: none; } html { scroll-behavior: auto; } }
+  /* Schémas et encadrés des articles */
+    .fig { margin: 1.8rem 0 2rem; }
+    .fig figcaption { margin-top: 0.7rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
+    .diagram { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 0.9rem; }
+    @media (max-width: 600px) { .diagram { padding: 0.8rem 0.35rem; } }
+    .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+    .diagram .d-box { fill: rgba(124,92,252,0.12); stroke: rgba(167,139,250,0.5); stroke-width: 1.2; }
+    .diagram .d-box-up { fill: rgba(52,211,153,0.1); stroke: rgba(52,211,153,0.55); stroke-width: 1.2; }
+    .diagram .d-box-down { fill: rgba(251,191,36,0.08); stroke: rgba(251,191,36,0.5); stroke-width: 1.2; }
+    .diagram .d-box-opt { fill: none; stroke: rgba(167,139,250,0.6); stroke-width: 1.2; stroke-dasharray: 5 4; }
+    .diagram .d-t { fill: var(--text); font-weight: 700; font-size: 15px; }
+    .diagram .d-s { fill: var(--text-muted); font-size: 13.5px; }
+    .diagram .d-n { fill: #fff; font-weight: 800; font-size: 13px; }
+    .diagram .d-num { fill: url(#d-grad); }
+    .diagram .d-line { fill: none; stroke: var(--primary-light); stroke-width: 1.6; }
+    .diagram .d-dash { fill: none; stroke: var(--primary-light); stroke-width: 1.4; stroke-dasharray: 4 4; opacity: 0.8; }
+    .diagram .d-head { fill: var(--primary-light); }
+    .diagram .d-ico { fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diagram .d-up { fill: #6ee7b7; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-down { fill: #fcd34d; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-band-1 { fill: rgba(99,102,241,0.22); }
+    .diagram .d-band-2 { fill: rgba(124,92,252,0.3); }
+    .diagram .d-band-3 { fill: rgba(168,85,247,0.38); }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -426,16 +449,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -471,7 +495,7 @@
     <h1>Galac6 ou <span class="grad">Eliott</span> : quelle IA pour réviser du CP à la terminale ?</h1>
     <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 3 novembre 2026 · 7 min de lecture</div>
 
-    <p class="lead">Galac6 et Eliott sont deux tuteurs IA français qui guident l'élève sans lui donner la réponse. Galac6 va du CP à la terminale, avec dictées lues à voix haute, calcul mental et brevets blancs corrigés ; Eliott va de la 6e aux études supérieures, avec des applications mobiles et un accès par Pronote et École Directe.</p>
+    <p class="lead">Galac6 (galac6.io) et Eliott sont deux tuteurs IA français qui guident l'élève sans lui donner la réponse. Galac6 va du CP à la terminale, avec dictées lues à voix haute, calcul mental et brevets blancs corrigés ; Eliott va de la 6e aux études supérieures, avec des applications mobiles et un accès par Pronote et École Directe.</p>
 
     <aside class="essentiel" aria-labelledby="essentiel-titre">
       <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
@@ -500,7 +524,8 @@
 
     <p>Les deux services sont conçus en France pour des élèves qui suivent le programme français, et les deux refusent de faire le travail à la place de l'élève. Ils se distinguent surtout par les niveaux couverts, par les entraînements proposés et par la façon d'y accéder. Cet article est rédigé par Galac6. Nous avons décrit chaque service à partir de ses pages officielles, sans test de notre part.</p>
 
-    <h2 id="en-commun">Ce que Galac6 et Eliott ont en commun</h2>
+    <h2 id="en-commun">Qu'ont en commun Galac6 et Eliott ?</h2>
+    <p>Galac6 et Eliott ont en commun un tuteur qui guide sans donner la réponse, le programme français, des révisions à partir du cours et un suivi pour les parents.</p>
     <ul>
       <li><strong>Un tuteur qui guide.</strong> Eliott présente une aide aux exercices pas à pas, sans donner la réponse. Galac6 pose des questions, découpe l'exercice en étapes et donne des indices de plus en plus précis, sans écrire la solution.</li>
       <li><strong>Le programme français.</strong> Eliott indique suivre les programmes de l'Éducation nationale, avec des contenus conçus avec plus de 40 enseignants. Galac6 s'appuie sur les programmes publiés sur Éduscol.</li>
@@ -508,10 +533,44 @@
       <li><strong>Un suivi pour les parents</strong> et une offre pour les établissements.</li>
       <li><strong>Des données en Europe et aucune publicité</strong>, d'après leurs pages respectives.</li>
     </ul>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 272" role="img" aria-labelledby="schema-communs-titre schema-communs-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-communs-titre">Ce que partagent Galac6 et Eliott, et ce que chacun met en avant</title>
+        <desc id="schema-communs-desc">En commun : tuteur qui guide, programme français, révisions à partir du cours, suivi des parents. Mis en avant par Galac6 : primaire, dictées lues, calcul mental, examens blancs corrigés, copies en photo. Mis en avant par Eliott : voies techno, pro, agricole, études supérieures, applications, accès Pronote et École Directe.</desc>
+        <defs><linearGradient id="d-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient><marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker></defs>
+        <rect class="d-box" x="6" y="6" width="348" height="80" rx="12"/><text class="d-t" x="20" y="30">En commun</text>
+        <text class="d-s" x="20" y="52">tuteur qui guide, programme français</text>
+        <text class="d-s" x="20" y="72">révisions à partir du cours, suivi des parents</text>
+        <rect class="d-box-up" x="6" y="96" width="348" height="80" rx="12"/><text class="d-t" x="20" y="120">Mis en avant par Galac6</text>
+        <text class="d-s" x="20" y="142">primaire, dictées lues, calcul mental</text>
+        <text class="d-s" x="20" y="162">examens blancs corrigés, copies en photo</text>
+        <rect class="d-box" x="6" y="186" width="348" height="80" rx="12"/><text class="d-t" x="20" y="210">Mis en avant par Eliott</text>
+        <text class="d-s" x="20" y="232">voies techno, pro, agricole, études supérieures</text>
+        <text class="d-s" x="20" y="252">applications, accès Pronote et École Directe</text>
+      </svg>
+      <figcaption>En commun : un tuteur qui guide, le programme français, des révisions à partir du cours, un suivi des parents. Mis en avant par Galac6 : le primaire, les dictées lues, le calcul mental, les examens blancs corrigés et les copies en photo. Mis en avant par Eliott : les voies techno, pro, agricole, les études supérieures, ses applications et l'accès Pronote et École Directe. D'après leurs pages consultées le 3 novembre 2026.</figcaption>
+    </figure>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="comparatif">Le comparatif, critère par critère</h2>
+    <h2 id="comparatif">Comment se comparent Galac6 et Eliott, critère par critère ?</h2>
+    <p>La différence la plus visible porte sur les niveaux : Galac6 va du CP à la terminale, Eliott de la 6e aux études supérieures. Le tableau détaille le reste.</p>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 108" role="img" aria-labelledby="schema-niveaux-titre schema-niveaux-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-niveaux-titre">Les niveaux couverts par Galac6 et par Eliott</title>
+        <desc id="schema-niveaux-desc">Galac6 : du CP à la terminale. Eliott : de la 6e aux études supérieures.</desc>
+        
+        <rect class="d-band-1" x="96.0" y="6" width="90.5" height="26" rx="6"/><text class="d-s" x="141.2" y="24" text-anchor="middle">Primaire</text>
+        <rect class="d-band-2" x="188.5" y="6" width="72.0" height="26" rx="6"/><text class="d-s" x="224.5" y="24" text-anchor="middle">Collège</text>
+        <rect class="d-band-3" x="262.5" y="6" width="53.5" height="26" rx="6"/><text class="d-s" x="289.2" y="24" text-anchor="middle">Lycée</text>
+        <rect class="d-band-1" x="318.0" y="6" width="35.0" height="26" rx="6"/><text class="d-s" x="335.5" y="24" text-anchor="middle">Sup.</text>
+        <text class="d-s" x="6" y="59">Galac6</text>
+        <rect class="d-num" x="96.0" y="44" width="220.0" height="20" rx="6"/>
+        <text class="d-s" x="6" y="93">Eliott</text>
+        <rect class="d-band-3" x="188.5" y="78" width="164.5" height="20" rx="6"/>
+      </svg>
+      <figcaption>Galac6 va du CP à la terminale : primaire, collège, lycée. Eliott va de la 6e aux études supérieures (Sup.), d'après ses pages consultées le 3 novembre 2026.</figcaption>
+    </figure>
     <div class="callout">
       <p><strong>Informations vérifiées sur les sites officiels le 3 novembre 2026.</strong> « Non indiqué » signifie que l'information ne figure pas sur les pages officielles consultées (liste en bas de page), pas que la fonction n'existe pas. Les prix des autres services ne sont pas repris ici : ils évoluent, consultez leur site.</p>
     </div>
@@ -536,13 +595,14 @@
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="points-forts-eliott">Les points forts d'Eliott</h2>
+    <h2 id="points-forts-eliott">Quels sont les points forts d'Eliott ?</h2>
     <p>Eliott couvre un public large après la 3e : le lycée général, mais aussi les voies <strong>technologique, professionnelle et agricole</strong>, et les <strong>études supérieures</strong> (prépa, BTS, licence, école), où l'étudiant ajoute ses propres cours en PDF, en diapositives ou en photos de notes.</p>
     <p>Eliott se télécharge sur l'<strong>App Store</strong> et <strong>Google Play</strong>, et existe aussi en version web. Dans les établissements partenaires, élèves et professeurs se connectent <strong>directement depuis Pronote et École Directe</strong>, sans nouvel identifiant ; les professeurs créent des espaces de révision par classe, des exercices, des QCM, des flashcards et des évaluations.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="points-forts-galac6">Les points forts de Galac6</h2>
+    <h2 id="points-forts-galac6">Quels sont les points forts de Galac6 ?</h2>
+    <p>Galac6 se distingue par le primaire, la dictée, le calcul mental, les examens blancs et ses outils pour les professeurs.</p>
     <ul>
       <li><strong>Le primaire.</strong> Galac6 accompagne aussi les élèves du CP au CM2 : lecture, écriture, calcul. Voir <a href="/primaire">le soutien scolaire au primaire</a>.</li>
       <li><strong>La dictée.</strong> Plus de 2 000 dictées lues à voix haute, du CP à la terminale. La note sur 10 suit le barème, et chaque faute est expliquée avec sa règle. Une dictée écrite sur papier est corrigée à partir d'une photo. Voir <a href="/dictee-en-ligne">la dictée en ligne</a>.</li>
@@ -553,16 +613,41 @@
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="donnees">Les données des élèves</h2>
+    <h2 id="donnees">Où vont les données des élèves avec Galac6 et Eliott ?</h2>
     <p>Chez Galac6, les comptes et les données sont hébergés en France, dans une base de données à Paris. L'intelligence artificielle de Galac6 est traitée en Europe ; seuls quelques services techniques, comme l'hébergement du site internet, font appel à des prestataires situés hors de l'Union européenne. Le détail figure sur la page <a href="/donnees-eleves">données des élèves</a>. Eliott indique de son côté un hébergement dans l'Union européenne, avec une base de données en Allemagne et des modèles d'IA en France et en Suède.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="lequel-choisir">Galac6 ou Eliott : lequel choisir ?</h2>
+    <p>Le choix dépend surtout de l'âge et des besoins de votre enfant.</p>
     <ul>
       <li><strong>Galac6 si</strong> votre enfant est à l'école primaire, si vous cherchez des dictées lues et corrigées ou du calcul mental, si votre enfant prépare le brevet ou le bac de français sur des sujets officiels, ou si vous êtes professeur et voulez faire corriger des copies papier.</li>
       <li><strong>Eliott si</strong> votre enfant est en voie professionnelle ou agricole, s'il fait des études supérieures, s'il préfère une application à installer, ou si son établissement utilise déjà Eliott depuis Pronote ou École Directe.</li>
     </ul>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 282" role="img" aria-labelledby="schema-choix-titre schema-choix-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-choix-titre">Galac6 ou Eliott selon votre enfant</title>
+        <desc id="schema-choix-desc">En primaire, du CP au CM2 : Galac6. Dictée, calcul mental et sujets officiels : Galac6. Voie pro ou agricole, ou études supérieures : Eliott. Déjà dans son lycée par Pronote ou École Directe : Eliott.</desc>
+        
+        <rect class="d-box" x="4" y="6" width="214" height="60" rx="10"/><text class="d-t" x="14" y="32">En primaire ?</text><text class="d-s" x="14" y="52">du CP au CM2</text>
+        <path class="d-line" d="M218 36H238" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="242" y="6" width="114" height="60" rx="10"/>
+        <text class="d-t" x="299" y="41" text-anchor="middle">Galac6</text>
+        <rect class="d-box" x="4" y="76" width="214" height="60" rx="10"/><text class="d-t" x="14" y="102">Dictée, calcul mental ?</text><text class="d-s" x="14" y="122">et sujets officiels</text>
+        <path class="d-line" d="M218 106H238" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="242" y="76" width="114" height="60" rx="10"/>
+        <text class="d-t" x="299" y="111" text-anchor="middle">Galac6</text>
+        <rect class="d-box" x="4" y="146" width="214" height="60" rx="10"/><text class="d-t" x="14" y="172">Voie pro ou agricole ?</text><text class="d-s" x="14" y="192">ou études supérieures</text>
+        <path class="d-line" d="M218 176H238" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="242" y="146" width="114" height="60" rx="10"/>
+        <text class="d-t" x="299" y="181" text-anchor="middle">Eliott</text>
+        <rect class="d-box" x="4" y="216" width="214" height="60" rx="10"/><text class="d-t" x="14" y="242">Déjà dans son lycée ?</text><text class="d-s" x="14" y="262">Pronote ou École Directe</text>
+        <path class="d-line" d="M218 246H238" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="242" y="216" width="114" height="60" rx="10"/>
+        <text class="d-t" x="299" y="251" text-anchor="middle">Eliott</text>
+      </svg>
+      <figcaption>En primaire, du CP au CM2, ou pour la dictée, le calcul mental et les sujets officiels : Galac6. En voie pro ou agricole, en études supérieures, ou si Eliott est déjà dans son lycée par Pronote ou École Directe : Eliott.</figcaption>
+    </figure>
     <p>Les deux services peuvent s'essayer avant de s'abonner. Pour Galac6, la formule Découverte donne accès à toutes les fonctionnalités en quantité limitée ; l'offre Élève coûte 69 € par an ou 7,99 € par mois (<a href="/tarifs">voir les tarifs</a>).</p>
     <p>Vous cherchez d'autres options ? Voyez <a href="/blog/alternatives-eliott">les alternatives à Eliott comparées</a>.</p>
 
@@ -611,6 +696,8 @@
         <li><a href="/blog/galac6-ou-kwyk">Galac6 et Kwyk : différences et complémentarité pour la classe de maths</a></li>
         <li><a href="/blog/ia-devoirs-sans-tricher">Utiliser l'IA pour les devoirs sans tricher</a></li>
         <li><a href="/blog/reviser-brevet-mois-par-mois">Réviser le brevet mois par mois</a></li>
+        <li><a href="/blog/ia-devoirs-enfant-sans-reponses">Quelle IA pour les devoirs sans donner les réponses ?</a></li>
+        <li><a href="/blog/galac6-ou-notebooklm-fiches">Galac6 ou NotebookLM pour les fiches de révision ?</a></li>
       </ul>
     </div>
 

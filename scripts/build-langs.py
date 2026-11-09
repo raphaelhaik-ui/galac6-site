@@ -63,6 +63,10 @@ GROUPS = {
     'expat': {'src': 'familles-francaises-etranger.html', 'src_lang': 'fr'},
     'dictee': {'src': 'dictee-en-ligne.html', 'src_lang': 'fr'},
     'annales': {'src': 'annales-brevet-bac.html', 'src_lang': 'fr'},
+    'methode': {'src': 'methode-pedagogique.html', 'src_lang': 'fr'},  # page Méthode pédagogique traduite dans les 6 langues (09/11/2026)
+    # Soutien scolaire : version anglaise écrite à la main (en/ai-tutoring.html), le groupe sert aux hreflang, au sélecteur de langue,
+    # aux liens traduits et au plan du site ; le script ne la génère pas (handmade)
+    'soutien': {'src': 'soutien-scolaire-ia.html', 'src_lang': 'fr', 'handmade': True},
 }
 # Pages à adresse propre par langue (une langue absente = pas de page dans cette langue)
 SLUGS = {
@@ -73,6 +77,9 @@ SLUGS = {
               'de': '/de/franzoesischer-lehrplan', 'pt': '/pt/curriculo-frances', 'nl': '/nl/frans-curriculum'},
     'dictee': {'fr': '/dictee-en-ligne', 'en': '/en/french-dictation-online'},
     'annales': {'fr': '/annales-brevet-bac', 'en': '/en/brevet-bac-past-papers'},
+    'methode': {'fr': '/methode-pedagogique', 'en': '/en/teaching-method', 'es': '/es/metodo-pedagogico', 'it': '/it/metodo-didattico',
+                'de': '/de/lernmethode', 'pt': '/pt/metodo-pedagogico', 'nl': '/nl/onderwijsmethode'},
+    'soutien': {'fr': '/soutien-scolaire-ia', 'en': '/en/ai-tutoring'},
 }
 # Chemin (adresse) d'une page traduite → groupe
 PATH_TO_GROUP = {
@@ -85,6 +92,8 @@ PATH_TO_GROUP = {
     '/familles-francaises-etranger': 'expat', '/familles-francaises-etranger.html': 'expat',
     '/dictee-en-ligne': 'dictee', '/dictee-en-ligne.html': 'dictee',
     '/annales-brevet-bac': 'annales', '/annales-brevet-bac.html': 'annales',
+    '/methode-pedagogique': 'methode', '/methode-pedagogique.html': 'methode', '/teaching-method': 'methode',
+    '/soutien-scolaire-ia': 'soutien', '/soutien-scolaire-ia.html': 'soutien', '/ai-tutoring': 'soutien',
 }
 # Pages faites à la main (hors groupes) qui ont une version anglaise : liens traduits et sélecteur de langue (31/10/2026)
 # '/blog' → '/en/blog' : index du blog anglais (01/11/2026) ; les autres langues gardent le blog français.
@@ -97,7 +106,7 @@ CRUMB_FR = {'familles': 'Familles', 'ecole': 'Professeurs et écoles', 'about': 
             'etranger': "Écoles françaises à l'étranger", 'expat': "Familles françaises à l'étranger",
             'dictee': 'Dictée en ligne', 'annales': 'Annales du brevet et du bac'}
 CRUMB_KEY = {'familles': 'nav.families', 'ecole': 'nav.school', 'about': 'nav.about', 'tarifs': 'nav.pricing', 'etranger': 'etranger.crumb',
-             'expat': 'expat.crumb', 'dictee': 'dictee.crumb', 'annales': 'annales.crumb'}
+             'expat': 'expat.crumb', 'dictee': 'dictee.crumb', 'annales': 'annales.crumb', 'methode': 'method.crumb'}
 # Pages françaises dont les données structurées sont écrites par ce script (les autres : à la main ;
 # familles.html garde ses données faites à la main, ses versions traduites sont générées)
 # dictee-en-ligne.html (réécrite le 01/11/2026) a ses propres données structurées (SoftwareApplication, offres) : à la main
@@ -236,16 +245,17 @@ BANNER_CSS = """
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
 """
 
 # Corrections de mise en page pour l'hébreu (écrit de droite à gauche)
@@ -470,8 +480,9 @@ def faq_items(soup):
         return el.find_parent(class_='en-only') is not None or 'en-only' in (el.get('class') or [])
     out = []
     for item in soup.select('.faq-item'):
-        q = item.select_one('.faq-question span') or item.select_one('.faq-question')
-        a = item.select_one('.faq-answer-inner') or item.select_one('.faq-answer')
+        # Page Méthode pédagogique : question en <h3> et réponse en <p>
+        q = item.select_one('.faq-question span') or item.select_one('.faq-question') or item.find('h3')
+        a = item.select_one('.faq-answer-inner') or item.select_one('.faq-answer') or item.find('p')
         if q and a and not hidden(item):
             out.append((q, a))
     for item in soup.select('.faq details'):
@@ -482,12 +493,21 @@ def faq_items(soup):
              'acceptedAnswer': {'@type': 'Answer', 'text': norm(EMOJI.sub('', a.get_text()))}} for q, a in out]
 
 
+# Société éditrice, entité distincte de la marque Galac6 : à garder identique à celle d'index.html
+RHK_LD = {'@type': 'Organization', 'name': 'RHK Conseil', 'legalName': 'RHK CONSEIL', 'foundingDate': '2023',
+          'address': {'@type': 'PostalAddress', 'streetAddress': '19 rue de Croulebarbe', 'postalCode': '75013',
+                      'addressLocality': 'Paris', 'addressCountry': 'FR'}}
+
+
 def organization_ld(lang):
     return {'@type': 'Organization', '@id': SITE + '/#organization', 'name': 'Galac6', 'url': SITE + '/',
             'logo': SITE + '/icons/logo.png', 'slogan': SLOGAN,
             'description': ORG_DESC.get(lang, ORG_DESC['en']), 'email': 'hello@galac6.io',
             # Fiche d'identité (02/11/2026) : société, fondateur et comptes officiels, à garder sur tous les accueils
             'legalName': 'RHK CONSEIL',
+            # Dates confirmées par Raphaël (09/11/2026) : la marque Galac6 date de 2026, la société RHK Conseil de 2023
+            'foundingDate': '2026',
+            'parentOrganization': RHK_LD,
             'address': {'@type': 'PostalAddress', 'streetAddress': '19 rue de Croulebarbe', 'postalCode': '75013',
                         'addressLocality': 'Paris', 'addressCountry': 'FR'},
             'founder': {'@id': PERSON_ID},
@@ -521,6 +541,9 @@ def page_ld(soup, group, lang, url, home_name, crumb_name):
     if faq and kind == 'FAQPage':
         page['mainEntity'] = faq
     graph = []
+    if group == 'methode':  # article signé : même auteur que la page française
+        page['author'] = {'@id': PERSON_ID}
+        graph.append(person_ld(lang))
     if group == 'about':
         page['about'] = {'@id': SITE + '/#organization'}
         page['mainEntity'] = {'@id': SITE + '/#organization'}
@@ -1063,7 +1086,7 @@ def update_redirects():
                 lines.append('%-24s %-28s 200' % (p, '/' + out_file(p)))
     for g in GROUPS:  # pages françaises ajoutées par groupe (adresse sans .html)
         p = page_path(g, 'fr')
-        if g not in ('index', 'familles', 'ecole', 'about', 'tarifs', 'etranger') and p:
+        if g not in ('index', 'familles', 'ecole', 'about', 'tarifs', 'etranger', 'soutien') and p:
             lines.append('%-24s %-28s 200' % (p, '/' + out_file(p)))
     lines.append('# /pages traduites')
     # Redirections 301 des adresses en .html vers les adresses propres (un seul exemplaire de chaque page pour Google).
@@ -1167,7 +1190,7 @@ def update_sitemap():
         u = re.sub(r'[ \t]*<(changefreq|priority)>[^<]*</\1>\n', '', u)  # ignorés par Google (audit du 03/11/2026)
         kept.append(u)
     new = []
-    for g in ('index', 'familles', 'tarifs', 'ecole', 'etranger', 'expat', 'dictee', 'annales', 'about', 'vote'):
+    for g in ('index', 'familles', 'tarifs', 'ecole', 'etranger', 'expat', 'dictee', 'annales', 'methode', 'soutien', 'about', 'vote'):
         alts = ''.join('    <xhtml:link rel="alternate" hreflang="%s" href="%s%s"/>\n' % (l, SITE, page_path(g, l))
                        for l in group_langs(g))
         alts += '    <xhtml:link rel="alternate" hreflang="x-default" href="%s%s"/>\n' % (
@@ -1312,7 +1335,7 @@ def export_source():
             return
         src[k] = {'fr': fr, 'en': e, 'pages': [page]}
 
-    for g in ('index', 'familles', 'ecole', 'about', 'tarifs'):
+    for g in ('index', 'familles', 'ecole', 'about', 'tarifs', 'methode'):
         s = BeautifulSoup(read(GROUPS[g]['src']), 'html.parser')
         for el in s.select('[data-i18n]'):
             add(el['data-i18n'], norm(el.get_text()), en.get(el['data-i18n']), g)
@@ -1369,7 +1392,7 @@ def main():
         for l in LANGS:
             for g in GROUPS:
                 p = page_path(g, l)
-                if not p or (g == 'vote' and l == 'en'):
+                if not p or (g == 'vote' and l == 'en') or GROUPS[g].get('handmade'):
                     continue
                 rel = build_page(g, l, dicts[l], countries, errors)
                 if rel:
@@ -1383,7 +1406,7 @@ def main():
         for l in LANGS:
             for g in GROUPS:
                 p = page_path(g, l)
-                if p and not (g == 'vote' and l == 'en'):
+                if p and not (g == 'vote' and l == 'en') and not GROUPS[g].get('handmade'):
                     generated.append((g, l, out_file(p)))
     problems = errors + check_leftovers(generated, dicts)
     links, n = check_links()

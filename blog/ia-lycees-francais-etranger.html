@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IA pour les lycées français à l'étranger — Galac6</title>
+  <title>IA pour lycées français à l'étranger : 5 critères | Galac6</title>
   <meta name="description" content="Programme français, bac depuis l'étranger, décalage horaire, données : comment choisir un tuteur IA pour un élève de lycée français hors de France.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/blog/ia-lycees-francais-etranger">
@@ -18,7 +18,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
   <meta property="article:published_time" content="2026-11-03">
-  <meta property="article:modified_time" content="2026-11-03">
+  <meta property="article:modified_time" content="2026-11-09">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Quelle IA pour les élèves des lycées français à l&#x27;étranger ?">
   <meta name="twitter:description" content="Programme français, bac depuis l&#x27;étranger, décalage horaire, données : les critères pour choisir un tuteur IA pour un élève de lycée français hors de France, et ce que Galac6 propose aux familles et aux établissements.">
@@ -70,7 +70,7 @@
         "caption": "Galac6, l'IA au service de la pédagogie."
       },
       "datePublished": "2026-11-03",
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-09",
       "inLanguage": "fr-FR",
       "mainEntityOfPage": "https://galac6.io/blog/ia-lycees-francais-etranger",
       "keywords": "IA lycée français étranger, tuteur IA programme français, bac à l'étranger, AEFE, Mission laïque française, élèves expatriés, écoles françaises à l'étranger",
@@ -316,6 +316,30 @@
     .toc-list li.is-g6 .toc-t { flex: 1 1 0; min-width: 0; }
     .toc-list li.is-g6 .g6-tag { margin-left: 0; margin-top: 0.1rem; align-self: flex-start; }
     @media (prefers-reduced-motion: reduce) { .toc-btn, .toc-n, .toc-list a { transition: none; } html { scroll-behavior: auto; } }
+
+    /* Visuels : schémas */
+    .fig { margin: 1.8rem 0 2rem; }
+    .fig figcaption { margin-top: 0.7rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
+    .diagram { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 0.9rem; }
+    @media (max-width: 600px) { .diagram { padding: 0.8rem 0.35rem; } }
+    .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+    .diagram .d-box { fill: rgba(124,92,252,0.12); stroke: rgba(167,139,250,0.5); stroke-width: 1.2; }
+    .diagram .d-box-up { fill: rgba(52,211,153,0.1); stroke: rgba(52,211,153,0.55); stroke-width: 1.2; }
+    .diagram .d-box-down { fill: rgba(251,191,36,0.08); stroke: rgba(251,191,36,0.5); stroke-width: 1.2; }
+    .diagram .d-box-opt { fill: none; stroke: rgba(167,139,250,0.6); stroke-width: 1.2; stroke-dasharray: 5 4; }
+    .diagram .d-t { fill: var(--text); font-weight: 700; font-size: 15px; }
+    .diagram .d-s { fill: var(--text-muted); font-size: 13.5px; }
+    .diagram .d-n { fill: #fff; font-weight: 800; font-size: 13px; }
+    .diagram .d-num { fill: url(#d-grad); }
+    .diagram .d-line { fill: none; stroke: var(--primary-light); stroke-width: 1.6; }
+    .diagram .d-dash { fill: none; stroke: var(--primary-light); stroke-width: 1.4; stroke-dasharray: 4 4; opacity: 0.8; }
+    .diagram .d-head { fill: var(--primary-light); }
+    .diagram .d-ico { fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diagram .d-up { fill: #6ee7b7; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-down { fill: #fcd34d; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-band-1 { fill: rgba(99,102,241,0.22); }
+    .diagram .d-band-2 { fill: rgba(124,92,252,0.3); }
+    .diagram .d-band-3 { fill: rgba(168,85,247,0.38); }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -390,16 +414,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -435,14 +460,14 @@
     <h1>Quelle IA pour les élèves des <span class="grad">lycées français à l'étranger</span> ?</h1>
     <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 3 novembre 2026 · 6 min de lecture</div>
 
-    <p class="lead">Pour un élève de lycée français à l'étranger, la bonne IA est celle qui suit le programme français, prépare au bac sur des sujets officiels, y compris ceux passés hors de France, et fait réfléchir l'élève au lieu de répondre à sa place. Galac6 a été conçu pour cela.</p>
+    <p class="lead">Pour un élève de lycée français à l'étranger, la bonne IA est celle qui suit le programme français, prépare au bac sur des sujets officiels, y compris ceux passés hors de France, et fait réfléchir l'élève au lieu de répondre à sa place. Galac6 (galac6.io) a été conçu pour cela.</p>
 
     <aside class="essentiel" aria-labelledby="essentiel-titre">
       <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
       <ul>
         <li>Une <strong>IA généraliste</strong> peut mélanger les méthodes de plusieurs systèmes scolaires et donner la réponse toute faite, ce qui pose problème pour un lycéen qui prépare des examens français.</li>
         <li><strong>Cinq critères pour choisir</strong> : le programme français seulement, les examens français préparés depuis l'étranger, un tuteur qui fait réfléchir, un accès à toute heure, des données protégées.</li>
-        <li>Galac6 suit <strong>uniquement le programme officiel français</strong>, du CP à la terminale ; il ne couvre pas le programme ni les diplômes d'un autre pays.</li>
+        <li>Galac6 (galac6.io) suit <strong>uniquement le programme officiel français</strong>, du CP à la terminale ; il ne couvre pas le programme ni les diplômes d'un autre pays.</li>
         <li>Un <strong>établissement</strong> peut encadrer l'IA avec Galac6 : quiz et devoirs validés par le professeur, suivi de chaque classe, pilote gratuit de 3 mois sur 3 classes.</li>
         <li>Pour les <strong>familles</strong> : vérifier avec le lycée ce qui est autorisé pour les devoirs notés et, avant le bac, privilégier les examens blancs sur de vrais sujets.</li>
       </ul>
@@ -461,12 +486,75 @@
 
     <p>Notre <a href="/blog/programme-francais-etranger">guide des familles expatriées</a> explique comment suivre le programme français depuis l'étranger : établissement homologué, CNED ou école locale. Cet article répond à une autre question : une fois votre enfant inscrit dans un lycée français, <strong>quel outil d'intelligence artificielle l'aidera vraiment</strong>, et comment un établissement peut l'encadrer ?</p>
 
-    <h2 id="ia-generalistes">Le piège des IA généralistes</h2>
-    <p>Un élève qui vit à Londres, à Madrid ou à Dubaï utilise souvent les mêmes outils que ses camarades de l'école locale. Or une IA généraliste ne sait pas forcément ce qu'est un commentaire de texte au bac de français, ni ce qu'on attend en spécialité mathématiques. Elle peut mélanger les méthodes de plusieurs systèmes scolaires, et elle donne volontiers la réponse toute faite. Pour un lycéen qui prépare des examens français, cela pose trois problèmes : des méthodes qui ne correspondent pas aux attentes des correcteurs, des réponses parfois fausses, et un travail qui n'est plus le sien.</p>
+    <h2 id="ia-generalistes">Pourquoi se méfier des IA généralistes au lycée français ?</h2>
+    <p>Parce qu'elles ne sont pas construites sur le programme français. Un élève qui vit à Londres, à Madrid ou à Dubaï utilise souvent les mêmes outils que ses camarades de l'école locale. Or une IA généraliste ne sait pas forcément ce qu'est un commentaire de texte au bac de français, ni ce qu'on attend en spécialité mathématiques. Elle peut mélanger les méthodes de plusieurs systèmes scolaires, et elle donne volontiers la réponse toute faite. Pour un lycéen qui prépare des examens français, cela pose trois problèmes : des méthodes qui ne correspondent pas aux attentes des correcteurs, des réponses parfois fausses, et un travail qui n'est plus le sien.</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 256" role="img" aria-labelledby="schema-generaliste-titre schema-generaliste-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-generaliste-titre">IA généraliste ou tuteur construit sur le programme français</title>
+        <desc id="schema-generaliste-desc">Une IA généraliste peut mélanger les méthodes de plusieurs systèmes scolaires, donner des réponses parfois fausses et une réponse toute faite. Un tuteur construit sur le programme français suit les programmes français, s'appuie sur des sujets officiels et guide l'élève par des questions et des indices.</desc>
+        <defs>
+          <linearGradient id="d-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+          <marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker>
+        </defs>
+        <rect class="d-box-down" x="8" y="8" width="344" height="116" rx="12"/>
+        <text class="d-t" x="22" y="33">Une IA généraliste</text>
+        <path class="d-ico" d="M23 48l8 8M31 48l-8 8"/>
+        <text class="d-s" x="42" y="58">méthodes de plusieurs systèmes scolaires</text>
+        <path class="d-ico" d="M23 72l8 8M31 72l-8 8"/>
+        <text class="d-s" x="42" y="82">réponses parfois fausses</text>
+        <path class="d-ico" d="M23 96l8 8M31 96l-8 8"/>
+        <text class="d-s" x="42" y="106">réponse toute faite</text>
+        <rect class="d-box-up" x="8" y="134" width="344" height="116" rx="12"/>
+        <text class="d-t" x="22" y="159">Un tuteur sur le programme français</text>
+        <path class="d-ico" d="M22 179l4 4 7-8"/>
+        <text class="d-s" x="42" y="184">programme français, classe par classe</text>
+        <path class="d-ico" d="M22 203l4 4 7-8"/>
+        <text class="d-s" x="42" y="208">sujets officiels du bac</text>
+        <path class="d-ico" d="M22 227l4 4 7-8"/>
+        <text class="d-s" x="42" y="232">des questions et des indices</text>
+      </svg>
+      <figcaption>Ce qui sépare une IA généraliste d'un tuteur construit sur le programme français : le programme, les sujets officiels et la façon d'aider l'élève.</figcaption>
+    </figure>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="cinq-criteres">Cinq critères pour choisir</h2>
+    <h2 id="cinq-criteres">Comment choisir une IA pour un lycéen français à l'étranger ?</h2>
+    <p>Vérifiez cinq critères : le programme français seulement, les examens français préparés depuis l'étranger, un tuteur qui fait réfléchir, un accès à toute heure et des données protégées.</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 364" role="img" aria-labelledby="schema-criteres-titre schema-criteres-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-criteres-titre">Cinq critères pour choisir une IA</title>
+        <desc id="schema-criteres-desc">1. Le programme français, et seulement lui. 2. Les examens français, préparés depuis l'étranger. 3. Un tuteur qui fait réfléchir. 4. Disponible à toute heure, quel que soit le décalage horaire. 5. Des données protégées.</desc>
+        <rect class="d-box" x="8" y="8" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="39" r="13"/>
+        <text class="d-n" x="34" y="44" text-anchor="middle">1</text>
+        <text class="d-t" x="58" y="34">Le programme français</text>
+        <text class="d-s" x="58" y="54">et seulement lui</text>
+        <rect class="d-box" x="8" y="78" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="109" r="13"/>
+        <text class="d-n" x="34" y="114" text-anchor="middle">2</text>
+        <text class="d-t" x="58" y="104">Les examens français</text>
+        <text class="d-s" x="58" y="124">préparés depuis l'étranger</text>
+        <rect class="d-box" x="8" y="148" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="179" r="13"/>
+        <text class="d-n" x="34" y="184" text-anchor="middle">3</text>
+        <text class="d-t" x="58" y="174">Un tuteur qui fait réfléchir</text>
+        <text class="d-s" x="58" y="194">sans rédiger le devoir à sa place</text>
+        <rect class="d-box" x="8" y="218" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="249" r="13"/>
+        <text class="d-n" x="34" y="254" text-anchor="middle">4</text>
+        <text class="d-t" x="58" y="244">Disponible à toute heure</text>
+        <text class="d-s" x="58" y="264">quel que soit le décalage horaire</text>
+        <rect class="d-box" x="8" y="288" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="319" r="13"/>
+        <text class="d-n" x="34" y="324" text-anchor="middle">5</text>
+        <text class="d-t" x="58" y="314">Des données protégées</text>
+        <text class="d-s" x="58" y="334">hébergées en France, IA traitée en Europe</text>
+      </svg>
+      <figcaption>Les cinq critères pour choisir une IA, détaillés ci-dessous.</figcaption>
+    </figure>
+
     <h3>1. Le programme français, et seulement lui</h3>
     <p>Le lycée de votre enfant suit les programmes de l'Éducation nationale. L'outil doit suivre les mêmes, classe par classe. <strong>Galac6 suit le programme officiel français, du CP à la terminale</strong>, quel que soit le pays où vous vivez. Il ne suit pas le programme d'un autre pays : si votre enfant prépare aussi un diplôme local, Galac6 ne le couvre pas.</p>
 
@@ -488,8 +576,8 @@
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="etablissement">Pour l'établissement : encadrer l'IA plutôt que la subir</h2>
-    <p>Les élèves utiliseront l'IA de toute façon. Pour une direction ou une équipe de professeurs, la question est de leur donner un outil qui respecte le programme et laisse la main aux enseignants. Avec Galac6, un lycée français à l'étranger dispose de ce qu'il connaît déjà en France, sans rien adapter :</p>
+    <h2 id="etablissement">Comment un lycée français à l'étranger peut-il encadrer l'IA ?</h2>
+    <p>En donnant aux élèves un outil qui respecte le programme et laisse la main aux enseignants. Les élèves utiliseront l'IA de toute façon. Pour une direction ou une équipe de professeurs, la question est de choisir lequel. Avec Galac6, un lycée français à l'étranger dispose de ce qu'il connaît déjà en France, sans rien adapter :</p>
     <ul>
       <li><strong>des quiz et des devoirs</strong> créés en quelques minutes, que le professeur relit et valide question par question ;</li>
       <li><strong>des dictées et des copies papier</strong> corrigées par Galac6 et validées par le professeur ;</li>
@@ -497,11 +585,43 @@
       <li><strong>l'import des élèves</strong> depuis un fichier exporté de Pronote ou d'École Directe, ou une liste collée ;</li>
       <li><strong>des emails aux familles en français ou en anglais</strong>, selon le choix de l'établissement, envoyés à l'heure locale de l'école.</li>
     </ul>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 336" role="img" aria-labelledby="schema-etablissement-titre schema-etablissement-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-etablissement-titre">Encadrer l'IA dans un lycée français à l'étranger</title>
+        <desc id="schema-etablissement-desc">L'import des élèves depuis un fichier exporté de Pronote ou d'École Directe, ou une liste collée. Des quiz et des devoirs que le professeur valide. Le suivi de chaque classe notion par notion et une vue pour la direction. Des emails aux familles à l'heure locale de l'école.</desc>
+        <rect class="d-box" x="8" y="8" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="39" r="13"/>
+        <text class="d-n" x="34" y="44" text-anchor="middle">1</text>
+        <text class="d-t" x="58" y="34">L'import des élèves</text>
+        <text class="d-s" x="58" y="54">Pronote, École Directe ou liste collée</text>
+        <path class="d-line" d="M180 70V88" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="92" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="123" r="13"/>
+        <text class="d-n" x="34" y="128" text-anchor="middle">2</text>
+        <text class="d-t" x="58" y="118">Des quiz et des devoirs</text>
+        <text class="d-s" x="58" y="138">validés par le professeur</text>
+        <path class="d-line" d="M180 154V172" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="176" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="207" r="13"/>
+        <text class="d-n" x="34" y="212" text-anchor="middle">3</text>
+        <text class="d-t" x="58" y="202">Le suivi de chaque classe</text>
+        <text class="d-s" x="58" y="222">notion par notion, et une vue pour la direction</text>
+        <path class="d-line" d="M180 238V256" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="8" y="260" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="291" r="13"/>
+        <text class="d-n" x="34" y="296" text-anchor="middle">4</text>
+        <text class="d-t" x="58" y="286">Des emails aux familles</text>
+        <text class="d-s" x="58" y="306">à l'heure locale de l'école</text>
+      </svg>
+      <figcaption>Ce qu'un lycée français à l'étranger met en place avec Galac6 : import des élèves, devoirs validés, suivi et emails aux familles.</figcaption>
+    </figure>
+
     <p>Pour essayer, Galac6 propose aux établissements un <a href="/ecole">pilote gratuit de 3 mois sur 3 classes</a>, sans engagement, puis un devis en euros. Un professeur qui veut d'abord tester seul a 3 mois offerts avec le programme des <a href="/profs-testeurs">professeurs testeurs</a>, et le <a href="/guide-prof">guide professeur</a> montre comment créer un premier quiz en dix minutes. Tout est présenté sur notre page <a href="/ecoles-francaises-etranger">écoles françaises à l'étranger</a>.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="familles">Pour les familles : comment s'y prendre</h2>
+    <h2 id="familles">Comment les familles peuvent-elles s'y prendre ?</h2>
+    <p>Commencez par vérifier avec le lycée ce qui est autorisé, fixez des règles simples à la maison et, avant le bac, privilégiez les examens blancs.</p>
     <ul>
       <li>Vérifiez avec le lycée ce qui est autorisé pour les devoirs notés : l'IA sert à comprendre et à s'entraîner, pas à rendre un travail.</li>
       <li>Fixez des règles simples à la maison, présentées dans notre article <a href="/blog/ia-devoirs-sans-tricher">l'IA pour les devoirs sans tricher</a>.</li>

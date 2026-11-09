@@ -28,7 +28,7 @@
         "@id": "https://galac6.io/#organization"
       },
       "description": "Over 400 official brevet and baccalauréat past papers, including over 250 in maths and 112 set outside France, as mock exams with detailed marking.",
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-09",
       "mainEntity": [
         {
           "@type": "Question",
@@ -67,7 +67,7 @@
           "name": "How much does it cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The Discovery plan includes one brevet or bac style paper each month to try it. The Student and Family plans open all of Galac6 without limits, including all official past papers in full and in exam conditions. The Exam Pack (€19, or €14 with an annual subscription) adds second marking of papers, spoken mock orals and the Concours général."
+            "text": "Galac6 is a paid service. The Discovery plan, at €0 and limited, includes one brevet or bac style paper each month to try it. The Student plan costs €69 a year and the Family plan €99 a year: they open all of Galac6 without limits, including all official past papers in full and in exam conditions. The Exam Pack (€19, or €14 with an annual subscription) adds second marking of papers, spoken mock orals and the Concours général."
           }
         }
       ]
@@ -487,16 +487,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -595,7 +596,7 @@
 <span class="badge">Official past papers</span>
 <h1>French brevet and bac past papers, <span class="grad">with marking</span></h1>
 <p class="sub">Real official papers, to sit as a timed mock exam or in practice mode, followed by detailed marking exercise by exercise.</p>
-<p class="updated"><time datetime="2026-11-03">Updated on 3 November 2026</time></p>
+<p class="updated"><time datetime="2026-11-09">Updated on 9 November 2026</time></p>
 <ul class="e-gains">
 <li><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg><span><strong>Over 400 official papers,</strong> including over 250 in maths.</span></li>
 <li><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg><span><strong>112 papers set outside France,</strong> useful for pupils at French schools abroad.</span></li>
@@ -605,6 +606,7 @@
 <a class="btn btn-primary" href="https://galac6web.netlify.app/">Practise on a past paper</a>
 <a class="btn btn-outline" href="/en/tarifs">See pricing</a>
 </div>
+<p style="margin-top:0.75rem;font-size:0.9rem;color:var(--text-muted,#8a8aa3);">Discovery plan at €0, limited. Student plan at €69 a year.</p>
 </div>
 <div aria-hidden="true" class="e-art">
 <svg fill="none" stroke="url(#gx)" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 400 400">
@@ -626,7 +628,7 @@
 <div class="feats">
 <article class="feat"><span class="f-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 2 9 2 12 0v-5"></path><path d="M22 10v5"></path></svg></span><h3>French brevet (DNB)</h3><p>Maths, French, science and history-geography-civics: real papers set at the brevet, in the official format.</p></article>
 <article class="feat"><span class="f-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 1 1 3 3L7 19l-4 1 1-4z"></path></svg></span><h3>French baccalauréat: French exam</h3><p>Papers from the written French exam taken in Première: text commentary and essay.</p></article>
-<article class="feat"><span class="f-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="20" rx="2" width="16" x="4" y="2"></rect><path d="M8 6h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 19h8"></path></svg></span><h3>Maths bac</h3><p>Official maths bac papers, to practise in exam conditions.</p><p><a href="/reviser-bac-maths" hreflang="fr">Réviser le bac de maths avec l'IA</a></p></article>
+<article class="feat"><span class="f-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="20" rx="2" width="16" x="4" y="2"></rect><path d="M8 6h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 19h8"></path></svg></span><h3>Maths bac</h3><p>Official maths bac papers, to practise in exam conditions.</p></article>
 <article class="feat"><span class="f-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span><h3>Course aux nombres</h3><p>Official series of quick calculation and automatic-skills questions.</p></article>
 <article class="feat"><span class="f-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"></path><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"></path></svg></span><h3>Concours général in maths</h3><p>Papers from the Concours général, for pupils who want to go further.</p></article>
 <article class="feat"><span class="f-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg></span><h3>Papers set outside France</h3><p>Official brevet, French bac and maths bac papers set in exam centres abroad.</p></article>
@@ -655,7 +657,7 @@
 </ol>
 <p class="intl-link"><a href="/reviser-brevet" hreflang="fr">Revising for the brevet with Galac6 (in French)</a></p>
 <p class="intl-link"><a href="/reviser-bac-francais" hreflang="fr">Revising for the French bac with Galac6 (in French)</a></p>
-<p class="intl-link"><a href="/reviser-bac-maths" hreflang="fr">Réviser le bac de maths avec Galac6</a></p>
+
 <p class="intl-link"><a href="/blog/reviser-brevet-maths" hreflang="fr">How to revise for the brevet maths exam (in French)</a></p>
 <p class="intl-link"><a href="/en/french-schools-abroad">Galac6 for French schools abroad</a></p>
 </div>
@@ -668,7 +670,7 @@
 <details><summary>Is the marking official?</summary><div class="ans"><p>No. The marking is written by Galac6's AI, question by question, from the original mark scheme. It explains mistakes and gives advice, but it is not an official answer key.</p></div></details>
 <details><summary>Are there papers set abroad?</summary><div class="ans"><p>Yes: 112 official brevet, French bac and maths bac papers set outside France, useful for pupils at French schools abroad.</p></div></details>
 <details><summary>Which subjects for the brevet?</summary><div class="ans"><p>The four written exams: maths, French, science and history-geography-civics. Pupils can sit the whole exam or just one part.</p></div></details>
-<details><summary>How much does it cost?</summary><div class="ans"><p>The Discovery plan includes one brevet or bac style paper each month to try it. The Student and Family plans open all of Galac6 without limits, including all official past papers in full and in exam conditions. The Exam Pack (€19, or €14 with an annual subscription) adds second marking of papers, spoken mock orals and the Concours général.</p></div></details>
+<details><summary>How much does it cost?</summary><div class="ans"><p>Galac6 is a paid service. The Discovery plan, at €0 and limited, includes one brevet or bac style paper each month to try it. The Student plan costs €69 a year and the Family plan €99 a year: they open all of Galac6 without limits, including all official past papers in full and in exam conditions. The Exam Pack (€19, or €14 with an annual subscription) adds second marking of papers, spoken mock orals and the Concours général.</p></div></details>
 </div>
 </div>
 </section>

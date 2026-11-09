@@ -18,7 +18,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
   <meta property="article:published_time" content="2026-11-04">
-  <meta property="article:modified_time" content="2026-11-04">
+  <meta property="article:modified_time" content="2026-11-09">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Comment préparer un contrôle de maths au collège, de la 6e à la 3e">
   <meta name="twitter:description" content="Quand commencer, refaire les exercices du cours, se tester, gérer le stress et le rôle du parent : la méthode pas à pas.">
@@ -73,7 +73,7 @@
         }
       ],
       "datePublished": "2026-11-04",
-      "dateModified": "2026-11-04",
+      "dateModified": "2026-11-09",
       "inLanguage": "fr-FR",
       "mainEntityOfPage": "https://galac6.io/blog/preparer-controle-maths-college",
       "keywords": "préparer un contrôle de maths, contrôle de maths collège, réviser un contrôle de maths, contrôle de maths 6e, contrôle de maths 5e, contrôle de maths 4e, contrôle de maths 3e, contrôle blanc, Prêt pour mon contrôle",
@@ -466,16 +466,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -521,7 +522,7 @@
         <li><strong>Refaire les exercices du cours sans regarder la correction</strong>, puis passer à des exercices nouveaux, jusqu'au niveau du contrôle.</li>
         <li><strong>Se tester</strong> dans les conditions du contrôle : chronométré, sans aide, puis revoir les notions ratées.</li>
         <li><strong>Le parent</strong> aide à planifier, interroge sur la leçon et félicite l'effort, sans faire les exercices à la place de l'enfant.</li>
-        <li>Avec Galac6, le parcours <strong>« Prêt pour mon contrôle »</strong> organise tout cela en six étapes jusqu'à la date du contrôle.</li>
+        <li>Avec Galac6 (galac6.io), le parcours <strong>« Prêt pour mon contrôle »</strong> organise tout cela en six étapes jusqu'à la date du contrôle.</li>
       </ul>
     </aside>
 
@@ -631,21 +632,22 @@
         <title id="schema-escalier-titre">Monter d'un cran à la fois dans les exercices</title>
         <desc id="schema-escalier-desc">Quatre marches, de la plus simple à la plus difficile : les exercices du cours refaits sans la correction, des applications directes, des exercices qui mélangent plusieurs notions, des exercices du niveau du contrôle.</desc>
         <text class="d-s" x="180" y="20" text-anchor="middle">de la plus simple à la plus difficile</text>
-        <rect class="d-band-1" x="6" y="170" width="84" height="60" rx="8"/>
-        <rect class="d-band-1" x="94" y="126" width="84" height="104" rx="8"/>
-        <rect class="d-band-2" x="182" y="82" width="84" height="148" rx="8"/>
-        <rect class="d-band-3" x="270" y="38" width="84" height="192" rx="8"/>
-        <text class="d-t" x="48" y="188" text-anchor="middle" style="font-size:13px">Exercices</text>
-        <text class="d-t" x="48" y="205" text-anchor="middle" style="font-size:13px">du cours</text>
-        <text class="d-s" x="48" y="222" text-anchor="middle" style="font-size:11px">sans correction</text>
-        <text class="d-t" x="136" y="150" text-anchor="middle" style="font-size:13px">Applications</text>
-        <text class="d-t" x="136" y="168" text-anchor="middle" style="font-size:13px">directes</text>
-        <text class="d-t" x="224" y="106" text-anchor="middle" style="font-size:13px">Plusieurs</text>
-        <text class="d-t" x="224" y="124" text-anchor="middle" style="font-size:13px">notions</text>
-        <text class="d-t" x="312" y="62" text-anchor="middle" style="font-size:13px">Niveau du</text>
-        <text class="d-t" x="312" y="80" text-anchor="middle" style="font-size:13px">contrôle</text>
+        <rect class="d-band-1" x="2" y="154" width="87" height="76" rx="8"/>
+        <rect class="d-band-1" x="91" y="116" width="87" height="114" rx="8"/>
+        <rect class="d-band-2" x="180" y="78" width="87" height="152" rx="8"/>
+        <rect class="d-band-3" x="269" y="40" width="87" height="190" rx="8"/>
+        <text class="d-t" x="45.5" y="174" text-anchor="middle" style="font-size:12px">Exercices</text>
+        <text class="d-t" x="45.5" y="190" text-anchor="middle" style="font-size:12px">du cours</text>
+        <text class="d-s" x="45.5" y="207" text-anchor="middle" style="font-size:11px">sans</text>
+        <text class="d-s" x="45.5" y="221" text-anchor="middle" style="font-size:11px">correction</text>
+        <text class="d-t" x="134.5" y="146" text-anchor="middle" style="font-size:12px">Applications</text>
+        <text class="d-t" x="134.5" y="162" text-anchor="middle" style="font-size:12px">directes</text>
+        <text class="d-t" x="223.5" y="104" text-anchor="middle" style="font-size:12px">Plusieurs</text>
+        <text class="d-t" x="223.5" y="120" text-anchor="middle" style="font-size:12px">notions</text>
+        <text class="d-t" x="312.5" y="64" text-anchor="middle" style="font-size:12px">Niveau du</text>
+        <text class="d-t" x="312.5" y="80" text-anchor="middle" style="font-size:12px">contrôle</text>
       </svg>
-      <figcaption>Monter d'un cran à la fois : des exercices du cours, refaits sans correction, jusqu'aux exercices du niveau du contrôle.</figcaption>
+      <figcaption>Monter d'un cran à la fois, de la plus simple à la plus difficile : les exercices du cours sans correction, les applications directes, plusieurs notions, puis le niveau du contrôle.</figcaption>
     </figure>
     <p>Quand un exercice bloque, le bon réflexe est de relire la partie de la leçon qui correspond, puis de réessayer. Si le blocage dure, une aide qui pose des questions vaut mieux qu'une correction toute faite : c'est l'idée de notre article <a href="/blog/ia-devoirs-enfant-sans-reponses">Quelle IA pour aider son enfant aux devoirs sans lui donner les réponses ?</a>. Pour les automatismes de calcul, quelques minutes de <a href="/blog/calcul-mental-personnalise">calcul mental sur les notions de sa classe</a> font aussi gagner du temps le jour du contrôle.</p>
 
@@ -688,7 +690,7 @@
         <path class="d-dash" d="M194 334V352H20V39H40" marker-end="url(#d-arr-test)"/>
         <text class="d-s" x="194" y="372" text-anchor="middle">puis la boucle recommence</text>
       </svg>
-      <figcaption>La boucle du contrôle blanc : se tester, repérer les notions ratées, les revoir, puis retenter un autre jour.</figcaption>
+      <figcaption>La boucle du contrôle blanc : se tester, repérer les notions ratées, les revoir, puis retenter un autre jour sur un nouveau sujet, et la boucle recommence.</figcaption>
     </figure>
     <p>Pour un élève de 3e, la même méthode s'applique au brevet, sur des sujets officiels : voyez <a href="/blog/reviser-brevet-maths">Comment réviser le brevet de maths : la méthode en 5 étapes</a>.</p>
 
@@ -876,7 +878,7 @@
         <li><a href="/blog/reviser-brevet-maths">Comment réviser le brevet de maths : la méthode en 5 étapes</a></li>
         <li><a href="/reviser-maths">Réviser les maths en ligne avec l'IA, du CP à la terminale</a></li>
         <li><a href="/blog/ia-devoirs-enfant-sans-reponses">Quelle IA pour aider son enfant aux devoirs sans lui donner les réponses ?</a></li>
-        <li><a href="/blog/calcul-mental-personnalise">Le calcul mental réinventé : personnalisé, ludique et sur toutes les notions de maths</a></li>
+        <li><a href="/blog/calcul-mental-personnalise">Calcul mental personnalisé : chaque élève retravaille ses erreurs</a></li>
         <li><a href="/fiches-revision-ia">Des fiches de révision générées à partir du cours</a></li>
         <li><a href="/blog/comment-faire-fiche-de-revision">Comment faire une fiche de révision : la méthode en 5 étapes</a></li>
         <li><a href="/tarifs">Les tarifs de Galac6</a></li>

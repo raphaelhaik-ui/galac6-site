@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
-<title>Galac6 nel vostro Paese: votate | Galac6</title>
+<title>Portate Galac6 nel vostro Paese: votate la vostra scuola</title>
 <meta content="Galac6 segue il programma scolastico francese. Le scuole fuori dalla Francia possono votare per adattarlo al loro Paese: programma, lingua e dettati." name="description"/>
 <meta content="index, follow, max-image-preview:large" name="robots"/>
 <link href="https://galac6.io/it/international" rel="canonical"/>
@@ -23,7 +23,7 @@
       "@type": "WebPage",
       "@id": "https://galac6.io/it/international#webpage",
       "url": "https://galac6.io/it/international",
-      "name": "Galac6 nel vostro Paese: votate | Galac6",
+      "name": "Portate Galac6 nel vostro Paese: votate la vostra scuola",
       "inLanguage": "it",
       "isPartOf": {
         "@id": "https://galac6.io/it/#website"
@@ -306,16 +306,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 
 <script>window.G6_DYN = {"fail": "Non è stato possibile inviare il vostro voto. Riprovate tra un istante, oppure scriveteci a <a href=\"mailto:hello@galac6.io\">hello@galac6.io</a>.", "ok": "Grazie, il vostro voto è stato inviato. Ora conta per il vostro Paese, e vi ricontatteremo all'indirizzo che ci avete indicato.", "sending": "Invio in corso…"};</script>

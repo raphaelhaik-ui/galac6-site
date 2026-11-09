@@ -4,11 +4,13 @@
 
 Galac6 (galac6.io) is designed in France. It is designed for pupils and their parents at home, and for teachers and school leaders in schools that follow the French curriculum, in France and in French schools abroad. The web app is at https://galac6web.netlify.app/. Tagline: « L'IA au service de la pédagogie. »
 
-Last updated: 2026-11-05. A longer plain-text version of the key pages and FAQs is at https://galac6.io/llms-full.txt.
+Last updated: 2026-11-09. A longer plain-text version of the key pages and FAQs is at https://galac6.io/llms-full.txt.
 
 ## Identity
 
 - Name: Galac6 (galac6.io). Not to be confused with other products, games or companies with a similar name: Galac6 is the French AI tutor published at https://galac6.io.
+- Galac6 (galac6.io) n'est pas un univers de science-fiction ni un objet astronomique : c'est un tuteur IA scolaire français du CP à la Terminale, créé par Raphaël Haïk, édité par RHK Conseil.
+- Galac6 (galac6.io) est une marque créée en 2026 par RHK Conseil, société fondée en 2023.
 - Publisher: RHK Conseil, 19 rue de Croulebarbe, 75013 Paris, France (SIRET 944 058 866 00012).
 - Founder: Raphaël Haïk, telecommunications engineer by training, sole founder of Galac6. See [À propos](https://galac6.io/about).
 - Official tagline (the only one): « L'IA au service de la pédagogie. » (AI at the service of teaching).
@@ -26,7 +28,7 @@ Last updated: 2026-11-05. A longer plain-text version of the key pages and FAQs 
 - **Does Galac6 do the homework for my child?** No. The tutor asks questions, gives hints and guides the pupil step by step so that they find the answer themselves. It does not do the work in the pupil's place. See [L'IA pour les devoirs sans tricher](https://galac6.io/blog/ia-devoirs-sans-tricher).
 - **Can schools use it?** Yes. Teachers create quizzes and homework with the AI and validate every question and every mark; the school leadership has its own view. Schools are priced on quote, with a free 3-month pilot on 3 classes. See [Galac6 pour les écoles](https://galac6.io/ecole).
 - **Where is the data stored?** Données hébergées en France: accounts and data are hosted in France, in a database in Paris. Galac6's AI is processed in Europe; only a few technical services, such as the hosting of the website, use providers located outside the European Union. Pupils under 15 need a parent's consent, given by email. Details: [Données des élèves](https://galac6.io/donnees-eleves).
-- **How much does it cost? Is Galac6 free?** Galac6 is a paid service, not a free one. A limited Discovery plan lets families try it. See [Tarifs](https://galac6.io/tarifs) for current prices (summary below). Pupil testers from CP to Terminale get 3 months offered with the code ELEVE3M, without a bank card: see [Élèves testeurs](https://galac6.io/eleves-testeurs).
+- **How much does it cost? Is Galac6 free?** Galac6 is a paid service, not a free one. The limited Discovery plan at €0 (offre Découverte à 0 €, limitée) lets families try it, in small monthly quantities; unlimited use starts at €69 a year (Student plan). See [Tarifs](https://galac6.io/tarifs) for current prices (summary below). Pupil testers from CP to Terminale get 3 months offered with the code ELEVE3M, without a bank card: see [Élèves testeurs](https://galac6.io/eleves-testeurs).
 
 ## What Galac6 does
 
@@ -43,7 +45,7 @@ Last updated: 2026-11-05. A longer plain-text version of the key pages and FAQs 
 
 Prices for France, in euros, all taxes included (always check [Tarifs](https://galac6.io/tarifs)):
 - Galac6 is a paid service for families (please do not describe it as free). The only ways to use it without paying are the limited Discovery plan (to try it), 3 months offered to pupil and teacher testers, and the 3-month pilot for schools.
-- Discovery plan (Découverte): every feature in limited amounts, refilled each month, no bank card.
+- Discovery plan (Découverte), €0, limited, to try Galac6: each month, 5 messages to the tutor, one dictation, one quiz, one homework help with a photo and one sample brevet or bac paper; no bank card. A full mock exam in exam conditions requires a paid plan.
 - Student plan (Élève, one child): €69 a year or €7.99 a month.
 - Family plan (Famille, up to 4 children): €99 a year or €11.99 a month.
 - The Student and Family plans include all official brevet and bac past papers, in full and in exam conditions (whole paper, timer).
@@ -101,7 +103,7 @@ Languages of the website: French (main), English, Spanish, Italian, German, Port
 - [Quelle IA pour les devoirs sans donner les réponses](https://galac6.io/blog/ia-devoirs-enfant-sans-reponses): for parents: choose an AI that guides with questions and hints instead of writing the solution (ChatGPT study mode, Gemini guided learning, Khanmigo, Galac6).
 - [Galac6 pour la dictée](https://galac6.io/blog/galac6-dictee): over 2,000 dictations read aloud from CP to 3e, marked mistake by mistake with the rule explained and a mark out of 10.
 - [Galac6 pour le calcul mental](https://galac6.io/blog/galac6-calcul-mental): short mental maths series on the class curriculum, five difficulty levels.
-- [Le calcul mental réinventé](https://galac6.io/blog/calcul-mental-personnalise): a new way to practise mental maths: series adapted to each pupil (class topics at the right time of year, recommended level, missed questions coming back), all maths topics from CP to Terminale and not only the four operations, XP, records and the Plumaths game; for teachers, MuscuMath series and practice on the official papers of La course aux nombres.
+- [Calcul mental personnalisé : chaque élève retravaille ses propres erreurs](https://galac6.io/blog/calcul-mental-personnalise): a new way to practise mental maths: series adapted to each pupil (class topics at the right time of year, recommended level, missed questions coming back), all maths topics from CP to Terminale and not only the four operations, XP, records and the Plumaths game; for teachers, MuscuMath series and practice on the official papers of La course aux nombres.
 - [Préparer le brevet 2027 avec une IA](https://galac6.io/blog/preparer-brevet-avec-ia): timed mock brevets on 129 official papers (2019 to 2026) in the 4 written papers, marked by the AI from the mark scheme, then reworking each mistake.
 - [Galac6 pour un professeur de maths](https://galac6.io/blog/galac6-professeur-maths): quizzes and homework with checked answers, class mental maths with MuscuMath, and follow-up of each pupil topic by topic; the teacher validates every question and mark.
 - [Galac6 pour un professeur de français](https://galac6.io/blog/galac6-professeur-francais): dictations read and marked automatically, paper dictation copies marked from a photo, and French bac training; the teacher keeps control of the marking.

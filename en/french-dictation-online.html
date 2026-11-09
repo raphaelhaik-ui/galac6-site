@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" class="g6-banner">
+<html class="g6-banner" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
@@ -28,29 +28,54 @@
         "@id": "https://galac6.io/#organization"
       },
       "description": "Over 2,000 French dictations read aloud and marked mistake by mistake, with the rule explained. For pupils on the French curriculum, at home or in class.",
+      "dateModified": "2026-11-09",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which app can I use for online dictations with automatic marking?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Galac6 is an online French dictation app for pupils from CP to Terminale. It reads the dictation aloud, marks each mistake one by one while explaining the rule, and gives a mark out of 10. It works in the browser, on a computer, tablet or phone."
+          }
+        },
         {
           "@type": "Question",
           "name": "Are the dictations really read aloud?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Galac6 reads every dictation aloud: your child listens and writes it down, without an adult having to dictate."
+            "text": "Yes. Galac6 reads each dictation sentence by sentence with a synthetic voice. The speed can be adjusted and the child can replay a sentence as many times as they wish, with no adult needed to dictate."
           }
         },
         {
           "@type": "Question",
-          "name": "How is the dictation marked?",
+          "name": "Is the automatic marking reliable?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Galac6 compares the copy with the text, reviews every mistake one by one and explains the rule to apply: agreement, homophone, conjugation, spelling or punctuation."
+            "text": "The page is compared with the text word by word. Each mistake is noted and the mark out of 10 follows the scale, so the same paper always gets the same mark. Each mistake is explained with its rule."
           }
         },
         {
           "@type": "Question",
-          "name": "For which levels?",
+          "name": "Can a dictation written on paper be marked from a photo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "From CP to 3e, with dictations written for every class, and up to Terminale with extracts from great public-domain authors. The dictations follow the French curriculum."
+            "text": "Yes. The pupil chooses to write on paper, writes while Galac6 reads, then sends their page as a photo or a PDF, or scans it from their phone. They correct any words Galac6 misread, then receive the marking mistake by mistake and their mark."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which levels are the dictations for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "From CP to 3e, with dictations written for each class, and up to Terminale with extracts from great public-domain authors. In 3e, the dictations from past brevet papers are also offered."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the dictation given by the teacher be marked?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The child takes a photo of the dictation text, pastes it, or adds an image, a PDF or a Word file. Galac6 reads this text to them and then marks their page."
           }
         },
         {
@@ -58,7 +83,7 @@
           "name": "Can teachers give a dictation to their class?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Each pupil takes the dictation alone on screen, and Galac6 suggests the marking and the grade: the teacher has the final say. Paper copies can be scanned, then marked."
+            "text": "Yes. Teachers create a dictation by pasting a text or taking a photo of a sheet, send it to the class with a deadline and choose the marking scale. Each pupil does the dictation alone on their screen, and paper copies can be uploaded as photos and then marked."
           }
         },
         {
@@ -66,7 +91,15 @@
           "name": "How much does online dictation cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The Discovery plan includes one dictation a month to try it. The Student plan (€69 a year or €7.99 a month) and the Family plan (€99 a year or €11.99 a month, up to 4 children) give unlimited dictations. For schools, pricing is on quote."
+            "text": "Galac6 is a paid service. The Discovery plan, at €0 and limited, includes one dictation a month to try it, with no bank card. The Student plan (€69 a year or €7.99 a month) and the Family plan (€99 a year or €11.99 a month, for up to 4 children) give unlimited dictations. For schools, pricing is on quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is my child's data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Data is hosted in France, in a database in Paris. Galac6 shows no advertising and does not resell any data. Galac6's artificial intelligence is processed in Europe."
           }
         }
       ]
@@ -107,19 +140,19 @@
 <meta content="Your child listens, writes, then every mistake is marked with the rule. Over 2,000 dictations, from CP to lycée." property="og:description"/>
 <meta content="https://galac6.io/en/french-dictation-online" property="og:url"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" property="og:image"/>
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Galac6, AI in the service of teaching.">
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Galac6, AI in the service of teaching." property="og:image:alt"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Galac6: French dictation online, read aloud and marked" name="twitter:title"/>
 <meta content="Your child listens, writes, then every mistake is marked with the rule. Over 2,000 dictations, from CP to lycée." name="twitter:description"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" name="twitter:image"/>
-<meta name="twitter:image:alt" content="Galac6, AI in the service of teaching.">
+<meta content="Galac6, AI in the service of teaching." name="twitter:image:alt"/>
 <link href="/icons/32x32.png" rel="icon" type="image/png"/>
 <!-- Google Analytics 4 + Consent Mode v2 (RGPD) -->
-<script src="/analytics.js" defer></script>
+<script defer="" src="/analytics.js"></script>
 <!-- Suivi des UTM (origine des visiteurs, sans cookie) -->
-<script src="/utm.js" defer></script>
+<script defer="" src="/utm.js"></script>
 <style>
     :root {
       --primary: #7c5cfc;
@@ -465,9 +498,16 @@
     .note p { font-size: 1rem; }
     .note .note-sub { font-size: 1.05rem; margin-top: 8px; }
     .note a { color: var(--primary-light); }
+    /* Pages SEO : phrase-réponse, date de mise à jour, liens « À lire aussi » */
+    .e-hero .sub.answer { max-width: 60ch; font-size: 1.08rem; color: var(--text); }
+    .updated { color: var(--text-muted); font-size: 0.85rem; }
+    .more-links { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); max-width: 900px; margin: 0 auto; }
+    .more-links a { display: flex; align-items: center; min-height: 52px; padding: 12px 18px; border-radius: 14px; background: var(--bg-card); border: 1px solid var(--border); color: var(--text); font-weight: 600; }
+    .more-links a:hover { border-color: var(--primary); color: var(--primary-light); }
+    .stat b.grad { font-size: clamp(1.6rem, 3.6vw, 2.3rem); }
   </style>
 <!-- Meta Pixel (Facebook) - charge apres consentement -->
-<script src="/meta-pixel.js" defer></script>
+<script defer="" src="/meta-pixel.js"></script>
 <style id="g6-banner-css">
     /* Bandeau anglais « Galac6 follows the French national curriculum » : HTML juste au-dessus du pied de page (règle SEO), affiché en haut de l'écran et toujours visible (généré par scripts/build-langs.py) */
     .g6-intl-banner { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 6px 16px; background: linear-gradient(135deg, #6366f1, #a855f7); color: #fff; font-size: 0.82rem; font-weight: 500; line-height: 1.4; text-align: center; direction: ltr; position: fixed; top: 0; left: 0; right: 0; z-index: 200; box-shadow: 0 1px 0 rgba(255,255,255,0.12); }
@@ -485,16 +525,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -563,22 +604,22 @@
 <!-- ═══ NAVBAR ═══ -->
 <div class="navbar-wrapper">
 <nav class="navbar">
-  <a href="/en/" class="navbar-brand">
-    <img src="/icons/icon-nav.png" alt="Galac6" width="132" height="132">
-    <span>Galac6</span>
-  </a>
-  <button class="navbar-hamburger" aria-label="Menu" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
-    <span></span><span></span><span></span>
-  </button>
-  <div class="navbar-links">
-    <a href="/en/familles">For families</a>
-    <a href="/en/ecole">For teachers and schools</a>
-    <a href="/en/tarifs">Pricing</a>
-    <a href="/en/blog/">Blog</a>
-    <a href="/en/about">About</a>
-    <!-- lang-menu --><details class="lang-menu"><summary aria-label="Language : English"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#012169"/><path d="M0 0L20 14M20 0L0 14" stroke="#fff" stroke-width="3"/><path d="M0 0L20 14M20 0L0 14" stroke="#c8102e" stroke-width="1"/><path d="M10 0V14M0 7H20" stroke="#fff" stroke-width="4.5"/><path d="M10 0V14M0 7H20" stroke="#c8102e" stroke-width="2.5"/></svg><span>EN</span></summary><div class="lang-menu-list"><a href="/dictee-en-ligne" hreflang="fr" lang="fr"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#002654"/><rect x="13.33" width="6.67" height="14" fill="#ce1126"/></svg><span>Français</span></a><a href="/en/french-dictation-online" hreflang="en" lang="en" aria-current="page"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#012169"/><path d="M0 0L20 14M20 0L0 14" stroke="#fff" stroke-width="3"/><path d="M0 0L20 14M20 0L0 14" stroke="#c8102e" stroke-width="1"/><path d="M10 0V14M0 7H20" stroke="#fff" stroke-width="4.5"/><path d="M10 0V14M0 7H20" stroke="#c8102e" stroke-width="2.5"/></svg><span>English</span></a><a href="/es/" hreflang="es" lang="es"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#aa151b"/><rect y="3.5" width="20" height="7" fill="#f1bf00"/></svg><span>Español</span></a><a href="/it/" hreflang="it" lang="it"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#009246"/><rect x="13.33" width="6.67" height="14" fill="#ce2b37"/></svg><span>Italiano</span></a><a href="/de/" hreflang="de" lang="de"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#ffce00"/><rect width="20" height="4.67" fill="#000"/><rect y="4.67" width="20" height="4.67" fill="#dd0000"/></svg><span>Deutsch</span></a><a href="/pt/" hreflang="pt" lang="pt"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#da291c"/><rect width="8" height="14" fill="#046a38"/><circle cx="8" cy="7" r="3" fill="#ffe900"/><circle cx="8" cy="7" r="1.6" fill="#da291c"/></svg><span>Português</span></a><a href="/nl/" hreflang="nl" lang="nl"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="20" height="4.67" fill="#ae1c28"/><rect y="9.33" width="20" height="4.67" fill="#21468b"/></svg><span>Nederlands</span></a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
-    <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start, #6366f1), var(--gradient-end, #a855f7)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Sign up or log in</a>
-  </div>
+<a class="navbar-brand" href="/en/">
+<img alt="Galac6" height="132" src="/icons/icon-nav.png" width="132"/>
+<span>Galac6</span>
+</a>
+<button aria-label="Menu" class="navbar-hamburger" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+<span></span><span></span><span></span>
+</button>
+<div class="navbar-links">
+<a href="/en/familles">For families</a>
+<a href="/en/ecole">For teachers and schools</a>
+<a href="/en/tarifs">Pricing</a>
+<a href="/en/blog/">Blog</a>
+<a href="/en/about">About</a>
+<!-- lang-menu --><details class="lang-menu"><summary aria-label="Language : English"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#012169" height="14" width="20"></rect><path d="M0 0L20 14M20 0L0 14" stroke="#fff" stroke-width="3"></path><path d="M0 0L20 14M20 0L0 14" stroke="#c8102e" stroke-width="1"></path><path d="M10 0V14M0 7H20" stroke="#fff" stroke-width="4.5"></path><path d="M10 0V14M0 7H20" stroke="#c8102e" stroke-width="2.5"></path></svg><span>EN</span></summary><div class="lang-menu-list"><a href="/dictee-en-ligne" hreflang="fr" lang="fr"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#fff" height="14" width="20"></rect><rect fill="#002654" height="14" width="6.67"></rect><rect fill="#ce1126" height="14" width="6.67" x="13.33"></rect></svg><span>Français</span></a><a aria-current="page" href="/en/french-dictation-online" hreflang="en" lang="en"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#012169" height="14" width="20"></rect><path d="M0 0L20 14M20 0L0 14" stroke="#fff" stroke-width="3"></path><path d="M0 0L20 14M20 0L0 14" stroke="#c8102e" stroke-width="1"></path><path d="M10 0V14M0 7H20" stroke="#fff" stroke-width="4.5"></path><path d="M10 0V14M0 7H20" stroke="#c8102e" stroke-width="2.5"></path></svg><span>English</span></a><a href="/es/" hreflang="es" lang="es"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#aa151b" height="14" width="20"></rect><rect fill="#f1bf00" height="7" width="20" y="3.5"></rect></svg><span>Español</span></a><a href="/it/" hreflang="it" lang="it"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#fff" height="14" width="20"></rect><rect fill="#009246" height="14" width="6.67"></rect><rect fill="#ce2b37" height="14" width="6.67" x="13.33"></rect></svg><span>Italiano</span></a><a href="/de/" hreflang="de" lang="de"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#ffce00" height="14" width="20"></rect><rect fill="#000" height="4.67" width="20"></rect><rect fill="#dd0000" height="4.67" width="20" y="4.67"></rect></svg><span>Deutsch</span></a><a href="/pt/" hreflang="pt" lang="pt"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#da291c" height="14" width="20"></rect><rect fill="#046a38" height="14" width="8"></rect><circle cx="8" cy="7" fill="#ffe900" r="3"></circle><circle cx="8" cy="7" fill="#da291c" r="1.6"></circle></svg><span>Português</span></a><a href="/nl/" hreflang="nl" lang="nl"><svg aria-hidden="true" class="lang-flag" focusable="false" height="14" viewbox="0 0 20 14" width="20"><rect fill="#fff" height="14" width="20"></rect><rect fill="#ae1c28" height="4.67" width="20"></rect><rect fill="#21468b" height="4.67" width="20" y="9.33"></rect></svg><span>Nederlands</span></a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
+<a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start, #6366f1), var(--gradient-end, #a855f7)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;">Sign up or log in</a>
+</div>
 </nav>
 </div>
 <main>
@@ -591,8 +632,8 @@
 <div class="wrap e-hero-grid">
 <div class="e-hero-text">
 <span class="badge">French dictation online</span>
-<h1>French dictation online, <span class="grad">read aloud and marked</span></h1>
-<p class="sub">Galac6 reads the dictation aloud. Your child writes it down, then every mistake is marked with the rule that explains it. From CP to lycée, without you having to dictate.</p>
+<h1>Online French dictation with <span class="grad">automatic marking</span>, from CP to Terminale</h1>
+<p class="sub answer">Galac6 is an online French dictation app for pupils from CP to Terminale (grades 1 to 12): over 2,000 dictations read aloud, automatic marking mistake by mistake with the rule explained, and a mark out of 10. Pupils write on a keyboard or on paper: a paper dictation is marked from a photo of the page.</p>
 <ul class="e-gains">
 <li><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg><span><strong>Over 2,000 dictations,</strong> written and checked for every level.</span></li>
 <li><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg><span><strong>Read aloud,</strong> at home or in class.</span></li>
@@ -602,6 +643,8 @@
 <a class="btn btn-primary" href="https://galac6web.netlify.app/">Try a dictation</a>
 <a class="btn btn-outline" href="/en/tarifs">See pricing</a>
 </div>
+<p style="margin-top:0.75rem;font-size:0.9rem;color:var(--text-muted,#8a8aa3);">Discovery plan at €0, limited. Student plan at €69 a year.</p>
+<p class="updated"><time datetime="2026-11-09">Updated on 9 November 2026</time></p>
 </div>
 <div aria-hidden="true" class="e-art">
 <svg fill="none" stroke="url(#gx)" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 400 400">
@@ -616,44 +659,119 @@
 </div>
 </div>
 </div>
+<section class="section" id="en-bref">
+<div class="wrap">
+<div class="sec-head center"><p class="eyebrow">In brief</p><h2 class="h2">The dictation app in figures</h2></div>
+<div class="stats">
+<div class="stat"><b class="num grad">2,000+</b><span>dictations: Galac6 texts from CP to 3e, and extracts from great public-domain authors from CM1 to Terminale.</span></div>
+<div class="stat"><b class="num grad">3</b><span>types of mistake: grammar (agreements, conjugation, homophones), spelling of a word, minor mistakes (accent, capital letter, punctuation).</span></div>
+<div class="stat"><b class="num grad">/10</b><span>the mark for each dictation, following the marking scale: the same paper always gets the same mark.</span></div>
+</div>
+</div>
+</section>
 <section class="section" id="etapes">
 <div class="wrap">
 <div class="sec-head center"><p class="eyebrow">How it works</p><h2 class="h2">A dictation in four steps</h2></div>
 <ol class="e-steps four">
-<li><span class="s-icon"><svg aria-hidden="true" fill="none" stroke="url(#gx)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5z"></path><path d="m2 17 10 5 10-5"></path><path d="m2 12 10 5 10-5"></path></svg></span><b>The level</b><span>Your child picks their class: Galac6 offers a suitable dictation, from CP to lycée.</span></li>
-<li><span class="s-icon"><svg aria-hidden="true" fill="none" stroke="url(#gx)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"></path></svg></span><b>Listening</b><span>Galac6 reads the text aloud, as a parent or teacher would.</span></li>
-<li><span class="s-icon"><svg aria-hidden="true" fill="none" stroke="url(#gx)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 1 1 3 3L7 19l-4 1 1-4z"></path></svg></span><b>Writing</b><span>Your child writes on screen, or on paper and then takes a photo of the page.</span></li>
-<li><span class="s-icon"><svg aria-hidden="true" fill="none" stroke="url(#gx)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg></span><b>Marking</b><span>Every mistake is reviewed one by one, with the matching rule, so it is not made again.</span></li>
+<li><span class="s-icon"><svg aria-hidden="true" fill="none" stroke="url(#gx)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5z"></path><path d="m2 17 10 5 10-5"></path><path d="m2 12 10 5 10-5"></path></svg></span><b>The level</b><span>Your child chooses the text, the level (easy, medium, hard or expert) and the length of the dictation.</span></li>
+<li><span class="s-icon"><svg aria-hidden="true" fill="none" stroke="url(#gx)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"></path></svg></span><b>Listening</b><span>Galac6 reads the text sentence by sentence with a synthetic voice. The speed can be adjusted and each sentence can be played again.</span></li>
+<li><span class="s-icon"><svg aria-hidden="true" fill="none" stroke="url(#gx)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 1 1 3 3L7 19l-4 1 1-4z"></path></svg></span><b>Writing</b><span>Your child chooses to write on a keyboard or on paper. On paper, they then send a photo of their page.</span></li>
+<li><span class="s-icon"><svg aria-hidden="true" fill="none" stroke="url(#gx)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg></span><b>Marking</b><span>Each mistake is reviewed one by one, with the expected word, the rule explained and the mark out of 10.</span></li>
 </ol>
 </div>
 </section>
 <section class="section" id="textes">
 <div class="wrap">
-<div class="sec-head center"><p class="eyebrow">Serious dictations</p><h2 class="h2">Checked texts, precise marking</h2></div>
+<div class="sec-head center"><p class="eyebrow">Serious dictations</p><h2 class="h2">Which dictations can your child do with Galac6?</h2></div>
 <div class="feats">
-<article class="feat"><span class="f-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"></path><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"></path></svg></span><h3>Texts for every class</h3><p>Dictations written and checked for every class from CP to 3e, and extracts from great public-domain authors up to Terminale.</p></article>
-<article class="feat"><span class="f-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"></path><circle cx="12" cy="12" r="3"></circle></svg></span><h3>Every difficulty of the language</h3><p>Spelling, agreements, homophones, conjugation and punctuation: the marking spots each type of mistake.</p></article>
-<article class="feat"><span class="f-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><path d="M8 9h8M8 13h5"></path></svg></span><h3>Marking that helps pupils progress</h3><p>For every mistake, the correct spelling and the rule, explained simply. Your child understands why, which helps avoid making the mistake again.</p></article>
-<article class="feat"><span class="f-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><path d="M9 9h.01M15 9h.01"></path></svg></span><h3>No stress at home</h3><p>No need to look for a text or dictate it yourself: your child practises alone, at their own pace, and sees their progress.</p></article>
-<article class="feat"><span class="f-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"></path></svg></span><h3>For teachers</h3><p>Each pupil takes the dictation alone on screen, in class or at home, and gets tailored dictations built on their own mistakes. Paper copies are scanned, then marked.</p></article>
-<article class="feat"><span class="f-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg></span><h3>Wherever French is spoken</h3><p>French spelling is the same everywhere: the dictations also help children living outside France keep up their French.</p></article>
+<article class="feat"><span class="f-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"></path><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"></path></svg></span><h3>A text for every class</h3><p>540 dictations written by Galac6 for every class from CP to 3e, following the French curriculum.</p></article>
+<article class="feat"><span class="f-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"></path><path d="M8 7h8M8 11h6"></path></svg></span><h3>Real extracts from great authors</h3><p>Extracts from public-domain authors, from CM1 to Terminale, to practise on literary texts.</p></article>
+<article class="feat"><span class="f-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M9 15l2 2 4-4"></path></svg></span><h3>Brevet dictations</h3><p>In 3e, the dictations from past brevet papers, to prepare for the exam.</p></article>
+<article class="feat"><span class="f-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg></span><h3>The dictation given in class</h3><p>Your child takes a photo of the dictation in their exercise book, or pastes the text, an image, a PDF or a Word file: Galac6 reads it to them and marks it.</p></article>
+<article class="feat"><span class="f-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg></span><h3>The tailored dictation</h3><p>After a few marked dictations, Galac6 prepares a text that revisits the words and concepts your child got wrong.</p></article>
+<article class="feat"><span class="f-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M3 3v18h18"></path><path d="m7 15 4-4 3 3 5-6"></path></svg></span><h3>Tracking concepts</h3><p>One space shows the concepts mastered and those to work on again, and another keeps all the marks.</p></article>
+</div>
+</div>
+</section>
+<section class="section" id="dictee-papier">
+<div class="wrap">
+<div class="note">
+<p class="eyebrow">On a keyboard or on paper</p>
+<h2 class="h2">A paper dictation marked online, from a photo</h2>
+<p>Before starting, the pupil chooses how to write: on a keyboard or on paper. On paper, they write on their sheet while Galac6 reads, sentence by sentence.</p>
+<p>At the end, they send their page as a photo, a PDF or a Word file, or by scanning it from their phone. If the photo is blurred or too small, Galac6 tells them and offers to take it again.</p>
+<p>Galac6 reads the page, then the pupil corrects any words misread before the mark: their sheet is what counts. The marking is then the same as for a dictation done on a keyboard, mistake by mistake.</p>
+<p>On a keyboard, a rereading step shows roughly how many mistakes remain, so the pupil can try to find them before submitting.</p>
+</div>
+</div>
+</section>
+<section class="section" id="correction">
+<div class="wrap">
+<div class="note">
+<p class="eyebrow">Reliable marking</p>
+<h2 class="h2">How does the automatic marking work?</h2>
+<p>Galac6 compares the pupil's page with the dictation text, word by word. Each mistake is noted and the mark out of 10 follows the scale below: the same paper always gets the same mark.</p>
+<p>There are three types of mistake. A grammar mistake (agreement, conjugation, homophone such as a or à, ce or se) takes off 0.75 points. A spelling mistake on a word takes off 0.5 points. A minor mistake (accent, capital letter, punctuation) takes off 0.25 points. Forms allowed by the 1990 French spelling reform are accepted.</p>
+<p>Each mistake is explained in simple words.</p>
+</div>
+</div>
+</section>
+<section class="section" id="parents-professeurs">
+<div class="wrap">
+<div class="sec-head center"><p class="eyebrow">At home and in class</p><h2 class="h2">For parents and for teachers</h2></div>
+<div class="offer">
+<article class="card" id="parents">
+<h3>For parents</h3>
+<ul class="ticks">
+<li>You no longer have to find a text or dictate it yourself: Galac6 reads the dictation.</li>
+<li>Your child practises alone, at their own pace, on a computer, tablet or phone, in the browser, with nothing to install.</li>
+<li>The marking explains each mistake, which helps avoid making it again.</li>
+<li>The Family plan gives a progress report for each child, for up to 4 children.</li>
+</ul>
+</article>
+<article class="card hl" id="professeurs">
+<h3>For teachers</h3>
+<ul class="ticks">
+<li>Paste a text or take a photo of a sheet to create a dictation, then send it to the class with a deadline.</li>
+<li>Your dictations stay in your library and can be reused with other classes in later years.</li>
+<li>Paper copies can be marked too: upload the photos, Galac6 reads the copies and suggests the marking.</li>
+<li>The marking scale can be set for the class: points taken off per type of mistake, maximum mark, capital letters and punctuation counted or not.</li>
+<li>The tailored dictation prepares a text for each pupil with the concepts they need to work on, and dictations can also be given in English.</li>
+</ul>
+</article>
 </div>
 <p class="intl-link"><a href="/en/ecole">Galac6 for schools and teachers</a></p>
-<p class="intl-link"><a href="/en/french-curriculum-abroad">Families on the French curriculum abroad</a></p>
-<p class="intl-link"><a href="/primaire" hreflang="fr">Primary school support, from CP to CM2 (in French)</a></p>
-<p class="intl-link"><a href="/blog/dictee-cm2-progresser-orthographe" hreflang="fr">Dictation in CM2: how to improve spelling (in French)</a></p>
 </div>
 </section>
 <section class="section" id="questions">
 <div class="wrap">
 <div class="sec-head center"><p class="eyebrow">Frequently asked questions</p><h2 class="h2">Your questions about dictation</h2></div>
 <div class="faq">
-<details><summary>Are the dictations really read aloud?</summary><div class="ans"><p>Yes. Galac6 reads every dictation aloud: your child listens and writes it down, without an adult having to dictate.</p></div></details>
-<details><summary>How is the dictation marked?</summary><div class="ans"><p>Galac6 compares the copy with the text, reviews every mistake one by one and explains the rule to apply: agreement, homophone, conjugation, spelling or punctuation.</p></div></details>
-<details><summary>For which levels?</summary><div class="ans"><p>From CP to 3e, with dictations written for every class, and up to Terminale with extracts from great public-domain authors. The dictations follow the French curriculum.</p></div></details>
-<details><summary>Can teachers give a dictation to their class?</summary><div class="ans"><p>Yes. Each pupil takes the dictation alone on screen, and Galac6 suggests the marking and the grade: the teacher has the final say. Paper copies can be scanned, then marked.</p></div></details>
-<details><summary>How much does online dictation cost?</summary><div class="ans"><p>The Discovery plan includes one dictation a month to try it. The Student plan (€69 a year or €7.99 a month) and the Family plan (€99 a year or €11.99 a month, up to 4 children) give unlimited dictations. For schools, pricing is on quote.</p></div></details>
+<details><summary>Which app can I use for online dictations with automatic marking?</summary><div class="ans"><p>Galac6 is an online French dictation app for pupils from CP to Terminale. It reads the dictation aloud, marks each mistake one by one while explaining the rule, and gives a mark out of 10. It works in the browser, on a computer, tablet or phone.</p></div></details>
+<details><summary>Are the dictations really read aloud?</summary><div class="ans"><p>Yes. Galac6 reads each dictation sentence by sentence with a synthetic voice. The speed can be adjusted and the child can replay a sentence as many times as they wish, with no adult needed to dictate.</p></div></details>
+<details><summary>Is the automatic marking reliable?</summary><div class="ans"><p>The page is compared with the text word by word. Each mistake is noted and the mark out of 10 follows the scale, so the same paper always gets the same mark. Each mistake is explained with its rule.</p></div></details>
+<details><summary>Can a dictation written on paper be marked from a photo?</summary><div class="ans"><p>Yes. The pupil chooses to write on paper, writes while Galac6 reads, then sends their page as a photo or a PDF, or scans it from their phone. They correct any words Galac6 misread, then receive the marking mistake by mistake and their mark.</p></div></details>
+<details><summary>Which levels are the dictations for?</summary><div class="ans"><p>From CP to 3e, with dictations written for each class, and up to Terminale with extracts from great public-domain authors. In 3e, the dictations from past brevet papers are also offered.</p></div></details>
+<details><summary>Can the dictation given by the teacher be marked?</summary><div class="ans"><p>Yes. The child takes a photo of the dictation text, pastes it, or adds an image, a PDF or a Word file. Galac6 reads this text to them and then marks their page.</p></div></details>
+<details><summary>Can teachers give a dictation to their class?</summary><div class="ans"><p>Yes. Teachers create a dictation by pasting a text or taking a photo of a sheet, send it to the class with a deadline and choose the marking scale. Each pupil does the dictation alone on their screen, and paper copies can be uploaded as photos and then marked.</p></div></details>
+<details><summary>How much does online dictation cost?</summary><div class="ans"><p>Galac6 is a paid service. The Discovery plan, at €0 and limited, includes one dictation a month to try it, with no bank card. The Student plan (€69 a year or €7.99 a month) and the Family plan (€99 a year or €11.99 a month, for up to 4 children) give unlimited dictations. For schools, pricing is on quote.</p></div></details>
+<details><summary>Where is my child's data?</summary><div class="ans"><p>Data is hosted in France, in a database in Paris. Galac6 shows no advertising and does not resell any data. Galac6's artificial intelligence is processed in Europe.</p></div></details>
 </div>
+<p class="intl-link"><a href="/donnees-eleves" hreflang="fr">How Galac6 protects pupil data (in French)</a></p>
+</div>
+</section>
+<section class="section" id="aller-plus-loin">
+<div class="wrap">
+<div class="sec-head center"><p class="eyebrow">Find out more</p><h2 class="h2">Also worth reading</h2></div>
+<ul class="more-links">
+<li><a href="/calcul-mental-en-ligne" hreflang="fr">Mental maths online, from CP to Terminale (in French)</a></li>
+<li><a href="/blog/dictee-cm2-progresser-orthographe" hreflang="fr">Dictation in CM2: how to improve spelling (in French)</a></li>
+
+<li><a href="/blog/corriger-dictees-professeurs" hreflang="fr">Marking dictations faster: the teachers' guide (in French)</a></li>
+<li><a href="/en/tarifs">Galac6 pricing</a></li>
+<li><a href="/primaire" hreflang="fr">Primary school support, from CP to CM2 (in French)</a></li>
+<li><a href="/en/french-curriculum-abroad">Families on the French curriculum abroad</a></li>
+</ul>
 </div>
 </section>
 <div class="section">
@@ -669,13 +787,15 @@
 </div>
 </main>
 <!-- ═══ FOOTER ═══ -->
-<!-- intl-banner --><div class="g6-intl-banner" id="g6-intl-banner" lang="en" dir="ltr" role="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span>Galac6 follows the French national curriculum, for French schools and families in France and abroad. Want Galac6 for your country&rsquo;s curriculum? <a href="/international">Send a request&nbsp;&rarr;</a></span></div><script id="g6-banner-js">(function(){var b=document.getElementById('g6-intl-banner');if(!b)return;var r=document.documentElement;function h(){r.style.setProperty('--g6-banner-h',b.offsetHeight+'px');}h();if(window.ResizeObserver)new ResizeObserver(h).observe(b);else window.addEventListener('resize',h);})();</script><!-- /intl-banner -->
+<!-- intl-banner --><div class="g6-intl-banner" dir="ltr" id="g6-intl-banner" lang="en" role="note"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span>Galac6 follows the French national curriculum, for French schools and families in France and abroad. Want Galac6 for your country’s curriculum? <a href="/international">Send a request →</a></span></div><script id="g6-banner-js">(function(){var b=document.getElementById('g6-intl-banner');if(!b)return;var r=document.documentElement;function h(){r.style.setProperty('--g6-banner-h',b.offsetHeight+'px');}h();if(window.ResizeObserver)new ResizeObserver(h).observe(b);else window.addEventListener('resize',h);})();</script><!-- /intl-banner -->
 <footer>
 <div>Galac6. AI in the service of teaching</div>
 <div class="footer-badges">
 <a href="/en/about" style="color: var(--text-muted);">About</a>
+<a href="/en/familles" style="color: var(--text-muted);">Families</a>
 <a href="/en/french-dictation-online" style="color: var(--text-muted);">French dictation online</a>
 <a href="/en/brevet-bac-past-papers" style="color: var(--text-muted);">Brevet and bac past papers</a>
+<a href="/fiches-revision-ia" hreflang="fr" style="color: var(--text-muted);">AI revision sheets</a>
 <a href="/en/french-curriculum-abroad" style="color: var(--text-muted);">Families abroad</a>
 <a href="/mentions-legales" hreflang="fr" style="color: var(--text-muted);">Legal notices</a>
 <a href="/international" style="color: var(--text-muted);">School outside France?</a>

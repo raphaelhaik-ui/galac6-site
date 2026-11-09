@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Réviser le brevet de maths en 5 étapes — Galac6</title>
+  <title>Réviser le brevet de maths : méthode en 5 étapes | Galac6</title>
   <meta name="description" content="Comment réviser le brevet de maths : un planning clair, les chapitres incontournables du DNB, et la bonne méthode pour gagner des points le jour de l'épreuve.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/blog/reviser-brevet-maths">
@@ -68,8 +68,8 @@
         "caption": "Galac6, l'IA au service de la pédagogie."
       },
       "datePublished": "2026-06-24",
-      "dateModified": "2026-11-04",
-      "inLanguage": "fr",
+      "dateModified": "2026-11-09",
+      "inLanguage": "fr-FR",
       "mainEntityOfPage": "https://galac6.io/blog/reviser-brevet-maths",
       "author": {
         "@type": "Person",
@@ -84,6 +84,59 @@
       "publisher": {
         "@id": "https://galac6.io/#organization"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Combien de temps dure l'épreuve de maths du brevet ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'épreuve de maths du brevet dure 2 heures et elle est notée sur 20 points : 20 minutes d'automatismes, puis 1 heure 40 d'exercices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "La calculatrice est-elle autorisée au brevet de maths ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La calculatrice est interdite pendant les automatismes, les 20 premières minutes de l'épreuve. Elle est autorisée pour la partie exercices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels chapitres réviser en priorité pour le brevet de maths ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En priorité : le calcul littéral et les équations, les théorèmes de Pythagore et de Thalès, la proportionnalité et les pourcentages, les statistiques et les probabilités, les fonctions, les programmes de calcul."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que faire si on ne trouve pas le résultat d'une question ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il faut écrire sa démarche, car elle est notée : poser le théorème utilisé ou justifier une étape rapporte des points, même sans le résultat final. On ne laisse jamais une question entièrement vide."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps faut-il pour réviser le brevet de maths ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Une trame réaliste tient en 3 semaines, à raison de 30 à 45 minutes par jour : d'abord un chapitre par jour, puis des exercices type brevet, enfin des sujets complets en conditions réelles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte le brevet blanc de maths sur Galac6 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'offre Découverte, à 0 €, est limitée à un sujet type brevet ou bac par mois. Pour tous les sujets officiels en entier, l'offre Élève coûte 69 € par an ou 7,99 € par mois, et l'offre Famille 99 € par an."
+          }
+        }
+      ]
     }
   ]
 }
@@ -173,6 +226,56 @@
     .navbar-links a { white-space: nowrap; }
     @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
       .g6-ico-inline { display: inline-block; vertical-align: -0.2em; }
+
+    /* Encadré, sommaire et schémas : mêmes styles que les articles récents */
+    .plan { background: rgba(124,92,252,0.08); border: 1px solid rgba(124,92,252,0.3); border-radius: 14px; padding: 1.1rem 1.4rem 1rem; margin: 0 0 1.4rem; }
+    .plan h2 { margin: 0 0 0.6rem; font-size: 1.15rem; }
+    .plan ol { margin: 0 0 0.6rem 1.2rem; padding: 0; }
+    .plan li { margin-bottom: 0.45rem; line-height: 1.5; }
+    .plan li::marker { color: var(--primary-light); font-weight: 800; }
+    .plan a { color: var(--text); text-decoration: none; }
+    .plan a strong { color: var(--primary-light); }
+    .plan a:hover strong { text-decoration: underline; }
+    .plan .plan-fin { margin: 0; font-size: 0.95rem; color: var(--text-muted); }
+    .plan .plan-fin a { color: var(--primary-light); font-weight: 700; }
+    .essentiel { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--primary); border-radius: 14px; padding: 1.2rem 1.4rem 0.4rem; margin: 0 0 2rem; }
+    .essentiel h2 { margin: 0 0 0.7rem; font-size: 1.15rem; }
+    .essentiel ul { margin-left: 1.1rem; }
+    .plan-toc { list-style: none; margin: 0 !important; padding: 0; display: grid; gap: 0.15rem; }
+    .plan-toc li { margin: 0; }
+    .plan-toc a { display: flex; align-items: center; gap: 0.7rem; padding: 0.45rem 0.4rem; border-radius: 10px; color: var(--text); text-decoration: none; min-height: 44px; }
+    .plan-toc a:hover { background: rgba(124,92,252,0.12); text-decoration: none; }
+    .pt-n { flex: none; width: 1.8rem; height: 1.8rem; border-radius: 8px; display: grid; place-items: center; background: rgba(124,92,252,0.18); color: var(--primary-light); font-weight: 800; font-size: 0.9rem; }
+    .pt-t { font-weight: 700; line-height: 1.3; }
+    .plan .pt-d { margin: -0.1rem 0 0.4rem 2.9rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); }
+    .plan .pt-d strong { color: var(--text); }
+    .pt-src .pt-n { background: transparent; border: 1px dashed rgba(167,139,250,0.5); }
+    .g6-tag { flex: none; display: inline-block; margin-left: auto; padding: 0.05rem 0.5rem; border-radius: 999px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.03em; line-height: 1.5; color: #d9ccff; background: rgba(124,92,252,0.22); border: 1px solid rgba(167,139,250,0.4); align-self: center; }
+    .plan-toc li.is-g6, .toc-sheet .plan-toc li.is-g6 { background: rgba(124,92,252,0.1); border: 1px solid rgba(167,139,250,0.32); border-radius: 12px; margin: 0.15rem 0; }
+    .plan-toc li.is-g6 .pt-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; }
+    .plan .plan-toc li.is-g6 .pt-d { margin-right: 0.6rem; }
+    .fig { margin: 1.8rem 0 2rem; }
+    .fig figcaption { margin-top: 0.7rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
+    .diagram { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 0.9rem; }
+    @media (max-width: 600px) { .diagram { padding: 0.8rem 0.35rem; } }
+    .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+    .diagram .d-box { fill: rgba(124,92,252,0.12); stroke: rgba(167,139,250,0.5); stroke-width: 1.2; }
+    .diagram .d-box-up { fill: rgba(52,211,153,0.1); stroke: rgba(52,211,153,0.55); stroke-width: 1.2; }
+    .diagram .d-box-down { fill: rgba(251,191,36,0.08); stroke: rgba(251,191,36,0.5); stroke-width: 1.2; }
+    .diagram .d-box-opt { fill: none; stroke: rgba(167,139,250,0.6); stroke-width: 1.2; stroke-dasharray: 5 4; }
+    .diagram .d-t { fill: var(--text); font-weight: 700; font-size: 15px; }
+    .diagram .d-s { fill: var(--text-muted); font-size: 13.5px; }
+    .diagram .d-n { fill: #fff; font-weight: 800; font-size: 13px; }
+    .diagram .d-num { fill: url(#d-grad); }
+    .diagram .d-line { fill: none; stroke: var(--primary-light); stroke-width: 1.6; }
+    .diagram .d-dash { fill: none; stroke: var(--primary-light); stroke-width: 1.4; stroke-dasharray: 4 4; opacity: 0.8; }
+    .diagram .d-head { fill: var(--primary-light); }
+    .diagram .d-ico { fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diagram .d-up { fill: #6ee7b7; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-down { fill: #fcd34d; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-band-1 { fill: rgba(99,102,241,0.22); }
+    .diagram .d-band-2 { fill: rgba(124,92,252,0.3); }
+    .diagram .d-band-3 { fill: rgba(168,85,247,0.38); }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -247,16 +350,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -288,20 +392,65 @@
     <nav class="breadcrumb"><a href="/">Accueil</a> › <a href="/blog/">Blog</a> › Réviser le brevet de maths</nav>
 
     <h1>Comment réviser le <span class="grad">brevet de maths</span> : la méthode en 5 étapes</h1>
-    <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 24 juin 2026 · 6 min de lecture</div>
+    <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 24 juin 2026 · Mis à jour le 9 novembre 2026 · 6 min de lecture</div>
 
-    <p class="lead">L'épreuve de mathématiques du brevet fait souvent peur, alors qu'elle est l'une des plus « rentables » à réviser : le programme est limité, les types d'exercices reviennent chaque année, et une bonne méthode permet de gagner des points rapidement. Voici comment s'y prendre.</p>
+    <p class="lead">L'épreuve de mathématiques du brevet fait souvent peur, alors qu'elle est l'une des plus « rentables » à réviser : le programme est limité, les types d'exercices reviennent chaque année, et une bonne méthode permet de gagner des points rapidement. Galac6 (galac6.io) permet de passer des brevets blancs de maths chronométrés, sur 35 sujets officiels ou des sujets d'entraînement générés par l'IA, avec une correction exercice par exercice. Voici comment s'y prendre.</p>
 
-    <h2>Bien comprendre l'épreuve avant de réviser</h2>
+    <aside class="essentiel" aria-labelledby="essentiel-titre">
+      <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
+      <ul>
+        <li><strong>L'épreuve de maths du brevet</strong> dure 2 heures et elle est notée sur 20 points : 20 minutes d'automatismes sans calculatrice, puis 1 heure 40 d'exercices avec calculatrice.</li>
+        <li><strong>Six thèmes reviennent presque toujours</strong> : calcul littéral et équations, Pythagore et Thalès, proportionnalité et pourcentages, statistiques et probabilités, fonctions, programmes de calcul.</li>
+        <li><strong>La méthode tient en 5 étapes</strong> : repérer ses lacunes, revoir le cours activement, s'entraîner sur des annales, se mettre en conditions réelles, corriger en profondeur.</li>
+        <li><strong>La démarche est notée</strong>, pas seulement le résultat : on ne laisse jamais une question entièrement vide.</li>
+        <li><strong>Prix sur Galac6 :</strong> l'offre Découverte à 0 €, limitée à un sujet type brevet ou bac par mois, permet d'essayer. Pour tous les sujets officiels, l'offre Élève coûte 69 € par an.</li>
+      </ul>
+    </aside>
+
+    <nav class="plan" id="sommaire" aria-labelledby="plan-titre">
+      <h2 id="plan-titre">Ce que vous allez apprendre</h2>
+      <ol class="plan-toc">
+        <li><a href="#epreuve"><span class="pt-n">1</span><span class="pt-t">Le déroulement de l'épreuve</span></a></li>
+        <li><a href="#chapitres"><span class="pt-n">2</span><span class="pt-t">Les chapitres à réviser</span></a></li>
+        <li><a href="#methode"><span class="pt-n">3</span><span class="pt-t">La méthode en 5 étapes</span></a></li>
+        <li><a href="#planning"><span class="pt-n">4</span><span class="pt-t">Le planning sur 3 semaines</span></a></li>
+        <li class="is-g6"><a href="#avec-galac6"><span class="pt-n">5</span><span class="pt-t">Réviser avec Galac6</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#questions-frequentes"><span class="pt-n">6</span><span class="pt-t">Questions fréquentes</span></a></li>
+      </ol>
+    </nav>
+
+    <h2 id="epreuve">Comment se passe l'épreuve de maths du brevet ?</h2>
     <p>L'épreuve de maths du DNB dure <strong>2 heures</strong> et est notée sur <strong>20 points</strong>. Elle se découpe en deux temps :</p>
     <ul>
-      <li><strong>Les automatismes</strong> (environ 20 minutes, sans calculatrice) : des questions rapides de calcul et de logique.</li>
-      <li><strong>Les exercices</strong> (le reste du temps, calculatrice autorisée) : 5 à 7 exercices indépendants, souvent ancrés dans des situations concrètes.</li>
+      <li><strong>Les automatismes</strong> (environ 20 minutes, sans calculatrice, 6 points) : des questions rapides de calcul et de logique.</li>
+      <li><strong>Les exercices</strong> (le reste du temps, soit 1 heure 40, calculatrice autorisée, 14 points) : 5 à 7 exercices indépendants, souvent ancrés dans des situations concrètes.</li>
     </ul>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 160" role="img" aria-labelledby="schema-epreuve-titre schema-epreuve-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-epreuve-titre">Les 2 heures de l'épreuve de maths du brevet</title>
+        <desc id="schema-epreuve-desc">Les 2 heures de l'épreuve. Automatismes : 20 minutes, 6 points : sans calculatrice. Exercices : 1 heure 40, 14 points : calculatrice autorisée.</desc>
+        <defs>
+          <linearGradient id="d-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+          <marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker>
+        </defs>
+        <rect class="d-band-3" x="8.0" y="8" width="55.3" height="40" rx="6"/>
+        <text class="d-t" x="36.7" y="33" text-anchor="middle">20 min</text>
+        <rect class="d-band-1" x="65.3" y="8" width="284.7" height="40" rx="6"/>
+        <text class="d-t" x="208.7" y="33" text-anchor="middle">1 h 40</text>
+        <rect class="d-band-3" x="8" y="66" width="16" height="16" rx="4"/>
+        <text class="d-t" x="34" y="79">Automatismes : 20 minutes, 6 points</text>
+        <text class="d-s" x="34" y="99">sans calculatrice</text>
+        <rect class="d-band-1" x="8" y="116" width="16" height="16" rx="4"/>
+        <text class="d-t" x="34" y="129">Exercices : 1 heure 40, 14 points</text>
+        <text class="d-s" x="34" y="149">calculatrice autorisée</text>
+      </svg>
+      <figcaption>L'épreuve commence sans calculatrice : les automatismes s'entretiennent toute l'année.</figcaption>
+    </figure>
     <p>Bonne nouvelle : les exercices sont <strong>indépendants</strong>. Rater le premier ne pénalise pas les suivants. On peut donc commencer par ceux qu'on maîtrise le mieux.</p>
 
-    <h2>Les chapitres qui tombent presque à coup sûr</h2>
-    <p>Inutile de tout réviser avec la même intensité. Quelques thèmes reviennent dans la quasi-totalité des sujets :</p>
+    <h2 id="chapitres">Quels chapitres tombent le plus souvent au brevet de maths ?</h2>
+    <p>Six grands thèmes reviennent dans la quasi-totalité des sujets : inutile de tout réviser avec la même intensité.</p>
     <ul>
       <li><strong>Calcul littéral et équations</strong> : développer, factoriser, résoudre.</li>
       <li><strong>Théorème de Pythagore et de Thalès</strong> : le grand classique de la géométrie.</li>
@@ -311,7 +460,43 @@
       <li><strong>Programmes de calcul et un peu d'algorithmique</strong> (type Scratch).</li>
     </ul>
 
-    <h2>La méthode en 5 étapes</h2>
+    <h2 id="methode">Quelle méthode suivre pour réviser le brevet de maths ?</h2>
+    <p>La méthode la plus efficace tient en cinq étapes : repérer ses lacunes, revoir le cours activement, s'entraîner sur des annales, se mettre en conditions réelles, puis corriger en profondeur.</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 442" role="img" aria-labelledby="schema-methode-titre schema-methode-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-methode-titre">La méthode en 5 étapes pour réviser le brevet de maths</title>
+        <desc id="schema-methode-desc">Étape 1 : Faire le point sur ses lacunes, un quiz rapide par thème. Étape 2 : Revoir le cours activement, refaire un exemple type par notion. Étape 3 : S'entraîner sur des annales, format, vocabulaire, temps imparti. Étape 4 : Se mettre en conditions réelles, un sujet complet en 2 heures. Étape 5 : Corriger en profondeur, comprendre chaque erreur. Puis puis on revient sur les erreurs.</desc>
+        <rect class="d-box" x="30" y="8" width="314" height="62" rx="12"/>
+        <circle class="d-num" cx="56" cy="39" r="13"/><text class="d-n" x="56" y="44" text-anchor="middle">1</text>
+        <text class="d-t" x="80" y="34">Faire le point sur ses lacunes</text>
+        <text class="d-s" x="80" y="54">un quiz rapide par thème</text>
+        <path class="d-line" d="M187 70V88" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="30" y="92" width="314" height="62" rx="12"/>
+        <circle class="d-num" cx="56" cy="123" r="13"/><text class="d-n" x="56" y="128" text-anchor="middle">2</text>
+        <text class="d-t" x="80" y="118">Revoir le cours activement</text>
+        <text class="d-s" x="80" y="138">refaire un exemple type par notion</text>
+        <path class="d-line" d="M187 154V172" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="30" y="176" width="314" height="62" rx="12"/>
+        <circle class="d-num" cx="56" cy="207" r="13"/><text class="d-n" x="56" y="212" text-anchor="middle">3</text>
+        <text class="d-t" x="80" y="202">S'entraîner sur des annales</text>
+        <text class="d-s" x="80" y="222">format, vocabulaire, temps imparti</text>
+        <path class="d-line" d="M187 238V256" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="30" y="260" width="314" height="62" rx="12"/>
+        <circle class="d-num" cx="56" cy="291" r="13"/><text class="d-n" x="56" y="296" text-anchor="middle">4</text>
+        <text class="d-t" x="80" y="286">Se mettre en conditions réelles</text>
+        <text class="d-s" x="80" y="306">un sujet complet en 2 heures</text>
+        <path class="d-line" d="M187 322V340" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="30" y="344" width="314" height="62" rx="12"/>
+        <circle class="d-num" cx="56" cy="375" r="13"/><text class="d-n" x="56" y="380" text-anchor="middle">5</text>
+        <text class="d-t" x="80" y="370">Corriger en profondeur</text>
+        <text class="d-s" x="80" y="390">comprendre chaque erreur</text>
+        <path class="d-dash" d="M30 375H14V39H26" marker-end="url(#d-arr)"/>
+        <text class="d-s" x="187" y="430" text-anchor="middle">puis on revient sur les erreurs</text>
+      </svg>
+      <figcaption>Les 5 étapes. La flèche en pointillé rappelle que chaque erreur renvoie à une notion à retravailler.</figcaption>
+    </figure>
+
     <ol class="steps">
       <li><strong>Faire le point sur ses lacunes.</strong> Avant de réviser au hasard, repérez les chapitres où votre enfant bloque. Un quiz rapide par thème suffit à savoir où concentrer les efforts.</li>
       <li><strong>Revoir le cours, mais activement.</strong> Relire ne suffit pas. Il faut refaire un exemple type par notion, à la main, sans regarder la correction.</li>
@@ -324,15 +509,37 @@
       <p><svg class="g6-ico g6-ico-inline" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V17h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/></svg> <strong>Le réflexe qui rapporte gros :</strong> au brevet de maths, la <strong>démarche est notée</strong>, pas seulement le résultat. Même sans trouver la réponse finale, écrire ses calculs, poser le théorème utilisé ou justifier une étape rapporte des points. On ne laisse jamais une question entièrement vide.</p>
     </div>
 
-    <h2>Un planning simple sur 3 semaines</h2>
-    <p>Pas besoin d'un emploi du temps compliqué. Une trame réaliste, à raison de 30 à 45 minutes par jour :</p>
+    <h2 id="planning">Quel planning suivre pour réviser le brevet de maths en 3 semaines ?</h2>
+    <p>Comptez 30 à 45 minutes par jour pendant 3 semaines, en passant du cours aux exercices, puis aux sujets complets. Pas besoin d'un emploi du temps compliqué :</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 254" role="img" aria-labelledby="schema-planning-titre schema-planning-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-planning-titre">Le planning de révision sur 3 semaines</title>
+        <desc id="schema-planning-desc">Semaine 1 : un chapitre par jour, revoir le cours, et quelques exercices ciblés. Semaine 2 : des exercices type brevet, thème par thème,, en corrigeant à fond. Semaine 3 : des sujets complets en conditions réelles,, puis on revient sur les erreurs.</desc>
+        <path class="d-line" d="M20 20V184"/>
+        <circle class="d-num" cx="20" cy="20" r="8"/>
+        <text class="d-t" x="42" y="25">Semaine 1</text>
+        <text class="d-s" x="42" y="46">un chapitre par jour, revoir le cours</text>
+        <text class="d-s" x="42" y="66">et quelques exercices ciblés</text>
+        <circle class="d-num" cx="20" cy="102" r="8"/>
+        <text class="d-t" x="42" y="107">Semaine 2</text>
+        <text class="d-s" x="42" y="128">des exercices type brevet, thème par thème,</text>
+        <text class="d-s" x="42" y="148">en corrigeant à fond</text>
+        <circle class="d-num" cx="20" cy="184" r="8"/>
+        <text class="d-t" x="42" y="189">Semaine 3</text>
+        <text class="d-s" x="42" y="210">des sujets complets en conditions réelles,</text>
+        <text class="d-s" x="42" y="230">puis on revient sur les erreurs</text>
+      </svg>
+      <figcaption>Trois semaines, 30 à 45 minutes par jour.</figcaption>
+    </figure>
+
     <ul>
       <li><strong>Semaine 1</strong> : un chapitre par jour, revoir le cours + quelques exercices ciblés.</li>
       <li><strong>Semaine 2</strong> : des exercices type brevet, thème par thème, en corrigeant à fond.</li>
       <li><strong>Semaine 3</strong> : des sujets complets en conditions réelles, puis on revient sur les erreurs.</li>
     </ul>
 
-    <h2>Comment Galac6 aide votre enfant à progresser en maths</h2>
+    <h2 id="avec-galac6">Comment Galac6 aide-t-il votre enfant à progresser en maths ?</h2>
     <p>Galac6 n'est pas une calculatrice qui donne la réponse : c'est un professeur particulier par IA qui suit la même logique que la méthode ci-dessus, étape par étape. Voici concrètement comment l'utiliser pour réviser le brevet de maths :</p>
     <ul>
       <li><strong>Repérer ses lacunes (étape 1)</strong> — votre enfant lance un <strong>quiz</strong> sur un thème (Pythagore, équations, probabilités…). Galac6 voit tout de suite ce qui est acquis et ce qui coince, pour ne pas réviser au hasard.</li>
@@ -340,10 +547,27 @@
       <li><strong>S'entraîner en conditions réelles (étapes 3 et 4)</strong> — le mode <a href="/reviser-brevet">brevet blanc</a> reprend exactement le format de l'épreuve : sujets inédits générés par l'IA ou annales officielles, chronomètre de 2 h, partie automatismes incluse.</li>
       <li><strong>Corriger en profondeur (étape 5)</strong> — à la fin, Galac6 corrige <strong>exercice par exercice</strong>, attribue la note et la mention, accorde les <strong>points partiels</strong> quand la démarche est bonne, et explique chaque erreur avec la règle à retenir.</li>
     </ul>
-    <p>Votre enfant peut recommencer sur des sujets toujours différents et suivre ses progrès dans le temps. Pour essayer, la formule Découverte comprend un sujet type brevet par mois ; les offres Élève et Famille ouvrent tous les sujets officiels en entier, en conditions d'examen (<a href="/tarifs">voir les tarifs</a>). Pour s'entraîner sur tous les chapitres, de la 6e à la 3e, voir aussi <a href="/reviser-maths">réviser les maths en ligne avec l'IA</a>.</p>
+    <p>Votre enfant peut recommencer sur des sujets toujours différents et suivre ses progrès dans le temps. Galac6 est un service payant : pour essayer, l'offre Découverte à 0 € est limitée à un sujet type brevet ou bac par mois ; l'offre Élève (69 € par an) et l'offre Famille (99 € par an) ouvrent tous les sujets officiels en entier, en conditions d'examen (<a href="/tarifs">voir les tarifs</a>). Pour s'entraîner sur tous les chapitres, de la 6e à la 3e, voir aussi <a href="/reviser-maths">réviser les maths en ligne avec l'IA</a>.</p>
     <div style="margin: 1.5rem 0;">
       <a href="https://galac6web.netlify.app/" class="cta-btn">Lancer un brevet blanc de maths →</a>
     </div>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <h2 id="questions-frequentes">Questions fréquentes</h2>
+      <h3>Combien de temps dure l'épreuve de maths du brevet ?</h3>
+      <p>L'épreuve de maths du brevet dure 2 heures et elle est notée sur 20 points : 20 minutes d'automatismes, puis 1 heure 40 d'exercices.</p>
+      <h3>La calculatrice est-elle autorisée au brevet de maths ?</h3>
+      <p>La calculatrice est interdite pendant les automatismes, les 20 premières minutes de l'épreuve. Elle est autorisée pour la partie exercices.</p>
+      <h3>Quels chapitres réviser en priorité pour le brevet de maths ?</h3>
+      <p>En priorité : le calcul littéral et les équations, les théorèmes de Pythagore et de Thalès, la proportionnalité et les pourcentages, les statistiques et les probabilités, les fonctions, les programmes de calcul.</p>
+      <h3>Que faire si on ne trouve pas le résultat d'une question ?</h3>
+      <p>Il faut écrire sa démarche, car elle est notée : poser le théorème utilisé ou justifier une étape rapporte des points, même sans le résultat final. On ne laisse jamais une question entièrement vide.</p>
+      <h3>Combien de temps faut-il pour réviser le brevet de maths ?</h3>
+      <p>Une trame réaliste tient en 3 semaines, à raison de 30 à 45 minutes par jour : d'abord un chapitre par jour, puis des exercices type brevet, enfin des sujets complets en conditions réelles.</p>
+      <h3>Combien coûte le brevet blanc de maths sur Galac6 ?</h3>
+      <p>L'offre Découverte, à 0 €, est limitée à un sujet type brevet ou bac par mois. Pour tous les sujets officiels en entier, l'offre Élève coûte 69 € par an ou 7,99 € par mois, et l'offre Famille 99 € par an.</p>
+    </section>
 
     <!-- Liens internes -->
     <div class="related">
@@ -359,6 +583,8 @@
         <li><a href="/blog/calcul-mental-personnalise">Calcul mental personnalisé et ludique</a></li>
         <li><a href="/fiches-revision-ia">Fiches de révision par IA à partir du cours</a></li>
         <li><a href="/blog/preparer-brevet-avec-ia">Préparer le brevet avec une IA : la méthode</a></li>
+        <li><a href="/blog/reviser-brevet-mois-par-mois">Réviser le brevet mois par mois : le planning de 3e</a></li>
+        <li><a href="/blog/galac6-ou-kwyk">Galac6 et Kwyk pour la classe de maths</a></li>
       </ul>
     </div>
 

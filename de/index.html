@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Galac6: KI-Tutor für den französischen Lehrplan</title>
+<title>Galac6: KI-Tutor online für den französischen Lehrplan</title>
 <meta content="Galac6 bereitet jeden Schüler auf seine Klassenarbeit vor: Lektion mit Lernblatt, Abfrage durch eine KI, dann Übungen auf seinem Niveau. Klasse 1 bis 12." name="description"/>
 <meta content="index, follow, max-image-preview:large" name="robots"/>
 <link href="https://galac6.io/de/" rel="canonical"/>
@@ -30,6 +30,20 @@
       "description": "Galac6 (galac6.io) bereitet jeden Schüler auf einzigartige Weise auf seine Klassenarbeit vor. Der Schüler lernt seine Lektion mit einem Galac6-Lernblatt. Danach fragt ihn eine KI ab, um zu messen, was er wirklich behalten hat. Dann schlägt Galac6 ihm Übungen auf seinem Niveau vor. Während der ganzen Arbeit hilft ihm ein pädagogischer Chat, ohne ihm jemals die Antwort zu geben. Jeder Schüler kann außerdem Diktate üben, mit über 2.000 Texten, Kopfrechnen trainieren und frühere Prüfungen des Brevet und des Bac bearbeiten. Von der 1. bis zur 12. Klasse, nach dem französischen Lehrplan. Daten in Frankreich gehostet, KI in Europa verarbeitet.",
       "email": "hello@galac6.io",
       "legalName": "RHK CONSEIL",
+      "foundingDate": "2026",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "RHK Conseil",
+        "legalName": "RHK CONSEIL",
+        "foundingDate": "2023",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "19 rue de Croulebarbe",
+          "postalCode": "75013",
+          "addressLocality": "Paris",
+          "addressCountry": "FR"
+        }
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "19 rue de Croulebarbe",
@@ -104,7 +118,7 @@
       "@type": "FAQPage",
       "@id": "https://galac6.io/de/#webpage",
       "url": "https://galac6.io/de/",
-      "name": "Galac6: KI-Tutor für den französischen Lehrplan",
+      "name": "Galac6: KI-Tutor online für den französischen Lehrplan",
       "inLanguage": "de",
       "isPartOf": {
         "@id": "https://galac6.io/de/#website"
@@ -633,16 +647,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 <script>window.G6_COOKIE_TXT = {"texte": "Wir möchten die Besuche dieser Website (Google Analytics) und die Ergebnisse unserer Werbung (Google Ads, Meta) messen. Diese Dienste setzen Cookies und werden nur geladen, wenn Sie zustimmen. Sie können Ihre Entscheidung jederzeit über den Link „Cookie-Einstellungen“ unten auf jeder Seite ändern.", "plus": "Mehr erfahren", "refuser": "Alle ablehnen", "perso": "Anpassen", "accepter": "Alle akzeptieren", "titrePerso": "Cookies auswählen", "audienceTitre": "Reichweitenmessung", "audienceTexte": "Google Analytics: zählt die Besuche und die aufgerufenen Seiten, um die Website zu verbessern.", "pubTitre": "Werbung", "pubTexte": "Google Ads und Meta (Facebook, Instagram): messen die Ergebnisse unserer Werbung.", "enregistrer": "Auswahl speichern", "necessaires": "Die Website speichert außerdem Ihre Sprache und diese Auswahl auf Ihrem Gerät (notwendig, ohne Einwilligung).", "lien": "/mentions-legales#cookies-en"};</script>
 <style id="g6-lang-css">
@@ -712,7 +727,7 @@
 </div>
 <div class="hero-actions">
 <a class="btn btn-secondary" href="https://galac6web.netlify.app/">Registrieren oder anmelden</a>
-
+<a class="link" href="/de/lernmethode">Unsere Lernmethode →</a>
 <a class="link" href="/de/tarifs">Preise ansehen →</a>
 </div>
 <p class="made-fr"><svg aria-hidden="true" class="ico"><use href="#i-pin"></use></svg><span>Entwickelt in Frankreich, Daten in Frankreich gehostet, KI in Europa verarbeitet.</span></p>
@@ -754,6 +769,8 @@
 <!-- Schéma (masqué sous 560 px : la liste numérotée prend le relais) -->
 <div class="loop-graphic">
 <svg aria-label="Kreislauf in sechs Schritten: Der Schüler arbeitet, jede Antwort wird analysiert, eine Lernstandskarte entsteht, Galac6 schlägt Übungen nach Maß vor, Eltern und Lehrkraft sehen, wo der Schüler steht, die Lehrkraft gibt individuelle Hausaufgaben, dann zurück zum Schüler." role="img" viewbox="0 0 640 600">
+<title>Der Galac6-Kreislauf in sechs Schritten</title>
+<desc>Kreislauf in sechs Schritten: Der Schüler arbeitet, jede Antwort wird analysiert, eine Lernstandskarte entsteht, Galac6 schlägt Übungen nach Maß vor, Eltern und Lehrkraft sehen, wo der Schüler steht, die Lehrkraft gibt individuelle Hausaufgaben, dann zurück zum Schüler.</desc>
 <defs><lineargradient id="cgrad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#6366f1"></stop><stop offset="1" stop-color="#a855f7"></stop></lineargradient></defs>
 <circle class="loop-track" cx="320" cy="300" r="210"></circle>
 <path class="loop-arrow" d="M-6,-7 L7,0 L-6,7 Z" transform="translate(425 118.1) rotate(30)"></path>
@@ -1120,7 +1137,7 @@
 <div class="footer-col">
 <span class="footer-col-title">Lernen</span>
 <a href="/soutien-scolaire-ia" hreflang="fr">Nachhilfe mit KI</a>
-
+<a href="/de/lernmethode">Die Lernmethode</a>
 <a href="/reviser-brevet" hreflang="fr">Für das Brevet lernen</a>
 <a href="/reviser-bac-francais" hreflang="fr">Bac in Französisch wiederholen</a>
 <a href="/reviser-bac-maths" hreflang="fr">Mathe-Bac wiederholen</a>

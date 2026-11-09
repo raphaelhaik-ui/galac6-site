@@ -69,7 +69,7 @@
         "caption": "Galac6, l'IA au service de la pédagogie."
       },
       "datePublished": "2026-10-31",
-      "dateModified": "2026-10-31",
+      "dateModified": "2026-11-09",
       "inLanguage": "fr-FR",
       "mainEntityOfPage": "https://galac6.io/blog/corriger-dictees-professeurs",
       "keywords": "correction dictée, dictée professeur, orthographe, école primaire, collège, innovation pédagogique, edtech",
@@ -211,6 +211,56 @@
       /* Menu : une seule ligne, plus serré sur écran moyen */
     .navbar-links a { white-space: nowrap; }
     @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
+
+    /* Encadré, sommaire et schémas : mêmes styles que les articles récents */
+    .plan { background: rgba(124,92,252,0.08); border: 1px solid rgba(124,92,252,0.3); border-radius: 14px; padding: 1.1rem 1.4rem 1rem; margin: 0 0 1.4rem; }
+    .plan h2 { margin: 0 0 0.6rem; font-size: 1.15rem; }
+    .plan ol { margin: 0 0 0.6rem 1.2rem; padding: 0; }
+    .plan li { margin-bottom: 0.45rem; line-height: 1.5; }
+    .plan li::marker { color: var(--primary-light); font-weight: 800; }
+    .plan a { color: var(--text); text-decoration: none; }
+    .plan a strong { color: var(--primary-light); }
+    .plan a:hover strong { text-decoration: underline; }
+    .plan .plan-fin { margin: 0; font-size: 0.95rem; color: var(--text-muted); }
+    .plan .plan-fin a { color: var(--primary-light); font-weight: 700; }
+    .essentiel { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--primary); border-radius: 14px; padding: 1.2rem 1.4rem 0.4rem; margin: 0 0 2rem; }
+    .essentiel h2 { margin: 0 0 0.7rem; font-size: 1.15rem; }
+    .essentiel ul { margin-left: 1.1rem; }
+    .plan-toc { list-style: none; margin: 0 !important; padding: 0; display: grid; gap: 0.15rem; }
+    .plan-toc li { margin: 0; }
+    .plan-toc a { display: flex; align-items: center; gap: 0.7rem; padding: 0.45rem 0.4rem; border-radius: 10px; color: var(--text); text-decoration: none; min-height: 44px; }
+    .plan-toc a:hover { background: rgba(124,92,252,0.12); text-decoration: none; }
+    .pt-n { flex: none; width: 1.8rem; height: 1.8rem; border-radius: 8px; display: grid; place-items: center; background: rgba(124,92,252,0.18); color: var(--primary-light); font-weight: 800; font-size: 0.9rem; }
+    .pt-t { font-weight: 700; line-height: 1.3; }
+    .plan .pt-d { margin: -0.1rem 0 0.4rem 2.9rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); }
+    .plan .pt-d strong { color: var(--text); }
+    .pt-src .pt-n { background: transparent; border: 1px dashed rgba(167,139,250,0.5); }
+    .g6-tag { flex: none; display: inline-block; margin-left: auto; padding: 0.05rem 0.5rem; border-radius: 999px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.03em; line-height: 1.5; color: #d9ccff; background: rgba(124,92,252,0.22); border: 1px solid rgba(167,139,250,0.4); align-self: center; }
+    .plan-toc li.is-g6, .toc-sheet .plan-toc li.is-g6 { background: rgba(124,92,252,0.1); border: 1px solid rgba(167,139,250,0.32); border-radius: 12px; margin: 0.15rem 0; }
+    .plan-toc li.is-g6 .pt-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; }
+    .plan .plan-toc li.is-g6 .pt-d { margin-right: 0.6rem; }
+    .fig { margin: 1.8rem 0 2rem; }
+    .fig figcaption { margin-top: 0.7rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
+    .diagram { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 0.9rem; }
+    @media (max-width: 600px) { .diagram { padding: 0.8rem 0.35rem; } }
+    .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+    .diagram .d-box { fill: rgba(124,92,252,0.12); stroke: rgba(167,139,250,0.5); stroke-width: 1.2; }
+    .diagram .d-box-up { fill: rgba(52,211,153,0.1); stroke: rgba(52,211,153,0.55); stroke-width: 1.2; }
+    .diagram .d-box-down { fill: rgba(251,191,36,0.08); stroke: rgba(251,191,36,0.5); stroke-width: 1.2; }
+    .diagram .d-box-opt { fill: none; stroke: rgba(167,139,250,0.6); stroke-width: 1.2; stroke-dasharray: 5 4; }
+    .diagram .d-t { fill: var(--text); font-weight: 700; font-size: 15px; }
+    .diagram .d-s { fill: var(--text-muted); font-size: 13.5px; }
+    .diagram .d-n { fill: #fff; font-weight: 800; font-size: 13px; }
+    .diagram .d-num { fill: url(#d-grad); }
+    .diagram .d-line { fill: none; stroke: var(--primary-light); stroke-width: 1.6; }
+    .diagram .d-dash { fill: none; stroke: var(--primary-light); stroke-width: 1.4; stroke-dasharray: 4 4; opacity: 0.8; }
+    .diagram .d-head { fill: var(--primary-light); }
+    .diagram .d-ico { fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diagram .d-up { fill: #6ee7b7; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-down { fill: #fcd34d; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-band-1 { fill: rgba(99,102,241,0.22); }
+    .diagram .d-band-2 { fill: rgba(124,92,252,0.3); }
+    .diagram .d-band-3 { fill: rgba(168,85,247,0.38); }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -285,16 +335,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -326,12 +377,36 @@
     <nav class="breadcrumb"><a href="/">Accueil</a> › <a href="/blog/">Blog</a> › Corriger les dictées</nav>
 
     <h1>Corriger les dictées <span class="grad">plus vite</span> : guide pratique pour les professeurs</h1>
-    <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 31 octobre 2026 · 4 min de lecture</div>
+    <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 31 octobre 2026 · Mis à jour le 9 novembre 2026 · 4 min de lecture</div>
 
-    <p class="lead">La dictée reste un outil précieux pour faire progresser vos élèves en orthographe. Mais une classe de vingt-cinq élèves, c'est vingt-cinq copies à corriger, souvent le soir. Ce guide rassemble des pratiques simples pour gagner du temps sans perdre en qualité, et pour que la correction serve vraiment aux apprentissages.</p>
+    <p class="lead">La dictée reste un outil précieux pour faire progresser vos élèves en orthographe. Mais une classe de vingt-cinq élèves, c'est vingt-cinq copies à corriger, souvent le soir. Ce guide rassemble des pratiques simples pour gagner du temps sans perdre en qualité, et pour que la correction serve vraiment aux apprentissages. Il indique aussi ce que Galac6 (galac6.io) peut prendre en charge : la lecture à voix haute de plus de 2 000 dictées et leur correction faute par faute, du CP au collège.</p>
 
-    <h2>Corriger moins, mais corriger mieux</h2>
-    <p>Une copie entièrement annotée en rouge prend du temps à corriger et décourage souvent l'élève, qui ne sait plus par où commencer. Les ressources d'Eduscol sur <a href="https://cache.media.eduscol.education.fr/file/Etude_de_la_langue/20/8/RA16_C3-C4_Francais_Etude_langue_Differentes_formes_dictees_activites_759208.pdf" target="_blank" rel="noopener">les différentes formes de dictées</a> rappellent que la dictée doit s'inscrire dans un enseignement explicite de l'orthographe : elle sert à apprendre autant qu'à évaluer.</p>
+    <aside class="essentiel" aria-labelledby="essentiel-titre">
+      <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
+      <ul>
+        <li><strong>Pour corriger plus vite</strong>, ciblez une ou deux notions par dictée et signalez les autres erreurs d'un simple trait dans la marge.</li>
+        <li><strong>Un code à cinq lettres</strong> (A pour accord, C pour conjugaison, H pour homophone, L pour orthographe lexicale, P pour ponctuation) indique le type d'erreur : l'élève cherche la correction.</li>
+        <li><strong>Cinq minutes de relecture guidée</strong> avant de ramasser les copies font disparaître une partie des erreurs.</li>
+        <li><strong>Un barème par type d'erreur</strong> dit à l'élève ce qu'il doit travailler, mieux qu'un simple « un point par faute ».</li>
+        <li><strong>Galac6</strong> lit les dictées à vos élèves, explique chaque erreur avec sa règle, corrige aussi les copies papier à partir d'une photo, et vous montre la réussite de la classe par notion.</li>
+      </ul>
+    </aside>
+
+    <nav class="plan" id="sommaire" aria-labelledby="plan-titre">
+      <h2 id="plan-titre">Ce que vous allez apprendre</h2>
+      <ol class="plan-toc">
+        <li><a href="#tout-corriger"><span class="pt-n">1</span><span class="pt-t">Faut-il tout corriger ?</span></a></li>
+        <li><a href="#code-correction"><span class="pt-n">2</span><span class="pt-t">Le code de correction</span></a></li>
+        <li><a href="#avant-correction"><span class="pt-n">3</span><span class="pt-t">Faire travailler les élèves avant</span></a></li>
+        <li><a href="#bareme"><span class="pt-n">4</span><span class="pt-t">Le barème par type d'erreur</span></a></li>
+        <li><a href="#trace-progres"><span class="pt-n">5</span><span class="pt-t">Garder une trace des progrès</span></a></li>
+        <li class="is-g6"><a href="#avec-galac6"><span class="pt-n">6</span><span class="pt-t">Ce que Galac6 prend en charge</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#questions-frequentes"><span class="pt-n">7</span><span class="pt-t">Questions fréquentes</span></a></li>
+      </ol>
+    </nav>
+
+    <h2 id="tout-corriger">Faut-il tout corriger dans une dictée ?</h2>
+    <p>Non : ciblez une ou deux notions par dictée et ne corrigez en détail que celles-ci. Une copie entièrement annotée en rouge prend du temps à corriger et décourage souvent l'élève, qui ne sait plus par où commencer. Les ressources d'Eduscol sur <a href="https://cache.media.eduscol.education.fr/file/Etude_de_la_langue/20/8/RA16_C3-C4_Francais_Etude_langue_Differentes_formes_dictees_activites_759208.pdf" target="_blank" rel="noopener">les différentes formes de dictées</a> rappellent que la dictée doit s'inscrire dans un enseignement explicite de l'orthographe : elle sert à apprendre autant qu'à évaluer.</p>
     <p>Concrètement, vous pouvez :</p>
     <ul>
       <li><strong>cibler une ou deux notions par dictée</strong> (accord sujet-verbe, homophones grammaticaux, participe passé) et ne corriger en détail que celles-ci ;</li>
@@ -339,18 +414,84 @@
       <li><strong>garder les dictées longues et évaluées</strong> pour quelques moments clés de la période.</li>
     </ul>
 
-    <h2>Adopter un code de correction commun</h2>
-    <p>Un code de correction connu des élèves fait gagner beaucoup de temps : vous indiquez le type d'erreur, l'élève cherche la correction. Par exemple :</p>
+    <h2 id="code-correction">Quel code de correction utiliser pour les dictées ?</h2>
+    <p>Un code simple à cinq lettres suffit : vous indiquez le type d'erreur, l'élève cherche la correction, et vous gagnez beaucoup de temps. Par exemple :</p>
     <ul>
-      <li><strong>A</strong> pour une erreur d'accord ;</li>
-      <li><strong>C</strong> pour une erreur de conjugaison ;</li>
-      <li><strong>H</strong> pour un homophone ;</li>
-      <li><strong>L</strong> pour l'orthographe lexicale (l'orthographe du mot lui-même) ;</li>
+      <li><strong>A</strong> pour une erreur d'accord (« des fleurs rouge ») ;</li>
+      <li><strong>C</strong> pour une erreur de conjugaison (« ils chantes ») ;</li>
+      <li><strong>H</strong> pour un homophone (« il à faim ») ;</li>
+      <li><strong>L</strong> pour l'orthographe lexicale, c'est-à-dire l'orthographe du mot lui-même (« un éléfant ») ;</li>
       <li><strong>P</strong> pour la ponctuation ou les majuscules.</li>
     </ul>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 346" role="img" aria-labelledby="schema-code-titre schema-code-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-code-titre">Un exemple de code de correction à cinq lettres</title>
+        <desc id="schema-code-desc">A : Accord, des fleurs rouge. C : Conjugaison, ils chantes. H : Homophone, il à faim. L : Orthographe lexicale, un éléfant. P : Ponctuation ou majuscules, à reprendre par l'élève.</desc>
+        <defs>
+          <linearGradient id="d-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+          <marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker>
+        </defs>
+        <rect class="d-box" x="8" y="6" width="344" height="60" rx="12"/>
+        <rect class="d-band-2" x="18" y="18" width="46" height="36" rx="8"/>
+        <text class="d-t" x="41" y="41" text-anchor="middle">A</text>
+        <text class="d-t" x="76" y="32">Accord</text>
+        <text class="d-s" x="76" y="52">des fleurs rouge</text>
+        <rect class="d-box" x="8" y="74" width="344" height="60" rx="12"/>
+        <rect class="d-band-2" x="18" y="86" width="46" height="36" rx="8"/>
+        <text class="d-t" x="41" y="109" text-anchor="middle">C</text>
+        <text class="d-t" x="76" y="100">Conjugaison</text>
+        <text class="d-s" x="76" y="120">ils chantes</text>
+        <rect class="d-box" x="8" y="142" width="344" height="60" rx="12"/>
+        <rect class="d-band-2" x="18" y="154" width="46" height="36" rx="8"/>
+        <text class="d-t" x="41" y="177" text-anchor="middle">H</text>
+        <text class="d-t" x="76" y="168">Homophone</text>
+        <text class="d-s" x="76" y="188">il à faim</text>
+        <rect class="d-box" x="8" y="210" width="344" height="60" rx="12"/>
+        <rect class="d-band-2" x="18" y="222" width="46" height="36" rx="8"/>
+        <text class="d-t" x="41" y="245" text-anchor="middle">L</text>
+        <text class="d-t" x="76" y="236">Orthographe lexicale</text>
+        <text class="d-s" x="76" y="256">un éléfant</text>
+        <rect class="d-box" x="8" y="278" width="344" height="60" rx="12"/>
+        <rect class="d-band-2" x="18" y="290" width="46" height="36" rx="8"/>
+        <text class="d-t" x="41" y="313" text-anchor="middle">P</text>
+        <text class="d-t" x="76" y="304">Ponctuation ou majuscules</text>
+        <text class="d-s" x="76" y="324">à reprendre par l'élève</text>
+      </svg>
+      <figcaption>Chaque lettre, écrite dans la marge, indique le type d'erreur : c'est l'élève qui cherche la correction.</figcaption>
+    </figure>
     <p>Affiché en classe et collé dans les cahiers, ce code rend la correction plus rapide pour vous et plus active pour l'élève. Il est encore plus efficace s'il est partagé par l'équipe, d'une classe à l'autre.</p>
 
-    <h2>Faire travailler les élèves avant votre correction</h2>
+    <h2 id="avant-correction">Comment faire travailler les élèves avant votre correction ?</h2>
+    <p>Faites-les se relire avec une consigne précise, ou choisissez une forme de dictée qui les fait réfléchir : une partie du travail est faite avant que vous preniez votre stylo.</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 328" role="img" aria-labelledby="schema-avant-titre schema-avant-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-avant-titre">Du ramassage des copies à la prochaine séance</title>
+        <desc id="schema-avant-desc">Étape 1 : Relecture guidée, cinq minutes, avec une consigne précise. Étape 2 : Autocorrection, ou correction entre pairs, texte projeté. Étape 3 : Vous vérifiez quelques copies, plutôt que tout reprendre. Étape 4 : Relevé des erreurs fréquentes, le contenu de la prochaine séance.</desc>
+        <rect class="d-box" x="8" y="8" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="39" r="13"/><text class="d-n" x="34" y="44" text-anchor="middle">1</text>
+        <text class="d-t" x="58" y="34">Relecture guidée</text>
+        <text class="d-s" x="58" y="54">cinq minutes, avec une consigne précise</text>
+        <path class="d-line" d="M180 70V88" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="92" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="123" r="13"/><text class="d-n" x="34" y="128" text-anchor="middle">2</text>
+        <text class="d-t" x="58" y="118">Autocorrection</text>
+        <text class="d-s" x="58" y="138">ou correction entre pairs, texte projeté</text>
+        <path class="d-line" d="M180 154V172" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="176" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="207" r="13"/><text class="d-n" x="34" y="212" text-anchor="middle">3</text>
+        <text class="d-t" x="58" y="202">Vous vérifiez quelques copies</text>
+        <text class="d-s" x="58" y="222">plutôt que tout reprendre</text>
+        <path class="d-line" d="M180 238V256" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="8" y="260" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="291" r="13"/><text class="d-n" x="34" y="296" text-anchor="middle">4</text>
+        <text class="d-t" x="58" y="286">Relevé des erreurs fréquentes</text>
+        <text class="d-s" x="58" y="306">le contenu de la prochaine séance</text>
+      </svg>
+      <figcaption>Quatre temps qui réduisent la correction du soir et préparent la séance d'orthographe suivante.</figcaption>
+    </figure>
+
     <h3>La relecture guidée</h3>
     <p>Avant de ramasser les copies, accordez cinq minutes de relecture avec une consigne précise : « Soulignez chaque verbe et vérifiez son sujet », puis « Entourez chaque nom au pluriel et vérifiez ses accords ». Une partie des erreurs disparaît avant même que vous preniez votre stylo.</p>
     <h3>Les formes de dictée qui font réfléchir</h3>
@@ -362,23 +503,41 @@
     <h3>L'autocorrection et la correction entre pairs</h3>
     <p>Avec le texte projeté, les élèves corrigent leur propre copie ou celle d'un camarade, code de correction en main. Vous vérifiez ensuite rapidement quelques copies plutôt que tout reprendre.</p>
 
-    <h2>Un barème par type d'erreur</h2>
-    <p>Pour vos dictées de classe, le barème relève de votre choix pédagogique et de celui de votre équipe. Beaucoup d'enseignants préfèrent un barème par catégorie au simple « un point par faute » : il dit à l'élève <strong>ce qu'il doit travailler</strong>. Par exemple, une note sur les accords, une sur la conjugaison, une sur l'orthographe lexicale. Vous voyez aussi d'un coup d'œil les notions à reprendre avec toute la classe.</p>
+    <h2 id="bareme">Quel barème choisir pour une dictée de classe ?</h2>
+    <p>Un barème par type d'erreur est souvent plus utile que le simple « un point par faute », car il dit à l'élève <strong>ce qu'il doit travailler</strong>. Le choix relève de vous et de votre équipe. Vous pouvez par exemple donner une note sur les accords, une sur la conjugaison, une sur l'orthographe lexicale. Avec une seule note, l'élève ne sait pas quoi travailler ; avec plusieurs, vous voyez aussi d'un coup d'œil les notions à reprendre avec toute la classe.</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 242" role="img" aria-labelledby="schema-bareme-titre schema-bareme-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-bareme-titre">Un point par faute ou un barème par type d'erreur</title>
+        <desc id="schema-bareme-desc">Un point par faute : une seule note, l'élève ne sait pas quoi travailler. Un barème par type d'erreur : une note sur les accords, une sur la conjugaison, une sur l'orthographe lexicale, l'élève voit ce qu'il doit travailler.</desc>
+        <rect class="d-box-down" x="8" y="6" width="344" height="88" rx="12"/>
+        <text class="d-t" x="24" y="34">Un point par faute</text>
+        <text class="d-s" x="24" y="57">une seule note</text>
+        <text class="d-s" x="24" y="78">l'élève ne sait pas quoi travailler</text>
+        <rect class="d-box-up" x="8" y="106" width="344" height="130" rx="12"/>
+        <text class="d-t" x="24" y="134">Un barème par type d'erreur</text>
+        <text class="d-s" x="24" y="157">une note sur les accords</text>
+        <text class="d-s" x="24" y="178">une sur la conjugaison</text>
+        <text class="d-s" x="24" y="199">une sur l'orthographe lexicale</text>
+        <text class="d-s" x="24" y="220">l'élève voit ce qu'il doit travailler</text>
+      </svg>
+      <figcaption>La même dictée donne une information bien plus utile quand la note est détaillée par type d'erreur.</figcaption>
+    </figure>
 
     <div class="callout">
       <p><strong>Une astuce qui fait gagner du temps :</strong> tenez un relevé simple des erreurs les plus fréquentes de la classe pendant que vous corrigez. Cinq minutes de relevé vous donnent le contenu de votre prochaine séance d'orthographe.</p>
     </div>
 
-    <h2>Garder une trace des progrès</h2>
+    <h2 id="trace-progres">Comment garder une trace des progrès de chaque élève ?</h2>
     <p>Un petit carnet d'erreurs par élève, ou une fiche où il note ses erreurs récurrentes et la règle associée, l'aide à se relire de façon ciblée lors des dictées suivantes. Il voit aussi ses progrès, ce qui entretient la motivation.</p>
     <h3>Associer les familles</h3>
     <p>Les parents demandent souvent comment aider leur enfant en orthographe. Leur transmettre la liste des notions travaillées dans la période, ou les deux ou trois erreurs qui reviennent le plus chez leur enfant, leur permet de soutenir le travail de la classe à la maison, sans refaire la leçon à leur façon. Une courte dictée de quelques phrases, deux ou trois fois par semaine, suffit souvent.</p>
 
-    <h2>Ce que Galac6 peut prendre en charge</h2>
-    <p>Galac6 est une plateforme d'innovation pédagogique pensée pour faire gagner du temps aux professeurs, du primaire au lycée :</p>
+    <h2 id="avec-galac6">Que peut prendre en charge Galac6 dans la correction des dictées ?</h2>
+    <p>Galac6 lit les dictées à vos élèves, les corrige faute par faute et vous montre les résultats de la classe. C'est une plateforme d'innovation pédagogique pensée pour faire gagner du temps aux professeurs, du primaire au lycée :</p>
     <ul>
       <li><strong>Plus de 2 000 dictées lues et corrigées</strong> : chaque élève fait la dictée seul sur son écran, en classe ou à la maison, sans que vous ayez à la dicter. La correction explique chaque erreur avec la règle associée.</li>
-      <li><strong>Les copies papier scannées puis corrigées</strong>, quand vous préférez garder la dictée sur cahier.</li>
+      <li><strong>Les copies papier scannées puis corrigées</strong>, quand vous préférez garder la dictée sur cahier : vous vérifiez la correction proposée avant de la valider.</li>
       <li><strong>Une vue d'ensemble de la classe</strong> : qui a fait le travail, qui est en retard, et la réussite par notion, avec les élèves en difficulté.</li>
       <li><strong>Des dictées sur mesure</strong>, qui reprennent les notions que chaque élève doit encore travailler.</li>
     </ul>
@@ -386,7 +545,7 @@
 
     <!-- FAQ -->
     <section class="faq">
-      <h2>Questions fréquentes</h2>
+      <h2 id="questions-frequentes">Questions fréquentes</h2>
       <h3>Quelle longueur de dictée privilégier pour progresser ?</h3>
       <p>Des dictées courtes et fréquentes sont souvent plus utiles qu'une longue dictée de temps en temps : elles permettent de cibler une ou deux notions et de corriger rapidement, voire collectivement.</p>
       <h3>Faut-il noter chaque dictée ?</h3>
@@ -416,6 +575,7 @@
         <li><a href="/guide-prof">Guide professeur : votre premier quiz Galac6</a></li>
         <li><a href="/blog/calcul-mental-primaire">Calcul mental à l'école primaire : 10 minutes par jour</a></li>
         <li><a href="/blog/galac6-dictee">Dictées audio corrigées du CP à la 3e</a></li>
+        <li><a href="/blog/galac6-professeur-francais">Galac6 pour un professeur de français</a></li>
       </ul>
     </div>
 

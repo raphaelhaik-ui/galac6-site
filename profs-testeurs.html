@@ -60,7 +60,7 @@
           "name": "Mes élèves doivent-ils s'inscrire ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Oui, pour faire vos devoirs dans Galac6, chaque élève a besoin d'un compte. La famille crée un compte Galac6, puis saisit le code de votre classe. Vous pouvez aussi importer la liste de la classe depuis un fichier exporté de Pronote ou d'École Directe, ou une liste collée : chaque élève reçoit alors un code personnel pour entrer directement dans la classe."
+            "text": "Oui, pour faire vos devoirs dans Galac6, chaque élève a besoin d'un compte. La famille crée un compte Galac6, puis saisit le code de votre classe dans Galac6 (Paramètres, puis Élèves). Vous pouvez aussi imprimer l'affiche de la classe, avec son QR code. Vous pouvez aussi importer la liste de la classe depuis un fichier exporté de Pronote ou d'École Directe, ou une liste collée : chaque élève reçoit alors un code personnel pour entrer directement dans la classe."
           }
         },
         {
@@ -68,7 +68,23 @@
           "name": "Faut-il l'accord de ma direction ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Pour utiliser Galac6 avec une vraie classe, en principe oui : parlez-en à votre direction avant d'inviter vos élèves. Vous pouvez commencer seul, avec une classe de démonstration sans élèves réels, pour découvrir l'espace professeur."
+            "text": "Pour utiliser Galac6 avec une vraie classe, en principe oui : parlez-en à votre direction avant d'inviter vos élèves. Notre page « Vos données et celles de vos élèves » peut l'aider à se décider. En attendant, vous pouvez commencer seul, avec une classe de démonstration sans élèves réels, pour découvrir l'espace professeur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "L'intelligence artificielle donne-t-elle les réponses aux élèves ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. Le tuteur de Galac6 pose des questions, donne des indices et guide l'élève étape par étape. Pour vos devoirs, c'est vous qui validez chaque question et chaque note."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Où sont stockées les données de mes élèves ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les comptes et les données sont hébergés en France, dans une base de données à Paris. L'intelligence artificielle de Galac6 est traitée en Europe ; seuls quelques services techniques, comme l'hébergement du site internet, font appel à des prestataires situés hors de l'Union européenne. Tout est expliqué sur notre page « Vos données et celles de vos élèves »."
           }
         }
       ],
@@ -452,16 +468,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>

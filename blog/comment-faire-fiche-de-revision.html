@@ -7,8 +7,6 @@
   <meta name="description" content="Comment faire une fiche de révision, du primaire au lycée : quoi mettre dedans, quel format choisir, comment se tester avec, et ce que Galac6 apporte.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/blog/comment-faire-fiche-de-revision">
-  <link rel="alternate" hreflang="fr" href="https://galac6.io/blog/comment-faire-fiche-de-revision">
-  <link rel="alternate" hreflang="x-default" href="https://galac6.io/blog/comment-faire-fiche-de-revision">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Galac6">
   <meta property="og:locale" content="fr_FR">
@@ -20,7 +18,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
   <meta property="article:published_time" content="2026-11-04">
-  <meta property="article:modified_time" content="2026-11-04">
+  <meta property="article:modified_time" content="2026-11-09">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Comment faire une fiche de révision : la méthode en 5 étapes">
   <meta name="twitter:description" content="Quoi mettre dans une fiche, quel format choisir, comment se tester avec : la méthode du primaire au lycée.">
@@ -75,7 +73,7 @@
         }
       ],
       "datePublished": "2026-11-04",
-      "dateModified": "2026-11-04",
+      "dateModified": "2026-11-09",
       "inLanguage": "fr-FR",
       "mainEntityOfPage": "https://galac6.io/blog/comment-faire-fiche-de-revision",
       "keywords": "comment faire une fiche de révision, fiche de révision, méthode fiche de révision, que mettre dans une fiche de révision, fiche de révision collège, fiche de révision primaire, fiche de révision lycée, se tester, interroge-moi sur ma leçon",
@@ -468,16 +466,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -523,7 +522,7 @@
         <li><strong>La méthode en 5 étapes</strong> : relire le cours, trier l'essentiel, écrire court avec ses mots, ajouter des questions et les pièges, puis se tester.</li>
         <li><strong>Dedans</strong> : le titre du chapitre, ce qui est à savoir par cœur (définitions, règles, formules, dates), un exemple, les pièges et quelques questions.</li>
         <li><strong>Le format dépend du moment</strong> : fiche détaillée pour comprendre, fiche résumée pour relire avant le contrôle, carte mentale pour relier les idées, cartes recto verso pour se tester.</li>
-        <li><strong>Avec Galac6</strong>, l'élève prend son cours en photo et obtient une fiche, ou se fait guider pour la construire lui-même. Le bouton « Je suis prêt, interroge-moi ! » lance ensuite 5 à 7 questions sur la leçon et un bilan sur 20.</li>
+        <li><strong>Avec Galac6 (galac6.io)</strong>, l'élève prend son cours en photo et obtient une fiche, ou se fait guider pour la construire lui-même. Le bouton « Je suis prêt, interroge-moi ! » lance ensuite 5 à 7 questions sur la leçon et un bilan sur 20.</li>
       </ul>
     </aside>
 
@@ -588,7 +587,7 @@
         <path class="d-dash" d="M30 375H14V123H26" marker-end="url(#d-arr)"/>
         <text class="d-s" x="187" y="434" text-anchor="middle">puis revoir ce qui est raté</text>
       </svg>
-      <figcaption>Les 5 étapes pour faire une fiche de révision. La flèche en pointillé rappelle qu'on revient sur les points ratés.</figcaption>
+      <figcaption>Les 5 étapes pour faire une fiche de révision : relire le cours (titres et mots en gras), trier l'essentiel (définitions, règles, dates), écrire court (avec ses mots, une page au plus), ajouter des questions et les pièges à éviter, se tester (cacher, réciter, vérifier), puis revoir ce qui est raté.</figcaption>
     </figure>
 
     <ol class="steps">
@@ -628,7 +627,7 @@
         <text class="d-s" x="42" y="364">3 à 5 questions pour me tester,</text>
         <text class="d-s" x="42" y="380">au dos ou en bas de la fiche</text>
       </svg>
-      <figcaption>Le plan type d'une fiche de révision : le titre, ce qui est à savoir par cœur, un exemple, les pièges et les questions pour se tester.</figcaption>
+      <figcaption>Le plan type d'une fiche de révision : le titre du chapitre avec la matière et la classe, ce qui est à savoir par cœur (définitions, règles, formules, dates, vocabulaire), un exemple (un calcul résolu ou une phrase type), les pièges (les erreurs que je fais souvent) et mes questions : 3 à 5 questions pour me tester, au dos ou en bas de la fiche.</figcaption>
     </figure>
 
     <h3>Ce qu'on met dans la fiche</h3>
@@ -673,7 +672,7 @@
         <text class="d-t" x="202" y="212">Cartes recto verso</text>
         <text class="d-s" x="202" y="234">se tester</text>
       </svg>
-      <figcaption>Quatre formats de fiche de révision, chacun utile à un moment différent.</figcaption>
+      <figcaption>Quatre formats de fiche de révision, chacun utile à un moment différent : la fiche détaillée pour comprendre la leçon, la fiche résumée pour relire la veille, la carte mentale pour relier les idées, les cartes recto verso pour se tester.</figcaption>
     </figure>
 
     <div class="table-wrap">
@@ -717,7 +716,7 @@
         </g>
         <text class="d-s" x="180" y="210" text-anchor="middle">Même méthode, fiche de plus en plus autonome.</text>
       </svg>
-      <figcaption>La fiche de révision évolue avec l'âge : de la notion illustrée au primaire aux fiches de méthode au lycée.</figcaption>
+      <figcaption>La fiche de révision évolue avec l'âge. Primaire (CP à CM2) : une notion, un dessin, réciter à l'oral. Collège (6e à 3e) : un chapitre, un exemple, les pièges. Lycée (2de à terminale) : les méthodes, cartes mentales, sujets d'annales. Même méthode, fiche de plus en plus autonome.</figcaption>
     </figure>
 
     <h3>Au primaire : une notion, un dessin, à l'oral</h3>
@@ -758,7 +757,7 @@
         <path class="d-dash" d="M30 317H14V41H26" marker-end="url(#d-arr3)"/>
         <text class="d-s" x="187" y="372" text-anchor="middle">en commençant par les points ratés</text>
       </svg>
-      <figcaption>La boucle pour se tester avec une fiche de révision : cacher, répondre, vérifier, revoir.</figcaption>
+      <figcaption>La boucle pour se tester avec une fiche de révision : cacher la fiche ou la retourner, répondre ou réciter à voix haute, sans regarder, vérifier avec la fiche (juste, oublié ou faux), revoir ce qui est raté et recommencer un autre jour, en commençant par les points ratés.</figcaption>
     </figure>
 
     <ul>
@@ -814,7 +813,7 @@
         <text class="d-s" x="267" y="480" text-anchor="middle">surlignées, et refaire</text>
         <path class="d-dash" d="M267 498V512H14V267H26" marker-end="url(#d-arr4)"/>
       </svg>
-      <figcaption>Avec Galac6 : la photo du cours devient une fiche, puis l'élève se fait interroger et reçoit un bilan sur 20.</figcaption>
+      <figcaption>Avec Galac6 : la photo du cours, même écrit à la main, devient une fiche détaillée, résumée ou une carte mentale. Ou le guide : Galac6 pose des questions, l'élève écrit sa fiche. « Interroge-moi ! » lance 5 à 7 questions, fiche cachée, puis un bilan sur 20 avec les points à revoir. À 17/20 au moins sans question ratée : place aux exercices. Pas encore : revoir les parties surlignées, et refaire.</figcaption>
     </figure>
 
     <h3>Une fiche créée à partir de la photo du cours</h3>

@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Réviser le brevet mois par mois : le planning de 3e — Galac6</title>
-  <meta name="description" content="Réussir son année de 3e : comment est calculé le brevet des collèges (DNB) et un planning de révision mois par mois, de septembre à juin.">
+  <meta name="description" content="Réussir son année de 3e : comment est calculé le brevet des collèges (DNB) et un planning de révision mois par mois, de septembre à juin, avec le bon rythme.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/blog/reviser-brevet-mois-par-mois">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Galac6">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:title" content="Réussir son année de 3e : organiser ses révisions du brevet mois par mois">
-  <meta property="og:description" content="Réussir son année de 3e : comment est calculé le brevet des collèges (DNB) et un planning de révision mois par mois, de septembre à juin.">
+  <meta property="og:description" content="Réussir son année de 3e : comment est calculé le brevet des collèges (DNB) et un planning de révision mois par mois, de septembre à juin, avec le bon rythme.">
   <meta property="og:url" content="https://galac6.io/blog/reviser-brevet-mois-par-mois">
   <meta property="og:image" content="https://galac6.io/images/og-image-v2.jpg">
   <meta property="og:image:width" content="1200">
@@ -20,7 +20,7 @@
   <meta property="article:published_time" content="2026-10-31">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Réussir son année de 3e : organiser ses révisions du brevet mois par mois">
-  <meta name="twitter:description" content="Réussir son année de 3e : comment est calculé le brevet des collèges (DNB) et un planning de révision mois par mois, de septembre à juin.">
+  <meta name="twitter:description" content="Réussir son année de 3e : comment est calculé le brevet des collèges (DNB) et un planning de révision mois par mois, de septembre à juin, avec le bon rythme.">
   <meta name="twitter:image" content="https://galac6.io/images/og-image-v2.jpg">
   <meta name="twitter:image:alt" content="Galac6, l'IA au service de la pédagogie.">
   <link rel="icon" type="image/png" href="/icons/32x32.png">
@@ -60,7 +60,7 @@
     {
       "@type": "BlogPosting",
       "headline": "Réussir son année de 3e : organiser ses révisions du brevet mois par mois",
-      "description": "Réussir son année de 3e : comment est calculé le brevet des collèges (DNB) et un planning de révision mois par mois, de septembre à juin.",
+      "description": "Réussir son année de 3e : comment est calculé le brevet des collèges (DNB) et un planning de révision mois par mois, de septembre à juin, avec le bon rythme.",
       "image": {
         "@type": "ImageObject",
         "url": "https://galac6.io/images/og-image-v2.jpg",
@@ -69,7 +69,7 @@
         "caption": "Galac6, l'IA au service de la pédagogie."
       },
       "datePublished": "2026-10-31",
-      "dateModified": "2026-11-04",
+      "dateModified": "2026-11-09",
       "inLanguage": "fr-FR",
       "mainEntityOfPage": "https://galac6.io/blog/reviser-brevet-mois-par-mois",
       "keywords": "révision DNB, brevet des collèges (DNB), 3e, planning de révision, collège, brevet blanc, annales",
@@ -211,6 +211,56 @@
       /* Menu : une seule ligne, plus serré sur écran moyen */
     .navbar-links a { white-space: nowrap; }
     @media (min-width: 901px) and (max-width: 1240px) { .navbar-links { gap: 1rem; } .navbar-links a { font-size: 0.82rem; } }
+
+    /* Encadré, sommaire et schémas : mêmes styles que les articles récents */
+    .plan { background: rgba(124,92,252,0.08); border: 1px solid rgba(124,92,252,0.3); border-radius: 14px; padding: 1.1rem 1.4rem 1rem; margin: 0 0 1.4rem; }
+    .plan h2 { margin: 0 0 0.6rem; font-size: 1.15rem; }
+    .plan ol { margin: 0 0 0.6rem 1.2rem; padding: 0; }
+    .plan li { margin-bottom: 0.45rem; line-height: 1.5; }
+    .plan li::marker { color: var(--primary-light); font-weight: 800; }
+    .plan a { color: var(--text); text-decoration: none; }
+    .plan a strong { color: var(--primary-light); }
+    .plan a:hover strong { text-decoration: underline; }
+    .plan .plan-fin { margin: 0; font-size: 0.95rem; color: var(--text-muted); }
+    .plan .plan-fin a { color: var(--primary-light); font-weight: 700; }
+    .essentiel { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--primary); border-radius: 14px; padding: 1.2rem 1.4rem 0.4rem; margin: 0 0 2rem; }
+    .essentiel h2 { margin: 0 0 0.7rem; font-size: 1.15rem; }
+    .essentiel ul { margin-left: 1.1rem; }
+    .plan-toc { list-style: none; margin: 0 !important; padding: 0; display: grid; gap: 0.15rem; }
+    .plan-toc li { margin: 0; }
+    .plan-toc a { display: flex; align-items: center; gap: 0.7rem; padding: 0.45rem 0.4rem; border-radius: 10px; color: var(--text); text-decoration: none; min-height: 44px; }
+    .plan-toc a:hover { background: rgba(124,92,252,0.12); text-decoration: none; }
+    .pt-n { flex: none; width: 1.8rem; height: 1.8rem; border-radius: 8px; display: grid; place-items: center; background: rgba(124,92,252,0.18); color: var(--primary-light); font-weight: 800; font-size: 0.9rem; }
+    .pt-t { font-weight: 700; line-height: 1.3; }
+    .plan .pt-d { margin: -0.1rem 0 0.4rem 2.9rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); }
+    .plan .pt-d strong { color: var(--text); }
+    .pt-src .pt-n { background: transparent; border: 1px dashed rgba(167,139,250,0.5); }
+    .g6-tag { flex: none; display: inline-block; margin-left: auto; padding: 0.05rem 0.5rem; border-radius: 999px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.03em; line-height: 1.5; color: #d9ccff; background: rgba(124,92,252,0.22); border: 1px solid rgba(167,139,250,0.4); align-self: center; }
+    .plan-toc li.is-g6, .toc-sheet .plan-toc li.is-g6 { background: rgba(124,92,252,0.1); border: 1px solid rgba(167,139,250,0.32); border-radius: 12px; margin: 0.15rem 0; }
+    .plan-toc li.is-g6 .pt-n { background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color: #fff; }
+    .plan .plan-toc li.is-g6 .pt-d { margin-right: 0.6rem; }
+    .fig { margin: 1.8rem 0 2rem; }
+    .fig figcaption { margin-top: 0.7rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
+    .diagram { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 0.9rem; }
+    @media (max-width: 600px) { .diagram { padding: 0.8rem 0.35rem; } }
+    .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+    .diagram .d-box { fill: rgba(124,92,252,0.12); stroke: rgba(167,139,250,0.5); stroke-width: 1.2; }
+    .diagram .d-box-up { fill: rgba(52,211,153,0.1); stroke: rgba(52,211,153,0.55); stroke-width: 1.2; }
+    .diagram .d-box-down { fill: rgba(251,191,36,0.08); stroke: rgba(251,191,36,0.5); stroke-width: 1.2; }
+    .diagram .d-box-opt { fill: none; stroke: rgba(167,139,250,0.6); stroke-width: 1.2; stroke-dasharray: 5 4; }
+    .diagram .d-t { fill: var(--text); font-weight: 700; font-size: 15px; }
+    .diagram .d-s { fill: var(--text-muted); font-size: 13.5px; }
+    .diagram .d-n { fill: #fff; font-weight: 800; font-size: 13px; }
+    .diagram .d-num { fill: url(#d-grad); }
+    .diagram .d-line { fill: none; stroke: var(--primary-light); stroke-width: 1.6; }
+    .diagram .d-dash { fill: none; stroke: var(--primary-light); stroke-width: 1.4; stroke-dasharray: 4 4; opacity: 0.8; }
+    .diagram .d-head { fill: var(--primary-light); }
+    .diagram .d-ico { fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diagram .d-up { fill: #6ee7b7; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-down { fill: #fcd34d; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-band-1 { fill: rgba(99,102,241,0.22); }
+    .diagram .d-band-2 { fill: rgba(124,92,252,0.3); }
+    .diagram .d-band-3 { fill: rgba(168,85,247,0.38); }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -285,16 +335,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -326,12 +377,35 @@
     <nav class="breadcrumb"><a href="/">Accueil</a> › <a href="/blog/">Blog</a> › Réviser le brevet mois par mois</nav>
 
     <h1>Réussir son année de 3e : organiser ses <span class="grad">révisions du brevet</span> mois par mois</h1>
-    <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 31 octobre 2026 · 4 min de lecture</div>
+    <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 31 octobre 2026 · Mis à jour le 9 novembre 2026 · 4 min de lecture</div>
 
-    <p class="lead">Le brevet des collèges (DNB) ne se joue pas seulement en juin. Depuis la session 2026, les notes de toute l'année de 3e comptent dans le résultat final. Bien organisée, la révision du DNB peut se faire sans stress de dernière minute. Voici comment l'étaler sur l'année, mois par mois.</p>
+    <p class="lead">Le brevet des collèges (DNB) ne se joue pas seulement en juin. Depuis la session 2026, les notes de toute l'année de 3e comptent dans le résultat final. Bien organisée, la révision du DNB peut se faire sans stress de dernière minute. Galac6 (galac6.io), le tuteur IA qui suit le programme français, propose pour cela des brevets blancs corrigés sur 129 sujets officiels. Voici comment étaler les révisions sur l'année, mois par mois.</p>
 
-    <h2>Comment le brevet est calculé depuis 2026</h2>
-    <p>D'après le ministère de l'Éducation nationale, qui présente <a href="https://www.education.gouv.fr/diplome-national-du-brevet-2026-le-point-sur-les-nouveautes-470615" target="_blank" rel="noopener">les nouveautés du brevet 2026</a> :</p>
+    <aside class="essentiel" aria-labelledby="essentiel-titre">
+      <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
+      <ul>
+        <li><strong>Depuis la session 2026</strong>, les épreuves finales comptent pour 60 % de la note du brevet et le contrôle continu pour 40 %. Le diplôme est attribué avec une moyenne finale d'au moins 10 sur 20.</li>
+        <li><strong>Le contrôle continu</strong> repose sur les moyennes annuelles de 3e : le travail régulier dès septembre est la première des révisions.</li>
+        <li><strong>Le planning</strong> : s'organiser à l'automne, consolider les bases, passer un brevet blanc en hiver, travailler les annales au printemps, finaliser en mai et alléger en juin.</li>
+        <li><strong>Trois réflexes rapportent des points</strong> : réviser activement, corriger en profondeur et ne jamais laisser une question vide.</li>
+        <li><strong>Prix sur Galac6 :</strong> l'offre Découverte à 0 €, limitée à un sujet type brevet ou bac par mois, permet d'essayer. Pour tous les sujets officiels, l'offre Élève coûte 69 € par an.</li>
+      </ul>
+    </aside>
+
+    <nav class="plan" id="sommaire" aria-labelledby="plan-titre">
+      <h2 id="plan-titre">Ce que vous allez apprendre</h2>
+      <ol class="plan-toc">
+        <li><a href="#calcul-brevet"><span class="pt-n">1</span><span class="pt-t">Le calcul de la note du brevet</span></a></li>
+        <li><a href="#planning"><span class="pt-n">2</span><span class="pt-t">Le planning de septembre à juin</span></a></li>
+        <li><a href="#reflexes"><span class="pt-n">3</span><span class="pt-t">Les réflexes qui rapportent des points</span></a></li>
+        <li><a href="#parents"><span class="pt-n">4</span><span class="pt-t">Le rôle des parents</span></a></li>
+        <li class="is-g6"><a href="#avec-galac6"><span class="pt-n">5</span><span class="pt-t">Préparer son année avec Galac6</span><span class="g6-tag">Galac6</span></a></li>
+        <li><a href="#questions-frequentes"><span class="pt-n">6</span><span class="pt-t">Questions fréquentes</span></a></li>
+      </ol>
+    </nav>
+
+    <h2 id="calcul-brevet">Comment le brevet est-il calculé depuis 2026 ?</h2>
+    <p>Depuis la session 2026, les épreuves finales comptent pour 60 % de la note du brevet et le contrôle continu pour 40 %. D'après le ministère de l'Éducation nationale, qui présente <a href="https://www.education.gouv.fr/diplome-national-du-brevet-2026-le-point-sur-les-nouveautes-470615" target="_blank" rel="noopener">les nouveautés du brevet 2026</a> :</p>
     <ul>
       <li>les <strong>épreuves finales comptent pour 60 %</strong> de la note et le <strong>contrôle continu pour 40 %</strong> ;</li>
       <li>le contrôle continu repose sur les <strong>moyennes annuelles de 3e</strong> dans les disciplines obligatoires ;</li>
@@ -341,8 +415,55 @@
     <div class="callout">
       <p><strong>Ce que ça change :</strong> chaque trimestre de 3e compte. Un bon travail régulier dès septembre est la première des révisions du brevet.</p>
     </div>
+    <p>Voici un exemple simplifié. Un élève qui a 12 sur 20 au contrôle continu et 9 sur 20 aux épreuves finales obtient 12 × 0,4 + 9 × 0,6 = 4,8 + 5,4 = 10,2 sur 20 : il a son diplôme, grâce au travail de l'année.</p>
 
-    <h2>Le planning mois par mois</h2>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 264" role="img" aria-labelledby="schema-calcul-titre schema-calcul-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-calcul-titre">La note du brevet depuis la session 2026, avec un exemple</title>
+        <desc id="schema-calcul-desc">La note du brevet. Épreuves finales : 60 % : écrits et épreuve orale. Contrôle continu : 40 % : moyennes annuelles de 3e. Exemple simplifié : 10,2 sur 20 : contrôle continu 12, épreuves finales 9, 12 × 0,4 + 9 × 0,6 = 4,8 + 5,4 = 10,2.</desc>
+        <defs>
+          <linearGradient id="d-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+          <marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker>
+        </defs>
+        <g transform="translate(0,0)"><rect class="d-band-3" x="8.0" y="8" width="204.4" height="40" rx="6"/><text class="d-t" x="111.2" y="33" text-anchor="middle">60 %</text><rect class="d-band-1" x="214.4" y="8" width="135.6" height="40" rx="6"/><text class="d-t" x="283.2" y="33" text-anchor="middle">40 %</text><rect class="d-band-3" x="8" y="66" width="16" height="16" rx="4"/><text class="d-t" x="34" y="79">Épreuves finales : 60 %</text><text class="d-s" x="34" y="99">écrits et épreuve orale</text><rect class="d-band-1" x="8" y="116" width="16" height="16" rx="4"/><text class="d-t" x="34" y="129">Contrôle continu : 40 %</text><text class="d-s" x="34" y="149">moyennes annuelles de 3e</text></g>
+        <g transform="translate(0,164)"><rect class="d-box-up" x="8" y="6" width="344" height="88" rx="12"/><text class="d-t" x="24" y="34">Exemple simplifié : 10,2 sur 20</text><text class="d-s" x="24" y="57">contrôle continu 12, épreuves finales 9</text><text class="d-s" x="24" y="78">12 × 0,4 + 9 × 0,6 = 4,8 + 5,4 = 10,2</text></g>
+      </svg>
+      <figcaption>Le diplôme est attribué avec une moyenne finale d'au moins 10 sur 20.</figcaption>
+    </figure>
+
+    <h2 id="planning">Que réviser chaque mois de la 3e, de septembre à juin ?</h2>
+    <p>On s'organise à l'automne, on s'entraîne sur de vrais sujets en hiver et au printemps, puis on allège en juin. Voici le détail, mois par mois.</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 442" role="img" aria-labelledby="schema-planning-titre schema-planning-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-planning-titre">Le planning de révision du brevet, de septembre à juin</title>
+        <desc id="schema-planning-desc">Septembre, octobre : s'organiser : agenda, moment de travail fixe, fiches. Novembre, décembre : consolider : revoir chaque semaine un chapitre. Janvier, février : brevet blanc : analyser ses erreurs, liste de priorités. Mars : les annales : une annale par semaine. Avril : vacances de printemps : un sujet complet dans chaque matière. Mai : finaliser : fiches, erreurs fréquentes, oral. Juin : alléger et dormir : révisions courtes, sommeil régulier.</desc>
+        <path class="d-line" d="M20 20V392"/>
+        <circle class="d-num" cx="20" cy="20" r="8"/>
+        <text class="d-t" x="42" y="25">Septembre, octobre : s'organiser</text>
+        <text class="d-s" x="42" y="46">agenda, moment de travail fixe, fiches</text>
+        <circle class="d-num" cx="20" cy="82" r="8"/>
+        <text class="d-t" x="42" y="87">Novembre, décembre : consolider</text>
+        <text class="d-s" x="42" y="108">revoir chaque semaine un chapitre</text>
+        <circle class="d-num" cx="20" cy="144" r="8"/>
+        <text class="d-t" x="42" y="149">Janvier, février : brevet blanc</text>
+        <text class="d-s" x="42" y="170">analyser ses erreurs, liste de priorités</text>
+        <circle class="d-num" cx="20" cy="206" r="8"/>
+        <text class="d-t" x="42" y="211">Mars : les annales</text>
+        <text class="d-s" x="42" y="232">une annale par semaine</text>
+        <circle class="d-num" cx="20" cy="268" r="8"/>
+        <text class="d-t" x="42" y="273">Avril : vacances de printemps</text>
+        <text class="d-s" x="42" y="294">un sujet complet dans chaque matière</text>
+        <circle class="d-num" cx="20" cy="330" r="8"/>
+        <text class="d-t" x="42" y="335">Mai : finaliser</text>
+        <text class="d-s" x="42" y="356">fiches, erreurs fréquentes, oral</text>
+        <circle class="d-num" cx="20" cy="392" r="8"/>
+        <text class="d-t" x="42" y="397">Juin : alléger et dormir</text>
+        <text class="d-s" x="42" y="418">révisions courtes, sommeil régulier</text>
+      </svg>
+      <figcaption>Sept étapes pour répartir les révisions sur toute l'année de 3e.</figcaption>
+    </figure>
+
     <h3>Septembre et octobre : s'organiser</h3>
     <ul>
       <li>Mettre en place un agenda et un moment de travail fixe chaque soir.</li>
@@ -384,17 +505,18 @@
       <li>La veille, préparer ses affaires et ne pas réviser tard.</li>
     </ul>
 
-    <h2>Trois réflexes qui rapportent des points</h2>
+    <h2 id="reflexes">Quels réflexes rapportent le plus de points au brevet ?</h2>
+    <p>Trois réflexes rapportent le plus de points : réviser activement, corriger en profondeur et ne jamais laisser une question vide.</p>
     <ol class="steps">
       <li><strong>Réviser activement.</strong> Refaire des exercices et se faire interroger, plutôt que relire son cours.</li>
       <li><strong>Corriger en profondeur.</strong> Comprendre chaque erreur d'une annale vaut mieux que d'enchaîner les sujets sans les corriger.</li>
       <li><strong>Ne jamais laisser une question vide.</strong> Une démarche, une étape de calcul ou une idée bien formulée peut rapporter des points.</li>
     </ol>
-    <h2>Le rôle des parents</h2>
-    <p>En 3e, votre enfant gagne en autonomie, mais votre regard reste précieux. Sans vous transformer en professeur, vous pouvez l'aider à tenir son planning, vous intéresser à ses résultats du brevet blanc, l'écouter répéter son oral et veiller à son sommeil dans les dernières semaines. Un point rapide chaque dimanche sur la semaine à venir suffit souvent à garder le cap.</p>
+    <h2 id="parents">Comment les parents peuvent-ils aider leur enfant en 3e ?</h2>
+    <p>Vous aidez surtout en tenant le cadre : le planning, le sommeil et l'écoute de son oral. En 3e, votre enfant gagne en autonomie, mais votre regard reste précieux. Sans vous transformer en professeur, vous pouvez l'aider à tenir son planning, vous intéresser à ses résultats du brevet blanc, l'écouter répéter son oral et veiller à son sommeil dans les dernières semaines. Un point rapide chaque dimanche sur la semaine à venir suffit souvent à garder le cap.</p>
     <p>Pour les maths en particulier, voir notre méthode détaillée : <a href="/blog/reviser-brevet-maths">comment réviser le brevet de maths en 5 étapes</a>.</p>
 
-    <h2>Comment Galac6 accompagne l'année de 3e</h2>
+    <h2 id="avec-galac6">Comment Galac6 accompagne-t-il l'année de 3e ?</h2>
     <p>Galac6 est un tuteur IA scolaire pour le collège et le lycée, aligné sur le programme français :</p>
     <ul>
       <li><strong>Des brevets blancs</strong> dans les quatre matières écrites, avec une correction détaillée exercice par exercice.</li>
@@ -402,11 +524,11 @@
       <li><strong>Des exercices en nombre illimité</strong> sur les notions à retravailler, avec une aide aux devoirs didactique qui guide sans donner la réponse.</li>
       <li><strong>Des fiches de révision</strong> et « Interroge-moi sur ma leçon » pour vérifier que le cours est su.</li>
     </ul>
-    <p>Tout est présenté sur notre page <a href="/reviser-brevet">Réviser le brevet (DNB) avec l'IA</a>.</p>
+    <p>Galac6 est un service payant : l'offre Découverte à 0 €, limitée à un sujet type brevet ou bac par mois, permet d'essayer ; pour tous les sujets officiels, l'offre Élève coûte 69 € par an (<a href="/tarifs">voir les tarifs</a>). Tout est présenté sur notre page <a href="/reviser-brevet">Réviser le brevet (DNB) avec l'IA</a>.</p>
 
     <!-- FAQ -->
     <section class="faq">
-      <h2>Questions fréquentes</h2>
+      <h2 id="questions-frequentes">Questions fréquentes</h2>
       <h3>Comment est calculée la note du brevet ?</h3>
       <p>Depuis la session 2026, les épreuves finales comptent pour 60 % et le contrôle continu pour 40 %. Le contrôle continu repose sur les moyennes annuelles de 3e. Le diplôme est obtenu avec une moyenne finale d'au moins 10 sur 20.</p>
       <h3>Quand faut-il commencer à réviser le brevet ?</h3>
@@ -439,6 +561,7 @@
         <li><a href="/fiches-revision-ia">Fiches de révision par IA à partir du cours</a></li>
         <li><a href="/blog/comment-faire-fiche-de-revision">Comment faire une fiche de révision : la méthode en 5 étapes</a></li>
         <li><a href="/blog/preparer-brevet-avec-ia">Préparer le brevet avec une IA : la méthode</a></li>
+        <li><a href="/blog/ia-programme-education-nationale">Tuteur IA et programme de l'Éducation nationale</a></li>
       </ul>
     </div>
 

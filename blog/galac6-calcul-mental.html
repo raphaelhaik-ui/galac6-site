@@ -10,7 +10,7 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Galac6">
   <meta property="og:locale" content="fr_FR">
-  <meta property="og:title" content="Galac6 pour le calcul mental : séries courtes, à l&#x27;écrit ou à l&#x27;oral, du CP à la terminale">
+  <meta property="og:title" content="Application de calcul mental en ligne : Galac6, du CP à la terminale">
   <meta property="og:description" content="Une application de calcul mental pour enfants avec de l&#x27;IA ? Galac6 propose des séries courtes sur le programme de la classe, à l&#x27;écrit ou à l&#x27;oral. MuscuMath, pour les professeurs, couvre plus de 200 notions.">
   <meta property="og:url" content="https://galac6.io/blog/galac6-calcul-mental">
   <meta property="og:image" content="https://galac6.io/images/og-image-v2.jpg">
@@ -18,9 +18,9 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
   <meta property="article:published_time" content="2026-11-03">
-  <meta property="article:modified_time" content="2026-11-04">
+  <meta property="article:modified_time" content="2026-11-09">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Galac6 pour le calcul mental : séries courtes, à l&#x27;écrit ou à l&#x27;oral, du CP à la terminale">
+  <meta name="twitter:title" content="Application de calcul mental en ligne : Galac6, du CP à la terminale">
   <meta name="twitter:description" content="Une application de calcul mental pour enfants avec de l&#x27;IA ? Galac6 propose des séries courtes sur le programme de la classe, à l&#x27;écrit ou à l&#x27;oral. MuscuMath, pour les professeurs, couvre plus de 200 notions.">
   <meta name="twitter:image" content="https://galac6.io/images/og-image-v2.jpg">
   <meta name="twitter:image:alt" content="Galac6, l'IA au service de la pédagogie.">
@@ -60,7 +60,7 @@
     },
     {
       "@type": "BlogPosting",
-      "headline": "Galac6 pour le calcul mental : séries courtes, à l'écrit ou à l'oral, du CP à la terminale",
+      "headline": "Application de calcul mental en ligne : Galac6, du CP à la terminale",
       "description": "Une application de calcul mental pour enfants avec de l'IA ? Galac6 propose des séries courtes sur le programme de la classe, à l'écrit ou à l'oral. MuscuMath, pour les professeurs, couvre plus de 200 notions.",
       "image": {
         "@type": "ImageObject",
@@ -70,7 +70,7 @@
         "caption": "Galac6, l'IA au service de la pédagogie."
       },
       "datePublished": "2026-11-03",
-      "dateModified": "2026-11-04",
+      "dateModified": "2026-11-09",
       "inLanguage": "fr-FR",
       "mainEntityOfPage": "https://galac6.io/blog/galac6-calcul-mental",
       "keywords": "calcul mental, application calcul mental, calcul mental enfant, calcul mental oral, tables de multiplication, MuscuMath, CP, CM2, collège, lycée",
@@ -328,6 +328,30 @@
     .toc-list li.is-g6 .toc-t { flex: 1 1 0; min-width: 0; }
     .toc-list li.is-g6 .g6-tag { margin-left: 0; margin-top: 0.1rem; align-self: flex-start; }
     @media (prefers-reduced-motion: reduce) { .toc-btn, .toc-n, .toc-list a { transition: none; } html { scroll-behavior: auto; } }
+
+    /* Visuels : schémas */
+    .fig { margin: 1.8rem 0 2rem; }
+    .fig figcaption { margin-top: 0.7rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
+    .diagram { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 0.9rem; }
+    @media (max-width: 600px) { .diagram { padding: 0.8rem 0.35rem; } }
+    .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+    .diagram .d-box { fill: rgba(124,92,252,0.12); stroke: rgba(167,139,250,0.5); stroke-width: 1.2; }
+    .diagram .d-box-up { fill: rgba(52,211,153,0.1); stroke: rgba(52,211,153,0.55); stroke-width: 1.2; }
+    .diagram .d-box-down { fill: rgba(251,191,36,0.08); stroke: rgba(251,191,36,0.5); stroke-width: 1.2; }
+    .diagram .d-box-opt { fill: none; stroke: rgba(167,139,250,0.6); stroke-width: 1.2; stroke-dasharray: 5 4; }
+    .diagram .d-t { fill: var(--text); font-weight: 700; font-size: 15px; }
+    .diagram .d-s { fill: var(--text-muted); font-size: 13.5px; }
+    .diagram .d-n { fill: #fff; font-weight: 800; font-size: 13px; }
+    .diagram .d-num { fill: url(#d-grad); }
+    .diagram .d-line { fill: none; stroke: var(--primary-light); stroke-width: 1.6; }
+    .diagram .d-dash { fill: none; stroke: var(--primary-light); stroke-width: 1.4; stroke-dasharray: 4 4; opacity: 0.8; }
+    .diagram .d-head { fill: var(--primary-light); }
+    .diagram .d-ico { fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diagram .d-up { fill: #6ee7b7; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-down { fill: #fcd34d; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-band-1 { fill: rgba(99,102,241,0.22); }
+    .diagram .d-band-2 { fill: rgba(124,92,252,0.3); }
+    .diagram .d-band-3 { fill: rgba(168,85,247,0.38); }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -402,16 +426,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -444,15 +469,15 @@
   <article class="article">
     <nav class="breadcrumb"><a href="/">Accueil</a> › <a href="/blog/">Blog</a> › Galac6 pour le calcul mental</nav>
 
-    <h1>Galac6 pour le <span class="grad">calcul mental</span></h1>
+    <h1>Application de <span class="grad">calcul mental</span> en ligne : Galac6, du CP à la terminale</h1>
     <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 3 novembre 2026 · 6 min de lecture</div>
 
-    <p class="lead">Galac6 est une application de calcul mental en ligne, du CP à la terminale : des séries courtes sur le programme de la classe, cinq niveaux de difficulté, des questions lues ou écoutées et des réponses tapées ou dites au micro.</p>
+    <p class="lead">Galac6 (galac6.io) est une application de calcul mental en ligne, du CP à la terminale : des séries courtes sur le programme de la classe, cinq niveaux de difficulté, des questions lues ou écoutées et des réponses tapées ou dites au micro.</p>
 
     <aside class="essentiel" aria-labelledby="essentiel-titre">
       <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
       <ul>
-        <li>Galac6 propose du <strong>calcul mental en ligne du CP à la terminale</strong> : des séries courtes sur le programme de la classe, avec cinq niveaux de difficulté.</li>
+        <li>Galac6 (galac6.io) propose du <strong>calcul mental en ligne du CP à la terminale</strong> : des séries courtes sur le programme de la classe, avec cinq niveaux de difficulté.</li>
         <li>La question peut être lue ou <strong>écoutée</strong>, et la réponse tapée ou <strong>dite au micro</strong>. Des séries sans chronomètre sont aussi possibles.</li>
         <li>Les questions ratées reviennent dans les parties suivantes, et le niveau conseillé s'adapte aux résultats de votre enfant.</li>
         <li>Avec <strong>MuscuMath</strong>, le professeur envoie des séries à sa classe, ou une série sur mesure pour chaque élève.</li>
@@ -479,18 +504,75 @@
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="deroulement">Comment se passe une partie de calcul mental ?</h2>
+    <p>Une partie se joue en quatre temps : votre enfant choisit son niveau, règle le chronomètre, fait ses calculs, puis voit ses résultats.</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 336" role="img" aria-labelledby="schema-partie-titre schema-partie-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-partie-titre">Le déroulement d'une partie de calcul mental</title>
+        <desc id="schema-partie-desc">1. Le niveau : votre enfant choisit son niveau et ses chapitres. 2. Le chronomètre : de 30 secondes à 3 minutes, ou une série de 5 à 20 questions sans chronomètre. 3. Les calculs : il lit ou écoute la question, puis tape sa réponse ou la dit au micro. 4. Le résultat : les questions ratées, avec la bonne réponse, reviennent dans les parties suivantes.</desc>
+        <defs>
+          <linearGradient id="d-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+          <marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker>
+        </defs>
+        <rect class="d-box" x="8" y="8" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="39" r="13"/>
+        <text class="d-n" x="34" y="44" text-anchor="middle">1</text>
+        <text class="d-t" x="58" y="34">Le niveau</text>
+        <text class="d-s" x="58" y="54">son niveau et ses chapitres</text>
+        <path class="d-line" d="M180 70V88" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="92" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="123" r="13"/>
+        <text class="d-n" x="34" y="128" text-anchor="middle">2</text>
+        <text class="d-t" x="58" y="118">Le chronomètre</text>
+        <text class="d-s" x="58" y="138">de 30 s à 3 min, ou sans chronomètre</text>
+        <path class="d-line" d="M180 154V172" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="176" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="207" r="13"/>
+        <text class="d-n" x="34" y="212" text-anchor="middle">3</text>
+        <text class="d-t" x="58" y="202">Les calculs</text>
+        <text class="d-s" x="58" y="222">lire ou écouter, taper ou dire au micro</text>
+        <path class="d-line" d="M180 238V256" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="8" y="260" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="291" r="13"/>
+        <text class="d-n" x="34" y="296" text-anchor="middle">4</text>
+        <text class="d-t" x="58" y="286">Le résultat</text>
+        <text class="d-s" x="58" y="306">les questions ratées reviennent</text>
+      </svg>
+      <figcaption>Les quatre temps d'une partie de calcul mental sur Galac6 : lire ou écouter la question, taper sa réponse ou la dire au micro.</figcaption>
+    </figure>
+
     <ol class="steps">
       <li><strong>Le niveau.</strong> Votre enfant choisit son niveau et ses chapitres. Galac6 propose les notions déjà vues en classe à ce moment de l'année.</li>
       <li><strong>Le chronomètre.</strong> Il choisit la durée de la partie, de 30 secondes à 3 minutes (1 minute par défaut), et le temps par question. Il peut aussi jouer une série de 5 à 20 questions sans chronomètre.</li>
       <li><strong>Les calculs.</strong> Il lit la question ou l'écoute, puis tape sa réponse ou la dit au micro.</li>
       <li><strong>Le résultat.</strong> Il voit ses résultats par catégorie et les questions ratées avec la bonne réponse. Ces questions reviennent dans les parties suivantes.</li>
     </ol>
-    <p>Cinq niveaux de difficulté sont proposés. Le niveau conseillé monte quand votre enfant réussit vite et redescend après deux parties perdues : il reste dans une zone où il progresse sans se décourager.</p>
+    <p>Cinq niveaux de difficulté sont proposés. Le niveau conseillé monte après une partie réussie à au moins 90 % et redescend après deux parties de suite sous 50 % : votre enfant reste dans une zone où il progresse sans se décourager. Pour savoir comment ses erreurs reviennent et comment Galac6 s'adapte à lui, lisez <a href="/blog/calcul-mental-personnalise">le calcul mental personnalisé</a>.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="oral">Mon enfant peut-il faire du calcul mental à l'oral ?</h2>
     <p>Oui. C'est l'une des forces de Galac6. La question peut être <strong>écoutée à voix haute</strong> au lieu d'être lue à l'écran, et la réponse peut être <strong>dite au micro</strong>, par exemple « treize » ou « trois huitièmes ». Si Galac6 a mal compris, l'enfant corrige sa réponse au clavier. Il peut aussi tout faire à l'écrit.</p>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 214" role="img" aria-labelledby="schema-oral-titre schema-oral-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-oral-titre">Écrit ou oral : quatre façons de jouer</title>
+        <desc id="schema-oral-desc">La question peut être lue à l'écran ou écoutée à voix haute. La réponse peut être tapée au clavier ou dite au micro. Si Galac6 a mal compris, l'enfant corrige sa réponse au clavier.</desc>
+        <text class="d-t" x="8" y="22">La question</text>
+        <rect class="d-box" x="8" y="34" width="168" height="46" rx="12"/>
+        <text class="d-t" x="92" y="62" text-anchor="middle" style="font-size:14px">Lue à l'écran</text>
+        <rect class="d-box" x="184" y="34" width="168" height="46" rx="12"/>
+        <text class="d-t" x="268" y="62" text-anchor="middle" style="font-size:14px">Écoutée à voix haute</text>
+        <path class="d-line" d="M180 84V102" marker-end="url(#d-arr)"/>
+        <text class="d-t" x="8" y="120">La réponse</text>
+        <rect class="d-box" x="8" y="132" width="168" height="46" rx="12"/>
+        <text class="d-t" x="92" y="160" text-anchor="middle" style="font-size:14px">Tapée au clavier</text>
+        <rect class="d-box" x="184" y="132" width="168" height="46" rx="12"/>
+        <text class="d-t" x="268" y="160" text-anchor="middle" style="font-size:14px">Dite au micro</text>
+        <text class="d-s" x="180" y="196" text-anchor="middle">Si Galac6 a mal compris, il corrige au clavier</text>
+      </svg>
+      <figcaption>Votre enfant choisit comment recevoir la question et comment donner sa réponse : il peut tout faire à l'écrit, tout à l'oral, ou mélanger.</figcaption>
+    </figure>
+
     <p>L'oral rapproche l'entraînement de ce qui se pratique en classe, où le calcul mental est souvent posé à voix haute. C'est aussi plus confortable pour un jeune enfant qui tape encore lentement au clavier.</p>
 
     <div class="callout">
@@ -513,12 +595,37 @@
     <h2 id="muscumath">Qu'est-ce que MuscuMath ?</h2>
     <p><strong>MuscuMath est le calcul mental piloté par le professeur</strong>, pour les professeurs des écoles et les professeurs de mathématiques. Le professeur choisit des notions dans un catalogue de <strong>plus de 200 notions</strong> du CP à la terminale, chacune rattachée au programme officiel, ou il tape, colle ou photographie ses propres calculs : Galac6 calcule chaque réponse.</p>
     <p>Il règle la difficulté (Découverte, Entraînement, Fin d'année, Expert), fixe, progressive ou mélangée, les tables de multiplication et la durée : 2, 5 ou 10 minutes. Puis il envoie la série à sa classe. <strong>MuscuMath sur mesure</strong> prépare une série par élève : ses calculs ratés, puis des calculs proches qui demandent la même méthode. Un élève sans erreur reçoit une série défi.</p>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 252" role="img" aria-labelledby="schema-muscumath-titre schema-muscumath-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-muscumath-titre">MuscuMath, le calcul mental piloté par le professeur</title>
+        <desc id="schema-muscumath-desc">Le professeur choisit dans un catalogue de plus de 200 notions ou donne ses propres calculs. Il règle la difficulté, les tables et la durée : 2, 5 ou 10 minutes. Il envoie la série à sa classe. MuscuMath sur mesure prépare une série par élève.</desc>
+        <rect class="d-box" x="8" y="8" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="39" r="13"/>
+        <text class="d-n" x="34" y="44" text-anchor="middle">1</text>
+        <text class="d-t" x="58" y="34">Le professeur choisit</text>
+        <text class="d-s" x="58" y="54">plus de 200 notions ou ses propres calculs</text>
+        <path class="d-line" d="M180 70V88" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="92" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="123" r="13"/>
+        <text class="d-n" x="34" y="128" text-anchor="middle">2</text>
+        <text class="d-t" x="58" y="118">Il règle la série</text>
+        <text class="d-s" x="58" y="138">difficulté, tables, durée : 2, 5 ou 10 minutes</text>
+        <path class="d-line" d="M180 154V172" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="8" y="176" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="207" r="13"/>
+        <text class="d-n" x="34" y="212" text-anchor="middle">3</text>
+        <text class="d-t" x="58" y="202">Il envoie la série à sa classe</text>
+        <text class="d-s" x="58" y="222">MuscuMath sur mesure : une série par élève</text>
+      </svg>
+      <figcaption>MuscuMath en trois gestes pour le professeur : choisir, régler, envoyer.</figcaption>
+    </figure>
+
     <p>Si l'école de votre enfant utilise Galac6, il peut donc recevoir des séries préparées par son professeur, en plus de celles qu'il fait seul à la maison.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="motivation">Comment garder mon enfant motivé ?</h2>
-    <p>Le calcul mental demande de la régularité : quelques minutes par jour valent mieux qu'une longue séance le week-end. Galac6 aide à tenir le rythme :</p>
+    <p>Galac6 aide votre enfant à tenir le rythme avec de l'expérience à gagner, un record à battre, un jeu et un suivi pour les parents. Le calcul mental demande de la régularité : quelques minutes par jour valent mieux qu'une longue séance le week-end.</p>
     <ul>
       <li>chaque série rapporte de l'<strong>expérience (XP)</strong> ;</li>
       <li>les parties chronométrées comptent pour le <strong>record</strong> de l'enfant et pour le classement de sa classe ;</li>
@@ -560,7 +667,7 @@
       <ul>
         <li><a href="/calcul-mental-en-ligne">Le calcul mental en ligne, du CP à la terminale</a></li>
         <li><a href="/blog/calcul-mental-primaire">Calcul mental au primaire : 10 minutes par jour</a></li>
-        <li><a href="/blog/calcul-mental-personnalise">Le calcul mental réinventé : personnalisé, ludique et sur toutes les notions</a></li>
+        <li><a href="/blog/calcul-mental-personnalise">Calcul mental personnalisé : chaque élève retravaille ses erreurs</a></li>
         <li><a href="/blog/tables-de-multiplication-en-ligne">Tables de multiplication en ligne : les apprendre et les réviser, du CE1 au CM2</a></li>
         <li><a href="/blog/reviser-brevet-maths">Comment réviser le brevet de maths : la méthode en 5 étapes</a></li>
         <li><a href="/reviser-brevet">Réviser le brevet avec l'IA</a></li>

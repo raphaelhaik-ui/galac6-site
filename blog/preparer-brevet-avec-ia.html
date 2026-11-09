@@ -18,7 +18,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
   <meta property="article:published_time" content="2026-11-03">
-  <meta property="article:modified_time" content="2026-11-03">
+  <meta property="article:modified_time" content="2026-11-09">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Préparer le brevet 2027 avec une IA : la méthode">
   <meta name="twitter:description" content="Une application pour préparer le brevet des collèges avec de l&#x27;IA ? La méthode : des brevets blancs chronométrés sur 129 sujets officiels (2019 à 2026), une correction selon le barème, puis un travail ciblé sur chaque erreur.">
@@ -70,7 +70,7 @@
         "caption": "Galac6, l'IA au service de la pédagogie."
       },
       "datePublished": "2026-11-03",
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-09",
       "inLanguage": "fr-FR",
       "mainEntityOfPage": "https://galac6.io/blog/preparer-brevet-avec-ia",
       "keywords": "brevet 2027, préparer le brevet, brevet blanc en ligne, brevet blanc corrigé, DNB, annales du brevet, IA, oral du brevet, 3e",
@@ -336,6 +336,30 @@
     .toc-list li.is-g6 .toc-t { flex: 1 1 0; min-width: 0; }
     .toc-list li.is-g6 .g6-tag { margin-left: 0; margin-top: 0.1rem; align-self: flex-start; }
     @media (prefers-reduced-motion: reduce) { .toc-btn, .toc-n, .toc-list a { transition: none; } html { scroll-behavior: auto; } }
+
+    /* Schémas : mêmes styles que les articles récents */
+    .fig { margin: 1.8rem 0 2rem; }
+    .fig figcaption { margin-top: 0.7rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
+    .diagram { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 0.9rem; }
+    @media (max-width: 600px) { .diagram { padding: 0.8rem 0.35rem; } }
+    .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+    .diagram .d-box { fill: rgba(124,92,252,0.12); stroke: rgba(167,139,250,0.5); stroke-width: 1.2; }
+    .diagram .d-box-up { fill: rgba(52,211,153,0.1); stroke: rgba(52,211,153,0.55); stroke-width: 1.2; }
+    .diagram .d-box-down { fill: rgba(251,191,36,0.08); stroke: rgba(251,191,36,0.5); stroke-width: 1.2; }
+    .diagram .d-box-opt { fill: none; stroke: rgba(167,139,250,0.6); stroke-width: 1.2; stroke-dasharray: 5 4; }
+    .diagram .d-t { fill: var(--text); font-weight: 700; font-size: 15px; }
+    .diagram .d-s { fill: var(--text-muted); font-size: 13.5px; }
+    .diagram .d-n { fill: #fff; font-weight: 800; font-size: 13px; }
+    .diagram .d-num { fill: url(#d-grad); }
+    .diagram .d-line { fill: none; stroke: var(--primary-light); stroke-width: 1.6; }
+    .diagram .d-dash { fill: none; stroke: var(--primary-light); stroke-width: 1.4; stroke-dasharray: 4 4; opacity: 0.8; }
+    .diagram .d-head { fill: var(--primary-light); }
+    .diagram .d-ico { fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diagram .d-up { fill: #6ee7b7; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-down { fill: #fcd34d; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-band-1 { fill: rgba(99,102,241,0.22); }
+    .diagram .d-band-2 { fill: rgba(124,92,252,0.3); }
+    .diagram .d-band-3 { fill: rgba(168,85,247,0.38); }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -410,16 +434,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -453,9 +478,9 @@
     <nav class="breadcrumb"><a href="/">Accueil</a> › <a href="/blog/">Blog</a> › Préparer le brevet avec une IA</nav>
 
     <h1>Préparer le <span class="grad">brevet 2027</span> avec une IA : la méthode</h1>
-    <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 3 novembre 2026 · 7 min de lecture</div>
+    <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 3 novembre 2026 · Mis à jour le 9 novembre 2026 · 7 min de lecture</div>
 
-    <p class="lead">Pour préparer le brevet 2027 avec une IA, le plus efficace est de passer des brevets blancs chronométrés sur de vrais sujets, puis de retravailler chaque erreur. Galac6 propose 129 sujets officiels du brevet (sessions 2019 à 2026) dans les 4 épreuves écrites, corrigés par l'IA selon le barème, et un oral blanc.</p>
+    <p class="lead">Pour préparer le brevet 2027 avec une IA, le plus efficace est de passer des brevets blancs chronométrés sur de vrais sujets, puis de retravailler chaque erreur. Galac6 (galac6.io) propose 129 sujets officiels du brevet (sessions 2019 à 2026) dans les 4 épreuves écrites, corrigés par l'IA selon le barème, et un oral blanc.</p>
 
     <aside class="essentiel" aria-labelledby="essentiel-titre">
       <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
@@ -465,6 +490,7 @@
         <li>Galac6 propose <strong>129 sujets officiels</strong> (sessions 2019 à 2026) dans les 4 épreuves écrites. Les sujets créés par l'IA portent toujours la mention « Sujet d'entraînement généré par l'IA ».</li>
         <li>La correction note chaque question selon le barème, avec mention et bilan. Ce n'est pas un corrigé officiel : elle sert à s'entraîner.</li>
         <li>Un planning en quatre temps, de la rentrée à juin, et un <strong>oral blanc</strong> à la voix complètent la préparation.</li>
+        <li><strong>Prix : Galac6 est un service payant.</strong> L'offre Découverte à 0 €, limitée à un sujet type brevet ou bac par mois, permet d'essayer. Pour tous les sujets, l'offre Élève coûte 69 € par an.</li>
       </ul>
     </aside>
 
@@ -492,6 +518,48 @@
 
     <h2 id="brevet-blanc">Comment faire un brevet blanc en ligne corrigé ?</h2>
     <p>Sur Galac6, un brevet blanc se passe en six étapes :</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 496" role="img" aria-labelledby="schema-brevet-blanc-titre schema-brevet-blanc-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-brevet-blanc-titre">Les 6 étapes d'un brevet blanc sur Galac6</title>
+        <desc id="schema-brevet-blanc-desc">Étape 1 : Ouvrir « Brevet blanc écrit », et choisir l'épreuve. Étape 2 : Choisir le sujet, annale officielle ou sujet d'entraînement. Étape 3 : Choisir le mode, Conditions d'examen ou Entraînement. Étape 4 : Composer, en tapant ses réponses, ou sur papier. Étape 5 : Rendre la copie, note de chaque question, mention, bilan. Étape 6 : Retravailler les points faibles, tuteur, quiz et fiches de révision.</desc>
+        <defs>
+          <linearGradient id="d-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+          <marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker>
+        </defs>
+        <rect class="d-box" x="8" y="8" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="39" r="13"/><text class="d-n" x="34" y="44" text-anchor="middle">1</text>
+        <text class="d-t" x="58" y="34">Ouvrir « Brevet blanc écrit »</text>
+        <text class="d-s" x="58" y="54">et choisir l'épreuve</text>
+        <path class="d-line" d="M180 70V88" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="92" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="123" r="13"/><text class="d-n" x="34" y="128" text-anchor="middle">2</text>
+        <text class="d-t" x="58" y="118">Choisir le sujet</text>
+        <text class="d-s" x="58" y="138">annale officielle ou sujet d'entraînement</text>
+        <path class="d-line" d="M180 154V172" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="176" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="207" r="13"/><text class="d-n" x="34" y="212" text-anchor="middle">3</text>
+        <text class="d-t" x="58" y="202">Choisir le mode</text>
+        <text class="d-s" x="58" y="222">Conditions d'examen ou Entraînement</text>
+        <path class="d-line" d="M180 238V256" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="260" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="291" r="13"/><text class="d-n" x="34" y="296" text-anchor="middle">4</text>
+        <text class="d-t" x="58" y="286">Composer</text>
+        <text class="d-s" x="58" y="306">en tapant ses réponses, ou sur papier</text>
+        <path class="d-line" d="M180 322V340" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="344" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="375" r="13"/><text class="d-n" x="34" y="380" text-anchor="middle">5</text>
+        <text class="d-t" x="58" y="370">Rendre la copie</text>
+        <text class="d-s" x="58" y="390">note de chaque question, mention, bilan</text>
+        <path class="d-line" d="M180 406V424" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="8" y="428" width="344" height="62" rx="12"/>
+        <circle class="d-num" cx="34" cy="459" r="13"/><text class="d-n" x="34" y="464" text-anchor="middle">6</text>
+        <text class="d-t" x="58" y="454">Retravailler les points faibles</text>
+        <text class="d-s" x="58" y="474">tuteur, quiz et fiches de révision</text>
+      </svg>
+      <figcaption>Les 6 étapes, du choix de l'épreuve au travail sur les points faibles.</figcaption>
+    </figure>
+
     <ol class="steps">
       <li><strong>Ouvrir « Brevet blanc écrit »</strong> et choisir l'épreuve : mathématiques, français, sciences ou histoire-géographie et enseignement moral et civique.</li>
       <li><strong>Choisir le sujet</strong> : une annale officielle, que l'on peut filtrer par année, ou un sujet d'entraînement généré par l'IA.</li>
@@ -521,12 +589,62 @@
 
     <h2 id="vrais-sujets">Vrais sujets ou sujets générés par l'IA : quelle différence ?</h2>
     <p>Galac6 propose <strong>129 sujets officiels du brevet</strong>, des sessions 2019 à 2026 : 35 en mathématiques, 31 en français, 31 en sciences et 32 en histoire-géographie et enseignement moral et civique, avec leurs questions et leurs barèmes d'origine.</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 226" role="img" aria-labelledby="schema-sujets-titre schema-sujets-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-sujets-titre">Les 129 sujets officiels du brevet par matière</title>
+        <desc id="schema-sujets-desc">Mathématiques : 35. Français : 31. Sciences : 31. Histoire-géographie et EMC : 32.</desc>
+        <text class="d-t" x="8" y="22">Mathématiques</text>
+        <text class="d-t" x="352" y="22" text-anchor="end">35</text>
+        <rect class="d-box" x="8" y="32" width="344" height="14" rx="7"/>
+        <rect class="d-band-3" x="8" y="32" width="344.0" height="14" rx="7"/>
+        <text class="d-t" x="8" y="78">Français</text>
+        <text class="d-t" x="352" y="78" text-anchor="end">31</text>
+        <rect class="d-box" x="8" y="88" width="344" height="14" rx="7"/>
+        <rect class="d-band-2" x="8" y="88" width="304.7" height="14" rx="7"/>
+        <text class="d-t" x="8" y="134">Sciences</text>
+        <text class="d-t" x="352" y="134" text-anchor="end">31</text>
+        <rect class="d-box" x="8" y="144" width="344" height="14" rx="7"/>
+        <rect class="d-band-2" x="8" y="144" width="304.7" height="14" rx="7"/>
+        <text class="d-t" x="8" y="190">Histoire-géographie et EMC</text>
+        <text class="d-t" x="352" y="190" text-anchor="end">32</text>
+        <rect class="d-box" x="8" y="200" width="344" height="14" rx="7"/>
+        <rect class="d-band-2" x="8" y="200" width="314.5" height="14" rx="7"/>
+      </svg>
+      <figcaption>Répartition des 129 sujets officiels du brevet, sessions 2019 à 2026. EMC signifie enseignement moral et civique.</figcaption>
+    </figure>
+
     <p>Quand votre enfant a fait le tour des annales d'une matière, il peut continuer sur des <strong>sujets d'entraînement générés par l'IA</strong>, au format de l'épreuve. Ils portent toujours la mention « Sujet d'entraînement généré par l'IA » et ne sont jamais rangés avec les annales. Vous savez donc toujours si votre enfant travaille sur un vrai sujet ou sur un entraînement.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="organisation">Comment organiser les révisions jusqu'au brevet 2027 ?</h2>
     <p>Depuis la session 2026, les moyennes de l'année de 3e comptent : le travail régulier dès la rentrée est la première des révisions. Une méthode simple, en quatre temps :</p>
+
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 316" role="img" aria-labelledby="schema-organisation-titre schema-organisation-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-organisation-titre">Quatre temps pour préparer le brevet 2027</title>
+        <desc id="schema-organisation-desc">De la rentrée à décembre : consolider les bases, faire des fiches. En hiver : un premier brevet blanc par matière,, puis une liste de priorités. Au printemps : une annale par semaine,, en mode « Conditions d'examen ». En mai et juin : revoir les fiches, préparer l'oral,, alléger le rythme et dormir.</desc>
+        <path class="d-line" d="M20 20V246"/>
+        <circle class="d-num" cx="20" cy="20" r="8"/>
+        <text class="d-t" x="42" y="25">De la rentrée à décembre</text>
+        <text class="d-s" x="42" y="46">consolider les bases, faire des fiches</text>
+        <circle class="d-num" cx="20" cy="82" r="8"/>
+        <text class="d-t" x="42" y="87">En hiver</text>
+        <text class="d-s" x="42" y="108">un premier brevet blanc par matière,</text>
+        <text class="d-s" x="42" y="128">puis une liste de priorités</text>
+        <circle class="d-num" cx="20" cy="164" r="8"/>
+        <text class="d-t" x="42" y="169">Au printemps</text>
+        <text class="d-s" x="42" y="190">une annale par semaine,</text>
+        <text class="d-s" x="42" y="210">en mode « Conditions d'examen »</text>
+        <circle class="d-num" cx="20" cy="246" r="8"/>
+        <text class="d-t" x="42" y="251">En mai et juin</text>
+        <text class="d-s" x="42" y="272">revoir les fiches, préparer l'oral,</text>
+        <text class="d-s" x="42" y="292">alléger le rythme et dormir</text>
+      </svg>
+      <figcaption>Le planning en quatre temps, de la rentrée de 3e aux épreuves.</figcaption>
+    </figure>
+
     <ul>
       <li><strong>De la rentrée à décembre</strong> : consolider les bases, faire des fiches au fil des chapitres et entretenir les automatismes de calcul.</li>
       <li><strong>En hiver</strong> : un premier brevet blanc par matière, pour découvrir le format et la gestion du temps, puis une liste de priorités.</li>
@@ -592,6 +710,7 @@
         <li><a href="/reviser-brevet">Réviser le brevet avec l'IA : brevets blancs en ligne corrigés</a></li>
         <li><a href="/blog/reviser-brevet-mois-par-mois">Réviser le brevet mois par mois</a></li>
         <li><a href="/blog/reviser-brevet-maths">Comment réviser le brevet de maths : la méthode en 5 étapes</a></li>
+        <li><a href="/blog/ia-programme-education-nationale">Tuteur IA et programme de l'Éducation nationale</a></li>
         <li><a href="/dictee-en-ligne">La dictée en ligne, avec les dictées du brevet</a></li>
         <li><a href="/calcul-mental-en-ligne">Le calcul mental en ligne, pour les automatismes</a></li>
         <li><a href="/soutien-scolaire-ia">Le soutien scolaire par IA, du CP à la terminale</a></li>

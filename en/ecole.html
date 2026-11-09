@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
-<title>Teachers and schools: know every pupil | Galac6</title>
+<title>AI for teachers and schools: know every pupil | Galac6</title>
 <meta content="Galac6 proposes homework and marks it, handwritten copies included, and you approve. Class and pupil tracking, tailored homework, free 3-month pilot." name="description"/>
 <meta content="index, follow, max-image-preview:large" name="robots"/>
 <link href="https://galac6.io/en/ecole" rel="canonical"/>
@@ -24,7 +24,7 @@
       "@type": "FAQPage",
       "@id": "https://galac6.io/en/ecole#webpage",
       "url": "https://galac6.io/en/ecole",
-      "name": "Teachers and schools: know every pupil | Galac6",
+      "name": "AI for teachers and schools: know every pupil | Galac6",
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://galac6.io/en/#website"
@@ -504,18 +504,19 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
-<script>window.G6_DYN = {"title": "Teachers and schools: know every pupil | Galac6", "devis": "Request a quote", "pilote": "Become a pilot school", "demo": "Request a demo", "quickErr": "Enter a full email address and the name of your school.", "sending": "Sending…", "ok": "Thank you, your request has been sent. We will get back to you as soon as possible at the address you gave.", "fail": "Your request could not be sent. Please try again in a moment, or write to us at <a href=\"mailto:hello@galac6.io\">hello@galac6.io</a>."};</script>
+<script>window.G6_DYN = {"title": "AI for teachers and schools: know every pupil | Galac6", "devis": "Request a quote", "pilote": "Become a pilot school", "demo": "Request a demo", "quickErr": "Enter a full email address and the name of your school.", "sending": "Sending…", "ok": "Thank you, your request has been sent. We will get back to you as soon as possible at the address you gave.", "fail": "Your request could not be sent. Please try again in a moment, or write to us at <a href=\"mailto:hello@galac6.io\">hello@galac6.io</a>."};</script>
 <script>window.G6_COOKIE_TXT = {"texte": "We would like to measure visits to this site (Google Analytics) and the results of our ads (Google Ads, Meta). These services set cookies and are only loaded if you agree. You can change your mind at any time with the “Manage cookies” link at the bottom of each page.", "plus": "Learn more", "refuser": "Refuse all", "perso": "Customise", "accepter": "Accept all", "titrePerso": "Choose your cookies", "audienceTitre": "Audience measurement", "audienceTexte": "Google Analytics: counts visits and the pages viewed, to improve the site.", "pubTitre": "Advertising", "pubTexte": "Google Ads and Meta (Facebook, Instagram): measure the results of our ads.", "enregistrer": "Save my choices", "necessaires": "The site also remembers your language and this choice on your device (required, no consent needed).", "lien": "/mentions-legales#cookies-en"};</script>
 <style id="g6-lang-css">
     /* Bandeau d'information des pages es/it/de/pt/nl, sous le menu (généré par scripts/build-langs.py) */
@@ -729,7 +730,7 @@
 <div class="fam-text">
 <p class="eyebrow">For your pupils and their families</p>
 <h2 class="h2">Pupils think things through, parents follow along</h2>
-<a class="btn btn-outline" href="/en/familles">Galac6 for families</a>
+<p style="color: var(--text-muted);">To see how your pupils prepare for a class test, from the lesson to exercises suited to their level, read <a href="/en/teaching-method">Galac6's teaching method</a>.</p><a class="btn btn-outline" href="/en/familles">Galac6 for families</a>
 </div>
 <ul class="fam-list">
 <li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-help"></use></svg></span><div><b>The opposite of ordinary AI</b><span>Your pupils do your homework on Galac6 and think for themselves: the AI asks them questions and never gives them the answer.</span></div></li>
@@ -852,8 +853,8 @@
 <a href="/en/french-dictation-online">Online French dictation, read aloud and marked by Galac6</a>
 <a href="/calcul-mental-en-ligne#professeurs" hreflang="fr">MuscuMath: mental maths led by the teacher</a>
 <a href="/en/brevet-bac-past-papers">The brevet and bac past papers available</a>
-<a href="/blog/galac6-professeur-maths" hreflang="fr">Galac6 pour un professeur de maths</a>
-<a href="/blog/galac6-professeur-francais" hreflang="fr">Galac6 pour un professeur de français</a>
+
+
 </div>
 </div>
 </section>
@@ -962,7 +963,7 @@
 <a href="/en/about" style="color: var(--text-muted);">About</a>
 <a href="/en/french-dictation-online" style="color: var(--text-muted);">French dictation online</a>
 <a href="/en/brevet-bac-past-papers" style="color: var(--text-muted);">Brevet and bac past papers</a>
-<a href="/fiches-revision-ia" hreflang="fr" style="color: var(--text-muted);">AI revision sheets</a>
+<a href="/fiches-revision-ia" hreflang="fr" style="color: var(--text-muted);">AI revision sheets</a><a href="/en/teaching-method" style="color: var(--text-muted);">Teaching method</a>
 <a href="/en/french-curriculum-abroad" style="color: var(--text-muted);">Families abroad</a>
 <a href="/mentions-legales" hreflang="fr" style="color: var(--text-muted);">Legal notices</a>
 <a href="/international" style="color: var(--text-muted);">School outside France?</a>

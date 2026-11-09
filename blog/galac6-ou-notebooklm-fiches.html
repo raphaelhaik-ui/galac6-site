@@ -7,6 +7,8 @@
   <meta name="description" content="Galac6 ou NotebookLM pour faire des fiches de révision ? Comparatif factuel : sources acceptées, formats, interrogation, programme français, âge, données.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/blog/galac6-ou-notebooklm-fiches">
+  <link rel="alternate" hreflang="fr" href="https://galac6.io/blog/galac6-ou-notebooklm-fiches">
+  <link rel="alternate" hreflang="x-default" href="https://galac6.io/blog/galac6-ou-notebooklm-fiches">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Galac6">
   <meta property="og:locale" content="fr_FR">
@@ -17,6 +19,8 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Galac6, l'IA au service de la pédagogie.">
+  <meta property="article:published_time" content="2026-11-03">
+  <meta property="article:modified_time" content="2026-11-09">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Galac6 ou NotebookLM pour les fiches de révision ?">
   <meta name="twitter:description" content="Galac6 ou NotebookLM pour les fiches de révision : le comparatif.">
@@ -68,7 +72,7 @@
         "caption": "Galac6, l'IA au service de la pédagogie."
       },
       "datePublished": "2026-11-03",
-      "dateModified": "2026-11-04",
+      "dateModified": "2026-11-09",
       "inLanguage": "fr",
       "mainEntityOfPage": "https://galac6.io/blog/galac6-ou-notebooklm-fiches",
       "author": {
@@ -86,11 +90,7 @@
       }
     },
     {
-      "@type": "Organization",
-      "name": "Galac6",
-      "url": "https://galac6.io/",
-      "logo": "https://galac6.io/icons/logo.png",
-      "email": "hello@galac6.io"
+      "@id": "https://galac6.io/#organization"
     },
     {
       "@type": "FAQPage",
@@ -342,6 +342,29 @@
     .toc-list li.is-g6 .toc-t { flex: 1 1 0; min-width: 0; }
     .toc-list li.is-g6 .g6-tag { margin-left: 0; margin-top: 0.1rem; align-self: flex-start; }
     @media (prefers-reduced-motion: reduce) { .toc-btn, .toc-n, .toc-list a { transition: none; } html { scroll-behavior: auto; } }
+  /* Schémas et encadrés des articles */
+    .fig { margin: 1.8rem 0 2rem; }
+    .fig figcaption { margin-top: 0.7rem; font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); text-align: center; }
+    .diagram { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 0.9rem; }
+    @media (max-width: 600px) { .diagram { padding: 0.8rem 0.35rem; } }
+    .diagram svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; overflow: visible; }
+    .diagram .d-box { fill: rgba(124,92,252,0.12); stroke: rgba(167,139,250,0.5); stroke-width: 1.2; }
+    .diagram .d-box-up { fill: rgba(52,211,153,0.1); stroke: rgba(52,211,153,0.55); stroke-width: 1.2; }
+    .diagram .d-box-down { fill: rgba(251,191,36,0.08); stroke: rgba(251,191,36,0.5); stroke-width: 1.2; }
+    .diagram .d-box-opt { fill: none; stroke: rgba(167,139,250,0.6); stroke-width: 1.2; stroke-dasharray: 5 4; }
+    .diagram .d-t { fill: var(--text); font-weight: 700; font-size: 15px; }
+    .diagram .d-s { fill: var(--text-muted); font-size: 13.5px; }
+    .diagram .d-n { fill: #fff; font-weight: 800; font-size: 13px; }
+    .diagram .d-num { fill: url(#d-grad); }
+    .diagram .d-line { fill: none; stroke: var(--primary-light); stroke-width: 1.6; }
+    .diagram .d-dash { fill: none; stroke: var(--primary-light); stroke-width: 1.4; stroke-dasharray: 4 4; opacity: 0.8; }
+    .diagram .d-head { fill: var(--primary-light); }
+    .diagram .d-ico { fill: none; stroke: var(--primary-light); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diagram .d-up { fill: #6ee7b7; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-down { fill: #fcd34d; font-weight: 700; font-size: 13.5px; }
+    .diagram .d-band-1 { fill: rgba(99,102,241,0.22); }
+    .diagram .d-band-2 { fill: rgba(124,92,252,0.3); }
+    .diagram .d-band-3 { fill: rgba(168,85,247,0.38); }
   </style>
   <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -416,16 +439,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -461,7 +485,7 @@
     <h1>Galac6 ou <span class="grad">NotebookLM</span> pour les fiches de révision ?</h1>
     <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 3 novembre 2026 · 7 min de lecture</div>
 
-    <p class="lead">NotebookLM est un assistant de recherche de Google qui transforme vos propres sources en guides d'étude, résumés audio, cartes mentales, flashcards ou quiz. Galac6 crée une fiche de révision à partir de la photo du cours d'un élève du CP à la terminale, puis l'interroge sur sa leçon avec un bilan sur 20.</p>
+    <p class="lead">NotebookLM est un assistant de recherche de Google qui transforme vos propres sources en guides d'étude, résumés audio, cartes mentales, flashcards ou quiz. Galac6 (galac6.io) crée une fiche de révision à partir de la photo du cours d'un élève du CP à la terminale, puis l'interroge sur sa leçon avec un bilan sur 20.</p>
 
     <aside class="essentiel" aria-labelledby="essentiel-titre">
       <h2 id="essentiel-titre">L'essentiel en 30 secondes</h2>
@@ -488,30 +512,59 @@
 
     <p>Les deux outils partent d'un document pour aider à réviser. Ils ne visent pas le même public : NotebookLM sert à tous ceux qui travaillent sur des sources, du lycéen au chercheur ; Galac6 est conçu pour les élèves et leurs révisions de classe. Dans son aide officielle, Google présente désormais NotebookLM sous le nom de Gemini Notebook. Cet article est rédigé par Galac6. Nous avons décrit chaque service à partir de ses pages officielles, sans test de notre part.</p>
 
-    <h2 id="notebooklm">Ce que fait NotebookLM</h2>
-    <p>D'après l'aide de Google, NotebookLM accepte un grand nombre de sources : PDF, documents Google Docs, Slides et Sheets, fichiers Word et PowerPoint, images, sites web, vidéos YouTube publiques, fichiers audio ou ePub, jusqu'à 50 sources par notebook dans la version sans frais. Il répond aux questions à partir de ces sources, avec des citations, et peut générer :</p>
+    <h2 id="notebooklm">Que fait NotebookLM pour réviser ?</h2>
+    <p>NotebookLM transforme vos propres sources en supports de révision, avec des réponses citées. D'après l'aide de Google, NotebookLM accepte un grand nombre de sources : PDF, documents Google Docs, Slides et Sheets, fichiers Word et PowerPoint, images, sites web, vidéos YouTube publiques, fichiers audio ou ePub, jusqu'à 50 sources par notebook dans la version sans frais. Il répond aux questions à partir de ces sources, avec des citations, et peut générer :</p>
     <ul>
       <li>des guides d'étude et des rapports ;</li>
       <li>des résumés audio et vidéo ;</li>
       <li>des cartes mentales et des infographies ;</li>
       <li>des flashcards et des quiz.</li>
     </ul>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 246" role="img" aria-labelledby="schema-notebook-titre schema-notebook-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-notebook-titre">Comment NotebookLM transforme des sources en révisions</title>
+        <desc id="schema-notebook-desc">Un : vos sources, PDF, documents, images, sites web. Deux : NotebookLM répond à partir des sources, avec citations. Trois : il génère des supports, guides, cartes, flashcards, quiz.</desc>
+        <defs><linearGradient id="d-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient><marker id="d-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="d-head" d="M0 0L10 5L0 10z"/></marker></defs>
+        <rect class="d-box" x="8" y="8" width="344" height="62" rx="12"/><circle class="d-num" cx="34" cy="39" r="13"/><text class="d-n" x="34" y="44" text-anchor="middle">1</text><text class="d-t" x="58" y="34">Vos sources</text><text class="d-s" x="58" y="54">PDF, documents, images, sites web</text>
+        <path class="d-line" d="M180 70V88" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="92" width="344" height="62" rx="12"/><circle class="d-num" cx="34" cy="123" r="13"/><text class="d-n" x="34" y="128" text-anchor="middle">2</text><text class="d-t" x="58" y="118">NotebookLM répond</text><text class="d-s" x="58" y="138">à partir des sources, avec citations</text>
+        <path class="d-line" d="M180 154V172" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="8" y="176" width="344" height="62" rx="12"/><circle class="d-num" cx="34" cy="207" r="13"/><text class="d-n" x="34" y="212" text-anchor="middle">3</text><text class="d-t" x="58" y="202">Il génère des supports</text><text class="d-s" x="58" y="222">guides, cartes, flashcards, quiz</text>
+      </svg>
+      <figcaption>NotebookLM part de vos sources (PDF, documents, images, sites web), répond à partir des sources, avec citations, et génère des supports : guides, cartes, flashcards, quiz. D'après l'aide de Google consultée le 3 novembre 2026.</figcaption>
+    </figure>
     <p>Il fonctionne dans plus de 80 langues, dans le navigateur et dans une application mobile. C'est un outil puissant pour un lycéen qui révise à partir de nombreux documents. Côté âge, l'utilisateur doit avoir l'âge minimal requis et le confirmer dans son compte Google ; certaines fonctions sont réservées aux 18 ans et plus. Avec un compte Google Workspace for Education, il est accessible à tous les âges, si l'administrateur l'a activé.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="galac6">Ce que fait Galac6</h2>
-    <p>Galac6 part de la vraie leçon de la classe. L'élève prend son cours en photo, même écrit à la main, et choisit une fiche détaillée ou une fiche résumée, exportable en PDF. Sans cours sous la main, il choisit un chapitre du programme publié sur Éduscol ; Galac6 peut aussi en faire une carte mentale.</p>
+    <h2 id="galac6">Que fait Galac6 pour les fiches de révision ?</h2>
+    <p>Galac6 crée une fiche à partir de la vraie leçon de la classe, puis interroge l'élève dessus. L'élève prend son cours en photo, même écrit à la main, et choisit une fiche détaillée ou une fiche résumée, exportable en PDF. Sans cours sous la main, il choisit un chapitre du programme publié sur Éduscol ; Galac6 peut aussi en faire une carte mentale.</p>
     <p>Deux fonctions sont propres à l'usage scolaire :</p>
     <ul>
       <li><strong>Le guide pour faire mes fiches.</strong> Galac6 propose un plan, demande à l'élève ce qu'il retient de chaque partie et le guide par des questions et des indices, sans écrire à sa place. La fiche finale distingue ce que l'élève a trouvé seul et ce que Galac6 a complété.</li>
       <li><strong>« Je suis prêt, interroge-moi ! »</strong> Sur chaque fiche, ce bouton lance 5 à 7 questions sur la leçon, à l'écrit ou à l'oral, puis un bilan sur 20. Les parties à revoir sont ensuite surlignées. Au collège, « Préparer mon contrôle » organise les révisions en étapes jusqu'à la date du contrôle.</li>
     </ul>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 330" role="img" aria-labelledby="schema-galac6-titre schema-galac6-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-galac6-titre">De la photo du cours au bilan sur 20 avec Galac6</title>
+        <desc id="schema-galac6-desc">Un : photo du cours, même écrit à la main, ou chapitre du programme. Deux : fiche détaillée ou résumée, ou construite avec le guide. Trois : bouton Je suis prêt, interroge-moi, 5 à 7 questions, à l'écrit ou à l'oral. Quatre : bilan sur 20, parties à revoir surlignées.</desc>
+        
+        <rect class="d-box" x="8" y="8" width="344" height="62" rx="12"/><circle class="d-num" cx="34" cy="39" r="13"/><text class="d-n" x="34" y="44" text-anchor="middle">1</text><text class="d-t" x="58" y="34">Photo du cours ou chapitre</text><text class="d-s" x="58" y="54">même écrit à la main</text>
+        <path class="d-line" d="M180 70V88" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="92" width="344" height="62" rx="12"/><circle class="d-num" cx="34" cy="123" r="13"/><text class="d-n" x="34" y="128" text-anchor="middle">2</text><text class="d-t" x="58" y="118">Fiche détaillée ou résumée</text><text class="d-s" x="58" y="138">ou construite avec le guide</text>
+        <path class="d-line" d="M180 154V172" marker-end="url(#d-arr)"/>
+        <rect class="d-box" x="8" y="176" width="344" height="62" rx="12"/><circle class="d-num" cx="34" cy="207" r="13"/><text class="d-n" x="34" y="212" text-anchor="middle">3</text><text class="d-t" x="58" y="202">Je suis prêt, interroge-moi !</text><text class="d-s" x="58" y="222">5 à 7 questions, à l'écrit ou à l'oral</text>
+        <path class="d-line" d="M180 238V256" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="8" y="260" width="344" height="62" rx="12"/><circle class="d-num" cx="34" cy="291" r="13"/><text class="d-n" x="34" y="296" text-anchor="middle">4</text><text class="d-t" x="58" y="286">Bilan sur 20</text><text class="d-s" x="58" y="306">parties à revoir surlignées</text>
+      </svg>
+      <figcaption>Le parcours de révision : une photo du cours ou un chapitre, une fiche détaillée ou résumée, ou construite avec le guide, 5 à 7 questions à l'écrit ou à l'oral, puis un bilan sur 20 et les parties à revoir surlignées.</figcaption>
+    </figure>
     <p>Tout est détaillé sur la page <a href="/fiches-revision-ia">fiches de révision par IA</a>.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="comparatif">Le comparatif, critère par critère</h2>
+    <h2 id="comparatif">Comment se comparent Galac6 et NotebookLM, critère par critère ?</h2>
+    <p>NotebookLM est plus large sur les sources et les formats ; Galac6 est conçu pour les élèves et leurs révisions de classe.</p>
     <div class="callout">
       <p><strong>Informations vérifiées sur les sites officiels le 3 novembre 2026.</strong> « Non indiqué » signifie que l'information ne figure pas sur les pages officielles consultées (liste en bas de page), pas que la fonction n'existe pas. Les prix des autres services ne sont pas repris ici : ils évoluent, consultez leur site.</p>
     </div>
@@ -538,10 +591,35 @@
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
     <h2 id="lequel-choisir">Galac6 ou NotebookLM : lequel choisir ?</h2>
+    <p>Le choix dépend surtout du niveau de votre enfant et des documents à partir desquels il révise.</p>
     <ul>
       <li><strong>Galac6 si</strong> votre enfant est au primaire ou au collège, s'il révise à partir de son cahier pris en photo, s'il a besoin d'apprendre à faire ses fiches lui-même, ou si vous voulez qu'il soit interrogé sur sa leçon avant le contrôle, avec un bilan sur 20.</li>
       <li><strong>NotebookLM si</strong> votre enfant est un lycéen ou un étudiant qui travaille sur de nombreuses sources (PDF, articles, vidéos), qui aime réviser en écoutant un résumé audio, ou si son établissement l'a activé dans Google Workspace for Education.</li>
     </ul>
+    <figure class="fig diagram">
+      <svg viewBox="0 0 360 282" role="img" aria-labelledby="schema-choix-titre schema-choix-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="schema-choix-titre">Galac6 ou NotebookLM selon votre enfant</title>
+        <desc id="schema-choix-desc">Primaire ou collège, cahier pris en photo : Galac6. Interroger sa leçon, bilan sur 20 : Galac6. Nombreuses sources, PDF, articles, vidéos : NotebookLM. Résumé audio, réviser en écoutant : NotebookLM.</desc>
+        
+        <rect class="d-box" x="4" y="6" width="214" height="60" rx="10"/><text class="d-t" x="14" y="32">Primaire ou collège ?</text><text class="d-s" x="14" y="52">cahier pris en photo</text>
+        <path class="d-line" d="M218 36H238" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="242" y="6" width="114" height="60" rx="10"/>
+        <text class="d-t" x="299" y="41" text-anchor="middle">Galac6</text>
+        <rect class="d-box" x="4" y="76" width="214" height="60" rx="10"/><text class="d-t" x="14" y="102">Interroger sa leçon ?</text><text class="d-s" x="14" y="122">bilan sur 20</text>
+        <path class="d-line" d="M218 106H238" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="242" y="76" width="114" height="60" rx="10"/>
+        <text class="d-t" x="299" y="111" text-anchor="middle">Galac6</text>
+        <rect class="d-box" x="4" y="146" width="214" height="60" rx="10"/><text class="d-t" x="14" y="172">Nombreuses sources ?</text><text class="d-s" x="14" y="192">PDF, articles, vidéos</text>
+        <path class="d-line" d="M218 176H238" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="242" y="146" width="114" height="60" rx="10"/>
+        <text class="d-t" x="299" y="181" text-anchor="middle">NotebookLM</text>
+        <rect class="d-box" x="4" y="216" width="214" height="60" rx="10"/><text class="d-t" x="14" y="242">Résumé audio ?</text><text class="d-s" x="14" y="262">réviser en écoutant</text>
+        <path class="d-line" d="M218 246H238" marker-end="url(#d-arr)"/>
+        <rect class="d-box-up" x="242" y="216" width="114" height="60" rx="10"/>
+        <text class="d-t" x="299" y="251" text-anchor="middle">NotebookLM</text>
+      </svg>
+      <figcaption>Primaire ou collège, cahier pris en photo, ou besoin d'interroger sa leçon avec un bilan sur 20 : Galac6. Nombreuses sources (PDF, articles, vidéos) ou résumé audio pour réviser en écoutant : NotebookLM.</figcaption>
+    </figure>
     <p>Les données des élèves de Galac6 sont hébergées en France, dans une base de données à Paris, et l'intelligence artificielle est traitée en Europe (<a href="/donnees-eleves">le détail</a>). Les fiches font partie de Galac6, que l'on peut essayer avec la formule Découverte (<a href="/tarifs">voir les tarifs</a>).</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
@@ -584,6 +662,8 @@
         <li><a href="/blog/reviser-brevet-mois-par-mois">Réviser le brevet mois par mois</a></li>
         <li><a href="/blog/bac-francais-commentaire-dissertation">Bac de français : commentaire et dissertation</a></li>
         <li><a href="/blog/galac6-ou-chatgpt-devoirs">Galac6 ou ChatGPT pour les devoirs : quelle différence ?</a></li>
+        <li><a href="/blog/ia-devoirs-sans-tricher">L'IA pour faire ses devoirs : comment l'utiliser sans tricher</a></li>
+        <li><a href="/blog/galac6-ou-eliott">Galac6 ou Eliott : quelle IA pour réviser du CP à la terminale ?</a></li>
       </ul>
     </div>
 

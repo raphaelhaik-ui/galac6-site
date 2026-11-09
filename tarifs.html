@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Tarifs Galac6 : offres Élève, Famille et écoles</title>
-  <meta name="description" content="Formule Découverte pour essayer, offre Élève à 69 € par an, Famille jusqu&#x27;à 4 enfants à 99 € par an, annales du brevet et du bac comprises, Pack Examen à 19 €. Écoles : sur devis.">
+  <title>Tarifs de Galac6, tuteur IA : offres Élève, Famille, écoles</title>
+  <meta name="description" content="Formule Découverte pour essayer, offre Élève à 69 € par an, Famille jusqu&#x27;à 4 enfants à 99 € par an, annales du brevet et du bac comprises. Écoles : sur devis.">
   <meta property="og:title" content="Galac6 — Des tarifs simples et clairs">
   <meta property="og:description" content="Formule Découverte pour essayer, Élève 69 € par an, Famille 99 € par an jusqu'à 4 enfants. Pour les écoles, un tarif sur devis.">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -531,16 +531,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 </head>
 <body>
@@ -779,7 +780,7 @@
       <a href="/familles" style="color: var(--text-muted);" data-i18n="footer.families">Familles</a>
       <a href="/dictee-en-ligne" style="color: var(--text-muted);" data-i18n="footer.dictee">Dictée en ligne</a>
       <a href="/annales-brevet-bac" style="color: var(--text-muted);" data-i18n="footer.annales">Annales du brevet et du bac</a>
-      <a href="/fiches-revision-ia" style="color: var(--text-muted);">Fiches de révision par IA</a><a href="/methode-pedagogique" style="color: var(--text-muted);" class="fr-only">La méthode pédagogique</a>
+      <a href="/fiches-revision-ia" style="color: var(--text-muted);">Fiches de révision par IA</a><a href="/methode-pedagogique" style="color: var(--text-muted);" data-i18n="footer.method">La méthode pédagogique</a>
       <a href="/familles-francaises-etranger" style="color: var(--text-muted);" data-i18n="footer.expat">Familles à l'étranger</a>
       <a href="/mentions-legales" style="color: var(--text-muted);" data-i18n="footer.legal.mentions">Mentions légales</a>
       <a href="/international" style="color: var(--text-muted);" data-i18n="footer.international">École hors de France ?</a>
@@ -819,8 +820,8 @@
       }
     };
     var TITLE = {
-      fr: 'Tarifs Galac6 : offres Élève, Famille et écoles',
-      en: 'Galac6 pricing: Student, Family and schools'
+      fr: 'Tarifs de Galac6, tuteur IA : offres Élève, Famille, écoles',
+      en: 'Galac6 pricing: Student, Family and school plans, AI tutor'
     };
     var mode = 'year';
 

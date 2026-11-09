@@ -504,16 +504,17 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées le 07/11/2026 (police système, Mac) : 30 px à partir de ~1080 px, 49 px de 601 à ~1075,
-       41 px de ~530 à 600, 57 px de ~370 à ~525, 73 px en dessous ; paliers décalés pour garder une marge */
-    @media (max-width: 1119px) { html.g6-banner { --g6-banner-h: 51px; } }
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
+       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
+    @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
       .g6-intl-banner { font-size: 13px; line-height: 1.25; padding: 4px 10px; }
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 559px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 374px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
   </style>
 <script>window.G6_DYN = {"demo": "Solicitar una demostración", "devis": "Solicitar un presupuesto", "fail": "No se ha podido enviar. Inténtelo de nuevo en un momento o escríbanos a <a href=\"mailto:hello@galac6.io\">hello@galac6.io</a>.", "ok": "Gracias, su solicitud se ha enviado correctamente. Le responderemos lo antes posible en la dirección indicada.", "pilote": "Ser centro piloto", "quickErr": "Indique una dirección de correo electrónico completa y el nombre de su centro.", "sending": "Enviando…", "title": "Profesores y centros: conozca a cada alumno | Galac6"};</script>
 <script>window.G6_COOKIE_TXT = {"texte": "Nos gustaría medir las visitas a este sitio (Google Analytics) y los resultados de nuestros anuncios (Google Ads, Meta). Estos servicios instalan cookies y solo se cargan si usted da su consentimiento. Puede cambiar de opinión en cualquier momento con el enlace «Gestionar las cookies» al pie de cada página.", "plus": "Más información", "refuser": "Rechazar todo", "perso": "Personalizar", "accepter": "Aceptar todo", "titrePerso": "Elija sus cookies", "audienceTitre": "Medición de audiencia", "audienceTexte": "Google Analytics: cuenta las visitas y las páginas vistas, para mejorar el sitio.", "pubTitre": "Publicidad", "pubTexte": "Google Ads y Meta (Facebook, Instagram): miden los resultados de nuestros anuncios.", "enregistrer": "Guardar mis opciones", "necessaires": "El sitio también guarda su idioma y esta elección en su dispositivo (imprescindible, sin necesidad de consentimiento).", "lien": "/mentions-legales#cookies-en"};</script>
@@ -729,7 +730,7 @@
 <div class="fam-text">
 <p class="eyebrow">Para sus alumnos y sus familias</p>
 <h2 class="h2">Los alumnos piensan, los padres hacen el seguimiento</h2>
-<a class="btn btn-outline" href="/es/familles">Galac6 para las familias</a>
+<p style="color: var(--text-muted);">Para ver cómo preparan sus alumnos un examen, desde la lección hasta los ejercicios adaptados a su nivel, consulte <a href="/es/metodo-pedagogico">el método pedagógico de Galac6</a>.</p><a class="btn btn-outline" href="/es/familles">Galac6 para las familias</a>
 </div>
 <ul class="fam-list">
 <li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-help"></use></svg></span><div><b>Lo contrario de una IA convencional</b><span>Sus alumnos hacen sus deberes en Galac6 y reflexionan por sí mismos: la IA les hace preguntas y nunca les da la respuesta.</span></div></li>
@@ -852,8 +853,8 @@
 <a href="/dictee-en-ligne" hreflang="fr">El dictado en línea, leído y corregido por Galac6 (en francés)</a>
 <a href="/calcul-mental-en-ligne#professeurs" hreflang="fr">MuscuMath: el cálculo mental dirigido por el profesor</a>
 <a href="/annales-brevet-bac" hreflang="fr">Los exámenes oficiales de brevet y bac disponibles (en francés)</a>
-<a href="/blog/galac6-professeur-maths" hreflang="fr">Galac6 pour un professeur de maths</a>
-<a href="/blog/galac6-professeur-francais" hreflang="fr">Galac6 pour un professeur de français</a>
+
+
 </div>
 </div>
 </section>
@@ -962,7 +963,7 @@
 <a href="/es/about" style="color: var(--text-muted);">Acerca de</a>
 <a href="/dictee-en-ligne" hreflang="fr" style="color: var(--text-muted);">Dictados en línea (en francés)</a>
 <a href="/annales-brevet-bac" hreflang="fr" style="color: var(--text-muted);">Exámenes de brevet y bac (en francés)</a>
-<a href="/fiches-revision-ia" hreflang="fr" style="color: var(--text-muted);">Fichas de repaso con IA</a>
+<a href="/fiches-revision-ia" hreflang="fr" style="color: var(--text-muted);">Fichas de repaso con IA</a><a href="/es/metodo-pedagogico" style="color: var(--text-muted);">El método pedagógico</a>
 <a href="/es/programa-escolar-frances" style="color: var(--text-muted);">Familias en el extranjero</a>
 <a href="/mentions-legales" hreflang="fr" style="color: var(--text-muted);">Aviso legal</a>
 <a href="/es/international" style="color: var(--text-muted);">¿Su centro está fuera de Francia?</a>

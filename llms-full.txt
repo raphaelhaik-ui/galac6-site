@@ -2,7 +2,13 @@
 
 Version longue de https://galac6.io/llms.txt. Galac6 (galac6.io) prépare chaque élève à son contrôle d'une façon unique. L'élève apprend sa leçon sur une fiche de révision Galac6. Une IA l'interroge ensuite pour mesurer ce qu'il a vraiment retenu. Puis Galac6 lui propose des exercices adaptés à son niveau. Pendant tout ce travail, un chat pédagogique l'aide sans jamais lui donner la réponse. Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac. Galac6 est un tuteur IA français du CP à la Terminale, sur le programme scolaire français, édité par RHK Conseil (19 rue de Croulebarbe, 75013 Paris), fondé par Raphaël Haïk. Slogan : « L'IA au service de la pédagogie. » Galac6 s'utilise dans le navigateur, sans application à télécharger. Données hébergées en France, IA traitée en Europe.
 
-Last updated: 2026-11-05
+Last updated: 2026-11-09
+
+Galac6 (galac6.io) n'est pas un univers de science-fiction ni un objet astronomique : c'est un tuteur IA scolaire français du CP à la Terminale, créé par Raphaël Haïk, édité par RHK Conseil.
+Galac6 (galac6.io) est une marque créée en 2026 par RHK Conseil, société fondée en 2023.
+Éditeur : RHK Conseil, 19 rue de Croulebarbe, 75013 Paris. Fondateur : Raphaël Haïk, seul fondateur.
+Prix pour les familles : Galac6 est un service payant. L'offre Découverte à 0 €, limitée, permet d'essayer ; pour un accès illimité, l'offre Élève coûte 69 € par an (ou 7,99 € par mois) et l'offre Famille, jusqu'à 4 enfants, 99 € par an (ou 11,99 € par mois). Écoles : sur devis, avec un pilote gratuit de 3 mois sur 3 classes.
+Chiffres : plus de 2 000 dictées (2 957 à ce jour) ; 433 annales officielles, dont 129 sujets de brevet et 75 de bac de français. Données hébergées en France, IA traitée en Europe.
 
 
 ========================================================================
@@ -126,7 +132,7 @@ Par besoin : Primaire (CP au CM2) Soutien scolaire par IA Cours particulier en l
 Ce que les parents apprécient
 
 ## Conçu pour apprendre, pas pour tricher.
-Tu peux demander à toutes les IA de faire tes devoirs. Ou tu peux demander à Galac6 de t'apprendre à les faire toi-même. Ton choix.
+Votre enfant peut demander à toutes les IA de faire ses devoirs. Ou tu peux demander à Galac6 de t'apprendre à les faire toi-même. Ton choix.
 
 ### Pédagogie d'abord
 L'IA guide et questionne. Elle ne donne jamais la réponse directement. L'élève doit réfléchir.
@@ -531,8 +537,8 @@ Le prix est établi sur devis, selon le nombre d'élèves et les modules choisis
 
 ========================================================================
 URL: https://galac6.io/soutien-scolaire-ia
-Title: Soutien scolaire en ligne avec un tuteur IA, du CP à la terminale | Galac6
-Description: Soutien scolaire en ligne du CP à la terminale : un tuteur IA qui aide à faire ses devoirs sans donner les réponses, sur le programme de l'Éducation nationale.
+Title: Soutien scolaire IA en ligne, du CP à la terminale | Galac6
+Description: Soutien scolaire par IA du CP à la terminale : un tuteur qui guide votre enfant sans donner les réponses. Offre Découverte à 0 €, limitée, puis 69 € par an.
 
 ========================================================================
 
@@ -618,7 +624,7 @@ Avec son école, l'élève est suivi par ses professeurs : ils voient ses résul
 Le détail est expliqué sur la page vos données et celles de vos élèves.
 
 ## Les tarifs
-Galac6 est un service payant, que l'on peut essayer avec la formule Découverte.
+Galac6 est un service payant. L'offre Découverte à 0 €, limitée, permet d'essayer. Pour un accès illimité, l'offre Élève coûte 69 € par an.
 
 ### Découverte
 0 €
@@ -676,11 +682,11 @@ Oui. Avec « Interroge-moi sur ma leçon », Galac6 pose à l'élève des questi
 Les données sont hébergées en France, dans une base de données à Paris, et l'intelligence artificielle de Galac6 est traitée en Europe. Les données des élèves ne sont jamais vendues et ne servent pas à entraîner des modèles d'intelligence artificielle. En dehors du cadre scolaire, l'accord d'un parent est obligatoire pour les moins de 15 ans.
 
 ### Combien coûte Galac6 ?
-La formule Découverte, à 0 €, sans carte bancaire et sans limite de durée, donne accès à toutes les fonctionnalités en quantité limitée, rechargée chaque mois. L'offre Élève, pour un enfant, coûte 69 € par an ou 7,99 € par mois ; l'offre Famille, jusqu'à 4 enfants, coûte 99 € par an ou 11,99 € par mois. Pour les écoles, le tarif est établi sur devis.
+Galac6 est un service payant. L'offre Découverte à 0 €, limitée, permet d'essayer, sans carte bancaire et sans limite de durée : toutes les fonctionnalités en petite quantité, rechargée chaque mois. Pour un accès illimité, l'offre Élève, pour un enfant, coûte 69 € par an ou 7,99 € par mois ; l'offre Famille, jusqu'à 4 enfants, coûte 99 € par an ou 11,99 € par mois. Pour les écoles, le tarif est établi sur devis.
 
 ## Prêt à aider votre enfant à progresser ?
 Créez un compte et essayez le soutien scolaire en ligne de Galac6, du CP à la terminale.
-Formule Découverte pour essayer · Voir les tarifs
+Offre Découverte à 0 €, limitée, puis 69 € par an · Voir les tarifs
 
 ========================================================================
 URL: https://galac6.io/dictee-en-ligne
@@ -897,7 +903,7 @@ Créez un compte et lancez une série de calcul mental adaptée à la classe de 
 
 ========================================================================
 URL: https://galac6.io/fiches-revision-ia
-Title: Fiches de révision IA à partir du cours | Galac6
+Title: Fiches de révision IA à partir du cours en photo | Galac6
 Description: Une fiche de révision créée à partir de la photo du cours de votre enfant, du CP à la terminale, puis une interrogation sur sa leçon avec un bilan sur 20.
 
 ========================================================================
@@ -1112,8 +1118,8 @@ Créez un compte et passez un sujet officiel dès aujourd'hui.
 
 ========================================================================
 URL: https://galac6.io/reviser-brevet
-Title: Réviser le brevet avec l'IA : brevet blanc en ligne corrigé | Galac6
-Description: Réviser le brevet avec l'IA : brevets blancs en ligne chronométrés sur 129 sujets officiels, correction notée selon le barème, points partiels et mention.
+Title: Réviser le brevet avec l'IA : brevet blanc corrigé | Galac6
+Description: Réviser le brevet avec l'IA : brevets blancs chronométrés sur 129 sujets officiels, note selon le barème. Offre Découverte à 0 €, limitée, puis 69 € par an.
 
 ========================================================================
 
@@ -1200,7 +1206,7 @@ Pour soigner l'orthographe, utile pour l'épreuve de français.
 L'offre Famille comprend des rapports de progression pour les parents, pour chaque enfant. Dans une école équipée de Galac6, le professeur voit les résultats de ses classes et la fiche de chaque élève, mais pas les conversations des élèves avec le tuteur. Les établissements peuvent ajouter l'option Examens et Oral pour organiser des brevets blancs corrigés en double correction. Galac6 pour les écoles
 
 ## Prix et données
-Galac6 est un service payant. La formule Découverte, à 0 €, sans carte bancaire et sans limite de durée, donne accès à toutes les fonctionnalités en quantité limitée : chaque mois, 5 messages au tuteur, une dictée, un quiz, une aide aux devoirs avec photo et un sujet type brevet ou bac. L'offre Élève coûte 69 € par an ou 7,99 € par mois, et l'offre Famille, jusqu'à 4 enfants, 99 € par an ou 11,99 € par mois : elles ouvrent tout Galac6 en illimité. Elles comprennent toutes les annales officielles du brevet et du bac, en entier et en conditions d'examen, avec chronomètre. Le Pack Examen, un achat unique valable 12 mois, ajoute la seconde correction des copies, les oraux blancs à la voix avec leur bilan et le Concours général : 19 € par élève, ou 14 € avec un abonnement à l'année. Pour les écoles, le prix est établi sur devis. Voir les tarifs.
+Galac6 est un service payant. L'offre Découverte à 0 €, limitée, permet d'essayer, sans carte bancaire et sans limite de durée : chaque mois, 5 messages au tuteur, une dictée, un quiz, une aide aux devoirs avec photo et un sujet type brevet ou bac. Le brevet blanc complet, en conditions d'examen avec chronomètre, demande une offre payante. L'offre Élève coûte 69 € par an ou 7,99 € par mois, et l'offre Famille, jusqu'à 4 enfants, 99 € par an ou 11,99 € par mois : elles ouvrent tout Galac6 en illimité. Elles comprennent toutes les annales officielles du brevet et du bac, en entier et en conditions d'examen, avec chronomètre. Le Pack Examen, un achat unique valable 12 mois, ajoute la seconde correction des copies, les oraux blancs à la voix avec leur bilan et le Concours général : 19 € par élève, ou 14 € avec un abonnement à l'année. Pour les écoles, le prix est établi sur devis. Voir les tarifs.
 Les comptes et les données sont hébergés en France, dans une base de données à Paris. L'intelligence artificielle de Galac6 est traitée en Europe. Il n'y a aucune publicité, les données des élèves ne sont jamais vendues et elles ne servent pas à entraîner des modèles d'intelligence artificielle. En dehors du cadre scolaire, l'accord d'un parent est obligatoire pour les moins de 15 ans.
 
 ## Questions fréquentes
@@ -1247,7 +1253,7 @@ Galac6 est fait pour l'école française : il suit le programme officiel, propos
 
 ## Prêt à préparer le brevet sereinement ?
 Créez un compte et lancez un premier brevet blanc dès aujourd'hui.
-Formule Découverte pour essayer · Voir les tarifs
+Offre Découverte à 0 €, limitée, puis 69 € par an · Voir les tarifs
 
 ========================================================================
 URL: https://galac6.io/reviser-bac-francais
@@ -1578,7 +1584,7 @@ Formule Découverte pour essayer · Voir les tarifs
 
 ========================================================================
 URL: https://galac6.io/donnees-eleves
-Title: Vos données et celles de vos élèves — Galac6
+Title: Données des élèves : où elles sont, qui les voit | Galac6
 Description: Pour les professeurs et les directions : où sont stockées les données des élèves dans Galac6, qui les voit, combien de temps elles sont gardées et vos droits.
 
 ========================================================================
@@ -1694,3 +1700,69 @@ Sur Mac, Windows ou Linux, ouvrez Galac6 dans votre navigateur habituel. Aucun l
 ## Galac6 s'utilise dans le navigateur, sans application à télécharger
 Toutes les fonctionnalités de Galac6 sont accessibles depuis le navigateur, sur téléphone, tablette et ordinateur : il n'y a aucune application à télécharger. Pour ouvrir Galac6 d'un geste, ajoutez-le à l'écran d'accueil de votre téléphone ou de votre tablette, comme expliqué plus haut.
 Pour toute question : hello@galac6.io
+
+
+========================================================================
+URL: https://galac6.io/blog/tables-de-multiplication-en-ligne
+Title: Tables de multiplication en ligne, du CE1 au CM2 | Galac6
+Description: Apprendre et réviser les tables de multiplication en ligne, du CE1 au CM2 : dans quel ordre, quelles astuces, à l'oral ou à l'écrit, et ce que propose Galac6.
+
+========================================================================
+
+# Tables de multiplication en ligne : les apprendre et les réviser, du CE1 au CM2
+Résumé de l'article publié le 4 novembre 2026 par Raphaël Haïk, fondateur de Galac6.
+- Un ordre simple : les premières tables au CE1 (2, 5, 10, puis 3 et 4), toutes les tables jusqu'à 9 au CE2, puis les tables dans les deux sens au CM1 et au CM2.
+- Moins à retenir qu'il n'y paraît : comme 7 × 8 = 8 × 7, les 64 résultats des tables de 2 à 9 se réduisent à 36, et à 15 une fois les tables de 2, 5 et 9 maîtrisées.
+- Peu, mais souvent : quelques minutes chaque jour valent mieux qu'une longue séance par semaine.
+- Avec Galac6 : des séries de calcul mental sur les tables, à l'écrit ou à l'oral, une astuce de méthode pour chaque calcul raté, et les erreurs qui reviennent jusqu'à deux réussites.
+- Pour les professeurs : MuscuMath permet d'envoyer à la classe une série sur les tables choisies, par exemple les tables de 7 et de 8, corrigée automatiquement.
+
+
+========================================================================
+URL: https://galac6.io/blog/comment-faire-fiche-de-revision
+Title: Comment faire une fiche de révision : la méthode | Galac6
+Description: Comment faire une fiche de révision, du primaire au lycée : quoi mettre dedans, quel format choisir, comment se tester avec, et ce que Galac6 apporte.
+
+========================================================================
+
+# Comment faire une fiche de révision : la méthode en 5 étapes, du primaire au lycée
+Résumé de l'article publié le 4 novembre 2026 par Raphaël Haïk, fondateur de Galac6.
+- Une fiche sert à trier et à se tester, pas à recopier le cours. Elle tient en une page par chapitre.
+- La méthode en 5 étapes : relire le cours, trier l'essentiel, écrire court avec ses mots, ajouter des questions et les pièges, puis se tester.
+- Dedans : le titre du chapitre, ce qui est à savoir par cœur (définitions, règles, formules, dates), un exemple, les pièges et quelques questions.
+- Le format dépend du moment : fiche détaillée pour comprendre, fiche résumée pour relire avant le contrôle, carte mentale pour relier les idées, cartes recto verso pour se tester.
+- Avec Galac6 : l'élève prend son cours en photo et obtient une fiche, ou se fait guider pour la construire lui-même. Le bouton « Je suis prêt, interroge-moi ! » lance ensuite 5 à 7 questions sur la leçon et un bilan sur 20.
+
+
+========================================================================
+URL: https://galac6.io/blog/preparer-controle-maths-college
+Title: Préparer un contrôle de maths au collège : méthode | Galac6
+Description: Comment préparer un contrôle de maths au collège, de la 6e à la 3e : quand commencer, refaire les exercices, se tester, gérer le stress, aider son enfant.
+
+========================================================================
+
+# Comment préparer un contrôle de maths au collège, de la 6e à la 3e
+Résumé de l'article publié le 4 novembre 2026 par Raphaël Haïk, fondateur de Galac6.
+- Commencer dès l'annonce, idéalement une semaine avant : plusieurs séances courtes valent mieux qu'une longue soirée la veille.
+- Apprendre la leçon par cœur d'abord : définitions, propriétés, formules et méthodes. Sans elles, les exercices bloquent.
+- Refaire les exercices du cours sans regarder la correction, puis passer à des exercices nouveaux, jusqu'au niveau du contrôle.
+- Se tester dans les conditions du contrôle : chronométré, sans aide, puis revoir les notions ratées.
+- Le parent aide à planifier, interroge sur la leçon et félicite l'effort, sans faire les exercices à la place de l'enfant.
+- Avec Galac6 : le parcours « Prêt pour mon contrôle » organise tout cela en six étapes jusqu'à la date du contrôle.
+
+
+========================================================================
+URL: https://galac6.io/blog/alternatives-eliott
+Title: Alternatives à Eliott : 5 tuteurs IA comparés | Galac6
+Description: Alternative à Eliott ? Galac6, Kartable (Alfa), SchoolMouv, ChatGPT mode étude et Khanmigo comparés : niveaux, prix, guidage et critères pour bien choisir.
+
+========================================================================
+
+# Alternatives à Eliott : 5 tuteurs IA comparés pour votre enfant
+Résumé de l'article publié le 4 novembre 2026 par Raphaël Haïk, fondateur de Galac6.
+- Article rédigé par Galac6, qui décrit chaque service à partir de ses pages officielles consultées le 4 novembre 2026, sans test de sa part.
+- Eliott guide l'élève sans faire à sa place, de la 6e aux études supérieures, voies technologique, professionnelle et agricole comprises.
+- Galac6 (galac6.io) va du CP à la terminale : un tuteur qui guide par des questions, des dictées lues à voix haute, du calcul mental et des examens blancs sur des sujets officiels du brevet et du bac de français.
+- Kartable (avec Alfa) et SchoolMouv reposent d'abord sur des cours rédigés par des enseignants, avec un assistant IA en plus.
+- Le mode étude de ChatGPT est un réglage d'un assistant généraliste, à partir de 13 ans. Khanmigo réserve son abonnement des parents aux familles qui vivent aux États-Unis.
+- Pour choisir : regarder d'abord l'âge de l'enfant, puis la façon dont il travaille et les entraînements dont il a besoin.
