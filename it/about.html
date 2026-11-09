@@ -597,8 +597,9 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
-       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 au soir (police système, Mac) : 30 px à partir de 1072 px, 49 px de 601 à 1071,
+       41 px de 528 à 600, 57 px de 369 à 527, 73 px en dessous ; 2 px de marge. Paliers 1111 et 601-603 gardés par prudence :
+       une mesure du matin donnait une ligne de plus à ces largeurs (la coupure dépend de la police) */
     @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
     @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
@@ -606,8 +607,14 @@
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 527px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 368px) { html.g6-banner { --g6-banner-h: 75px; } }
+    /* Pied de page sur téléphone : zones de tap d'au moins 44 px de haut, sans espace en plus entre les liens */
+    @media (max-width: 480px) {
+      footer a[href] { display: inline-flex; align-items: center; min-height: 44px; }
+      footer .footer-col { gap: 0; }
+      footer .footer-badges { row-gap: 0 !important; }
+    }
   </style>
 <script>window.G6_DYN = {"error": "Si è verificato un errore, riprovate.", "send": "Invia →", "sending": "Invio in corso..."};</script>
 <script>window.G6_COOKIE_TXT = {"texte": "Vorremmo misurare le visite a questo sito (Google Analytics) e i risultati dei nostri annunci (Google Ads, Meta). Questi servizi installano cookie e vengono caricati solo se lei acconsente. Può cambiare idea in qualsiasi momento con il link «Gestisci i cookie» in fondo a ogni pagina.", "plus": "Per saperne di più", "refuser": "Rifiuta tutto", "perso": "Personalizza", "accepter": "Accetta tutto", "titrePerso": "Scelga i suoi cookie", "audienceTitre": "Misurazione del pubblico", "audienceTexte": "Google Analytics: conta le visite e le pagine visualizzate, per migliorare il sito.", "pubTitre": "Pubblicità", "pubTexte": "Google Ads e Meta (Facebook, Instagram): misurano i risultati dei nostri annunci.", "enregistrer": "Salva le mie scelte", "necessaires": "Il sito memorizza anche la sua lingua e questa scelta sul suo dispositivo (indispensabile, senza consenso).", "lien": "/mentions-legales#cookies-en"};</script>

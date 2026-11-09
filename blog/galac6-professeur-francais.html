@@ -414,8 +414,9 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
-       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 au soir (police système, Mac) : 30 px à partir de 1072 px, 49 px de 601 à 1071,
+       41 px de 528 à 600, 57 px de 369 à 527, 73 px en dessous ; 2 px de marge. Paliers 1111 et 601-603 gardés par prudence :
+       une mesure du matin donnait une ligne de plus à ces largeurs (la coupure dépend de la police) */
     @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
     @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
@@ -423,8 +424,14 @@
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 527px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 368px) { html.g6-banner { --g6-banner-h: 75px; } }
+    /* Pied de page sur téléphone : zones de tap d'au moins 44 px de haut, sans espace en plus entre les liens */
+    @media (max-width: 480px) {
+      footer a[href] { display: inline-flex; align-items: center; min-height: 44px; }
+      footer .footer-col { gap: 0; }
+      footer .footer-badges { row-gap: 0 !important; }
+    }
   </style>
 </head>
 <body>
@@ -617,12 +624,12 @@
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="donnees">Où sont hébergées les données de vos élèves ?</h2>
+    <h2 id="donnees">Où sont hébergées les données de votre classe de français ?</h2>
     <p>Les comptes et les données sont hébergés en France, à Paris, et l'intelligence artificielle de Galac6 est traitée en Europe ; quelques services techniques, comme l'hébergement du site, font appel à des prestataires situés hors de l'Union européenne. Tout est détaillé sur la page <a href="/donnees-eleves">Données des élèves</a>.</p>
 
     <p class="back-toc"><a href="#sommaire"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>Revenir au sommaire</a></p>
 
-    <h2 id="commencer">Comment commencer avec Galac6 ?</h2>
+    <h2 id="commencer">Comment commencer avec Galac6 en cours de français ?</h2>
     <p>Le plus simple est de devenir professeur testeur ; pour un établissement, de demander un pilote :</p>
     <ul>
       <li><strong>Vous êtes professeur</strong> : devenez <a href="/profs-testeurs">professeur testeur</a> et accédez à tout Galac6 pendant 3 mois, offerts en échange de vos retours.</li>

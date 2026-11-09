@@ -33,7 +33,7 @@
         "@id": "https://galac6.io/#organization"
       },
       "description": "Galac6 stelt huiswerk voor en verbetert het, handgeschreven kopieën inbegrepen, en u valideert. Opvolging van elke leerling, gratis pilot van 3 maanden.",
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-07",
       "mainEntity": [
         {
           "@type": "Question",
@@ -257,6 +257,8 @@
       .e-hero-grid { grid-template-columns: minmax(0, 1fr); padding-block: 40px 52px; gap: 28px; }
       .e-art { max-width: 190px; order: -1; }
     }
+    /* Téléphone : le titre d'abord, l'illustration après le texte */
+    @media (max-width: 600px) { .e-art { order: 0; } }
 
     .intl-link { margin-top: 18px; text-align: center; font-size: 0.9rem; }
     .intl-link a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px; color: var(--text-muted); text-decoration: underline; text-underline-offset: 3px; }
@@ -504,8 +506,9 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
-       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 au soir (police système, Mac) : 30 px à partir de 1072 px, 49 px de 601 à 1071,
+       41 px de 528 à 600, 57 px de 369 à 527, 73 px en dessous ; 2 px de marge. Paliers 1111 et 601-603 gardés par prudence :
+       une mesure du matin donnait une ligne de plus à ces largeurs (la coupure dépend de la police) */
     @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
     @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
@@ -513,8 +516,14 @@
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 527px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 368px) { html.g6-banner { --g6-banner-h: 75px; } }
+    /* Pied de page sur téléphone : zones de tap d'au moins 44 px de haut, sans espace en plus entre les liens */
+    @media (max-width: 480px) {
+      footer a[href] { display: inline-flex; align-items: center; min-height: 44px; }
+      footer .footer-col { gap: 0; }
+      footer .footer-badges { row-gap: 0 !important; }
+    }
   </style>
 <script>window.G6_DYN = {"demo": "Een demonstratie aanvragen", "devis": "Een offerte aanvragen", "fail": "Verzenden is niet gelukt. Probeer het zo meteen opnieuw of schrijf ons op <a href=\"mailto:hello@galac6.io\">hello@galac6.io</a>.", "ok": "Dank u, uw aanvraag is verzonden. We antwoorden zo snel mogelijk op het opgegeven adres.", "pilote": "Pilotschool worden", "quickErr": "Vul een volledig e-mailadres en de naam van uw school in.", "sending": "Bezig met verzenden…", "title": "Leerkrachten en scholen: ken elke leerling | Galac6"};</script>
 <script>window.G6_COOKIE_TXT = {"texte": "We willen graag de bezoeken aan deze website meten (Google Analytics) en de resultaten van onze advertenties (Google Ads, Meta). Deze diensten plaatsen cookies en worden alleen geladen als u toestemming geeft. U kunt op elk moment van gedachten veranderen via de link «Cookies beheren» onderaan elke pagina.", "plus": "Meer weten", "refuser": "Alles weigeren", "perso": "Aanpassen", "accepter": "Alles accepteren", "titrePerso": "Kies uw cookies", "audienceTitre": "Bezoekersstatistieken", "audienceTexte": "Google Analytics: telt de bezoeken en bekeken pagina's, om de website te verbeteren.", "pubTitre": "Reclame", "pubTexte": "Google Ads en Meta (Facebook, Instagram): meten de resultaten van onze advertenties.", "enregistrer": "Mijn keuzes opslaan", "necessaires": "De website bewaart ook uw taal en deze keuze op uw apparaat (noodzakelijk, geen toestemming nodig).", "lien": "/mentions-legales#cookies-en"};</script>
@@ -583,7 +592,7 @@
 <p class="eyebrow" style="margin-bottom:0">Docenten, directies, scholen</p>
 <h1>Minder verbeteren, <span class="grad">meer lesgeven</span></h1>
 <p class="sub">Galac6 geeft leren op school een nieuwe vorm, vertrekkend van wat elke leerling weet. Het stelt u het huiswerk voor en verbetert het, handgeschreven kopieën inbegrepen, en u valideert. U kent elke leerling, begrip per begrip, en u blijft baas over uw pedagogie.</p>
-<p class="updated"><time datetime="2026-11-03">Bijgewerkt op 3 november 2026</time></p>
+<p class="updated"><time datetime="2026-11-07">Bijgewerkt op 7 november 2026</time></p>
 <div class="e-cta">
 <a class="btn btn-primary" data-type="devis" href="#devis">Een offerte aanvragen</a>
 <a class="btn btn-outline" href="/profs-testeurs" hreflang="fr">Proberen als docent</a>

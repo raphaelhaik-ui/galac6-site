@@ -597,8 +597,9 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
-       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 au soir (police système, Mac) : 30 px à partir de 1072 px, 49 px de 601 à 1071,
+       41 px de 528 à 600, 57 px de 369 à 527, 73 px en dessous ; 2 px de marge. Paliers 1111 et 601-603 gardés par prudence :
+       une mesure du matin donnait une ligne de plus à ces largeurs (la coupure dépend de la police) */
     @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
     @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
@@ -606,8 +607,14 @@
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 527px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 368px) { html.g6-banner { --g6-banner-h: 75px; } }
+    /* Pied de page sur téléphone : zones de tap d'au moins 44 px de haut, sans espace en plus entre les liens */
+    @media (max-width: 480px) {
+      footer a[href] { display: inline-flex; align-items: center; min-height: 44px; }
+      footer .footer-col { gap: 0; }
+      footer .footer-badges { row-gap: 0 !important; }
+    }
   </style>
 <script>window.G6_DYN = {"sending": "Sending...", "send": "Send →", "error": "Something went wrong, please try again."};</script>
 <script>window.G6_COOKIE_TXT = {"texte": "We would like to measure visits to this site (Google Analytics) and the results of our ads (Google Ads, Meta). These services set cookies and are only loaded if you agree. You can change your mind at any time with the “Manage cookies” link at the bottom of each page.", "plus": "Learn more", "refuser": "Refuse all", "perso": "Customise", "accepter": "Accept all", "titrePerso": "Choose your cookies", "audienceTitre": "Audience measurement", "audienceTexte": "Google Analytics: counts visits and the pages viewed, to improve the site.", "pubTitre": "Advertising", "pubTexte": "Google Ads and Meta (Facebook, Instagram): measure the results of our ads.", "enregistrer": "Save my choices", "necessaires": "The site also remembers your language and this choice on your device (required, no consent needed).", "lien": "/mentions-legales#cookies-en"};</script>
@@ -680,7 +687,7 @@
 <h2>How much does Galac6 cost?</h2>
 <p>Galac6 is a paid service. The Discovery plan, at €0, gives access to every feature in limited amounts, each month. The Student plan costs €69 a year. For schools, pricing is on quote, with a free 3-month pilot on 3 classes. Details are on the <a href="/en/tarifs">Pricing</a> page.</p>
 <h2>Pupils' data</h2>
-<p>Data is hosted in France, in Paris, and Galac6's artificial intelligence is processed in Europe. It is never sold or used to train AIs. For pupils under 15, a parent's consent is requested by email. Everything is detailed on the <a href="/donnees-eleves" hreflang="fr">Pupil data</a> page (in French).</p>
+<p>Data is hosted in France, in Paris, and Galac6's artificial intelligence is processed in Europe. It is never sold or used to train AIs. For pupils under 15, a parent's consent is requested by email. Everything is detailed on the <a href="/en/student-data">Pupil data</a> page (in French).</p>
 </section>
 <!-- ─── Contact ─── -->
 <div class="contact-section">
@@ -713,7 +720,7 @@
 <a href="/en/familles" style="color: var(--text-muted);">Families</a>
 <a href="/en/french-dictation-online" style="color: var(--text-muted);">French dictation online</a>
 <a href="/en/brevet-bac-past-papers" style="color: var(--text-muted);">Brevet and bac past papers</a>
-<a href="/fiches-revision-ia" hreflang="fr" style="color: var(--text-muted);">AI revision sheets</a><a href="/en/teaching-method" style="color: var(--text-muted);">Teaching method</a>
+<a href="/en/ai-revision-notes" style="color: var(--text-muted);">AI revision sheets</a><a href="/en/teaching-method" style="color: var(--text-muted);">Teaching method</a>
 <a href="/en/french-curriculum-abroad" style="color: var(--text-muted);">Families abroad</a>
 <a href="/mentions-legales" hreflang="fr" style="color: var(--text-muted);">Legal notices</a>
 <a href="/international" style="color: var(--text-muted);">School outside France?</a>

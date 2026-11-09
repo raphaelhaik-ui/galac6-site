@@ -63,6 +63,18 @@
       "blogPost": [
         {
           "@type": "BlogPosting",
+          "headline": "Times tables online: learning and revising them, from CE1 to CM2",
+          "url": "https://galac6.io/en/blog/times-tables-online",
+          "datePublished": "2026-11-09"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Alternatives to Eliott: 5 AI tutors compared for your child",
+          "url": "https://galac6.io/en/blog/alternatives-to-eliott",
+          "datePublished": "2026-11-09"
+        },
+        {
+          "@type": "BlogPosting",
           "headline": "PISA 2025 and the school of the future: what the OECD survey says about learning in the age of AI",
           "url": "https://galac6.io/en/blog/pisa-2025-school-of-the-future",
           "datePublished": "2026-10-31"
@@ -218,8 +230,9 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
-       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 au soir (police système, Mac) : 30 px à partir de 1072 px, 49 px de 601 à 1071,
+       41 px de 528 à 600, 57 px de 369 à 527, 73 px en dessous ; 2 px de marge. Paliers 1111 et 601-603 gardés par prudence :
+       une mesure du matin donnait une ligne de plus à ces largeurs (la coupure dépend de la police) */
     @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
     @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
@@ -227,8 +240,14 @@
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 527px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 368px) { html.g6-banner { --g6-banner-h: 75px; } }
+    /* Pied de page sur téléphone : zones de tap d'au moins 44 px de haut, sans espace en plus entre les liens */
+    @media (max-width: 480px) {
+      footer a[href] { display: inline-flex; align-items: center; min-height: 44px; }
+      footer .footer-col { gap: 0; }
+      footer .footer-badges { row-gap: 0 !important; }
+    }
   </style>
 </head>
 <body>
@@ -264,6 +283,20 @@
 
   <!-- POSTS -->
   <main class="posts">
+
+    <a class="post-card" href="/en/blog/times-tables-online">
+      <span class="tag">Primary school</span>
+      <h2>Times tables online: learning and revising them, from CE1 to CM2</h2>
+      <p>In what order to learn the tables from CE1 to CM2, how to remember them more easily, aloud or in writing, and how Galac6 helps your child revise them.</p>
+      <div class="post-meta">9 November 2026 · 8 min read · <span class="post-readmore">Read the article →</span></div>
+    </a>
+
+    <a class="post-card" href="/en/blog/alternatives-to-eliott">
+      <span class="tag">Comparisons</span>
+      <h2>Alternatives to Eliott: 5 AI tutors compared for your child</h2>
+      <p>Galac6, Kartable (Alfa), SchoolMouv, ChatGPT study mode and Khanmigo compared with Eliott: levels covered, prices, how they guide the pupil and how to choose.</p>
+      <div class="post-meta">9 November 2026 · 9 min read · <span class="post-readmore">Read the article →</span></div>
+    </a>
 
     <a class="post-card" href="/en/blog/pisa-2025-school-of-the-future">
       <span class="tag">School of the future</span>

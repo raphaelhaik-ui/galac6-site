@@ -33,7 +33,7 @@
         "@id": "https://galac6.io/#organization"
       },
       "description": "Galac6 proposes homework and marks it, handwritten copies included, and you approve. Class and pupil tracking, tailored homework, free 3-month pilot.",
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-07",
       "mainEntity": [
         {
           "@type": "Question",
@@ -257,6 +257,8 @@
       .e-hero-grid { grid-template-columns: minmax(0, 1fr); padding-block: 40px 52px; gap: 28px; }
       .e-art { max-width: 190px; order: -1; }
     }
+    /* Téléphone : le titre d'abord, l'illustration après le texte */
+    @media (max-width: 600px) { .e-art { order: 0; } }
 
     .intl-link { margin-top: 18px; text-align: center; font-size: 0.9rem; }
     .intl-link a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px; color: var(--text-muted); text-decoration: underline; text-underline-offset: 3px; }
@@ -504,8 +506,9 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
-       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 au soir (police système, Mac) : 30 px à partir de 1072 px, 49 px de 601 à 1071,
+       41 px de 528 à 600, 57 px de 369 à 527, 73 px en dessous ; 2 px de marge. Paliers 1111 et 601-603 gardés par prudence :
+       une mesure du matin donnait une ligne de plus à ces largeurs (la coupure dépend de la police) */
     @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
     @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
@@ -513,8 +516,14 @@
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 527px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 368px) { html.g6-banner { --g6-banner-h: 75px; } }
+    /* Pied de page sur téléphone : zones de tap d'au moins 44 px de haut, sans espace en plus entre les liens */
+    @media (max-width: 480px) {
+      footer a[href] { display: inline-flex; align-items: center; min-height: 44px; }
+      footer .footer-col { gap: 0; }
+      footer .footer-badges { row-gap: 0 !important; }
+    }
   </style>
 <script>window.G6_DYN = {"title": "AI for teachers and schools: know every pupil | Galac6", "devis": "Request a quote", "pilote": "Become a pilot school", "demo": "Request a demo", "quickErr": "Enter a full email address and the name of your school.", "sending": "Sending…", "ok": "Thank you, your request has been sent. We will get back to you as soon as possible at the address you gave.", "fail": "Your request could not be sent. Please try again in a moment, or write to us at <a href=\"mailto:hello@galac6.io\">hello@galac6.io</a>."};</script>
 <script>window.G6_COOKIE_TXT = {"texte": "We would like to measure visits to this site (Google Analytics) and the results of our ads (Google Ads, Meta). These services set cookies and are only loaded if you agree. You can change your mind at any time with the “Manage cookies” link at the bottom of each page.", "plus": "Learn more", "refuser": "Refuse all", "perso": "Customise", "accepter": "Accept all", "titrePerso": "Choose your cookies", "audienceTitre": "Audience measurement", "audienceTexte": "Google Analytics: counts visits and the pages viewed, to improve the site.", "pubTitre": "Advertising", "pubTexte": "Google Ads and Meta (Facebook, Instagram): measure the results of our ads.", "enregistrer": "Save my choices", "necessaires": "The site also remembers your language and this choice on your device (required, no consent needed).", "lien": "/mentions-legales#cookies-en"};</script>
@@ -583,7 +592,7 @@
 <p class="eyebrow" style="margin-bottom:0">Teachers, school leaders, schools</p>
 <h1>Less marking, <span class="grad">more teaching</span></h1>
 <p class="sub">Galac6 redefines learning at school, starting from what each pupil knows. It proposes the homework and marks it, handwritten copies included, and you approve. You know each pupil, topic by topic, and you stay in charge of your teaching.</p>
-<p class="updated"><time datetime="2026-11-03">Updated on 3 November 2026</time></p>
+<p class="updated"><time datetime="2026-11-07">Updated on 7 November 2026</time></p>
 <div class="e-cta">
 <a class="btn btn-primary" data-type="devis" href="#devis">Request a quote</a>
 <a class="btn btn-outline" href="/profs-testeurs" hreflang="fr">Try it as a teacher</a>
@@ -824,7 +833,7 @@
 </ul>
 <p class="pp-links">
 <a href="/privacy" hreflang="fr">Learn more</a>
-<a href="/donnees-eleves" hreflang="fr">Student data: the details</a>
+<a href="/en/student-data">Student data: the details</a>
 </p>
 </div>
 </div>
@@ -833,7 +842,7 @@
 <div class="wrap">
 <div class="sec-head center"><p class="eyebrow">Frequently asked questions</p><h2 class="h2">Data security</h2></div>
 <div class="faq">
-<details><summary>Is students' data secure?</summary><div class="ans"><p>Yes, it is a priority. <strong>Data is hosted in France</strong>, in Paris, and Galac6's main artificial intelligence is processed in Europe. Each account only sees what it is allowed to see: at school, only the student's teachers and school leadership can access their work. Galac6 platform administration accounts are protected by two-factor authentication, and passwords known to have leaked are refused. Data is never sold or used to train AIs, and a deleted account is erased within 30 days. A few services remain outside the European Union, such as hosting of the website: everything is detailed on the <a href="/donnees-eleves" hreflang="fr">Student data</a> page.</p></div></details>
+<details><summary>Is students' data secure?</summary><div class="ans"><p>Yes, it is a priority. <strong>Data is hosted in France</strong>, in Paris, and Galac6's main artificial intelligence is processed in Europe. Each account only sees what it is allowed to see: at school, only the student's teachers and school leadership can access their work. Galac6 platform administration accounts are protected by two-factor authentication, and passwords known to have leaked are refused. Data is never sold or used to train AIs, and a deleted account is erased within 30 days. A few services remain outside the European Union, such as hosting of the website: everything is detailed on the <a href="/en/student-data">Student data</a> page.</p></div></details>
 </div>
 </div>
 </div>
@@ -851,7 +860,7 @@
 </div>
 <div class="res-links">
 <a href="/en/french-dictation-online">Online French dictation, read aloud and marked by Galac6</a>
-<a href="/calcul-mental-en-ligne#professeurs" hreflang="fr">MuscuMath: mental maths led by the teacher</a>
+<a href="/en/mental-math-online#professeurs">MuscuMath: mental maths led by the teacher</a>
 <a href="/en/brevet-bac-past-papers">The brevet and bac past papers available</a>
 
 
@@ -963,7 +972,7 @@
 <a href="/en/about" style="color: var(--text-muted);">About</a>
 <a href="/en/french-dictation-online" style="color: var(--text-muted);">French dictation online</a>
 <a href="/en/brevet-bac-past-papers" style="color: var(--text-muted);">Brevet and bac past papers</a>
-<a href="/fiches-revision-ia" hreflang="fr" style="color: var(--text-muted);">AI revision sheets</a><a href="/en/teaching-method" style="color: var(--text-muted);">Teaching method</a>
+<a href="/en/ai-revision-notes" style="color: var(--text-muted);">AI revision sheets</a><a href="/en/teaching-method" style="color: var(--text-muted);">Teaching method</a>
 <a href="/en/french-curriculum-abroad" style="color: var(--text-muted);">Families abroad</a>
 <a href="/mentions-legales" hreflang="fr" style="color: var(--text-muted);">Legal notices</a>
 <a href="/international" style="color: var(--text-muted);">School outside France?</a>

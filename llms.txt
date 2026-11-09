@@ -129,19 +129,27 @@ Languages of the website: French (main), English, Spanish, Italian, German, Port
 - [French curriculum for families abroad](https://galac6.io/en/french-curriculum-abroad): for families following the French curriculum abroad.
 - [French dictation online](https://galac6.io/en/french-dictation-online): dictations read aloud and marked.
 - [Brevet and bac past papers](https://galac6.io/en/brevet-bac-past-papers): official past papers with AI marking.
+- [Galac6's teaching method](https://galac6.io/en/teaching-method): how Galac6 prepares each pupil for a class test: the lesson learnt on a Galac6 revision sheet, an AI quiz, exercises suited to their level, and a teaching chat that helps without giving the answer.
+- [AI homework tutor for the French curriculum](https://galac6.io/en/ai-tutoring): a tutor for grades 1 to 12 that guides the child without giving answers.
+- [Brevet revision with AI](https://galac6.io/en/brevet-revision): timed mock brevet exams online on 129 official papers or AI-generated practice papers, marked to the mark scheme.
+- [Mental maths online](https://galac6.io/en/mental-math-online): timed mental maths series on the class programme, grades 1 to 12, five levels, written or spoken answers, and MuscuMath for teachers.
+- [AI revision sheets](https://galac6.io/en/ai-revision-notes): revision sheets created from a photo of the pupil's lesson, then a quiz on the lesson with a report out of 20.
+- [Pupil data](https://galac6.io/en/student-data): for teachers and school leaders, where pupil data is stored, who can see it, how long it is kept and what your rights are.
 - [Pricing](https://galac6.io/en/tarifs): plans and school pricing.
 - [About](https://galac6.io/en/about): about Galac6.
 - [Blog](https://galac6.io/en/blog/): articles on school, learning and AI.
 - [PISA 2025 and the school of the future](https://galac6.io/en/blog/pisa-2025-school-of-the-future): France's PISA 2025 scores and what the OECD says about AI and pupil autonomy.
+- [Alternatives to Eliott: 5 AI tutors compared](https://galac6.io/en/blog/alternatives-to-eliott): Galac6, Kartable (Alfa), SchoolMouv, ChatGPT study mode and Khanmigo compared with Eliott, from their official pages consulted on 4 November 2026.
+- [Times tables online](https://galac6.io/en/blog/times-tables-online): in what order to learn the times tables from CE1 to CM2, which tips help, and how Galac6 helps pupils revise them, in writing or aloud.
 - [Bring Galac6 to your country (vote)](https://galac6.io/international): schools outside France can vote to have Galac6 adapted to their country.
 
 ## Other languages
 
-- Español: [inicio](https://galac6.io/es/), [programa escolar francés en el extranjero](https://galac6.io/es/programa-escolar-frances), [escuelas](https://galac6.io/es/ecole), [precios](https://galac6.io/es/tarifs), [acerca de](https://galac6.io/es/about), [internacional](https://galac6.io/es/international).
-- Italiano: [home](https://galac6.io/it/), [programma scolastico francese all'estero](https://galac6.io/it/programma-scolastico-francese), [scuole](https://galac6.io/it/ecole), [prezzi](https://galac6.io/it/tarifs), [chi siamo](https://galac6.io/it/about), [internazionale](https://galac6.io/it/international).
-- Deutsch: [Startseite](https://galac6.io/de/), [französischer Lehrplan im Ausland](https://galac6.io/de/franzoesischer-lehrplan), [Schulen](https://galac6.io/de/ecole), [Preise](https://galac6.io/de/tarifs), [über uns](https://galac6.io/de/about), [international](https://galac6.io/de/international).
-- Português: [início](https://galac6.io/pt/), [currículo francês no estrangeiro](https://galac6.io/pt/curriculo-frances), [escolas](https://galac6.io/pt/ecole), [preços](https://galac6.io/pt/tarifs), [sobre](https://galac6.io/pt/about), [internacional](https://galac6.io/pt/international).
-- Nederlands: [home](https://galac6.io/nl/), [Frans curriculum in het buitenland](https://galac6.io/nl/frans-curriculum), [scholen](https://galac6.io/nl/ecole), [prijzen](https://galac6.io/nl/tarifs), [over ons](https://galac6.io/nl/about), [internationaal](https://galac6.io/nl/international).
+- Español: [inicio](https://galac6.io/es/), [método pedagógico](https://galac6.io/es/metodo-pedagogico), [programa escolar francés en el extranjero](https://galac6.io/es/programa-escolar-frances), [escuelas](https://galac6.io/es/ecole), [precios](https://galac6.io/es/tarifs), [acerca de](https://galac6.io/es/about), [internacional](https://galac6.io/es/international).
+- Italiano: [home](https://galac6.io/it/), [metodo didattico](https://galac6.io/it/metodo-didattico), [programma scolastico francese all'estero](https://galac6.io/it/programma-scolastico-francese), [scuole](https://galac6.io/it/ecole), [prezzi](https://galac6.io/it/tarifs), [chi siamo](https://galac6.io/it/about), [internazionale](https://galac6.io/it/international).
+- Deutsch: [Startseite](https://galac6.io/de/), [Lernmethode](https://galac6.io/de/lernmethode), [französischer Lehrplan im Ausland](https://galac6.io/de/franzoesischer-lehrplan), [Schulen](https://galac6.io/de/ecole), [Preise](https://galac6.io/de/tarifs), [über uns](https://galac6.io/de/about), [international](https://galac6.io/de/international).
+- Português: [início](https://galac6.io/pt/), [método pedagógico](https://galac6.io/pt/metodo-pedagogico), [currículo francês no estrangeiro](https://galac6.io/pt/curriculo-frances), [escolas](https://galac6.io/pt/ecole), [preços](https://galac6.io/pt/tarifs), [sobre](https://galac6.io/pt/about), [internacional](https://galac6.io/pt/international).
+- Nederlands: [home](https://galac6.io/nl/), [onderwijsmethode](https://galac6.io/nl/onderwijsmethode), [Frans curriculum in het buitenland](https://galac6.io/nl/frans-curriculum), [scholen](https://galac6.io/nl/ecole), [prijzen](https://galac6.io/nl/tarifs), [over ons](https://galac6.io/nl/about), [internationaal](https://galac6.io/nl/international).
 
 ## Legal
 

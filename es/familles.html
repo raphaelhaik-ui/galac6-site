@@ -33,7 +33,7 @@
         "@id": "https://galac6.io/#organization"
       },
       "description": "Galac6 parte de lo que sabe su hijo y lo acompaña de la lección al examen, con una IA que no da la respuesta. Usted sigue su progreso en su espacio para padres.",
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-09",
       "mainEntity": [
         {
           "@type": "Question",
@@ -447,8 +447,9 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
-       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 au soir (police système, Mac) : 30 px à partir de 1072 px, 49 px de 601 à 1071,
+       41 px de 528 à 600, 57 px de 369 à 527, 73 px en dessous ; 2 px de marge. Paliers 1111 et 601-603 gardés par prudence :
+       une mesure du matin donnait une ligne de plus à ces largeurs (la coupure dépend de la police) */
     @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
     @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
@@ -456,8 +457,14 @@
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 527px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 368px) { html.g6-banner { --g6-banner-h: 75px; } }
+    /* Pied de page sur téléphone : zones de tap d'au moins 44 px de haut, sans espace en plus entre les liens */
+    @media (max-width: 480px) {
+      footer a[href] { display: inline-flex; align-items: center; min-height: 44px; }
+      footer .footer-col { gap: 0; }
+      footer .footer-badges { row-gap: 0 !important; }
+    }
   </style>
 <script>window.G6_COOKIE_TXT = {"texte": "Nos gustaría medir las visitas a este sitio (Google Analytics) y los resultados de nuestros anuncios (Google Ads, Meta). Estos servicios instalan cookies y solo se cargan si usted da su consentimiento. Puede cambiar de opinión en cualquier momento con el enlace «Gestionar las cookies» al pie de cada página.", "plus": "Más información", "refuser": "Rechazar todo", "perso": "Personalizar", "accepter": "Aceptar todo", "titrePerso": "Elija sus cookies", "audienceTitre": "Medición de audiencia", "audienceTexte": "Google Analytics: cuenta las visitas y las páginas vistas, para mejorar el sitio.", "pubTitre": "Publicidad", "pubTexte": "Google Ads y Meta (Facebook, Instagram): miden los resultados de nuestros anuncios.", "enregistrer": "Guardar mis opciones", "necessaires": "El sitio también guarda su idioma y esta elección en su dispositivo (imprescindible, sin necesidad de consentimiento).", "lien": "/mentions-legales#cookies-en"};</script>
 <style id="g6-lang-css">
@@ -522,7 +529,7 @@
 <a class="btn btn-secondary" href="#formules">Ver los planes</a>
 </div>
 <p class="reassurance"><svg aria-hidden="true" class="ico"><use href="#i-pin"></use></svg><span>Diseñado en Francia, datos alojados en Francia, IA procesada en Europa.</span></p>
-<p class="updated"><time datetime="2026-11-03">Actualizado el 3 de noviembre de 2026</time></p>
+<p class="updated"><time datetime="2026-11-09">Actualizado el 9 de noviembre de 2026</time></p>
 </div>
 </div>
 <hr class="divider"/>

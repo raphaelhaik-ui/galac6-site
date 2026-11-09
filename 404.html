@@ -407,6 +407,14 @@
     .nf-link svg { color: var(--primary, #7c5cfc); flex-shrink: 0; }
     .nf-link:hover, .nf-link:focus-visible { border-color: var(--primary, #7c5cfc); }
   </style>
+  <style id="g6-footer-tap-css">
+    /* Pied de page sur téléphone : zones de tap d'au moins 44 px de haut, sans espace en plus entre les liens (même règle que BANNER_CSS) */
+    @media (max-width: 480px) {
+      footer a[href] { display: inline-flex; align-items: center; min-height: 44px; }
+      footer .footer-col { gap: 0; }
+      footer .footer-badges { row-gap: 0 !important; }
+    }
+  </style>
 </head>
 <body>
 

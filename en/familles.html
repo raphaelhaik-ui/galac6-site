@@ -33,7 +33,7 @@
         "@id": "https://galac6.io/#organization"
       },
       "description": "Galac6 starts from what your child knows and supports them from the lesson to the test, with an AI that does not give the answer. You follow their progress.",
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-09",
       "mainEntity": [
         {
           "@type": "Question",
@@ -447,8 +447,9 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
-       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 au soir (police système, Mac) : 30 px à partir de 1072 px, 49 px de 601 à 1071,
+       41 px de 528 à 600, 57 px de 369 à 527, 73 px en dessous ; 2 px de marge. Paliers 1111 et 601-603 gardés par prudence :
+       une mesure du matin donnait une ligne de plus à ces largeurs (la coupure dépend de la police) */
     @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
     @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
@@ -456,8 +457,14 @@
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 527px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 368px) { html.g6-banner { --g6-banner-h: 75px; } }
+    /* Pied de page sur téléphone : zones de tap d'au moins 44 px de haut, sans espace en plus entre les liens */
+    @media (max-width: 480px) {
+      footer a[href] { display: inline-flex; align-items: center; min-height: 44px; }
+      footer .footer-col { gap: 0; }
+      footer .footer-badges { row-gap: 0 !important; }
+    }
   </style>
 <script>window.G6_COOKIE_TXT = {"texte": "We would like to measure visits to this site (Google Analytics) and the results of our ads (Google Ads, Meta). These services set cookies and are only loaded if you agree. You can change your mind at any time with the “Manage cookies” link at the bottom of each page.", "plus": "Learn more", "refuser": "Refuse all", "perso": "Customise", "accepter": "Accept all", "titrePerso": "Choose your cookies", "audienceTitre": "Audience measurement", "audienceTexte": "Google Analytics: counts visits and the pages viewed, to improve the site.", "pubTitre": "Advertising", "pubTexte": "Google Ads and Meta (Facebook, Instagram): measure the results of our ads.", "enregistrer": "Save my choices", "necessaires": "The site also remembers your language and this choice on your device (required, no consent needed).", "lien": "/mentions-legales#cookies-en"};</script>
 <style id="g6-lang-css">
@@ -522,7 +529,7 @@
 <a class="btn btn-secondary" href="#formules">See the plans</a>
 </div>
 <p class="reassurance"><svg aria-hidden="true" class="ico"><use href="#i-pin"></use></svg><span>Designed in France, data hosted in France, AI processed in Europe.</span></p>
-<p class="updated"><time datetime="2026-11-03">Updated on 3 November 2026</time></p>
+<p class="updated"><time datetime="2026-11-09">Updated on 9 November 2026</time></p>
 </div>
 </div>
 <hr class="divider"/>
@@ -589,7 +596,7 @@
 <!-- Primaire -->
 <div aria-labelledby="tab-prim" class="lv" hidden="" id="lv-prim" role="tabpanel">
 <a class="lv-card" href="/en/french-dictation-online"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-audio"></use></svg></span><strong>Read-aloud dictations</strong><span class="q">Dictations read aloud and marked.</span><span class="more">Learn more →</span></a>
-<a class="lv-card" href="/calcul-mental-en-ligne" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-calc"></use></svg></span><strong>Mental maths</strong><span class="q">A little mental maths every day.</span><span class="more">Learn more →</span></a>
+<a class="lv-card" href="/en/mental-math-online"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-calc"></use></svg></span><strong>Mental maths</strong><span class="q">A little mental maths every day.</span><span class="more">Learn more →</span></a>
 <a class="lv-card" href="/primaire" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-chat"></use></svg></span><strong>Didactic chat</strong><span class="q">"Explain it to me, but don't do it for me."</span><span class="more">Learn more →</span></a>
 <a class="lv-card" href="/primaire" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-book"></use></svg></span><strong>Reading</strong><span class="q">Books chosen for each grade.</span><span class="more">Learn more →</span></a>
 <a class="lv-card" href="/primaire" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-flame"></use></svg></span><strong>Daily challenge</strong><span class="q">A multiple-choice quiz, a dictation and some maths every day.</span><span class="more">Learn more →</span></a>
@@ -598,16 +605,16 @@
 <!-- Collège -->
 <div aria-labelledby="tab-col" class="lv" id="lv-col" role="tabpanel">
 <a class="lv-card" href="/en/ai-tutoring"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-chat"></use></svg></span><strong>Didactic chat</strong><span class="q">"Explain it to me, but don't do it for me."</span><span class="more">Learn more →</span></a>
-<a class="lv-card" href="/fiches-revision-ia" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-card"></use></svg></span><strong>Revision sheets and quizzing</strong><span class="q">"Your sheet in seconds, then Galac6 quizzes you until you are ready."</span><span class="more">Learn more →</span></a>
+<a class="lv-card" href="/en/ai-revision-notes"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-card"></use></svg></span><strong>Revision sheets and quizzing</strong><span class="q">"Your sheet in seconds, then Galac6 quizzes you until you are ready."</span><span class="more">Learn more →</span></a>
 <a class="lv-card" href="/reviser-maths" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-quiz"></use></svg></span><strong>Quizzes, exercises and multiple choice</strong><span class="q">"In every subject, on your weak points. Take a photo of your lesson, get a quiz."</span><span class="more">Learn more →</span></a>
 <a class="lv-card" href="/en/french-dictation-online"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-audio"></use></svg></span><strong>Read-aloud dictations and mental maths</strong><span class="q">"Dictations read aloud and marked, and mental maths every day."</span><span class="more">Learn more →</span></a>
 <a class="lv-card" href="/cours-particulier-en-ligne" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-pen"></use></svg></span><strong>Test corrections</strong><span class="q">"Got a bad grade. Understand why."</span><span class="more">Learn more →</span></a>
-<a class="lv-card" href="/reviser-brevet" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-exam"></use></svg></span><strong>Brevet and past papers</strong><span class="q">"Over 400 official papers and marked mock exams."</span><span class="more">Learn more →</span></a>
+<a class="lv-card" href="/en/brevet-revision"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-exam"></use></svg></span><strong>Brevet and past papers</strong><span class="q">"Over 400 official papers and marked mock exams."</span><span class="more">Learn more →</span></a>
 </div>
 <!-- Lycée -->
 <div aria-labelledby="tab-lyc" class="lv" hidden="" id="lv-lyc" role="tabpanel">
 <a class="lv-card" href="/en/ai-tutoring"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-chat"></use></svg></span><strong>Didactic chat</strong><span class="q">"Explain it to me, but don't do it for me."</span><span class="more">Learn more →</span></a>
-<a class="lv-card" href="/fiches-revision-ia" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-card"></use></svg></span><strong>Revision sheets and quizzing</strong><span class="q">"Your sheet, then Galac6 quizzes you until you are ready."</span><span class="more">Learn more →</span></a>
+<a class="lv-card" href="/en/ai-revision-notes"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-card"></use></svg></span><strong>Revision sheets and quizzing</strong><span class="q">"Your sheet, then Galac6 quizzes you until you are ready."</span><span class="more">Learn more →</span></a>
 <a class="lv-card" href="/reviser-bac-francais" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-exam"></use></svg></span><strong>French bac</strong><span class="q">Mock bac exams on official papers, written and oral, marked out of 20.</span><span class="more">Learn more →</span></a>
 <a class="lv-card" href="/reviser-bac-maths" hreflang="fr"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-calc"></use></svg></span><strong>Maths bac</strong><span class="q">Mock exams on official papers, marked out of 20.</span><span class="more">Learn more →</span></a>
 <a class="lv-card" href="/en/brevet-bac-past-papers"><span class="lv-icon"><svg aria-hidden="true" class="ico"><use href="#i-books"></use></svg></span><strong>Past bac papers</strong><span class="q">Real bac papers, never mixed with practice papers.</span><span class="more">Learn more →</span></a>
@@ -617,11 +624,11 @@
 <a href="/primaire" hreflang="fr">Primary (1st to 5th grade)</a>
 <a href="/en/ai-tutoring">AI homework support</a>
 <a href="/cours-particulier-en-ligne" hreflang="fr">Online private lessons with AI</a>
-<a href="/fiches-revision-ia" hreflang="fr">AI revision sheets</a>
+<a href="/en/ai-revision-notes">AI revision sheets</a>
 <a href="/reviser-maths" hreflang="fr">Revise maths online</a>
-<a href="/calcul-mental-en-ligne" hreflang="fr">Mental maths online</a>
+<a href="/en/mental-math-online">Mental maths online</a>
 <a href="/en/french-dictation-online">Online dictation</a>
-<a href="/reviser-brevet" hreflang="fr">Revise for the brevet</a>
+<a href="/en/brevet-revision">Revise for the brevet</a>
 <a href="/reviser-bac-francais" hreflang="fr">Revise for the French bac</a>
 <a href="/reviser-bac-maths" hreflang="fr">Revise for the maths bac with AI</a>
 <a href="/en/brevet-bac-past-papers">Past brevet and bac papers</a>
@@ -736,7 +743,7 @@
 </div>
 <div class="faq-item">
 <button aria-expanded="false" class="faq-question"><span>Is my child's data protected?</span><span aria-hidden="true" class="faq-icon">+</span></button>
-<div class="faq-answer"><div class="faq-answer-inner">Yes, and it's non-negotiable. Galac6 is <strong>designed in France</strong>, in line with the GDPR. Data is hosted in France and Galac6's artificial intelligence is processed in Europe; only a few technical services, such as hosting of the website, rely on providers located outside the European Union. We never sell your children's data to third parties. The privacy and security of minors' data are at the core of our design. Full details on the <a href="/donnees-eleves" hreflang="fr">Student data</a> page.</div></div>
+<div class="faq-answer"><div class="faq-answer-inner">Yes, and it's non-negotiable. Galac6 is <strong>designed in France</strong>, in line with the GDPR. Data is hosted in France and Galac6's artificial intelligence is processed in Europe; only a few technical services, such as hosting of the website, rely on providers located outside the European Union. We never sell your children's data to third parties. The privacy and security of minors' data are at the core of our design. Full details on the <a href="/en/student-data">Student data</a> page.</div></div>
 </div>
 <div class="faq-item">
 <button aria-expanded="false" class="faq-question"><span>How much does Galac6 cost?</span><span aria-hidden="true" class="faq-icon">+</span></button>
@@ -786,15 +793,15 @@
 <span class="footer-col-title">Revise</span>
 <a href="/en/ai-tutoring">AI tutoring</a>
 <a href="/en/teaching-method">Teaching method</a>
-<a href="/reviser-brevet" hreflang="fr">Revise for the brevet</a>
+<a href="/en/brevet-revision">Revise for the brevet</a>
 <a href="/reviser-bac-francais" hreflang="fr">Revise for the French bac</a>
 <a href="/reviser-bac-maths" hreflang="fr">Revise for the maths bac</a>
 <a href="/reviser-maths" hreflang="fr">Revise maths</a>
-<a href="/fiches-revision-ia" hreflang="fr">AI revision sheets</a>
+<a href="/en/ai-revision-notes">AI revision sheets</a>
 <a href="/cours-particulier-en-ligne" hreflang="fr">Online private lessons</a>
 <a href="/primaire" hreflang="fr">Primary school (1st to 5th grade)</a>
 <a href="/en/french-dictation-online">French dictation online</a>
-<a href="/calcul-mental-en-ligne" hreflang="fr">Mental maths online</a>
+<a href="/en/mental-math-online">Mental maths online</a>
 <a href="/en/brevet-bac-past-papers">Brevet and bac past papers</a>
 </div>
 <div class="footer-col">

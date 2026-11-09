@@ -7,8 +7,11 @@
   <meta name="description" content="Alternative à Eliott ? Galac6, Kartable (Alfa), SchoolMouv, ChatGPT mode étude et Khanmigo comparés : niveaux, prix, guidage et critères pour bien choisir.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/blog/alternatives-eliott">
+  <!-- hreflang (généré par scripts/build-langs.py) -->
   <link rel="alternate" hreflang="fr" href="https://galac6.io/blog/alternatives-eliott">
+  <link rel="alternate" hreflang="en" href="https://galac6.io/en/blog/alternatives-to-eliott">
   <link rel="alternate" hreflang="x-default" href="https://galac6.io/blog/alternatives-eliott">
+  <!-- /hreflang -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Galac6">
   <meta property="og:locale" content="fr_FR">
@@ -459,8 +462,9 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
-       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 au soir (police système, Mac) : 30 px à partir de 1072 px, 49 px de 601 à 1071,
+       41 px de 528 à 600, 57 px de 369 à 527, 73 px en dessous ; 2 px de marge. Paliers 1111 et 601-603 gardés par prudence :
+       une mesure du matin donnait une ligne de plus à ces largeurs (la coupure dépend de la police) */
     @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
     @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
@@ -468,8 +472,14 @@
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 527px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 368px) { html.g6-banner { --g6-banner-h: 75px; } }
+    /* Pied de page sur téléphone : zones de tap d'au moins 44 px de haut, sans espace en plus entre les liens */
+    @media (max-width: 480px) {
+      footer a[href] { display: inline-flex; align-items: center; min-height: 44px; }
+      footer .footer-col { gap: 0; }
+      footer .footer-badges { row-gap: 0 !important; }
+    }
   </style>
 </head>
 <body>
@@ -490,7 +500,7 @@
         <a href="/tarifs" data-i18n="nav.pricing">Tarifs</a>
         <a href="/blog/" class="active" aria-current="page" data-i18n="nav.blog">Blog</a>
         <a href="/about" data-i18n="nav.about">À propos</a>
-        <!-- lang-menu --><details class="lang-menu"><summary aria-label="Langue : Français"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#002654"/><rect x="13.33" width="6.67" height="14" fill="#ce1126"/></svg><span>FR</span></summary><div class="lang-menu-list"><a href="/blog/alternatives-eliott" hreflang="fr" lang="fr" aria-current="page"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#002654"/><rect x="13.33" width="6.67" height="14" fill="#ce1126"/></svg><span>Français</span></a><a href="/en/" hreflang="en" lang="en"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#012169"/><path d="M0 0L20 14M20 0L0 14" stroke="#fff" stroke-width="3"/><path d="M0 0L20 14M20 0L0 14" stroke="#c8102e" stroke-width="1"/><path d="M10 0V14M0 7H20" stroke="#fff" stroke-width="4.5"/><path d="M10 0V14M0 7H20" stroke="#c8102e" stroke-width="2.5"/></svg><span>English</span></a><a href="/es/" hreflang="es" lang="es"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#aa151b"/><rect y="3.5" width="20" height="7" fill="#f1bf00"/></svg><span>Español</span></a><a href="/it/" hreflang="it" lang="it"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#009246"/><rect x="13.33" width="6.67" height="14" fill="#ce2b37"/></svg><span>Italiano</span></a><a href="/de/" hreflang="de" lang="de"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#ffce00"/><rect width="20" height="4.67" fill="#000"/><rect y="4.67" width="20" height="4.67" fill="#dd0000"/></svg><span>Deutsch</span></a><a href="/pt/" hreflang="pt" lang="pt"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#da291c"/><rect width="8" height="14" fill="#046a38"/><circle cx="8" cy="7" r="3" fill="#ffe900"/><circle cx="8" cy="7" r="1.6" fill="#da291c"/></svg><span>Português</span></a><a href="/nl/" hreflang="nl" lang="nl"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="20" height="4.67" fill="#ae1c28"/><rect y="9.33" width="20" height="4.67" fill="#21468b"/></svg><span>Nederlands</span></a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
+        <!-- lang-menu --><details class="lang-menu"><summary aria-label="Langue : Français"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#002654"/><rect x="13.33" width="6.67" height="14" fill="#ce1126"/></svg><span>FR</span></summary><div class="lang-menu-list"><a href="/blog/alternatives-eliott" hreflang="fr" lang="fr" aria-current="page"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#002654"/><rect x="13.33" width="6.67" height="14" fill="#ce1126"/></svg><span>Français</span></a><a href="/en/blog/alternatives-to-eliott" hreflang="en" lang="en"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#012169"/><path d="M0 0L20 14M20 0L0 14" stroke="#fff" stroke-width="3"/><path d="M0 0L20 14M20 0L0 14" stroke="#c8102e" stroke-width="1"/><path d="M10 0V14M0 7H20" stroke="#fff" stroke-width="4.5"/><path d="M10 0V14M0 7H20" stroke="#c8102e" stroke-width="2.5"/></svg><span>English</span></a><a href="/es/" hreflang="es" lang="es"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#aa151b"/><rect y="3.5" width="20" height="7" fill="#f1bf00"/></svg><span>Español</span></a><a href="/it/" hreflang="it" lang="it"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="6.67" height="14" fill="#009246"/><rect x="13.33" width="6.67" height="14" fill="#ce2b37"/></svg><span>Italiano</span></a><a href="/de/" hreflang="de" lang="de"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#ffce00"/><rect width="20" height="4.67" fill="#000"/><rect y="4.67" width="20" height="4.67" fill="#dd0000"/></svg><span>Deutsch</span></a><a href="/pt/" hreflang="pt" lang="pt"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#da291c"/><rect width="8" height="14" fill="#046a38"/><circle cx="8" cy="7" r="3" fill="#ffe900"/><circle cx="8" cy="7" r="1.6" fill="#da291c"/></svg><span>Português</span></a><a href="/nl/" hreflang="nl" lang="nl"><svg class="lang-flag" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><rect width="20" height="14" fill="#fff"/><rect width="20" height="4.67" fill="#ae1c28"/><rect y="9.33" width="20" height="4.67" fill="#21468b"/></svg><span>Nederlands</span></a></div></details><script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang-menu[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open');});});</script><!-- /lang-menu -->
         <a href="https://galac6web.netlify.app/" style="background: linear-gradient(135deg, var(--gradient-start, #6366f1), var(--gradient-end, #a855f7)); color: #fff; padding: 0.5rem 1.2rem; border-radius: 10px; font-weight: 600; text-align: center;" data-i18n="nav.signup">Inscription ou connexion</a>
       </div>
     </nav>
@@ -503,7 +513,7 @@
     <nav class="breadcrumb"><a href="/">Accueil</a> › <a href="/blog/">Blog</a> › Alternatives à Eliott</nav>
 
     <h1>Alternatives à Eliott : <span class="grad">5 tuteurs IA comparés</span> pour votre enfant</h1>
-    <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 4 novembre 2026 · 9 min de lecture</div>
+    <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 4 novembre 2026 · Mis à jour le 9 novembre 2026 · 9 min de lecture</div>
 
     <p class="lead">Eliott est un tuteur IA français, de la 6e aux études supérieures, souvent cité quand on cherche une aide aux devoirs par intelligence artificielle. Il existe d'autres options : Galac6 (galac6.io), Kartable avec son professeur particulier IA Alfa, SchoolMouv et son coach IA, le mode étude de ChatGPT et Khanmigo. Voici ce que propose chacune, d'après leurs pages officielles consultées le 4 novembre 2026, et comment choisir.</p>
 

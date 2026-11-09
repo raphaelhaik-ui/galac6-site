@@ -481,8 +481,9 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
-       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 au soir (police système, Mac) : 30 px à partir de 1072 px, 49 px de 601 à 1071,
+       41 px de 528 à 600, 57 px de 369 à 527, 73 px en dessous ; 2 px de marge. Paliers 1111 et 601-603 gardés par prudence :
+       une mesure du matin donnait une ligne de plus à ces largeurs (la coupure dépend de la police) */
     @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
     @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
@@ -490,8 +491,14 @@
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 527px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 368px) { html.g6-banner { --g6-banner-h: 75px; } }
+    /* Pied de page sur téléphone : zones de tap d'au moins 44 px de haut, sans espace en plus entre les liens */
+    @media (max-width: 480px) {
+      footer a[href] { display: inline-flex; align-items: center; min-height: 44px; }
+      footer .footer-col { gap: 0; }
+      footer .footer-badges { row-gap: 0 !important; }
+    }
   </style>
 <style id="g6-nav-css">
     /* Menu commun à toutes les pages : mêmes liens, même logo, mêmes marges (généré par scripts/build-langs.py) */
@@ -751,7 +758,7 @@
 <details><summary>Do we need to adapt Galac6 to our school?</summary><div class="ans"><p>No. Galac6 follows the official French curriculum, from CP to Terminale, the same as in your school. Your teachers find the topics, levels and exams they already know.</p></div></details>
 <details><summary>How do we add our pupils?</summary><div class="ans"><p>You import your pupil list from a file: an export from Pronote or École Directe, or a simple pasted list. No need to enter them one by one.</p></div></details>
 <details><summary>Not all our families read French. What can we do?</summary><div class="ans"><p>Emails to families are sent in French or in English, as your school chooses, and at your school's local time.</p></div></details>
-<details><summary>Where is pupil data hosted?</summary><div class="ans"><p><strong>Data is hosted in France</strong>, in Paris, and Galac6's main artificial intelligence is processed in Europe. Only the pupil's teachers and their school's leadership can see their work. Full details are on the <a href="/donnees-eleves" hreflang="fr">pupil data</a> page (in French).</p></div></details>
+<details><summary>Where is pupil data hosted?</summary><div class="ans"><p><strong>Data is hosted in France</strong>, in Paris, and Galac6's main artificial intelligence is processed in Europe. Only the pupil's teachers and their school's leadership can see their work. Full details are on the <a href="/en/student-data">pupil data</a> page (in French).</p></div></details>
 <details><summary>How much does Galac6 cost?</summary><div class="ans"><p>The pilot is free for 3 months for 3 classes, with no commitment. After that, we send you a quote in euros based on the number of your pupils and the modules chosen.</p></div></details>
 </div>
 </div>
@@ -849,7 +856,7 @@
 <a href="/en/familles" style="color: var(--text-muted);">Families</a>
 <a href="/en/french-dictation-online" style="color: var(--text-muted);">French dictation online</a>
 <a href="/en/brevet-bac-past-papers" style="color: var(--text-muted);">Brevet and bac past papers</a>
-<a href="/fiches-revision-ia" hreflang="fr" style="color: var(--text-muted);">AI revision sheets</a>
+<a href="/en/ai-revision-notes" style="color: var(--text-muted);">AI revision sheets</a>
 <a href="/en/french-curriculum-abroad" style="color: var(--text-muted);">Families abroad</a>
 <a href="/mentions-legales" hreflang="fr" style="color: var(--text-muted);">Legal notices</a>
 <a href="/international" style="color: var(--text-muted);">School outside France?</a>

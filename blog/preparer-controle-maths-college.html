@@ -466,8 +466,9 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
-       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 au soir (police système, Mac) : 30 px à partir de 1072 px, 49 px de 601 à 1071,
+       41 px de 528 à 600, 57 px de 369 à 527, 73 px en dessous ; 2 px de marge. Paliers 1111 et 601-603 gardés par prudence :
+       une mesure du matin donnait une ligne de plus à ces largeurs (la coupure dépend de la police) */
     @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
     @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
@@ -475,8 +476,14 @@
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 527px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 368px) { html.g6-banner { --g6-banner-h: 75px; } }
+    /* Pied de page sur téléphone : zones de tap d'au moins 44 px de haut, sans espace en plus entre les liens */
+    @media (max-width: 480px) {
+      footer a[href] { display: inline-flex; align-items: center; min-height: 44px; }
+      footer .footer-col { gap: 0; }
+      footer .footer-badges { row-gap: 0 !important; }
+    }
   </style>
 </head>
 <body>
@@ -510,7 +517,7 @@
     <nav class="breadcrumb"><a href="/">Accueil</a> › <a href="/blog/">Blog</a> › Préparer un contrôle de maths au collège</nav>
 
     <h1>Comment préparer un <span class="grad">contrôle de maths</span> au collège, de la 6e à la 3e</h1>
-    <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 4 novembre 2026 · 9 min de lecture</div>
+    <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 4 novembre 2026 · Mis à jour le 9 novembre 2026 · 9 min de lecture</div>
 
     <p class="lead">Un contrôle de maths se prépare en trois temps : apprendre sa leçon, refaire des exercices de plus en plus difficiles, puis se tester sans aide. Le plus souvent, ce qui manque n'est pas le travail mais l'ordre et le moment. Voici une méthode simple pour un élève de collège, de la 6e à la 3e, le rôle que vous pouvez jouer en tant que parent, et ce que Galac6 (galac6.io) propose pour l'accompagner jusqu'au jour du contrôle.</p>
 
@@ -632,20 +639,20 @@
         <title id="schema-escalier-titre">Monter d'un cran à la fois dans les exercices</title>
         <desc id="schema-escalier-desc">Quatre marches, de la plus simple à la plus difficile : les exercices du cours refaits sans la correction, des applications directes, des exercices qui mélangent plusieurs notions, des exercices du niveau du contrôle.</desc>
         <text class="d-s" x="180" y="20" text-anchor="middle">de la plus simple à la plus difficile</text>
-        <rect class="d-band-1" x="2" y="154" width="87" height="76" rx="8"/>
-        <rect class="d-band-1" x="91" y="116" width="87" height="114" rx="8"/>
-        <rect class="d-band-2" x="180" y="78" width="87" height="152" rx="8"/>
-        <rect class="d-band-3" x="269" y="40" width="87" height="190" rx="8"/>
-        <text class="d-t" x="45.5" y="174" text-anchor="middle" style="font-size:12px">Exercices</text>
-        <text class="d-t" x="45.5" y="190" text-anchor="middle" style="font-size:12px">du cours</text>
-        <text class="d-s" x="45.5" y="207" text-anchor="middle" style="font-size:11px">sans</text>
-        <text class="d-s" x="45.5" y="221" text-anchor="middle" style="font-size:11px">correction</text>
-        <text class="d-t" x="134.5" y="146" text-anchor="middle" style="font-size:12px">Applications</text>
-        <text class="d-t" x="134.5" y="162" text-anchor="middle" style="font-size:12px">directes</text>
-        <text class="d-t" x="223.5" y="104" text-anchor="middle" style="font-size:12px">Plusieurs</text>
-        <text class="d-t" x="223.5" y="120" text-anchor="middle" style="font-size:12px">notions</text>
-        <text class="d-t" x="312.5" y="64" text-anchor="middle" style="font-size:12px">Niveau du</text>
-        <text class="d-t" x="312.5" y="80" text-anchor="middle" style="font-size:12px">contrôle</text>
+        <rect class="d-band-1" x="0" y="154" width="89" height="76" rx="8"/>
+        <rect class="d-band-1" x="90" y="116" width="89" height="114" rx="8"/>
+        <rect class="d-band-2" x="180" y="78" width="89" height="152" rx="8"/>
+        <rect class="d-band-3" x="270" y="40" width="89" height="190" rx="8"/>
+        <text class="d-t" x="44.5" y="174" text-anchor="middle" style="font-size:11.5px">Exercices</text>
+        <text class="d-t" x="44.5" y="190" text-anchor="middle" style="font-size:11.5px">du cours</text>
+        <text class="d-s" x="44.5" y="207" text-anchor="middle" style="font-size:11px">sans</text>
+        <text class="d-s" x="44.5" y="221" text-anchor="middle" style="font-size:11px">correction</text>
+        <text class="d-t" x="134.5" y="146" text-anchor="middle" style="font-size:11.5px">Applications</text>
+        <text class="d-t" x="134.5" y="162" text-anchor="middle" style="font-size:11.5px">directes</text>
+        <text class="d-t" x="224.5" y="104" text-anchor="middle" style="font-size:11.5px">Plusieurs</text>
+        <text class="d-t" x="224.5" y="120" text-anchor="middle" style="font-size:11.5px">notions</text>
+        <text class="d-t" x="314.5" y="64" text-anchor="middle" style="font-size:11.5px">Niveau du</text>
+        <text class="d-t" x="314.5" y="80" text-anchor="middle" style="font-size:11.5px">contrôle</text>
       </svg>
       <figcaption>Monter d'un cran à la fois, de la plus simple à la plus difficile : les exercices du cours sans correction, les applications directes, plusieurs notions, puis le niveau du contrôle.</figcaption>
     </figure>

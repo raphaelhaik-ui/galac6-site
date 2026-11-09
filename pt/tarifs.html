@@ -445,8 +445,9 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
-       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 au soir (police système, Mac) : 30 px à partir de 1072 px, 49 px de 601 à 1071,
+       41 px de 528 à 600, 57 px de 369 à 527, 73 px en dessous ; 2 px de marge. Paliers 1111 et 601-603 gardés par prudence :
+       une mesure du matin donnait une ligne de plus à ces largeurs (la coupure dépend de la police) */
     @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
     @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
@@ -454,8 +455,14 @@
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 527px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 368px) { html.g6-banner { --g6-banner-h: 75px; } }
+    /* Pied de page sur téléphone : zones de tap d'au moins 44 px de haut, sans espace en plus entre les liens */
+    @media (max-width: 480px) {
+      footer a[href] { display: inline-flex; align-items: center; min-height: 44px; }
+      footer .footer-col { gap: 0; }
+      footer .footer-badges { row-gap: 0 !important; }
+    }
   </style>
 <script>window.G6_DYN = {"title": "Preços do Galac6, tutor de IA: Aluno, Família e escolas", "plansLabel": "Planos", "prices": {"year": {"eleve": ["69 € <small>por ano</small>", "ou seja, 5,75 € por mês, em vez de 95,88 € por 12 meses a 7,99 €", "26,88 € de poupança (cerca de −28 %)", "Renovação automática, que pode desativar a qualquer momento na sua área pessoal. Enviamos-lhe um lembrete antes da data de renovação."], "fam": ["99 € <small>por ano</small>", "ou seja, 8,25 € por mês para toda a família, em vez de 143,88 € por 12 meses a 11,99 €", "44,88 € de poupança (cerca de −31 %)", "Renovação automática, que pode desativar a qualquer momento na sua área pessoal. Enviamos-lhe um lembrete antes da data de renovação."]}, "month": {"eleve": ["7,99 € <small>por mês</small>", "Sem fidelização. Por ano, apenas 69 €.", "", "Cancelamento num clique."], "fam": ["11,99 € <small>por mês</small>", "Sem fidelização. Por ano, apenas 99 €.", "", "Cancelamento num clique."]}}};</script>
 <script>window.G6_COOKIE_TXT = {"texte": "Gostaríamos de medir as visitas a este site (Google Analytics) e os resultados dos nossos anúncios (Google Ads, Meta). Estes serviços instalam cookies e só são carregados com o seu consentimento. Pode mudar de opinião a qualquer momento com a ligação «Gerir os cookies» no rodapé de cada página.", "plus": "Saber mais", "refuser": "Recusar tudo", "perso": "Personalizar", "accepter": "Aceitar tudo", "titrePerso": "Escolha os seus cookies", "audienceTitre": "Medição de audiência", "audienceTexte": "Google Analytics: conta as visitas e as páginas vistas, para melhorar o site.", "pubTitre": "Publicidade", "pubTexte": "Google Ads e Meta (Facebook, Instagram): medem os resultados dos nossos anúncios.", "enregistrer": "Guardar as minhas escolhas", "necessaires": "O site também guarda o seu idioma e esta escolha no seu dispositivo (indispensável, sem necessidade de consentimento).", "lien": "/mentions-legales#cookies-en"};</script>

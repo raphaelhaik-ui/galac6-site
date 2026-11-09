@@ -88,6 +88,12 @@
     '  #galac6-cookie-banner .gcb-btns{width:100%;}',
     '  #galac6-cookie-banner .gcb-btns button{flex:1 1 30%;padding:11px 8px;white-space:normal;}',
     '  .footer-badges{justify-content:center;gap:0.8rem 1.2rem !important;}',
+    // Téléphone : bandeau plus compact, même texte, trois boutons de même hauteur sur une ligne
+    '  #galac6-cookie-banner{padding:10px 12px;}',
+    '  #galac6-cookie-banner .gcb-inner{gap:8px;}',
+    '  #galac6-cookie-banner .gcb-inner p{flex:1 1 100%;font-size:13px;line-height:1.35;}',
+    '  #galac6-cookie-banner .gcb-inner .gcb-btns{gap:6px;flex-wrap:nowrap;}',
+    '  #galac6-cookie-banner .gcb-inner .gcb-btns button{flex:1 1 0;min-width:0;padding:6px 4px;font-size:13px;line-height:1.2;}',
     '}'
   ].join('\n');
   document.head.appendChild(style);

@@ -326,8 +326,9 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
-       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 au soir (police système, Mac) : 30 px à partir de 1072 px, 49 px de 601 à 1071,
+       41 px de 528 à 600, 57 px de 369 à 527, 73 px en dessous ; 2 px de marge. Paliers 1111 et 601-603 gardés par prudence :
+       une mesure du matin donnait une ligne de plus à ces largeurs (la coupure dépend de la police) */
     @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
     @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
@@ -335,8 +336,14 @@
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 527px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 368px) { html.g6-banner { --g6-banner-h: 75px; } }
+    /* Pied de page sur téléphone : zones de tap d'au moins 44 px de haut, sans espace en plus entre les liens */
+    @media (max-width: 480px) {
+      footer a[href] { display: inline-flex; align-items: center; min-height: 44px; }
+      footer .footer-col { gap: 0; }
+      footer .footer-badges { row-gap: 0 !important; }
+    }
   </style>
 <style id="g6-pivot-css">
     /* Blocs ajoutés pour les pages pivots (réponse courte, comparaison, prix, FAQ) */
@@ -496,11 +503,11 @@
 <p>Each pupil can also practise dictation, with over 2,000 texts, and mental maths, and work on past brevet and bac papers.</p>
 <ul>
 <li><a href="/en/french-dictation-online">French dictation online</a>: each dictation is read aloud, then corrected mistake by mistake, with the rule explained.</li>
-<li><a href="/calcul-mental-en-ligne" hreflang="fr">Mental maths online</a> (page in French), to practise every day.</li>
+<li><a href="/en/mental-math-online">Mental maths online</a> (page in French), to practise every day.</li>
 <li><a href="/en/brevet-bac-past-papers">Past brevet and bac papers</a>: 433 official papers, including 129 brevet papers and 75 French bac papers. A practice paper created by the AI is always presented as such.</li>
 </ul>
 <h2>What do parents and teachers see?</h2>
-<p>Teachers see where their class stands and where each pupil stands, concept by concept; parents follow their child's progress, strengths and what is left to work on. Data is hosted in France and Galac6's artificial intelligence is processed in Europe: everything is explained on the <a href="/donnees-eleves" hreflang="fr">pupil data page</a> (in French).</p>
+<p>Teachers see where their class stands and where each pupil stands, concept by concept; parents follow their child's progress, strengths and what is left to work on. Data is hosted in France and Galac6's artificial intelligence is processed in Europe: everything is explained on the <a href="/en/student-data">pupil data page</a> (in French).</p>
 <!-- Liens internes -->
 <div class="related">
 <h2>Find out more</h2>
@@ -556,7 +563,7 @@
 <a href="/en/familles" style="color: var(--text-muted);">Families</a>
 <a href="/en/french-dictation-online" style="color: var(--text-muted);">French dictation online</a>
 <a href="/en/brevet-bac-past-papers" style="color: var(--text-muted);">Brevet and bac past papers</a>
-<a href="/fiches-revision-ia" hreflang="fr" style="color: var(--text-muted);">AI revision sheets</a>
+<a href="/en/ai-revision-notes" style="color: var(--text-muted);">AI revision sheets</a>
 <a href="/en/french-curriculum-abroad" style="color: var(--text-muted);">Families abroad</a>
 <a href="/mentions-legales" hreflang="fr" style="color: var(--text-muted);">Legal notices</a>
 <a href="/international" style="color: var(--text-muted);">School outside France?</a>

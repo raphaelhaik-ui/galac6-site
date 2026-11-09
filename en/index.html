@@ -127,7 +127,7 @@
         "@id": "https://galac6.io/#organization"
       },
       "description": "Galac6 prepares each pupil for their class test: lesson learnt on a revision sheet, an AI quiz, then exercises suited to their level. Grades 1 to 12.",
-      "dateModified": "2026-11-05",
+      "dateModified": "2026-11-08",
       "mainEntity": [
         {
           "@type": "Question",
@@ -647,8 +647,9 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
-       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 au soir (police système, Mac) : 30 px à partir de 1072 px, 49 px de 601 à 1071,
+       41 px de 528 à 600, 57 px de 369 à 527, 73 px en dessous ; 2 px de marge. Paliers 1111 et 601-603 gardés par prudence :
+       une mesure du matin donnait une ligne de plus à ces largeurs (la coupure dépend de la police) */
     @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
     @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
@@ -656,8 +657,14 @@
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 527px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 368px) { html.g6-banner { --g6-banner-h: 75px; } }
+    /* Pied de page sur téléphone : zones de tap d'au moins 44 px de haut, sans espace en plus entre les liens */
+    @media (max-width: 480px) {
+      footer a[href] { display: inline-flex; align-items: center; min-height: 44px; }
+      footer .footer-col { gap: 0; }
+      footer .footer-badges { row-gap: 0 !important; }
+    }
   </style>
 <script>window.G6_COOKIE_TXT = {"texte": "We would like to measure visits to this site (Google Analytics) and the results of our ads (Google Ads, Meta). These services set cookies and are only loaded if you agree. You can change your mind at any time with the “Manage cookies” link at the bottom of each page.", "plus": "Learn more", "refuser": "Refuse all", "perso": "Customise", "accepter": "Accept all", "titrePerso": "Choose your cookies", "audienceTitre": "Audience measurement", "audienceTexte": "Google Analytics: counts visits and the pages viewed, to improve the site.", "pubTitre": "Advertising", "pubTexte": "Google Ads and Meta (Facebook, Instagram): measure the results of our ads.", "enregistrer": "Save my choices", "necessaires": "The site also remembers your language and this choice on your device (required, no consent needed).", "lien": "/mentions-legales#cookies-en"};</script>
 <style id="g6-lang-css">
@@ -731,7 +738,7 @@
 <a class="link" href="/en/tarifs">See pricing →</a>
 </div>
 <p class="made-fr"><svg aria-hidden="true" class="ico"><use href="#i-pin"></use></svg><span>Designed in France, data hosted in France, AI processed in Europe.</span></p>
-<p class="updated"><time datetime="2026-11-05">Updated on 5 November 2026</time></p>
+<p class="updated"><time datetime="2026-11-08">Updated on 8 November 2026</time></p>
 </div>
 <hr class="divider"/>
 <!-- ═══ b. LE CONSTAT ═══ -->
@@ -872,14 +879,14 @@
 <a class="f" href="/cours-particulier-en-ligne" hreflang="fr"><svg aria-hidden="true" class="ico"><use href="#i-help"></use></svg><strong>Homework help</strong><span>Step by step, from a photo.</span></a>
 <a class="f" href="/en/familles"><svg aria-hidden="true" class="ico"><use href="#i-quiz"></use></svg><strong>Quizzes</strong><span>On the student's weak points.</span></a>
 <a class="f" href="/en/french-dictation-online"><svg aria-hidden="true" class="ico"><use href="#i-pen"></use></svg><strong>Dictation</strong><span>Read aloud, then marked.</span></a>
-<a class="f" href="/fiches-revision-ia" hreflang="fr"><svg aria-hidden="true" class="ico"><use href="#i-card"></use></svg><strong>Revision sheets</strong><span>Then Galac6 quizzes the student.</span></a>
-<a class="f" href="/calcul-mental-en-ligne" hreflang="fr"><svg aria-hidden="true" class="ico"><use href="#i-calc"></use></svg><strong>Mental maths</strong><span>A little every day.</span></a>
+<a class="f" href="/en/ai-revision-notes"><svg aria-hidden="true" class="ico"><use href="#i-card"></use></svg><strong>Revision sheets</strong><span>Then Galac6 quizzes the student.</span></a>
+<a class="f" href="/en/mental-math-online"><svg aria-hidden="true" class="ico"><use href="#i-calc"></use></svg><strong>Mental maths</strong><span>A little every day.</span></a>
 <a class="f" href="/en/brevet-bac-past-papers"><svg aria-hidden="true" class="ico"><use href="#i-exam"></use></svg><strong>Mock brevet and bac</strong><span>Marked, on official papers.</span></a>
 <a class="f" href="/en/familles"><svg aria-hidden="true" class="ico"><use href="#i-calendar"></use></svg><strong>Ready for my test</strong><span>A plan up to the big day.</span></a>
 <a class="f" href="/en/familles"><svg aria-hidden="true" class="ico"><use href="#i-flame"></use></svg><strong>Daily challenge</strong><span>A daily appointment.</span></a>
 <a class="f" href="/en/familles"><svg aria-hidden="true" class="ico"><use href="#i-book"></use></svg><strong>Reading</strong><span>Books for every level.</span></a>
 </div>
-<p class="more-links"><span>By need:</span> <a href="/reviser-brevet" hreflang="fr">Revise for the brevet</a> <a href="/reviser-bac-francais" hreflang="fr">Revise for the French bac</a> <a href="/reviser-bac-maths" hreflang="fr">Revise for the maths bac</a> <a href="/reviser-maths" hreflang="fr">Revise maths</a> <a href="/en/brevet-bac-past-papers">Brevet and bac past papers</a> <a href="/primaire" hreflang="fr">Primary school (1st to 5th grade)</a></p>
+<p class="more-links"><span>By need:</span> <a href="/en/brevet-revision">Revise for the brevet</a> <a href="/reviser-bac-francais" hreflang="fr">Revise for the French bac</a> <a href="/reviser-bac-maths" hreflang="fr">Revise for the maths bac</a> <a href="/reviser-maths" hreflang="fr">Revise maths</a> <a href="/en/brevet-bac-past-papers">Brevet and bac past papers</a> <a href="/primaire" hreflang="fr">Primary school (1st to 5th grade)</a></p>
 <div class="seeall">
 <a class="btn btn-primary" href="/en/familles">See everything →</a>
 <a class="btn btn-secondary" href="/en/ecole">See everything for teachers →</a>
@@ -917,7 +924,7 @@
 <div class="trust">
 <div class="t"><svg aria-hidden="true" class="ico"><use href="#i-flask"></use></svg><div><strong>Grounded in research</strong><span>Questioning, retrieval practice, learning from mistakes. <a href="/recherche" hreflang="fr">See our sources</a></span></div></div>
 <div class="t"><svg aria-hidden="true" class="ico"><use href="#i-check"></use></svg><div><strong>Verified content</strong><span>Aligned with the official curriculum, from 1st to 12th grade. A practice paper is never presented as an official past paper.</span></div></div>
-<div class="t"><svg aria-hidden="true" class="ico"><use href="#i-lock"></use></svg><div><strong>Data in France, AI in Europe</strong><span>Parental consent required for children under 15. Full details on the <a href="/donnees-eleves" hreflang="fr">Student data</a> page.</span></div></div>
+<div class="t"><svg aria-hidden="true" class="ico"><use href="#i-lock"></use></svg><div><strong>Data in France, AI in Europe</strong><span>Parental consent required for children under 15. Full details on the <a href="/en/student-data">Student data</a> page.</span></div></div>
 </div>
 </section>
 <!-- ═══ CONFIDENTIALITÉ ET SÉCURITÉ (composant partagé : index, ecole, donnees-eleves) ═══ -->
@@ -949,7 +956,7 @@
 </ul>
 <p class="pp-links">
 <a href="/privacy" hreflang="fr">Learn more</a>
-<a href="/donnees-eleves" hreflang="fr">Student data: the details</a>
+<a href="/en/student-data">Student data: the details</a>
 </p>
 </div>
 </div>
@@ -1054,7 +1061,7 @@
 <span class="faq-icon">+</span>
 </button>
 <div class="faq-answer">
-<div class="faq-answer-inner">Yes, it is a priority. <strong>Data is hosted in France</strong>, in Paris. Each account only sees what it is allowed to see: at school, only the student's teachers and school leadership can access their work. Galac6 platform administration accounts are protected by two-factor authentication, and passwords known to have leaked are refused. Data is never sold or used to train AIs, and a deleted account is erased within 30 days. A few services remain outside the European Union, such as hosting of the website: everything is detailed on the <a href="/donnees-eleves" hreflang="fr">Student data</a> page.</div>
+<div class="faq-answer-inner">Yes, it is a priority. <strong>Data is hosted in France</strong>, in Paris. Each account only sees what it is allowed to see: at school, only the student's teachers and school leadership can access their work. Galac6 platform administration accounts are protected by two-factor authentication, and passwords known to have leaked are refused. Data is never sold or used to train AIs, and a deleted account is erased within 30 days. A few services remain outside the European Union, such as hosting of the website: everything is detailed on the <a href="/en/student-data">Student data</a> page.</div>
 </div>
 </div>
 <div class="faq-item">
@@ -1138,15 +1145,15 @@
 <span class="footer-col-title">Revise</span>
 <a href="/en/ai-tutoring">AI tutoring</a>
 <a href="/en/teaching-method">Teaching method</a>
-<a href="/reviser-brevet" hreflang="fr">Revise for the brevet</a>
+<a href="/en/brevet-revision">Revise for the brevet</a>
 <a href="/reviser-bac-francais" hreflang="fr">Revise for the French bac</a>
 <a href="/reviser-bac-maths" hreflang="fr">Revise for the maths bac</a>
 <a href="/reviser-maths" hreflang="fr">Revise maths</a>
-<a href="/fiches-revision-ia" hreflang="fr">AI revision sheets</a>
+<a href="/en/ai-revision-notes">AI revision sheets</a>
 <a href="/cours-particulier-en-ligne" hreflang="fr">Online private lessons</a>
 <a href="/primaire" hreflang="fr">Primary school (1st to 5th grade)</a>
 <a href="/en/french-dictation-online">French dictation online</a>
-<a href="/calcul-mental-en-ligne" hreflang="fr">Mental maths online</a>
+<a href="/en/mental-math-online">Mental maths online</a>
 <a href="/en/brevet-bac-past-papers">Brevet and bac past papers</a>
 </div>
 <div class="footer-col">
@@ -1156,7 +1163,7 @@
 <a href="/en/blog/">Blog</a>
 <a href="/en/about">About</a>
 <a href="/recherche" hreflang="fr">Our teaching approach and its sources</a>
-<a href="/donnees-eleves" hreflang="fr">Student data</a>
+<a href="/en/student-data">Student data</a>
 <a href="/en/french-schools-abroad">French schools abroad</a>
 <a href="/en/french-curriculum-abroad">Families abroad</a>
 <a href="/international">School outside France?</a>

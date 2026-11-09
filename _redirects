@@ -38,6 +38,12 @@
 /en/brevet-bac-past-papers /en/brevet-bac-past-papers.html 200
 /en/teaching-method      /en/teaching-method.html     200
 /en/ai-tutoring          /en/ai-tutoring.html         200
+/en/brevet-revision      /en/brevet-revision.html     200
+/en/mental-math-online   /en/mental-math-online.html  200
+/en/ai-revision-notes    /en/ai-revision-notes.html   200
+/en/student-data         /en/student-data.html        200
+/en/blog/alternatives-to-eliott /en/blog/alternatives-to-eliott.html 200
+/en/blog/times-tables-online /en/blog/times-tables-online.html 200
 /es/familles             /es/familles.html            200
 /es/ecole                /es/ecole.html               200
 /es/about                /es/about.html               200
@@ -140,8 +146,10 @@
 /blog/reviser-brevet-mois-par-mois.html  /blog/reviser-brevet-mois-par-mois 301!
 /blog/tables-de-multiplication-en-ligne.html /blog/tables-de-multiplication-en-ligne 301!
 /en/about.html                           /en/about                          301!
+/en/ai-revision-notes.html               /en/ai-revision-notes              301!
 /en/ai-tutoring.html                     /en/ai-tutoring                    301!
 /en/brevet-bac-past-papers.html          /en/brevet-bac-past-papers         301!
+/en/brevet-revision.html                 /en/brevet-revision                301!
 /en/ecole.html                           /en/ecole                          301!
 /en/familles.html                        /en/familles                       301!
 /en/french-curriculum-abroad.html        /en/french-curriculum-abroad       301!
@@ -149,6 +157,8 @@
 /en/french-schools-abroad.html           /en/french-schools-abroad          301!
 /en/french-schools-uk.html               /en/french-schools-uk              301!
 /en/index.html                           /en/                               301!
+/en/mental-math-online.html              /en/mental-math-online             301!
+/en/student-data.html                    /en/student-data                   301!
 /en/tarifs.html                          /en/tarifs                         301!
 /en/teaching-method.html                 /en/teaching-method                301!
 /es/about.html                           /es/about                          301!

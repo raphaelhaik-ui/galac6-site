@@ -7,8 +7,6 @@
   <meta name="description" content="Votre enfant utilise l&#x27;IA pour ses devoirs ? Ce que dit l&#x27;Éducation nationale, la différence entre tricher et apprendre, et des règles pour la maison.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://galac6.io/blog/ia-devoirs-sans-tricher">
-  <link rel="alternate" hreflang="fr" href="https://galac6.io/blog/ia-devoirs-sans-tricher">
-  <link rel="alternate" hreflang="x-default" href="https://galac6.io/blog/ia-devoirs-sans-tricher">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Galac6">
   <meta property="og:locale" content="fr_FR">
@@ -336,8 +334,9 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
-       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 au soir (police système, Mac) : 30 px à partir de 1072 px, 49 px de 601 à 1071,
+       41 px de 528 à 600, 57 px de 369 à 527, 73 px en dessous ; 2 px de marge. Paliers 1111 et 601-603 gardés par prudence :
+       une mesure du matin donnait une ligne de plus à ces largeurs (la coupure dépend de la police) */
     @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
     @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
@@ -345,8 +344,14 @@
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 527px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 368px) { html.g6-banner { --g6-banner-h: 75px; } }
+    /* Pied de page sur téléphone : zones de tap d'au moins 44 px de haut, sans espace en plus entre les liens */
+    @media (max-width: 480px) {
+      footer a[href] { display: inline-flex; align-items: center; min-height: 44px; }
+      footer .footer-col { gap: 0; }
+      footer .footer-badges { row-gap: 0 !important; }
+    }
   </style>
 </head>
 <body>
@@ -378,7 +383,7 @@
     <nav class="breadcrumb"><a href="/">Accueil</a> › <a href="/blog/">Blog</a> › L'IA et les devoirs</nav>
 
     <h1>L'IA pour faire ses devoirs : comment l'utiliser <span class="grad">sans tricher</span></h1>
-    <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 31 octobre 2026 · 4 min de lecture</div>
+    <div class="post-meta"><span class="post-author">Par <a href="/about" rel="author">Raphaël Haïk</a>, fondateur de Galac6</span> · Publié le 31 octobre 2026 · Mis à jour le 9 novembre 2026 · 4 min de lecture</div>
 
     <p class="lead">Les outils d'intelligence artificielle sont entrés dans les chambres des collégiens et des lycéens. Beaucoup de parents se demandent s'il faut les interdire, les tolérer ou les encourager. La bonne question est ailleurs : votre enfant se sert-il de l'IA pour <strong>apprendre</strong>, ou pour <strong>éviter d'apprendre</strong> ? Voici des repères pour faire la différence. Galac6 (galac6.io), tuteur IA scolaire du CP à la terminale, a été pensé pour que l'élève fasse le travail : il guide par des questions et des indices, sans donner la réponse.</p>
 
@@ -569,7 +574,7 @@
 
     <!-- CTA final -->
     <div class="final-cta">
-      <h2>Un tuteur IA qui fait réfléchir votre enfant</h2>
+      <h2>Une aide aux devoirs qui fait réfléchir votre enfant</h2>
       <p>Créez un compte et laissez votre enfant essayer l'aide aux devoirs sur un exercice du jour.</p>
       <a href="https://galac6web.netlify.app/" class="cta-btn">Créer un compte →</a>
       <p class="cta-note">Formule Découverte pour essayer · <a href="/tarifs">Voir les tarifs</a></p>

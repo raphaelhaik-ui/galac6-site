@@ -445,8 +445,9 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
-       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 au soir (police système, Mac) : 30 px à partir de 1072 px, 49 px de 601 à 1071,
+       41 px de 528 à 600, 57 px de 369 à 527, 73 px en dessous ; 2 px de marge. Paliers 1111 et 601-603 gardés par prudence :
+       une mesure du matin donnait une ligne de plus à ces largeurs (la coupure dépend de la police) */
     @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
     @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
@@ -454,8 +455,14 @@
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 527px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 368px) { html.g6-banner { --g6-banner-h: 75px; } }
+    /* Pied de page sur téléphone : zones de tap d'au moins 44 px de haut, sans espace en plus entre les liens */
+    @media (max-width: 480px) {
+      footer a[href] { display: inline-flex; align-items: center; min-height: 44px; }
+      footer .footer-col { gap: 0; }
+      footer .footer-badges { row-gap: 0 !important; }
+    }
   </style>
 <script>window.G6_DYN = {"title": "Galac6 Preise: KI-Tutor für Schüler, Familien und Schulen", "plansLabel": "Tarife", "prices": {"year": {"eleve": ["69 € <small>pro Jahr</small>", "also 5,75 € pro Monat statt 95,88 € für 12 Monate zu 7,99 €", "26,88 € gespart (rund −28 %)", "Automatische Verlängerung, jederzeit in Ihrem Konto abschaltbar. Vor dem Verlängerungsdatum erhalten Sie eine Erinnerung."], "fam": ["99 € <small>pro Jahr</small>", "also 8,25 € pro Monat für die ganze Familie statt 143,88 € für 12 Monate zu 11,99 €", "44,88 € gespart (rund −31 %)", "Automatische Verlängerung, jederzeit in Ihrem Konto abschaltbar. Vor dem Verlängerungsdatum erhalten Sie eine Erinnerung."]}, "month": {"eleve": ["7,99 € <small>pro Monat</small>", "Ohne Vertragsbindung. Im Jahresabo nur 69 €.", "", "Kündigung mit einem Klick."], "fam": ["11,99 € <small>pro Monat</small>", "Ohne Vertragsbindung. Im Jahresabo nur 99 €.", "", "Kündigung mit einem Klick."]}}};</script>
 <script>window.G6_COOKIE_TXT = {"texte": "Wir möchten die Besuche dieser Website (Google Analytics) und die Ergebnisse unserer Werbung (Google Ads, Meta) messen. Diese Dienste setzen Cookies und werden nur geladen, wenn Sie zustimmen. Sie können Ihre Entscheidung jederzeit über den Link „Cookie-Einstellungen“ unten auf jeder Seite ändern.", "plus": "Mehr erfahren", "refuser": "Alle ablehnen", "perso": "Anpassen", "accepter": "Alle akzeptieren", "titrePerso": "Cookies auswählen", "audienceTitre": "Reichweitenmessung", "audienceTexte": "Google Analytics: zählt die Besuche und die aufgerufenen Seiten, um die Website zu verbessern.", "pubTitre": "Werbung", "pubTexte": "Google Ads und Meta (Facebook, Instagram): messen die Ergebnisse unserer Werbung.", "enregistrer": "Auswahl speichern", "necessaires": "Die Website speichert außerdem Ihre Sprache und diese Auswahl auf Ihrem Gerät (notwendig, ohne Einwilligung).", "lien": "/mentions-legales#cookies-en"};</script>

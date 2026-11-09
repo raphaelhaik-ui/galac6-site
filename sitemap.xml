@@ -262,7 +262,7 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://galac6.io/pt/ecole"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://galac6.io/nl/ecole"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://galac6.io/ecole"/>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-09</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/en/ecole</loc>
@@ -561,6 +561,90 @@
     <lastmod>2026-11-09</lastmod>
   </url>
   <url>
+    <loc>https://galac6.io/reviser-brevet</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://galac6.io/reviser-brevet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://galac6.io/en/brevet-revision"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://galac6.io/reviser-brevet"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://galac6.io/en/brevet-revision</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://galac6.io/reviser-brevet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://galac6.io/en/brevet-revision"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://galac6.io/reviser-brevet"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://galac6.io/calcul-mental-en-ligne</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://galac6.io/calcul-mental-en-ligne"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://galac6.io/en/mental-math-online"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://galac6.io/calcul-mental-en-ligne"/>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://galac6.io/en/mental-math-online</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://galac6.io/calcul-mental-en-ligne"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://galac6.io/en/mental-math-online"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://galac6.io/calcul-mental-en-ligne"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://galac6.io/fiches-revision-ia</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://galac6.io/fiches-revision-ia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://galac6.io/en/ai-revision-notes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://galac6.io/fiches-revision-ia"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://galac6.io/en/ai-revision-notes</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://galac6.io/fiches-revision-ia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://galac6.io/en/ai-revision-notes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://galac6.io/fiches-revision-ia"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://galac6.io/donnees-eleves</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://galac6.io/donnees-eleves"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://galac6.io/en/student-data"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://galac6.io/donnees-eleves"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://galac6.io/en/student-data</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://galac6.io/donnees-eleves"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://galac6.io/en/student-data"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://galac6.io/donnees-eleves"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://galac6.io/blog/alternatives-eliott</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://galac6.io/blog/alternatives-eliott"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://galac6.io/en/blog/alternatives-to-eliott"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://galac6.io/blog/alternatives-eliott"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://galac6.io/en/blog/alternatives-to-eliott</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://galac6.io/blog/alternatives-eliott"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://galac6.io/en/blog/alternatives-to-eliott"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://galac6.io/blog/alternatives-eliott"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://galac6.io/blog/tables-de-multiplication-en-ligne</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://galac6.io/blog/tables-de-multiplication-en-ligne"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://galac6.io/en/blog/times-tables-online"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://galac6.io/blog/tables-de-multiplication-en-ligne"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://galac6.io/en/blog/times-tables-online</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://galac6.io/blog/tables-de-multiplication-en-ligne"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://galac6.io/en/blog/times-tables-online"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://galac6.io/blog/tables-de-multiplication-en-ligne"/>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
     <loc>https://galac6.io/about</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://galac6.io/about"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://galac6.io/en/about"/>
@@ -711,10 +795,6 @@
     <lastmod>2026-11-09</lastmod>
   </url>
   <url>
-    <loc>https://galac6.io/reviser-brevet</loc>
-    <lastmod>2026-11-09</lastmod>
-  </url>
-  <url>
     <loc>https://galac6.io/reviser-bac-francais</loc>
     <lastmod>2026-11-08</lastmod>
   </url>
@@ -724,14 +804,6 @@
   </url>
   <url>
     <loc>https://galac6.io/reviser-maths</loc>
-    <lastmod>2026-11-09</lastmod>
-  </url>
-  <url>
-    <loc>https://galac6.io/calcul-mental-en-ligne</loc>
-    <lastmod>2026-11-05</lastmod>
-  </url>
-  <url>
-    <loc>https://galac6.io/fiches-revision-ia</loc>
     <lastmod>2026-11-09</lastmod>
   </url>
   <url>
@@ -821,15 +893,7 @@
     <lastmod>2026-11-09</lastmod>
   </url>
   <url>
-    <loc>https://galac6.io/blog/tables-de-multiplication-en-ligne</loc>
-    <lastmod>2026-11-09</lastmod>
-  </url>
-  <url>
     <loc>https://galac6.io/blog/comment-faire-fiche-de-revision</loc>
-    <lastmod>2026-11-09</lastmod>
-  </url>
-  <url>
-    <loc>https://galac6.io/blog/alternatives-eliott</loc>
     <lastmod>2026-11-09</lastmod>
   </url>
   <url>
@@ -910,7 +974,7 @@
   </url>
   <url>
     <loc>https://galac6.io/mentions-legales</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/profs-testeurs</loc>
@@ -922,10 +986,6 @@
   </url>
   <url>
     <loc>https://galac6.io/guide-prof</loc>
-    <lastmod>2026-11-09</lastmod>
-  </url>
-  <url>
-    <loc>https://galac6.io/donnees-eleves</loc>
     <lastmod>2026-11-09</lastmod>
   </url>
 </urlset>

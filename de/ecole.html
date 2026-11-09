@@ -33,7 +33,7 @@
         "@id": "https://galac6.io/#organization"
       },
       "description": "Galac6 schlägt Hausaufgaben vor und korrigiert sie, auch handschriftlich, Sie geben sie frei. Überblick über jeden Schüler, kostenloser Pilot für 3 Monate.",
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-07",
       "mainEntity": [
         {
           "@type": "Question",
@@ -257,6 +257,8 @@
       .e-hero-grid { grid-template-columns: minmax(0, 1fr); padding-block: 40px 52px; gap: 28px; }
       .e-art { max-width: 190px; order: -1; }
     }
+    /* Téléphone : le titre d'abord, l'illustration après le texte */
+    @media (max-width: 600px) { .e-art { order: 0; } }
 
     .intl-link { margin-top: 18px; text-align: center; font-size: 0.9rem; }
     .intl-link a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px; color: var(--text-muted); text-decoration: underline; text-underline-offset: 3px; }
@@ -504,8 +506,9 @@
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
-       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 au soir (police système, Mac) : 30 px à partir de 1072 px, 49 px de 601 à 1071,
+       41 px de 528 à 600, 57 px de 369 à 527, 73 px en dessous ; 2 px de marge. Paliers 1111 et 601-603 gardés par prudence :
+       une mesure du matin donnait une ligne de plus à ces largeurs (la coupure dépend de la police) */
     @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
     @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
@@ -513,8 +516,14 @@
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 527px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 368px) { html.g6-banner { --g6-banner-h: 75px; } }
+    /* Pied de page sur téléphone : zones de tap d'au moins 44 px de haut, sans espace en plus entre les liens */
+    @media (max-width: 480px) {
+      footer a[href] { display: inline-flex; align-items: center; min-height: 44px; }
+      footer .footer-col { gap: 0; }
+      footer .footer-badges { row-gap: 0 !important; }
+    }
   </style>
 <script>window.G6_DYN = {"demo": "Demo anfragen", "devis": "Angebot anfragen", "fail": "Ihre Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es gleich noch einmal oder schreiben Sie uns an <a href=\"mailto:hello@galac6.io\">hello@galac6.io</a>.", "ok": "Vielen Dank, Ihre Anfrage wurde gesendet. Wir antworten Ihnen so schnell wie möglich an die angegebene Adresse.", "pilote": "Pilotschule werden", "quickErr": "Bitte geben Sie eine vollständige E-Mail-Adresse und den Namen Ihrer Schule an.", "sending": "Wird gesendet …", "title": "Lehrkräfte und Schulen: jeden Schüler kennen | Galac6"};</script>
 <script>window.G6_COOKIE_TXT = {"texte": "Wir möchten die Besuche dieser Website (Google Analytics) und die Ergebnisse unserer Werbung (Google Ads, Meta) messen. Diese Dienste setzen Cookies und werden nur geladen, wenn Sie zustimmen. Sie können Ihre Entscheidung jederzeit über den Link „Cookie-Einstellungen“ unten auf jeder Seite ändern.", "plus": "Mehr erfahren", "refuser": "Alle ablehnen", "perso": "Anpassen", "accepter": "Alle akzeptieren", "titrePerso": "Cookies auswählen", "audienceTitre": "Reichweitenmessung", "audienceTexte": "Google Analytics: zählt die Besuche und die aufgerufenen Seiten, um die Website zu verbessern.", "pubTitre": "Werbung", "pubTexte": "Google Ads und Meta (Facebook, Instagram): messen die Ergebnisse unserer Werbung.", "enregistrer": "Auswahl speichern", "necessaires": "Die Website speichert außerdem Ihre Sprache und diese Auswahl auf Ihrem Gerät (notwendig, ohne Einwilligung).", "lien": "/mentions-legales#cookies-en"};</script>
@@ -583,7 +592,7 @@
 <p class="eyebrow" style="margin-bottom:0">Lehrkräfte, Schulleitung, Schulen</p>
 <h1>Weniger Korrigieren, <span class="grad">mehr Pädagogik</span></h1>
 <p class="sub">Galac6 definiert das Lernen in der Schule neu, ausgehend von dem, was jeder Schüler weiß. Es schlägt Ihnen die Hausaufgaben vor und korrigiert sie, handschriftliche Arbeiten inklusive, und Sie geben sie frei. Sie kennen jeden Schüler, Thema für Thema, und Ihre Pädagogik bleibt in Ihrer Hand.</p>
-<p class="updated"><time datetime="2026-11-03">Aktualisiert am 3. November 2026</time></p>
+<p class="updated"><time datetime="2026-11-07">Aktualisiert am 7. November 2026</time></p>
 <div class="e-cta">
 <a class="btn btn-primary" data-type="devis" href="#devis">Angebot anfragen</a>
 <a class="btn btn-outline" href="/profs-testeurs" hreflang="fr">Als Lehrkraft ausprobieren</a>

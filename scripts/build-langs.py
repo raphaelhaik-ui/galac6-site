@@ -67,6 +67,13 @@ GROUPS = {
     # Soutien scolaire : version anglaise écrite à la main (en/ai-tutoring.html), le groupe sert aux hreflang, au sélecteur de langue,
     # aux liens traduits et au plan du site ; le script ne la génère pas (handmade)
     'soutien': {'src': 'soutien-scolaire-ia.html', 'src_lang': 'fr', 'handmade': True},
+    # Versions anglaises écrites à la main le 09/11/2026 : mêmes règles que « soutien » (hreflang, sélecteur, liens traduits, plan du site)
+    'brevet': {'src': 'reviser-brevet.html', 'src_lang': 'fr', 'handmade': True},
+    'calcul': {'src': 'calcul-mental-en-ligne.html', 'src_lang': 'fr', 'handmade': True},
+    'fiches': {'src': 'fiches-revision-ia.html', 'src_lang': 'fr', 'handmade': True},
+    'donnees': {'src': 'donnees-eleves.html', 'src_lang': 'fr', 'handmade': True},
+    'art-eliott': {'src': 'blog/alternatives-eliott.html', 'src_lang': 'fr', 'handmade': True},
+    'art-tables': {'src': 'blog/tables-de-multiplication-en-ligne.html', 'src_lang': 'fr', 'handmade': True},
 }
 # Pages à adresse propre par langue (une langue absente = pas de page dans cette langue)
 SLUGS = {
@@ -80,6 +87,12 @@ SLUGS = {
     'methode': {'fr': '/methode-pedagogique', 'en': '/en/teaching-method', 'es': '/es/metodo-pedagogico', 'it': '/it/metodo-didattico',
                 'de': '/de/lernmethode', 'pt': '/pt/metodo-pedagogico', 'nl': '/nl/onderwijsmethode'},
     'soutien': {'fr': '/soutien-scolaire-ia', 'en': '/en/ai-tutoring'},
+    'brevet': {'fr': '/reviser-brevet', 'en': '/en/brevet-revision'},
+    'calcul': {'fr': '/calcul-mental-en-ligne', 'en': '/en/mental-math-online'},
+    'fiches': {'fr': '/fiches-revision-ia', 'en': '/en/ai-revision-notes'},
+    'donnees': {'fr': '/donnees-eleves', 'en': '/en/student-data'},
+    'art-eliott': {'fr': '/blog/alternatives-eliott', 'en': '/en/blog/alternatives-to-eliott'},
+    'art-tables': {'fr': '/blog/tables-de-multiplication-en-ligne', 'en': '/en/blog/times-tables-online'},
 }
 # Chemin (adresse) d'une page traduite → groupe
 PATH_TO_GROUP = {
@@ -94,13 +107,21 @@ PATH_TO_GROUP = {
     '/annales-brevet-bac': 'annales', '/annales-brevet-bac.html': 'annales',
     '/methode-pedagogique': 'methode', '/methode-pedagogique.html': 'methode', '/teaching-method': 'methode',
     '/soutien-scolaire-ia': 'soutien', '/soutien-scolaire-ia.html': 'soutien', '/ai-tutoring': 'soutien',
+    '/reviser-brevet': 'brevet', '/reviser-brevet.html': 'brevet', '/brevet-revision': 'brevet',
+    '/calcul-mental-en-ligne': 'calcul', '/calcul-mental-en-ligne.html': 'calcul', '/mental-math-online': 'calcul',
+    '/fiches-revision-ia': 'fiches', '/fiches-revision-ia.html': 'fiches', '/ai-revision-notes': 'fiches',
+    '/donnees-eleves': 'donnees', '/donnees-eleves.html': 'donnees', '/student-data': 'donnees',
+    '/blog/alternatives-eliott': 'art-eliott', '/blog/alternatives-eliott.html': 'art-eliott',
+    '/blog/tables-de-multiplication-en-ligne': 'art-tables', '/blog/tables-de-multiplication-en-ligne.html': 'art-tables',
 }
 # Pages faites à la main (hors groupes) qui ont une version anglaise : liens traduits et sélecteur de langue (31/10/2026)
 # '/blog' → '/en/blog' : index du blog anglais (01/11/2026) ; les autres langues gardent le blog français.
 # Blog : adresse de référence avec la barre finale (/blog/, /en/blog/), audit SEO du 03/11/2026 ; '/blog' gardé pour les anciens liens
 PAIRES_EN = {'/ecoles-francaises-royaume-uni': '/en/french-schools-uk',
              '/blog': '/en/blog/', '/blog/': '/en/blog/',
-             '/blog/pisa-2025-ecole-du-futur': '/en/blog/pisa-2025-school-of-the-future'}
+             '/blog/pisa-2025-ecole-du-futur': '/en/blog/pisa-2025-school-of-the-future',
+             '/blog/alternatives-eliott': '/en/blog/alternatives-to-eliott',
+             '/blog/tables-de-multiplication-en-ligne': '/en/blog/times-tables-online'}
 # Fil d'Ariane des pages françaises (les autres langues : clés nav.* ou <groupe>.crumb des dictionnaires)
 CRUMB_FR = {'familles': 'Familles', 'ecole': 'Professeurs et écoles', 'about': 'À propos', 'tarifs': 'Tarifs',
             'etranger': "Écoles françaises à l'étranger", 'expat': "Familles françaises à l'étranger",
@@ -245,8 +266,9 @@ BANNER_CSS = """
     html.g6-banner [id] { scroll-margin-top: calc(var(--g6-banner-h) + 100px); }
     html.g6-banner .toc-side { top: calc(var(--g6-banner-h) + 110px); max-height: calc(100vh - var(--g6-banner-h) - 130px); }
     html.g6-banner .cmp thead th { top: calc(var(--nav-h, 0px) + var(--g6-banner-h)); }
-    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 (police système, Mac) : 30 px à partir de 1112 px, 49 px de 604 à 1111,
-       67 px de 601 à 603, 41 px de 563 à 600, 57 px de 374 à 562, 73 px en dessous ; paliers calés dessus, avec 2 px de marge */
+    /* Hauteurs réelles mesurées au pixel près le 09/11/2026 au soir (police système, Mac) : 30 px à partir de 1072 px, 49 px de 601 à 1071,
+       41 px de 528 à 600, 57 px de 369 à 527, 73 px en dessous ; 2 px de marge. Paliers 1111 et 601-603 gardés par prudence :
+       une mesure du matin donnait une ligne de plus à ces largeurs (la coupure dépend de la police) */
     @media (max-width: 1111px) { html.g6-banner { --g6-banner-h: 51px; } }
     @media (min-width: 601px) and (max-width: 603px) { html.g6-banner { --g6-banner-h: 69px; } }
     @media (max-width: 600px) {
@@ -254,8 +276,14 @@ BANNER_CSS = """
       .g6-intl-banner svg { display: none; }
       html.g6-banner { --g6-banner-h: 43px; }
     }
-    @media (max-width: 562px) { html.g6-banner { --g6-banner-h: 59px; } }
-    @media (max-width: 373px) { html.g6-banner { --g6-banner-h: 75px; } }
+    @media (max-width: 527px) { html.g6-banner { --g6-banner-h: 59px; } }
+    @media (max-width: 368px) { html.g6-banner { --g6-banner-h: 75px; } }
+    /* Pied de page sur téléphone : zones de tap d'au moins 44 px de haut, sans espace en plus entre les liens */
+    @media (max-width: 480px) {
+      footer a[href] { display: inline-flex; align-items: center; min-height: 44px; }
+      footer .footer-col { gap: 0; }
+      footer .footer-badges { row-gap: 0 !important; }
+    }
 """
 
 # Corrections de mise en page pour l'hébreu (écrit de droite à gauche)
@@ -1086,7 +1114,8 @@ def update_redirects():
                 lines.append('%-24s %-28s 200' % (p, '/' + out_file(p)))
     for g in GROUPS:  # pages françaises ajoutées par groupe (adresse sans .html)
         p = page_path(g, 'fr')
-        if g not in ('index', 'familles', 'ecole', 'about', 'tarifs', 'etranger', 'soutien') and p:
+        if g not in ('index', 'familles', 'ecole', 'about', 'tarifs', 'etranger', 'soutien',
+                     'brevet', 'calcul', 'fiches', 'donnees', 'art-eliott', 'art-tables') and p:
             lines.append('%-24s %-28s 200' % (p, '/' + out_file(p)))
     lines.append('# /pages traduites')
     # Redirections 301 des adresses en .html vers les adresses propres (un seul exemplaire de chaque page pour Google).
@@ -1190,7 +1219,8 @@ def update_sitemap():
         u = re.sub(r'[ \t]*<(changefreq|priority)>[^<]*</\1>\n', '', u)  # ignorés par Google (audit du 03/11/2026)
         kept.append(u)
     new = []
-    for g in ('index', 'familles', 'tarifs', 'ecole', 'etranger', 'expat', 'dictee', 'annales', 'methode', 'soutien', 'about', 'vote'):
+    for g in ('index', 'familles', 'tarifs', 'ecole', 'etranger', 'expat', 'dictee', 'annales', 'methode', 'soutien',
+              'brevet', 'calcul', 'fiches', 'donnees', 'art-eliott', 'art-tables', 'about', 'vote'):
         alts = ''.join('    <xhtml:link rel="alternate" hreflang="%s" href="%s%s"/>\n' % (l, SITE, page_path(g, l))
                        for l in group_langs(g))
         alts += '    <xhtml:link rel="alternate" hreflang="x-default" href="%s%s"/>\n' % (
