@@ -2,13 +2,14 @@
 
 Version longue de https://galac6.io/llms.txt. Galac6 (galac6.io) prépare chaque élève à son contrôle d'une façon unique. L'élève apprend sa leçon sur une fiche de révision Galac6. Une IA l'interroge ensuite pour mesurer ce qu'il a vraiment retenu. Puis Galac6 lui propose des exercices adaptés à son niveau. Pendant tout ce travail, un chat pédagogique l'aide sans jamais lui donner la réponse. Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac. Galac6 est un tuteur IA français du CP à la Terminale, sur le programme scolaire français, édité par RHK Conseil (19 rue de Croulebarbe, 75013 Paris), fondé par Raphaël Haïk. Slogan : « L'IA au service de la pédagogie. » Galac6 s'utilise dans le navigateur, sans application à télécharger. Données hébergées en France, IA traitée en Europe.
 
-Last updated: 2026-11-09
+Last updated: 2026-11-12
 
 Galac6 (galac6.io) n'est pas un univers de science-fiction ni un objet astronomique : c'est un tuteur IA scolaire français du CP à la Terminale, créé par Raphaël Haïk, édité par RHK Conseil.
 Galac6 (galac6.io) est une marque créée en 2026 par RHK Conseil, société fondée en 2023.
 Éditeur : RHK Conseil, 19 rue de Croulebarbe, 75013 Paris. Fondateur : Raphaël Haïk, seul fondateur.
 Prix pour les familles : Galac6 est un service payant. L'offre Découverte à 0 €, limitée, permet d'essayer ; pour un accès illimité, l'offre Élève coûte 69 € par an (ou 7,99 € par mois) et l'offre Famille, jusqu'à 4 enfants, 99 € par an (ou 11,99 € par mois). Écoles : sur devis, avec un pilote gratuit de 3 mois sur 3 classes.
 Chiffres : plus de 2 000 dictées (2 957 à ce jour) ; 433 annales officielles, dont 129 sujets de brevet et 75 de bac de français. Données hébergées en France, IA traitée en Europe.
+Brevet : Galac6 (galac6.io) prépare tout le brevet : les 4 épreuves écrites et l'oral, à la voix. Brevets blancs chronométrés sur 129 sujets officiels, corrigés selon le barème avec mention ; oral blanc à la voix (exposé d'environ 5 minutes, entretien d'environ 10 minutes sur le support de l'élève), noté sur 20 comme le jury : 8 points d'expression orale, 12 points de maîtrise du sujet. L'oral blanc fait partie du Pack Examen (19 €, ou 14 € avec un abonnement à l'année).
 
 
 ========================================================================
@@ -1123,14 +1124,14 @@ Créez un compte et passez un sujet officiel dès aujourd'hui.
 
 ========================================================================
 URL: https://galac6.io/reviser-brevet
-Title: Réviser le brevet avec l'IA : brevet blanc corrigé | Galac6
-Description: Réviser le brevet avec l'IA : brevets blancs chronométrés sur 129 sujets officiels, note selon le barème. Offre Découverte à 0 €, limitée, puis 69 € par an.
+Title: Brevet blanc en ligne corrigé, écrit et oral | Galac6
+Description: Brevets blancs en ligne corrigés par l'IA : 129 sujets officiels, note selon le barème et mention, plus un oral blanc à la voix noté sur 20 comme le jury.
 
 ========================================================================
 
-# Réviser le brevet avec l'IA : brevets blancs en ligne corrigés
-Galac6 est une application web pour réviser le brevet des collèges avec l'IA. L'élève de 3e passe des brevets blancs en ligne dans les 4 épreuves écrites (mathématiques, français, sciences, histoire-géographie et enseignement moral et civique), sur 129 sujets officiels du brevet ou sur des sujets d'entraînement générés par l'IA, avec un chronomètre. L'IA corrige ensuite la copie question par question selon le barème, avec des points partiels, une note, une mention et des conseils.
-Mis à jour le 9 novembre 2026
+# Réviser le brevet avec l'IA : brevets blancs en ligne corrigés, à l'écrit et à l'oral
+Galac6 est une application web pour réviser le brevet des collèges avec l'IA. L'élève de 3e passe des brevets blancs en ligne dans les 4 épreuves écrites (mathématiques, français, sciences, histoire-géographie et enseignement moral et civique), sur 129 sujets officiels du brevet ou sur des sujets d'entraînement générés par l'IA, avec un chronomètre. L'IA corrige ensuite la copie question par question selon le barème, avec des points partiels, une note, une mention et des conseils. Pour l'oral, l'élève passe un oral blanc à la voix : il présente son projet, répond aux questions tirées de son support et reçoit une note sur 20, comme devant le jury.
+Mis à jour le 12 novembre 2026
 La meilleure façon de préparer le diplôme national du brevet (DNB) est de s'entraîner dans les conditions réelles : un sujet complet, un temps limité, puis une correction qui montre précisément quoi améliorer. Galac6 est une application web : elle s'ouvre dans le navigateur, sur ordinateur, tablette ou téléphone, sans rien installer. Le même compte fonctionne sur tous les appareils.
 Conçu en France · Données hébergées en France
 
@@ -1139,30 +1140,17 @@ Conçu en France · Données hébergées en France
 - Des sujets d'entraînement générés par l'IA, au format de l'épreuve, toujours signalés comme tels et jamais mélangés avec les annales.
 - Un chronomètre : en mode « Conditions d'examen », la copie est rendue automatiquement à la fin du temps ; en mode « Entraînement », le temps est seulement indiqué.
 - Une correction notée question par question selon le barème du sujet, avec points partiels, réponse attendue, mention et conseils.
-- L'oral du brevet : un oral blanc à la voix, 5 minutes d'exposé et 10 minutes d'entretien, noté sur 20.
+- L'oral du brevet : un oral blanc à la voix, 5 minutes d'exposé et 10 minutes d'entretien, noté sur 20. Voir l'oral blanc
 - Une application web sur ordinateur, tablette et téléphone, sans installation.
 - Données hébergées en France, intelligence artificielle traitée en Europe.
 
 ## Les 4 épreuves écrites du brevet
 Chaque brevet blanc reprend la durée, les parties et le barème de l'épreuve. Sur une annale, la note suit le barème officiel de sa session. Format actuel :
-Épreuve
-Durée
-Barème
-Parties
-Mathématiques
-2 heures
-20 points
-Automatismes sans calculatrice (20 minutes, 6 points), puis exercices (1 heure 40, 14 points)
-Français
-3 heures
-Grammaire et compréhension (10 points), puis rédaction (10 points). La dictée se travaille aussi à part.
-Sciences
-1 heure
-25 points
-Deux disciplines parmi physique-chimie, sciences de la vie et de la Terre, technologie
-Histoire-géographie et enseignement moral et civique
-40 points
-Histoire ou géographie (30 points), puis enseignement moral et civique (10 points)
+Épreuve | Durée | Barème | Parties
+Mathématiques | 2 heures | 20 points | Automatismes sans calculatrice (20 minutes, 6 points), puis exercices (1 heure 40, 14 points)
+Français | 3 heures | 20 points | Grammaire et compréhension (10 points), puis rédaction (10 points). La dictée se travaille aussi à part.
+Sciences | 1 heure | 25 points | Deux disciplines parmi physique-chimie, sciences de la vie et de la Terre, technologie
+Histoire-géographie et enseignement moral et civique | 2 heures | 40 points | Histoire ou géographie (30 points), puis enseignement moral et civique (10 points)
 On peut passer l'épreuve entière ou une seule partie.
 
 ## Comment ça marche
@@ -1182,28 +1170,23 @@ La correction de Galac6 ne se contente pas d'une note globale. Pour chaque quest
 Quand la consigne demande de justifier, un résultat juste sans justification vaut la moitié des points. Avec le Pack Examen, chaque copie est corrigée deux fois.
 
 ## Sujets officiels ou sujets d'entraînement générés par l'IA
-
 ### Annales officielles
 129 vrais sujets du brevet, des sessions 2019 à 2026, avec leurs questions et leurs barèmes d'origine. Voir les annales
-
 ### Sujets d'entraînement générés par l'IA
 Des sujets nouveaux au format de l'épreuve, pour s'entraîner encore. Ils portent toujours la mention « Sujet d'entraînement généré par l'IA ».
 
 ## Préparer l'oral du brevet
-Dans « Brevet blanc oral », l'élève indique le titre de son projet et son parcours (enseignement pratique interdisciplinaire, Parcours Avenir, Parcours Citoyen, Parcours Santé, Parcours d'éducation artistique et culturelle ou histoire des arts), ajoute ses documents, puis passe un oral blanc à la voix : 5 minutes d'exposé et 10 minutes d'entretien, noté sur 20. L'oral blanc à la voix fait partie du Pack Examen.
+L'oral du brevet est une soutenance de 15 minutes, notée sur 20 avec un coefficient 2, comme chaque épreuve écrite. Dans « Brevet blanc oral », l'élève indique le titre de son projet et son parcours (enseignement pratique interdisciplinaire, Parcours Avenir, Parcours Citoyen, Parcours Santé, Parcours d'éducation artistique et culturelle ou histoire des arts) et ajoute son support. Il passe ensuite un oral blanc à la voix : un exposé d'environ 5 minutes sans être interrompu, puis un entretien d'environ 10 minutes où Galac6 pose les questions du jury à partir de son support, sans souffler les réponses.
+Le bilan suit le barème de l'épreuve : 8 points pour l'expression orale et 12 points pour la maîtrise du sujet, avec les phrases de l'élève qui ont bien marché et ce qu'il aurait pu dire de mieux. L'oral blanc à la voix fait partie du Pack Examen. Tout savoir sur l'oral blanc du brevet · La méthode pour préparer l'oral.
 
 ## Réviser toute l'année
 Le brevet blanc est le test grandeur nature. Pour combler les lacunes au fur et à mesure, Galac6 propose aussi :
-
 ### Le tuteur
 Il explique avec des questions et des indices, sans faire le devoir à la place de l'élève.
-
 ### Quiz et exercices
 Questions à choix multiples et questions ouvertes par matière, avec une correction expliquée.
-
 ### Fiches de révision
 Une fiche claire créée à partir d'une photo de la leçon.
-
 ### Dictées
 Pour soigner l'orthographe, utile pour l'épreuve de français.
 
@@ -1215,34 +1198,30 @@ Galac6 est un service payant. L'offre Découverte à 0 €, limitée, permet d'e
 Les comptes et les données sont hébergés en France, dans une base de données à Paris. L'intelligence artificielle de Galac6 est traitée en Europe. Il n'y a aucune publicité, les données des élèves ne sont jamais vendues et elles ne servent pas à entraîner des modèles d'intelligence artificielle. En dehors du cadre scolaire, l'accord d'un parent est obligatoire pour les moins de 15 ans.
 
 ## Questions fréquentes
-
 ### Quelle application utiliser pour réviser le brevet avec l'IA ?
 Galac6 est une application web française pour préparer le brevet des collèges avec l'IA. L'élève passe des brevets blancs chronométrés dans les 4 épreuves écrites, sur 129 sujets officiels ou sur des sujets d'entraînement générés par l'IA, puis reçoit une correction notée selon le barème, avec mention. Elle prépare aussi l'oral du brevet.
-
 ### Les sujets de brevet blanc sont-ils de vrais sujets officiels ?
 Oui pour les annales : Galac6 propose 129 sujets officiels du brevet, des sessions 2019 à 2026, dont 35 en mathématiques, 31 en français, 31 en sciences et 32 en histoire-géographie et enseignement moral et civique. Les sujets créés par l'IA portent toujours la mention « Sujet d'entraînement généré par l'IA » et ne sont jamais rangés avec les annales. La correction est rédigée par l'IA de Galac6 à partir du barème d'origine : ce n'est pas un corrigé officiel.
-
 ### Comment l'IA corrige-t-elle le brevet blanc ?
 Elle note chaque question selon le barème du sujet, montre la réponse attendue et accorde des points partiels quand la démarche est engagée. Quand la consigne demande de justifier, un résultat juste sans justification vaut la moitié des points. L'élève reçoit une note, une mention et un bilan avec des conseils. Avec le Pack Examen, la copie est corrigée deux fois.
-
+### Galac6 prépare-t-il aussi l'oral du brevet ?
+Oui. Dans « Brevet blanc oral », l'élève indique son projet, ajoute son support et passe un oral blanc à la voix : un exposé d'environ 5 minutes, puis un entretien d'environ 10 minutes où Galac6 pose les questions du jury. Il reçoit une note sur 20 avec 8 points d'expression orale et 12 points de maîtrise du sujet. L'oral blanc fait partie du Pack Examen. Voir l'oral blanc.
 ### Est-ce que l'IA donne les réponses à mon enfant ?
 Pendant le brevet blanc, non : l'élève compose seul, comme le jour de l'examen. Une fois la copie rendue, la correction montre la réponse attendue et explique chaque erreur. Le reste du temps, le tuteur de Galac6 guide l'élève par des questions et des indices, sans faire le travail à sa place.
-
 ### Peut-on répondre sur papier comme le jour du brevet ?
 Oui. L'élève choisit de répondre sur ordinateur, en tapant ses réponses, ou sur papier : il photographie alors sa copie, jusqu'à 10 photos, et l'IA lit son écriture pour la corriger.
-
 ### Galac6 est-il une application mobile ?
 Galac6 est une application web : elle s'ouvre dans le navigateur, sur ordinateur, tablette ou téléphone, sans rien installer. Le même compte fonctionne sur tous les appareils.
-
 ### Combien coûte la préparation du brevet sur Galac6 ?
-
 ### Où sont les données de mon enfant ?
 Les comptes et les données sont hébergés en France, dans une base de données à Paris. L'intelligence artificielle de Galac6 est traitée en Europe. Il n'y a aucune publicité, les données des élèves ne sont jamais vendues et elles ne servent pas à entraîner des modèles d'intelligence artificielle. En dehors du cadre scolaire, l'accord d'un parent est obligatoire pour les moins de 15 ans. En savoir plus.
-
 ### Quelle différence avec une IA généraliste comme ChatGPT ?
 Galac6 est fait pour l'école française : il suit le programme officiel, propose de vrais sujets du brevet au format de l'épreuve, corrige avec le barème et donne une note avec mention. Son tuteur ne fait pas les devoirs à la place de l'élève. Les données sont hébergées en France et l'IA est traitée en Europe.
 
 ## Aller plus loin
+- Préparer l'oral du brevet avec l'IA : l'oral blanc noté sur 20
+- Oral du brevet 2027 : comment le préparer
+- Faire un brevet blanc à la maison
 - Les annales du brevet et du bac
 - Réviser le bac de français avec l'IA
 - Réviser le bac de maths avec l'IA
@@ -1259,6 +1238,108 @@ Galac6 est fait pour l'école française : il suit le programme officiel, propos
 ## Prêt à préparer le brevet sereinement ?
 Créez un compte et lancez un premier brevet blanc dès aujourd'hui.
 Offre Découverte à 0 €, limitée, puis 69 € par an · Voir les tarifs
+
+
+========================================================================
+URL: https://galac6.io/oral-du-brevet
+Title: Oral du brevet avec l'IA : oral blanc noté sur 20 | Galac6
+Description: Préparer l'oral du brevet avec l'IA : oral blanc à la voix, 5 min d'exposé, 10 min de questions sur son support, note sur 20 comme le jury (8 + 12 points).
+
+========================================================================
+
+# Préparer l'oral du brevet avec l'IA : un oral blanc à la voix, noté sur 20
+Galac6 (galac6.io) fait passer à l'élève de 3e un oral blanc du brevet, à la voix. L'élève indique le titre de son projet, choisit son parcours et ajoute son support. Galac6 l'écoute pendant un exposé d'environ 5 minutes sans l'interrompre, lui pose ensuite des questions pendant environ 10 minutes à partir de son support, puis le note sur 20 avec la même répartition que le jury : 8 points pour l'expression orale, 12 points pour la maîtrise du sujet.
+Mis à jour le 12 novembre 2026 · règles de la session 2027
+L'oral du brevet est la seule épreuve qu'on ne peut pas réviser seul dans un cahier : il faut parler devant quelqu'un qui écoute, relance et pose des questions. Galac6 joue ce rôle aussi souvent que l'élève le souhaite, chez lui, sur ordinateur, tablette ou téléphone, sans rien installer.
+Conçu en France · Données hébergées en France
+
+## L'oral du brevet en bref
+L'oral du brevet est une soutenance de 15 minutes, notée sur 20, où l'élève présente un projet mené en classe devant un jury d'au moins deux professeurs. Les règles de la session 2027 sont fixées par la note de service publiée au Bulletin officiel n° 4 de 2026 :
+- 15 minutes au total : un exposé d'environ 5 minutes, puis un entretien d'une dizaine de minutes avec le jury.
+- Noté sur 20, coefficient 2, comme chacune des épreuves écrites : 8 points pour l'expression orale, 12 points pour la maîtrise du sujet.
+- Un sujet au choix : un objet d'étude d'histoire des arts, un projet d'enseignement pratique interdisciplinaire (EPI) ou un projet d'un parcours éducatif (Avenir, citoyen, santé, éducation artistique et culturelle).
+- Seul ou en groupe de trois élèves au plus ; chaque élève reçoit sa propre note.
+- Entre le 15 avril et la fin des épreuves écrites, dans le collège, à une date fixée par le chef d'établissement. La note n'est communiquée qu'avec les résultats du brevet.
+
+## Comment se passe un oral blanc sur Galac6 ?
+L'oral blanc de Galac6 suit le déroulé de l'épreuve : un accueil, un exposé d'environ 5 minutes sans interruption, un entretien d'environ 10 minutes, puis un bilan noté sur 20.
+Les 4 temps de l'oral blanc : accueil, exposé d'environ 5 minutes, entretien d'environ 10 minutes, bilan noté sur 20.
+- Décrire son projet. Dans « Brevet blanc oral », l'élève écrit le titre de son projet et choisit son parcours. Il peut ajouter une courte description.
+- Ajouter son support. Diaporama, dossier ou photos : PDF, Word ou images, 10 pages au plus. Un diaporama PowerPoint s'enregistre d'abord en PDF.
+- Faire son exposé à voix haute. Galac6 écoute pendant environ 5 minutes, sans couper la parole, comme un jury.
+- Répondre aux questions. Pendant environ 10 minutes, Galac6 pose une question à la fois, tirée du support de l'élève : la démarche, les sources, les difficultés rencontrées, le regard critique, les liens entre les matières, l'orientation.
+- Lire son bilan. Une note sur 20, détaillée critère par critère, avec ce qui a bien marché et ce qu'il fallait ajouter.
+Pendant l'entretien, Galac6 ne souffle pas les réponses. Quand une réponse reste vague, il relance, par exemple : « Peux-tu me donner un exemple concret ? ». C'est exactement ce que fait un jury.
+
+## Quels sujets peut-on présenter ?
+L'élève présente un projet mené en classe pendant le cycle 4 (5e, 4e, 3e). Galac6 accepte les six familles de sujets prévues par l'épreuve :
+### Histoire des arts
+Une œuvre ou un objet d'étude : un tableau, un monument, un film, une musique…
+### Enseignement pratique interdisciplinaire
+Un projet mené avec plusieurs matières, par exemple sciences et français.
+### Parcours Avenir
+Un stage d'observation, la découverte d'un métier, un projet d'orientation.
+### Parcours citoyen
+Un engagement au collège : délégué, éco-délégué, projet solidaire.
+### Parcours éducatif de santé
+Une action de prévention ou un projet sur la santé.
+### Parcours d'éducation artistique et culturelle
+Un projet artistique : théâtre, chorale, exposition, sortie culturelle.
+
+## Comment l'oral du brevet est-il noté ?
+Le jury note l'oral sur 20 : 8 points pour la maîtrise de l'expression orale et 12 points pour la maîtrise du sujet présenté. Le bilan de Galac6 reprend exactement cette répartition.
+La note de l'oral : 8 points pour la façon de parler et d'échanger, 12 points pour le contenu du projet.
+Partie de la note | Points | Ce que Galac6 regarde
+Expression orale | 8 points | Clarté et cohérence du propos, qualité de la langue et vocabulaire précis, fluidité et posture, façon d'échanger et d'argumenter pendant l'entretien
+Maîtrise du sujet | 12 points | Présentation du projet, démarche suivie, liens entre les disciplines, regard critique sur son travail
+
+## Que contient le bilan de l'oral blanc ?
+Le bilan donne une note sur 20, détaillée en expression orale sur 8 et maîtrise du sujet sur 12, puis les points forts et les points à améliorer.
+### Les points forts
+Galac6 cite les phrases exactes de l'élève qui ont bien marché, pour qu'il sache quoi garder le jour J.
+### Les points à améliorer
+Pour chaque faiblesse, Galac6 montre ce que l'élève aurait pu dire à la place.
+### Recommencer
+L'élève peut repasser l'oral autant de fois qu'il le souhaite et comparer ses notes.
+
+## Seul ou en groupe : qu'est-ce qui change ?
+Seul, l'élève a environ 5 minutes d'exposé et 10 minutes d'entretien. En groupe de trois élèves au plus, l'exposé dure 10 minutes, chacun doit y prendre la parole, puis l'entretien dure 15 minutes ; la note reste individuelle. L'oral blanc de Galac6 se passe seul : dans un groupe, chaque élève s'entraîne sur sa partie et sur les questions qu'on peut lui poser. Une partie de l'oral peut aussi se faire dans une langue vivante étudiée au collège, 5 minutes au plus.
+
+## Combien coûte l'oral blanc sur Galac6 ?
+L'oral blanc à la voix fait partie du Pack Examen, un achat unique valable 12 mois : 19 € par élève, ou 14 € avec un abonnement à l'année. Le Pack Examen comprend aussi la seconde correction des copies et le Concours général. L'offre Découverte à 0 €, limitée, permet d'essayer Galac6 sans carte bancaire. L'offre Élève coûte 69 € par an ou 7,99 € par mois, et l'offre Famille, jusqu'à 4 enfants, 99 € par an ou 11,99 € par mois. Pour les écoles, le prix est établi sur devis, avec un pilote gratuit de 3 mois sur 3 classes. Voir les tarifs.
+Les comptes et les données sont hébergés en France, dans une base de données à Paris. L'intelligence artificielle de Galac6 est traitée en Europe. Il n'y a aucune publicité et les données des élèves ne sont jamais vendues. En savoir plus sur les données.
+
+## Et l'écrit du brevet ?
+Galac6 prépare tout le brevet : les 4 épreuves écrites et l'oral. Pour l'écrit, l'élève passe des brevets blancs chronométrés en mathématiques, français, sciences et histoire-géographie et enseignement moral et civique, sur 129 sujets officiels (sessions 2019 à 2026) ou sur des sujets d'entraînement générés par l'IA, toujours signalés comme tels. La copie est corrigée selon le barème, avec une note et une mention. Réviser l'écrit du brevet.
+
+## Questions fréquentes sur l'oral du brevet
+### Comment préparer l'oral du brevet avec l'IA ?
+Avec Galac6 (galac6.io), l'élève de 3e indique son projet, ajoute son support et passe un oral blanc à la voix : un exposé d'environ 5 minutes, puis un entretien d'environ 10 minutes où l'IA pose des questions tirées de son support. Il reçoit ensuite une note sur 20 avec 8 points d'expression orale et 12 points de maîtrise du sujet, ses points forts et ce qu'il aurait pu dire de mieux.
+### Combien de temps dure l'oral du brevet ?
+L'oral du brevet dure 15 minutes quand l'élève le passe seul : un exposé d'environ 5 minutes, puis un entretien d'une dizaine de minutes avec le jury. En groupe de trois élèves au plus, l'exposé dure 10 minutes et l'entretien 15 minutes.
+### Comment est noté l'oral du brevet ?
+L'oral est noté sur 20, avec un coefficient 2 : 8 points pour la maîtrise de l'expression orale et 12 points pour la maîtrise du sujet présenté. Le jury compte au moins deux professeurs. La note n'est communiquée qu'avec les résultats du brevet.
+### Quels sujets peut-on présenter à l'oral du brevet ?
+L'élève présente un objet d'étude d'histoire des arts, un projet d'enseignement pratique interdisciplinaire ou un projet d'un parcours éducatif : parcours Avenir, parcours citoyen, parcours éducatif de santé ou parcours d'éducation artistique et culturelle.
+### L'IA fait-elle l'exposé à la place de l'élève ?
+Non. C'est l'élève qui parle, comme le jour de l'épreuve. Galac6 écoute, pose les questions du jury et relance quand une réponse reste vague, sans jamais souffler la réponse. Le bilan montre ensuite ce que l'élève aurait pu dire de mieux.
+### Combien coûte l'oral blanc du brevet sur Galac6 ?
+L'oral blanc à la voix fait partie du Pack Examen, un achat unique valable 12 mois : 19 € par élève, ou 14 € avec un abonnement à l'année. Il comprend aussi la seconde correction des copies et le Concours général.
+
+## Aller plus loin
+- Préparer l'oral du brevet : la méthode pas à pas
+- Réviser le brevet avec l'IA : brevets blancs écrits corrigés
+- Organiser un brevet blanc à la maison
+- Réviser le brevet mois par mois
+- Préparer le brevet 2027 avec une IA : la méthode
+- Les annales du brevet et du bac
+- Organiser des oraux blancs dans votre établissement
+- Les tarifs de Galac6
+
+## Prêt à préparer l'oral du brevet ?
+Créez un compte et lancez un premier oral blanc dès aujourd'hui.
+Pack Examen : 19 €, ou 14 € avec un abonnement à l'année · Voir les tarifs
+
 
 ========================================================================
 URL: https://galac6.io/reviser-bac-francais
@@ -1847,3 +1928,281 @@ Description: Learn and revise times tables online, from CE1 to CM2 (grades 2 to 
 # Times tables online: learning and revising them, from CE1 to CM2
 - A simple order: the first tables in CE1 (2, 5, 10, then 3 and 4), all the tables up to 9 in CE2, then both directions in CM1 and CM2.
 - With Galac6: mental maths series on the tables, in writing or aloud, a method tip for each missed calculation, and mistakes that come back until they have been got right twice.
+
+========================================================================
+URL: https://galac6.io/blog/preparer-oral-brevet
+Title: Préparer l'oral du brevet 2027 : guide pour parents | Galac6
+Description: Préparer l'oral du brevet 2027 : durée, choix du sujet, exposé de 5 minutes, entretien, notation sur 20 et planning de mars à juin. Le guide des parents de 3e.
+
+========================================================================
+
+# Oral du brevet 2027 : comment le préparer, du choix du sujet à l'entretien
+L'oral du brevet est une épreuve courte, mais elle inquiète souvent les parents autant que les élèves : on ne sait pas quoi présenter, ni comment s'y préparer à la maison. Bonne nouvelle, elle se prépare méthodiquement, et l'élève y est jugé sur un projet qu'il connaît mieux que personne. Cet article reprend les règles officielles de la session 2027, puis propose une méthode simple, un planning de mars à juin et une façon de s'entraîner avec Galac6 (galac6.io).
+
+## L'essentiel en 30 secondes
+- L'oral du brevet 2027 est une soutenance de 15 minutes devant un jury d'au moins deux professeurs : un exposé d'environ 5 minutes, puis un entretien d'une dizaine de minutes (seul), ou 10 minutes d'exposé et 15 minutes d'entretien (en groupe de 3 au plus).
+- Le sujet se choisit parmi trois pistes : un objet d'étude d'histoire des arts, un projet d'EPI du cycle 4, ou un projet d'un parcours éducatif (Avenir, citoyen, santé, éducation artistique et culturelle).
+- La notation se fait sur 20, avec un coefficient 2 : 8 points pour l'expression orale et 12 points pour la maîtrise du sujet.
+- La date est fixée par le chef d'établissement, entre le 15 avril et le dernier jour des épreuves écrites.
+- La préparation : un plan court, un exposé répété à voix haute et chronométré, et l'entraînement aux questions du jury.
+- Prix sur Galac6 : l'oral blanc à la voix fait partie du Pack Examen, à 19 € par élève (14 € avec un abonnement à l'année).
+
+## Ce que vous allez apprendre
+- 1Le déroulement de l'épreuve
+- 2Choisir son sujet
+- 3Construire l'exposé de 5 minutes
+- 4Se préparer à l'entretien
+- 5La notation sur 20
+- 6Une partie en langue étrangère
+- 7Le planning de mars à juin
+- 8Les erreurs à éviter
+- 9S'entraîner avec Galac6Galac6
+- 10Questions fréquentes
+
+## Comment se passe l'oral du brevet 2027 ?
+L'oral du brevet est une soutenance de 15 minutes devant un jury d'au moins deux professeurs, notée sur 20 avec un coefficient 2, comme chacune des quatre épreuves écrites. Elle concerne les candidats scolaires.
+- Seul : un exposé d'environ 5 minutes, puis un entretien d'une dizaine de minutes, soit 15 minutes au plus. Pendant l'exposé, le jury peut guider l'élève.
+- En groupe : 3 candidats au plus, un exposé de 10 minutes où chacun intervient, puis un entretien de 15 minutes. La note reste individuelle. Les élèves du Cned présentent l'oral seuls.
+- Quand : dans l'établissement, entre le 15 avril et le dernier jour des épreuves écrites. Le chef d'établissement fixe les dates.
+Seul, l'élève dispose de 15 minutes au plus : un tiers d'exposé, deux tiers d'échange.
+C'est à vous, responsables légaux, de transmettre le choix du sujet à l'établissement : l'intitulé, le contenu, les disciplines concernées, le fait de présenter seul ou en groupe, et le recours éventuel à une langue étrangère. Renseignez-vous auprès du collège sur la procédure et la date limite. Ces règles viennent du Bulletin officiel n° 4 de 2026 (note MENE2623228N).
+
+## Quel sujet choisir pour l'oral du brevet ?
+Votre enfant présente un seul sujet, à choisir parmi trois pistes : un objet d'étude d'histoire des arts, un projet mené en enseignement pratique interdisciplinaire (EPI) du cycle 4, ou un projet d'un parcours éducatif.
+Un seul sujet à présenter : un objet d'étude, ou un projet d'EPI, ou un projet de parcours.
+Les quatre parcours éducatifs possibles sont le parcours Avenir, le parcours citoyen, le parcours éducatif de santé et le parcours d'éducation artistique et culturelle. Pour choisir, voici quelques conseils :
+- Partir de ce que l'élève a vraiment vécu. Un projet auquel il a participé lui donne des anecdotes, des difficultés et des souvenirs à raconter, ce qui rend l'entretien bien plus facile.
+- Préférer un sujet qu'il peut expliquer plutôt que le plus impressionnant. Le jury évalue la démarche et la capacité à en parler, pas la difficulté apparente du thème.
+- Chercher des liens entre matières. Un projet qui croise, par exemple, les sciences et les arts donne de la matière pour montrer que l'élève sait relier ses apprentissages.
+- Vérifier qu'il reste des traces. Photos, productions, notes, schémas : elles serviront à construire le support.
+À titre d'exemples seulement, et sans qu'il s'agisse de sujets officiels : un projet d'EPI mêlant sciences et arts, un stage d'observation de 3e raconté dans le cadre du parcours Avenir, une action menée dans le cadre du parcours citoyen, ou une œuvre étudiée en histoire des arts. Une réalisation (projection, enregistrement, réalisation numérique…) peut appuyer l'exposé, sans le remplacer.
+
+## Comment construire l'exposé de 5 minutes ?
+Un bon exposé de 5 minutes tient en cinq temps courts : une accroche, le sujet et son choix, la démarche, les difficultés et le bilan, puis une conclusion.
+Exemple de plan à adapter : cinq temps courts valent mieux qu'un long récit.
+- L'accroche. Une phrase, une question ou un objet qui donne envie d'écouter, plutôt qu'un « Bonjour, je vais vous parler de… » interminable.
+- Le sujet et son choix. De quoi il s'agit, et pourquoi l'élève l'a choisi.
+- La démarche. Ce qui a été fait, étape par étape : c'est le cœur de l'exposé et ce que le jury cherche à comprendre.
+- Les difficultés et le bilan. Ce qui a été dur et ce qu'il en retient. Parler d'un obstacle rend l'exposé plus vivant et montre du recul.
+- La conclusion. Une phrase de fin claire, puis une ouverture, par exemple vers la suite du parcours de l'élève.
+Côté support, un conseil simple : peu de texte, des images lisibles, quelques mots-clés. Le support aide à suivre l'exposé, il ne le remplace pas. Cinq minutes passent vite : l'idéal est de s'exercer à voix haute, chronomètre en main, plusieurs fois, jusqu'à ce que le plan devienne naturel.
+
+## Comment se préparer à l'entretien avec le jury ?
+On se prépare à l'entretien en s'entraînant à répondre, avec ses propres mots, à six familles de questions : la démarche, les sources, les difficultés, les liens entre matières, le regard critique et l'orientation.
+Six familles de questions reviennent souvent : on peut les préparer à la maison, à voix haute.
+- La démarche : « Comment avez-vous procédé ? »
+- Les sources : « D'où viennent vos informations ? »
+- Les difficultés : « Qu'est-ce qui a été le plus dur ? »
+- Les liens entre matières : « Quelles matières avez-vous reliées ? »
+- Le regard critique : « Que referiez-vous autrement ? »
+- L'orientation : « Ce sujet influence-t-il vos choix ? »
+Ces questions sont des exemples pour s'entraîner, pas une liste officielle. Quelques conseils : préparer deux ou trois exemples concrets que l'élève pourra citer, accepter de réfléchir une seconde avant de répondre, et ne pas avoir peur de dire « je ne sais pas, mais je pense que… ». À la maison, vous pouvez jouer le jury : posez une question à la fois, écoutez la réponse, puis demandez « Peux-tu me donner un exemple ? ».
+Le réflexe qui rassure : le jury ne cherche pas à piéger l'élève. Les questions portent sur son projet, qu'il connaît mieux que n'importe quel adulte dans la salle.
+
+## Comment l'oral du brevet est-il noté ?
+L'oral est noté sur 20 : 8 points pour la maîtrise de l'expression orale et 12 points pour la maîtrise du sujet présenté.
+Huit points pour la façon de parler, douze pour le fond du sujet.
+La grille officielle est indicative. Reformulés, ses critères sont les suivants :
+- Expression orale (8 points) : s'exprimer de façon maîtrisée devant un auditoire, formuler un avis personnel, employer un vocabulaire précis, participer de façon constructive aux échanges, argumenter.
+- Maîtrise du sujet (12 points) : concevoir et mettre en œuvre un projet, analyser sa pratique, faire des liens entre disciplines.
+La note n'est pas communiquée avant les résultats officiels du brevet. Pour voir comment elle s'inscrit dans l'ensemble de l'examen, consultez notre page sur la préparation du brevet.
+
+## Peut-on présenter une partie de l'oral en langue étrangère ?
+Oui : une partie de l'oral peut se dérouler dans une langue vivante étrangère ou régionale enseignée dans l'établissement, pour 5 minutes au plus au total.
+La partie en langue étrangère est une option, limitée à 5 minutes au total.
+C'est une option, à indiquer au moment de transmettre le choix du sujet. Un conseil : ne la retenir que si l'élève est à l'aise dans la langue, et commencer petit, par exemple avec une courte introduction ou une conclusion préparées avec le professeur de langue.
+
+## Quel planning suivre pour préparer l'oral de mars à juin ?
+Un planning réaliste tient en quatre temps : choisir en mars, rédiger début avril, s'exercer à voix haute jusqu'à la date de l'oral, puis alléger les derniers jours.
+Quatre temps. Si l'oral est fixé tôt dans la période, on avance chaque étape d'autant.
+- Mars : choisir et cadrer le sujet (intitulé, disciplines, seul ou en groupe), puis transmettre le choix à l'établissement.
+- Début avril : rédiger le plan et préparer le support : une page de plan et un support court.
+- D'avril à juin, selon la date fixée : s'exercer à voix haute, avec un exposé chronométré puis des questions. Comme l'oral peut avoir lieu dès le 15 avril, vérifiez la date auprès du collège et avancez les étapes si besoin.
+- Les derniers jours : alléger, relire le plan et se reposer.
+Pendant ces mois, l'élève prépare aussi les épreuves écrites : pour répartir l'effort, voyez notre planning de révision du brevet mois par mois.
+
+## Quelles erreurs éviter le jour de l'oral ?
+Les erreurs les plus fréquentes sont lire ses notes, faire un exposé trop court ou trop long, réciter un texte appris par cœur et rester au niveau du simple descriptif.
+Quatre pièges classiques, chacun avec son contre-conseil.
+- Lire ses notes. Le jury veut voir l'élève parler de son projet. Conseil : garder quelques mots-clés et regarder le jury.
+- Un exposé trop court ou trop long. Un exposé trop court laisse du temps vide, un exposé trop long peut être coupé. Conseil : se chronométrer et viser environ 5 minutes.
+- Réciter un texte appris par cœur. Au premier trou de mémoire, tout s'effondre. Conseil : connaître son plan et parler avec ses propres mots.
+- Rester au niveau du descriptif. Raconter ce qui a été fait ne suffit pas. Conseil : expliquer ses choix, ses obstacles et ce qu'on referait autrement.
+
+## Comment s'entraîner à l'oral du brevet avec Galac6 ?
+Galac6 propose un bouton « Brevet blanc oral » : l'élève présente son projet à la voix, répond aux questions d'un jury simulé, puis reçoit un bilan noté sur 20. Voici comment cela se passe :
+- Préparer sa fiche. L'élève saisit le titre de son projet (obligatoire), choisit son parcours parmi EPI, Parcours Avenir, Parcours Citoyen, Parcours Santé, Parcours d'éducation artistique et culturelle ou Histoire des arts (obligatoire), ajoute une description (facultative) et son support : PDF, Word, images ou photos, 10 pages au plus. Un PowerPoint s'exporte d'abord en PDF.
+- Passer l'oral blanc à la voix, en trois temps. L'accueil, un exposé d'environ 5 minutes sans être interrompu, puis un entretien d'environ 10 minutes. Les questions arrivent une à une, sur la démarche, les sources, les difficultés, le regard critique, les liens entre matières et l'orientation.
+- Répondre sans recevoir les réponses. Galac6 pose les questions à partir du support de l'élève. Il ne donne pas les réponses : il relance, par exemple avec « Peux-tu me donner un exemple concret ? ».
+- Lire son bilan sur 20. Même répartition que l'épreuve : l'expression orale sur 8 (clarté et cohérence, langue, fluidité et posture, interaction) et la maîtrise du sujet sur 12 (présentation du projet, démarche, liens entre disciplines, regard critique). Le bilan cite les points forts avec des phrases exactes de l'élève, et les points à améliorer avec ce qu'il aurait pu dire.
+Les trois temps de l'épreuve, puis un bilan noté sur 20 comme à l'examen.
+L'oral blanc à la voix fait partie du Pack Examen : un achat unique valable 12 mois, à 19 € par élève, ou 14 € avec un abonnement à l'année. Le pack ajoute aussi la seconde correction des copies et le Concours général. Galac6 s'utilise dans le navigateur, sur ordinateur, tablette ou téléphone, sans application à télécharger ; les données sont hébergées en France et l'IA traitée en Europe. Pour tous les détails, voyez la page Oral blanc du brevet et les tarifs.
+L'oral n'est qu'une des épreuves : pour s'entraîner à l'écrit, lisez comment préparer le brevet avec une IA et comment organiser un brevet blanc à la maison.
+
+## Questions fréquentes
+### Combien de temps dure l'oral du brevet ?
+L'oral du brevet dure 15 minutes : un exposé d'environ 5 minutes, puis un entretien avec le jury d'une dizaine de minutes.
+### L'oral du brevet se passe-t-il seul ou en groupe ?
+Les deux sont possibles. Seul, le candidat présente un exposé d'environ 5 minutes puis passe un entretien d'une dizaine de minutes. En groupe (3 candidats au plus), l'exposé dure 10 minutes et chacun y intervient, puis l'entretien dure 15 minutes ; la note reste individuelle.
+### Quand a lieu l'oral du brevet 2027 ?
+L'oral a lieu dans l'établissement, entre le 15 avril et le dernier jour des épreuves écrites. Le chef d'établissement fixe les dates.
+### Comment est noté l'oral du brevet ?
+Il est noté sur 20 : 8 points pour la maîtrise de l'expression orale et 12 points pour la maîtrise du sujet présenté, avec un coefficient 2. La note n'est pas communiquée avant les résultats officiels du brevet.
+Oui. Une partie de l'oral peut se dérouler dans une langue vivante étrangère ou régionale enseignée dans l'établissement, pour 5 minutes au plus au total.
+### Combien coûte l'oral blanc à la voix sur Galac6 ?
+L'oral blanc à la voix fait partie du Pack Examen de Galac6 (galac6.io) : un achat unique valable 12 mois, à 19 € par élève, ou 14 € avec un abonnement à l'année.
+
+## À lire aussi
+- Oral blanc du brevet avec Galac6
+- Réviser le Brevet (DNB) avec l'IA : les 4 épreuves
+- Préparer le brevet avec une IA : la méthode
+- Réviser le brevet mois par mois : le planning de 3e
+- Organiser un brevet blanc à la maison
+- Réviser le brevet de maths : la méthode en 5 étapes
+- Les tarifs de Galac6
+
+## Prêt à t'entraîner pour ton oral ?
+Crée un compte, dépose ton support et passe ton premier oral blanc à la voix dès aujourd'hui.
+Pack Examen à 19 € (14 € avec un abonnement à l'année) · Voir les tarifs
+
+
+========================================================================
+URL: https://galac6.io/blog/brevet-blanc-maison
+Title: Faire un brevet blanc à la maison : méthode et oral | Galac6
+Description: Comment faire un brevet blanc à la maison : durées des 4 épreuves, conditions réelles, correction au barème, et l'oral de 15 minutes à simuler en famille.
+
+========================================================================
+
+# Faire un brevet blanc à la maison : la méthode pour les 4 épreuves et l'oral
+Faire un brevet blanc à la maison, c'est composer un sujet complet dans les conditions de l'examen, le corriger avec le barème, puis retravailler les erreurs. Cela vaut pour les quatre épreuves écrites comme pour l'oral. Cet article, écrit pour les parents d'élèves de 3e, détaille la marche à suivre, avec les durées et les règles de notation de l'examen. Galac6 (galac6.io) propose aussi un brevet blanc chronométré, avec correction question par question, pour aller plus vite.
+
+## L'essentiel en 30 secondes
+- Un bon brevet blanc maison suit trois règles : un sujet entier, la durée réelle de l'épreuve, aucune aide pendant la composition.
+- Les durées des écrits : français 3 heures, mathématiques 2 heures, histoire-géographie et EMC 2 heures, sciences 1 heure. Chaque épreuve a un coefficient 2.
+- L'oral dure 15 minutes au plus : un exposé d'environ 5 minutes, puis un entretien d'une dizaine de minutes. Il est noté sur 20 : 8 points pour l'expression orale, 12 pour la maîtrise du sujet.
+- Le plus important vient après : corriger au barème, lister les erreurs et les retravailler avant de repasser un sujet.
+- Sur Galac6 : 129 sujets officiels du brevet, un mode « Conditions d'examen » ou « Entraînement » et une correction question par question. L'offre Découverte à 0 €, limitée, permet d'essayer ; le brevet blanc complet demande une offre payante (Élève : 69 € par an).
+
+## Ce que vous allez apprendre
+- 1Pourquoi faire un brevet blanc
+- 2Quand en faire
+- 3Les conditions réelles
+- 4Où trouver des sujets
+- 5Corriger et noter
+- 6Après la correction
+- 7L'oral blanc
+- 8Faire un brevet blanc avec Galac6Galac6
+- 9Questions fréquentes
+Les règles de durée, de coefficient et d'oral citées dans cet article sont celles de la session 2027 du diplôme national du brevet, publiées au Bulletin officiel n° 4 de 2026.
+
+## Pourquoi faire un brevet blanc avant le vrai brevet ?
+Parce qu'un brevet blanc montre, sans enjeu, ce que votre enfant sait faire en temps limité : on peut connaître son cours et pourtant manquer de temps, d'endurance ou de méthode de rédaction. Le diplôme national du brevet compte cinq épreuves de coefficient 2 chacune : quatre écrites et un oral. Aucune ne s'improvise.
+Trois choses qu'un cours bien su ne montre pas : le temps, l'endurance et la méthode.
+Un brevet blanc répond à trois questions que la relecture du cours ne règle pas :
+- Le temps : votre enfant finit-il le sujet dans la durée prévue, ou perd-il des points en laissant des questions vides ?
+- L'endurance : tient-il une épreuve de 2 ou 3 heures sans décrocher ?
+- La méthode : rédige-t-il ses réponses, ses justifications et ses calculs comme le demande la copie ?
+C'est aussi une façon de rassurer un élève stressé : le jour J, le format est déjà connu.
+
+## Quand faire un brevet blanc pendant l'année de 3e ?
+Trois passages dans l'année suffisent, de plus en plus complets : un à l'automne, un en fin d'hiver et un dans les semaines qui précèdent les épreuves. Ce rythme est un conseil, pas une règle : adaptez-le aux brevets blancs organisés par le collège.
+Un rythme réaliste : un passage environ tous les deux ou trois mois, de plus en plus complet.
+- À l'automne : faire le point. Choisissez une seule épreuve, par exemple les mathématiques. Le but n'est pas la note, mais de repérer les chapitres à reprendre.
+- En fin d'hiver : mesurer le progrès. Passez une autre épreuve, une fois les erreurs du premier passage retravaillées.
+- Avant les écrits : le passage complet. Les quatre épreuves, et l'oral blanc. L'oral du brevet se déroule dans l'établissement entre le 15 avril et le dernier jour des épreuves écrites : mieux vaut s'être entraîné avant l'ouverture de cette période.
+Pour répartir le travail de révision autour de ces passages, voir le planning de 3e mois par mois. Pour les mathématiques en particulier, la méthode en 5 étapes pour réviser le brevet de maths s'enchaîne bien avec un brevet blanc.
+
+## Comment reproduire les conditions réelles de l'examen à la maison ?
+Il faut respecter la durée de chaque épreuve, travailler seul, au chronomètre, sans cours ni téléphone, et rendre la copie quand le temps est écoulé. Voici les durées à reproduire :
+Les durées officielles des écrits, à reproduire au chronomètre.
+Épreuve | Durée | Coefficient
+Français | 3 heures | 2
+Mathématiques | 2 heures | 2
+Histoire-géographie et enseignement moral et civique | 2 heures | 2
+Sciences (physique-chimie, SVT, technologie) | 1 heure (deux fois 30 minutes) | 2
+- Une table dégagée et un chronomètre visible. Lancez le temps au début, arrêtez-le à la fin : on ne prolonge pas.
+- Aucune aide. Pas de cours, pas de téléphone, pas de question au parent. Votre rôle est de surveiller, pas d'expliquer. En mathématiques, les 20 minutes d'automatismes se passent sans calculatrice.
+- Une copie à rendre. Votre enfant écrit sur papier, comme le jour de l'examen, et rend sa feuille à l'heure.
+- Une épreuve à la fois, sauf pour le passage final. Pour un brevet blanc complet, répartissez les épreuves sur un week-end.
+Voici un exemple de week-end. L'ordre et les horaires sont libres : seules les durées sont celles de l'examen.
+Un planning possible pour le passage complet : l'ordre et les horaires sont libres, seules les durées comptent.
+Entre deux épreuves, prévoyez une vraie pause. Le sujet suivant ne doit pas commencer fatigué.
+
+## Où trouver des sujets de brevet blanc ?
+Les sujets de référence sont les annales officielles des sessions passées, complétées si besoin par des sujets d'entraînement clairement signalés comme tels. Les deux ne se valent pas et il ne faut jamais les confondre.
+Les annales servent à mesurer, les sujets d'entraînement à s'exercer davantage.
+- Les annales officielles sont de vrais sujets du brevet, avec leur barème d'origine. Elles permettent de mesurer le niveau. Garder la plus récente pour le passage final est une bonne idée.
+- Les sujets d'entraînement servent à s'exercer davantage quand les annales ont été épuisées. Un sujet fabriqué par une IA ne doit jamais être présenté comme une annale : sur Galac6, il porte toujours la mention « Sujet d'entraînement généré par l'IA ».
+Galac6 propose 129 sujets officiels du brevet, des sessions 2019 à 2026 : 35 en mathématiques, 31 en français, 31 en sciences et 32 en histoire-géographie et EMC. Voir aussi la page sur les annales du brevet et du bac, corrigées.
+
+## Comment corriger et noter un brevet blanc ?
+On corrige question par question avec le barème du sujet, en accordant des points partiels quand la démarche est juste, puis on additionne. Une note globale lue d'un coup d'œil n'apprend rien, alors que la perte de points question par question dit exactement où travailler.
+Le barème de chaque épreuve : on corrige question par question, jamais d'un seul coup d'œil.
+Les points se répartissent ainsi dans le format actuel de chaque épreuve :
+- Mathématiques : 20 points : automatismes sans calculatrice (20 minutes, 6 points), puis exercices (1 heure 40, 14 points).
+- Français : 20 points : grammaire et compréhension (10 points), puis rédaction (10 points). La dictée se travaille aussi à part.
+- Sciences : 25 points : deux disciplines parmi physique-chimie, sciences de la vie et de la Terre, technologie.
+- Histoire-géographie et enseignement moral et civique : 40 points : histoire ou géographie (30 points), puis enseignement moral et civique (10 points).
+Le réflexe qui rapporte : sur une question où votre enfant a posé le bon calcul ou la bonne idée sans aller au bout, donnez une partie des points. C'est ce que fait un correcteur, et c'est ce qui encourage à écrire sa démarche plutôt qu'à laisser une case vide.
+Si vous n'êtes pas spécialiste de la matière, appuyez-vous sur le corrigé et le barème du sujet. Corrigez avec un stylo d'une autre couleur, et notez à côté de chaque point perdu la raison : cours non su, erreur d'inattention ou manque de temps. Cette liste est la matière de l'étape suivante.
+
+## Que faire après la correction d'un brevet blanc ?
+Dresser la liste des erreurs, les classer par cause, retravailler les notions manquantes, puis refaire les questions ratées quelques jours plus tard. C'est la partie qui fait gagner des points : sans elle, le brevet blanc ne mesure que le niveau.
+Un brevet blanc ne sert que s'il est suivi des deux autres étapes.
+- Lister chaque point perdu sur une feuille : numéro de question, chapitre concerné, cause de l'erreur.
+- Classer par cause. Une notion jamais comprise demande de revoir le cours ; une erreur de calcul ou d'inattention demande un geste de vérification ; un manque de temps demande de mieux répartir les minutes.
+- Retravailler les notions en priorité sur les chapitres où les points perdus sont les plus nombreux.
+- Refaire les questions ratées quelques jours plus tard, sans regarder la correction.
+- Repasser un autre sujet au passage suivant, et comparer avec le précédent.
+
+## Comment faire un oral blanc du brevet à la maison ?
+Installez votre enfant comme devant un jury : il présente son projet environ 5 minutes, sans être coupé, puis répond à vos questions pendant une dizaine de minutes, soit 15 minutes au plus au total. L'oral, appelé « soutenance », est noté sur 20 : 8 points pour la maîtrise de l'expression orale et 12 points pour la maîtrise du sujet présenté.
+L'oral en un coup d'œil : 5 minutes d'exposé, 10 minutes d'entretien, 8 + 12 points.
+Voici ce qu'il faut savoir avant de simuler l'épreuve :
+- Le sujet. L'élève présente un objet d'étude d'histoire des arts, ou un projet mené en enseignement pratique interdisciplinaire (EPI) du cycle 4, ou un projet d'un parcours éducatif (parcours Avenir, citoyen, éducatif de santé, d'éducation artistique et culturelle).
+- Le support. Une réalisation (projection, enregistrement, réalisation numérique) peut appuyer l'exposé, sans le remplacer.
+- Le jury. Il compte au moins deux professeurs. À la maison, demandez à deux adultes de jouer ce rôle.
+- Le groupe. L'oral peut aussi se préparer à trois candidats au plus : exposé de 10 minutes où chacun intervient, puis entretien de 15 minutes, avec une note individuelle.
+- La langue vivante. Une partie de l'oral peut se faire en langue vivante étrangère ou régionale, 5 minutes au plus au total.
+Pour votre simulation, chronométrez l'exposé, sans interrompre, puis posez des questions une à une : la démarche suivie, les sources utilisées, les difficultés rencontrées, le regard critique sur le travail, les liens avec d'autres matières, l'orientation. Si une réponse est courte, relancez avec « Peux-tu me donner un exemple concret ? » plutôt que de donner la réponse.
+Pour évaluer, reformulez les critères de la grille officielle en questions simples :
+- Expression orale (8 points) : s'exprime-t-il de façon maîtrisée devant un auditoire, avec un vocabulaire précis ? Donne-t-il un avis personnel ? Participe-t-il de façon constructive aux échanges ?
+- Maîtrise du sujet (12 points) : a-t-il conçu et mené son projet ? Sait-il analyser sa pratique, argumenter et faire des liens entre disciplines ?
+La note de l'oral n'est pas communiquée avant les résultats officiels du brevet : il faut donc compter sur l'entraînement plutôt que sur un résultat connu. Pour préparer le fond de l'exposé, lisez l'article comment préparer l'oral du brevet ; pour un oral blanc guidé, voyez la page l'oral du brevet avec Galac6.
+
+## Comment Galac6 aide-t-il à faire un brevet blanc à la maison ?
+Galac6 (galac6.io) fournit le sujet, le chronomètre et la correction : votre enfant passe un brevet blanc en ligne corrigé sur 129 sujets officiels du brevet ou sur des sujets d'entraînement, avec une note par question. Les écrits se passent dans le navigateur, sur ordinateur, tablette ou téléphone, sans rien installer.
+Du sujet à l'oral blanc : le parcours dans Galac6.
+- Deux modes. « Conditions d'examen » : la copie est rendue automatiquement à la fin du temps. « Entraînement » : le temps est seulement indiqué.
+- Réponses sur ordinateur ou sur papier. L'élève tape ses réponses, ou photographie sa copie papier (jusqu'à 10 photos) à la fin.
+- Une correction question par question selon le barème du sujet : points obtenus, points partiels quand la démarche est engagée, réponse attendue, mention et conseils. Quand la consigne demande de justifier, un résultat juste sans justification vaut la moitié des points. La correction est rédigée par l'IA de Galac6 à partir du barème d'origine : ce n'est pas un corrigé officiel.
+- Pas de réponses pendant l'épreuve. L'élève compose seul ; la correction n'arrive qu'une fois la copie rendue.
+- Un oral blanc à la voix. L'élève indique le titre de son projet et son parcours, ajoute si possible son support (PDF, Word, images ou photos, 10 pages au plus : un PowerPoint s'exporte d'abord en PDF). Il passe ensuite l'accueil, l'exposé d'environ 5 minutes sans être interrompu, puis l'entretien d'environ 10 minutes, avec des questions posées une à une à partir de son support. Le bilan est noté sur 20, avec la même répartition que l'épreuve : 8 points pour l'expression orale, 12 pour la maîtrise du sujet.
+Côté prix : l'offre Découverte à 0 €, limitée, permet d'essayer avec un sujet type brevet ou bac par mois ; le brevet blanc complet chronométré demande une offre payante (Élève : 69 € par an ou 7,99 € par mois ; Famille, jusqu'à 4 enfants : 99 € par an ou 11,99 € par mois). L'oral blanc à la voix fait partie du Pack Examen, un achat unique valable 12 mois : 19 € par élève, ou 14 € avec un abonnement à l'année. Le Pack ajoute aussi la seconde correction des copies et le Concours général. Voir les tarifs. Les comptes sont hébergés en France et l'IA est traitée en Europe.
+
+## Questions fréquentes
+### Combien de temps dure un brevet blanc complet à la maison ?
+Un brevet blanc complet représente 8 heures d'écrit : 3 heures de français, 2 heures de mathématiques, 2 heures d'histoire-géographie et enseignement moral et civique, et 1 heure de sciences. On les répartit sur un week-end ou sur plusieurs jours ; l'oral de 15 minutes s'y ajoute.
+### Faut-il passer les quatre épreuves d'un coup ?
+Non. Pour les premiers brevets blancs, une épreuve à la fois suffit, par exemple les mathématiques seules. Le passage complet des quatre épreuves se garde pour les dernières semaines avant les examens.
+### Comment se passe et se note l'oral du brevet ?
+L'oral dure 15 minutes au plus : un exposé d'environ 5 minutes, puis un entretien d'une dizaine de minutes avec le jury. Il est noté sur 20 : 8 points pour la maîtrise de l'expression orale et 12 points pour la maîtrise du sujet présenté.
+### Où trouver de vrais sujets de brevet pour s'entraîner ?
+Les annales officielles des sessions passées sont la base. Galac6 (galac6.io) en propose 129, des sessions 2019 à 2026 : 35 en mathématiques, 31 en français, 31 en sciences et 32 en histoire-géographie et EMC. Les sujets créés par l'IA portent toujours la mention « Sujet d'entraînement généré par l'IA ».
+### Comment corriger un brevet blanc quand on n'est pas spécialiste de la matière ?
+On corrige question par question avec le barème et le corrigé du sujet, en comptant des points partiels quand la démarche est juste. Sur Galac6, la correction est rédigée par l'IA à partir du barème d'origine : elle donne la réponse attendue et explique chaque erreur, mais ce n'est pas un corrigé officiel.
+### Combien coûte un brevet blanc sur Galac6 ?
+L'offre Découverte à 0 €, limitée, permet d'essayer, mais le brevet blanc complet chronométré demande une offre payante : l'offre Élève coûte 69 € par an ou 7,99 € par mois, l'offre Famille 99 € par an. L'oral blanc à la voix fait partie du Pack Examen, un achat unique valable 12 mois : 19 € par élève, ou 14 € avec un abonnement à l'année.
+
+## À lire aussi
+- Brevet blanc en ligne corrigé : réviser le brevet avec l'IA
+- L'oral du brevet : s'entraîner avec un oral blanc à la voix
+- Comment préparer l'oral du brevet
+- Les annales du brevet et du bac, corrigées
+- Réviser le brevet de maths : la méthode en 5 étapes
+- Réviser le brevet mois par mois : le planning de 3e
+- Les tarifs de Galac6
+
+## Prêt à t'entraîner pour le brevet ?
+Crée un compte et passe ton premier brevet blanc dès aujourd'hui, chez toi, chronomètre lancé.
+Formule Découverte pour essayer · Voir les tarifs

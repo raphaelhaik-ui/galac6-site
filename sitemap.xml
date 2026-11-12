@@ -10,7 +10,7 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://galac6.io/pt/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://galac6.io/nl/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://galac6.io/"/>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-12</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/en/</loc>
@@ -178,7 +178,7 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://galac6.io/pt/tarifs"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://galac6.io/nl/tarifs"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://galac6.io/tarifs"/>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-12</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/en/tarifs</loc>
@@ -453,7 +453,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://galac6.io/annales-brevet-bac"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://galac6.io/en/brevet-bac-past-papers"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://galac6.io/annales-brevet-bac"/>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-12</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/en/brevet-bac-past-papers</loc>
@@ -565,7 +565,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://galac6.io/reviser-brevet"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://galac6.io/en/brevet-revision"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://galac6.io/reviser-brevet"/>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-12</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/en/brevet-revision</loc>
@@ -819,7 +819,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://galac6.io/blog/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://galac6.io/en/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://galac6.io/blog/"/>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-12</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/en/blog/</loc>
@@ -879,6 +879,18 @@
   <url>
     <loc>https://galac6.io/blog/calcul-mental-primaire</loc>
     <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://galac6.io/oral-du-brevet</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://galac6.io/blog/preparer-oral-brevet</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://galac6.io/blog/brevet-blanc-maison</loc>
+    <lastmod>2026-11-12</lastmod>
   </url>
   <url>
     <loc>https://galac6.io/blog/reviser-brevet-maths</loc>

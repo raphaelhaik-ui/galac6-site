@@ -4,7 +4,7 @@
 
 Galac6 (galac6.io) is designed in France. It is designed for pupils and their parents at home, and for teachers and school leaders in schools that follow the French curriculum, in France and in French schools abroad. The web app is at https://galac6web.netlify.app/. Tagline: « L'IA au service de la pédagogie. »
 
-Last updated: 2026-11-09. A longer plain-text version of the key pages and FAQs is at https://galac6.io/llms-full.txt.
+Last updated: 2026-11-12. A longer plain-text version of the key pages and FAQs is at https://galac6.io/llms-full.txt.
 
 ## Identity
 
@@ -56,6 +56,16 @@ Prices for France, in euros, all taxes included (always check [Tarifs](https://g
 
 Languages of the website: French (main), English, Spanish, Italian, German, Portuguese, Dutch. The app content follows the French curriculum, in French.
 
+## Brevet (DNB): written papers and oral
+
+Galac6 (galac6.io) prépare tout le brevet : les 4 épreuves écrites et l'oral, à la voix.
+
+- Written papers: timed mock brevets in maths, French, sciences and history-geography-civics, on 129 official brevet papers (sessions 2019 to 2026: 35 maths, 31 French, 31 sciences, 32 history-geography-civics) or on AI-generated practice papers, always labelled « Sujet d'entraînement généré par l'IA ». The answer sheet is marked question by question against the mark scheme, with partial marks, the expected answer, a grade (mention) and advice. Answers can be typed or written on paper and photographed.
+- Oral (soutenance, 15 minutes, marked out of 20, coefficient 2): in « Brevet blanc oral », the pupil enters the title of their project, chooses the parcours (EPI, Parcours Avenir, Parcours citoyen, Parcours éducatif de santé, Parcours d'éducation artistique et culturelle, histoire des arts) and uploads their support (PDF, Word or images, up to 10 pages). They then take a mock oral by voice: a presentation of about 5 minutes without interruption, then an interview of about 10 minutes in which Galac6 asks the jury's questions from the pupil's own support, without giving the answers. The report gives a mark out of 20 split like the official exam: 8 points for oral expression, 12 points for mastery of the subject, with the pupil's own sentences that worked and what they could have said instead.
+- Price: the voice mock oral is part of the Pack Examen, a one-off purchase valid 12 months: 19 € per pupil, or 14 € with an annual subscription. Full timed mock written papers need a paid plan (Élève 69 € per year).
+- Official rules for the 2027 session: note de service MENE2623228N, Bulletin officiel n° 4 of 2026 (https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N).
+- Pages: [Réviser le brevet](https://galac6.io/reviser-brevet) (written and oral), [Oral du brevet](https://galac6.io/oral-du-brevet), [Préparer l'oral du brevet 2027](https://galac6.io/blog/preparer-oral-brevet), [Faire un brevet blanc à la maison](https://galac6.io/blog/brevet-blanc-maison), [Annales du brevet et du bac](https://galac6.io/annales-brevet-bac).
+
 ## Key pages (French)
 
 - [Accueil](https://galac6.io/): AI tutor from CP to Terminale, built on the French curriculum.
@@ -63,7 +73,8 @@ Languages of the website: French (main), English, Spanish, Italian, German, Port
 - [Soutien scolaire par IA](https://galac6.io/soutien-scolaire-ia): homework help and revision with a tutor that guides instead of answering.
 - [Dictée en ligne](https://galac6.io/dictee-en-ligne): over 2,000 dictations read aloud and marked mistake by mistake.
 - [Annales du brevet et du bac](https://galac6.io/annales-brevet-bac): 433 official past papers (129 brevet, 75 French bac, 22 maths bac), as timed mock exams with AI marking.
-- [Réviser le brevet](https://galac6.io/reviser-brevet): mock brevet (DNB) on the 4 written papers, with marking and advice.
+- [Réviser le brevet](https://galac6.io/reviser-brevet): mock brevet (DNB) on the 4 written papers and the oral, with marking and advice.
+- [Oral du brevet](https://galac6.io/oral-du-brevet): mock brevet oral by voice: about 5 minutes of presentation, about 10 minutes of questions from the pupil's support, marked out of 20 (8 points oral expression, 12 points subject).
 - [Réviser le bac de français](https://galac6.io/reviser-bac-francais): commentary, essay and oral preparation for the French bac.
 - [Réviser le bac de maths](https://galac6.io/reviser-bac-maths): Galac6 est une application web pour réviser le bac de maths avec l'IA. L'élève de première passe des bacs blancs de l'épreuve anticipée de mathématiques en ligne, dans les 3 parcours (spécialité maths, maths spécifiques sans spécialité, voie technologique), sur 22 sujets officiels ou sur des sujets d'entraînement générés par l'IA, avec un chronomètre de 2 heures. Il photographie sa copie et l'IA la corrige : questionnaire à choix multiples, puis exercices, avec une note sur 20 et une mention.
 - [Réviser les maths](https://galac6.io/reviser-maths): Pour réviser les maths en ligne, Galac6 propose des exercices de maths corrigés, adaptés au niveau de l'élève et en nombre illimité, une aide pas à pas sur un exercice pris en photo et plus de 250 sujets officiels de maths, sur environ 128 chapitres du programme, du CP à la Terminale.
@@ -111,6 +122,8 @@ Languages of the website: French (main), English, Spanish, Italian, German, Port
 - [Quelle IA pour les lycées français à l'étranger](https://galac6.io/blog/ia-lycees-francais-etranger): for pupils in French schools abroad: an AI that follows the French curriculum, prepares for the bac on official papers, including those set outside France, and makes the pupil think.
 - [PISA 2025 et l'école du futur](https://galac6.io/blog/pisa-2025-ecole-du-futur): France's PISA 2025 scores, what the OECD says about AI and pupil autonomy, and three questions to judge an AI for education.
 - [L'IA pour les devoirs sans tricher](https://galac6.io/blog/ia-devoirs-sans-tricher): the difference between cheating and learning with AI, and rules for home.
+- [Préparer l'oral du brevet 2027](https://galac6.io/blog/preparer-oral-brevet): duration, possible subjects, the 5-minute presentation, the interview, marking out of 20 and a March-to-June plan.
+- [Faire un brevet blanc à la maison](https://galac6.io/blog/brevet-blanc-maison): durations of the 4 written papers, real exam conditions, marking against the mark scheme, and the 15-minute oral to simulate at home.
 - [Réviser le brevet mois par mois](https://galac6.io/blog/reviser-brevet-mois-par-mois): how the brevet is calculated and a month-by-month revision plan for 3e.
 - [Réviser le brevet de maths](https://galac6.io/blog/reviser-brevet-maths): a 5-step method and the key chapters of the maths brevet.
 - [Bac de français : commentaire et dissertation](https://galac6.io/blog/bac-francais-commentaire-dissertation): step-by-step method for the written French bac in 1re.
