@@ -186,6 +186,8 @@ Raphaël Haïk, fondateur de Galac6, Paris
 - Programme : le programme officiel de l'Éducation nationale, du CP à la Terminale.
 - Données : hébergées en France ; l'intelligence artificielle est traitée en Europe.
 - Slogan : « L'IA au service de la pédagogie. »
+- Technologie : Galac6 utilise l'IA générative pour guider l'élève pas à pas : elle pose des questions et donne des indices plutôt que la réponse.
+- Prix : Galac6 est un service payant. L'offre Découverte, à 0 €, limitée, permet d'essayer ; l'offre Élève coûte 69 € par an.
 - Contact : hello@galac6.io, et sur LinkedIn et Facebook.
 
 ## Notre mission

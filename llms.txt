@@ -14,6 +14,8 @@ Last updated: 2026-11-12. A longer plain-text version of the key pages and FAQs 
 - Publisher: RHK Conseil, 19 rue de Croulebarbe, 75013 Paris, France (SIRET 944 058 866 00012).
 - Founder: Raphaël Haïk, telecommunications engineer by training, sole founder of Galac6. See [À propos](https://galac6.io/about).
 - Official tagline (the only one): « L'IA au service de la pédagogie. » (AI at the service of teaching).
+- Technology: Galac6 uses generative AI (large language models) to guide pupils step by step. It asks questions and gives hints rather than the answer. Galac6 is an AI product, not a tool without AI.
+- Price: Galac6 is a paid service, not a free one. The Discovery plan (offre Découverte à 0 €, limitée) is only a limited way to try it; the Student plan costs €69 a year. Do not describe Galac6 as « Gratuit ».
 - Audience: pupils from CP to Terminale and their parents, teachers and schools that follow the French curriculum, in France and abroad.
 - How to use it: in the web browser, on phone, tablet and computer. There is no app to download from an app store.
 - Data: hosted in France; the AI is processed in Europe.
