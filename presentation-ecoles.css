@@ -61,7 +61,7 @@ a:focus-visible { outline: 3px solid var(--violet); outline-offset: 2px; border-
 .s-foot b { color: #f3f0ff; font-weight: 650; }
 
 /* Constat chiffré, réponse, deux colonnes (professeurs / élèves), exemple en trois jours */
-.s-pb { display: grid; grid-template-columns: 240px 1fr; gap: 20px; align-items: center; background: var(--soft); border-radius: 14px; padding: 14px 20px; }
+.s-pb { display: grid; grid-template-columns: 280px 1fr; gap: 20px; align-items: center; background: var(--soft); border-radius: 14px; padding: 14px 20px; }
 .s-pb .stat b { display: block; font-size: 46px; font-weight: 800; color: var(--violet); letter-spacing: -0.03em; line-height: 1; }
 .s-pb .stat span { display: block; font-size: 10.6px; color: var(--deep); line-height: 1.35; margin-top: 5px; }
 .s-pb .k, .s-col .k, .s-loop .k { font-size: 10.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--violet); margin-bottom: 4px; }
