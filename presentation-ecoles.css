@@ -35,11 +35,17 @@ a:focus-visible { outline: 3px solid var(--violet); outline-offset: 2px; border-
 .s-num b { font-size: 21px; font-weight: 800; color: var(--deep); letter-spacing: -0.01em; font-variant-numeric: tabular-nums; line-height: 1.15; }
 .s-num b .arr { width: .8em; height: .8em; vertical-align: -.04em; stroke: currentColor; fill: none; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; }
 .s-num span { font-size: 10.8px; color: var(--grey); line-height: 1.35; }
-.s-more { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+.s-more { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
 .s-more > div { display: grid; grid-template-columns: 24px 1fr; gap: 10px; align-items: start; }
 .s-more .ico { width: 22px; height: 22px; stroke-width: 1.7; }
 .s-more h2 { font-size: 13px; font-weight: 750; color: var(--deep); margin-bottom: 3px; }
 .s-more p { font-size: 11.4px; color: var(--grey); }
+/* Encadré « Sur demande » mis en avant en rouge (demande de Raphaël, 15/11/2026) */
+.s-more > div.hl { background: #fff1f0; border-radius: 10px; padding: 8px 4px 8px 12px; margin: -8px -4px -8px -12px; }
+.s-more .hl .ico { stroke: #d92d20; }
+.s-more .hl h2 { color: #d92d20; }
+.s-more .hl p { color: var(--ink); }
+.s-more .hl strong { color: #d92d20; font-weight: 700; }
 
 .s-band { margin-top: auto; background: var(--deep); color: #f3f0ff; padding: 20px 50px 19px; display: grid; gap: 11px; }
 .s-band-row { display: grid; grid-template-columns: 1fr 228px; gap: 28px; align-items: center; }
@@ -84,6 +90,13 @@ a:focus-visible { outline: 3px solid var(--violet); outline-offset: 2px; border-
 .s-loop li.go { align-self: center; }
 .s-loop li.go svg { width: 18px; height: 18px; stroke: var(--violet); fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
 .s-trust b { font-size: 14px; white-space: nowrap; }
+/* Exemple en trois jours avec la capture de la carte de la classe (page française) */
+.s-loop.shot { display: grid; grid-template-columns: 1fr 156px; gap: 16px; align-items: center; }
+.s-loop.shot ol { grid-template-columns: 1fr; gap: 4px; }
+.s-loop.shot li { display: grid; grid-template-columns: 58px 1fr; gap: 8px; }
+.s-loop.shot figure { margin: 0; }
+.s-loop.shot img { display: block; width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--line); background: #ffffff; }
+.s-loop.shot figcaption { font-size: 9px; color: var(--grey); margin-top: 3px; text-align: center; }
 
 /* ===== Sous la feuille (écran seulement) ===== */
 .below { width: 100%; max-width: 794px; display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; justify-content: center; }
@@ -112,6 +125,10 @@ a:focus-visible { outline: 3px solid var(--violet); outline-offset: 2px; border-
   .s-col li p, .s-loop li, .s-more p { font-size: 15px; }
   .s-loop ol { grid-template-columns: 1fr; gap: 10px; }
   .s-loop li.go { display: none; }
+  .s-loop.shot { grid-template-columns: 1fr; gap: 12px; }
+  .s-loop.shot li { grid-template-columns: 1fr; gap: 0; }
+  .s-loop.shot figure { max-width: 340px; }
+  .s-loop.shot figcaption { font-size: 12px; text-align: left; }
   .s-loop li b { font-size: 14px; }
   .s-trust b { font-size: 17px; white-space: normal; }
   .s-num { grid-template-columns: 1fr 1fr; }
@@ -142,7 +159,13 @@ a:focus-visible { outline: 3px solid var(--violet); outline-offset: 2px; border-
   .page { padding: 0; display: block; }
   .sheet { width: 210mm; height: 297mm; min-height: 0; border-radius: 0; box-shadow: none; }
   .web-only { display: none !important; }
-  .s-body { gap: 8px; padding-bottom: 8px; }
+  .s-body { gap: 8px; padding-top: 25px; padding-bottom: 8px; }
+  .s-hero h1 { font-size: 35px; }
+  .s-cols { padding-top: 6px; }
+  .s-col ul { gap: 6px; }
+  .s-num > div { padding: 8px 12px 7px; }
+  .s-band { padding: 16px 50px 15px; gap: 9px; }
+  .s-offer { gap: 8px; }
   .s-pb { padding: 8px 20px; }
   .s-pb .stat span.lead { margin-bottom: 2px; }
   .s-loop { padding: 10px 18px 11px; }
