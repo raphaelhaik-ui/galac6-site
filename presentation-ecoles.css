@@ -35,11 +35,11 @@ a:focus-visible { outline: 3px solid var(--violet); outline-offset: 2px; border-
 .s-num b { font-size: 21px; font-weight: 800; color: var(--deep); letter-spacing: -0.01em; font-variant-numeric: tabular-nums; line-height: 1.15; }
 .s-num b .arr { width: .8em; height: .8em; vertical-align: -.04em; stroke: currentColor; fill: none; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; }
 .s-num span { font-size: 10.8px; color: var(--grey); line-height: 1.35; }
-.s-more { display: grid; grid-template-columns: .85fr 1fr 1.15fr; gap: 18px; }
-.s-more > div { display: grid; grid-template-columns: 24px 1fr; gap: 8px; align-items: start; }
+.s-more { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+.s-more > div { display: grid; grid-template-columns: 24px 1fr; gap: 10px; align-items: start; }
 .s-more .ico { width: 22px; height: 22px; stroke-width: 1.7; }
-.s-more h2 { font-size: 12.4px; font-weight: 750; color: var(--deep); margin-bottom: 3px; white-space: nowrap; }
-.s-more p { font-size: 11.2px; color: var(--grey); }
+.s-more h2 { font-size: 13px; font-weight: 750; color: var(--deep); margin-bottom: 3px; }
+.s-more p { font-size: 11.4px; color: var(--grey); }
 
 .s-band { margin-top: auto; background: var(--deep); color: #f3f0ff; padding: 20px 50px 19px; display: grid; gap: 11px; }
 .s-band-row { display: grid; grid-template-columns: 1fr 228px; gap: 28px; align-items: center; }
@@ -116,7 +116,7 @@ a:focus-visible { outline: 3px solid var(--violet); outline-offset: 2px; border-
   .s-num b { font-size: 22px; }
   .s-num span { font-size: 13px; }
   .s-more { grid-template-columns: 1fr; gap: 20px; }
-  .s-more h2 { font-size: 16px; white-space: normal; }
+  .s-more h2 { font-size: 16px; }
   .s-band { padding: 26px max(18px, env(safe-area-inset-left, 0px)) 22px max(18px, env(safe-area-inset-right, 0px)); gap: 18px; }
   .s-band-row { grid-template-columns: 1fr; gap: 24px; }
   .s-offer h2 { font-size: 23px; }
