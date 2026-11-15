@@ -98,6 +98,8 @@ a:focus-visible { outline: 3px solid var(--violet); outline-offset: 2px; border-
 .s-loop.shot { display: grid; grid-template-columns: 1fr 156px; gap: 16px; align-items: center; }
 .s-loop.shot ol { grid-template-columns: 1fr; gap: 4px; }
 .s-loop.shot li { display: grid; grid-template-columns: 58px 1fr; gap: 8px; }
+/* « Wednesday » est plus long que « Mercredi » */
+html[lang="en"] .s-loop.shot li { grid-template-columns: 76px 1fr; }
 .s-loop.shot figure { margin: 0; }
 .s-loop.shot img { display: block; width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--line); background: #ffffff; }
 .s-loop.shot figcaption { font-size: 9px; color: var(--grey); margin-top: 3px; text-align: center; }
@@ -130,7 +132,7 @@ a:focus-visible { outline: 3px solid var(--violet); outline-offset: 2px; border-
   .s-loop ol { grid-template-columns: 1fr; gap: 10px; }
   .s-loop li.go { display: none; }
   .s-loop.shot { grid-template-columns: 1fr; gap: 12px; }
-  .s-loop.shot li { grid-template-columns: 1fr; gap: 0; }
+  .s-loop.shot li, html[lang="en"] .s-loop.shot li { grid-template-columns: 1fr; gap: 0; }
   .s-loop.shot figure { max-width: 340px; }
   .s-loop.shot figcaption { font-size: 12px; text-align: left; }
   .s-loop li b { font-size: 14px; }
