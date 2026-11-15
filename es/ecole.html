@@ -33,7 +33,7 @@
         "@id": "https://galac6.io/#organization"
       },
       "description": "Galac6 propone los deberes y los corrige, copias manuscritas incluidas, y usted los valida. Seguimiento de cada alumno y piloto gratuito de 3 meses.",
-      "dateModified": "2026-11-07",
+      "dateModified": "2026-11-15",
       "mainEntity": [
         {
           "@type": "Question",
@@ -82,7 +82,7 @@
 <meta content="Galac6" property="og:site_name"/>
 <meta content="es_ES" property="og:locale"/>
 
-<meta content="Galac6 para profesores y centros: menos corrección, más pedagogía" property="og:title"/>
+<meta content="Galac6 para los centros: devolver a los profesores el tiempo de cada alumno" property="og:title"/>
 <meta content="Galac6 propone y corrige los deberes, usted los valida. Conoce a cada alumno, concepto por concepto. Piloto gratuito de 3 meses, hasta 3 clases, y después tarifa según presupuesto." property="og:description"/>
 <meta content="https://galac6.io/es/ecole" property="og:url"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" property="og:image"/>
@@ -90,7 +90,7 @@
 <meta content="630" property="og:image:height"/>
 <meta content="Galac6, la IA al servicio de la pedagogía." property="og:image:alt"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Galac6 para profesores y centros: menos corrección, más pedagogía" name="twitter:title"/>
+<meta content="Galac6 para los centros: devolver a los profesores el tiempo de cada alumno" name="twitter:title"/>
 <meta content="Galac6 propone y corrige los deberes, usted los valida. Conoce a cada alumno, concepto por concepto. Piloto gratuito de 3 meses, hasta 3 clases, y después tarifa según presupuesto." name="twitter:description"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" name="twitter:image"/>
 <meta content="Galac6, la IA al servicio de la pedagogía." name="twitter:image:alt"/>
@@ -288,13 +288,31 @@
     .e-steps.four li { align-content: start; }
     @media (max-width: 960px) { .e-steps.four { grid-template-columns: minmax(0, 1fr); } .e-steps.four::before { top: 48px; bottom: 48px; left: 50%; right: auto; width: 3px; height: auto; background: linear-gradient(180deg, var(--g1), var(--g2)); } }
     @media (max-width: 760px) { .e-steps { grid-template-columns: minmax(0, 1fr); } .e-steps::before { top: 48px; bottom: 48px; left: 50%; right: auto; width: 3px; height: auto; background: linear-gradient(180deg, var(--g1), var(--g2)); } }
+    /* Étapes en colonne (téléphone) : le texte masque le trait vertical qui relie les étapes */
+    @media (max-width: 960px) { .e-steps li > b, .e-steps li > span:last-child { position: relative; background: var(--bg); } }
 
 
     /* ─── Icônes au trait ─── */
     .ico { width: 24px; height: 24px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
     .e-pilot a { text-decoration: underline; text-underline-offset: 3px; display: inline-flex; align-items: center; min-height: 44px; }
 
-    /* ─── Trois promesses ─── */
+    /* ─── Le constat (haut de page, à la place de l'illustration) ─── */
+    .e-stat { width: 100%; max-width: 460px; justify-self: center; display: grid; gap: 10px; padding: 28px; border: 1px solid var(--tint-line); border-radius: 22px; background: var(--bg-card); box-shadow: 0 24px 60px -32px rgba(124,92,252,0.5); }
+    .e-stat .eyebrow { margin-bottom: 0; }
+    .e-stat-lead { font-weight: 700; color: var(--primary-light); }
+    .e-stat-num { font-size: clamp(3.2rem, 8vw, 4.6rem); font-weight: 800; line-height: 1; letter-spacing: -0.02em; }
+    .e-stat-cap { font-size: 1.02rem; }
+    .e-stat-txt { color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 12px; }
+    .e-stat-src { font-size: 0.8rem; color: var(--text-muted); }
+    .e-stat-src a { text-decoration: underline; text-underline-offset: 3px; }
+    @media (max-width: 860px) { .e-stat { max-width: none; padding: 22px 20px; } }
+
+    /* ─── Professeurs et élèves (deux colonnes) ─── */
+    .duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; max-width: 1080px; margin: 0 auto; }
+    .duo-k { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--primary-light); margin-bottom: 12px; }
+    @media (max-width: 860px) { .duo { grid-template-columns: minmax(0, 1fr); } }
+
+    /* ─── Trois promesses (styles gardés, plus utilisés sur cette page) ─── */
     .proms { display: grid; gap: 14px; max-width: 900px; margin: 0 auto; }
     .prom { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 18px; padding: 24px; border: 1px solid var(--border); border-radius: 18px; background: var(--bg-card); }
     .pi { width: 52px; height: 52px; border-radius: 14px; background: var(--tint); border: 1px solid var(--tint-line); color: var(--primary-light); display: grid; place-items: center; }
@@ -585,14 +603,14 @@
 <symbol id="hm-c" viewbox="0 0 24 24"><circle cx="12" cy="12" r="7"></circle><path d="M12 5v14"></path></symbol>
 <symbol id="hm-r" viewbox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.3-5.7"></path><path d="M4 4v4.5h4.5"></path></symbol>
 </svg>
-<!-- ═══ 1. HAUT DE PAGE : LE GAIN DE TEMPS ═══ -->
+<!-- ═══ 1. HAUT DE PAGE : LE CONSTAT ET LA RÉPONSE (repris du 1-page écoles, 15/11/2026) ═══ -->
 <div class="e-hero">
 <div class="wrap e-hero-grid">
 <div class="e-hero-text">
 <p class="eyebrow" style="margin-bottom:0">Profesores, dirección, centros educativos</p>
-<h1>Menos corrección, <span class="grad">más pedagogía</span></h1>
-<p class="sub">Galac6 redefine el aprendizaje en la escuela a partir de lo que sabe cada alumno. Le propone los deberes y los corrige, copias manuscritas incluidas, y usted los valida. Conoce a cada alumno, concepto por concepto, y sigue siendo dueño de su pedagogía.</p>
-<p class="updated"><time datetime="2026-11-07">Actualizado el 7 de noviembre de 2026</time></p>
+<h1>Devolver a los profesores <span class="grad">el tiempo de cada alumno</span></h1>
+<p class="sub">Galac6 se encarga de lo que consume el tiempo, devuelve a los profesores su poder pedagógico y da a los alumnos herramientas de IA que les ayudan a tener éxito.</p>
+<p class="updated"><time datetime="2026-11-15">Actualizado el 15 de noviembre de 2026</time></p>
 <div class="e-cta">
 <a class="btn btn-primary" data-type="devis" href="#devis">Solicitar un presupuesto</a>
 <a class="btn btn-outline" href="/profs-testeurs" hreflang="fr">Probar como profesor</a>
@@ -610,55 +628,70 @@
 <p class="quick-msg" hidden="" role="status"></p>
 </form>
 </div>
-<!-- Illustration abstraite : une galaxie d'orbites autour d'un noyau -->
-<div aria-hidden="true" class="e-art">
-<svg viewbox="0 0 400 400">
-<circle cx="200" cy="200" fill="url(#gglow)" r="190"></circle>
-<g fill="none" stroke-width="1.5">
-<ellipse cx="200" cy="200" opacity="0.55" rx="170" ry="70" stroke="url(#gx)" transform="rotate(-24 200 200)"></ellipse>
-<ellipse cx="200" cy="200" opacity="0.35" rx="130" ry="130" stroke="url(#gx2)" stroke-dasharray="3 9"></ellipse>
-<ellipse cx="200" cy="200" opacity="0.5" rx="160" ry="58" stroke="url(#gx2)" transform="rotate(38 200 200)"></ellipse>
-<ellipse cx="200" cy="200" opacity="0.45" rx="90" ry="90" stroke="url(#gx)"></ellipse>
-</g>
-<circle cx="200" cy="200" fill="url(#gx)" r="46"></circle>
-<circle cx="200" cy="200" fill="none" r="46" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2"></circle>
-<path d="M184 204 l12 12 l22 -28" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"></path>
-<circle cx="47" cy="250" fill="url(#gx2)" r="14"></circle>
-<circle cx="352" cy="148" fill="url(#gx)" r="18"></circle>
-<circle cx="290" cy="330" fill="url(#gx2)" r="10"></circle>
-<circle cx="110" cy="80" fill="url(#gx)" r="11"></circle>
-<circle cx="290" cy="110" fill="url(#gx2)" r="7"></circle>
-<circle cx="130" cy="300" fill="url(#gx)" r="6"></circle>
-<g class="e-twinkle" fill="currentColor">
-<circle cx="60" cy="130" r="2"></circle><circle cx="340" cy="260" r="2.5"></circle><circle cx="240" cy="40" r="1.8"></circle>
-<circle cx="360" cy="70" r="1.6"></circle><circle cx="40" cy="340" r="2"></circle><circle cx="200" cy="370" r="1.6"></circle>
-</g>
-</svg>
+<!-- Le constat : temps de préparation et de correction (DEPP, document de travail 2025-E06, tableau 7, second degré, temps plein) -->
+<aside aria-labelledby="constat-k" class="e-stat">
+<p class="eyebrow" id="constat-k">El diagnóstico</p>
+<p class="e-stat-lead">En secundaria en Francia, por semana</p>
+<p class="e-stat-num"><span class="grad">15,5 horas</span></p>
+<p class="e-stat-cap">para preparar las clases, los deberes y los exámenes, y para corregir, además de 19 horas de clase.*</p>
+<p class="e-stat-txt">Ahí se va el tiempo del profesor, fuera del aula. Queda muy poco para el refuerzo y la diferenciación: el alumno con dificultades espera su turno y el buen alumno se aburre.</p>
+<p class="e-stat-src">* Promedios, profesores a tiempo completo en Francia. Fuente: <a href="https://www.education.gouv.fr/depp/le-temps-de-travail-des-enseignants-467782" rel="noopener" target="_blank">DEPP (Ministerio de Educación francés), noviembre de 2025</a> (en francés).</p>
+</aside>
 </div>
 </div>
-</div>
-<!-- ═══ 2. LES TROIS PROMESSES ═══ -->
+<!-- ═══ 2. CE QUE GALAC6 CHANGE : PROFESSEURS ET ÉLÈVES (repris du 1-page écoles) ═══ -->
 <section class="section" id="promesses">
 <div class="wrap">
 <div class="sec-head center">
-<p class="eyebrow">Tres promesas</p>
-<h2 class="h2">Lo que Galac6 cambia para usted</h2>
-<p class="lead">El tiempo ahorrado vuelve a sus alumnos: una nueva atención pedagógica, y usted conserva el control de cada decisión.</p>
+<p class="eyebrow">Profesores y alumnos</p>
+<h2 class="h2">Lo que Galac6 cambia para usted y sus alumnos</h2>
 </div>
-<div class="proms">
-<article class="prom">
-<span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-clock"></use></svg></span>
-<div><h3>Ahorre horas cada semana.</h3><p>Galac6 le propone los deberes y los corrige: cuestionarios, dictados y copias manuscritas fotografiadas. Solo tiene que validarlos.</p></div>
-</article>
-<article class="prom">
-<span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-chart"></use></svg></span>
-<div><h3>Conozca a cada alumno, concepto por concepto.</h3><p>Los puntos fuertes y las lagunas de la clase y de cada alumno, siempre actualizados: quién progresa, quién se descuelga, qué concepto retomar en clase.</p></div>
-</article>
-<article class="prom">
-<span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-target"></use></svg></span>
-<div><h3>Unos deberes a medida para cada alumno.</h3><p>Cada alumno recibe un trabajo a su nivel, para colmar sus lagunas o reforzar sus puntos fuertes, y usted revisa cada pregunta antes del envío. Ejercicios a medida en todas las asignaturas, dictados y cálculo mental a medida: todo está disponible.</p></div>
-</article>
+<div class="duo">
+<div>
+<h3 class="duo-k">Para los profesores</h3>
+<ul class="fam-list">
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-book"></use></svg></span><div><b>Preparar</b><span>El asistente de Galac6 le ayuda a mejorar su clase, que sigue siendo suya, y crea a partir de ella deberes y exámenes.</span></div></li>
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-paper"></use></svg></span><div><b>Corregir</b><span>Copias en papel o en línea: Galac6 propone la nota y explica cada error; usted decide.</span></div></li>
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-chart"></use></svg></span><div><b>Seguir</b><span>Cada alumno, concepto por concepto: quién se descuelga, quién progresa, qué se sabe y qué no.</span></div></li>
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-target"></use></svg></span><div><b>Diferenciar</b><span>Deberes a medida para cada alumno, para trabajar sus puntos débiles o reforzar sus puntos fuertes, revisados por usted antes del envío.</span></div></li>
+</ul>
 </div>
+<div>
+<h3 class="duo-k">Para los alumnos</h3>
+<ul class="fam-list">
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-help"></use></svg></span><div><b>Pedir ayuda</b><span>Un chat socrático: Galac6 guía al alumno con preguntas, sin darle la respuesta.</span></div></li>
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-quiz"></use></svg></span><div><b>Aprender la lección</b><span>Galac6 pregunta al alumno y le muestra lo que aún debe aprender, no solo releer.</span></div></li>
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-check"></use></svg></span><div><b>Preparar el examen</b><span>Un recorrido hasta el día D, a partir de la clase del profesor: lección, ejercicios, examen de prueba.</span></div></li>
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-calc"></use></svg></span><div><b>Practicar, hacer un examen de prueba</b><span>Más de 2 000 dictados corregidos, cálculo mental y más de 400 exámenes oficiales del brevet y del bac.</span></div></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- ═══ 2 bis. UN EXEMPLE : LA REMÉDIATION EN TROIS JOURS (repris du 1-page écoles) ═══ -->
+<section class="section" id="exemple">
+<div class="wrap">
+<div class="sec-head center">
+<p class="eyebrow">Un ejemplo</p>
+<h2 class="h2">El refuerzo en tres días</h2>
+</div>
+<ol class="e-steps">
+<li>
+<span class="s-icon"><svg aria-hidden="true" viewbox="0 0 64 64"><rect fill="url(#gx)" height="50" rx="6" width="36" x="10" y="6"></rect><g stroke="#fff" stroke-linecap="round" stroke-opacity="0.9" stroke-width="4"><path d="M18 20H38"></path><path d="M18 30H38"></path><path d="M18 40H30"></path></g><circle cx="46" cy="46" fill="url(#gx2)" r="13"></circle><path d="M40 46l4 4 8-8" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5"></path></svg></span>
+<b>Lunes</b>
+<span>Examen en papel: Galac6 corrige las copias fotografiadas, usted valida las notas.</span>
+</li>
+<li>
+<span class="s-icon"><svg aria-hidden="true" viewbox="0 0 64 64"><rect fill="url(#gx)" height="15" rx="4" width="15" x="6" y="6"></rect><rect fill="url(#gx2)" height="15" opacity="0.6" rx="4" width="15" x="25" y="6"></rect><rect fill="url(#gx)" height="15" rx="4" width="15" x="44" y="6"></rect><rect fill="url(#gx2)" height="15" opacity="0.6" rx="4" width="15" x="6" y="25"></rect><rect fill="url(#gx)" height="15" rx="4" width="15" x="25" y="25"></rect><rect fill="url(#gx2)" height="15" opacity="0.35" rx="4" width="15" x="44" y="25"></rect><rect fill="url(#gx)" height="15" rx="4" width="15" x="6" y="44"></rect><rect fill="url(#gx2)" height="15" opacity="0.35" rx="4" width="15" x="25" y="44"></rect><rect fill="url(#gx)" height="15" rx="4" width="15" x="44" y="44"></rect></svg></span>
+<b>Martes</b>
+<span>El panel de la clase muestra quién debe repasar el concepto. Usted sabe qué retomar.</span>
+</li>
+<li>
+<span class="s-icon"><svg aria-hidden="true" viewbox="0 0 64 64"><circle cx="32" cy="32" fill="url(#gx)" opacity="0.35" r="26"></circle><circle cx="32" cy="32" fill="url(#gx)" opacity="0.65" r="17"></circle><circle cx="32" cy="32" fill="url(#gx2)" r="8"></circle></svg></span>
+<b>Miércoles</b>
+<span>Deberes a medida para cada alumno: trabajar sus puntos débiles o reforzar sus puntos fuertes. Revisados por usted.</span>
+</li>
+</ol>
 </div>
 </section>
 <!-- ═══ 3. TABLEAU DE BORD DE CLASSE (exemple, données fictives) ═══ -->
