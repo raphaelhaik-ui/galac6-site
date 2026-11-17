@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
-<title>Leerkrachten en scholen: ken elke leerling | Galac6</title>
-<meta content="Galac6 stelt huiswerk voor en verbetert het, handgeschreven kopieën inbegrepen, en u valideert. Opvolging van elke leerling, gratis pilot van 3 maanden." name="description"/>
+<title>Leerkrachten en scholen: uw cursus centraal | Galac6</title>
+<meta content="Uw cursus in het middelpunt: Galac6 zet hem thuis voort voor uw leerlingen en helpt u voorbereiden en verbeteren; u valideert. Gratis pilot van 3 maanden." name="description"/>
 <meta content="index, follow, max-image-preview:large" name="robots"/>
 <link href="https://galac6.io/nl/ecole" rel="canonical"/>
 <!-- hreflang (généré par scripts/build-langs.py) -->
@@ -24,7 +24,7 @@
       "@type": "FAQPage",
       "@id": "https://galac6.io/nl/ecole#webpage",
       "url": "https://galac6.io/nl/ecole",
-      "name": "Leerkrachten en scholen: ken elke leerling | Galac6",
+      "name": "Leerkrachten en scholen: uw cursus centraal | Galac6",
       "inLanguage": "nl",
       "isPartOf": {
         "@id": "https://galac6.io/nl/#website"
@@ -32,8 +32,8 @@
       "publisher": {
         "@id": "https://galac6.io/#organization"
       },
-      "description": "Galac6 stelt huiswerk voor en verbetert het, handgeschreven kopieën inbegrepen, en u valideert. Opvolging van elke leerling, gratis pilot van 3 maanden.",
-      "dateModified": "2026-11-15",
+      "description": "Uw cursus in het middelpunt: Galac6 zet hem thuis voort voor uw leerlingen en helpt u voorbereiden en verbeteren; u valideert. Gratis pilot van 3 maanden.",
+      "dateModified": "2026-11-17",
       "mainEntity": [
         {
           "@type": "Question",
@@ -82,16 +82,16 @@
 <meta content="Galac6" property="og:site_name"/>
 <meta content="nl_NL" property="og:locale"/>
 
-<meta content="Galac6 voor scholen: leerkrachten weer tijd geven voor elke leerling" property="og:title"/>
-<meta content="Galac6 stelt huiswerk voor en verbetert het, u valideert. U kent elke leerling, begrip per begrip. Gratis pilot van 3 maanden, tot 3 klassen, daarna prijs op offerte." property="og:description"/>
+<meta content="Galac6 voor scholen: uw les in het middelpunt, tot thuis voortgezet" property="og:title"/>
+<meta content="Het pedagogische traject is het uwe: Galac6 helpt uw leerlingen bij elke stap van uw cursus, en helpt ook u. Gratis pilot van 3 maanden, tot 3 klassen." property="og:description"/>
 <meta content="https://galac6.io/nl/ecole" property="og:url"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" property="og:image"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="Galac6, AI in dienst van de pedagogiek." property="og:image:alt"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Galac6 voor scholen: leerkrachten weer tijd geven voor elke leerling" name="twitter:title"/>
-<meta content="Galac6 stelt huiswerk voor en verbetert het, u valideert. U kent elke leerling, begrip per begrip. Gratis pilot van 3 maanden, tot 3 klassen, daarna prijs op offerte." name="twitter:description"/>
+<meta content="Galac6 voor scholen: uw les in het middelpunt, tot thuis voortgezet" name="twitter:title"/>
+<meta content="Het pedagogische traject is het uwe: Galac6 helpt uw leerlingen bij elke stap van uw cursus, en helpt ook u. Gratis pilot van 3 maanden, tot 3 klassen." name="twitter:description"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" name="twitter:image"/>
 <meta content="Galac6, AI in dienst van de pedagogiek." name="twitter:image:alt"/>
 <link href="/icons/32x32.png" rel="icon" type="image/png"/>
@@ -299,13 +299,24 @@
     /* ─── Le constat (haut de page, à la place de l'illustration) ─── */
     .e-stat { width: 100%; max-width: 460px; justify-self: center; display: grid; gap: 10px; padding: 28px; border: 1px solid var(--tint-line); border-radius: 22px; background: var(--bg-card); box-shadow: 0 24px 60px -32px rgba(124,92,252,0.5); }
     .e-stat .eyebrow { margin-bottom: 0; }
+    .e-stat.mid { margin: 40px auto 0; max-width: 620px; }
+    /* Le parcours de votre cours (haut de page, 17/11/2026) */
+    .e-path { width: 100%; max-width: 460px; justify-self: center; display: grid; gap: 18px; padding: 28px; border: 1px solid var(--tint-line); border-radius: 22px; background: var(--bg-card); box-shadow: 0 24px 60px -32px rgba(124,92,252,0.5); }
+    .e-path .eyebrow { margin-bottom: 0; }
+    .e-path ol { list-style: none; margin: 0; padding: 0; counter-reset: st; }
+    .e-path li { position: relative; display: grid; grid-template-columns: 36px minmax(0, 1fr); column-gap: 14px; row-gap: 2px; padding-bottom: 18px; }
+    .e-path li:last-child { padding-bottom: 0; }
+    .e-path li::before { counter-increment: st; content: counter(st); grid-row: span 2; width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--g1), var(--g2)); color: #ffffff; font-weight: 800; display: grid; place-items: center; }
+    .e-path li:not(:last-child)::after { content: ""; position: absolute; left: 17px; top: 42px; bottom: 4px; width: 2px; border-radius: 1px; background: var(--tint-line); }
+    .e-path b { font-size: 1.05rem; }
+    .e-path li span { color: var(--text-muted); font-size: 0.95rem; }
     .e-stat-lead { font-weight: 700; color: var(--primary-light); }
     .e-stat-num { font-size: clamp(3.2rem, 8vw, 4.6rem); font-weight: 800; line-height: 1; letter-spacing: -0.02em; }
     .e-stat-cap { font-size: 1.02rem; }
     .e-stat-txt { color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 12px; }
     .e-stat-src { font-size: 0.8rem; color: var(--text-muted); }
     .e-stat-src a { text-decoration: underline; text-underline-offset: 3px; }
-    @media (max-width: 860px) { .e-stat { max-width: none; padding: 22px 20px; } }
+    @media (max-width: 860px) { .e-stat, .e-path { max-width: none; padding: 22px 20px; } }
 
     /* ─── Professeurs et élèves (deux colonnes) ─── */
     .duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; max-width: 1080px; margin: 0 auto; }
@@ -543,7 +554,7 @@
       footer .footer-badges { row-gap: 0 !important; }
     }
   </style>
-<script>window.G6_DYN = {"demo": "Een demonstratie aanvragen", "devis": "Een offerte aanvragen", "fail": "Verzenden is niet gelukt. Probeer het zo meteen opnieuw of schrijf ons op <a href=\"mailto:hello@galac6.io\">hello@galac6.io</a>.", "ok": "Dank u, uw aanvraag is verzonden. We antwoorden zo snel mogelijk op het opgegeven adres.", "pilote": "Pilotschool worden", "quickErr": "Vul een volledig e-mailadres en de naam van uw school in.", "sending": "Bezig met verzenden…", "title": "Leerkrachten en scholen: ken elke leerling | Galac6"};</script>
+<script>window.G6_DYN = {"demo": "Een demonstratie aanvragen", "devis": "Een offerte aanvragen", "fail": "Verzenden is niet gelukt. Probeer het zo meteen opnieuw of schrijf ons op <a href=\"mailto:hello@galac6.io\">hello@galac6.io</a>.", "ok": "Dank u, uw aanvraag is verzonden. We antwoorden zo snel mogelijk op het opgegeven adres.", "pilote": "Pilotschool worden", "quickErr": "Vul een volledig e-mailadres en de naam van uw school in.", "sending": "Bezig met verzenden…", "title": "Leerkrachten en scholen: uw cursus centraal | Galac6"};</script>
 <script>window.G6_COOKIE_TXT = {"texte": "We willen graag de bezoeken aan deze website meten (Google Analytics) en de resultaten van onze advertenties (Google Ads, Meta). Deze diensten plaatsen cookies en worden alleen geladen als u toestemming geeft. U kunt op elk moment van gedachten veranderen via de link «Cookies beheren» onderaan elke pagina.", "plus": "Meer weten", "refuser": "Alles weigeren", "perso": "Aanpassen", "accepter": "Alles accepteren", "titrePerso": "Kies uw cookies", "audienceTitre": "Bezoekersstatistieken", "audienceTexte": "Google Analytics: telt de bezoeken en bekeken pagina's, om de website te verbeteren.", "pubTitre": "Reclame", "pubTexte": "Google Ads en Meta (Facebook, Instagram): meten de resultaten van onze advertenties.", "enregistrer": "Mijn keuzes opslaan", "necessaires": "De website bewaart ook uw taal en deze keuze op uw apparaat (noodzakelijk, geen toestemming nodig).", "lien": "/mentions-legales#cookies-en"};</script>
 <style id="g6-lang-css">
     /* Bandeau d'information des pages es/it/de/pt/nl, sous le menu (généré par scripts/build-langs.py) */
@@ -603,14 +614,14 @@
 <symbol id="hm-c" viewbox="0 0 24 24"><circle cx="12" cy="12" r="7"></circle><path d="M12 5v14"></path></symbol>
 <symbol id="hm-r" viewbox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.3-5.7"></path><path d="M4 4v4.5h4.5"></path></symbol>
 </svg>
-<!-- ═══ 1. HAUT DE PAGE : LE CONSTAT ET LA RÉPONSE (repris du 1-page écoles, 15/11/2026) ═══ -->
+<!-- ═══ 1. HAUT DE PAGE : VOTRE COURS AU CENTRE, LE PARCOURS EST LE VÔTRE (17/11/2026) ═══ -->
 <div class="e-hero">
 <div class="wrap e-hero-grid">
 <div class="e-hero-text">
 <p class="eyebrow" style="margin-bottom:0">Docenten, directies, scholen</p>
-<h1>Leerkrachten weer <span class="grad">tijd geven voor elke leerling</span></h1>
-<p class="sub">Galac6 neemt over wat tijd kost, geeft leerkrachten hun pedagogische regie terug en geeft leerlingen AI-hulpmiddelen die hen helpen slagen.</p>
-<p class="updated"><time datetime="2026-11-15">Bijgewerkt op 15 november 2026</time></p>
+<h1>Uw les in het middelpunt, <span class="grad">tot thuis voortgezet</span></h1>
+<p class="sub">Uw cursus, uw oefeningen, uw toetsen: het pedagogische traject is het uwe. Galac6 helpt uw leerlingen bij elke stap, en helpt ook u.</p>
+<p class="updated"><time datetime="2026-11-17">Bijgewerkt op 17 november 2026</time></p>
 <div class="e-cta">
 <a class="btn btn-primary" data-type="devis" href="#devis">Een offerte aanvragen</a>
 <a class="btn btn-outline" href="/profs-testeurs" hreflang="fr">Proberen als docent</a>
@@ -628,8 +639,47 @@
 <p class="quick-msg" hidden="" role="status"></p>
 </form>
 </div>
+<!-- Le parcours du professeur : chaque étape part de son cours ; Galac6 aide l'élève et le professeur -->
+<aside aria-labelledby="path-k" class="e-path">
+<p class="eyebrow" id="path-k">Het traject van uw cursus</p>
+<ol>
+<li><b>Uw cursus</b><span>U deelt hem met de klas: hij wordt de basis van al het werk.</span></li>
+<li><b>De les</b><span>Galac6 overhoort de leerling over uw cursus en toont hem wat hij nog moet leren.</span></li>
+<li><b>Uw oefeningen</b><span>U geeft ze als huiswerk. Galac6 helpt de leerling met vragen, zonder het antwoord te geven.</span></li>
+<li><b>De toets</b><span>De leerling bereidt zich voor met uw cursus. Galac6 helpt u verbeteren, u beslist.</span></li>
+</ol>
+</aside>
+</div>
+</div>
+<!-- ═══ 2. TOUT AU LONG DU PARCOURS : POUR VOUS ET POUR VOS ÉLÈVES (repris du 1-page écoles, 17/11/2026) ═══ -->
+<section class="section" id="promesses">
+<div class="wrap">
+<div class="sec-head center">
+<p class="eyebrow">Langs het hele traject</p>
+<h2 class="h2">Galac6 helpt u en uw leerlingen</h2>
+</div>
+<div class="duo">
+<div>
+<h3 class="duo-k">Voor leerkrachten</h3>
+<ul class="fam-list">
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-book"></use></svg></span><div><b>Uw cursus delen</b><span>Uw leerlingen vinden hem in Galac6: thuis helpt de AI hen en legt hun uw cursus uit.</span></div></li>
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-quiz"></use></svg></span><div><b>Voorbereiden</b><span>Creatie-assistenten helpen u lessen en oefeningen te verbeteren, en maken er huiswerk en toetsen van.</span></div></li>
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-paper"></use></svg></span><div><b>Verbeteren</b><span>Op papier of online: Galac6 stelt het cijfer voor en legt elke fout uit, u beslist.</span></div></li>
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-target"></use></svg></span><div><b>Remediëring en differentiatie</b><span>Elke leerling opgevolgd per onderwerp, en huiswerk op maat voor elk, door u nagelezen voor verzending.</span></div></li>
+</ul>
+</div>
+<div>
+<h3 class="duo-k">Voor uw leerlingen, thuis</h3>
+<ul class="fam-list">
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-help"></use></svg></span><div><b>Hulp krijgen</b><span>Een socratische chat die steunt op uw cursus en de leerling met vragen begeleidt.</span></div></li>
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-quiz"></use></svg></span><div><b>De les leren</b><span>Galac6 overhoort hem over uw les en toont wat hij nog moet leren.</span></div></li>
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-check"></use></svg></span><div><b>De toets voorbereiden</b><span>Een traject tot de toetsdag, vanuit uw cursus: les, oefeningen, proeftoets.</span></div></li>
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-calc"></use></svg></span><div><b>Oefenen, een proefexamen maken</b><span>Meer dan 2.000 verbeterde dictees, hoofdrekenen en meer dan 400 officiële examens van het brevet en het bac.</span></div></li>
+</ul>
+</div>
+</div>
 <!-- Le constat : temps de préparation et de correction (DEPP, document de travail 2025-E06, tableau 7, second degré, temps plein) -->
-<aside aria-labelledby="constat-k" class="e-stat">
+<aside aria-labelledby="constat-k" class="e-stat mid">
 <p class="eyebrow" id="constat-k">Het probleem</p>
 <p class="e-stat-lead">In het Franse secundair onderwijs, per week</p>
 <p class="e-stat-num"><span class="grad">15,5 uur</span></p>
@@ -637,35 +687,6 @@
 <p class="e-stat-txt">Daar gaat de tijd van de leerkracht naartoe, buiten de klas. Er blijft te weinig over voor remediëring en differentiatie: de leerling die moeite heeft wacht op zijn beurt, en de sterke leerling verveelt zich.</p>
 <p class="e-stat-src">* Gemiddelden, voltijdse leerkrachten in Frankrijk. Bron: <a href="https://www.education.gouv.fr/depp/le-temps-de-travail-des-enseignants-467782" rel="noopener" target="_blank">DEPP (Frans ministerie van Onderwijs), november 2025</a> (in het Frans).</p>
 </aside>
-</div>
-</div>
-<!-- ═══ 2. CE QUE GALAC6 CHANGE : PROFESSEURS ET ÉLÈVES (repris du 1-page écoles) ═══ -->
-<section class="section" id="promesses">
-<div class="wrap">
-<div class="sec-head center">
-<p class="eyebrow">Leerkrachten en leerlingen</p>
-<h2 class="h2">Wat Galac6 verandert voor u en uw leerlingen</h2>
-</div>
-<div class="duo">
-<div>
-<h3 class="duo-k">Voor leerkrachten</h3>
-<ul class="fam-list">
-<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-book"></use></svg></span><div><b>Voorbereiden</b><span>De Galac6-assistent helpt u uw les te verbeteren, die van u blijft, en maakt er huiswerk en toetsen van.</span></div></li>
-<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-paper"></use></svg></span><div><b>Verbeteren</b><span>Op papier of online: Galac6 stelt het cijfer voor en legt elke fout uit, u beslist.</span></div></li>
-<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-chart"></use></svg></span><div><b>Opvolgen</b><span>Elke leerling, begrip per begrip: wie afhaakt, wie vooruitgaat, wat gekend is en wat niet.</span></div></li>
-<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-target"></use></svg></span><div><b>Differentiëren</b><span>Huiswerk op maat voor elke leerling, om zwakke punten bij te werken of sterke punten uit te bouwen, door u nagelezen voor het verzenden.</span></div></li>
-</ul>
-</div>
-<div>
-<h3 class="duo-k">Voor leerlingen</h3>
-<ul class="fam-list">
-<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-help"></use></svg></span><div><b>Hulp krijgen</b><span>Een socratische chat: Galac6 begeleidt de leerling met vragen, zonder het antwoord te geven.</span></div></li>
-<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-quiz"></use></svg></span><div><b>De les leren</b><span>Galac6 overhoort de leerling en laat zien wat hij nog moet leren, niet alleen herlezen.</span></div></li>
-<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-check"></use></svg></span><div><b>De toets voorbereiden</b><span>Een traject tot de toetsdag, vanuit de les van de leerkracht: les, oefeningen, proeftoets.</span></div></li>
-<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-calc"></use></svg></span><div><b>Oefenen, een proefexamen maken</b><span>Meer dan 2.000 verbeterde dictees, hoofdrekenen en meer dan 400 officiële examens van het brevet en het bac.</span></div></li>
-</ul>
-</div>
-</div>
 </div>
 </section>
 <!-- ═══ 2 bis. UN EXEMPLE : LA REMÉDIATION EN TROIS JOURS (repris du 1-page écoles) ═══ -->
@@ -749,7 +770,7 @@
 <h2 class="h2">Wat u met Galac6 kunt doen</h2>
 </div>
 <div class="pfeat">
-<div><svg aria-hidden="true" class="ico"><use href="#i-quiz"></use></svg><strong>Quizzen en huiswerk van de docent</strong><span>Klaar in enkele minuten op basis van uw instructies of uw geplakte werkblad. U leest en valideert elke vraag.</span></div>
+<div><svg aria-hidden="true" class="ico"><use href="#i-quiz"></use></svg><strong>Quizzen en huiswerk van de docent</strong><span>Klaar in enkele minuten op basis van uw cursus, uw instructies of uw geplakte werkblad. U leest en valideert elke vraag.</span></div>
 <div><svg aria-hidden="true" class="ico"><use href="#i-paper"></use></svg><strong>Dictees, ook op papier</strong><span>Meer dan 2000 dictees voorgelezen en nagekeken door Galac6, waaronder fragmenten van grote auteurs, online of op gefotografeerde papieren kopijen. En dictees op maat, opgebouwd uit de fouten van elke leerling.</span></div>
 <div><svg aria-hidden="true" class="ico"><use href="#i-check"></use></svg><strong>AI-correcties om te valideren</strong><span>Online ingeleverde kopijen worden meteen nagekeken, papieren kopijen worden gescand: Galac6 stelt de correctie en het cijfer voor, u hebt het laatste woord.</span></div>
 <div><svg aria-hidden="true" class="ico"><use href="#i-calc"></use></svg><strong>Hoofdrekenen gestuurd door de docent</strong><span>Met MuscuMath kiest u de reeks voor de klas, of een reeks op maat voor elke leerling.</span></div>
@@ -1020,7 +1041,7 @@
     'use strict';
     var TXT = {
       fr: {
-        title: "Professeurs et écoles : gagnez du temps, suivez chaque élève | Galac6",
+        title: "Professeurs et écoles : votre cours au centre | Galac6",
         devis: 'Demander un devis', pilote: 'Devenir école pilote', demo: 'Demander une démonstration',
         quickErr: 'Indiquez une adresse email complète et le nom de votre établissement.',
         sending: 'Envoi en cours…',
@@ -1028,7 +1049,7 @@
         fail: 'L\'envoi n\'a pas abouti. Réessayez dans un instant, ou écrivez-nous à <a href="mailto:hello@galac6.io">hello@galac6.io</a>.'
       },
       en: {
-        title: "Teachers and schools: save time, know every pupil | Galac6",
+        title: "Teachers and schools: your lessons at the centre | Galac6",
         devis: 'Request a quote', pilote: 'Become a pilot school', demo: 'Request a demo',
         quickErr: 'Enter a full email address and the name of your school.',
         sending: 'Sending…',

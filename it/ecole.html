@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
-<title>Insegnanti e scuole: conoscete ogni alunno | Galac6</title>
-<meta content="Galac6 propone i compiti e li corregge, copie a mano comprese, e voi convalidate. Monitoraggio di ogni alunno, compiti su misura, pilota gratuito di 3 mesi." name="description"/>
+<title>Insegnanti e scuole: il vostro corso al centro | Galac6</title>
+<meta content="Il vostro corso al centro: Galac6 lo prolunga a casa per i vostri alunni e vi aiuta a preparare e correggere; voi convalidate. Pilota gratuito di 3 mesi." name="description"/>
 <meta content="index, follow, max-image-preview:large" name="robots"/>
 <link href="https://galac6.io/it/ecole" rel="canonical"/>
 <!-- hreflang (généré par scripts/build-langs.py) -->
@@ -24,7 +24,7 @@
       "@type": "FAQPage",
       "@id": "https://galac6.io/it/ecole#webpage",
       "url": "https://galac6.io/it/ecole",
-      "name": "Insegnanti e scuole: conoscete ogni alunno | Galac6",
+      "name": "Insegnanti e scuole: il vostro corso al centro | Galac6",
       "inLanguage": "it",
       "isPartOf": {
         "@id": "https://galac6.io/it/#website"
@@ -32,8 +32,8 @@
       "publisher": {
         "@id": "https://galac6.io/#organization"
       },
-      "description": "Galac6 propone i compiti e li corregge, copie a mano comprese, e voi convalidate. Monitoraggio di ogni alunno, compiti su misura, pilota gratuito di 3 mesi.",
-      "dateModified": "2026-11-15",
+      "description": "Il vostro corso al centro: Galac6 lo prolunga a casa per i vostri alunni e vi aiuta a preparare e correggere; voi convalidate. Pilota gratuito di 3 mesi.",
+      "dateModified": "2026-11-17",
       "mainEntity": [
         {
           "@type": "Question",
@@ -82,16 +82,16 @@
 <meta content="Galac6" property="og:site_name"/>
 <meta content="it_IT" property="og:locale"/>
 
-<meta content="Galac6 per le scuole: restituire ai docenti il tempo per ogni alunno" property="og:title"/>
-<meta content="Galac6 propone e corregge i compiti, voi convalidate. Conoscete ogni alunno, nozione per nozione. Pilota gratuito di 3 mesi, fino a 3 classi, poi tariffa su preventivo." property="og:description"/>
+<meta content="Galac6 per le scuole: il vostro corso al centro, prolungato fino a casa" property="og:title"/>
+<meta content="Il percorso didattico è il vostro: Galac6 aiuta i vostri alunni a ogni tappa del vostro corso, e aiuta anche voi. Pilota gratuito di 3 mesi, fino a 3 classi." property="og:description"/>
 <meta content="https://galac6.io/it/ecole" property="og:url"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" property="og:image"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="Galac6, l'IA al servizio della pedagogia." property="og:image:alt"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Galac6 per le scuole: restituire ai docenti il tempo per ogni alunno" name="twitter:title"/>
-<meta content="Galac6 propone e corregge i compiti, voi convalidate. Conoscete ogni alunno, nozione per nozione. Pilota gratuito di 3 mesi, fino a 3 classi, poi tariffa su preventivo." name="twitter:description"/>
+<meta content="Galac6 per le scuole: il vostro corso al centro, prolungato fino a casa" name="twitter:title"/>
+<meta content="Il percorso didattico è il vostro: Galac6 aiuta i vostri alunni a ogni tappa del vostro corso, e aiuta anche voi. Pilota gratuito di 3 mesi, fino a 3 classi." name="twitter:description"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" name="twitter:image"/>
 <meta content="Galac6, l'IA al servizio della pedagogia." name="twitter:image:alt"/>
 <link href="/icons/32x32.png" rel="icon" type="image/png"/>
@@ -299,13 +299,24 @@
     /* ─── Le constat (haut de page, à la place de l'illustration) ─── */
     .e-stat { width: 100%; max-width: 460px; justify-self: center; display: grid; gap: 10px; padding: 28px; border: 1px solid var(--tint-line); border-radius: 22px; background: var(--bg-card); box-shadow: 0 24px 60px -32px rgba(124,92,252,0.5); }
     .e-stat .eyebrow { margin-bottom: 0; }
+    .e-stat.mid { margin: 40px auto 0; max-width: 620px; }
+    /* Le parcours de votre cours (haut de page, 17/11/2026) */
+    .e-path { width: 100%; max-width: 460px; justify-self: center; display: grid; gap: 18px; padding: 28px; border: 1px solid var(--tint-line); border-radius: 22px; background: var(--bg-card); box-shadow: 0 24px 60px -32px rgba(124,92,252,0.5); }
+    .e-path .eyebrow { margin-bottom: 0; }
+    .e-path ol { list-style: none; margin: 0; padding: 0; counter-reset: st; }
+    .e-path li { position: relative; display: grid; grid-template-columns: 36px minmax(0, 1fr); column-gap: 14px; row-gap: 2px; padding-bottom: 18px; }
+    .e-path li:last-child { padding-bottom: 0; }
+    .e-path li::before { counter-increment: st; content: counter(st); grid-row: span 2; width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--g1), var(--g2)); color: #ffffff; font-weight: 800; display: grid; place-items: center; }
+    .e-path li:not(:last-child)::after { content: ""; position: absolute; left: 17px; top: 42px; bottom: 4px; width: 2px; border-radius: 1px; background: var(--tint-line); }
+    .e-path b { font-size: 1.05rem; }
+    .e-path li span { color: var(--text-muted); font-size: 0.95rem; }
     .e-stat-lead { font-weight: 700; color: var(--primary-light); }
     .e-stat-num { font-size: clamp(3.2rem, 8vw, 4.6rem); font-weight: 800; line-height: 1; letter-spacing: -0.02em; }
     .e-stat-cap { font-size: 1.02rem; }
     .e-stat-txt { color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 12px; }
     .e-stat-src { font-size: 0.8rem; color: var(--text-muted); }
     .e-stat-src a { text-decoration: underline; text-underline-offset: 3px; }
-    @media (max-width: 860px) { .e-stat { max-width: none; padding: 22px 20px; } }
+    @media (max-width: 860px) { .e-stat, .e-path { max-width: none; padding: 22px 20px; } }
 
     /* ─── Professeurs et élèves (deux colonnes) ─── */
     .duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; max-width: 1080px; margin: 0 auto; }
@@ -543,7 +554,7 @@
       footer .footer-badges { row-gap: 0 !important; }
     }
   </style>
-<script>window.G6_DYN = {"demo": "Richiedere una dimostrazione", "devis": "Richiedere un preventivo", "fail": "L'invio non è riuscito. Riprovate tra un istante, oppure scriveteci a <a href=\"mailto:hello@galac6.io\">hello@galac6.io</a>.", "ok": "Grazie, la vostra richiesta è stata inviata. Vi risponderemo al più presto all'indirizzo indicato.", "pilote": "Diventare scuola pilota", "quickErr": "Indicate un indirizzo email completo e il nome del vostro istituto.", "sending": "Invio in corso…", "title": "Insegnanti e scuole: conoscete ogni alunno | Galac6"};</script>
+<script>window.G6_DYN = {"demo": "Richiedere una dimostrazione", "devis": "Richiedere un preventivo", "fail": "L'invio non è riuscito. Riprovate tra un istante, oppure scriveteci a <a href=\"mailto:hello@galac6.io\">hello@galac6.io</a>.", "ok": "Grazie, la vostra richiesta è stata inviata. Vi risponderemo al più presto all'indirizzo indicato.", "pilote": "Diventare scuola pilota", "quickErr": "Indicate un indirizzo email completo e il nome del vostro istituto.", "sending": "Invio in corso…", "title": "Insegnanti e scuole: il vostro corso al centro | Galac6"};</script>
 <script>window.G6_COOKIE_TXT = {"texte": "Vorremmo misurare le visite a questo sito (Google Analytics) e i risultati dei nostri annunci (Google Ads, Meta). Questi servizi installano cookie e vengono caricati solo se lei acconsente. Può cambiare idea in qualsiasi momento con il link «Gestisci i cookie» in fondo a ogni pagina.", "plus": "Per saperne di più", "refuser": "Rifiuta tutto", "perso": "Personalizza", "accepter": "Accetta tutto", "titrePerso": "Scelga i suoi cookie", "audienceTitre": "Misurazione del pubblico", "audienceTexte": "Google Analytics: conta le visite e le pagine visualizzate, per migliorare il sito.", "pubTitre": "Pubblicità", "pubTexte": "Google Ads e Meta (Facebook, Instagram): misurano i risultati dei nostri annunci.", "enregistrer": "Salva le mie scelte", "necessaires": "Il sito memorizza anche la sua lingua e questa scelta sul suo dispositivo (indispensabile, senza consenso).", "lien": "/mentions-legales#cookies-en"};</script>
 <style id="g6-lang-css">
     /* Bandeau d'information des pages es/it/de/pt/nl, sous le menu (généré par scripts/build-langs.py) */
@@ -603,14 +614,14 @@
 <symbol id="hm-c" viewbox="0 0 24 24"><circle cx="12" cy="12" r="7"></circle><path d="M12 5v14"></path></symbol>
 <symbol id="hm-r" viewbox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.3-5.7"></path><path d="M4 4v4.5h4.5"></path></symbol>
 </svg>
-<!-- ═══ 1. HAUT DE PAGE : LE CONSTAT ET LA RÉPONSE (repris du 1-page écoles, 15/11/2026) ═══ -->
+<!-- ═══ 1. HAUT DE PAGE : VOTRE COURS AU CENTRE, LE PARCOURS EST LE VÔTRE (17/11/2026) ═══ -->
 <div class="e-hero">
 <div class="wrap e-hero-grid">
 <div class="e-hero-text">
 <p class="eyebrow" style="margin-bottom:0">Docenti, direzione, istituti scolastici</p>
-<h1>Restituire ai docenti <span class="grad">il tempo per ogni alunno</span></h1>
-<p class="sub">Galac6 si occupa di ciò che porta via tempo, restituisce ai docenti il loro potere pedagogico e dà agli alunni strumenti di IA che li aiutano a riuscire.</p>
-<p class="updated"><time datetime="2026-11-15">Aggiornato il 15 novembre 2026</time></p>
+<h1>La vostra lezione al centro, <span class="grad">prolungata fino a casa</span></h1>
+<p class="sub">Il vostro corso, i vostri esercizi, le vostre verifiche: il percorso didattico è il vostro. Galac6 aiuta i vostri alunni a ogni tappa, e aiuta anche voi.</p>
+<p class="updated"><time datetime="2026-11-17">Aggiornato il 17 novembre 2026</time></p>
 <div class="e-cta">
 <a class="btn btn-primary" data-type="devis" href="#devis">Richiedere un preventivo</a>
 <a class="btn btn-outline" href="/profs-testeurs" hreflang="fr">Prova come docente</a>
@@ -628,8 +639,47 @@
 <p class="quick-msg" hidden="" role="status"></p>
 </form>
 </div>
+<!-- Le parcours du professeur : chaque étape part de son cours ; Galac6 aide l'élève et le professeur -->
+<aside aria-labelledby="path-k" class="e-path">
+<p class="eyebrow" id="path-k">Il percorso del vostro corso</p>
+<ol>
+<li><b>Il vostro corso</b><span>Lo condividete con la classe: diventa la base di tutto il lavoro.</span></li>
+<li><b>La lezione</b><span>Galac6 interroga l'alunno sul vostro corso e gli mostra ciò che deve ancora imparare.</span></li>
+<li><b>I vostri esercizi</b><span>Li assegnate come compiti. Galac6 aiuta l'alunno con domande, senza dargli la risposta.</span></li>
+<li><b>La verifica</b><span>L'alunno la prepara sul vostro corso. Galac6 vi aiuta a correggere, voi decidete.</span></li>
+</ol>
+</aside>
+</div>
+</div>
+<!-- ═══ 2. TOUT AU LONG DU PARCOURS : POUR VOUS ET POUR VOS ÉLÈVES (repris du 1-page écoles, 17/11/2026) ═══ -->
+<section class="section" id="promesses">
+<div class="wrap">
+<div class="sec-head center">
+<p class="eyebrow">Lungo tutto il percorso</p>
+<h2 class="h2">Galac6 aiuta voi e i vostri alunni</h2>
+</div>
+<div class="duo">
+<div>
+<h3 class="duo-k">Per i docenti</h3>
+<ul class="fam-list">
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-book"></use></svg></span><div><b>Condividere il vostro corso</b><span>I vostri alunni lo ritrovano su Galac6: a casa, l'IA li aiuta e spiega loro il vostro corso.</span></div></li>
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-quiz"></use></svg></span><div><b>Preparare</b><span>Assistenti di creazione vi aiutano a migliorare corsi ed esercizi, e ne ricavano compiti e verifiche.</span></div></li>
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-paper"></use></svg></span><div><b>Correggere</b><span>Compiti su carta o online: Galac6 propone il voto e spiega ogni errore, voi decidete.</span></div></li>
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-target"></use></svg></span><div><b>Recupero e differenziazione</b><span>Ogni alunno seguito argomento per argomento, e un compito su misura per ciascuno, riletto da voi prima dell'invio.</span></div></li>
+</ul>
+</div>
+<div>
+<h3 class="duo-k">Per i vostri alunni, a casa</h3>
+<ul class="fam-list">
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-help"></use></svg></span><div><b>Farsi aiutare</b><span>Una chat socratica che si basa sul vostro corso e guida l'alunno con domande.</span></div></li>
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-quiz"></use></svg></span><div><b>Imparare la lezione</b><span>Galac6 lo interroga sulla vostra lezione e gli mostra ciò che deve ancora imparare.</span></div></li>
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-check"></use></svg></span><div><b>Preparare la verifica</b><span>Un percorso fino al giorno della verifica, a partire dal vostro corso: lezione, esercizi, verifica di prova.</span></div></li>
+<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-calc"></use></svg></span><div><b>Esercitarsi, fare un esame simulato</b><span>Più di 2.000 dettati corretti, calcolo mentale e più di 400 prove ufficiali del brevet e del bac.</span></div></li>
+</ul>
+</div>
+</div>
 <!-- Le constat : temps de préparation et de correction (DEPP, document de travail 2025-E06, tableau 7, second degré, temps plein) -->
-<aside aria-labelledby="constat-k" class="e-stat">
+<aside aria-labelledby="constat-k" class="e-stat mid">
 <p class="eyebrow" id="constat-k">Il problema</p>
 <p class="e-stat-lead">Nella scuola secondaria in Francia, a settimana</p>
 <p class="e-stat-num"><span class="grad">15,5 ore</span></p>
@@ -637,35 +687,6 @@
 <p class="e-stat-txt">Ecco dove va il tempo del docente, fuori dalla classe. Ne resta troppo poco per il recupero e la differenziazione: l'alunno in difficoltà aspetta il suo turno e quello bravo si annoia.</p>
 <p class="e-stat-src">* Medie, docenti a tempo pieno in Francia. Fonte: <a href="https://www.education.gouv.fr/depp/le-temps-de-travail-des-enseignants-467782" rel="noopener" target="_blank">DEPP (Ministero dell'Istruzione francese), novembre 2025</a> (in francese).</p>
 </aside>
-</div>
-</div>
-<!-- ═══ 2. CE QUE GALAC6 CHANGE : PROFESSEURS ET ÉLÈVES (repris du 1-page écoles) ═══ -->
-<section class="section" id="promesses">
-<div class="wrap">
-<div class="sec-head center">
-<p class="eyebrow">Docenti e alunni</p>
-<h2 class="h2">Che cosa cambia Galac6 per voi e per i vostri alunni</h2>
-</div>
-<div class="duo">
-<div>
-<h3 class="duo-k">Per i docenti</h3>
-<ul class="fam-list">
-<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-book"></use></svg></span><div><b>Preparare</b><span>L'assistente di Galac6 vi aiuta a migliorare la vostra lezione, che resta vostra, e ne ricava compiti e verifiche.</span></div></li>
-<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-paper"></use></svg></span><div><b>Correggere</b><span>Compiti su carta o online: Galac6 propone il voto e spiega ogni errore, voi decidete.</span></div></li>
-<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-chart"></use></svg></span><div><b>Seguire</b><span>Ogni alunno, nozione per nozione: chi resta indietro, chi progredisce, cosa è acquisito e cosa no.</span></div></li>
-<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-target"></use></svg></span><div><b>Differenziare</b><span>Compiti su misura per ogni alunno, per riprendere i punti deboli o rafforzare quelli forti, riletti da voi prima dell'invio.</span></div></li>
-</ul>
-</div>
-<div>
-<h3 class="duo-k">Per gli alunni</h3>
-<ul class="fam-list">
-<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-help"></use></svg></span><div><b>Farsi aiutare</b><span>Una chat socratica: Galac6 guida l'alunno con domande, senza dargli la risposta.</span></div></li>
-<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-quiz"></use></svg></span><div><b>Imparare la lezione</b><span>Galac6 interroga l'alunno e gli mostra cosa deve ancora imparare, non solo rileggere.</span></div></li>
-<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-check"></use></svg></span><div><b>Preparare la verifica</b><span>Un percorso fino al giorno della verifica, a partire dalla lezione del docente: lezione, esercizi, verifica di prova.</span></div></li>
-<li><span class="pi"><svg aria-hidden="true" class="ico"><use href="#i-calc"></use></svg></span><div><b>Esercitarsi, fare un esame simulato</b><span>Più di 2.000 dettati corretti, calcolo mentale e più di 400 prove ufficiali del brevet e del bac.</span></div></li>
-</ul>
-</div>
-</div>
 </div>
 </section>
 <!-- ═══ 2 bis. UN EXEMPLE : LA REMÉDIATION EN TROIS JOURS (repris du 1-page écoles) ═══ -->
@@ -749,7 +770,7 @@
 <h2 class="h2">Che cosa potete fare con Galac6</h2>
 </div>
 <div class="pfeat">
-<div><svg aria-hidden="true" class="ico"><use href="#i-quiz"></use></svg><strong>Quiz e compiti del docente</strong><span>Pronti in pochi minuti a partire dalle vostre indicazioni o dalla vostra scheda incollata. Voi rileggete e convalidate ogni domanda.</span></div>
+<div><svg aria-hidden="true" class="ico"><use href="#i-quiz"></use></svg><strong>Quiz e compiti del docente</strong><span>Pronti in pochi minuti a partire dal vostro corso, dalle vostre indicazioni o dalla vostra scheda incollata. Voi rileggete e convalidate ogni domanda.</span></div>
 <div><svg aria-hidden="true" class="ico"><use href="#i-paper"></use></svg><strong>Dettati, anche su carta</strong><span>Oltre 2.000 dettati letti e corretti da Galac6, tra cui brani di grandi autori, online o su compiti cartacei fotografati. E dettati su misura, costruiti sugli errori di ogni alunno.</span></div>
 <div><svg aria-hidden="true" class="ico"><use href="#i-check"></use></svg><strong>Correzioni dell'IA da convalidare</strong><span>Compiti consegnati online corretti all'istante, compiti su carta scansionati: Galac6 propone la correzione e il voto, l'ultima parola resta a voi.</span></div>
 <div><svg aria-hidden="true" class="ico"><use href="#i-calc"></use></svg><strong>Calcolo mentale guidato dal docente</strong><span>Con MuscuMath, voi scegliete la serie della classe, o una serie su misura per ogni alunno.</span></div>
@@ -1020,7 +1041,7 @@
     'use strict';
     var TXT = {
       fr: {
-        title: "Professeurs et écoles : gagnez du temps, suivez chaque élève | Galac6",
+        title: "Professeurs et écoles : votre cours au centre | Galac6",
         devis: 'Demander un devis', pilote: 'Devenir école pilote', demo: 'Demander une démonstration',
         quickErr: 'Indiquez une adresse email complète et le nom de votre établissement.',
         sending: 'Envoi en cours…',
@@ -1028,7 +1049,7 @@
         fail: 'L\'envoi n\'a pas abouti. Réessayez dans un instant, ou écrivez-nous à <a href="mailto:hello@galac6.io">hello@galac6.io</a>.'
       },
       en: {
-        title: "Teachers and schools: save time, know every pupil | Galac6",
+        title: "Teachers and schools: your lessons at the centre | Galac6",
         devis: 'Request a quote', pilote: 'Become a pilot school', demo: 'Request a demo',
         quickErr: 'Enter a full email address and the name of your school.',
         sending: 'Sending…',
