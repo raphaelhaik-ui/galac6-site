@@ -36,8 +36,8 @@
   "lastmod": "2026-11-09"
  },
  "blog/corriger-dictees-professeurs.html": {
-  "hash": "920db792016803f5",
-  "lastmod": "2026-11-12"
+  "hash": "37bb9110d778a5d8",
+  "lastmod": "2026-11-17"
  },
  "blog/dictee-cm2-progresser-orthographe.html": {
   "hash": "20a31d47b9e80388",
@@ -68,12 +68,12 @@
   "lastmod": "2026-11-12"
  },
  "blog/galac6-professeur-francais.html": {
-  "hash": "b07e5042e2062bc3",
-  "lastmod": "2026-11-12"
+  "hash": "98cf31fffaf13e3a",
+  "lastmod": "2026-11-17"
  },
  "blog/galac6-professeur-maths.html": {
-  "hash": "f185ab6f78a18128",
-  "lastmod": "2026-11-12"
+  "hash": "fadd54806d370f9d",
+  "lastmod": "2026-11-17"
  },
  "blog/ia-devoirs-enfant-sans-reponses.html": {
   "hash": "3be3c683fbbc285e",
@@ -84,8 +84,8 @@
   "lastmod": "2026-11-12"
  },
  "blog/ia-lycees-francais-etranger.html": {
-  "hash": "475a462985638314",
-  "lastmod": "2026-11-12"
+  "hash": "23022910390876d0",
+  "lastmod": "2026-11-17"
  },
  "blog/ia-programme-education-nationale.html": {
   "hash": "6e52b836e4e01b4c",
@@ -144,7 +144,7 @@
   "lastmod": "2026-11-17"
  },
  "de/ecole.html": {
-  "hash": "892a15a7f3860805",
+  "hash": "167d66404618007d",
   "lastmod": "2026-11-17"
  },
  "de/familles.html": {
@@ -176,11 +176,11 @@
   "lastmod": "2026-11-09"
  },
  "donnees-eleves.html": {
-  "hash": "78406a3045193f20",
-  "lastmod": "2026-11-09"
+  "hash": "207df5b27b421068",
+  "lastmod": "2026-11-17"
  },
  "ecole.html": {
-  "hash": "0a6975862dffb1cf",
+  "hash": "218cf9fe9ca20fa4",
   "lastmod": "2026-11-17"
  },
  "ecoles-francaises-etranger.html": {
@@ -232,7 +232,7 @@
   "lastmod": "2026-11-09"
  },
  "en/ecole.html": {
-  "hash": "a82c15fd9bca4bf9",
+  "hash": "aa5ff8bf70b5d937",
   "lastmod": "2026-11-17"
  },
  "en/familles.html": {
@@ -264,8 +264,8 @@
   "lastmod": "2026-11-09"
  },
  "en/student-data.html": {
-  "hash": "3e6cf9aeb12ecccb",
-  "lastmod": "2026-11-09"
+  "hash": "7f723b4463d1e74e",
+  "lastmod": "2026-11-17"
  },
  "en/tarifs.html": {
   "hash": "ec7440c793dea27f",
@@ -280,7 +280,7 @@
   "lastmod": "2026-11-17"
  },
  "es/ecole.html": {
-  "hash": "ab566d4e509b7383",
+  "hash": "902987d854455feb",
   "lastmod": "2026-11-17"
  },
  "es/familles.html": {
@@ -324,8 +324,8 @@
   "lastmod": "2026-11-03"
  },
  "guide-prof.html": {
-  "hash": "26c736cb00295103",
-  "lastmod": "2026-11-09"
+  "hash": "016b9b8023971c60",
+  "lastmod": "2026-11-17"
  },
  "index.html": {
   "hash": "e5933c77aa90a853",
@@ -340,7 +340,7 @@
   "lastmod": "2026-11-17"
  },
  "it/ecole.html": {
-  "hash": "1dece01ae6227222",
+  "hash": "7965785f5945da3a",
   "lastmod": "2026-11-17"
  },
  "it/familles.html": {
@@ -380,7 +380,7 @@
   "lastmod": "2026-11-17"
  },
  "nl/ecole.html": {
-  "hash": "3c0d9d63b55391bf",
+  "hash": "a396361465096dc5",
   "lastmod": "2026-11-17"
  },
  "nl/familles.html": {
@@ -420,8 +420,8 @@
   "lastmod": "2026-11-08"
  },
  "profs-testeurs.html": {
-  "hash": "ae65fec4ebd2751b",
-  "lastmod": "2026-11-03"
+  "hash": "743a4b3e349a732a",
+  "lastmod": "2026-11-17"
  },
  "pt/about.html": {
   "hash": "1a94ff92ffe7e14f",
@@ -432,7 +432,7 @@
   "lastmod": "2026-11-09"
  },
  "pt/ecole.html": {
-  "hash": "290dae181cce615a",
+  "hash": "d266379e2dc9b331",
   "lastmod": "2026-11-17"
  },
  "pt/familles.html": {

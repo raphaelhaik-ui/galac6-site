@@ -960,7 +960,7 @@
       'sch.res.eyebrow': "Going further",
       'sch.res.title': "Resources for teachers and schools",
       'sch.res.guide.t': "Teacher guide",
-      'sch.res.guide.d': "Your first Galac6 quiz in ten minutes.",
+      'sch.res.guide.d': "Share your course, prepare, mark, remediate.",
       'sch.res.abroad.t': "French schools abroad",
       'sch.res.abroad.d': "Our page dedicated to French schools outside France.",
       'sch.res.uk.t': "French schools in the United Kingdom",
