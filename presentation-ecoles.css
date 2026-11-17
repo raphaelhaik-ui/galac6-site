@@ -93,6 +93,8 @@ a:focus-visible { outline: 3px solid var(--violet); outline-offset: 2px; border-
 .s-core .core .k { color: #d9d2ff; }
 .s-core .core h2, .s-core .core p { color: #ffffff; }
 .s-core .go { width: 18px; height: 18px; stroke: var(--violet); fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+/* Mots soulignés (demande de Raphaël, 17/11/2026) : remédiation et différenciation */
+.sl { font-weight: 750; text-decoration: underline; text-decoration-color: var(--violet); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 .s-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; padding-top: 12px; border-top: 1px solid var(--line); }
 .s-col ul { padding: 0; list-style: none; display: grid; gap: 9px; margin-top: 6px; }
 .s-col li { display: grid; grid-template-columns: 26px 1fr; gap: 9px; align-items: start; }
