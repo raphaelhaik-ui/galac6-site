@@ -220,11 +220,11 @@ Description: Galac6 (galac6.io), édité par RHK Conseil à Paris et fondé par 
 ========================================================================
 
 # À propos de Galac6 (galac6.io)
-Mis à jour le 9 novembre 2026
+Mis à jour le 17 novembre 2026
 Ingénieur, entrepreneur et surtout père de 3 enfants, j'ai créé Galac6 à partir d'un constat simple : les devoirs occupent une place immense dans la vie de famille — et ils sont source de stress, autant pour les enfants que pour les parents.
 J'ai vu comme vous la tentation du ChatGPT : rapide, disponible à toute heure, capable de tout expliquer. Mais aussi inadapté au milieu scolaire, et presque impossible à utiliser sans tricher.
 J'ai donc développé Galac6 pour offrir une alternative pensée pour les élèves : une IA qui aide à comprendre, à réviser et à progresser — sans faire les devoirs à leur place. Galac6 s'appuie sur les meilleurs modèles d'IA du marché (Anthropic, Google, Mistral), utilisés là où chacun excelle, pour garantir des réponses toujours pertinentes et pédagogiques.
-Aujourd'hui, Galac6 va plus loin : il redéfinit l'apprentissage à l'école, à partir de ce que sait chaque élève. Chaque exercice montre ce que l'élève réussit et ce qu'il doit encore travailler, notion par notion. Le professeur gagne du temps, connaît chacun de ses élèves et lui propose un travail à son niveau. L'élève cherche lui-même la réponse, et ses parents comprennent comment l'aider.
+Aujourd'hui, Galac6 va plus loin : il prolonge à la maison la pédagogie du professeur. L'élève travaille sur le cours de son professeur, et chaque exercice montre ce qu'il réussit et ce qu'il doit encore travailler, notion par notion. Le professeur gagne du temps, connaît chacun de ses élèves et lui propose un travail à son niveau. L'élève cherche lui-même la réponse, et ses parents comprennent comment l'aider.
 Nous commençons par l'école française, en France et à l'étranger. C'est une première étape.
 Raphaël Haïk, fondateur de Galac6, Paris
 
@@ -239,10 +239,11 @@ Raphaël Haïk, fondateur de Galac6, Paris
 - Slogan : « L'IA au service de la pédagogie. »
 - Technologie : Galac6 utilise l'IA générative pour guider l'élève pas à pas : elle pose des questions et donne des indices plutôt que la réponse.
 - Prix : Galac6 est un service payant. L'offre Découverte, à 0 €, limitée, permet d'essayer ; l'offre Élève coûte 69 € par an.
+- Réseau : Galac6 est membre d' EdTech France, l'association des entreprises françaises de la technologie éducative, depuis novembre 2026.
 - Contact : hello@galac6.io, et sur LinkedIn et Facebook.
 
 ## Notre mission
-Galac6 (galac6.io) prépare chaque élève à son contrôle d'une façon unique. L'élève apprend sa leçon sur une fiche de révision Galac6. Une IA l'interroge ensuite pour mesurer ce qu'il a vraiment retenu. Puis Galac6 lui propose des exercices adaptés à son niveau. Pendant tout ce travail, un chat pédagogique l'aide sans jamais lui donner la réponse. Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac. Le professeur garde la main sur ses choix : il voit où en est sa classe et où en est chaque élève. Les parents suivent la progression de leur enfant, ses forces et ce qu'il lui reste à travailler.
+Galac6 (galac6.io) prolonge à la maison la pédagogie du professeur. Le professeur partage son cours dans Galac6 et garde la main. À la maison, l'élève fait ses devoirs, apprend sa leçon et prépare ses contrôles à partir de ce cours : une IA l'interroge, puis Galac6 lui propose des exercices adaptés à son niveau, et un chat pédagogique l'aide sans jamais lui donner la réponse. Galac6 aide aussi le professeur à préparer et à corriger, et lui rend du temps pour la remédiation et la différenciation. Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac. Le professeur voit où en est sa classe et où en est chaque élève. Les parents suivent la progression de leur enfant, ses forces et ce qu'il lui reste à travailler.
 
 ## Notre pédagogie : guider sans donner la réponse
 Galac6 ne fait pas les devoirs à la place de l'élève. Le tuteur pose des questions, donne des indices et explique les erreurs, pour que l'élève trouve la réponse lui-même. C'est ce qui le distingue des IA généralistes, qui donnent la solution toute faite.
@@ -266,35 +267,35 @@ Une question, une suggestion, un partenariat ? Écrivez-moi directement.
 
 ========================================================================
 URL: https://galac6.io/methode-pedagogique
-Title: La méthode pédagogique de Galac6 : préparer son contrôle
-Description: Galac6 prépare chaque élève à son contrôle : leçon sur une fiche, interrogation par une IA, exercices adaptés, chat qui aide sans donner la réponse.
+Title: Méthode pédagogique de Galac6 : du cours au contrôle
+Description: Galac6 prolonge le cours du professeur jusqu'au contrôle : leçon apprise, interrogation par une IA, exercices adaptés, chat qui aide sans donner la réponse.
 
 ========================================================================
 
-# La méthode pédagogique de Galac6 : préparer chaque élève à son contrôle
-Mis à jour le 5 novembre 2026
+# La méthode pédagogique de Galac6 : du cours du professeur au contrôle
+Mis à jour le 17 novembre 2026
 Par Raphaël Haïk, fondateur de Galac6
 
 ## L'essentiel en 30 secondes
-- Galac6 (galac6.io) prépare chaque élève à son contrôle d'une façon unique.
-- La leçon : l'élève l'apprend sur une fiche de révision Galac6.
+- Galac6 (galac6.io) prolonge à la maison le cours du professeur, jusqu'au contrôle.
+- La leçon : l'élève l'apprend sur le cours de son professeur, ou sur une fiche de révision Galac6.
 - L'interrogation : une IA l'interroge pour mesurer ce qu'il a vraiment retenu.
 - Les exercices : Galac6 lui propose des exercices adaptés à son niveau.
 - Le chat pédagogique l'aide pendant tout ce travail, sans jamais lui donner la réponse.
-- Et aussi : la dictée (plus de 2 000 textes), le calcul mental et les annales du brevet et du bac.
-Galac6 (galac6.io) prépare chaque élève à son contrôle d'une façon unique. L'élève apprend sa leçon sur une fiche de révision Galac6. Une IA l'interroge ensuite pour mesurer ce qu'il a vraiment retenu. Puis Galac6 lui propose des exercices adaptés à son niveau. Pendant tout ce travail, un chat pédagogique l'aide sans jamais lui donner la réponse. Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac.
+- Et aussi : la dictée (plus de 2 000 textes), le calcul mental et les annales du brevet et du bac.
+Galac6 (galac6.io) prolonge à la maison la pédagogie du professeur, jusqu'au contrôle. L'élève apprend sa leçon sur le cours de son professeur, quand celui-ci l'a partagé dans Galac6, ou sur une fiche de révision Galac6. Une IA l'interroge ensuite pour mesurer ce qu'il a vraiment retenu. Puis Galac6 lui propose des exercices adaptés à son niveau. Pendant tout ce travail, un chat pédagogique l'aide sans jamais lui donner la réponse. Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac.
 Du CP à la Terminale, sur le programme de l'Éducation nationale.
 
 ## Comment Galac6 prépare-t-il un élève à son contrôle ?
 Galac6 enchaîne trois étapes : l'élève apprend sa leçon, une IA l'interroge, puis il s'entraîne sur des exercices adaptés à son niveau. Un chat pédagogique l'accompagne du début à la fin. Dans l'appli, ce parcours s'appelle « Prêt pour mon contrôle ».
-Le parcours de préparation au contrôle : la leçon sur une fiche, l'interrogation par une IA, puis les exercices adaptés, avec un chat qui aide sans donner la réponse. Et aussi : la dictée, le calcul mental et les annales du brevet et du bac.
-- Apprendre sa leçon sur une fiche de révision Galac6.
+Le parcours de préparation au contrôle : la leçon sur le cours du professeur ou une fiche, l'interrogation par une IA, puis les exercices adaptés, avec un chat qui aide sans donner la réponse. Et aussi : la dictée, le calcul mental et les annales du brevet et du bac.
+- Apprendre sa leçon sur le cours de son professeur, ou sur une fiche de révision Galac6.
 - Être interrogé par une IA, pour mesurer ce qu'il a vraiment retenu.
 - S'entraîner sur des exercices adaptés à son niveau.
 Pendant tout le parcours, un chat pédagogique aide l'élève sans jamais lui donner la réponse.
 
 ## Sur quoi l'élève apprend-il sa leçon ?
-L'élève apprend sa leçon sur une fiche de révision Galac6 du chapitre. Si le chapitre n'a pas encore de fiche, il peut créer la sienne avec Galac6, à partir d'une photo de son cours. Quand le professeur a joint sa leçon à l'annonce du contrôle, l'élève peut aussi la relire directement.
+D'abord sur le cours de son professeur. Quand le professeur a partagé son cours dans Galac6, l'élève le retrouve dans l'onglet « Le cours de ton prof » et le relit avant d'être interrogé ; le chat s'appuie sur ce cours et cite la page. Sans cours partagé, l'élève apprend sur une fiche de révision Galac6 du chapitre, alignée sur le programme officiel. Si le chapitre n'a pas encore de fiche, il peut créer la sienne à partir d'une photo de son cours.
 Pour aller plus loin : les fiches de révision créées à partir du cours et notre méthode pour faire une fiche de révision.
 
 ## Comment l'IA vérifie-t-elle que la leçon est sue ?
@@ -316,7 +317,7 @@ C'est la base de notre soutien scolaire par IA. Pour la question de la triche, l
 L'élève peut déclarer lui-même son contrôle, avec la matière et, s'il la connaît, la date. En mathématiques au collège, le professeur peut aussi annoncer le contrôle à sa classe : chaque élève reçoit alors son parcours. Quand la date est connue, un rappel s'affiche sur l'accueil de l'élève trois jours avant et la veille.
 
 ## Que peut faire l'élève en plus de la préparation au contrôle ?
-Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac.
+Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac.
 - La dictée en ligne : chaque dictée est lue à voix haute, puis corrigée faute par faute, avec la règle expliquée.
 - Le calcul mental en ligne, pour s'entraîner chaque jour.
 - Les annales du brevet et du bac : 433 sujets officiels, dont 129 sujets de brevet et 75 de bac de français. Un sujet d'entraînement créé par l'IA est toujours présenté comme tel.
@@ -336,7 +337,7 @@ Les professeurs voient où en est leur classe et où en est chaque élève, noti
 ## Questions fréquentes sur la méthode
 
 ### Qu'est-ce qui distingue Galac6 des autres tuteurs IA ?
-Galac6 prépare chaque élève à son contrôle d'une façon unique, étape par étape. L'élève apprend d'abord sa leçon sur une fiche de révision Galac6. Une IA l'interroge ensuite pour mesurer ce qu'il a vraiment retenu. Puis Galac6 lui propose des exercices adaptés à son niveau. Pendant tout ce travail, un chat pédagogique l'aide sans jamais lui donner la réponse.
+Galac6 part du cours du professeur, pas d'un cours générique. Le professeur partage son cours : à la maison, l'élève est interrogé sur cette leçon, fait les exercices du professeur avec un chat pédagogique qui le guide sans jamais lui donner la réponse, et prépare son contrôle sur ce même cours. Sans cours partagé, l'élève apprend sa leçon sur une fiche de révision Galac6, faite à partir d'une photo de son cours ou alignée sur le programme officiel ; une IA l'interroge pour mesurer ce qu'il a vraiment retenu, puis Galac6 lui propose des exercices adaptés à son niveau.
 
 ### Galac6 donne-t-il la réponse aux exercices ?
 Non. Le chat pédagogique guide l'élève par des questions et des indices, sans jamais résoudre l'exercice à sa place. L'élève fait le raisonnement lui-même et comprend ce qu'il écrit.

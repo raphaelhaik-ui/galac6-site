@@ -73,7 +73,7 @@ Galac6 (galac6.io) prépare tout le brevet : les 4 épreuves écrites et l'oral,
 ## Key pages (French)
 
 - [Accueil](https://galac6.io/): AI tutor from CP to Terminale, built on the French curriculum, that extends the teacher's pedagogy into the home and saves teachers time.
-- [La méthode pédagogique de Galac6](https://galac6.io/methode-pedagogique): how Galac6 prepares each pupil for a class test: the lesson learnt on a Galac6 revision sheet, an AI quiz to measure what the pupil has really remembered, exercises suited to their level, and a teaching chat that helps without giving the answer.
+- [La méthode pédagogique de Galac6](https://galac6.io/methode-pedagogique): from the teacher's lesson to the class test: the pupil learns the lesson from their teacher's shared lesson or on a Galac6 revision sheet, an AI quiz measures what they have really remembered, then exercises suited to their level, with a teaching chat that helps without giving the answer.
 - [Soutien scolaire par IA](https://galac6.io/soutien-scolaire-ia): homework help and revision with a tutor that guides instead of answering.
 - [Dictée en ligne](https://galac6.io/dictee-en-ligne): over 2,000 dictations read aloud and marked mistake by mistake.
 - [Annales du brevet et du bac](https://galac6.io/annales-brevet-bac): 433 official past papers (129 brevet, 75 French bac, 22 maths bac), as timed mock exams with AI marking.
@@ -146,7 +146,7 @@ Galac6 (galac6.io) prépare tout le brevet : les 4 épreuves écrites et l'oral,
 - [French curriculum for families abroad](https://galac6.io/en/french-curriculum-abroad): for families following the French curriculum abroad.
 - [French dictation online](https://galac6.io/en/french-dictation-online): dictations read aloud and marked.
 - [Brevet and bac past papers](https://galac6.io/en/brevet-bac-past-papers): official past papers with AI marking.
-- [Galac6's teaching method](https://galac6.io/en/teaching-method): how Galac6 prepares each pupil for a class test: the lesson learnt on a Galac6 revision sheet, an AI quiz, exercises suited to their level, and a teaching chat that helps without giving the answer.
+- [Galac6's teaching method](https://galac6.io/en/teaching-method): from the teacher's lesson to the class test: the lesson (the teacher's own or a Galac6 revision sheet), an AI quiz, exercises suited to the pupil's level, and a teaching chat that helps without giving the answer.
 - [AI homework tutor for the French curriculum](https://galac6.io/en/ai-tutoring): a tutor for grades 1 to 12 that guides the child without giving answers.
 - [Brevet revision with AI](https://galac6.io/en/brevet-revision): timed mock brevet exams online on 129 official papers or AI-generated practice papers, marked to the mark scheme.
 - [Mental maths online](https://galac6.io/en/mental-math-online): timed mental maths series on the class programme, grades 1 to 12, five levels, written or spoken answers, and MuscuMath for teachers.
