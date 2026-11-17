@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Galac6: KI-Tutor online für den französischen Lehrplan</title>
-<meta content="Galac6 bereitet jeden Schüler auf seine Klassenarbeit vor: Lektion mit Lernblatt, Abfrage durch eine KI, dann Übungen auf seinem Niveau. Klasse 1 bis 12." name="description"/>
+<meta content="Galac6 setzt den Unterricht der Lehrkraft zu Hause fort: Der Schüler lernt, wird von einer KI abgefragt und übt bis zur Klassenarbeit. Klasse 1 bis 12." name="description"/>
 <meta content="index, follow, max-image-preview:large" name="robots"/>
 <link href="https://galac6.io/de/" rel="canonical"/>
 <!-- hreflang (généré par scripts/build-langs.py) -->
@@ -126,8 +126,8 @@
       "publisher": {
         "@id": "https://galac6.io/#organization"
       },
-      "description": "Galac6 bereitet jeden Schüler auf seine Klassenarbeit vor: Lektion mit Lernblatt, Abfrage durch eine KI, dann Übungen auf seinem Niveau. Klasse 1 bis 12.",
-      "dateModified": "2026-11-08",
+      "description": "Galac6 setzt den Unterricht der Lehrkraft zu Hause fort: Der Schüler lernt, wird von einer KI abgefragt und übt bis zur Klassenarbeit. Klasse 1 bis 12.",
+      "dateModified": "2026-11-17",
       "mainEntity": [
         {
           "@type": "Question",
@@ -270,7 +270,7 @@
 <meta content="Galac6" property="og:site_name"/>
 <meta content="de_DE" property="og:locale"/>
 <meta content="Galac6. KI im Dienst der Pädagogik." property="og:title"/>
-<meta content="Galac6 bereitet jeden Schüler auf seine Klassenarbeit vor: Lektion mit Lernblatt, Abfrage durch eine KI, dann Übungen auf seinem Niveau. Klasse 1 bis 12." property="og:description"/>
+<meta content="Galac6 setzt den Unterricht der Lehrkraft zu Hause fort: Der Schüler lernt, wird von einer KI abgefragt und übt bis zur Klassenarbeit. Klasse 1 bis 12." property="og:description"/>
 <meta content="https://galac6.io/de/" property="og:url"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" property="og:image"/>
 <meta content="1200" property="og:image:width"/>
@@ -278,7 +278,7 @@
 <meta content="Galac6, KI im Dienst der Pädagogik." property="og:image:alt"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Galac6. KI im Dienst der Pädagogik." name="twitter:title"/>
-<meta content="Galac6 bereitet jeden Schüler auf seine Klassenarbeit vor: Lektion mit Lernblatt, Abfrage durch eine KI, dann Übungen auf seinem Niveau. Klasse 1 bis 12." name="twitter:description"/>
+<meta content="Galac6 setzt den Unterricht der Lehrkraft zu Hause fort: Der Schüler lernt, wird von einer KI abgefragt und übt bis zur Klassenarbeit. Klasse 1 bis 12." name="twitter:description"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" name="twitter:image"/>
 <meta content="Galac6, KI im Dienst der Pädagogik." name="twitter:image:alt"/>
 <link href="/icons/32x32.png" rel="icon" type="image/png"/>
@@ -423,6 +423,17 @@
     .loop-list li span { color: var(--text-muted); font-size: 0.86rem; }
 
     /* ─── Trois publics ─── */
+    /* Le principe (17/11/2026) : trois cartes, la pédagogie du professeur au centre */
+    .core3 { display: grid; grid-template-columns: minmax(0, 1.1fr) 28px minmax(0, 1fr) 28px minmax(0, 1fr); gap: 10px; align-items: stretch; margin-top: 1.75rem; }
+    .core3 .c { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .core3 .c.main { background: linear-gradient(135deg, #4f46e5, #7c3aed); border-color: transparent; }
+    .core3 .k { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--primary-light); }
+    .core3 .c.main .k { color: #e9e4ff; }
+    .core3 h3 { font-size: 1.15rem; letter-spacing: -0.01em; line-height: 1.3; }
+    .core3 p { color: var(--text-muted); font-size: 0.95rem; }
+    .core3 .c.main h3, .core3 .c.main p { color: #ffffff; }
+    .core3 .go { align-self: center; justify-self: center; width: 22px; height: 22px; color: var(--primary-light); }
+    .core3 .sl { color: var(--text); font-weight: 700; text-decoration: underline; text-decoration-color: var(--primary); text-decoration-thickness: 2px; text-underline-offset: 3px; }
     .trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 1.75rem; }
     .who { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
     .who .badge { display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; font-weight: 700; color: var(--primary-light); }
@@ -551,6 +562,8 @@
       .navbar-links.open { display: flex; }
       .feat { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .trio, .datas, .loop { grid-template-columns: 1fr; }
+      .core3 { grid-template-columns: 1fr; }
+      .core3 .go { transform: rotate(90deg); }
       .footer-cols { flex-direction: column; gap: 2rem; }
     }
     @media (max-width: 720px) { .trust { grid-template-columns: 1fr; } }
@@ -724,13 +737,14 @@
 <main>
 <!-- ═══ a. HERO ═══ -->
 <div class="hero">
-<h1 class="hero-h1">Galac6, der KI-Tutor von der 1. bis zur 12. Klasse</h1>
+<h1 class="hero-h1">Galac6, der KI-Tutor, der den Unterricht der Lehrkraft zu Hause fortsetzt, von der 1. bis zur 12. Klasse</h1>
 <p class="hero-slogan">KI im Dienst der <span class="grad">Pädagogik.</span></p>
-<p class="hero-answer"><strong>Galac6 (galac6.io)</strong> bereitet jeden Schüler auf einzigartige Weise auf seine Klassenarbeit vor. Der Schüler lernt seine Lektion mit einem Galac6-Lernblatt. Danach fragt ihn eine KI ab, um zu messen, was er wirklich behalten hat. Dann schlägt Galac6 ihm Übungen auf seinem Niveau vor. Während der ganzen Arbeit hilft ihm ein pädagogischer Chat, ohne ihm jemals die Antwort zu geben. Jeder Schüler kann außerdem Diktate üben, mit über 2.000 Texten, Kopfrechnen trainieren und frühere Prüfungen des Brevet und des Bac bearbeiten.</p>
-<p class="subtitle vision"><strong>Galac6 definiert das Lernen in der Schule neu, ausgehend von dem, was jeder Schüler weiß.</strong> Was er kann und was ihm noch nicht gelingt, Thema für Thema: Galac6 lernt ihn kennen und schlägt ihm einen Weg vor, der zu seinem Niveau passt.</p>
+<!-- Nouvel angle (17/11/2026) : la pédagogie du professeur au centre, l'IA la prolonge à la maison -->
+<p class="subtitle vision"><strong>Im Mittelpunkt: die Pädagogik der Lehrkraft.</strong> Ihr Unterricht, ihre Methode, ihre Übungen: Galac6 setzt sie zu Hause fort, wenn der Schüler seine Hausaufgaben macht, seine Lektionen lernt und sich auf Klassenarbeiten und Prüfungen vorbereitet. Und die Lehrkraft gewinnt Zeit.</p>
+<p class="hero-answer"><strong>Galac6 (galac6.io)</strong> setzt den Unterricht der Lehrkraft zu Hause fort. Der Schüler findet dort den Kurs, den seine Lehrkraft geteilt hat: Er stellt seine Fragen, wird zur Lektion abgefragt, um zu messen, was er wirklich behalten hat, macht Übungen auf seinem Niveau und bereitet sich auf seine Klassenarbeit vor. Während der ganzen Arbeit hilft ihm ein pädagogischer Chat, ohne ihm jemals die Antwort zu geben. Hat die Lehrkraft keinen Kurs geteilt, stützt sich Galac6 auf seine eigenen Lernblätter, die am offiziellen Lehrplan ausgerichtet sind. Jeder Schüler kann außerdem Diktate üben, mit über 2.000 Texten, Kopfrechnen trainieren und frühere Prüfungen des Brevet und des Bac bearbeiten.</p>
 <div class="doors">
 <a class="door-btn pri" href="/de/familles"><svg aria-hidden="true" class="ico"><use href="#i-family"></use></svg><span><strong>Ich bin Elternteil oder Schüler</strong><small>Von der 1. bis zur 12. Klasse</small></span><svg aria-hidden="true" class="ico go"><use href="#i-arrow"></use></svg></a>
-<a class="door-btn" href="/de/ecole"><svg aria-hidden="true" class="ico"><use href="#i-school"></use></svg><span><strong>Ich bin Lehrkraft oder eine Schule</strong><small>Zeitgewinn, Klassenübersicht, maßgeschneiderte Hausaufgaben</small></span><svg aria-hidden="true" class="ico go"><use href="#i-arrow"></use></svg></a>
+<a class="door-btn" href="/de/ecole"><svg aria-hidden="true" class="ico"><use href="#i-school"></use></svg><span><strong>Ich bin Lehrkraft oder eine Schule</strong><small>Ihr Unterricht zu Hause fortgesetzt, Zeit gewonnen</small></span><svg aria-hidden="true" class="ico go"><use href="#i-arrow"></use></svg></a>
 </div>
 <div class="hero-actions">
 <a class="btn btn-secondary" href="https://galac6web.netlify.app/">Registrieren oder anmelden</a>
@@ -738,8 +752,33 @@
 <a class="link" href="/de/tarifs">Preise ansehen →</a>
 </div>
 <p class="made-fr"><svg aria-hidden="true" class="ico"><use href="#i-pin"></use></svg><span>Entwickelt in Frankreich, Daten in Frankreich gehostet, KI in Europa verarbeitet.</span></p>
-<p class="updated"><time datetime="2026-11-08">Aktualisiert am 8. November 2026</time></p>
+<p class="updated"><time datetime="2026-11-17">Aktualisiert am 17. November 2026</time></p>
 </div>
+<hr class="divider"/>
+<!-- ═══ a bis. LE PRINCIPE (17/11/2026) : la pédagogie du professeur au centre ═══ -->
+<section id="principe">
+<div class="h-tag">Das Prinzip</div>
+<h2 class="h-title">Die Pädagogik der Lehrkraft, bis nach Hause fortgesetzt.</h2>
+<div class="core3">
+<div class="c main">
+<span class="k">Im Mittelpunkt</span>
+<h3>Die Pädagogik der Lehrkraft</h3>
+<p>Ihr Unterricht, ihre Methode, ihre Übungen. Die Lehrkraft teilt ihren Kurs in Galac6 und behält die Kontrolle über alles, was die KI vorschlägt.</p>
+</div>
+<svg aria-hidden="true" class="ico go"><use href="#i-arrow"></use></svg>
+<div class="c">
+<span class="k">Zu Hause</span>
+<h3>Die KI setzt sie fort</h3>
+<p>Der Schüler macht seine Hausaufgaben, lernt seine Lektionen und bereitet sich ausgehend vom Kurs seiner Lehrkraft auf Klassenarbeiten vor, später auch auf Prüfungen. Galac6 hilft ihm und erklärt ihm den Kurs, ohne ihm jemals die Arbeit abzunehmen.</p>
+</div>
+<svg aria-hidden="true" class="ico go"><use href="#i-arrow"></use></svg>
+<div class="c">
+<span class="k">Für die Lehrkraft</span>
+<h3>Zeit gewonnen</h3>
+<p>Erstellungsassistenten helfen ihr, Kurse und Übungen zu verbessern, und Galac6 schlägt die Korrektur der Arbeiten vor. Zeit, die für <strong class="sl">Förderung</strong> und <strong class="sl">Differenzierung</strong> frei wird.</p>
+</div>
+</div>
+</section>
 <hr class="divider"/>
 <!-- ═══ b. LE CONSTAT ═══ -->
 <section id="constat">
@@ -790,7 +829,7 @@
 <circle class="loop-center" cx="320" cy="300" r="78"></circle>
 <text class="loop-ctext" text-anchor="middle" x="320" y="296">Galac6</text>
 <text class="loop-csub" text-anchor="middle" x="320" y="316">ein fortlaufender Kreislauf</text>
-<g class="loop-node hi" transform="translate(220 56)"><rect height="70" rx="12" width="200"></rect><text class="num" x="16" y="22">1</text><text x="16" y="42">Der Schüler arbeitet</text><text class="sub" x="16" y="59">Übungen, Diktate, Quiz</text></g>
+<g class="loop-node hi" transform="translate(220 56)"><rect height="70" rx="12" width="200"></rect><text class="num" x="16" y="22">1</text><text x="16" y="42">Der Schüler arbeitet</text><text class="sub" x="16" y="59">mit dem Kurs der Lehrkraft</text></g>
 <g class="loop-node" transform="translate(402 160)"><rect height="70" rx="12" width="200"></rect><text class="num" x="16" y="22">2</text><text x="16" y="42">Jede Antwort</text><text class="sub" x="16" y="59">wird analysiert, Fehler inklusive</text></g>
 <g class="loop-node" transform="translate(402 370)"><rect height="70" rx="12" width="200"></rect><text class="num" x="16" y="22">3</text><text x="16" y="42">Lernstandskarte</text><text class="sub" x="16" y="59">Thema für Thema</text></g>
 <g class="loop-node hi" transform="translate(220 474)"><rect height="70" rx="12" width="200"></rect><text class="num" x="16" y="22">4</text><text x="16" y="42">Übungen nach Maß</text><text class="sub" x="16" y="59">bis es sitzt</text></g>
@@ -799,7 +838,7 @@
 </svg>
 </div>
 <ol class="loop-list">
-<li><div><strong>Der Schüler arbeitet</strong><span>Er macht seine Übungen, Diktate und Quiz und lernt seinen Stoff.</span></div></li>
+<li><div><strong>Der Schüler arbeitet</strong><span>Mit dem Kurs seiner Lehrkraft: Er lernt seine Lektionen, macht seine Übungen, Diktate und Quiz.</span></div></li>
 <li><div><strong>Jede Antwort wird analysiert</strong><span>Galac6 schaut auf den Lösungsweg, nicht nur auf das Ergebnis.</span></div></li>
 <li><div><strong>Eine Lernstandskarte entsteht</strong><span>Thema für Thema: sitzt, in Arbeit, wiederholen.</span></div></li>
 <li><div><strong>Galac6 schlägt Übungen nach Maß vor</strong><span>Was noch nicht sitzt, wird so lange geübt, bis es sitzt.</span></div></li>
@@ -817,14 +856,14 @@
 <div class="trio">
 <div class="who">
 <div class="badge"><span><svg aria-hidden="true" class="ico"><use href="#i-teacher"></use></svg></span><span>Lehrkraft</span></div>
-<h3>Ein neuer Fokus auf Ihre Schüler</h3>
-<p>Galac6 schlägt Ihnen die Hausaufgaben vor und korrigiert sie, handschriftliche Arbeiten inklusive: Sie geben sie frei. Sie sehen die Stärken und Lücken der Klasse und jedes Schülers, wer Fortschritte macht und wer abrutscht. Sie schicken jedem Aufgaben auf seinem Niveau. Weniger Korrigieren, mehr Pädagogik: Die Entscheidungen bleiben bei Ihnen.</p>
+<h3>Ihr Unterricht, zu Hause fortgesetzt</h3>
+<p>Sie teilen Ihren Kurs mit Ihren Schülern: Zu Hause hilft Galac6 ihnen und erklärt ihnen Ihren Kurs. Erstellungsassistenten helfen Ihnen, Kurse und Übungen zu verbessern. Galac6 schlägt Ihnen die Hausaufgaben vor und korrigiert sie, handschriftliche Arbeiten inklusive: Sie geben sie frei. Sie sehen, wer Fortschritte macht und wer abrutscht, und schicken jedem Aufgaben auf seinem Niveau.</p>
 <a href="/de/ecole">Für Lehrkräfte ansehen →</a>
 </div>
 <div class="who">
 <div class="badge"><span><svg aria-hidden="true" class="ico"><use href="#i-student"></use></svg></span><span>Schüler</span></div>
 <h3>Du findest die Antwort selbst</h3>
-<p>Du machst auf Galac6 die Hausaufgaben, die dir deine Lehrkraft gibt, mit einer KI, die dir nicht die Antwort verrät: Sie stellt dir Fragen, damit du sie selbst findest. Von der Lektion bis zur Klassenarbeit begleitet sie dich: ein Plan vor jeder Klassenarbeit, Probeprüfungen für Brevet und Bac, Diktate, Kopfrechnen und Spiele, um jeden Tag besser zu werden.</p>
+<p>Auf Galac6 findest du den Kurs deiner Lehrkraft und die Hausaufgaben, die sie dir gibt, mit einer KI, die dir nicht die Antwort verrät: Sie stellt dir Fragen, damit du sie selbst findest. Von der Lektion bis zur Klassenarbeit begleitet sie dich: ein Plan vor jeder Klassenarbeit, Probeprüfungen für Brevet und Bac, Diktate, Kopfrechnen und Spiele, um jeden Tag besser zu werden.</p>
 <a href="/de/familles">Für Familien ansehen →</a>
 </div>
 <div class="who">

@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Galac6: tutor de IA online do currículo escolar francês</title>
-<meta content="O Galac6 prepara cada aluno para o seu teste: lição estudada numa ficha, perguntas de uma IA e exercícios adaptados ao seu nível. Do CP à Terminale." name="description"/>
+<meta content="O Galac6 prolonga em casa a aula do professor: o aluno estuda a lição, é interrogado por uma IA e treina até ao teste. Do CP à Terminale." name="description"/>
 <meta content="index, follow, max-image-preview:large" name="robots"/>
 <link href="https://galac6.io/pt/" rel="canonical"/>
 <!-- hreflang (généré par scripts/build-langs.py) -->
@@ -126,8 +126,8 @@
       "publisher": {
         "@id": "https://galac6.io/#organization"
       },
-      "description": "O Galac6 prepara cada aluno para o seu teste: lição estudada numa ficha, perguntas de uma IA e exercícios adaptados ao seu nível. Do CP à Terminale.",
-      "dateModified": "2026-11-08",
+      "description": "O Galac6 prolonga em casa a aula do professor: o aluno estuda a lição, é interrogado por uma IA e treina até ao teste. Do CP à Terminale.",
+      "dateModified": "2026-11-17",
       "mainEntity": [
         {
           "@type": "Question",
@@ -270,7 +270,7 @@
 <meta content="Galac6" property="og:site_name"/>
 <meta content="pt_PT" property="og:locale"/>
 <meta content="Galac6. A IA ao serviço da pedagogia." property="og:title"/>
-<meta content="O Galac6 prepara cada aluno para o seu teste: lição estudada numa ficha, perguntas de uma IA e exercícios adaptados ao seu nível. Do CP à Terminale." property="og:description"/>
+<meta content="O Galac6 prolonga em casa a aula do professor: o aluno estuda a lição, é interrogado por uma IA e treina até ao teste. Do CP à Terminale." property="og:description"/>
 <meta content="https://galac6.io/pt/" property="og:url"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" property="og:image"/>
 <meta content="1200" property="og:image:width"/>
@@ -278,7 +278,7 @@
 <meta content="Galac6, a IA ao serviço da pedagogia." property="og:image:alt"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Galac6. A IA ao serviço da pedagogia." name="twitter:title"/>
-<meta content="O Galac6 prepara cada aluno para o seu teste: lição estudada numa ficha, perguntas de uma IA e exercícios adaptados ao seu nível. Do CP à Terminale." name="twitter:description"/>
+<meta content="O Galac6 prolonga em casa a aula do professor: o aluno estuda a lição, é interrogado por uma IA e treina até ao teste. Do CP à Terminale." name="twitter:description"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" name="twitter:image"/>
 <meta content="Galac6, a IA ao serviço da pedagogia." name="twitter:image:alt"/>
 <link href="/icons/32x32.png" rel="icon" type="image/png"/>
@@ -423,6 +423,17 @@
     .loop-list li span { color: var(--text-muted); font-size: 0.86rem; }
 
     /* ─── Trois publics ─── */
+    /* Le principe (17/11/2026) : trois cartes, la pédagogie du professeur au centre */
+    .core3 { display: grid; grid-template-columns: minmax(0, 1.1fr) 28px minmax(0, 1fr) 28px minmax(0, 1fr); gap: 10px; align-items: stretch; margin-top: 1.75rem; }
+    .core3 .c { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .core3 .c.main { background: linear-gradient(135deg, #4f46e5, #7c3aed); border-color: transparent; }
+    .core3 .k { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--primary-light); }
+    .core3 .c.main .k { color: #e9e4ff; }
+    .core3 h3 { font-size: 1.15rem; letter-spacing: -0.01em; line-height: 1.3; }
+    .core3 p { color: var(--text-muted); font-size: 0.95rem; }
+    .core3 .c.main h3, .core3 .c.main p { color: #ffffff; }
+    .core3 .go { align-self: center; justify-self: center; width: 22px; height: 22px; color: var(--primary-light); }
+    .core3 .sl { color: var(--text); font-weight: 700; text-decoration: underline; text-decoration-color: var(--primary); text-decoration-thickness: 2px; text-underline-offset: 3px; }
     .trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 1.75rem; }
     .who { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
     .who .badge { display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; font-weight: 700; color: var(--primary-light); }
@@ -551,6 +562,8 @@
       .navbar-links.open { display: flex; }
       .feat { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .trio, .datas, .loop { grid-template-columns: 1fr; }
+      .core3 { grid-template-columns: 1fr; }
+      .core3 .go { transform: rotate(90deg); }
       .footer-cols { flex-direction: column; gap: 2rem; }
     }
     @media (max-width: 720px) { .trust { grid-template-columns: 1fr; } }
@@ -724,13 +737,14 @@
 <main>
 <!-- ═══ a. HERO ═══ -->
 <div class="hero">
-<h1 class="hero-h1">Galac6, o tutor de IA do CP à Terminale</h1>
+<h1 class="hero-h1">Galac6, o tutor de IA que prolonga a aula do professor, do CP à Terminale</h1>
 <p class="hero-slogan">A IA ao serviço da <span class="grad">pedagogia.</span></p>
-<p class="hero-answer"><strong>O Galac6 (galac6.io)</strong> prepara cada aluno para o seu teste de uma forma única. O aluno estuda a lição numa ficha de revisão do Galac6. Depois, uma IA faz-lhe perguntas para medir o que ele realmente reteve. Em seguida, o Galac6 propõe-lhe exercícios adaptados ao seu nível. Durante todo este trabalho, um chat pedagógico ajuda-o sem nunca lhe dar a resposta. Cada aluno pode também treinar o ditado, com mais de 2 000 textos, e o cálculo mental, e fazer exames de anos anteriores do brevet e do bac.</p>
-<p class="subtitle vision"><strong>O Galac6 redefine a aprendizagem na escola, a partir do que cada aluno sabe.</strong> O que acerta e o que falha, conceito a conceito: o Galac6 conhece-o e propõe-lhe um percurso adaptado ao seu nível.</p>
+<!-- Nouvel angle (17/11/2026) : la pédagogie du professeur au centre, l'IA la prolonge à la maison -->
+<p class="subtitle vision"><strong>No centro, a pedagogia do professor.</strong> A sua aula, o seu método, os seus exercícios: o Galac6 prolonga-os em casa, quando o aluno faz os trabalhos de casa, estuda as lições e prepara os testes e os exames. E o professor ganha tempo.</p>
+<p class="hero-answer"><strong>O Galac6 (galac6.io)</strong> prolonga em casa a aula do professor. O aluno encontra no Galac6 a matéria que o seu professor partilhou: faz as suas perguntas, é interrogado sobre a lição para medir o que realmente reteve, faz exercícios adaptados ao seu nível e prepara o seu teste. Durante todo este trabalho, um chat pedagógico ajuda-o sem nunca lhe dar a resposta. Se o professor não partilhou nenhuma matéria, o Galac6 baseia-se nas suas próprias fichas de revisão, alinhadas com o programa oficial. Cada aluno pode também treinar o ditado, com mais de 2 000 textos, e o cálculo mental, e fazer exames de anos anteriores do brevet e do bac.</p>
 <div class="doors">
 <a class="door-btn pri" href="/pt/familles"><svg aria-hidden="true" class="ico"><use href="#i-family"></use></svg><span><strong>Sou pai, mãe ou aluno</strong><small>Do CP à Terminale</small></span><svg aria-hidden="true" class="ico go"><use href="#i-arrow"></use></svg></a>
-<a class="door-btn" href="/pt/ecole"><svg aria-hidden="true" class="ico"><use href="#i-school"></use></svg><span><strong>Sou professor ou uma escola</strong><small>Tempo poupado, acompanhamento da turma, trabalhos à medida</small></span><svg aria-hidden="true" class="ico go"><use href="#i-arrow"></use></svg></a>
+<a class="door-btn" href="/pt/ecole"><svg aria-hidden="true" class="ico"><use href="#i-school"></use></svg><span><strong>Sou professor ou uma escola</strong><small>A sua aula prolongada em casa, tempo poupado</small></span><svg aria-hidden="true" class="ico go"><use href="#i-arrow"></use></svg></a>
 </div>
 <div class="hero-actions">
 <a class="btn btn-secondary" href="https://galac6web.netlify.app/">Registar-se ou entrar</a>
@@ -738,8 +752,33 @@
 <a class="link" href="/pt/tarifs">Ver os preços →</a>
 </div>
 <p class="made-fr"><svg aria-hidden="true" class="ico"><use href="#i-pin"></use></svg><span>Concebido em França, dados alojados em França, IA processada na Europa.</span></p>
-<p class="updated"><time datetime="2026-11-08">Atualizado a 8 de novembro de 2026</time></p>
+<p class="updated"><time datetime="2026-11-17">Atualizado a 17 de novembro de 2026</time></p>
 </div>
+<hr class="divider"/>
+<!-- ═══ a bis. LE PRINCIPE (17/11/2026) : la pédagogie du professeur au centre ═══ -->
+<section id="principe">
+<div class="h-tag">O princípio</div>
+<h2 class="h-title">A pedagogia do professor, prolongada até casa.</h2>
+<div class="core3">
+<div class="c main">
+<span class="k">No centro</span>
+<h3>A pedagogia do professor</h3>
+<p>A sua aula, o seu método, os seus exercícios. O professor partilha a sua matéria no Galac6 e mantém o controlo sobre tudo o que a IA propõe.</p>
+</div>
+<svg aria-hidden="true" class="ico go"><use href="#i-arrow"></use></svg>
+<div class="c">
+<span class="k">Em casa</span>
+<h3>A IA prolonga-a</h3>
+<p>O aluno faz os trabalhos de casa, estuda as lições e prepara os testes a partir da matéria do seu professor, e depois os exames. O Galac6 ajuda-o e explica-lhe a matéria, sem nunca fazer por ele.</p>
+</div>
+<svg aria-hidden="true" class="ico go"><use href="#i-arrow"></use></svg>
+<div class="c">
+<span class="k">Para o professor</span>
+<h3>Tempo poupado</h3>
+<p>Assistentes de criação ajudam-no a melhorar aulas e exercícios, e o Galac6 propõe a correção das provas. Tempo devolvido para a <strong class="sl">remediação</strong> e a <strong class="sl">diferenciação</strong>.</p>
+</div>
+</div>
+</section>
 <hr class="divider"/>
 <!-- ═══ b. LE CONSTAT ═══ -->
 <section id="constat">
@@ -790,7 +829,7 @@
 <circle class="loop-center" cx="320" cy="300" r="78"></circle>
 <text class="loop-ctext" text-anchor="middle" x="320" y="296">Galac6</text>
 <text class="loop-csub" text-anchor="middle" x="320" y="316">um ciclo contínuo</text>
-<g class="loop-node hi" transform="translate(220 56)"><rect height="70" rx="12" width="200"></rect><text class="num" x="16" y="22">1</text><text x="16" y="42">O aluno trabalha</text><text class="sub" x="16" y="59">exercícios, ditados, quizzes</text></g>
+<g class="loop-node hi" transform="translate(220 56)"><rect height="70" rx="12" width="200"></rect><text class="num" x="16" y="22">1</text><text x="16" y="42">O aluno trabalha</text><text class="sub" x="16" y="59">com a matéria do professor</text></g>
 <g class="loop-node" transform="translate(402 160)"><rect height="70" rx="12" width="200"></rect><text class="num" x="16" y="22">2</text><text x="16" y="42">Cada resposta</text><text class="sub" x="16" y="59">é analisada, incluindo os erros</text></g>
 <g class="loop-node" transform="translate(402 370)"><rect height="70" rx="12" width="200"></rect><text class="num" x="16" y="22">3</text><text x="16" y="42">Mapa de domínio</text><text class="sub" x="16" y="59">conceito a conceito</text></g>
 <g class="loop-node hi" transform="translate(220 474)"><rect height="70" rx="12" width="200"></rect><text class="num" x="16" y="22">4</text><text x="16" y="42">Trabalho à medida</text><text class="sub" x="16" y="59">até estar adquirido</text></g>
@@ -799,7 +838,7 @@
 </svg>
 </div>
 <ol class="loop-list">
-<li><div><strong>O aluno trabalha</strong><span>Faz os exercícios, os ditados e os quizzes, e estuda as lições.</span></div></li>
+<li><div><strong>O aluno trabalha</strong><span>Com a matéria do seu professor: estuda as lições, faz os exercícios, os ditados e os quizzes.</span></div></li>
 <li><div><strong>Cada resposta é analisada</strong><span>O Galac6 olha para o raciocínio, não apenas para o resultado.</span></div></li>
 <li><div><strong>Constrói-se um mapa de domínio</strong><span>Conceito a conceito: adquirido, em curso, a rever.</span></div></li>
 <li><div><strong>O Galac6 propõe trabalho à medida</strong><span>Os conceitos não adquiridos são trabalhados de novo até o estarem.</span></div></li>
@@ -817,14 +856,14 @@
 <div class="trio">
 <div class="who">
 <div class="badge"><span><svg aria-hidden="true" class="ico"><use href="#i-teacher"></use></svg></span><span>Professor</span></div>
-<h3>Um novo foco nos seus alunos</h3>
-<p>O Galac6 propõe-lhe os trabalhos de casa e corrige-os, incluindo provas manuscritas: você valida. Vê os pontos fortes e as lacunas da turma e de cada aluno, quem progride e quem fica para trás. Envia a cada um um trabalho ao seu nível. Menos correção, mais pedagogia: as escolhas continuam a ser suas.</p>
+<h3>A sua aula, prolongada em casa</h3>
+<p>Partilha a sua matéria com os seus alunos: em casa, o Galac6 ajuda-os e explica-lhes a sua aula. Assistentes de criação ajudam-no a melhorar aulas e exercícios. O Galac6 propõe-lhe os trabalhos de casa e corrige-os, incluindo provas manuscritas: você valida. Vê quem progride e quem fica para trás, e envia a cada um um trabalho ao seu nível.</p>
 <a href="/pt/ecole">Ver para os professores →</a>
 </div>
 <div class="who">
 <div class="badge"><span><svg aria-hidden="true" class="ico"><use href="#i-student"></use></svg></span><span>Aluno</span></div>
 <h3>Encontras a resposta sozinho</h3>
-<p>Fazes no Galac6 os trabalhos de casa que o teu professor te dá, com uma IA que não te dá a resposta: faz-te perguntas para que a encontres sozinho. Da lição ao teste, acompanha-te: um plano antes de cada teste, simulações do brevet e do bac, ditados, cálculo mental e jogos para progredir todos os dias.</p>
+<p>No Galac6 encontras a matéria do teu professor e os trabalhos de casa que ele te dá, com uma IA que não te dá a resposta: faz-te perguntas para que a encontres sozinho. Da lição ao teste, acompanha-te: um plano antes de cada teste, simulações do brevet e do bac, ditados, cálculo mental e jogos para progredir todos os dias.</p>
 <a href="/pt/familles">Ver para as famílias →</a>
 </div>
 <div class="who">

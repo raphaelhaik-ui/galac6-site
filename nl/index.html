@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Galac6: AI-tutor online voor het Franse curriculum</title>
-<meta content="Galac6 bereidt elke leerling voor op zijn toets: de les leren met een fiche, overhoring door een AI, daarna oefeningen op zijn niveau. Van CP tot Terminale." name="description"/>
+<meta content="Galac6 zet de les van de leerkracht thuis voort: de leerling leert zijn les, wordt overhoord door een AI en oefent tot de toets. Van CP tot Terminale." name="description"/>
 <meta content="index, follow, max-image-preview:large" name="robots"/>
 <link href="https://galac6.io/nl/" rel="canonical"/>
 <!-- hreflang (généré par scripts/build-langs.py) -->
@@ -126,8 +126,8 @@
       "publisher": {
         "@id": "https://galac6.io/#organization"
       },
-      "description": "Galac6 bereidt elke leerling voor op zijn toets: de les leren met een fiche, overhoring door een AI, daarna oefeningen op zijn niveau. Van CP tot Terminale.",
-      "dateModified": "2026-11-08",
+      "description": "Galac6 zet de les van de leerkracht thuis voort: de leerling leert zijn les, wordt overhoord door een AI en oefent tot de toets. Van CP tot Terminale.",
+      "dateModified": "2026-11-17",
       "mainEntity": [
         {
           "@type": "Question",
@@ -270,7 +270,7 @@
 <meta content="Galac6" property="og:site_name"/>
 <meta content="nl_NL" property="og:locale"/>
 <meta content="Galac6. AI in dienst van de pedagogiek." property="og:title"/>
-<meta content="Galac6 bereidt elke leerling voor op zijn toets: de les leren met een fiche, overhoring door een AI, daarna oefeningen op zijn niveau. Van CP tot Terminale." property="og:description"/>
+<meta content="Galac6 zet de les van de leerkracht thuis voort: de leerling leert zijn les, wordt overhoord door een AI en oefent tot de toets. Van CP tot Terminale." property="og:description"/>
 <meta content="https://galac6.io/nl/" property="og:url"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" property="og:image"/>
 <meta content="1200" property="og:image:width"/>
@@ -278,7 +278,7 @@
 <meta content="Galac6, AI in dienst van de pedagogiek." property="og:image:alt"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Galac6. AI in dienst van de pedagogiek." name="twitter:title"/>
-<meta content="Galac6 bereidt elke leerling voor op zijn toets: de les leren met een fiche, overhoring door een AI, daarna oefeningen op zijn niveau. Van CP tot Terminale." name="twitter:description"/>
+<meta content="Galac6 zet de les van de leerkracht thuis voort: de leerling leert zijn les, wordt overhoord door een AI en oefent tot de toets. Van CP tot Terminale." name="twitter:description"/>
 <meta content="https://galac6.io/images/og-image-v2.jpg" name="twitter:image"/>
 <meta content="Galac6, AI in dienst van de pedagogiek." name="twitter:image:alt"/>
 <link href="/icons/32x32.png" rel="icon" type="image/png"/>
@@ -423,6 +423,17 @@
     .loop-list li span { color: var(--text-muted); font-size: 0.86rem; }
 
     /* ─── Trois publics ─── */
+    /* Le principe (17/11/2026) : trois cartes, la pédagogie du professeur au centre */
+    .core3 { display: grid; grid-template-columns: minmax(0, 1.1fr) 28px minmax(0, 1fr) 28px minmax(0, 1fr); gap: 10px; align-items: stretch; margin-top: 1.75rem; }
+    .core3 .c { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .core3 .c.main { background: linear-gradient(135deg, #4f46e5, #7c3aed); border-color: transparent; }
+    .core3 .k { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--primary-light); }
+    .core3 .c.main .k { color: #e9e4ff; }
+    .core3 h3 { font-size: 1.15rem; letter-spacing: -0.01em; line-height: 1.3; }
+    .core3 p { color: var(--text-muted); font-size: 0.95rem; }
+    .core3 .c.main h3, .core3 .c.main p { color: #ffffff; }
+    .core3 .go { align-self: center; justify-self: center; width: 22px; height: 22px; color: var(--primary-light); }
+    .core3 .sl { color: var(--text); font-weight: 700; text-decoration: underline; text-decoration-color: var(--primary); text-decoration-thickness: 2px; text-underline-offset: 3px; }
     .trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 1.75rem; }
     .who { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
     .who .badge { display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; font-weight: 700; color: var(--primary-light); }
@@ -551,6 +562,8 @@
       .navbar-links.open { display: flex; }
       .feat { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .trio, .datas, .loop { grid-template-columns: 1fr; }
+      .core3 { grid-template-columns: 1fr; }
+      .core3 .go { transform: rotate(90deg); }
       .footer-cols { flex-direction: column; gap: 2rem; }
     }
     @media (max-width: 720px) { .trust { grid-template-columns: 1fr; } }
@@ -724,13 +737,14 @@
 <main>
 <!-- ═══ a. HERO ═══ -->
 <div class="hero">
-<h1 class="hero-h1">Galac6, de AI-tutor van CP tot Terminale</h1>
+<h1 class="hero-h1">Galac6, de AI-tutor die de les van de leerkracht thuis voortzet, van CP tot Terminale</h1>
 <p class="hero-slogan">AI in dienst van de <span class="grad">pedagogiek.</span></p>
-<p class="hero-answer"><strong>Galac6 (galac6.io)</strong> bereidt elke leerling op een unieke manier voor op zijn toets. De leerling leert zijn les met een samenvattingsfiche van Galac6. Daarna overhoort een AI hem om te meten wat hij echt onthouden heeft. Vervolgens stelt Galac6 hem oefeningen voor die bij zijn niveau passen. Tijdens dit hele werk helpt een pedagogische chat hem, zonder hem ooit het antwoord te geven. Elke leerling kan ook dictees oefenen, met meer dan 2.000 teksten, hoofdrekenen trainen en oude examens van het brevet en het bac maken.</p>
-<p class="subtitle vision"><strong>Galac6 geeft leren op school een nieuwe vorm, vertrekkend van wat elke leerling weet.</strong> Wat hij goed doet en wat hij fout doet, begrip per begrip: Galac6 leert hem kennen en stelt hem een traject op zijn niveau voor.</p>
+<!-- Nouvel angle (17/11/2026) : la pédagogie du professeur au centre, l'IA la prolonge à la maison -->
+<p class="subtitle vision"><strong>In het middelpunt: de pedagogie van de leerkracht.</strong> Zijn les, zijn methode, zijn oefeningen: Galac6 zet ze thuis voort, wanneer de leerling zijn huiswerk maakt, zijn lessen leert en zich voorbereidt op toetsen en examens. En de leerkracht wint tijd.</p>
+<p class="hero-answer"><strong>Galac6 (galac6.io)</strong> zet de les van de leerkracht thuis voort. De leerling vindt er de cursus die zijn leerkracht heeft gedeeld: hij stelt zijn vragen, wordt overhoord over de les om te meten wat hij echt onthouden heeft, maakt oefeningen die bij zijn niveau passen en bereidt zijn toets voor. Tijdens dit hele werk helpt een pedagogische chat hem, zonder hem ooit het antwoord te geven. Heeft de leerkracht geen cursus gedeeld, dan baseert Galac6 zich op zijn eigen samenvattingsfiches, afgestemd op het officiële leerplan. Elke leerling kan ook dictees oefenen, met meer dan 2.000 teksten, hoofdrekenen trainen en oude examens van het brevet en het bac maken.</p>
 <div class="doors">
 <a class="door-btn pri" href="/nl/familles"><svg aria-hidden="true" class="ico"><use href="#i-family"></use></svg><span><strong>Ik ben ouder of leerling</strong><small>Van CP tot Terminale</small></span><svg aria-hidden="true" class="ico go"><use href="#i-arrow"></use></svg></a>
-<a class="door-btn" href="/nl/ecole"><svg aria-hidden="true" class="ico"><use href="#i-school"></use></svg><span><strong>Ik ben docent of een school</strong><small>Tijdwinst, klasopvolging, huiswerk op maat</small></span><svg aria-hidden="true" class="ico go"><use href="#i-arrow"></use></svg></a>
+<a class="door-btn" href="/nl/ecole"><svg aria-hidden="true" class="ico"><use href="#i-school"></use></svg><span><strong>Ik ben docent of een school</strong><small>Uw les thuis voortgezet, tijd gewonnen</small></span><svg aria-hidden="true" class="ico go"><use href="#i-arrow"></use></svg></a>
 </div>
 <div class="hero-actions">
 <a class="btn btn-secondary" href="https://galac6web.netlify.app/">Registreren of inloggen</a>
@@ -738,8 +752,33 @@
 <a class="link" href="/nl/tarifs">Prijzen bekijken →</a>
 </div>
 <p class="made-fr"><svg aria-hidden="true" class="ico"><use href="#i-pin"></use></svg><span>Ontworpen in Frankrijk, gegevens gehost in Frankrijk, AI verwerkt in Europa.</span></p>
-<p class="updated"><time datetime="2026-11-08">Bijgewerkt op 8 november 2026</time></p>
+<p class="updated"><time datetime="2026-11-17">Bijgewerkt op 17 november 2026</time></p>
 </div>
+<hr class="divider"/>
+<!-- ═══ a bis. LE PRINCIPE (17/11/2026) : la pédagogie du professeur au centre ═══ -->
+<section id="principe">
+<div class="h-tag">Het principe</div>
+<h2 class="h-title">De pedagogie van de leerkracht, tot thuis voortgezet.</h2>
+<div class="core3">
+<div class="c main">
+<span class="k">In het middelpunt</span>
+<h3>De pedagogie van de leerkracht</h3>
+<p>Zijn les, zijn methode, zijn oefeningen. De leerkracht deelt zijn cursus in Galac6 en houdt de controle over alles wat de AI voorstelt.</p>
+</div>
+<svg aria-hidden="true" class="ico go"><use href="#i-arrow"></use></svg>
+<div class="c">
+<span class="k">Thuis</span>
+<h3>De AI zet ze voort</h3>
+<p>De leerling maakt zijn huiswerk, leert zijn lessen en bereidt zijn toetsen voor op basis van de cursus van zijn leerkracht, en daarna zijn examens. Galac6 helpt hem en legt hem de les uit, zonder ooit het werk in zijn plaats te doen.</p>
+</div>
+<svg aria-hidden="true" class="ico go"><use href="#i-arrow"></use></svg>
+<div class="c">
+<span class="k">Voor de leerkracht</span>
+<h3>Tijd gewonnen</h3>
+<p>Creatie-assistenten helpen hem lessen en oefeningen te verbeteren, en Galac6 stelt de verbetering van het werk voor. Tijd die vrijkomt voor <strong class="sl">remediëring</strong> en <strong class="sl">differentiatie</strong>.</p>
+</div>
+</div>
+</section>
 <hr class="divider"/>
 <!-- ═══ b. LE CONSTAT ═══ -->
 <section id="constat">
@@ -790,7 +829,7 @@
 <circle class="loop-center" cx="320" cy="300" r="78"></circle>
 <text class="loop-ctext" text-anchor="middle" x="320" y="296">Galac6</text>
 <text class="loop-csub" text-anchor="middle" x="320" y="316">een doorlopende cyclus</text>
-<g class="loop-node hi" transform="translate(220 56)"><rect height="70" rx="12" width="200"></rect><text class="num" x="16" y="22">1</text><text x="16" y="42">De leerling werkt</text><text class="sub" x="16" y="59">oefeningen, dictees, quizzen</text></g>
+<g class="loop-node hi" transform="translate(220 56)"><rect height="70" rx="12" width="200"></rect><text class="num" x="16" y="22">1</text><text x="16" y="42">De leerling werkt</text><text class="sub" x="16" y="59">met de les van de leerkracht</text></g>
 <g class="loop-node" transform="translate(402 160)"><rect height="70" rx="12" width="200"></rect><text class="num" x="16" y="22">2</text><text x="16" y="42">Elk antwoord</text><text class="sub" x="16" y="59">wordt geanalyseerd, fouten inbegrepen</text></g>
 <g class="loop-node" transform="translate(402 370)"><rect height="70" rx="12" width="200"></rect><text class="num" x="16" y="22">3</text><text x="16" y="42">Beheersingskaart</text><text class="sub" x="16" y="59">begrip per begrip</text></g>
 <g class="loop-node hi" transform="translate(220 474)"><rect height="70" rx="12" width="200"></rect><text class="num" x="16" y="22">4</text><text x="16" y="42">Werk op maat</text><text class="sub" x="16" y="59">tot het verworven is</text></g>
@@ -799,7 +838,7 @@
 </svg>
 </div>
 <ol class="loop-list">
-<li><div><strong>De leerling werkt</strong><span>Hij maakt zijn oefeningen, dictees en quizzen, en leert zijn lessen.</span></div></li>
+<li><div><strong>De leerling werkt</strong><span>Met de cursus van zijn leerkracht: hij leert zijn lessen, maakt zijn oefeningen, dictees en quizzen.</span></div></li>
 <li><div><strong>Elk antwoord wordt geanalyseerd</strong><span>Galac6 kijkt naar de redenering, niet alleen naar het resultaat.</span></div></li>
 <li><div><strong>Er ontstaat een beheersingskaart</strong><span>Begrip per begrip: verworven, bezig, te herhalen.</span></div></li>
 <li><div><strong>Galac6 stelt werk op maat voor</strong><span>Begrippen die nog niet verworven zijn, worden opnieuw geoefend tot ze dat wel zijn.</span></div></li>
@@ -817,14 +856,14 @@
 <div class="trio">
 <div class="who">
 <div class="badge"><span><svg aria-hidden="true" class="ico"><use href="#i-teacher"></use></svg></span><span>Docent</span></div>
-<h3>Een nieuwe focus op uw leerlingen</h3>
-<p>Galac6 stelt u het huiswerk voor en verbetert het, handgeschreven kopieën inbegrepen: u valideert. U ziet de sterke punten en de hiaten van de klas en van elke leerling, wie vooruitgaat en wie afhaakt. U stuurt iedereen werk op zijn niveau. Minder verbeteren, meer lesgeven: de keuzes blijven bij u.</p>
+<h3>Uw les, thuis voortgezet</h3>
+<p>U deelt uw cursus met uw leerlingen: thuis helpt Galac6 hen en legt hun uw les uit. Creatie-assistenten helpen u lessen en oefeningen te verbeteren. Galac6 stelt u het huiswerk voor en verbetert het, handgeschreven kopieën inbegrepen: u valideert. U ziet wie vooruitgaat en wie afhaakt, en u stuurt iedereen werk op zijn niveau.</p>
 <a href="/nl/ecole">Bekijken voor docenten →</a>
 </div>
 <div class="who">
 <div class="badge"><span><svg aria-hidden="true" class="ico"><use href="#i-student"></use></svg></span><span>Leerling</span></div>
 <h3>Je vindt het antwoord zelf</h3>
-<p>Je maakt op Galac6 het huiswerk dat je leerkracht je geeft, met een AI die je het antwoord niet geeft: ze stelt je vragen zodat je het zelf vindt. Van de les tot de toets begeleidt ze je: een plan voor elke toets, proefexamens voor het brevet en het bac, dictees, hoofdrekenen en spelletjes om elke dag vooruit te gaan.</p>
+<p>Op Galac6 vind je de cursus van je leerkracht en het huiswerk dat die je geeft, met een AI die je het antwoord niet geeft: ze stelt je vragen zodat je het zelf vindt. Van de les tot de toets begeleidt ze je: een plan voor elke toets, proefexamens voor het brevet en het bac, dictees, hoofdrekenen en spelletjes om elke dag vooruit te gaan.</p>
 <a href="/nl/familles">Bekijken voor gezinnen →</a>
 </div>
 <div class="who">
