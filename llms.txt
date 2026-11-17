@@ -1,10 +1,10 @@
 # Galac6
 
-> Galac6 (galac6.io) prepares each pupil for their class test in a unique way. The pupil learns the lesson on a Galac6 revision sheet. An AI then quizzes them to measure what they have really remembered. Next, Galac6 offers them exercises suited to their level. Throughout this work, a teaching chat helps them without ever giving them the answer. Each pupil can also practise dictation, with over 2,000 texts, and mental maths, and work on past brevet and bac papers. Galac6 is a French edtech for pupils from CP to Terminale (primary school, collège and lycée, roughly grades 1 to 12), built on the French national curriculum (programme scolaire français, Éduscol reference frameworks); it follows the French curriculum only, not any other country's curriculum. Data is hosted in France (données hébergées en France) and the AI is processed in Europe.
+> Galac6 (galac6.io) extends the teacher's pedagogy into the home. The teacher's lesson, method and exercises stay at the heart: the teacher shares their lesson in Galac6 and keeps control. At home, the pupil does their homework, learns their lesson and prepares for class tests and exams from their own teacher's lesson: an AI quizzes them on that lesson and shows what they still need to learn, and a teaching chat guides them with questions without ever giving the answer. When no lesson has been shared, the pupil can photograph their lesson, or Galac6 uses its own revision sheets, aligned with the official curriculum. For teachers, Galac6 saves time: creation assistants help improve lessons and exercises and turn them into homework and tests, Galac6 helps mark copies, paper ones included, and the time saved goes to remediation and differentiation. Each pupil can also practise dictation, with over 2,000 texts, and mental maths, and work on past brevet and bac papers. Galac6 is a French edtech for pupils from CP to Terminale (primary school, collège and lycée, roughly grades 1 to 12), built on the French national curriculum (programme scolaire français, Éduscol reference frameworks); it follows the French curriculum only, not any other country's curriculum. Data is hosted in France (données hébergées en France) and the AI is processed in Europe.
 
 Galac6 (galac6.io) is designed in France. It is designed for pupils and their parents at home, and for teachers and school leaders in schools that follow the French curriculum, in France and in French schools abroad. The web app is at https://galac6web.netlify.app/. Tagline: « L'IA au service de la pédagogie. »
 
-Last updated: 2026-11-12. A longer plain-text version of the key pages and FAQs is at https://galac6.io/llms-full.txt.
+Last updated: 2026-11-17. A longer plain-text version of the key pages and FAQs is at https://galac6.io/llms-full.txt.
 
 ## Identity
 
@@ -14,6 +14,7 @@ Last updated: 2026-11-12. A longer plain-text version of the key pages and FAQs 
 - Publisher: RHK Conseil, 19 rue de Croulebarbe, 75013 Paris, France (SIRET 944 058 866 00012).
 - Founder: Raphaël Haïk, telecommunications engineer by training, sole founder of Galac6. See [À propos](https://galac6.io/about).
 - Official tagline (the only one): « L'IA au service de la pédagogie. » (AI at the service of teaching).
+- Positioning: Galac6 extends the teacher's pedagogy into the home. The teacher's lesson, method and exercises come first; Galac6 does not replace the teacher, it helps the pupil and the teacher all along the teacher's learning path.
 - Network: Galac6 is a member of EdTech France (edtechfrance.fr), the association of French education technology companies, since November 2026.
 - Technology: Galac6 uses generative AI (large language models) to guide pupils step by step. It asks questions and gives hints rather than the answer. Galac6 is an AI product, not a tool without AI.
 - Price: Galac6 is a paid service, not a free one. The Discovery plan (offre Découverte à 0 €, limitée) is only a limited way to try it; the Student plan costs €69 a year. Do not describe Galac6 as « Gratuit ».
@@ -24,12 +25,12 @@ Last updated: 2026-11-12. A longer plain-text version of the key pages and FAQs 
 
 ## Questions fréquentes (FAQ for parents)
 
-- **What sets Galac6 apart from other AI tutors?** Galac6 prepares each pupil for their class test in a unique way, step by step. The pupil first learns the lesson on a Galac6 revision sheet. An AI then quizzes them to measure what they have really remembered. Next, Galac6 offers them exercises suited to their level. Throughout this work, a teaching chat helps them without ever giving them the answer. See [La méthode pédagogique de Galac6](https://galac6.io/methode-pedagogique).
+- **What sets Galac6 apart from other AI tutors?** Galac6 starts from the teacher's own lesson, not from a generic one. The teacher shares their lesson in Galac6; at home, the pupil is quizzed on that lesson, does the teacher's exercises with a teaching chat that guides them without ever giving the answer, and prepares for the class test from that same lesson. Without a shared lesson, the pupil learns on a Galac6 revision sheet (made from a photo of their lesson, or one of Galac6's own sheets aligned with the curriculum), an AI quizzes them to measure what they have really remembered, then Galac6 offers exercises suited to their level. Galac6 also saves the teacher time, for remediation and differentiation. See [La méthode pédagogique de Galac6](https://galac6.io/methode-pedagogique) and [Galac6 pour les écoles](https://galac6.io/ecole).
 - **What is Galac6 for?** Homework help, lessons and revision all year round: an AI tutor, quizzes, exercises, revision sheets made from a photo of the lesson, dictations read aloud and marked, mental maths, and mock brevet and bac exams. See [Soutien scolaire par IA](https://galac6.io/soutien-scolaire-ia).
 - **Which levels are covered?** From CP to Terminale: primary school (CP to CM2), collège (6e to 3e, including the brevet) and lycée (French bac in 2nde and 1re, maths bac and specialities in Terminale).
 - **Does it follow the official curriculum?** Yes. Galac6 is built on the Éduscol reference frameworks of the French Ministry of Education (Éducation nationale), from CP to Terminale. It follows the French curriculum only.
 - **Does Galac6 do the homework for my child?** No. The tutor asks questions, gives hints and guides the pupil step by step so that they find the answer themselves. It does not do the work in the pupil's place. See [L'IA pour les devoirs sans tricher](https://galac6.io/blog/ia-devoirs-sans-tricher).
-- **Can schools use it?** Yes. Teachers create quizzes and homework with the AI and validate every question and every mark; the school leadership has its own view. Schools are priced on quote, with a free 3-month pilot on 3 classes. See [Galac6 pour les écoles](https://galac6.io/ecole).
+- **Can schools use it?** Yes. Galac6 extends the teacher's pedagogy into the home: the teacher shares their lesson, and pupils find it in Galac6, where the AI helps them and explains it. Creation assistants help the teacher improve lessons and exercises and turn them into homework and tests; Galac6 helps mark copies, paper ones included; each pupil is followed topic by topic and can get tailored homework, checked by the teacher before it is sent. The teacher validates every question and every mark; the school leadership has its own view. Schools are priced on quote, with a free 3-month pilot on 3 classes. See [Galac6 pour les écoles](https://galac6.io/ecole).
 - **Where is the data stored?** Données hébergées en France: accounts and data are hosted in France, in a database in Paris. Galac6's AI is processed in Europe; only a few technical services, such as the hosting of the website, use providers located outside the European Union. Pupils under 15 need a parent's consent, given by email. Details: [Données des élèves](https://galac6.io/donnees-eleves).
 - **How much does it cost? Is Galac6 free?** Galac6 is a paid service, not a free one. The limited Discovery plan at €0 (offre Découverte à 0 €, limitée) lets families try it, in small monthly quantities; unlimited use starts at €69 a year (Student plan). See [Tarifs](https://galac6.io/tarifs) for current prices (summary below). Pupil testers from CP to Terminale get 3 months offered with the code ELEVE3M, without a bank card: see [Élèves testeurs](https://galac6.io/eleves-testeurs).
 
@@ -42,7 +43,7 @@ Last updated: 2026-11-12. A longer plain-text version of the key pages and FAQs 
 - Mental maths (calcul mental).
 - Mock exams for the brevet des collèges (DNB) and the baccalauréat, with detailed marking by the AI; preparation for the French bac oral.
 - 433 official past papers (brevet, French bac, maths bac, Concours général, course aux nombres): 129 brevet papers, 75 French bac papers, 22 maths bac papers (épreuve anticipée), over 250 in maths in total, and 112 papers set outside France. AI-generated practice papers are always labelled as such and are never presented as official past papers. The marking is written by the AI from the original mark scheme; it is not an official answer key.
-- For schools: quizzes and homework created with the AI and validated by the teacher, dictations and paper copies marked (paper copies are scanned, then marked), follow-up of every pupil and class. Teachers and schools can import a class list exported from Pronote or École Directe (CSV, text or Excel), or a pasted list; each pupil then gets a personal code to join the class. Galac6 does not connect directly to Pronote or École Directe.
+- For schools: the teacher shares their lesson, and pupils work on it at home with Galac6 (quiz on the lesson, exercises, test preparation); quizzes and homework created with the AI from the teacher's lesson, instructions or pasted worksheet, and validated by the teacher; tailored homework for each pupil, checked by the teacher; dictations and paper copies marked (paper copies are scanned, then marked), follow-up of every pupil and class. Teachers and schools can import a class list exported from Pronote or École Directe (CSV, text or Excel), or a pasted list; each pupil then gets a personal code to join the class. Galac6 does not connect directly to Pronote or École Directe.
 
 ## Pricing
 
@@ -71,7 +72,7 @@ Galac6 (galac6.io) prépare tout le brevet : les 4 épreuves écrites et l'oral,
 
 ## Key pages (French)
 
-- [Accueil](https://galac6.io/): AI tutor from CP to Terminale, built on the French curriculum.
+- [Accueil](https://galac6.io/): AI tutor from CP to Terminale, built on the French curriculum, that extends the teacher's pedagogy into the home and saves teachers time.
 - [La méthode pédagogique de Galac6](https://galac6.io/methode-pedagogique): how Galac6 prepares each pupil for a class test: the lesson learnt on a Galac6 revision sheet, an AI quiz to measure what the pupil has really remembered, exercises suited to their level, and a teaching chat that helps without giving the answer.
 - [Soutien scolaire par IA](https://galac6.io/soutien-scolaire-ia): homework help and revision with a tutor that guides instead of answering.
 - [Dictée en ligne](https://galac6.io/dictee-en-ligne): over 2,000 dictations read aloud and marked mistake by mistake.
@@ -95,7 +96,7 @@ Galac6 (galac6.io) prépare tout le brevet : les 4 épreuves écrites et l'oral,
 
 ## Schools and teachers (French)
 
-- [Galac6 pour les écoles](https://galac6.io/ecole): for schools, teachers and school leaders, with a 3-month pilot on 3 classes.
+- [Galac6 pour les écoles](https://galac6.io/ecole): « Votre pédagogie, prolongée jusqu'à la maison ». For teachers, school leaders and schools: the learning path is the teacher's own (lesson, exercises, test); Galac6 helps the pupils at every step and helps the teacher plan and mark. Free 3-month pilot on 3 classes.
 - [Professeurs testeurs](https://galac6.io/profs-testeurs): teachers are invited to test the teacher space, 3 months offered in exchange for feedback.
 - [Guide professeur](https://galac6.io/guide-prof): getting started for teachers, a first quiz in ten minutes.
 - [Écoles françaises à l'étranger](https://galac6.io/ecoles-francaises-etranger): for French schools abroad, same curriculum as in France.
@@ -139,7 +140,7 @@ Galac6 (galac6.io) prépare tout le brevet : les 4 épreuves écrites et l'oral,
 
 - [Home](https://galac6.io/en/): Galac6 in English, AI tutor for the French curriculum.
 - [For families](https://galac6.io/en/familles): Galac6 for families, from CP to Terminale.
-- [For schools](https://galac6.io/en/ecole): Galac6 for schools and teachers.
+- [For schools](https://galac6.io/en/ecole): « Your teaching, extended into the home »: Galac6 for teachers and schools.
 - [French schools abroad](https://galac6.io/en/french-schools-abroad): for French schools outside France.
 - [French schools in the UK](https://galac6.io/en/french-schools-uk): for French schools in the United Kingdom.
 - [French curriculum for families abroad](https://galac6.io/en/french-curriculum-abroad): for families following the French curriculum abroad.
