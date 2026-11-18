@@ -940,7 +940,7 @@
       'sch.feat.f4.t': "Mental maths led by the teacher",
       'sch.feat.f4.d': "With MuscuMath, you choose the series, the class practises.",
       'sch.feat.f5.t': "Official past papers",
-      'sch.feat.f5.d': "Over 400 official past papers: brevet, French bac, maths bac, Concours général, including over 250 maths papers.",
+      'sch.feat.f5.d': "Over 400 official exam papers: brevet, French bac, maths bac, course aux nombres, Concours général, including over 250 maths papers.",
       'sch.feat.f6.t': "Every mark compared with the class",
       'sch.feat.f6.d': "The averages of every pupil and every class, always up to date, to place a pupil at a glance.",
       'sch.feat.f7.t': "Daily summary",

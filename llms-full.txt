@@ -390,7 +390,7 @@ Tout au long du parcours
 - Se faire aider Un chat socratique qui s'appuie sur votre cours et guide l'élève par des questions.
 - Apprendre sa leçon Galac6 l'interroge sur votre leçon et lui montre ce qu'il doit encore apprendre.
 - Préparer le contrôle Un parcours jusqu'au jour J, depuis votre cours : leçon, exercices, contrôle blanc.
-- S'entraîner, passer un examen blanc Plus de 2 000 dictées corrigées, du calcul mental, plus de 400 annales officielles du brevet et du bac.
+- S'entraîner, passer un examen blanc Plus de 2 000 dictées corrigées, du calcul mental, plus de 400 sujets officiels, dont plus de 200 annales du brevet et du bac.
 Le constat
 Au collège et au lycée, par semaine
 15 h 30
@@ -414,7 +414,7 @@ Fonctionnalités pour les professeurs
 - Dictées, y compris sur copies papier Plus de 2 000 dictées lues et corrigées par Galac6, dont des extraits de grands auteurs, en ligne ou sur copies papier photographiées. Et des dictées sur mesure, construites sur les erreurs de chaque élève.
 - Corrections IA à valider Copies rendues en ligne corrigées instantanément, copies papier scannées : Galac6 propose la correction et la note, vous gardez le dernier mot.
 - Calcul mental piloté par le professeur Avec MuscuMath, vous choisissez la série de la classe, ou une série sur mesure pour chaque élève.
-- Annales officielles Plus de 400 sujets d'annales officielles : brevet, bac de français, bac de maths, Concours général, dont plus de 250 sujets de maths.
+- Annales officielles Plus de 400 sujets officiels : brevet, bac de français, bac de maths, course aux nombres, Concours général, dont plus de 250 sujets de maths.
 - Chaque note face à la classe Les moyennes de chaque élève et de chaque classe, toujours à jour, pour situer un élève d'un regard.
 - Récap quotidien Un email chaque jour : retards, décrochages, progrès.
 - Élèves en progrès Ceux qui avancent, pour les encourager au bon moment.
@@ -1111,7 +1111,7 @@ Formule Découverte pour essayer · Voir les tarifs
 ========================================================================
 URL: https://galac6.io/annales-brevet-bac
 Title: Annales du brevet et du bac corrigées en ligne | Galac6
-Description: Plus de 400 sujets d'annales officielles du brevet et du bac, dont plus de 250 en maths et 112 passés hors de France, en examen blanc corrigé.
+Description: Plus de 400 sujets officiels, dont plus de 200 annales du brevet et du bac, plus de 250 sujets de maths et 112 passés hors de France, en examen blanc corrigé.
 
 ========================================================================
 
