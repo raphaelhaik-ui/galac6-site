@@ -1,7 +1,7 @@
 {
  "about.html": {
-  "hash": "d4683929f44cc0db",
-  "lastmod": "2026-11-17"
+  "hash": "4f98890593e0f24e",
+  "lastmod": "2026-11-19"
  },
  "annales-brevet-bac.html": {
   "hash": "e372a80214bdeb0b",
@@ -112,16 +112,16 @@
   "lastmod": "2026-11-14"
  },
  "blog/programme-francais-etranger.html": {
-  "hash": "34e2c10dd22c9ee5",
-  "lastmod": "2026-11-18"
+  "hash": "d35d79361421f978",
+  "lastmod": "2026-11-19"
  },
  "blog/reviser-brevet-maths.html": {
   "hash": "39f51d87d6d14fdb",
   "lastmod": "2026-11-12"
  },
  "blog/reviser-brevet-mois-par-mois.html": {
-  "hash": "ef3c60c5ae21418a",
-  "lastmod": "2026-11-12"
+  "hash": "75133ef27cb949f6",
+  "lastmod": "2026-11-19"
  },
  "blog/tables-de-multiplication-en-ligne.html": {
   "hash": "b5e4d3602531693a",
@@ -140,8 +140,8 @@
   "lastmod": "2026-11-03"
  },
  "de/about.html": {
-  "hash": "4dd1bba4d75fcccd",
-  "lastmod": "2026-11-17"
+  "hash": "5939efacf493e3d0",
+  "lastmod": "2026-11-19"
  },
  "de/ecole.html": {
   "hash": "5c7eec61e8f59225",
@@ -152,12 +152,12 @@
   "lastmod": "2026-11-09"
  },
  "de/franzoesischer-lehrplan.html": {
-  "hash": "de3c92d41c5bd906",
-  "lastmod": "2026-11-09"
+  "hash": "574b3eb86e51cde5",
+  "lastmod": "2026-11-19"
  },
  "de/index.html": {
-  "hash": "607819fdf90afd15",
-  "lastmod": "2026-11-17"
+  "hash": "6817d5a0f2b627c5",
+  "lastmod": "2026-11-19"
  },
  "de/international.html": {
   "hash": "5e41704bef46e554",
@@ -184,20 +184,20 @@
   "lastmod": "2026-11-18"
  },
  "ecoles-francaises-etranger.html": {
-  "hash": "1957b45827fcb9c4",
-  "lastmod": "2026-11-03"
+  "hash": "9577d5b4f089665b",
+  "lastmod": "2026-11-19"
  },
  "ecoles-francaises-royaume-uni.html": {
-  "hash": "dc4ec3636e7eb329",
-  "lastmod": "2026-11-03"
+  "hash": "4cb1a1473268a4ca",
+  "lastmod": "2026-11-19"
  },
  "eleves-testeurs.html": {
   "hash": "8d295b368da31335",
   "lastmod": "2026-11-09"
  },
  "en/about.html": {
-  "hash": "d96c17f306102272",
-  "lastmod": "2026-11-17"
+  "hash": "19a3ee5d5764f75a",
+  "lastmod": "2026-11-19"
  },
  "en/ai-revision-notes.html": {
   "hash": "f4054cfa4128f70e",
@@ -240,24 +240,24 @@
   "lastmod": "2026-11-09"
  },
  "en/french-curriculum-abroad.html": {
-  "hash": "074d215516034f93",
-  "lastmod": "2026-11-03"
+  "hash": "9f3bcd0a57f16d99",
+  "lastmod": "2026-11-19"
  },
  "en/french-dictation-online.html": {
   "hash": "61e281332303f0b7",
   "lastmod": "2026-11-09"
  },
  "en/french-schools-abroad.html": {
-  "hash": "6f5aaf7fc5ed281d",
-  "lastmod": "2026-11-03"
+  "hash": "7ac9932b4a2d2572",
+  "lastmod": "2026-11-19"
  },
  "en/french-schools-uk.html": {
-  "hash": "032a44accbd1c340",
-  "lastmod": "2026-11-03"
+  "hash": "b4dac5ac6c7c2d97",
+  "lastmod": "2026-11-19"
  },
  "en/index.html": {
-  "hash": "00006ee31f0a952d",
-  "lastmod": "2026-11-17"
+  "hash": "4cd16eecb12ac3c7",
+  "lastmod": "2026-11-19"
  },
  "en/mental-math-online.html": {
   "hash": "bff79634a0463eb7",
@@ -276,8 +276,8 @@
   "lastmod": "2026-11-17"
  },
  "es/about.html": {
-  "hash": "0206bdcb3792db7e",
-  "lastmod": "2026-11-17"
+  "hash": "b4187c075db6df08",
+  "lastmod": "2026-11-19"
  },
  "es/ecole.html": {
   "hash": "0a72e243d9786e22",
@@ -288,8 +288,8 @@
   "lastmod": "2026-11-09"
  },
  "es/index.html": {
-  "hash": "910c5036efcb319e",
-  "lastmod": "2026-11-17"
+  "hash": "c6b12b5a5fbaab86",
+  "lastmod": "2026-11-19"
  },
  "es/international.html": {
   "hash": "9206bff231eef282",
@@ -300,16 +300,16 @@
   "lastmod": "2026-11-17"
  },
  "es/programa-escolar-frances.html": {
-  "hash": "ff7a4d0a05a1a97f",
-  "lastmod": "2026-11-03"
+  "hash": "b2ae44b843e89c55",
+  "lastmod": "2026-11-19"
  },
  "es/tarifs.html": {
   "hash": "990af7104d752381",
   "lastmod": "2026-11-09"
  },
  "familles-francaises-etranger.html": {
-  "hash": "5d37165065ce0b01",
-  "lastmod": "2026-11-03"
+  "hash": "cae9bc8d75b08aed",
+  "lastmod": "2026-11-19"
  },
  "familles.html": {
   "hash": "e395c8af949f1e67",
@@ -328,16 +328,16 @@
   "lastmod": "2026-11-17"
  },
  "index.html": {
-  "hash": "e5933c77aa90a853",
-  "lastmod": "2026-11-17"
+  "hash": "1f5de5cc1a56fdc9",
+  "lastmod": "2026-11-19"
  },
  "international.html": {
   "hash": "b6ecee4eab0bf36c",
   "lastmod": "2026-11-03"
  },
  "it/about.html": {
-  "hash": "79bbe58ce493e917",
-  "lastmod": "2026-11-17"
+  "hash": "1db3c00998bccab0",
+  "lastmod": "2026-11-19"
  },
  "it/ecole.html": {
   "hash": "8d8e6f9a459ff04e",
@@ -348,8 +348,8 @@
   "lastmod": "2026-11-09"
  },
  "it/index.html": {
-  "hash": "0af99710a888432c",
-  "lastmod": "2026-11-17"
+  "hash": "c9b24e65fc39755b",
+  "lastmod": "2026-11-19"
  },
  "it/international.html": {
   "hash": "e7f23545bc0064dd",
@@ -360,8 +360,8 @@
   "lastmod": "2026-11-17"
  },
  "it/programma-scolastico-francese.html": {
-  "hash": "1b27943c28fd06f8",
-  "lastmod": "2026-11-09"
+  "hash": "f4cc5fe7db609f61",
+  "lastmod": "2026-11-19"
  },
  "it/tarifs.html": {
   "hash": "10b52299db682c00",
@@ -376,8 +376,8 @@
   "lastmod": "2026-11-17"
  },
  "nl/about.html": {
-  "hash": "72460d8434c52d89",
-  "lastmod": "2026-11-17"
+  "hash": "d103c0b2d0960bcf",
+  "lastmod": "2026-11-19"
  },
  "nl/ecole.html": {
   "hash": "f1c5d4aad60eef46",
@@ -388,12 +388,12 @@
   "lastmod": "2026-11-09"
  },
  "nl/frans-curriculum.html": {
-  "hash": "0b4ecaf7664e1489",
-  "lastmod": "2026-11-09"
+  "hash": "0eaa1212b63a8c1c",
+  "lastmod": "2026-11-19"
  },
  "nl/index.html": {
-  "hash": "e924848a85a37c9f",
-  "lastmod": "2026-11-17"
+  "hash": "c1e684735807b8d5",
+  "lastmod": "2026-11-19"
  },
  "nl/international.html": {
   "hash": "de26ddc7d932f029",
@@ -416,20 +416,20 @@
   "lastmod": "2026-11-04"
  },
  "privacy.html": {
-  "hash": "e8ded2075d598aac",
-  "lastmod": "2026-11-08"
+  "hash": "a278b1ac7cee8799",
+  "lastmod": "2026-11-19"
  },
  "profs-testeurs.html": {
   "hash": "743a4b3e349a732a",
   "lastmod": "2026-11-17"
  },
  "pt/about.html": {
-  "hash": "1a94ff92ffe7e14f",
-  "lastmod": "2026-11-17"
+  "hash": "cc27280a0e52b49f",
+  "lastmod": "2026-11-19"
  },
  "pt/curriculo-frances.html": {
-  "hash": "498f6744f8d1903d",
-  "lastmod": "2026-11-09"
+  "hash": "c708fdcca9e51cfb",
+  "lastmod": "2026-11-19"
  },
  "pt/ecole.html": {
   "hash": "ac68326b9ee47804",
@@ -440,8 +440,8 @@
   "lastmod": "2026-11-09"
  },
  "pt/index.html": {
-  "hash": "4ab1b13e87d311a1",
-  "lastmod": "2026-11-17"
+  "hash": "e26a6f9b906bc01a",
+  "lastmod": "2026-11-19"
  },
  "pt/international.html": {
   "hash": "02010f2ebc7fdf1e",

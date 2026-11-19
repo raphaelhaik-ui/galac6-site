@@ -77,8 +77,8 @@
   ]
  },
  "about.facts.list": {
-  "fr": "<li><strong>Plus de 2 000 dictées</strong> lues à voix haute et corrigées faute par faute, du CP au lycée.</li> <li><strong>Plus de 400 sujets d'annales officielles</strong> (433 à ce jour), dont 129 sujets de brevet et 75 de bac de français.</li> <li><strong>Douze niveaux</strong>, du CP à la Terminale.</li>",
-  "en": "<li><strong>Over 2,000 dictations</strong> read aloud and marked mistake by mistake, from CP to lycée.</li>\n        <li><strong>Over 400 official past exam papers</strong> (433 to date), including 129 brevet papers and 75 French bac papers.</li>\n        <li><strong>Twelve school years</strong>, from CP to Terminale.</li>",
+  "fr": "<li><strong>Plus de 2 000 dictées</strong> lues à voix haute et corrigées faute par faute, du CP au lycée.</li> <li><strong>Plus de 400 sujets officiels</strong> (433 à ce jour), dont 129 sujets de brevet et 75 de bac de français.</li> <li><strong>Douze niveaux</strong>, du CP à la Terminale.</li>",
+  "en": "<li><strong>Over 2,000 dictations</strong> read aloud and marked mistake by mistake, from CP to lycée.</li>\n        <li><strong>Over 400 official exam papers</strong> (433 to date), including 129 brevet papers and 75 French bac papers.</li>\n        <li><strong>Twelve school years</strong>, from CP to Terminale.</li>",
   "pages": [
    "about"
   ]
@@ -1009,8 +1009,8 @@
   ]
  },
  "ecole.gains.prep.l4": {
-  "fr": "<span><strong>Plus de 400 sujets d'annales officielles</strong> au total : brevet, bac de français, bac de maths, Concours général</span>",
-  "en": "<span><strong>Over 400 official past exam papers</strong> in total: brevet, French and maths baccalauréat, Concours général</span>",
+  "fr": "<span><strong>Plus de 400 sujets officiels</strong> au total : brevet, bac de français, bac de maths, Concours général</span>",
+  "en": "<span><strong>Over 400 official exam papers</strong> in total: brevet, French and maths baccalauréat, Concours général</span>",
   "pages": [
    "ecole"
   ]
@@ -2584,8 +2584,8 @@
   ]
  },
  "faq.awhat": {
-  "fr": "<strong>Galac6 (galac6.io)</strong> prolonge à la maison la pédagogie du professeur. Le professeur partage son cours dans Galac6 et garde la main. À la maison, l'élève fait ses devoirs, apprend sa leçon et prépare ses contrôles à partir de ce cours : une IA l'interroge sur sa leçon et lui montre ce qu'il doit encore apprendre, et un chat pédagogique le guide par des questions sans jamais lui donner la réponse. Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac. Galac6 est un tuteur IA français pour les élèves du CP à la Terminale, construit sur le programme de l'Éducation nationale, qui aide aussi les professeurs à préparer, à corriger et à suivre chaque élève notion par notion. Il compte 433 sujets d'annales officielles. Les données sont hébergées en France et l'IA est traitée en Europe.",
-  "en": "<strong>Galac6 (galac6.io)</strong> extends the teacher's pedagogy into the home. The teacher shares their lesson in Galac6 and keeps control. At home, the pupil does their homework, learns their lesson and prepares for class tests from that lesson: an AI quizzes them on it and shows what they still need to learn, and a teaching chat guides them with questions without ever giving the answer. Each pupil can also practise dictation, with over 2,000 texts, and mental maths, and work on past brevet and bac papers. Galac6 is a French AI tutor for pupils from CP to Terminale (grades 1 to 12), built on the French national curriculum, and it also helps teachers plan, mark and follow each pupil topic by topic. It offers 433 official past exam papers. Data is hosted in France and the AI is processed in Europe.",
+  "fr": "<strong>Galac6 (galac6.io)</strong> prolonge à la maison la pédagogie du professeur. Le professeur partage son cours dans Galac6 et garde la main. À la maison, l'élève fait ses devoirs, apprend sa leçon et prépare ses contrôles à partir de ce cours : une IA l'interroge sur sa leçon et lui montre ce qu'il doit encore apprendre, et un chat pédagogique le guide par des questions sans jamais lui donner la réponse. Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac. Galac6 est un tuteur IA français pour les élèves du CP à la Terminale, construit sur le programme de l'Éducation nationale, qui aide aussi les professeurs à préparer, à corriger et à suivre chaque élève notion par notion. Il compte 433 sujets officiels, dont plus de 200 annales du brevet et du bac. Les données sont hébergées en France et l'IA est traitée en Europe.",
+  "en": "<strong>Galac6 (galac6.io)</strong> extends the teacher's pedagogy into the home. The teacher shares their lesson in Galac6 and keeps control. At home, the pupil does their homework, learns their lesson and prepares for class tests from that lesson: an AI quizzes them on it and shows what they still need to learn, and a teaching chat guides them with questions without ever giving the answer. Each pupil can also practise dictation, with over 2,000 texts, and mental maths, and work on past brevet and bac papers. Galac6 is a French AI tutor for pupils from CP to Terminale (grades 1 to 12), built on the French national curriculum, and it also helps teachers plan, mark and follow each pupil topic by topic. It offers 433 official exam papers, including over 200 brevet and bac past papers. Data is hosted in France and the AI is processed in Europe.",
   "pages": [
    "index"
   ]

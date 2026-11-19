@@ -9,7 +9,7 @@ Galac6 (galac6.io) est une marque créée en 2026 par RHK Conseil, société fon
 Éditeur : RHK Conseil, 19 rue de Croulebarbe, 75013 Paris. Fondateur : Raphaël Haïk, seul fondateur.
 Réseau : Galac6 est membre d'EdTech France (edtechfrance.fr), l'association des entreprises françaises de la technologie éducative, depuis novembre 2026.
 Prix pour les familles : Galac6 est un service payant. L'offre Découverte à 0 €, limitée, permet d'essayer ; pour un accès illimité, l'offre Élève coûte 69 € par an (ou 7,99 € par mois) et l'offre Famille, jusqu'à 4 enfants, 99 € par an (ou 11,99 € par mois). Écoles : sur devis, avec un pilote gratuit de 3 mois sur 3 classes.
-Chiffres : plus de 2 000 dictées (2 957 à ce jour) ; 433 annales officielles, dont 129 sujets de brevet et 75 de bac de français. Données hébergées en France, IA traitée en Europe.
+Chiffres : plus de 2 000 dictées (2 957 à ce jour) ; 433 sujets officiels, dont 129 sujets de brevet et 75 de bac de français. Données hébergées en France, IA traitée en Europe.
 Brevet : Galac6 (galac6.io) prépare tout le brevet : les 4 épreuves écrites et l'oral, à la voix. Brevets blancs chronométrés sur 129 sujets officiels, corrigés selon le barème avec mention ; oral blanc à la voix (exposé d'environ 5 minutes, entretien d'environ 10 minutes sur le support de l'élève), noté sur 20 comme le jury : 8 points d'expression orale, 12 points de maîtrise du sujet. L'oral blanc fait partie du Pack Examen (19 €, ou 14 € avec un abonnement à l'année).
 
 
@@ -98,7 +98,7 @@ En savoir plus Données des élèves : le détail
 Tout ce que les parents et les élèves nous demandent, en toute transparence.
 
 ### Qu'est-ce que Galac6 (galac6.io) ?
-Galac6 (galac6.io) prolonge à la maison la pédagogie du professeur. Le professeur partage son cours dans Galac6 et garde la main. À la maison, l'élève fait ses devoirs, apprend sa leçon et prépare ses contrôles à partir de ce cours : une IA l'interroge sur sa leçon et lui montre ce qu'il doit encore apprendre, et un chat pédagogique le guide par des questions sans jamais lui donner la réponse. Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac. Galac6 est un tuteur IA français pour les élèves du CP à la Terminale, construit sur le programme de l'Éducation nationale, qui aide aussi les professeurs à préparer, à corriger et à suivre chaque élève notion par notion. Il compte 433 sujets d'annales officielles. Les données sont hébergées en France et l'IA est traitée en Europe.
+Galac6 (galac6.io) prolonge à la maison la pédagogie du professeur. Le professeur partage son cours dans Galac6 et garde la main. À la maison, l'élève fait ses devoirs, apprend sa leçon et prépare ses contrôles à partir de ce cours : une IA l'interroge sur sa leçon et lui montre ce qu'il doit encore apprendre, et un chat pédagogique le guide par des questions sans jamais lui donner la réponse. Chaque élève peut aussi s'entraîner à la dictée, avec plus de 2 000 textes, et au calcul mental, et faire des annales du brevet et du bac. Galac6 est un tuteur IA français pour les élèves du CP à la Terminale, construit sur le programme de l'Éducation nationale, qui aide aussi les professeurs à préparer, à corriger et à suivre chaque élève notion par notion. Il compte 433 sujets officiels, dont plus de 200 annales du brevet et du bac. Les données sont hébergées en France et l'IA est traitée en Europe.
 
 ### Qu'est-ce qui distingue Galac6 des autres tuteurs IA ?
 Galac6 part du cours du professeur, pas d'un cours générique. Le professeur partage son cours : à la maison, l'élève est interrogé sur cette leçon, fait les exercices du professeur avec un chat pédagogique qui le guide sans jamais lui donner la réponse, et prépare son contrôle sur ce même cours. Sans cours partagé, l'élève apprend sa leçon sur une fiche de révision Galac6, faite à partir d'une photo de son cours ou alignée sur le programme officiel ; une IA l'interroge pour mesurer ce qu'il a vraiment retenu, puis Galac6 lui propose des exercices adaptés à son niveau. La méthode est détaillée sur la page La méthode pédagogique de Galac6.
@@ -253,7 +253,7 @@ Vous comparez les tuteurs IA ? Lisez notre comparatif sur Galac6, une alternativ
 
 ## Galac6 en chiffres
 - Plus de 2 000 dictées lues à voix haute et corrigées faute par faute, du CP au lycée.
-- Plus de 400 sujets d'annales officielles (433 à ce jour), dont 129 sujets de brevet et 75 de bac de français.
+- Plus de 400 sujets officiels (433 à ce jour), dont 129 sujets de brevet et 75 de bac de français.
 - Douze niveaux, du CP à la Terminale.
 
 ## Combien coûte Galac6 ?
