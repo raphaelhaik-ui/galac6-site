@@ -5,7 +5,7 @@
   for = "/downloads/*"
   [headers.values]
     Cache-Control = "public, max-age=86400"
-    Content-Disposition = "attachment"
+    Content-Disposition = "inline"
 
 [[headers]]
   for = "/icons/*"
